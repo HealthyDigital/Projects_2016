@@ -5,7 +5,17 @@ $( function(){
  		e.preventDefault();
 	});
 	
-	
+	//navigation
+	function hideShowElements(btn, e){
+		btn.on('tap', function(){
+			var ele = e;
+			if(ele.is(':hidden')){
+				ele.fadeIn();
+			}else{
+				ele.fadeOut();
+			}
+		});
+	}
 	hideShowElements($('.btn-ref'), $('.ref'));
 	
 	
@@ -22,19 +32,6 @@ $( function(){
 	
 	
 });
-
-//navigation
-function hideShowElements(btn, e){
-	"use strict";
-	btn.on('tap', function(){
-		var ele = e;
-		if(ele.is(':hidden')){
-			ele.fadeIn();
-		}else{
-			ele.fadeOut();
-		}
-	});
-}
 //go to slide
 function goToSlide(btn, url){
 	"use strict";

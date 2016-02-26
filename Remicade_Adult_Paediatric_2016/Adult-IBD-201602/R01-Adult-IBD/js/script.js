@@ -4,7 +4,7 @@ $( function(){
 	$(document).on('touchmove',function(e){
  		e.preventDefault();
 	});
-	
+	var wrapper = $('.content-wrapper');
 	
 	hideShowElements($('.btn-ref'), $('.ref'));
 	
@@ -19,7 +19,10 @@ $( function(){
 	goToSlide('adherence', 'CrohnsDisease500.zip');
 	goToSlide('preference', 'CrohnsDisease510.zip');
 	
-	
+//remove animated
+	setTimeout( function(){
+		wrapper.find('.animated').removeClass('bounceInDown zoomInDown zoomIn');
+	}, 1000);	
 	
 });
 

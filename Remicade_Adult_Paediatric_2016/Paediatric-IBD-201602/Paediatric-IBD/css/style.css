@@ -32,7 +32,7 @@
 	url('../fonts/AkzidGroBol.svg#LMBuff') format('svg'); }
 /*  =============  */
 
-body { font-family:'Clarendon', Georgia, serif; font-size: 16px; line-height: 20px;color:#ffffff; }
+body { font-family:'Clarendon' Georgia, serif; font-size: 16px; line-height: 20px;color:#ffffff; }
 .content-wrapper {
 	font-family:inherit;
 	width: 1024px;
@@ -57,38 +57,42 @@ ol { margin-left: 26px }
 em { font-style:italic;}
 a { text-decoration:none; color:inherit; }
 header { height: 68px; padding: 0 40px; position:relative; }
-	header > span, .btn-menu { position:absolute; z-index:5; }
+	header > span, .popup-menu, .popup-menu li { position:absolute; z-index:5; }
 .inner-content { width: 822px; padding-left:70px; position:relative; }
 	.inner-content h2 { font-size:25px; line-height:29px; margin-top:10px; }
 	.inner-content h2 { font-family: 'ClarendonBld'; }
 	
 .orange { color:#ee8c3a; font-style:normal; }
-.btn-menu { width:73px; right: 30px; }
-	.remicade-logo { width:425px; height:45px; top: 30px; left:38px; background-image:url('../img/remicade_logo.png'); }
-	.remicade-logo.right { left:auto; right: 126px; top:15px; background-position-x:275px; }
-	.btn-menu li { width:36px; height:36px; margin: 0 auto 22px; position:relative; box-shadow: 0 0 0 3px #fff inset;  }
-	.btn-menu li, .btn-home > i { background-image:url('../img/icons.png');  }
-	.btn-menu .btn-home { width:inherit; height:43px; padding-top:35px; -webkit-border-radius: 0 0 10px 10px;border-radius:0 0 10px 10px; text-align:center; color:#006eb8; font-size:12px; background-color:#fff; background-image:none; }
-	.btn-menu .btn-home.janssen { background-color:transparent; box-shadow:none; }
-	.btn-menu .btn-home.janssen i, .btn-menu .btn-home.janssen:before { display:none; }
-	.btn-menu .btn-home.janssen:after { content:""; position:absolute; width:110px; height:60px; background-image:url('../img/janssen_logo.png'); right: 20px; top: 20px;}
-	.btn-home > i { display:block; width:52%; height: 34px; margin:0 auto; }
-	.btn-home:before { content:"Main menu"; position:absolute; top:12px; left:0; right:0; margin:0 auto; }
-	.remicade-logo, .btn-menu li, 
-		.btn-menu .btn-home.janssen:after, .btn-home > i, .graph { background-repeat: no-repeat; background-size:100% auto; }
-	.btn-menu .btn-ref { background-position-y:-161px; }
-	.btn-menu .btn-mpi { background-position-y:-218px; }
-	.btn-mpi, .btn-ref, .btn-info { }
-	.btn-menu .btn-info { box-shadow: 0 0 0 3px #a4bfe5 inset; background-position-y:-274px; }
+.popup-menu { width:100px; height:50px; right: 0; }
+	.remicade-logo { right: 128px; top:15px; }
+	.remicade-logo > i { display:block; width:160px; height:48px; }
+	.home .remicade-logo, .remicade-logo > i  { background-image:url('../img/remicade_logo.png'); }
+	.home .remicade-logo { width:425px; height:50px; top: 30px; left:38px;}
+	.popup-menu .janssen-logo { width:110px; height:60px; background-image:url('../img/janssen_logo.png'); right: 40px; top: 16px;}
+	.popup-menu li { width:35px; height:35px; }
+	.popup-menu li, .btn-home > i { background-image:url('../img/icons.png');  }
+	.popup-menu li, .btn-home > i, .remicade-logo > i, .graph { background-size:auto 100%; background-repeat:no-repeat;}
+	.popup-menu .btn-home { width:50px; height:55px; right:35px; padding:15px 8px 8px; top:-5px; -webkit-border-bottom-left-radius:10px;border-bottom-left-radius:10px;-webkit-border-bottom-right-radius:10px;border-bottom-right-radius:10px; background:#ffffff; text-align:center; color:#0076c0; font-size:10px; }
+	.btn-home > i { display:block; width:100%; height: 35px; background-position: 2px -1px;}
+	.remicade-logo, .janssen-logo { background-repeat: no-repeat; background-size:100% auto; }
+.btn-ref { top:98px; background-position:-60px 0; }
+.btn-mpi { top:155px; background-position:-170px 0; }
+	.btn-mpi, .btn-ref, .btn-info { border:1px solid #ffffff; right: 48px; }
+.popup-menu .btn-info { border-color:#9ac9e5; top:212px; background-position:-115px 0; }
+
+.home .btn-ref, .home .btn-mpi {right: 35px;}
+.home .btn-ref { top:110px; }
+.home .btn-mpi { top:175px; }
 
 .inner-wrapper { padding:5px 30px 0; height:695px; }
-.sides:before, .sides:after { content:""; position:absolute; top:45px; background:#ffffff; width:30px; height:678px; -webkit-border-radius:20px; border-radius:20px; z-index:2; }
-	.sides:before { left:-20px;}
-	.sides:after { right: -20px; }
-.circle { -webkit-border-radius:900px; border-radius:900px; } 
-.menu { position:absolute; bottom: -4px; } 
+.b-right, .b-left { position:absolute; top:45px; background:#ffffff; width:30px; height:678px; border-radius:20px; -webkit-border-radius:20px; z-index:5; }
+	.b-left { left:-20px;}
+	.b-right { right: -20px; }
+.circle { -webkit-border-radius:900px; border-radius:900px; }
+.menu { position:absolute; bottom: -4px; }
 	.menu, .menu li > ul { position:absolute; z-index:20; }
-	.menu > li { float:left; margin-right: 3px; padding: 10px; font-family: 'ClarendonBld'; position:relative; }
+	.menu a, .popup-menu a { display:block; height:inherit; position:relative; }
+	.menu > li { float: left; margin-right: 7px; padding: 10px; font-family: 'ClarendonBld'; position:relative; }
 		.menu > li, .menu li > ul { -webkit-border-top-left-radius:10px;border-top-left-radius:10px; -webkit-border-top-right-radius:10px;border-top-right-radius:10px; }
 	.menu > li, .main-menu { color:#0076c0; }
 	.menu > li:last-child { margin-right: 0; }
@@ -96,9 +100,6 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	.content .menu > li { background:#ffffff; font-size:12px; width: auto; height:32px; margin-right: 5px; line-height: 14px; padding:10px 11px; }
 	.content .menu > li span { display:block; height:inherit; }
 	.content .menu .active { background:#ffc40c; }
-	.menu > li:before, .menu > li:after { content:""; position:absolute; }
-	.menu > li:before { top:.7em; right:6px; width:18px; height:18px; -webkit-border-radius:100px; border-radius:100px; border:1px solid #0076c0; }
-	.menu > li:after { right:.7em; top:1.05em; width:0; height:0; border-top:4px solid transparent; border-bottom:4px solid transparent; border-left:8px solid #0076c0; }
 	.menu li > ul { width:300px; background: rgba(215,242,250, 0.8); top: -65px; display:none;}
 		.menu li li { float:left; width:70px; height:28px;  padding:10px 7px; border-left:1px solid rgba(255,255,255, 0.8); border-right:1px solid #93c6db;}
 		.menu li li:first-child { border-left:none; -webkit-border-top-left-radius:10px;border-top-left-radius:10px;}
@@ -132,6 +133,9 @@ header { height: 68px; padding: 0 40px; position:relative; }
 .menu-top { font-size:25px; margin-top:25px; padding: 0 0 30px 70px; position:relative; }
 	.menu-top > span { position:absolute; top: -30px; left:0; width:60px; height:50px; background:url('../img/large_blue_house.png') center center no-repeat; background-size:auto 100%; }
 	.main-menu .close { width:35px; height:35px; right:25px; top:25px; background: url('../img/blue_close.png') 0 0 no-repeat;background-size:auto 100%; }
+.home .popup { top:178px; }
+	.home .popup::after { right:0;} 
+	.home .popup.study-design { top:242px; }
 .graph { top:154px; left: 15px; width: 800px; height:310px; }
 .quote { width:140px; height:360px; padding:20px; top:165px; right:0px; background:#929595; color:#faecc9; font-size:17px; line-height:20px; }
 .footnote { font-size:10px; line-height:12px; bottom:180px; left:104px; height:30px; width:450px; }
