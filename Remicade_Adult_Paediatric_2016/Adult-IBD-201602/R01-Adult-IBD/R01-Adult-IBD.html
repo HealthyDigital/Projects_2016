@@ -40,12 +40,8 @@
     	<article class="inner-wrapper spiral">
        		<div class="animated zoomInDown"></div>
             <h2>REMICADE for Adult IBD</h2>
-            <aside class="main-menu">
-            	<h2>REMICADE for IBD</h2>
-                <span class="adult">Adult</span>
-                <span class="paediatric">Paediatric</span>
-            </aside>
-            <ul class="menu">
+           
+            <ul class="menu play">
             	<li class="cd">Crohn’s<br />disease</li>
                 <li class="fistulising">Fistulising<br />Crohn’s&nbsp;disease </li>
                 <li class="uc">Ulcerative<br />Colitis</li>
@@ -68,60 +64,34 @@
         
         <!-- popup main menu-->
         <aside class="main-menu">
-        <span class="close"></span>
-        <div class="menu-top">Main menu <span></span></div>
-        	<ul class="top-level">
-            	<li class="crohn"><span>Crohn’s <br />disease</span>
-                	<ul>
-                    	<li class="disease">Disease Course</li>
-                        <li class="response">Response &amp; Remission</li>
-                        <li class="mucosal">Mucosal Healing</li>
-                        <li class="qol">Qol</li>
-                        <li class="hosp">Hosp/Surg</li>
-                        <li class="steroids">Steroids</li>
-                        <li class="switch">Switch</li>
-                    </ul>
+        <span class="close circle"></span>
+        <!--<div class="menu-top">Main menu<span></span></div>-->
+        	<ul class="level1">
+            	<li class="cd">
+                	<ul class="play">
+                		<li class="home" data-slide="home">
+                        	<span></span>
+                        	<span></span>
+                        	<span></span>
+                        </li>
+                		<li data-slide="cd">Crohn’s<br />disease</li>
+                		<li data-slide="fist">Fistulising<br />Crohn’s disease</li>
+                	</ul>
                 </li>
-                <li class="fistulising"><span>Fistulising <br />Crohn’s disease</span>
-                	<ul>
-                    	<li class="fh">Fistula Healing</li>
-                        <li class="hs">Hosp/Surg</li>
-                    </ul>
+                <li class="uc">
+                	<ul class="play">
+                    	<li data-slide="uc">Ulcerative<br />Colitis</li>
+                		<li data-slide="ms">Moderate<br />Severe</li>
+                		<li data-slide="as">Acute<br />Severe</li>
+                	</ul>
                 </li>
-                <li class="paediatric"><span>Paediatric <br />Crohn’s disease</span>
-                	<ul>
-                        <li class="response">Response &amp;&nbsp;Remission</li>
-                        <li class="qol">QoL</li>
-                        <li class="steroids">Steroids</li>
-                        <li class="height">Height Status</li>
-                    </ul>
-                </li>
-                <li class="safety"><span>Safety <br />&amp;&nbsp;Dosing</span>
-                	<ul>
-                    	<li class="sty">Safety</li>
-                        <li class="mortality">Mortality</li>
-                        <li class="infections">Serious Infections</li>
-                        <li class="neoplasia">Neoplasia</li>
-                        <li class="hstcl">HSTCL</li>
-                        <li class="infusion">Infusion reactions</li>
-                        <li class="dosing">Dosing</li>
-                    </ul>
-                </li>
-                <li class="adherence"><span>Adherence</span>
-                	<ul>
-                    	<li class="fa">Facts</li>
-                        <li class="ty">Types</li>
-                        <li class="ib">IBD</li>
-                        <li class="rk">Risk</li>
-                    </ul>
-                </li>
-                <li class="preference"><span>Preference</span>
-                	<ul>
-                    	<li class="pc">Patient Choice</li>
-                        <li class="ef">Efficacy</li>
-                        <li class="df">Dosing Frequency</li>
-                        <li class="si">Self-Injecting</li>
-                    </ul>
+                <li class="common">
+                	<ul class="play">
+                		<li data-slide="st">Safety<br />& Tolerability</li>
+                		<li data-slide="do">Dosing</li>
+                		<li data-slide="ad">Adherence</li>
+                		<li data-slide="pr">Preference</li>
+                	</ul>
                 </li>
             </ul>
         </aside>
@@ -132,8 +102,6 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-		
-		hideShowElements($('.btn-home'), $('.main-menu'));
 		
 		//references
 		goToSlide('adult', 'Adult-IBD');

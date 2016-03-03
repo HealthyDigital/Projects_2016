@@ -4,10 +4,16 @@ $( function(){
 	$(document).on('touchmove',function(e){
  		e.preventDefault();
 	});
-	var wrapper = $('.content-wrapper');
-	
+	var wrapper = $('.content-wrapper'),
+		menu = $('.main-menu');
+	//initialise menu & ref buttons
+	hideShowElements($('.btn-home'), menu);
 	hideShowElements($('.btn-ref'), $('.ref'));
 	
+	//close menu
+	$('.close').on('tap', funcrtion(){
+		$(this).parent().fadeOut();
+	})
 	
 	
 	goToSlide('btn-mpi', 'CrohnsDisease000.zip');
@@ -19,10 +25,10 @@ $( function(){
 	goToSlide('adherence', 'CrohnsDisease500.zip');
 	goToSlide('preference', 'CrohnsDisease510.zip');
 	
-//remove animated
+	//remove animated
 	setTimeout( function(){
 		wrapper.find('.animated').removeClass('bounceInDown zoomInDown zoomIn');
-	}, 1000);	
+	}, 1100);	
 	
 });
 
