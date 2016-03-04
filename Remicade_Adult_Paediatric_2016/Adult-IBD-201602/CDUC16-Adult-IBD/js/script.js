@@ -6,29 +6,33 @@ $( function(){
 	});
 	var wrapper = $('.content-wrapper'),
 		menu = $('.main-menu');
-	//initialise menu & ref buttons
-	hideShowElements($('.btn-home'), menu);
+	//initialise ref buttons
 	hideShowElements($('.btn-ref'), $('.ref'));
 	
 	//close menu
-	$('.close').on('tap', funcrtion(){
-		$(this).parent().fadeOut();
-	})
-	
-	
+	$('.close').on('tap', function(){
+		var t = $(this).parent();
+			t.addClass('bounceOutUp');
+		removeAnimation(t, true);
+	});
+	$('.btn-home').on('tap', function(){
+		if(!menu.is(':visible')){
+			menu.show().addClass('bounceInDown');
+			removeAnimation(menu, false);
+		}
+	});
+	//go to PI 
 	goToSlide('btn-mpi', 'CrohnsDisease000.zip');
 	
-	goToSlide('crohn', 'CrohnsDisease100.zip');
-	goToSlide('fistulising', 'CrohnsDisease200.zip');
-	goToSlide('paediatric', 'CrohnsDisease300.zip');
-	goToSlide('safety', 'CrohnsDisease400.zip');
-	goToSlide('adherence', 'CrohnsDisease500.zip');
-	goToSlide('preference', 'CrohnsDisease510.zip');
-	
 	//remove animated
-	setTimeout( function(){
-		wrapper.find('.animated').removeClass('bounceInDown zoomInDown zoomIn');
-	}, 1100);	
+	function removeAnimation(e, f){
+		//console.log(e);
+		setTimeout( function(){
+			wrapper.find('.animated').removeClass('bounceInDown bounceOutUp zoomInDown zoomIn');
+			if(!$.isEmptyObject(e) && f){ e.hide(); }
+		}, 800);
+	}
+	removeAnimation();
 	
 });
 

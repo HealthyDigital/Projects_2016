@@ -5,10 +5,22 @@ $( function(){
  		e.preventDefault();
 	});
 	var wrapper = $('.content-wrapper'),
-		menu = $('.main-menu');
-	//initialise ref buttons
-	hideShowElements($('.btn-ref'), $('.ref'));
-	
+		menu = $('.main-menu'),
+		ref = $('.ref'),
+		study = $('.study-design'),
+		footerMenu = $('.footer-menu > li');
+		
+	//show/hide refs & study
+	$(".popup-menu > li:not(':first-child, .disabled, .btn-mpi')").on('tap', function(){
+		var $this = $(this);
+		if($this.hasClass('btn-ref')){
+			study.hide();
+			ref.fadeIn();
+		}else{
+			ref.hide();
+			study.fadeIn();
+		}
+    });
 	//close menu
 	$('.close').on('tap', function(){
 		var t = $(this).parent();
@@ -21,6 +33,16 @@ $( function(){
 			removeAnimation(menu, false);
 		}
 	});
+	//footer menu
+	footerMenu.each(function() {
+        var $this = $(this), 
+			span = $this.find('span');
+		span.on('tap', function(){
+			footerMenu.find('ul').hide();
+			span.prev().fadeIn();
+		});
+    });
+	
 	//go to PI 
 	goToSlide('btn-mpi', 'CrohnsDisease000.zip');
 	
@@ -30,7 +52,7 @@ $( function(){
 		setTimeout( function(){
 			wrapper.find('.animated').removeClass('bounceInDown bounceOutUp zoomInDown zoomIn');
 			if(!$.isEmptyObject(e) && f){ e.hide(); }
-		}, 950);
+		}, 800);
 	}
 	removeAnimation();
 	
@@ -39,8 +61,9 @@ $( function(){
 //navigation
 function hideShowElements(btn, e){
 	"use strict";
-	btn.on('tap', function(){
+	btn.not('.disabled').on('tap', function(){
 		var ele = e;
+		$('.reference:visible, .study-design:visible').hide();
 		if(ele.is(':hidden')){
 			ele.fadeIn();
 		}else{
@@ -53,6 +76,6 @@ function goToSlide(btn, url){
 	"use strict";
 	$('.'+btn).on('tap', function(){
 		var id = $(this).parents('.ref').length > 0 ? ', DCREF' : '';
-		document.location = 'veeva:gotoSlide('+url+'.zip'+id+')';
+		document.location = 'veeva:gotoSlide('+url+'.zip'+ id +')';
 	});
 }
