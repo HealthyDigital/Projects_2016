@@ -96,7 +96,7 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	.footer-menu { right:30px; }
 	.footer-menu > li { background:#ffffff; font-size:12px; width: auto; height:32px; margin-right: 5px; line-height: 14px; padding:10px 11px; }
 	.footer-menu > li span { display:block; height:inherit; }
-	.footer-menu .active { background:#fdc400; }
+	.footer-menu .active { background-color:#fdc400; }
 	.play li:before, .play li:after { content:""; position:absolute; }
 	.play li:before { top:.7em; right:6px; width:18px; height:18px; -webkit-border-radius:100px; border-radius:100px; border:1px solid #0076c0; }
 	.play li:after { right:.735em; top:1.05em; width:0; height:0; border-top:4px solid transparent; border-bottom:4px solid transparent; border-left:7px solid #0076c0; }
