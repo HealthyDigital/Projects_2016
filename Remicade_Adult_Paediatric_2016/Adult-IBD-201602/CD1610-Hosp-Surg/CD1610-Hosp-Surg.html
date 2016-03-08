@@ -9,30 +9,25 @@
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.content-wrapper.sides { background-image:url('img/bg_2.png'); }
-	.content .list { display:block; margin-top:25px;  }
-	.content > p, .list li { letter-spacing:-0.01em; }
-	.grad-list li { 
-		width:92%; 
-		height:24px; 
-		font-size:23px; 
-		line-height:24px; 
-		padding:18px 36px;
-		margin-bottom:15px; 
-		background:
-			linear-gradient(135deg, transparent 18px, rgba(235, 139, 46, 0.75) 0) top left,
-			linear-gradient(1deg, transparent 0px, rgba(235, 139, 46, 0.75) 0) top right,
-			linear-gradient(315deg, transparent 18px, rgba(235, 139, 46, 0.75) 0) bottom right,
-			linear-gradient(1deg,  transparent 0px, rgba(235, 139, 46, 0.75) 0) bottom left;
-		background-size: 50% 50%;
-		background-repeat: no-repeat; }
-		.grad-list li:last-child { margin-bottom:0; }
+	.content-wrapper.sides { background-image:url('img/bg_10.png'); }
+	.result-list { display:block; width:780px; height:400px; margin-left:40px; }
+		.result-list li { color:#fdf0d0; font-size:20px; line-height:23px; padding:26px 7px 34px 125px; height:40px; position:relative; letter-spacing:-0.025em; font-family: 'ClarendonLig'; }
+		.result-list li:first-child {background: -webkit-linear-gradient(bottom, rgba(146,149,149, 1), rgba(146,149,149, .7));}
+		.result-list li:nth-child(2) { background: -webkit-linear-gradient(bottom, rgba(146,149,149, 0.8), rgba(146,149,149, .7)); height:60px;}
+			.result-list li:nth-child(2) > span { padding:40px 4px 40px 14px; width:107px; }
+			
+		.result-list li:nth-child(3) {background: -webkit-linear-gradient(bottom, rgba(146,149,149, 0.6), rgba(146,149,149, .5));}
+		.result-list li:last-child {background: -webkit-linear-gradient(bottom, rgba(146,149,149, 0.4), rgba(146,149,149, .3)); }
+		.result-list li:before { content:''; position:absolute; top:0; left: 85px; border-top:50px solid transparent; border-left:25px solid #ea8a2d; border-bottom:50px solid transparent; z-index:1; }
+		.result-list li:nth-child(2):before { border-top-width: 60px; border-bottom-width: 60px; }
+		.result-list li > span { position:absolute; text-align:center; width:97px; height:40px; padding:30px 14px ; top:0; left:-40px;  background:#ea8a2d; font-size:27px; line-height:38px; color:#fff;  -webkit-border-radius:30px 0 0 30px;border-radius:30px 0 0 30px; font-family: 'Clarendon'; z-index:5; }
+	
 	/* bottom menu */ 
 	.footer-menu li > ul { left:-12em; }
 	.footer-menu .disease > ul { width:256px; left:-8em; }
-	.footer-menu .mucosal > ul { width:428px; }
+	.footer-menu .mucosal > ul { width:342px; }
 	.footer-menu .response > ul, .footer-menu .hosp > ul, .footer-menu .steroids > ul { width:170px; }
-	.footer-menu .mucosal > ul {left: -15.2em; }
+	.footer-menu .mucosal > ul {left: -11.7em; }
 	.footer-menu .hosp > ul { left: -4.8em; }
 	.footer-menu .steroids > ul { left: -4.6em; }
 	.footer-menu .response > ul { left: -3.8em; }
@@ -49,31 +44,44 @@
                     <li class="btn-home"><i></i></li>
                     <li class="btn-ref circle"></li>
                     <li class="btn-mpi circle"></li>
-                    <li class="btn-info circle disabled"></li>
+                    <!--<li class="btn-info circle"></li>-->
                 </ul>
             </div>
         </header>
     	<article class="inner-wrapper">
         	<div class="content">
-                <h2 class="g-line white">For which patient is early intervention needed<br />
-in Crohn’s disease?<sup>1-3</sup></h2>
-               <p>The following prognostic indicators increase the likelihood of rapid progression in Crohn’s disease:</p>
-               <ul class="grad-list">
-              	<li><div>Ileo-colonic or small bowel disease location<sup>1,2</sup></div></li>
-                <li><div>Young age of onset &lt;40 years<sup>2</sup></div></li>
-                <li><div>Perianal disease<sup>1,2</sup></div></li>
-                <li><div>Need for steroids for the first flare<sup>1,2</sup></div></li>
-                <li><div>Smoking<sup>3</sup></div></li>
-              </ul>
-                
-        	</div>
+                <h2 class="g-line white">Surgery: The inevitable outcome for most patients<br />
+with Crohn’s disease<sup>1</sup></h2>
+				 <ul class="result-list">
+                    <li>
+                    	<span>75%<sup>1</sup></span>
+                        Proportion of patients reported to require an intestinal resection
+<br />for complications related to stricturing or penetrating disease.<sup>1</sup>
+					</li>
+                    <li>
+                    	<span>73-85%<sup>2</sup></span>
+                        Proportion of patients reported to have endoscopic evidence of<br />
+recurrent Crohn’s disease 1-3 years after intestinal resection.<sup>2</sup><br />
+Histological recurrence may occur as early as 1 week after surgery.<sup>3</sup>
+    				</li>
+                    <li>
+                    	<span>60%<sup>1</sup></span>
+                       Proportion of patients in which clinical recurrence is reported<br />
+10 years after surgery. At 3 years, this proportion is 33%.<sup>1</sup>
+    				</li>
+                    <li>
+                    	<span>70%<sup>1</sup></span>
+                        Proportion of patients reported to suffer recurrences<br />
+severe enough to warrant repeat surgery by 20 years.<sup>1</sup>
+    				</li>
+              	</ul>
+            </div>
        		<!--footer menu -->
             <ul class="footer-menu">
-            	<li class="active disease">
+            	<li class="disease">
                 	<ul>
                    		<li class="dc">Disease course</li>
-                        <li class="patient selected">Patient indicators</li>
-                        <!--<li class="lemann">Lemann score</li>-->
+                        <li class="patient">Patient indicators</li>
                        	<li class="pathway">Treatment pathway</li>
                 	</ul>
                     <span>Disease <br />Course</span>
@@ -89,16 +97,16 @@ in Crohn’s disease?<sup>1-3</sup></h2>
                 	<ul>
                     	<li class="mh">Mucosal <br />Healing</li>
                         <li class="benefit">Sustained benefit</li>
-                         <li class="body">Body of evidence</li>
-                         <li class="hospitalisation">Hospitalisation</li>
+                        <li class="body">Body of evidence</li>
+                         <!--<li class="hospitalisation">Hospitalisation</li>-->
                         <li class="surgery">Surgery</li>
                 	</ul>
                 <span>Mucosal <br />Healing</span>
                 </li>
-                <li class="qol">QoL</li>
-                <li class="hosp">
+                <!--<li class="qol">QoL</li>-->
+                <li class="hosp active">
                 	<ul>
-                        <li class="hs">Hosp/Surg</li>
+                        <li class="hs selected">Hosp/Surg</li>
                         <li class="reductions">Reductions</li>
                 	</ul>
                     <span>Hosp/ <br />Surg</span>
@@ -117,17 +125,19 @@ in Crohn’s disease?<sup>1-3</sup></h2>
         <div class="popup ref">
             <h3>References</h3>
             <ol>
-                <li class="ref1">Loly C <em>et al</em>. Scand J Gastroenterol 2008; 43: 948-954.</li>
-                <li class="ref2">Beaugerie L <em>et al</em>. Gastroenterology 2006; 130: 650-656.</li>
-                <li class="ref3">Meijer M <em>et al</em>. Inflamm Bowel Dis 2009; 15(1): 84-92.</li>
+                <li class="ref1">Regueiro M <em>et al</em>. Gastroenterology 2009; 136:441-450.</li>
+                <li class="ref2">Rutgeerts P <em>et al</em>. Gastroenterology 1990; 99:956-963.</li>
+                <li class="ref3">D’Haens G <em>et al</em>. Gastroenterology 1998; 114:262-267</li>
             </ol>
         </div>
          <!--   Study design 
     	<div class="popup study-design">
     		<h3>Study design</h3>
-       Kaplan-Meier estimates of remaining free of penetrating complications (upper curve) and free of stricturing and/
-or penetrating complications (lower curve). Retrospective study of 2002 patients with Crohn’s disease since onset
-(diagnosis) of disease, assessed for risk of any complication. Adapted from Cosnes J <em>et al</em>.<sup>2</sup>
+         	An observational study of mucosal healing during long-term treatment with REMICADE in 214 patients
+with Crohn’s disease. Patients underwent an (ileo) colonoscopy prior to the start of this therapy. The
+primary analysis assessed what proportion of patients achieved mucosal healing during REMICADE
+therapy. The impact of endoscopic healing on further clinical events in these patients under continued
+therapy with REMICADE was investigated. Adapted from Schnitzler F <em>et al</em>.<sup>1</sup>
     	</div> -->
                 
         <!-- popup main menu-->
@@ -171,9 +181,9 @@ or penetrating complications (lower curve). Retrospective study of 2002 patients
 	$( function(){
 		
 		//reference
-		goToSlide('ref1', 'Loly2008.zip');
-		goToSlide('ref2', 'Beaugerie2006.zip');
-		goToSlide('ref3', 'Meijer2009.zip');
+		goToSlide('ref1', 'Regueiro2009.zip');
+		goToSlide('ref2', 'Rutgeerts1990.zip');
+		goToSlide('ref3', 'DHaens1998.zip');
 	})
 	
 	

@@ -9,30 +9,14 @@
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.content-wrapper.sides { background-image:url('img/bg_2.png'); }
-	.content .list { display:block; margin-top:25px;  }
-	.content > p, .list li { letter-spacing:-0.01em; }
-	.grad-list li { 
-		width:92%; 
-		height:24px; 
-		font-size:23px; 
-		line-height:24px; 
-		padding:18px 36px;
-		margin-bottom:15px; 
-		background:
-			linear-gradient(135deg, transparent 18px, rgba(235, 139, 46, 0.75) 0) top left,
-			linear-gradient(1deg, transparent 0px, rgba(235, 139, 46, 0.75) 0) top right,
-			linear-gradient(315deg, transparent 18px, rgba(235, 139, 46, 0.75) 0) bottom right,
-			linear-gradient(1deg,  transparent 0px, rgba(235, 139, 46, 0.75) 0) bottom left;
-		background-size: 50% 50%;
-		background-repeat: no-repeat; }
-		.grad-list li:last-child { margin-bottom:0; }
+	.content .feature { width: 105.2%; margin-left:-45px;  height:380px; background-image:url('img/graph_12.png'); }
+	
 	/* bottom menu */ 
 	.footer-menu li > ul { left:-12em; }
 	.footer-menu .disease > ul { width:256px; left:-8em; }
-	.footer-menu .mucosal > ul { width:428px; }
+	.footer-menu .mucosal > ul { width:342px; }
 	.footer-menu .response > ul, .footer-menu .hosp > ul, .footer-menu .steroids > ul { width:170px; }
-	.footer-menu .mucosal > ul {left: -15.2em; }
+	.footer-menu .mucosal > ul {left: -11.7em; }
 	.footer-menu .hosp > ul { left: -4.8em; }
 	.footer-menu .steroids > ul { left: -4.6em; }
 	.footer-menu .response > ul { left: -3.8em; }
@@ -49,31 +33,49 @@
                     <li class="btn-home"><i></i></li>
                     <li class="btn-ref circle"></li>
                     <li class="btn-mpi circle"></li>
-                    <li class="btn-info circle disabled"></li>
+                    <li class="btn-info circle"></li>
                 </ul>
             </div>
         </header>
     	<article class="inner-wrapper">
         	<div class="content">
-                <h2 class="g-line white">For which patient is early intervention needed<br />
-in Crohn’s disease?<sup>1-3</sup></h2>
-               <p>The following prognostic indicators increase the likelihood of rapid progression in Crohn’s disease:</p>
-               <ul class="grad-list">
-              	<li><div>Ileo-colonic or small bowel disease location<sup>1,2</sup></div></li>
-                <li><div>Young age of onset &lt;40 years<sup>2</sup></div></li>
-                <li><div>Perianal disease<sup>1,2</sup></div></li>
-                <li><div>Need for steroids for the first flare<sup>1,2</sup></div></li>
-                <li><div>Smoking<sup>3</sup></div></li>
-              </ul>
+                <h2 class="g-line white">REMICADE may allow patients to discontinue steroids<sup>1</sup></h2>
+
+                <p>More than 70% of REMICADE responders in Crohn’s disease were steroid-free<sup>†</sup> after a<br />
+median of 12 weeks<sup>1</sup></p>
+				<p class="orange">Steroid discontinuation stratified by dosing strategy through 5 years<sup>1</sup></p>
+                <div class="feature"></div>
+                <div class="footnote g-line">
+                	Adapted from Schnitzler F <em> et al</em>, 2009<sup>1</sup><br />
+                    †Discontinuation of steroids in patients treated with corticosteroids at baseline.
+                </div>
+				<!-- <div class="quote">
+                	“As well as
+substantially
+reducing
+some of
+the&nbsp;costs
+associated
+with Crohn’s
+disease
+management,
+these
+outcomes
+would also
+be&nbsp;expected
+to&nbsp;improve
+patients’
+quality of 
+life”<sup>1</sup>
                 
-        	</div>
+                </div> -->
+            </div>
        		<!--footer menu -->
             <ul class="footer-menu">
-            	<li class="active disease">
+            	<li class="disease">
                 	<ul>
                    		<li class="dc">Disease course</li>
-                        <li class="patient selected">Patient indicators</li>
-                        <!--<li class="lemann">Lemann score</li>-->
+                        <li class="patient">Patient indicators</li>
                        	<li class="pathway">Treatment pathway</li>
                 	</ul>
                     <span>Disease <br />Course</span>
@@ -89,13 +91,13 @@ in Crohn’s disease?<sup>1-3</sup></h2>
                 	<ul>
                     	<li class="mh">Mucosal <br />Healing</li>
                         <li class="benefit">Sustained benefit</li>
-                         <li class="body">Body of evidence</li>
-                         <li class="hospitalisation">Hospitalisation</li>
+                        <li class="body">Body of evidence</li>
+                         <!--<li class="hospitalisation">Hospitalisation</li>-->
                         <li class="surgery">Surgery</li>
                 	</ul>
                 <span>Mucosal <br />Healing</span>
                 </li>
-                <li class="qol">QoL</li>
+                <!--<li class="qol">QoL</li>-->
                 <li class="hosp">
                 	<ul>
                         <li class="hs">Hosp/Surg</li>
@@ -103,9 +105,9 @@ in Crohn’s disease?<sup>1-3</sup></h2>
                 	</ul>
                     <span>Hosp/ <br />Surg</span>
                 </li>
-                <li class="steroids">
+                <li class="steroids active">
                     <ul>
-                    	<li class="st">Steroids</li>
+                    	<li class="st selected">Steroids</li>
                         <li class="accent">ACCENT & SONIC</li>
                 	</ul>
                     <span>Steroids</span>
@@ -117,18 +119,16 @@ in Crohn’s disease?<sup>1-3</sup></h2>
         <div class="popup ref">
             <h3>References</h3>
             <ol>
-                <li class="ref1">Loly C <em>et al</em>. Scand J Gastroenterol 2008; 43: 948-954.</li>
-                <li class="ref2">Beaugerie L <em>et al</em>. Gastroenterology 2006; 130: 650-656.</li>
-                <li class="ref3">Meijer M <em>et al</em>. Inflamm Bowel Dis 2009; 15(1): 84-92.</li>
+                <li class="ref1">Schnitzler F <em>et al</em>. Gut 2009; 58: 492–500.</li>
             </ol>
         </div>
-         <!--   Study design 
+         <!--   Study design  -->
     	<div class="popup study-design">
     		<h3>Study design</h3>
-       Kaplan-Meier estimates of remaining free of penetrating complications (upper curve) and free of stricturing and/
-or penetrating complications (lower curve). Retrospective study of 2002 patients with Crohn’s disease since onset
-(diagnosis) of disease, assessed for risk of any complication. Adapted from Cosnes J <em>et al</em>.<sup>2</sup>
-    	</div> -->
+         	An observational study assessing the long-term clinical benefit of REMICADE in 614 consecutive
+patients with Crohn’s disease during a median follow-up of 55 months. Dosing interventions were
+allowed. Adapted from Schnitzler <em>et al</em>.<sup>1</sup>
+    	</div>
                 
         <!-- popup main menu-->
         <aside class="main-menu animated">
@@ -171,9 +171,7 @@ or penetrating complications (lower curve). Retrospective study of 2002 patients
 	$( function(){
 		
 		//reference
-		goToSlide('ref1', 'Loly2008.zip');
-		goToSlide('ref2', 'Beaugerie2006.zip');
-		goToSlide('ref3', 'Meijer2009.zip');
+		goToSlide('ref1', 'Schnitzler2009.zip');
 	})
 	
 	

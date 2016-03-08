@@ -9,24 +9,8 @@
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.content-wrapper.sides { background-image:url('img/bg_2.png'); }
-	.content .list { display:block; margin-top:25px;  }
-	.content > p, .list li { letter-spacing:-0.01em; }
-	.grad-list li { 
-		width:92%; 
-		height:24px; 
-		font-size:23px; 
-		line-height:24px; 
-		padding:18px 36px;
-		margin-bottom:15px; 
-		background:
-			linear-gradient(135deg, transparent 18px, rgba(235, 139, 46, 0.75) 0) top left,
-			linear-gradient(1deg, transparent 0px, rgba(235, 139, 46, 0.75) 0) top right,
-			linear-gradient(315deg, transparent 18px, rgba(235, 139, 46, 0.75) 0) bottom right,
-			linear-gradient(1deg,  transparent 0px, rgba(235, 139, 46, 0.75) 0) bottom left;
-		background-size: 50% 50%;
-		background-repeat: no-repeat; }
-		.grad-list li:last-child { margin-bottom:0; }
+	.content .feature { width: 107%; margin-left:-44px;  height:360px; background-image:url('img/graph_7.png'); }
+	
 	/* bottom menu */ 
 	.footer-menu li > ul { left:-12em; }
 	.footer-menu .disease > ul { width:256px; left:-8em; }
@@ -49,31 +33,33 @@
                     <li class="btn-home"><i></i></li>
                     <li class="btn-ref circle"></li>
                     <li class="btn-mpi circle"></li>
-                    <li class="btn-info circle disabled"></li>
+                    <li class="btn-info circle"></li>
                 </ul>
             </div>
         </header>
     	<article class="inner-wrapper">
         	<div class="content">
-                <h2 class="g-line white">For which patient is early intervention needed<br />
-in Crohn’s disease?<sup>1-3</sup></h2>
-               <p>The following prognostic indicators increase the likelihood of rapid progression in Crohn’s disease:</p>
-               <ul class="grad-list">
-              	<li><div>Ileo-colonic or small bowel disease location<sup>1,2</sup></div></li>
-                <li><div>Young age of onset &lt;40 years<sup>2</sup></div></li>
-                <li><div>Perianal disease<sup>1,2</sup></div></li>
-                <li><div>Need for steroids for the first flare<sup>1,2</sup></div></li>
-                <li><div>Smoking<sup>3</sup></div></li>
-              </ul>
-                
-        	</div>
+                <h2 class="g-line white">Mucosal healing predicts sustained benefit with<br />
+REMICADE through 8 years<sup>1</sup></h2>
+				<p>REMICADE responders who achieved mucosal healing in Crohn’s disease demonstrated sustained<br />
+clinical benefit through 8 years of follow-up<sup>1</sup></p>
+				<p class="orange">Sustained benefit over 8 years follow-up<sup>1</sup></p>
+           		<div class="feature"></div>
+                <div class="footnote">
+                	<span class="g-line">Adapted from Schnitzler F <em>et al</em>, 2009<sup>1</sup></span>
+                    <ul class="list">
+                    	<li>68% of initial REMICADE responders achieved mucosal healing, of whom 77% had sustained clinical benefit<br />
+through 8 years of follow-up with scheduled maintenance therapy<sup>1</sup></li>
+                    </ul>
+                </div>
+               
+            </div>
        		<!--footer menu -->
             <ul class="footer-menu">
-            	<li class="active disease">
+            	<li class="disease">
                 	<ul>
                    		<li class="dc">Disease course</li>
-                        <li class="patient selected">Patient indicators</li>
-                        <!--<li class="lemann">Lemann score</li>-->
+                        <li class="patient">Patient indicators</li>
                        	<li class="pathway">Treatment pathway</li>
                 	</ul>
                     <span>Disease <br />Course</span>
@@ -85,10 +71,10 @@ in Crohn’s disease?<sup>1-3</sup></h2>
                 	</ul>
                     <span>Response <br />&amp;&nbsp;Remission</span>
                 </li>
-                <li class="mucosal">
+                <li class="mucosal active">
                 	<ul>
                     	<li class="mh">Mucosal <br />Healing</li>
-                        <li class="benefit">Sustained benefit</li>
+                        <li class="benefit selected">Sustained benefit</li>
                          <li class="body">Body of evidence</li>
                          <li class="hospitalisation">Hospitalisation</li>
                         <li class="surgery">Surgery</li>
@@ -117,18 +103,18 @@ in Crohn’s disease?<sup>1-3</sup></h2>
         <div class="popup ref">
             <h3>References</h3>
             <ol>
-                <li class="ref1">Loly C <em>et al</em>. Scand J Gastroenterol 2008; 43: 948-954.</li>
-                <li class="ref2">Beaugerie L <em>et al</em>. Gastroenterology 2006; 130: 650-656.</li>
-                <li class="ref3">Meijer M <em>et al</em>. Inflamm Bowel Dis 2009; 15(1): 84-92.</li>
+                <li class="ref1">Schnitzler F <em>et al</em>. Inflamm Bowel Dis 2009; 15(9): 1295–1301.</li>
             </ol>
         </div>
-         <!--   Study design 
+         <!--   Study design  -->
     	<div class="popup study-design">
     		<h3>Study design</h3>
-       Kaplan-Meier estimates of remaining free of penetrating complications (upper curve) and free of stricturing and/
-or penetrating complications (lower curve). Retrospective study of 2002 patients with Crohn’s disease since onset
-(diagnosis) of disease, assessed for risk of any complication. Adapted from Cosnes J <em>et al</em>.<sup>2</sup>
-    	</div> -->
+         	<p>An observational study of mucosal healing during long-term treatment with REMICADE in 214 patients
+with Crohn’s disease. Patients underwent an (ileo) colonoscopy prior to the start of this therapy. The
+primary analysis assessed what proportion of patients achieved mucosal healing during REMICADE
+therapy. The impact of endoscopic healing on further clinical events in these patients under continued
+therapy with REMICADE was investigated. Adapted from Schnitzler F <em>et al</em>.<sup>1</sup></p>
+    	</div>
                 
         <!-- popup main menu-->
         <aside class="main-menu animated">
@@ -171,9 +157,7 @@ or penetrating complications (lower curve). Retrospective study of 2002 patients
 	$( function(){
 		
 		//reference
-		goToSlide('ref1', 'Loly2008.zip');
-		goToSlide('ref2', 'Beaugerie2006.zip');
-		goToSlide('ref3', 'Meijer2009.zip');
+		goToSlide('ref1', 'Schnitzler2009.zip');
 	})
 	
 	
