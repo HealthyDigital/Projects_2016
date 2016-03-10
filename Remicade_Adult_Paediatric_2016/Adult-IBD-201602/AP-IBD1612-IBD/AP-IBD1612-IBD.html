@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="Janssen | REMICADE for IBD - Adult">
+<title>Janssen | REMICADE for IBD - Adult</title>
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style type="text/css">
+	.content-wrapper.sides { background-image:url('img/bg_12.png'); }
+	.content > h2 { margin-bottom:42px; }
+	.grad-list { width:62%; }
+	.grad-list li { background: -webkit-linear-gradient(top, rgba(0, 110, 184, 0.6), rgba(0, 110, 184, .5)); padding:26px 44px 28px; font-size:26px; line-height:31px; margin-bottom:10px; }
+	.grad-list li:last-child { border:none; }
+	
+	/* bottom menu */ 	
+	.footer-menu .ibd > ul { width:170px; left:-9.8em;  }
+	.footer-menu .ibd > ul:after { left:auto; right:1em; }
+	
+</style> 
+</head>
+<body>
+	<section class="content-wrapper sides adherence">
+    	<header>
+        	<span class="remicade-logo right"></span> 
+            <span class="section-label">Adherence</span>
+        	<div class="btn-menu">
+                <ul class="popup-menu">
+                    <li class="btn-home"><i></i></li>
+                    <li class="btn-ref circle"></li>
+                    <li class="btn-mpi circle"></li>
+                    <!--<li class="btn-info circle"></li> -->
+                </ul>
+            </div>
+        </header>
+    	<article class="inner-wrapper">
+        	<div class="content">
+                <h2 class="g-line g-line white">
+                	Non-adherence in IBD
+                </h2>
+               
+               <ul class="grad-list">                    
+                    <li>Over 40% of IBD patients are<br />
+reported to be non-adherent,<br />
+especially those in remission<br />
+taking maintenance therapies<sup>1</sup></li>
+                    <li>In IBD and other disease,
+subjective self-report may
+overestimate adherence<sup>2,3</sup></li>
+                    <li>There are patient risk-factors
+which may influence adherence<sup>2</sup></li>
+              </ul>
+                
+            </div>
+       		<!--footer menu -->
+            <ul class="footer-menu">
+                <li class="facts">Facts</li>
+                <li class="ibd active">
+                	<ul>
+                        <li class="ib selected">IBD</li>
+                        <li class="ri">Risk</li>
+                	</ul>
+                    <span>IBD</span>
+                </li>
+            </ul>
+       
+        </article>
+        <div class="popup ref">
+            <h3>References</h3>
+            <ol>
+                <li class="ref1">Lakatos PL. World J Gastroenterol 2009; 15(34): 4234-39.</li>
+                <li class="ref2">D’Inca R <em>et al</em>. Aliment Pharmacol There 2008; 27: 166–72.</li>
+                <li class="ref3">Jeffery AR <em>et al</em>. Journal of Clinical Epidemiology 2014; 67: 1076-82.</li>
+            </ol>
+        </div>
+         <!--   Study design 
+    	<div class="popup study-design">
+    		<h3>Study design</h3>
+         	A total of 165 consecutive patients who received 479 REMICADE infusions at Mount Sinai Medical
+Center from July, 1998 to January, 2001 were evaluated. Specific treatment protocols for initial and
+subsequent acute infusion reactions were followed and the outcomes documented. Adapted from
+Cheifetz <em>et al</em>.<sup>1</sup>
+    	</div> -->
+                
+        <!-- popup main menu-->
+        <aside class="main-menu animated">
+        <span class="close circle"></span>
+        	<ul class="level1">
+            	<li class="cd">
+                	<ul class="play">
+                		<li class="home" data-slide="home">
+                        	<span></span>
+                        	<span></span>
+                        	<span></span>
+                        </li>
+                		<li data-slide="cd">Crohn’s<br />disease</li>
+                		<li data-slide="fist">Fistulising<br />Crohn’s disease</li>
+                	</ul>
+                </li>
+                <li class="uc">
+                	<ul class="play">
+                    	<li data-slide="uc">Ulcerative<br />Colitis</li>
+                		<li data-slide="ms">Moderate<br />Severe</li>
+                		<li data-slide="as">Acute<br />Severe</li>
+                	</ul>
+                </li>
+                <li class="common">
+                	<ul class="play">
+                		<li data-slide="st">Safety<br />& Tolerability</li>
+                		<li data-slide="do">Dosing</li>
+                		<li data-slide="ad">Adherence</li>
+                		<li data-slide="pr">Preference</li>
+                	</ul>
+                </li>
+            </ul>
+        </aside>
+        
+    </section>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$( function(){
+		
+		//reference
+		goToSlide('ref1', 'Lakatos2009');
+		goToSlide('ref2', 'DInca2008');
+		goToSlide('ref3', 'Jeffery2014');
+	})
+	
+	
+</script>
+</body>
+</html>
