@@ -9,27 +9,8 @@
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.subhead { display:block; width:650px;  margin:55px 0 75px 80px; font-size:30px; line-height:34px; position:relative; color:#ea8817; }
-		.subhead:before, .subhead:after { position:absolute; top:20px; height:100%; width:auto; font-size:180px; font-family: 'Clarendon'; }
-		.subhead:before { content:'{'; left:-85px; }
-		.subhead:after { content:'}'; right:-85px; }
-	p, .grad-list li { letter-spacing:-0.01em; }
-	.grad-list { margin-bottom:16px;  }
-	.grad-list li { 
-		width:89%; 
-		font-size:23px; 
-		line-height:27px; 
-		padding:15px 36px 18px;
-		margin-bottom:8px; 
-		color: #fdf0d0;
-		background:
-			linear-gradient(135deg, transparent 18px, rgba(235, 139, 46, 0.9) 0) top left,
-			linear-gradient(1deg, transparent 0px, rgba(235, 139, 46, 0.9) 0) top right,
-			linear-gradient(315deg, transparent 18px, rgba(235, 139, 46, 0.9) 0) bottom right,
-			linear-gradient(1deg,  transparent 0px, rgba(235, 139, 46, 0.9) 0) bottom left;
-		background-size: 50% 50%;
-		background-repeat: no-repeat; }
-		.grad-list li:last-child { margin-bottom:0; }
+	.content .feature { width: 105%; margin-left:-40px;  height:275px; background-image:url('img/graph_16.png'); }
+	.content > .sanserif { line-height:24px; }
 	
 	
 </style> 
@@ -50,27 +31,27 @@
         </header>
     	<article class="inner-wrapper">
         	<div class="content">
-                <h2 class="g-line g-line">Efficacy and dosing frequency rank highly in<br />
-CD patients’ priorities for biologic treatment<sup>1</sup></h2>
-<p>A prospective internet-based survey of 252 adult participants to quantify biologic preferences and<br />
-priorities of patients with moderate to severe Crohn’s disease<sup>1</sup></p>
+                <h2 class="g-line g-line">Dosing frequency and efficacy rank highly in CD patients’<br />
+who preferred REMICADE<sup>1</sup></h2>
+<p>In a prospective survey of medication preferences in bio-naive patients with Crohn’s disease, patients
+who chose REMICADE placed more emphasis on:<sup>1</sup></p>
+<p class="sanserif">•&nbsp;&nbsp; Longer time between doses<br />
+•&nbsp;&nbsp; Scientific evidence for efficacy </p>
 
- <span class="subhead">The three attributes of greatest importance
-in accounting for patients’ biologic therapy
-choice were:<sup>1</sup></span>
+ <p class="orange">Factors guiding patient anti-TNF choice<sup>1</sup></p>
 
-               <ul class="grad-list">
-                    <li>Greater proportion of patients achieving lasting remission</li>
-                    <li>Decreased frequency of medication administration</li>
-                    <li>Higher proportion of patients responding in 2 weeks</li>
-                </ul>
-                <div class="footnote g-line">Adapted from Lichtenstein, 2010.<sup>1</sup></div>
+               <div class="feature"></div>
+                <div class="footnote g-line">
+                	Adapted from Vavricka, 2012<sup>1</sup><br />
+Several categorical answers could be chosen, so the total could add up to more or less than 100% 25 out of 100 patients chose REMICADE, 36 chose adalimumab,<br />
+28 chose certolizumab pegol and 11 were undecided; certolizumab pegol results not shown because it is not registered or funded in NZ.2,3
+                </div>
             </div>
        		<!--footer menu -->
             <ul class="footer-menu">
                 <li class="patient">Patient <br />Choice</li>
-                <li class="efficacy active">Efficacy</li>
-                <li class="dosing">Dosing <br />Frequency</li>
+                <li class="efficacy">Efficacy</li>
+                <li class="dosing active">Dosing <br />Frequency</li>
                 <li class="injecting">Self-<br />Injecting</li>
             </ul>
        
@@ -78,17 +59,22 @@ choice were:<sup>1</sup></span>
         <div class="popup ref">
             <h3>References</h3>
             <ol>
-                <li class="ref1">Lichtenstein GR <em>et al</em>. Patient 2010; 3 (2): 113-23.</li>
+                <li class="ref1">Vavricka SR <em>et al</em>. Inflamm Bowel Dis 2012; 18(2): 1523-30.</li>
+                <li class="ref2">Medsafe datasheet search. Available at http://www.medsafe.govt.nz/profs/Datasheet/DSForm.
+asp Accessed 12/3/15.</li>
+                <li class="ref3">New Zealand Pharmaceutical Schedule - Sections B and H. Available at: http://www.pharmac.
+govt.nz/Schedule (Section B) http://www.pharmac.govt.nz/HMLOnline.php (Section H) Accessed 12/3/15.</li>
             </ol>
         </div>
+         
          <!--   Study design  -->
     	<div class="popup study-design">
     		<h3>Study design</h3>
-         	Prospective internet-based survey of 252 adult participants with moderate to severe Crohn’s disease,
-202 of whom were biologic naïve. In a discrete-choice-based conjoint exercise, respondents were
-asked to select a preferred biologic treatment option from each of 16 pairs of drug profiles that
-systematically varied efficacy, convenience, and product history attributes. Respondents were also
-asked to directly rank each specific attribute.
+         	Prospective survey of 100 anti-TNF naïve patients with Crohn’s disease. Prior to the completion of a
+survey to explore medication preferences, patients were provided with a written description of the three
+anti-TNF agents, focusing on indications, mode of administration, side effects, and scientific evidence
+of efficacy and safety for each drug. NOTE: certolizumab pegol data not included as this drug is not
+registered or funded in New Zealand.
     	</div>
                 
         <!-- popup main menu-->
@@ -132,7 +118,7 @@ asked to directly rank each specific attribute.
 	$( function(){
 		
 		//reference
-		goToSlide('ref1', 'Lichtenstein2010');
+		goToSlide('ref1', 'Vavricka2012');
 	})
 	
 	
