@@ -11,17 +11,31 @@
 <style type="text/css">
 	.inner-wrapper h2 { font-size:38px; line-height:40px; text-align:center; }
 	.spiral > div { width: 470px; height: 485px; background:url('img/spiral.png') 0 0 no-repeat; margin: 35px auto; background-size:100% auto; }
-	
-	.menu { width:89%; left:0; right:0; margin:0 auto; }
-	.menu > li { width:116px; height:30px; padding:12px 0 24px 10px; font-size:16px; line-height:17px; position:relative; background:#fdc400; letter-spacing:-0.03em; }
-	.menu > li:first-child { width:95px;  }
-	.menu > li:nth-child(2) { width:154px; background:#ea8a2d; }
+	.menu { width:87.5%; position:absolute; left:0; right:0; bottom:-1px; margin:0 auto; overflow:hidden; }
+	.menu > li { 
+		float: left; 
+		font-family: 'ClarendonBld';
+		font-size:15px; 
+		line-height:16px; 
+		width:112px; 
+		color:#006eb8;
+		margin-right:5px; 
+		height:30px; 
+		padding:12px 0 24px 10px; 
+		position:relative; 
+		background:#fdc400;
+		letter-spacing:-0.03em;
+		-webkit-border-radius: 7px 7px 0 0;
+		border-radius: 7px 7px 0 0; }
+	.menu > li:first-child { width:92px;  }
+	.menu > li:nth-child(2) { width:145px; background:#ea8a2d; }
 	.menu > li:nth-child(3) {  background:#8bb0de; }
-	.menu > li:nth-child(4) { width:138px; background:#bccfec; }
-	.menu > li:nth-child(5) { width:88px; background:#b3b2b2; }
+	.menu > li:nth-child(4) { width:136px; background:#bccfec; }
+	.menu > li:nth-child(5) { width:86px; background:#b3b2b2; }
 	.menu > li:nth-child(6) { background:#f6c597; }
-	.menu > li:last-child { background:#f9f0d1; } 
+	.menu > li:last-child { background:#f9f0d1; margin-right: 0; } 
 	.menu > li:nth-child(n+5){ padding-top:18px; height:24px; }
+	.menu.play li:after { right: .75em; top: 1.1em; }
 	
 </style> 
 </head>
@@ -35,7 +49,7 @@
                     <li class="btn-home"><i></i></li>
                     <li class="btn-ref circle"></li>
                     <li class="btn-mpi circle"></li>
-                    <li class="btn-info circle"></li>
+                    <!--<li class="btn-info circle"></li>-->
                 </ul>
             </div>
         </header>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="Janssen | REMICADE for IBD - Adult">
+<title>Janssen | REMICADE for IBD - Adult</title>
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style type="text/css">
+	.prognostic { overflow: hidden; margin-top:15px; }
+		.prognostic li { float:left; width:250px; height:198px; margin: 15px; background:url('img/prognostic.png') 0 0 no-repeat; background-size:100% auto; position:relative; font-size:23px; line-height:26px; overflow:hidden; }
+		.prognostic li:nth-child(2) { background-position-y: -201px; }
+		.prognostic li:nth-child(3) { background-position-y: -402px; }
+		.prognostic li:nth-child(4) { background-position-y: -602px; }
+		.prognostic li:nth-child(5) { background-position-y: -803px; }
+		.prognostic li:last-child { background-position-y:bottom; }
+		.prognostic li:first-child, .prognostic li:nth-child(4) { margin-left: 0; }
+		.prognostic li:last-child, .prognostic li:nth-child(3) { margin-right: 0; }
+		.prognostic li  > span { position:absolute; bottom:0; width:100%; height:168px; padding-top:30px; color:#fdf0d0; text-align:center; overflow:hidden; -webkit-transition:all 0.25s ease-in-out; transition:all 0.25s ease-in-out; -webkit-transform:translateY(210px); transform:translateY(210px); z-index:5; }
+		.prognostic li  > span.active { -webkit-transform:translateY(0px); transform:translateY(0px); }
+		.prognostic li  > span:after { content:''; position:absolute; width:275px; height:500%;top:-408px; left:0; background:rgba(110, 110, 110, 0.7);-webkit-transform-origin:50%;-webkit-transform: rotate(45deg); z-index:-1; }
+		/*.prognostic li  > span i { display:-block; width:auto; margin: 40px auto 0; }*/
+	
+	/* bottom menu */ 
+	.footer-menu li > ul { left:-8.6em; }
+	.footer-menu .goals > ul { width:256px; }
+	.footer-menu .mucosal > ul,
+	.footer-menu .steroid > ul { width:170px; }
+	.footer-menu .steroid > ul {left: -4.8em; }
+	.footer-menu .mucosal > ul {left: -4.5em; }
+	
+</style> 
+</head>
+<body>
+	<section class="content-wrapper sides moderate">
+    	<header>
+        	<span class="remicade-logo right"></span> 
+            <span class="section-label">Moderate<br />Severe UC</span>
+        	<div class="btn-menu">
+                <ul class="popup-menu">
+                    <li class="btn-home"><i></i></li>
+                    <li class="btn-ref circle"></li>
+                    <li class="btn-mpi circle"></li>
+                    <!--<li class="btn-info circle"></li> -->
+                </ul>
+            </div>
+        </header>
+    	<article class="inner-wrapper">
+        	<div class="content">
+            	<h2 class="g-line">For which patient is early intervention needed<br />
+in ulcerative colitis?<sup>1</sup></h2>
+<p>The following prognostic indicators increase the risk of progression in ulcerative colitis:<sup>1</sup></p>
+                <ul class="prognostic">
+                	<li><span><i>Higher levels<br />of perinuclear<br />antineutrophil<br />cytoplasmic<br />antibody</i></span></li>
+                    <li><span><i>Primary<br />sclerosing<br />cholangitis</i></span></li>
+                    <li><span><i>Deep ulcerations<br />in the colonic<br />mucosa</i></span></li>
+                    <li><span><i>Pancolitis</i></span></li>
+                    <li><span><i>Age of onset<br />&lt;40 years</i></span></li>
+                    <li><span><i>Lack of mucosal<br />healing after<br />induction of<br />clinical remission</i> </span></li>
+                </ul>
+                <!-- <div class="quote">
+                	“Inducing and
+maintaining
+a clinical
+response
+and clinical
+remission and
+minimising
+the use of
+corticosteroids
+are unmet
+goals in the
+treatment of
+patients with
+ulcerative
+colitis...”
+<span>Rutgeerts P <em>et al</em>, 2005<sup>3</sup></span>
+                
+                </div>
+               <div class="footnote g-line">
+                	Adapted from Cosnes J et al, 2002.<sup>2</sup>
+                </div>-->
+				
+            </div>
+       		<!--footer menu -->
+            <ul class="footer-menu">
+                <li class="active goals">
+                	<ul>
+                   		<li class="got">Goals of Tx</li>
+                        <li class="pi selected">Patient indicators</li>
+                        <li class="sa">Step-up algorithm</li>
+                	</ul>
+                    <span>Goals<br />of Tx</span>
+                </li>
+                <li class="rr">Response<br />&amp;&nbsp;Remission
+                </li>
+                <li class="steroid">
+                	<ul>
+                        <li class="ss">Steroid reduction</li>
+                         <li class="sf">Steroid-free remission</li>
+                	</ul>
+                <span>Steroid<br />Sparing</span>
+                </li>
+                <li class="mucosal">
+                	<ul>
+                        <li class="mh">Improved outcomes</li>
+                        <li class="cf">Colectomy-free survival</li>
+                	</ul>
+                    <span>Mucosal<br />Healing</span>
+                </li>
+                <li class="hosp mid">Hospitalisation</li>
+                <li class="colectomy mid">Colectomy</li>
+                <li class="surgery mid">Surgery</li>
+                <li class="qol mid">QoL</li>
+            </ul>
+       
+        </article>
+        <div class="popup ref">
+            <h3>References</h3>
+            <ol>
+                <li class="ref1">Yarur A <em>et al</em>. Gastroenterol Hepatol 2011;7(10):652-659.</li>
+            </ol>
+        </div>
+         
+         <!--   Study design  
+    	<div class="popup study-design">
+    		<h3>Study design</h3>
+         	Prospective survey of 125 patients with inflammatory bowel disease undertaken over a period of 12
+months, with 78 responses included in the analysis. 10 patients had previously been on a biologic
+– all REMICADE. Patients were posed a hypothetical situation and asked to choose between anti-
+TNF drugs based on intravenous or subcutaneous administration and dose frequency. The possible
+outcomes were as follows: (a) infliximab [iv] in hospital every 8 weeks approximately, (b) adalimumab
+[sc] every 2 weeks at home, or (c) no preference for biological therapy.
+    	</div>-->
+                
+        <!-- popup main menu-->
+        <aside class="main-menu animated">
+        <span class="close circle"></span>
+        	<ul class="level1">
+            	<li class="cd">
+                	<ul class="play">
+                		<li class="home" data-slide="home">
+                        	<span></span>
+                        	<span></span>
+                        	<span></span>
+                        </li>
+                		<li data-slide="cd">Crohn’s<br />disease</li>
+                		<li data-slide="fist">Fistulising<br />Crohn’s disease</li>
+                	</ul>
+                </li>
+                <li class="uc">
+                	<ul class="play">
+                    	<li data-slide="uc">Ulcerative<br />Colitis</li>
+                		<li data-slide="ms">Moderate<br />Severe</li>
+                		<li data-slide="as">Acute<br />Severe</li>
+                	</ul>
+                </li>
+                <li class="common">
+                	<ul class="play">
+                		<li data-slide="st">Safety<br />& Tolerability</li>
+                		<li data-slide="do">Dosing</li>
+                		<li data-slide="ad">Adherence</li>
+                		<li data-slide="pr">Preference</li>
+                	</ul>
+                </li>
+            </ul>
+        </aside>
+        
+    </section>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$( function(){
+		
+		var lis = $('.prognostic').find('li');
+			lis.each(function() {
+				var $this = $(this);
+					$this.on('tap', function(){
+						lis.find('span').removeClass('active');
+						$this.find('span').addClass('active');
+					})
+			});
+
+		
+		//reference
+		goToSlide('ref1', 'Yarur2011');
+	})
+	
+	
+</script>
+</body>
+</html>

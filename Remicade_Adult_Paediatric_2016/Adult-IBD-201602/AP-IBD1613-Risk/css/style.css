@@ -106,8 +106,7 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	.adherence .footer-menu .active,
 	.adherence .section-label { background-color:#f6c597; }
 	.preference .footer-menu .active,
-	.preference .section-label { background-color:#f6c597; }
-	
+	.preference .section-label { background-color:#f9f0d1; }
 	
 	
 .play li:before, .play li:after { content:""; position:absolute; }
@@ -190,4 +189,4 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	.list li:before, .footnote i { position:absolute; }
 	.list li:before { content:"• "; top:0; left:0; }
 .content-wrapper .hide { display:none; }
-.disabled { opacity: 0.5; }
+.disabled { opacity: 0.35; }
