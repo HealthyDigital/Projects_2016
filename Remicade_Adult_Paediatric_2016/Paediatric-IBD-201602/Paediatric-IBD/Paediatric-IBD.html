@@ -9,53 +9,97 @@
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.content-wrapper.bg:after { background-image:url('img/bg.jpg'); }
-	.inner-wrapper h2 { font-size:51px; line-height:48px; margin-bottom:45px; }
-	.home .main-menu { width:302px; right:175px; top:-1px; padding-top:12%; box-shadow:none; border-radius:0; display:block; -webkit-animation-delay:0.2s; animation-duration: 0.8s; animation-delay:0.2s;}
-	.main-menu > span { display:block; font-size:32px; line-height:30px; padding:32px; margin-top:25px; background:#fdc400; -webkit-border-radius:5px; border-radius:5px; position:relative; }
-	
-	.main-menu > span:before, .main-menu > span:after { content:''; position:absolute; }
-	.main-menu > span:before { top:29px; right:33px; width:33px; height:33px; -webkit-border-radius:100px; border:1px solid #0076c0; }
-	.main-menu > span:after { right:43px; top:38px; width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-left:12px solid #4a85c5; }
-	.main-menu > span:last-child { background:rgba(79, 133, 197, 0.5); }
+	.inner-wrapper h2 { font-size:38px; line-height:40px; text-align:center; }
+	.spiral > div { width: 470px; height: 485px; background:url('img/spiral.png') 0 0 no-repeat; margin: 35px auto; background-size:100% auto; }
+	.menu { width:72%; position:absolute; left:0; right:0; bottom:-1px; margin:0 auto; overflow:hidden; }
+	.menu > li { 
+		float: left; 
+		font-family: 'ClarendonBld';
+		font-size:15px; 
+		line-height:16px; 
+		width:112px; 
+		color:#006eb8;
+		margin-right:5px; 
+		height:30px; 
+		padding:12px 0 24px 10px; 
+		position:relative; 
+		background:#fdc400;
+		letter-spacing:-0.03em;
+		-webkit-border-radius: 7px 7px 0 0;
+		border-radius: 7px 7px 0 0; }
+	.menu > li:first-child { width:92px;  }
+	.menu > li:nth-child(2) {  background:#8bb0de; }
+	.menu > li:nth-child(3) { width:136px; background:#bccfec; }
+	.menu > li:nth-child(4) { width:86px; background:#b3b2b2; }
+	.menu > li:nth-child(5) { background:#f6c597; }
+	.menu > li:last-child { background:#f9f0d1; margin-right: 0; } 
+	.menu > li:nth-child(n+4){ padding-top:18px; height:24px; }
+	.menu.play li:after { right: .75em; top: 1.1em; }
 	
 </style> 
 </head>
 <body>
-	<section class="content-wrapper home bg">
-    	<header><span class="remicade-logo"></span> 
-        	<ul class="popup-menu">
-            	<li class="janssen-logo"></li>
-                <li class="btn-ref circle"></li>
-                <li class="btn-mpi circle"></li>
-            </ul>
+	<section class="content-wrapper home">
+    	<header>
+        	<span class="remicade-logo"></span> 
+        	<div class="btn-menu">
+                <ul class="popup-menu">
+                    <li class="btn-home"><i></i></li>
+                    <li class="btn-ref circle"></li>
+                    <li class="btn-mpi circle"></li>
+                    <!--<li class="btn-info circle"></li>-->
+                </ul>
+            </div>
         </header>
-    	<article class="inner-wrapper">
-       		
-            <aside class="main-menu animated bounceInDown">
-            	<h2>REMICADE for IBD</h2>
-                <span class="adult">Adult</span>
-                <span class="paediatric">Paediatric</span>
-            </aside>
-           <!-- <ul class="menu">
-            	<li class="crohn">Crohn’s disease <i>&nbsp;</i></li>
-                <li class="wide fistulising">Fistulising Crohn’s<br />disease <i>&nbsp;</i></li>
-                <li class="wide paediatric">Paediatric Crohn’s disease <i>&nbsp;</i></li>
-                <li class="safety">Safety &amp;&nbsp;Dosing <i>&nbsp;</i></li>
+    	<article class="inner-wrapper spiral">
+       		<div class="animated zoomInDown"></div>
+            <h2>REMICADE for Paediatric IBD</h2>
+           
+            <ul class="menu play">
+            	<li class="cd">Crohn’s<br />disease</li>
+               <!-- <li class="fistulising">Fistulising<br />Crohn’s&nbsp;disease </li>-->
+                <li class="uc">Ulcerative<br />Colitis</li>
+                <li class="safety">Safety<br />&amp;&nbsp;Tolerability</li>
+                <li class="dosing">Dosing</li>
                 <li class="adherence">Adherence</li>
                 <li class="preference">Preference</li>
-            </ul>-->
+            </ul>
        
         </article>
-    <div class="popup ref">
-    	<h3>References</h3>
-        <ol>
-            <li class="ref1">Danese S <em>et al</em>, Aliment Pharmacol Ther 2011; 33:857-69.</li>
-            <li class="ref2">Hoentjen F <em>et al</em>, Curr Gastroenterol Rep 2011; 13:475-85.</li>
-            <li class="ref3">Lichtenstein GR <em>et al</em>, Am J Gastroeneterol 2012; 107:1409-22.</li>
-            <li class="ref4">REMICADE Data Sheet. 14 Sep 2015. Available at www.medsafe.govt.nz.</li>
-        </ol>
-    </div>
+        <div class="popup ref">
+            <h3>References</h3>
+            <ol>
+                <li class="ref1">Danese S <em>et al</em>, Aliment Pharmacol Ther 2011; 33:857-69.</li>
+                <li class="ref2">Hoentjen F <em>et al</em>, Curr Gastroenterol Rep 2011; 13:475-85.</li>
+                <li class="ref3">Lichtenstein GR <em>et al</em>, Am J Gastroeneterol 2012; 107:1409-22.</li>
+                <li class="ref4">REMICADE Data Sheet. 14 Sep 2015. Available at www.medsafe.govt.nz.</li>
+            </ol>
+        </div>
+    <!-- popup main menu-->
+        <aside class="main-menu animated">
+        <span class="close circle"></span>
+            <ul class="level1">
+                <li class="cd">
+                    <ul class="play">
+                        <li class="home" data-slide="home">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </li>
+                        <li data-slide="cd">Crohn’s<br />disease</li>
+                        <li data-slide="uc">Ulcerative<br />Colitis</li>
+                    </ul>
+                </li>
+                <li class="common">
+                    <ul class="play">
+                        <li data-slide="st">Safety<br />& Tolerability</li>
+                        <li data-slide="do">Dosing</li>
+                        <li data-slide="ad">Adherence</li>
+                        <li data-slide="pr">Preference</li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
 
     </section>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
