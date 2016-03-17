@@ -64,15 +64,16 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	.content p { font-size:17px; line-height:20px; margin-bottom:10px; }
 	
 .orange { color:#ea8a2d; font-family: 'AkzidGroRoman'; }
-.btn-menu { width:73px; right: 30px; }
-	.remicade-logo { width:425px; height:45px; top: 30px; left:38px; background-image:url('../img/remicade_logo.png'); }
+.btn-menu { width:73px;  }
+	.btn-menu, .footer-menu { right: 28px; }
+	.remicade-logo { width:425px; height:45px; top: 30px; left:42px; background-image:url('../img/remicade_logo.png'); }
 	.remicade-logo.right { left:auto; right: 126px; top:15px; background-position-x:275px; }
 	.btn-menu li { width:36px; height:36px; margin: 0 auto 22px; position:relative; box-shadow: 0 0 0 3px #fff inset;  }
 	.btn-menu li, .btn-home > i, .main-menu > span, .level1 .home > span { background-image:url('../img/icons.png');  }
 	.btn-menu .btn-home { width:inherit; height:48px; padding-top:30px; -webkit-border-radius: 0 0 10px 10px;border-radius:0 0 10px 10px; text-align:center; color:#006eb8; font-size:12px; background-color:#fff; background-image:none; }
 	.btn-menu .btn-home.janssen { background-color:transparent; box-shadow:none; }
 	.btn-menu .btn-home.janssen i, .btn-menu .btn-home.janssen:before { display:none; }
-	.btn-menu .btn-home.janssen:after { width:110px; height:60px; background-image:url('../img/janssen_logo.png'); right: 20px; top: 20px;}
+	.btn-menu .btn-home.janssen:after { width:110px; height:60px; background-image:url('../img/janssen_logo.png'); right: 16px; top: 20px;}
 	.btn-home > i { display:block; width:52%; height: 34px; margin:0 auto; }
 	.btn-home:before { content:"Main menu"; position:absolute; top:8px; left:0; right:0; margin:0 auto; }
 	.remicade-logo, .btn-menu li, .content-wrapper.sides,
@@ -95,7 +96,6 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	.footer-menu > li, .footer-menu li > ul { -webkit-border-radius:7px 7px 0 0; border-radius:10px 10px 0 0; }
 	.footer-menu > li, .main-menu { color:#006eb8; }
 	.footer-menu > li:last-child { margin-right: 0; }
-	.footer-menu { right:30px; }
 	
 	.footer-menu > li span { display:block; height:inherit; }
 	.footer-menu .active { background-color:#fdc400; }
@@ -151,13 +151,15 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	.level1 .home > span { width:42px; background-position-y:12px; }
 	.level1 .home > span:nth-child(2) { background-position-y:-38px; }
 	.level1 .home > span:last-child { background-position-y:-113px; margin-left:-2px; }
-	.level1 > li:nth-child(2) { padding:10px 12px; height:56px; background:#8bb0de; }
-	.level1 > li:nth-child(2) li { width:141px; height:36px; }
-	.level1 > li:nth-child(2) li:first-child { width:150px; padding:0; border-radius:0; background:none; }
+	.level1 > .uc { padding:10px 12px; height:56px; background:#8bb0de; }
+	.level1 > .uc li { width:141px; height:36px; }
+	.level1 > .uc li:first-child { width:150px; padding:0; border-radius:0; background:none; }
 	.level1 > li .home:after,
-		.level1 > li:nth-child(2) li:first-child:before, 
-		.level1 > li:nth-child(2) li:first-child:after { display:none; }
+		.level1 > .uc li:first-child:before, 
+		.level1 > .uc li:first-child:after { display:none; }
 	.level1 .cd li:last-child { background:#ea8a2d; }
+		.paediatric-ibd .level1 .cd li:last-child { background:#8bb0de; } 
+		.paediatric-ibd .level1 > .uc { display:none; }
 	.level1 .uc li:nth-child(n+2) { background:#a4c0e6; }
 	.level1 > .common li { width:100px; background:#f6c597; }
 	.level1 > .common li:first-child { width:122px; background:#bccfec; } 

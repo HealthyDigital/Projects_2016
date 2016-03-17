@@ -99,7 +99,7 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	.footer-menu > li span { display:block; height:inherit; }
 	.footer-menu .active { background-color:#fdc400; }
 	.uc .footer-menu .active,
-	.uc .section-label { background-color:#8bb0de; }
+	.uc .section-label { background-color:#ffd562; }
 	/*.fist .footer-menu .active, 
 	.fist .section-label { background-color:#ea8a2d; }
 	.safety .footer-menu .active,

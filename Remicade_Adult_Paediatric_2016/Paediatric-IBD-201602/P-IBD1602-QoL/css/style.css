@@ -98,6 +98,8 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	
 	.footer-menu > li span { display:block; height:inherit; }
 	.footer-menu .active { background-color:#fdc400; }
+	.uc .footer-menu .active,
+	.uc .section-label { background-color:#ffd562; }
 	/*.fist .footer-menu .active, 
 	.fist .section-label { background-color:#ea8a2d; }
 	.safety .footer-menu .active,
@@ -112,6 +114,8 @@ header { height: 68px; padding: 0 40px; position:relative; }
 	.moderate .section-label { background-color:#ffd562; }
 	.acute .footer-menu .active,
 	.acute .section-label { background-color:#f2a964; }*/
+	
+	
 	
 	
 .play li:before, .play li:after { content:""; position:absolute; }

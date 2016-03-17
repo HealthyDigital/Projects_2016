@@ -57,7 +57,6 @@
            
             <ul class="menu play">
             	<li class="cd">Crohn’s<br />disease</li>
-               <!-- <li class="fistulising">Fistulising<br />Crohn’s&nbsp;disease </li>-->
                 <li class="uc">Ulcerative<br />Colitis</li>
                 <li class="safety">Safety<br />&amp;&nbsp;Tolerability</li>
                 <li class="dosing">Dosing</li>
@@ -78,7 +77,7 @@
     <!-- popup main menu-->
         <aside class="main-menu animated">
         <span class="close circle"></span>
-            <ul class="level1">
+            <ul class="level1 paed">
                 <li class="cd">
                     <ul class="play">
                         <li class="home" data-slide="home">
@@ -107,10 +106,15 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-		//references
-		goToSlide('adult', 'Adult-IBD');
-		goToSlide('paediatric', 'Paediatric-IBD');
 		
+		goToSlide('menu > .cd', 'P-IBD1601-Response-and-remission');
+		goToSlide('menu > .uc', 'P-IBD1606-Clinical-remission');
+		goToSlide('menu > .safety', 'AP-IBD1601-Safety');
+		goToSlide('menu > .dosing', 'AP-IBD1609-Medsafe-approved');
+		goToSlide('menu > .adherence', 'AP-IBD1611-Facts');
+		goToSlide('menu > .preference', 'AP-IBD1614-Patient-choice');
+		
+		//references
 		goToSlide('ref1', 'Danese2011');
 		goToSlide('ref2', 'Hoentjen2011');
 		goToSlide('ref3', 'Lichtenstein2012');

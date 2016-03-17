@@ -13,14 +13,14 @@
 	.feature { background-image:url('img/graph.png'); }
 	.quote { top:210px; }
 	/* bottom menu */ 
-	.content-wrapper .footer-menu li > ul { left:-12em; }
-	.footer-menu .disease > ul { width:342px; }
-	.footer-menu .mucosal > ul { width:428px; }
+	.footer-menu li > ul { left:-12em; }
+	.footer-menu .disease > ul { width:256px; left:-8em; }
+	.footer-menu .mucosal > ul { width:342px; }
 	.footer-menu .response > ul, .footer-menu .hosp > ul, .footer-menu .steroids > ul { width:170px; }
-	.content-wrapper .footer-menu .mucosal > ul {left: -15.2em; }
-	.content-wrapper .footer-menu .hosp > ul { left: -4.8em; }
-	.content-wrapper .footer-menu .steroids > ul { left: -4.6em; }
-	.content-wrapper .footer-menu .response > ul { left: -3.8em; }
+	.footer-menu .mucosal > ul {left: -11.7em; }
+	.footer-menu .hosp > ul { left: -4.8em; }
+	.footer-menu .steroids > ul { left: -4.6em; }
+	.footer-menu .response > ul { left: -3.8em; }
 	
 </style> 
 </head>
@@ -34,7 +34,7 @@
                     <li class="btn-home"><i></i></li>
                     <li class="btn-ref circle"></li>
                     <li class="btn-mpi circle"></li>
-                    <li class="btn-info circle disabled"></li>
+                    <!--<li class="btn-info circle disabled"></li>-->
                 </ul>
             </div>
         </header>
@@ -68,48 +68,45 @@ treatment.”<sup>1</sup>
         	</div>
        		<!--footer menu -->
             <ul class="footer-menu">
-            	<li class="active disease">
+            	<li class="disease active">
                 	<ul>
                    		<li class="dc selected">Disease course</li>
-                        <li class="patient">Patient indicators</li>
-                        <li class="lemann">Lemann score</li>
-                       	<li class="pathway">Treatment pathway</li>
+                        <li class="pi">Patient indicators</li>
+                       	<li class="tp">Treatment pathway</li>
                 	</ul>
                     <span>Disease <br />Course</span>
                 </li>
                 <li class="response">
                 	 <ul>
                        <li class="rr">Response <br />&amp;&nbsp;Remission</li>
-                        <li class="steroid-free">Steroid-free remission</li>
+                        <li class="sf">Steroid-free remission</li>
                 	</ul>
                     <span>Response <br />&amp;&nbsp;Remission</span>
                 </li>
-                <li class="mucosal">
+                <li class="mucosal ">
                 	<ul>
                     	<li class="mh">Mucosal <br />Healing</li>
-                        <li class="benefit">Sustained benefit</li>
-                         <li class="body">Body of evidence</li>
-                         <li class="hospitalisation">Hospitalisation</li>
-                        <li class="surgery">Surgery</li>
+                        <li class="sb">Sustained benefit</li>
+                        <li class="be">Body of evidence</li>
+                        <li class="sy">Surgery</li>
                 	</ul>
                 <span>Mucosal <br />Healing</span>
                 </li>
-                <li class="qol">QoL</li>
                 <li class="hosp">
                 	<ul>
                         <li class="hs">Hosp/Surg</li>
-                        <li class="reductions">Reductions</li>
+                        <li class="rs">Reductions</li>
                 	</ul>
                     <span>Hosp/ <br />Surg</span>
                 </li>
-                <li class="steroids">
+                <li class="steroids mid ">
                     <ul>
-                    	<li class="st">Steroids</li>
-                        <li class="accent">ACCENT & SONIC</li>
+                    	<li class="st ">Steroids</li>
+                        <li class="as">ACCENT & SONIC</li>
                 	</ul>
                     <span>Steroids</span>
                 </li>
-                <li class="switch">Switch</li>
+                <li class="switch mid">Switch</li>
             </ul>
        
         </article>
@@ -166,6 +163,24 @@ or penetrating complications (lower curve). Retrospective study of 2002 patients
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
+		
+		$('.steroids .as').on('tap', function(){
+			localStorage.setItem('fromSonic', '1');
+		});
+		
+		//goToSlide('disease .dc', 'CD1601-Disease-course');
+		goToSlide('disease .pi', 'CD1602-Patient-indicators');
+		goToSlide('disease .tp', 'CD1603-Treatment-pathway');
+		goToSlide('response .rr', 'CD1604-Response-and-remission');
+		goToSlide('response .sf, .steroids .as', 'CD1605-Steroid-free-remission');
+		goToSlide('mucosal .mh', 'CD1606-Mucosal-healing');
+		goToSlide('mucosal .sb', 'CD1607-Sustained-benefit');
+		goToSlide('mucosal .be', 'CD1608-Body-of-evidence');
+		goToSlide('mucosal .sy', 'CD1609-Surgery');
+		goToSlide('hosp .hs', 'CD1610-Hosp-surg');
+		goToSlide('hosp .rs', 'CD1611-Reductions');
+		goToSlide('steroids .st', 'CD1612-Steroids');
+		goToSlide('switch', 'CD1613-Switch');
 		
 		//reference
 		goToSlide('ref1', 'Pariente2011');

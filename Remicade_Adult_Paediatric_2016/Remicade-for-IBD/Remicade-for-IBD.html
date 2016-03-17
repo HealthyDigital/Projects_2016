@@ -9,9 +9,9 @@
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.content-wrapper.bg:after { background-image:url('img/bg.jpg'); }
+	.content-wrapper.bg { background-image:url('img/bg.jpg'); }
 	.inner-wrapper h2 { font-size:51px; line-height:48px; margin-bottom:45px; }
-	.home .main-menu { width:302px; right:175px; top:-1px; padding-top:12%; box-shadow:none; border-radius:0; display:block; -webkit-animation-delay:0.2s; animation-delay:0.2s;}
+	.home .main-menu { width:302px; right:175px; top:-1px; padding:12% 30px 30px; box-shadow:none; border-radius:0; display:block; -webkit-animation-delay:0.2s; animation-delay:0.2s;}
 	.main-menu > span { display:block; font-size:32px; line-height:30px; padding:32px; margin-top:25px; background:#fdc400; -webkit-border-radius:5px; border-radius:5px; position:relative; font-family: 'Clarendon'; }
 	
 	.main-menu > span:before, .main-menu > span:after { content:""; position:absolute; }
@@ -39,15 +39,7 @@
                 <span class="adult">Adult</span>
                 <span class="paediatric">Paediatric</span>
             </aside>
-           <!-- <ul class="menu">
-            	<li class="crohn">Crohn’s disease <i>&nbsp;</i></li>
-                <li class="wide fistulising">Fistulising Crohn’s<br />disease <i>&nbsp;</i></li>
-                <li class="wide paediatric">Paediatric Crohn’s disease <i>&nbsp;</i></li>
-                <li class="safety">Safety &amp;&nbsp;Dosing <i>&nbsp;</i></li>
-                <li class="adherence">Adherence</li>
-                <li class="preference">Preference</li>
-            </ul>-->
-       
+         
         </article>
     <div class="popup ref">
     	<h3>References</h3>
@@ -65,10 +57,21 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-		//references
-		goToSlide('adult', 'Adult-IBD');
-		goToSlide('paediatric', 'Paediatric-IBD');
+		$('.main-menu > span').on('tap', function(){
+			var asset, id;
+			if($(this).hasClass('adult')){ 
+				id = 'A_IBD2016'; 
+				asset = 'CDUC16-Adult-IBD'; 
+			}else{ 
+				id = 'P_IBD2016'; 
+				asset = 'Paediatric-IBD'; 
+				
+			}	
+			localStorage.setItem('currentSection', asset);
+			document.location = 'veeva:gotoSlide('+asset+'.zip, '+id+')';
+		})
 		
+		//references		
 		goToSlide('ref1', 'Danese2011');
 		goToSlide('ref2', 'Hoentjen2011');
 		goToSlide('ref3', 'Lichtenstein2012');
