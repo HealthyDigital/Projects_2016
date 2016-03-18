@@ -83,11 +83,11 @@ is rapid...”<sup>1</sup>
             </div>
        		<!--footer menu -->
             <ul class="footer-menu">
-                <li class="safety active">Safety</li>
-                <li class="mortality">Mortality</li>
+                <li class="safety mid active">Safety</li>
+                <li class="mortality mid">Mortality</li>
                 <li class="infections">Serious <br />Infections</li>
-                <li class="neoplasia">Neoplasia</li>
-                <li class="hstcl">
+                <li class="neoplasia mid">Neoplasia</li>
+                <li class="hstcl mid">
                 	<ul>
                         <li class="hl">HSTCL</li>
                         <li class="ab">Absolute risk</li>
@@ -161,6 +161,15 @@ treatment groups for responders and all randomised patients.Adapted from Lichten
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
+		
+		//goToSlide('footer-menu .safety', 'AP-IBD1601-Safety');
+		goToSlide('footer-menu .mortality', 'AP-IBD1602-Mortality');
+		goToSlide('footer-menu .infections', 'AP-IBD1603-Serious-infections');
+		goToSlide('footer-menu .neoplasia', 'AP-IBD1604-Neoplasia');
+		goToSlide('hstcl .hl', 'AP-IBD1605-HSTCL');
+		goToSlide('hstcl .ab', 'AP-IBD1606-Absolute-risk');
+		goToSlide('infusion .ir', 'AP-IBD1607-Infusion-reactions');
+		goToSlide('infusion .man', 'AP-IBD1608-Management');
 		
 		//reference
 		goToSlide('ref1', 'Jewell2005');

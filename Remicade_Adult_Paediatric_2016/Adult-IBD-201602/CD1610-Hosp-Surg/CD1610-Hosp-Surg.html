@@ -178,6 +178,10 @@ therapy with REMICADE was investigated. Adapted from Schnitzler F <em>et al</em>
 <script type="text/javascript">
 	$( function(){
 		
+		$('.steroids .as').on('tap', function(){
+			localStorage.setItem('fromSonic', '1');
+		});
+		
 		goToSlide('disease .dc', 'CD1601-Disease-course');
 		goToSlide('disease .pi', 'CD1602-Patient-indicators');
 		goToSlide('disease .tp', 'CD1603-Treatment-pathway');

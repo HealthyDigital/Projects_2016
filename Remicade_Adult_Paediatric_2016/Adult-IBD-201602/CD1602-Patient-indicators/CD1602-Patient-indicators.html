@@ -10,7 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
 	.content-wrapper.sides { background-image:url('img/bg_2.png'); }
-	.content .grad-list { margin-top:25px;  }
+	.content .grad-list { margin-top:20px;  }
 	.content > p, .grad-list li { letter-spacing:-0.01em; }
 	.grad-list li { 
 		width:92%; 
@@ -18,7 +18,7 @@
 		font-size:23px; 
 		line-height:24px; 
 		padding:18px 36px;
-		margin-bottom:15px; 
+		margin-bottom:12px; 
 		background:
 			linear-gradient(135deg, transparent 18px, rgba(235, 139, 46, 0.75) 0) top left,
 			linear-gradient(1deg, transparent 0px, rgba(235, 139, 46, 0.75) 0) top right,
@@ -49,7 +49,7 @@
                     <li class="btn-home"><i></i></li>
                     <li class="btn-ref circle"></li>
                     <li class="btn-mpi circle"></li>
-                    <li class="btn-info circle disabled"></li>
+                    <!--<li class="btn-info circle disabled"></li>-->
                 </ul>
             </div>
         </header>
@@ -166,6 +166,11 @@ or penetrating complications (lower curve). Retrospective study of 2002 patients
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
+		
+		$('.steroids .as').on('tap', function(){
+			localStorage.setItem('fromSonic', '1');
+		});
+		
 		goToSlide('disease .dc', 'CD1601-Disease-course');
 		//goToSlide('disease .pi', 'CD1602-Patient-indicators');
 		goToSlide('disease .tp', 'CD1603-Treatment-pathway');

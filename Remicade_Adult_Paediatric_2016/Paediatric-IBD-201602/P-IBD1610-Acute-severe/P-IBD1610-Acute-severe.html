@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
+	.content > h2 { margin-bottom:40px; }
 	.tabular {
 		width:75%;
 		padding-bottom:10px;
@@ -142,7 +143,6 @@ b Data refers to 3 months after introduction of REMICADE. NA, not available; CI,
             <h3>Reference</h3>
             <ol>
                 <li class="ref1">Turner D and Griffiths A. Inflamm Bowel Dis 2011;17:440-449.</li>
-                
 				<li class="ref2">Turner D <em>et al</em>. Gastroenterology 2010;138(7):2282-2291.</li>
 				<li class="ref3">Hyams J <em>et al</em>. Am J Gastroenterol 2010;105(6):1430-1436.</li>
 				<li class="ref4">McGinnes J and Murray K. J Clin Gastroenterol 2008;42:875-879.</li>
@@ -187,8 +187,22 @@ b Data refers to 3 months after introduction of REMICADE. NA, not available; CI,
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
+		
+		goToSlide('footer-menu .clinical', 'P-IBD1606-Clinical-remission');
+		goToSlide('footer-menu .steroid', 'P-IBD1607-Steroid-sparing');
+		goToSlide('footer-menu .mucosal', 'P-IBD1608-Mucosal-healing');
+		goToSlide('footer-menu .colectomy', 'P-IBD1609-Colectomy-free-survival');
+		//goToSlide('footer-menu .acute', 'P-IBD1610-Acute-severe');
+		
 		//references
-		goToSlide('ref1', 'Hyams2010');
+		goToSlide('ref1', 'Turner2011');
+		goToSlide('ref2', 'Turner2010');
+		goToSlide('ref3', 'Hyams2010');
+		goToSlide('ref4', 'McGinnes2008');
+		goToSlide('ref5', 'Fanjiang2007');
+		goToSlide('ref6', 'Russell2004');
+		goToSlide('ref7', 'Kugathasan2002');
+		goToSlide('ref8', 'Turner2012');
 	})
 
 </script>

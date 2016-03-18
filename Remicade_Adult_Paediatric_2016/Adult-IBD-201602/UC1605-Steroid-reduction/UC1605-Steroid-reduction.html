@@ -27,7 +27,7 @@
 	.btn-plus { display: block; width:35px; height:35px; margin-left:40px; background:url('img/btn_pm.png') 0 0 no-repeat; background-size:100% auto; margin-bottom:5px; }
 	.btn-plus.show { background-position-y: bottom; }
 	.year3 { display:none; }
-	.footnote { position:absolute; left:105px; bottom:65px; }
+	.footnote { position:absolute; left:105px; bottom:75px; }
 	/* bottom menu */ 
 	.footer-menu li > ul { left:-8.6em; }
 	.footer-menu .goals > ul { width:256px; }
@@ -111,7 +111,7 @@ within the last 8 weeks during the extension study <small>(after REMICADE treatm
                 </li>
                 <li class="steroid active">
                 	<ul>
-                        <li class="ss selected">Steroid reduction</li>
+                        <li class="sr selected">Steroid reduction</li>
                          <li class="sf">Steroid-free remission</li>
                 	</ul>
                 <span>Steroid<br />Sparing</span>
@@ -203,7 +203,19 @@ increase to 10 mg/kg if response was lost.<sup>2</sup></p>
 				
 				y3.slideUp();
 			}
-		})
+		});
+		
+		goToSlide('goals .got', 'UC1601-Goals-of-treatment');
+		goToSlide('goals .pi', 'UC1602-Patient-indicators');
+		goToSlide('goals .sa', 'UC1603-Step-up-algorithm');
+		goToSlide('footer-menu .rr', 'UC1604-Response-and-remission');
+		//goToSlide('steroid .sr', 'UC1605-Steroid-reduction');
+		goToSlide('steroid .sf', 'UC1606-Steroid-free-remission');
+		goToSlide('mucosal .io', 'UC1607-Improved-outcomes');
+		goToSlide('mucosal .cf', 'UC1608-Colectomy-free-survival');
+		goToSlide('footer-menu .hosp', 'UC1609-Hospitalisation');
+		goToSlide('footer-menu .colectomy', 'UC1610-Colectomy');
+		goToSlide('footer-menu .qol', 'UC1611-QoL');
 
 		
 		//reference

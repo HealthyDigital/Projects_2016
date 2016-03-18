@@ -110,11 +110,11 @@ treatment”<sup>1</sup>
             </div>
        		<!--footer menu -->
             <ul class="footer-menu">
-                <li class="safety">Safety</li>
-                <li class="mortality">Mortality</li>
+                <li class="safety mid">Safety</li>
+                <li class="mortality mid">Mortality</li>
                 <li class="infections">Serious <br />Infections</li>
-                <li class="neoplasia">Neoplasia</li>
-                <li class="hstcl active">
+                <li class="neoplasia mid">Neoplasia</li>
+                <li class="hstcl mid active">
                 	<ul>
                         <li class="hl selected">HSTCL</li>
                         <li class="ab">Absolute risk</li>
@@ -185,6 +185,15 @@ Food and Drug Administration. Adapted from Kotlyar <em>et al</em>.<sup>1</sup>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
+		
+		goToSlide('footer-menu .safety', 'AP-IBD1601-Safety');
+		goToSlide('footer-menu .mortality', 'AP-IBD1602-Mortality');
+		goToSlide('footer-menu .infections', 'AP-IBD1603-Serious-infections');
+		goToSlide('footer-menu .neoplasia', 'AP-IBD1604-Neoplasia');
+		//goToSlide('hstcl .hl', 'AP-IBD1605-HSTCL');
+		goToSlide('hstcl .ab', 'AP-IBD1606-Absolute-risk');
+		goToSlide('infusion .ir', 'AP-IBD1607-Infusion-reactions');
+		goToSlide('infusion .man', 'AP-IBD1608-Management');
 		
 		//reference
 		goToSlide('ref1', 'Kotlyar2011');

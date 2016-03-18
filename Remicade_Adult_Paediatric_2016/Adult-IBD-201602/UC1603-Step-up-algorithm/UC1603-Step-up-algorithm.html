@@ -87,7 +87,7 @@
 		
 		.tabular .bb { border-bottom:1px solid rgba(255, 255, 255, 0.08); }
 		.tabular .bt { border-top:1px solid rgba(255, 255, 255, 0.25); text-align:center;  }
-		h3 { color:#ea8a2d; padding-left:48px; margin-bottom:25px;  }
+		.content h3 { color:#ea8a2d; padding-left:48px; margin-bottom:25px;  }
 	/* bottom menu */ 
 	.footer-menu li > ul { left:-8.6em; }
 	.footer-menu .goals > ul { width:256px; }
@@ -185,7 +185,7 @@
 				<h3>REMICADE<sup>1</sup></h3>
                 <div class="footnote g-line">
                 	Adapted from Dignass R <em>et al</em>, 2012<sup>1</sup>; Panaccione R et al, 2008.<sup>2</sup><br />
-† ECCO: European Crohn’s and Colitis Organisation. * Tacrolimus is not indicated for use in ulcerative colitis in New Zealand.
+<sup class="b">†</sup> ECCO: European Crohn’s and Colitis Organisation. * Tacrolimus is not indicated for use in ulcerative colitis in New Zealand.
                 </div>
 				
             </div>
@@ -203,7 +203,7 @@
                 </li>
                 <li class="steroid">
                 	<ul>
-                        <li class="ss">Steroid reduction</li>
+                        <li class="sr">Steroid reduction</li>
                          <li class="sf">Steroid-free remission</li>
                 	</ul>
                 <span>Steroid<br />Sparing</span>
@@ -291,6 +291,18 @@ outcomes were as follows: (a) infliximab [iv] in hospital every 8 weeks approxim
 					tab.addClass('first');					
 				}
 		});
+		
+		goToSlide('goals .got', 'UC1601-Goals-of-treatment');
+		goToSlide('goals .pi', 'UC1602-Patient-indicators');
+		//goToSlide('goals .sa', 'UC1603-Step-up-algorithm');
+		goToSlide('footer-menu .rr', 'UC1604-Response-and-remission');
+		goToSlide('steroid .sr', 'UC1605-Steroid-reduction');
+		goToSlide('steroid .sf', 'UC1606-Steroid-free-remission');
+		goToSlide('mucosal .io', 'UC1607-Improved-outcomes');
+		goToSlide('mucosal .cf', 'UC1608-Colectomy-free-survival');
+		goToSlide('footer-menu .hosp', 'UC1609-Hospitalisation');
+		goToSlide('footer-menu .colectomy', 'UC1610-Colectomy');
+		goToSlide('footer-menu .qol', 'UC1611-QoL');
 		
 		//reference
 		goToSlide('ref1', 'Dignass2012');

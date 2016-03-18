@@ -115,7 +115,7 @@ remission.”<sup>1</sup>
         <div class="popup ref">
             <h3>Reference</h3>
             <ol>
-                <li class="ref1">Danese S <em>et al</em>. Aliment Pharmacol Ther 2011; 33: 857–869.</li>
+                <li class="ref1">Targan S <em>et al</em>. N Engl J Med 1997; 337: 1029–1035.</li>
             </ol>
         </div>
          <!--   Study design  -->
@@ -169,6 +169,10 @@ S <em>et al</em>.<sup>1</sup>
 <script type="text/javascript">
 	$( function(){
 		
+		$('.steroids .as').on('tap', function(){
+			localStorage.setItem('fromSonic', '1');
+		});
+		
 		goToSlide('disease .dc', 'CD1601-Disease-course');
 		goToSlide('disease .pi', 'CD1602-Patient-indicators');
 		goToSlide('disease .tp', 'CD1603-Treatment-pathway');
@@ -184,7 +188,7 @@ S <em>et al</em>.<sup>1</sup>
 		goToSlide('switch', 'CD1613-Switch');
 		
 		//reference
-		goToSlide('ref1', 'Danese2011');
+		goToSlide('ref1', 'Targan1997');
 	})
 	
 	

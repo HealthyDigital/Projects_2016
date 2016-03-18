@@ -127,13 +127,13 @@ remission.”<sup>1</sup>
          <!--   Study design  -->
     	<div class="popup study-design">
     		<h3>Study design</h3>
-         	<p>ACCENT 1: 46-week, multi-centre, double-blind trial of 573 patients with Crohn’s disease (CDAI >220) treated with REMICADE 5 mg/kg at week 0, then randomly assigned to receive infusions
+         	<p>ACCENT 1: 46-week, multi-centre, double-blind trial of 573 patients with Crohn’s disease (CDAI &gt;220) treated with REMICADE 5 mg/kg at week 0, then randomly assigned to receive infusions
 at weeks 2 & 6 and then 8 weekly of either placebo (group I) or REMICADE 5 mg/kg (group II) or
 REMICADE 5 mg/kg at weeks 2 & 6, followed by 10 mg/kg 8-weekly (group III). Primary endpoints
 were the time to loss of response (of week 2 responders) up to week 54 and the proportion of week 2
 responders in remission (CDAI &lt;150) at week 30. Adapted from Hanauer <em>et al</em>.<sup>1</sup></p>
 <p>SONIC: 50-week (30 week with blinded 20 week extension), multi-centre, double-blind trial of
-508 patients with moderate-to-severe Crohn’s disease (CDAI >220) randomised to receive either
+508 patients with moderate-to-severe Crohn’s disease (CDAI &gt;220) randomised to receive either
 REMICADE 5 mg/kg at week 0, 2 & 6, then 8 weekly plus daily oral placebo, 2.5 mg/kg oral
 azathioprine plus placebo infusions on the standard schedule, or both active treatments combined.
 Primary endpoint was steroid-free remission (CDAI &lt;150). Adapted from Colombel <em>et al</em>.<sup>2</sup></p>
@@ -179,11 +179,17 @@ Primary endpoint was steroid-free remission (CDAI &lt;150). Adapted from Colombe
 <script type="text/javascript">
 	$( function(){
 		
+		var steroids = $('.steroids');
+		
+		steroids.find('.as').on('tap', function(){
+			localStorage.setItem('fromSonic', '1');
+		});
+		
 		goToSlide('disease .dc', 'CD1601-Disease-course');
 		goToSlide('disease .pi', 'CD1602-Patient-indicators');
 		goToSlide('disease .tp', 'CD1603-Treatment-pathway');
 		goToSlide('response .rr', 'CD1604-Response-and-remission');
-		//goToSlide('response .sf', 'CD1605-Steroid-free-remission');
+		goToSlide('response .sf, .steroids .as', 'CD1605-Steroid-free-remission');
 		goToSlide('mucosal .mh', 'CD1606-Mucosal-healing');
 		goToSlide('mucosal .sb', 'CD1607-Sustained-benefit');
 		goToSlide('mucosal .be', 'CD1608-Body-of-evidence');
@@ -195,9 +201,9 @@ Primary endpoint was steroid-free remission (CDAI &lt;150). Adapted from Colombe
 		
 		var fromSonic = localStorage.getItem('fromSonic');
 			if(!$.isEmptyObject(fromSonic) && fromSonic === '1'){
-				$('.footer-menu > li').removeClass('active');
-				$('.steroids').addClass('active').find('.as').addClass('selected');
-				console.log(fromSonic);
+				$('.footer-menu > li').removeClass('active').find('li').removeClass('selected');
+				steroids.addClass('active').find('.as').addClass('selected');
+				//console.log(fromSonic);
 				localStorage.setItem('fromSonic', '0');
 			}
 		

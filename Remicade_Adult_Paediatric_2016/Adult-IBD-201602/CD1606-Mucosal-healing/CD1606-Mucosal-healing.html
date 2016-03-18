@@ -186,6 +186,10 @@ responders in remission (CDAI &lt;150) at week 30. Adapted from Hanauer <em>et a
 <script type="text/javascript">
 	$( function(){
 		
+		$('.steroids .as').on('tap', function(){
+			localStorage.setItem('fromSonic', '1');
+		});
+		
 		goToSlide('disease .dc', 'CD1601-Disease-course');
 		goToSlide('disease .pi', 'CD1602-Patient-indicators');
 		goToSlide('disease .tp', 'CD1603-Treatment-pathway');

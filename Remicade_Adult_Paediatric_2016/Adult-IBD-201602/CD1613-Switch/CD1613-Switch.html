@@ -51,8 +51,8 @@ adalimumab (Humira<sup>®†</sup>)<sup>1</sup></h2>
                 	<span class="g-line">† Humira is a registered trademark of Abbvie New Zealand.</span>
                     <ul class="list">
                     	<li>Fewer REMICADE-treated patients stopped therapy due to loss of response<br />
-                       	or intolerance vs. patients who switched to Humira<sup>®</sup>† (2% vs. 28%, p&lt;0.01)<sup>1</sup></li>
-                        <li>Almost a third of patients who switched to Humira<sup>®</sup>† returned to REMICADE<br />
+                       	or intolerance vs. patients who switched to Humira<sup>®†</sup> (2% vs. 28%, p&lt;0.01)<sup>1</sup></li>
+                        <li>Almost a third of patients who switched to Humira<sup>®†</sup> returned to REMICADE<br />
 therapy within a year<sup>1</sup></li>
 </ul>
                 </div>
@@ -121,7 +121,7 @@ treatment with
          <!--   Study design  -->
     	<div class="popup study-design">
     		<h3>Study design</h3>
-         	<strong>SWITCH:</strong> An open-label randomised single-centre trial of 73 patients with ongoing response to ≥ 6
+         	SWITCH: An open-label randomised single-centre trial of 73 patients with ongoing response to ≥ 6
 months of scheduled maintenance REMICADE. Patients were randomised to continue REMICADE or
 to switch to adalimumab for 1 year. Dose optimisation was allowed for intermittent flares, and patients
 with loss of response or intolerance could cross over to the alternative treatment group. Tolerability,
@@ -169,6 +169,10 @@ van Assche <em>et al</em>.<sup>1</sup>
 <script type="text/javascript">
 	$( function(){
 		
+		$('.steroids .as').on('tap', function(){
+			localStorage.setItem('fromSonic', '1');
+		});
+		
 		goToSlide('disease .dc', 'CD1601-Disease-course');
 		goToSlide('disease .pi', 'CD1602-Patient-indicators');
 		goToSlide('disease .tp', 'CD1603-Treatment-pathway');
@@ -184,7 +188,7 @@ van Assche <em>et al</em>.<sup>1</sup>
 		//goToSlide('switch', 'CD1613-Switch');
 		
 		//reference
-		goToSlide('ref1', 'Van2012');
+		goToSlide('ref1', 'VanA2012');
 	})
 	
 	

@@ -9,14 +9,14 @@
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.mortality-in-patients { overflow:hidden; margin:20px 0 35px; }	
+	.mortality-in-patients { overflow:hidden; margin:20px 0 32px; }	
 	.mortality-in-patients li { float:left; width:21.8%; height:60px; padding:13px 1.6%; background:#ffc40c; font-size:18px; line-height:20px; letter-spacing:-0.02em; }
 	.mortality-in-patients li > span { display:table-cell; vertical-align:middle; height:inherit; }
 	.mortality-in-patients li:nth-child(2), .mortality-in-patients li:nth-child(4) { background:#ee8c3a; }
 	.mortality-in-patients li:last-child { width:100%; height:auto;padding:12px 0; font-family: 'AkzidGroLig'; background:#b2b1b2;  }
 	.mortality-in-patients li:last-child > span { display:block; float:left; width:21.8%; padding: 0 1.7%; }
 	.mortality-in-patients li:last-child > span:last-child { padding-right:0; }
-	div.footnote { padding-bottom:9%; }
+	div.footnote { padding-bottom:8%; }
 	.padtop { padding-top:5px; }
 	
 	/* bottom menu */ 	
@@ -91,11 +91,11 @@ is rapid...”<sup>1</sup>
             </div>
        		<!--footer menu -->
             <ul class="footer-menu">
-                <li class="safety">Safety</li>
-                <li class="mortality active">Mortality</li>
+                <li class="safety mid">Safety</li>
+                <li class="mortality mid active">Mortality</li>
                 <li class="infections">Serious <br />Infections</li>
-                <li class="neoplasia">Neoplasia</li>
-                <li class="hstcl">
+                <li class="neoplasia mid">Neoplasia</li>
+                <li class="hstcl mid">
                 	<ul>
                         <li class="hl">HSTCL</li>
                         <li class="ab">Absolute risk</li>
@@ -167,6 +167,15 @@ nonbiological medications in Crohn’s disease. Adapted from Lichtenstein <em>et
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
+		
+		goToSlide('footer-menu .safety', 'AP-IBD1601-Safety');
+		//goToSlide('footer-menu .mortality', 'AP-IBD1602-Mortality');
+		goToSlide('footer-menu .infections', 'AP-IBD1603-Serious-infections');
+		goToSlide('footer-menu .neoplasia', 'AP-IBD1604-Neoplasia');
+		goToSlide('hstcl .hl', 'AP-IBD1605-HSTCL');
+		goToSlide('hstcl .ab', 'AP-IBD1606-Absolute-risk');
+		goToSlide('infusion .ir', 'AP-IBD1607-Infusion-reactions');
+		goToSlide('infusion .man', 'AP-IBD1608-Management');
 		
 		//reference
 		goToSlide('ref1', 'Lichtenstein2012');

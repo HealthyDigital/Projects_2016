@@ -27,7 +27,7 @@
 		background-repeat: no-repeat; 
 		letter-spacing:-0.01em; }
 		.grad-list li:last-child { margin-bottom:0; }
-	
+	.btn-ref.disabled { opacity:0; }
 </style> 
 </head>
 <body>
@@ -63,14 +63,14 @@
             </ul>
        
         </article>
-        <div class="popup ref">
+        <!-- <div class="popup ref">
             <h3>References</h3>
             <ol>
                 <li class="ref1">D’Inca R et al. Aliment Pharmacol There 2008; 27: 166–72.</li>
                 <li class="ref2">Jeffery AR et al. .Journal of Clinical Epidemiology 2014; 67: 1076-82.</li>
             </ol>
         </div>
-         <!--   Study design 
+           Study design 
     	<div class="popup study-design">
     		<h3>Study design</h3>
          	A total of 165 consecutive patients who received 479 REMICADE infusions at Mount Sinai Medical
@@ -119,9 +119,11 @@ Cheifetz <em>et al</em>.<sup>1</sup>
 <script type="text/javascript">
 	$( function(){
 		
-		//reference
-		goToSlide('ref1', 'DInca2008');
-		goToSlide('ref2', 'Jeffery2014');
+		//goToSlide('footer-menu .patient', 'AP-IBD1614-Patient-choice');
+		goToSlide('footer-menu .efficacy', 'AP-IBD1615-Efficacy');
+		goToSlide('footer-menu .dosing', 'AP-IBD1616-Dosing-frequency');
+		goToSlide('footer-menu .injecting', 'AP-IBD1617-Self-injecting');
+		
 	})
 	
 	
