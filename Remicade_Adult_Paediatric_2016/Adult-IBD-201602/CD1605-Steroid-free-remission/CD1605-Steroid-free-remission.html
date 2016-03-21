@@ -179,7 +179,9 @@ Primary endpoint was steroid-free remission (CDAI &lt;150). Adapted from Colombe
 <script type="text/javascript">
 	$( function(){
 		
-		var steroids = $('.steroids');
+		var steroids = $('.steroids'),
+			next = "CD1606-Mucosal-healing",
+			prev = "CD1604-Response-and-remission";
 		
 		steroids.find('.as').on('tap', function(){
 			localStorage.setItem('fromSonic', '1');
@@ -203,9 +205,19 @@ Primary endpoint was steroid-free remission (CDAI &lt;150). Adapted from Colombe
 			if(!$.isEmptyObject(fromSonic) && fromSonic === '1'){
 				$('.footer-menu > li').removeClass('active').find('li').removeClass('selected');
 				steroids.addClass('active').find('.as').addClass('selected');
+				next = "CD1613-Switch"; prev = "CD1612-Steroids";
 				//console.log(fromSonic);
 				localStorage.setItem('fromSonic', '0');
 			}
+		
+		$('.content-wrapper').on("swiperight", function(){
+			document.location = 'veeva:gotoSlide('+prev+'.zip)';
+		});
+		$('.content-wrapper').on("swipeleft", function(){
+			document.location = 'veeva:gotoSlide('+next+'.zip)';
+		})
+		
+		
 		
 		//reference
 		goToSlide('ref1', 'Hanauer2002');
