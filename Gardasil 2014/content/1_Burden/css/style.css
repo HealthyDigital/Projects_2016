@@ -1,0 +1,105 @@
+/*reset*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption{border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;margin:0;padding:0;}body{line-height:1;color:#000;background:#FFF;}ol,ul{list-style:none;}table{border-collapse:collapse;border-spacing:0;vertical-align:top;}caption,th,td{font-weight:400;}blockquote:before,blockquote:after,q:before,q:after{content:"";}a{outline:0;}input:focus{outline:none;}
+
+
+/* ClearFix */
+header:before,
+header:after,
+.clearfix:before, 
+.clearfix:after 
+{content: "\0020";display: block;height: 0;visibility: hidden;}
+
+header:after,
+.clearfix:after {clear: both;}
+
+header,
+.clearfix {zoom: 1;}
+
+/* HR clearing */
+div.cleaner {
+    margin: -1px 0 0 0;
+    height: 1px;
+    clear: both;
+    visibility: hidden;
+}
+div.cleaner hr {
+    display: none;
+}
+
+
+
+
+/*
+--------------------
+* typography 
+--------------------
+*/
+
+/* font-face */
+/*@font-face {font-family: 'myriad pro'; src: url('../webfont/MYRIADPRO-REGULAR.otf');}*/
+
+body {position: absolute; width: 1024px; height: 768px; overflow: hidden; font: normal 75%/1.5em 'myriad pro', arial, helvetica, sans-serif;}
+h1 {color: #fff; font-size: 2.5em; text-shadow: 4px 4px 10px #000;}
+h1 sup {font-size: 0.7em; font-weight: normal;}
+
+/*
+--------------------
+* layout
+--------------------
+*/
+.container {width: 1024px; height: 768px; overflow: hidden; background: url(../images/bg-container.gif) no-repeat 0 0;}
+.container.one {background: url(../images/bg-container-01.gif) no-repeat 0 0;}
+.container.two {background: url(../images/bg-container-02.gif) no-repeat 0 0;}
+.container.three {background: url(../images/bg-container-03.gif) no-repeat 0 0;}
+/* section - graph */
+
+ul.tabs {position: absolute; width: 951px; height: 42px; top: 156px; left: 37px;}
+ul.tabs li {float: left;}
+ul.tabs li a {cursor: pointer;}
+ul.tabs li:first-child a {display: block; width: 316px; height: 42px; text-indent: -9999em;/* background: url(../images/tabs-tole.png) no-repeat 0 0;*/}
+ul.tabs li.second a {display: block; width: 316px; height: 42px; text-indent: -9999em;/* background: url(../images/tabs-tole.png) no-repeat 0 0;*/}
+/*ul.tabs li:first-child a.current {background-image: url(../images/tabs-immun.png);}*/
+ul.tabs li:last-child a {display: block; width: 316px; height: 42px; text-indent: -9999em;/* background: url(../images/tabs-tole.png) no-repeat 0 0;*/}
+/*ul.tabs li:last-child a.current {background-image: url(../images/tabs-tole.png);}*/
+
+
+.zoom {position: absolute; display: block; width: 35px; height: 35px; text-indent: -9999em;}
+.container.one .zoom {left: 109px; top: 175px;}
+.container.two .zoom {right: 333px; top: 188px;}
+
+.zoomed {display: none; position: absolute; width: 1024; height: 768px; left: 0; top: 0;}
+
+
+
+
+.overlay.first {background: url(../images/bg-overlay-01.gif) no-repeat 0 0;}
+.overlay.second {background: url(../images/bg-overlay-02.gif) no-repeat 0 0;}
+
+.overlay section.graph section.grid-A .graphitem01 {background-position: 0 8px;}
+.overlay section.graph section.grid-A .graphitem02 {background-position: -63px 8px;}
+.overlay section.graph section.grid-C .graphitem01 {background-position: -186px 8px;}
+.overlay section.graph section.grid-C .graphitem02 {background-position: -249px 8px;}
+.overlay section.graph section.grid-W135 .graphitem01 {background-position: -369px 8px;}
+.overlay section.graph section.grid-W135 .graphitem02 {background-position: -431px 8px;}
+.overlay section.graph section.grid-Y .graphitem01 {background-position: -558px 8px;}
+.overlay section.graph section.grid-Y .graphitem02 {background-position: -620px 8px;}
+
+.overlay ul.activator {top: 633px;}
+
+.overlay .pvalue {top: 565px; left: 651px;}
+.Dukoral-Epidemiology .overlay .close {position: absolute; width: 60px; height: 60px; top: 40px; right: 40px;}
+
+
+.Dukoral-Epidemiology .container,
+.Dukoral-Epidemiology .container.one {background: url(../images/bg-container-04.gif) no-repeat 0 0;}
+.Dukoral-Epidemiology .container.two {background: url(../images/bg-container-05.gif) no-repeat 0 0;}
+
+.Dukoral-Epidemiology ul.tabs {position: absolute; width: 52px; height: 377px; top: 130px; right: 247px; left: auto;}
+.Dukoral-Epidemiology ul.tabs li:first-child a {display: block; width: 55px; height: 182px; text-indent: -9999em;/* background: url(../images/tabs-tole.png) no-repeat 0 0;*/}
+/*ul.tabs li:first-child a.current {background-image: url(../images/tabs-immun.png);}*/
+.Dukoral-Epidemiology ul.tabs li:last-child a {display: block; width: 55px; height: 182px; text-indent: -9999em;/* background: url(../images/tabs-immun.png) no-repeat 0 -182px;*/}
+/*ul.tabs li:last-child a.current {background-image: url(../images/tabs-tole.png);}*/
+
+.Dukoral-Epidemiology .container .zoom {left: 665px; top: 230px;}
+
+.Dukoral-Epidemiology .overlay.first {background: url(../images/bg-container-04-01.gif) no-repeat 0 0;}

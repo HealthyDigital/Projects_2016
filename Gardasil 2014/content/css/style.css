@@ -1,0 +1,1257 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption{border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;margin:0;padding:0;}body{line-height:1;color:#000;background:#FFF;}ol,ul{list-style:none;}table{border-collapse:collapse;border-spacing:0;vertical-align:top;}caption,th,td{font-weight:400;}blockquote:before,blockquote:after,q:before,q:after{content:"";}a{outline:0;}input:focus{outline:none;}
+
+#rotating-item-wrapper {
+	position: relative;
+	width: 1024px;
+	height: 768px;
+}
+.rotating-item {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#x{
+	position: absolute;
+	top: 3px;
+	left: 920px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#click{
+	position: absolute;
+	top: 347px;
+	left: 880px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#Burden{
+	position: absolute;
+	top: 9px;
+	left: 707px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#Males{
+	position: absolute;
+	top: 130px;
+	left: 707px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#Females{
+	position: absolute;
+	top: 252px;
+	left: 707px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#Universities{
+	position: absolute;
+	top: 372px;
+	left: 707px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#Population{
+	position: absolute;
+	top: 492px;
+	left: 707px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#Resources{
+	position: absolute;
+	top: 613px;
+	left: 707px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#pi{
+	position: absolute;
+	top: 643px;
+	left: 784px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#suitcase{
+	position: absolute;
+	top: 733px;
+	left: 815px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#home{
+	position: absolute;
+	top: 734px;
+	left: 909px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#ref_main{
+	position: absolute;
+	top: 736px;
+	left: 720px;
+	width: 89px;
+	height: 56px;
+	display: block;
+	z-index: 101;
+}
+
+#logo{
+	position: absolute;
+	top: 607px;
+	left: 715px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#summary{
+	position: absolute;
+	top: 719px;
+	left: 45px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#summary_phone{
+	position: absolute;
+	left: 613px;
+	top: 180px;
+	width: 292px;
+	height: 366px;
+	display: block;
+	z-index: 101;
+}
+
+#mglass1{
+	position: absolute;
+	top: 525px;
+	left: 227px;
+	width: 49px;
+	height: 46px;
+	display: block;
+	z-index: 101;
+}
+
+#mglass2{
+	position: absolute;
+	top: 525px;
+	left: 484px;
+	width: 49px;
+	height: 46px;
+	display: block;
+	z-index: 101;
+}
+
+#mglass2a{
+	position: absolute;
+	top: 525px;
+	left: 510px;
+	width: 49px;
+	height: 46px;
+	display: block;
+	z-index: 101;
+}
+
+#mglass3{
+	position: absolute;
+	top: 525px;
+	left: 849px;
+	width: 49px;
+	height: 46px;
+	display: block;
+	z-index: 101;
+}
+
+BURDEN
+
+#back_arrow{
+	position: absolute;
+	top: 50px;
+	left:30px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#burden_main{
+	position: absolute;
+	top: 721px;
+	left: 42px;
+	width: 148px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#burden_tab1{
+	position: absolute;
+	top: 721px;
+	left: 192px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#burden_tab2{
+	position: absolute;
+	top: 721px;
+	left: 342px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#ref{
+	position: absolute;
+	top: 720px;
+	left: 825px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#pi{
+	position: absolute;
+	top: 720px;
+	left: 862px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#toolbox{
+	position: absolute;
+	top: 720px;
+	left: 898px;
+	width: 35px;
+	height: 49px;
+	display: block;
+	z-index: 101;
+}
+
+#home{
+	position: absolute;
+	top: 720px;
+	left: 936px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#next_section{
+	position: absolute;
+	top: 719px;
+	left: 983px;
+	width: 35px;
+	height: 49px;
+	display: block;
+	z-index: 101;
+}
+
+#arrow{
+	position: absolute;
+	top: 446px;
+	left: 513px;
+	width: 45px;
+	height: 49px;
+	display: block;
+	z-index: 101;
+}
+
+#back{
+	position: absolute;
+	top: 721px;
+	left: 0px;
+	width: 35px;
+	height: 53px;
+	display: block;
+	z-index: 101;
+}
+
+MALES
+
+#back_arrow{
+	position: absolute;
+	top: 50px;
+	left:30px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#males_main{
+	position: absolute;
+	top: 721px;
+	left: 42px;
+	width: 148px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#males_tab1{
+	position: absolute;
+	top: 721px;
+	left: 192px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#males_tab2{
+	position: absolute;
+	top: 721px;
+	left: 340px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#males_tab3{
+	position: absolute;
+	top: 721px;
+	left: 492px;
+	width: 145px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#males_tab4{
+	position: absolute;
+	top: 721px;
+	left: 638px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#efficacy_tab1{
+	position: absolute;
+	top: 230px;
+	left: 931px;
+	width: 50px;
+	height: 134px;
+	display: block;
+	z-index: 101;
+}
+
+#efficacy_tab2{
+	position: absolute;
+	top: 366px;
+	left: 930px;
+	width: 50px;
+	height: 134px;
+	display: block;
+	z-index: 101;
+}
+
+#efficacy_tab3{
+	position: absolute;
+	top: 501px;
+	left: 929px;
+	width: 50px;
+	height: 134px;
+	display: block;
+	z-index: 101;
+}
+
+#nip_tab1{
+	position: absolute;
+	top: 229px;
+	left: 929px;
+	width: 53px;
+	height: 136px;
+	display: block;
+	z-index: 101;
+}
+
+#nip_tab2{
+	position: absolute;
+	top: 367px;
+	left: 929px;
+	width: 51px;
+	height: 134px;
+	display: block;
+	z-index: 101;
+}
+
+#nip_tab3{
+	position: absolute;
+	top: 450px;
+	left: 929px;
+	width: 51px;
+	height: 134px;
+	display: block;
+	z-index: 101;
+}
+
+FEMALES
+
+#back_arrow{
+	position: absolute;
+	top: 50px;
+	left:30px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#females_main{
+	position: absolute;
+	top: 721px;
+	left: 42px;
+	width: 148px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#females_tab1{
+	position: absolute;
+	top: 725px;
+	left: 169px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#females_tab2{
+	position: absolute;
+	top: 725px;
+	left: 292px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#females_tab3{
+	position: absolute;
+	top: 725px;
+	left: 418px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#females_tab4{
+	position: absolute;
+	top: 725px;
+	left: 543px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#females_tab5{
+	position: absolute;
+	top: 726px;
+	left: 667px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+UNIVERSITIES
+
+
+#back_arrow{
+	position: absolute;
+	top: 50px;
+	left:30px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_main{
+	position: absolute;
+	top: 721px;
+	left: 42px;
+	width: 148px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_tab1{
+	position: absolute;
+	top: 721px;
+	left: 192px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_tab2{
+	position: absolute;
+	top: 721px;
+	left: 342px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_tab3{
+	position: absolute;
+	top: 721px;
+	left: 489px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref4{
+	position: absolute;
+	top: 536px;
+	left: 114px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref5{
+	position: absolute;
+	top: 721px;
+	left: 550px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+#universities_ref6{
+	position: absolute;
+	top: 721px;
+	left: 600px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+#universities_ref7{
+	position: absolute;
+	top: 721px;
+	left:650px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+#universities_ref8{
+	position: absolute;
+	top: 368px;
+	left: 493px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref9{
+	position: absolute;
+	top: 299px;
+	left: 46px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref10{
+	position: absolute;
+	top: 298px;
+	left: 236px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref11{
+	position: absolute;
+	top: 174px;
+	left: 25px;
+	width: 85px;
+	height: 391px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref1{
+	position: absolute;
+	top: 205px;
+	left: 46px;
+	width: 236px;
+	height: 349px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref2{
+	position: absolute;
+	top: 205px;
+	left: 295px;
+	width: 236px;
+	height: 349px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref2a{
+	position: absolute;
+	top: 336px;
+	left: 295px;
+	width: 347px;
+	height: 200px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref3{
+	position: absolute;
+	top: 351px;
+	left: 546px;
+	width: 347px;
+	height: 200px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref4{
+	position: absolute;
+	top: 299px;
+	left: 46px;
+	width: 54px;
+	height: 151px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref5{
+	position: absolute;
+	top: 184px;
+	left: 232px;
+	width: 58px;
+	height: 151px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref6{
+	position: absolute;
+	top: 368px;
+	left: 232px;
+	width: 172px;
+	height: 189px;
+	display: block;
+	z-index: 101;
+}
+
+#universities_ref7{
+	position: absolute;
+	top: 185px;
+	left: 491px;
+	width: 102px;
+	height: 173px;
+	display: block;
+	z-index: 101;
+}
+
+#chinese1{
+	position: absolute;
+	top: 189px;
+	left: 928px;
+	width: 53px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#chinese2{
+	position: absolute;
+	top: 336px;
+	left: 929px;
+	width: 53px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#vietnamese{
+	position: absolute;
+	top: 473px;
+	left: 929px;
+	width: 53px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#chinese_gif{
+	position: absolute;
+	top: 208px;
+	left: 292px;
+	width: 236px;
+	height: 332px;
+	display: block;
+	z-index: 101;
+}
+
+#chinese_mg1{
+	position: absolute;
+	top: 525px;
+	left: 227px;
+	width: 49px;
+	height: 46px;
+	display: block;
+	z-index: 101;
+}
+
+#chinese_mg2{
+	position: absolute;
+	top: 525px;
+	left: 478px;
+	width: 49px;
+	height: 46px;
+	display: block;
+	z-index: 101;
+}
+
+#poster{
+	position: absolute;
+	top: 209px;
+	left: 41px;
+	width: 53px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+
+
+POPULATION
+
+#back_arrow{
+	position: absolute;
+	top: 50px;
+	left:30px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#population_main{
+	position: absolute;
+	top: 721px;
+	left: 42px;
+	width: 148px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#population_tab1{
+	position: absolute;
+	top: 721px;
+	left: 192px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#population_tab2{
+	position: absolute;
+	top: 721px;
+	left: 341px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#population_graph{
+	position: absolute;
+	top: 309px;
+	left: 478px;
+	width: 452px;
+	height: 314px;
+	display: block;
+	z-index: 101;
+}
+
+RESOURCES
+
+#back_arrow{
+	position: absolute;
+	top: 50px;
+	left:30px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#resources_main{
+	position: absolute;
+	top: 721px;
+	left: 42px;
+	width: 148px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#resources_tab1{
+	position: absolute;
+	top: 721px;
+	left: 192px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#resources_tab2{
+	position: absolute;
+	top: 721px;
+	left: 342px;
+	width: 85px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#resources_phone{
+	position: absolute;
+	left: 587px;
+	top: 181px;
+	width: 292px;
+	height: 366px;
+	display: block;
+	z-index: 101;
+}
+
+
+#nip_tab1{
+	position: absolute;
+	top: 228px;
+	left: 927px;
+	width: 53px;
+	height: 136px;
+	display: block;
+	z-index: 101;
+}
+
+#nip_tab2{
+	position: absolute;
+	top: 366px;
+	left: 928px;
+	width: 51px;
+	height: 134px;
+	display: block;
+	z-index: 101;
+}
+
+#nip_tab3{
+	position: absolute;
+	top: 472px;
+	left: 926px;
+	width: 51px;
+	height: 134px;
+	display: block;
+	z-index: 101;
+}
+
+#ref{
+	position: absolute;
+	top: 721px;
+	left: 790px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#pi{
+	position: absolute;
+	top: 719px;
+	left: 847px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#toolbox{
+	position: absolute;
+	top: 720px;
+	left: 907px;
+	width: 35px;
+	height: 42px;
+	display: block;
+	z-index: 101;
+}
+
+#home{
+	position: absolute;
+	top: 719px;
+	left: 965px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#next_section{
+	position: absolute;
+	top: 719px;
+	left: 983px;
+	width: 35px;
+	height: 49px;
+	display: block;
+	z-index: 101;
+}
+
+#arrow{
+	position: absolute;
+	top: 446px;
+	left: 513px;
+	width: 45px;
+	height: 49px;
+	display: block;
+	z-index: 101;
+}
+
+#back{
+	position: absolute;
+	top: 714px;
+	left: 1px;
+	width: 40px;
+	height: 45px;
+	display: block;
+	z-index: 101;
+}
+
+#popup_close{
+	position: absolute;
+	top: 76px;
+	left: 936px;
+	width: 76px;
+	height: 600px;
+	display: block;
+	z-index: 101;
+}
+
+#popup_replay{
+	position: absolute;
+	top: 615px;
+	left: 915px;
+	width: 35px;
+	height: 55px;
+	display: block;
+	z-index: 101;
+}
+
+
+#pdf{
+	position: absolute;
+	top: 466px;
+	left: 711px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#pi_btn1{
+	position: absolute;
+	top: 659px;
+	left: 754px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#pdf_btn2{
+	position: absolute;
+	top: 269px;
+	left: 37px;
+	display: block;
+	z-index: 101;
+	width: 530px;
+}
+
+#pdf_btn3{
+	position: absolute;
+	top: 340px;
+	left: 38px;
+	display: block;
+	z-index: 101;
+	width: 530px;
+}
+
+#pdf_btn4{
+	position: absolute;
+	top: 410px;
+	left: 36px;
+	display: block;
+	z-index: 101;
+	width: 530px;
+}
+
+#pdf_btn5{
+	position: absolute;
+	top: 482px;
+	left: 39px;
+	display: block;
+	z-index: 101;
+	width: 530px;
+}
+
+#pdf_btn6{
+	position: absolute;
+	top: 551px;
+	left: 40px;
+	display: block;
+	z-index: 101;
+	width: 530px;
+}
+
+#pdf_btn7{
+	position: absolute;
+	top: 619px;
+	left: 39px;
+	display: block;
+	z-index: 101;
+	width: 530px;
+}
+
+#pdf_btn1{
+	position: absolute;
+	top: 200px;
+	left: 38px;
+	display: block;
+	z-index: 101;
+	width: 530px;
+}
+
+#pi_view{
+	position: absolute;
+	top: 530px;
+	left: 719px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#pi_weblink{
+	position: absolute;
+	top: 554px;
+	left: 146px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#males_weblink1{
+	position: absolute;
+	top: 330px;
+	left: 47px;
+	width: 273px;
+	height: 62px;
+	display: block;
+	z-index: 101;
+}
+
+#males_weblink2{
+	position: absolute;
+	top: 393px;
+	left: 47px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#males_weblink3{
+	position: absolute;
+	top: 456px;
+	left: 46px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#pi_pdf{
+	position: absolute;
+	top: 291px;
+	left: 769px;
+	width: 285px;
+	height: 406px;
+	display: block;
+	z-index: 101;
+}
+
+
+#toolbox_btn1{
+	position: absolute;
+	top: 237px;
+	left: 46px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#toolbox_btn2{
+	position: absolute;
+	top: 335px;
+	left: 45px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#toolbox_btn3{
+	position: absolute;
+	top: 436px;
+	left: 44px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#toolbox_btn4{
+	position: absolute;
+	top: 536px;
+	left: 46px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#toolbox_url{
+	position: absolute;
+	top: 322px;
+	left: 347px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#viewpaper{
+	position: absolute;
+	top: 82px;
+	left: 592px;
+	width: 35px;
+	height: 39px;
+	display: block;
+	z-index: 101;
+}
+
+#main_1ref{
+	position: absolute;
+	top: 703px;
+	left: 778px;
+	width: 35px;
+	height: 53px;
+	display: block;
+	z-index: 101;
+}
+
+#main_2pi{
+	position: absolute;
+	top: 704px;
+	left: 836px;
+	width: 56px;
+	height: 51px;
+	display: block;
+	z-index: 101;
+}
+
+#main_3toolbox{
+	position: absolute;
+	top: 703px;
+	left: 893px;
+	width: 56px;
+	height: 53px;
+	display: block;
+	z-index: 101;
+}
+
+.zoom {
+	position: absolute;
+	width: 35px;
+	height: 33px;
+}
+.zoomed {display: none; position: absolute; width: 1024px; height: 768px; z-index: 102; top: 0; left: 0; cursor: pointer;}

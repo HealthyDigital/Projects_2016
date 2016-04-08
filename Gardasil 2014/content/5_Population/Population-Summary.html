@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CSL Vaccines</title>
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=3.0.1'></script>    
+		<script type='text/javascript' src='../js/infinite-rotator.js'></script>
+    <script src="../js/jquery-1.7.2.min.js"></script>
+		<script src="../js/lightbox.js"></script>	
+    <script src="../js/swipesense.js"></script>
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
+    <link href="../css/lightbox.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="swipeBox" ontouchstart="touchStart(event,'swipeBox');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
+    	<img src="../images/summary.jpg"/>
+    </div>
+		<div id="back">
+  	   <a href="Population-Tab1.html"><img src="../images/1_burden/back.gif" width="44" height="42"/></a>
+  		</div>
+    
+    <div id="summary_phone">
+      <img src="../images/resourcephone.gif" width="317" height="519"/>
+    </div>
+
+      
+    <div id="pi">
+      <a href="../8_PI/PI.html"><img src="../images/1_burden/back.gif" width="60" height="44"/></a>
+    </div>
+      
+    <div id="toolbox">
+      <a href="../7_Toolbox/TB_pdf.html"><img src="../images/1_burden/back.gif" width="60" height="43"/></a>
+    </div>
+      
+  	<div id="home">
+      <a href="../index.html"><img src="../images/1_burden/back.gif" width="51" height="44"/></a>
+    </div>
+    
+    
+    <script type="text/javascript">
+      function processingRoutine() {
+        var swipedElement = document.getElementById(triggerElementID);
+        if ( swipeDirection == 'left' ) {
+          // REPLACE WITH YOUR ROUTINES
+          window.location = "Burden-Tab1.html"
+        } else if ( swipeDirection == 'right' ) {
+        // REPLACE WITH YOUR ROUTINES
+        //swipedElement.style.backgroundColor = 'green';
+        } else if ( swipeDirection == 'up' ) {
+          return false;
+        } else if ( swipeDirection == 'down' ) {
+          return false;
+        }
+      } 
+    </script>
+
+  </body>
+</html>

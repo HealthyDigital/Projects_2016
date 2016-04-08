@@ -10,6 +10,8 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
 	.content > p { letter-spacing:-0.015em; margin-bottom:15px; }
+	.content > .orange { margin-bottom:25px; display:none; }
+	.paediatric-ibd .content > .orange { display:block; }
 	.tabular {
 		width:99.5%;
 		padding-bottom:25px;
@@ -34,6 +36,7 @@
 		.tabular:before { width:30px; left:0; transform:skewY(-38deg); transform-origin:right }
 		.tabular:after { width:15px; right:0; }
 	.pad { padding-top:3px; }
+	.paediatric-ibd .for-cd { display:none; }
 	
 	/* bottom menu */ 	
 	.footer-menu .hstcl > ul, .footer-menu .infusion > ul { width:170px; }
@@ -62,9 +65,12 @@
                 <h2 class="g-line">
                 	TREAT Registry<sup>™</sup>: Neoplasia in Crohn’s disease<sup>1</sup>
                 </h2>
-               <p>REMICADE does not appear to be associated with an increased risk of development of neoplasia, or
+                <p class="for-cd">REMICADE does not appear to be associated with an increased risk of development of neoplasia, or
 with an increased risk for the development of malignant solid tumours, non-melanoma skin cancer,
 or lymphoma<sup>1</sup></p>
+               
+<p class="orange">REMICADE does not appear to be associated with an increased risk of development of neoplasia, or with
+an&nbsp;increased risk for the development of malignant solid tumours, non-melanoma skin cancer, or lymphoma<sup>1</sup></p>
                 
                 <div class="tabular">
                     <table border="0" cellspacing="0" cellpadding="0">

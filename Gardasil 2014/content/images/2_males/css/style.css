@@ -1,0 +1,92 @@
+/*reset*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption{border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;margin:0;padding:0;}body{line-height:1;color:#000;background:#FFF;}ol,ul{list-style:none;}table{border-collapse:collapse;border-spacing:0;vertical-align:top;}caption,th,td{font-weight:400;}blockquote:before,blockquote:after,q:before,q:after{content:"";}a{outline:0;}input:focus{outline:none;}
+
+
+/* ClearFix */
+header:before,
+header:after,
+.clearfix:before, 
+.clearfix:after 
+{content: "\0020";display: block;height: 0;visibility: hidden;}
+
+header:after,
+.clearfix:after {clear: both;}
+
+header,
+.clearfix {zoom: 1;}
+
+/* HR clearing */
+div.cleaner {
+    margin: -1px 0 0 0;
+    height: 1px;
+    clear: both;
+    visibility: hidden;
+}
+div.cleaner hr {
+    display: none;
+}
+
+
+
+
+/*
+--------------------
+* typography 
+--------------------
+*/
+
+/* font-face */
+/*@font-face {font-family: 'myriad pro'; src: url('../webfont/MYRIADPRO-REGULAR.otf');}*/
+
+body {position: absolute; width: 1024px; height: 768px; overflow: hidden; font: normal 75%/1.5em 'myriad pro', arial, helvetica, sans-serif;}
+h1 {color: #fff; font-size: 2.5em; text-shadow: 4px 4px 10px #000;}
+h1 sup {font-size: 0.7em; font-weight: normal;}
+
+/*
+--------------------
+* layout
+--------------------
+*/
+.container {width: 1024px; height: 768px; overflow: hidden; background: url(../images/bg-container.gif) no-repeat 0 0;}
+
+/* section - graph */
+.content {position: absolute; overflow: hidden; top: 150px; left: 90px; width: 610px; height: 330px;}
+section.graph section {position: relative; margin: 0 25px; width: 100px; height: 330px; float: left;}
+section.graph section .graphitemGroup {position: relative;}
+section.graph section .graphitem {position: absolute; width: 50px; overflow: hidden;}
+section.graph section .graphitem.graphitem01 {left: 0;}
+section.graph section .graphitem.graphitem02 {left: 51px;}
+
+.content.first section.graph section .graphitem {height: 330px; background-image: url(../images/graphic-01.png);}
+.content.second section.graph section .graphitem {height: 330px; background-image: url(../images/graphic-02.png);}
+
+.content section.graph section.grid-A .graphitem01 {background-position: 0 0;}
+.content section.graph section.grid-A .graphitem02 {background-position: -51px 0;}
+.content section.graph section.grid-C .graphitem01 {background-position: -152px 0;}
+.content section.graph section.grid-C .graphitem02 {background-position: -202px 0;}
+.content section.graph section.grid-W135 .graphitem01 {background-position: -300px 0;}
+.content section.graph section.grid-W135 .graphitem02 {background-position: -351px 0;}
+.content section.graph section.grid-Y .graphitem01 {background-position: -454px 0;}
+.content section.graph section.grid-Y .graphitem02 {background-position: -504px 0;}
+
+ul.tabs {position: absolute; width: 52px; height: 377px; top: 133px; right: 247px;}
+
+ul.tabs li:first-child a {display: block; width: 55px; height: 182px; text-indent: -9999em; background: url(../images/tabs-12month.png) no-repeat 0 0;}
+ul.tabs li:first-child a.current {background-image: url(../images/tabs-1month.png);}
+ul.tabs li:last-child a {display: block; width: 55px; height: 182px; text-indent: -9999em; background: url(../images/tabs-1month.png) no-repeat 0 -182px;}
+ul.tabs li:last-child a.current {background-image: url(../images/tabs-12month.png);}
+
+ul.activator {position: absolute; top: 535px; left: 90px;}
+ul.activator li {float: left;}
+ul.activator li a {display: block; text-indent: -9999em;}
+ul.activator li.menveo a {display: block; width: 206px; height: 46px; background: url(../images/tab-01.png);}
+ul.activator li.mpsv4 a {display: block; width: 206px; height: 46px; background: url(../images/tab-02.png);}
+ul.activator li.all a {display: block; width: 206px; height: 46px; background: url(../images/tab-03.png);}
+
+.zoom {position: absolute; right: 3px; top: 8px; display: block; width: 35px; height: 35px; text-indent: -9999em; background: url(../images/zoom.png);}
+
+.zoomed {display: none; position: absolute; width: 900px; height: 516px; left: 47px; top: 90px; cursor: pointer; box-shadow: 10px 10px 5px #888; border: solid 1px #ccc;}
+
+
+
+

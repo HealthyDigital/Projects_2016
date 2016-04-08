@@ -1,0 +1,83 @@
+/*reset*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption{border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;margin:0;padding:0;}body{line-height:1;color:#000;background:#FFF;}ol,ul{list-style:none;}table{border-collapse:collapse;border-spacing:0;vertical-align:top;}caption,th,td{font-weight:400;}blockquote:before,blockquote:after,q:before,q:after{content:"";}a{outline:0;}input:focus{outline:none;}
+
+
+/* ClearFix */
+header:before,
+header:after,
+.clearfix:before, 
+.clearfix:after 
+{content: "\0020";display: block;height: 0;visibility: hidden;}
+
+header:after,
+.clearfix:after {clear: both;}
+
+header,
+.clearfix {zoom: 1;}
+
+/* HR clearing */
+div.cleaner {
+    margin: -1px 0 0 0;
+    height: 1px;
+    clear: both;
+    visibility: hidden;
+}
+div.cleaner hr {
+    display: none;
+}
+
+
+
+
+/*
+--------------------
+* typography 
+--------------------
+*/
+
+/* font-face */
+/*@font-face {font-family: 'myriad pro'; src: url('../webfont/MYRIADPRO-REGULAR.otf');}*/
+
+body {position: absolute; width: 1024px; height: 768px; overflow: hidden; font: normal 75%/1.5em 'myriad pro', arial, helvetica, sans-serif;}
+h1 {color: #fff; font-size: 2.5em; text-shadow: 4px 4px 10px #000;}
+h1 sup {font-size: 0.7em; font-weight: normal;}
+
+/*
+--------------------
+* layout
+--------------------
+*/
+.container {width: 1024px; height: 768px; overflow: hidden; background: url(../images/bg-container-vivotif-01.gif) no-repeat 0 0;}
+.container.one {}
+.container.two {background: url(../images/bg-container-vivotif-02.gif) no-repeat 0 0;}
+
+.container .links {position: relative;}
+.container .links li {position: absolute; left: 20px; top: 381px; font-size: 0;}
+.container .links li a {display: block; width: 390px; height: 69px; }
+.container .links li.best-practice {top: 450px;}
+.container .links li.zedmed {top: 519px;}
+.container .links li.genie {top: 588px;}
+.container .links li.telephone-reminder,
+.container .links li.planning,
+.container .links li.vaccination-sheet {left: 410px;}
+.container .links li.telephone-reminder {height: 105px;}
+.container .links li.planning {top: 486px;}
+.container .links li.vaccination-sheet {top: 555px;}
+.container .links li.vaccination-sheet a {height: 75px;}
+
+/* section - graph */
+
+ul.tabs {position: absolute; width: 52px; height: 377px; top: 180px; right: 247px;}
+ul.tabs li:first-child a {display: block; width: 55px; height: 182px; text-indent: -9999em;/* background: url(../images/tabs-tole.png) no-repeat 0 0;*/}
+/*ul.tabs li:first-child a.current {background-image: url(../images/tabs-immun.png);}*/
+ul.tabs li:last-child a {display: block; width: 55px; height: 182px; text-indent: -9999em;/* background: url(../images/tabs-immun.png) no-repeat 0 -182px;*/}
+/*ul.tabs li:last-child a.current {background-image: url(../images/tabs-tole.png);}*/
+
+
+.zoom {position: absolute; display: block; width: 35px; height: 35px; text-indent: -9999em;}
+.content.first .zoom {right: 329px; top: 228px;}
+
+.zoomed {display: none; position: absolute; width: 1024; height: 768px; left: 0; top: 0;}
+
+.overlay.first {background: url(../images/bg-container-vivotif-01-01.gif) no-repeat 0 0;}
+.overlay .close {position: absolute; width: 50px; height: 50px; top: 50px; right: 45px;}
