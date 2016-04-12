@@ -8,29 +8,31 @@
 <title>CSL Vaccines</title>
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <style type="text/css">
+    .s1{ width:885px;height:515px;}
+    .title{font-size: 28px;  line-height:32px; color: white;  margin-bottom:20px; font-family: 'GothamNarrowBook';letter-spacing: -0.02em;}
 
+    #leftText {display: inline;}
+    #leftText > li { list-style: none; font-size: 28px; line-height: 32px; color: white;   font-family: 'GothamNarrowMedium'; color:#c9c393; letter-spacing:1px;}
+    
+    .graphBox{ width:440px;height:515px;float: right; background-color: rgba(0, 0, 0, 0.3); padding-top: 50px; border-top:1px solid black; margin-top:-40px; position:relative; left:10px;}
+        .graphBox > p:first-child{font-size: 14px; line-height: 17px; text-align: center; font-family: 'GothamNarrowBold'; background-color: white; color:#c22820;  padding-top: 10px; padding-left: 80px; padding-right: 70px;}
+        .graphBox > p:last-child { font-size: 16px; line-height: 19px; font-family: 'GothamNarrowBook'; color:#c9c393; padding-left: 10px; padding-right: 10px; text-align: justify; color: white; letter-spacing: -0.19px}
+        .graph{display:block; background: url('../images/graph_2.png') no-repeat; background-size: 440px auto; height: 265px; width: inherit; margin-bottom: 20px; background-position: 30px 10px; background-color: white; content:"";}
 
-.s1{ width:885px;height:515px;}
-.title{font-size: 28px;  line-height:32px; color: white;  margin-bottom:20px; font-family: 'GothamNarrowBook';letter-spacing: -0.02em;}
-.graphBox{ width:440px;height:515px;float: right; background-color: rgba(0, 0, 0, 0.2); padding-top: 50px; border-top:1px solid black; margin-top:-40px;}
+        .graphContainer{padding-top: 70px;}
+        .graphContainer > li:first-child{font-size: 28px;line-height: 32px;font-family:'GothamNarrowBold';text-align: center;padding-left:230px;
+                                         padding-right: 210px;color: #c22820; margin-bottom: 30px;}
+        .graphContainer > li:nth-child(2){width:695px;height:450px;background-image: url('../images/graph_2_large.png'); background-size: 100% auto; background-repeat: no-repeat; 
+                                          content:"";margin-left: 170px;margin-bottom: 25px;}
+        .graphContainer > li:last-child{margin-left:80px;font-family: 'GothamNarrowBook';font-size: 16px;
+                                        line-height: 19px;color: black;letter-spacing: -0.02em;}
+    
+    .magnify { background: url('../images/magnify.png'); background-size: 100% auto; background-repeat: no-repeat;position: absolute;width:40px;height:40px;
+        content: ""; margin-top: 200px; margin-left:-20px;}
 
-#leftText {display: inline;}
-#leftText > li { list-style: none; font-size: 28px; line-height: 32px; color: white;   font-family: 'GothamNarrowBold'; color:#c9c393;}
-.graphBox > p:first-child{font-size: 14px; line-height: 17px; text-align: center; font-family: 'GothamNarrowBold'; background-color: white; color:#c22820;  padding-top: 10px; padding-left: 80px; padding-right: 70px;}
-.graphBox > p:last-child { font-size: 16px; line-height: 19px; font-family: 'GothamNarrowBook'; color:#c9c393; padding-left: 10px; padding-right: 10px; text-align: justify; color: white;}
-.graph{background-image: url('../images/graph_2.png'); background-size: 100% auto; background-repeat: no-repeat; content:""; height: 245px; width: 375px; 
-       float: right; margin-bottom: 25px; background-color: white; padding-left: 20px; background-color: white;}
-.magnify { background-image: url('../images/magnify.png'); background-size: 100% auto; background-repeat: no-repeat;position: absolute;width:40px;height:40px;
-    content: ""; margin-top: 180px; margin-left:-20px;}
-.s2{position: absolute; width: 1024px; height: 768px; background: #fff; z-index: 99;
-    top: -156px; left: 0px; padding: 0;}
-.graphContainer{padding-top: 70px;}
-.graphContainer > li:first-child{font-size: 28px;line-height: 32px;font-family:'GothamNarrowBold';text-align: center;padding-left:230px;
-                                 padding-right: 210px;color: #c22820; margin-bottom: 30px;}
-.graphContainer > li:nth-child(2){width:695px;height:450px;background-image: url('../images/graph_2_large.png'); background-size: 100% auto; background-repeat: no-repeat; 
-                                  content:"";margin-left: 170px;margin-bottom: 25px;}
-.graphContainer > li:last-child{margin-left:80px;font-family: 'GothamNarrowBook';font-size: 16px;
-                                line-height: 19px;color: black;letter-spacing: -0.02em;}
+    .s2{position: absolute; width: 1024px; height: 768px; background: #fff; z-index: 99; top: -156px; left: 0px; padding: 0;}
+
+    .close{position:absolute; background:url('../images/X.png') no-repeat; background-size:100% auto; height:35px; width:35px; top:70px; left:913px;}
 </style> 
 </head>
 <body>
@@ -47,9 +49,8 @@
             <div class="s1">
                     <div class="graphBox">
                              <p>Incidence of high grade cervical abnormalities in females < 18 years</p>
-                             <img class="graph"/>
-                             <img class="magnify"/>
-                             <div style="height: 245px; background-color: white;"></div>
+                             <span class="magnify"></span>
+                             <span class="graph"></span>
                              <p>
                                 Analysis of incidence of cervical abnormalities from Victorian<br />Cervical Cytology Registry before (Jan 1, 2003 to March 31,<br /> 2007) and after (April 1, 2007 to Dec 31, 2009) vaccination<br />program commencement. Note: this is an ecological study<br />and data is not currently linked to vaccination status.
                              </p>
@@ -69,6 +70,7 @@
                         vaccination program commencement. Note: this is an ecological study and data is not<br />currently linked to vaccination status.
                     </li>
                 </ul>
+                <span class='close'></span>
             </div>
         </article>
 
@@ -109,6 +111,17 @@
 <script type="text/javascript">
 	$( function(){
 	
+        $( function(){
+        
+            $('.magnify').on('tap', function(){
+                $('.s2').fadeIn();
+            })
+
+            $('.close').on('tap', function(){
+                $('.s2').fadeOut();
+            })
+            
+        })
 		
 		
 	})
