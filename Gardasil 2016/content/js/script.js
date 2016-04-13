@@ -16,7 +16,7 @@ $( function(){
             var i = $(this).index();
             var s = $('.contents > div').get(i);
             $('.contents > div').hide()
-            $(s).fadeIn(10);
+            $(s).fadeIn();
 
             $('.tabs li').removeClass('active');
             $(this).addClass('active');
