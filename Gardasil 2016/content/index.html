@@ -1,66 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>CSL Vaccines</title>
-		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=3.0.1'></script> 
-        <script src="js/jquery-1.7.2.min.js"></script>
-		<script src="js/lightbox_main.js"></script>
-		<script type='text/javascript' src='js/infinite-rotator.js'></script>		
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-    <link href="css/lightbox.css" rel="stylesheet" />
-  </head>
-  <body>
-    
-        <!-- START: Rotating Images -->
-  <div id="rotating-item-wrapper">
-			<img src="images/index1.jpg" alt="index1" class="rotating-item" width="1024" height="768" />
-      <img src="images/index2.jpg" alt="index2" class="rotating-item" width="1024" height="768" />
-      <img src="images/index3.jpg" alt="index3" class="rotating-item" width="1024" height="768" />
-     <img src="images/index4.jpg" alt="index4" class="rotating-item" width="1024" height="768" />
-      <img src="images/index5.jpg" alt="index5" class="rotating-item" width="1024" height="768" />
-      <img src="images/index6.jpg" alt="index6" class="rotating-item" width="1024" height="768" />
-		</div>
-		<!-- END: Rotating images images -->
-          	
-            <div id="Burden">
-  				<a href="1_Burden/Burden-Tab1.html"><img src="images/main_nav.gif" width="301" height="121"></a>
- 			</div>
-            
-             <div id="Males">
-  				<a href="2_Males/Males-Tab1.html"><img src="images/main_nav.gif" width="301" height="121"></a>
- 			</div>
-            
-             <div id="Females">
-  				<a href="3_Females/Females-Tab1.html"><img src="images/main_nav.gif" width="301" height="121"></a>
- 			</div>
-            
-  			<div id="Universities">
-  				<a href="4_Universities/Universities-Tab1.html"><img src="images/main_nav.gif" width="301" height="121"></a>
- 			</div>
-            
-			<div id="Population">
-  				<a href="5_Population/Population-Tab1.html"><img src="images/main_nav.gif" width="301" height="121"></a>
- 			</div>
-            
-  			<div id="Resources">
-  				<a href="6_Resources/Resources-Tab1.html"><img src="images/main_nav.gif" width="301" height="121"></a>
- 			</div>
-            
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="CSL Vaccines">
+<title>CSL Vaccines</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style type="text/css">
+	.footer-nav > li:first-child{background-image: none; width:768px; text-align: left;}
+    .footer-nav > li:first-child > p{padding:20px; padding-left:45px; font-family: 'HelveNeuMedCon'; font-size:14px; text-transform: none; color:#c9c393;}
 
-        
-  		<div id="main_1ref">
-   		<a href=""><img src="images/main_1ref.gif" width="56" height="50"/></a>
- 		</div>
-        
-        <div id="main_2pi">
-   		<a href="8_PI/PI.html"><img src="images/main_2pi.gif" width="57" height="48"/></a>
- 		</div>
-        
-        <div id="main_3toolbox">
-   		<a href="7_Toolbox/TB_pdf.html"><img src="images/main_3toolbox.gif" width="55" height="53"/></a>
- 		</div>
-  
-  
+    .logo{right:auto; left:45px; bottom:65px;}
+
+    .menu{position:absolute; left:690px; top:0px; font-family: 'HelveNeuMedCon'; font-size:32px; line-height:30px;}
+        .menu li{display:table; width:334px; height:143px;}
+        .menu li i{display:table-cell; vertical-align: middle; padding-left:30px; text-transform: uppercase;}
+        .menu li:first-child, .menu li:nth-child(4){background-color:rgba(0, 0, 0, 0.2);}
+        .menu li:nth-child(2), .menu li:last-child{background-color:rgba(0, 0, 0, 0.3);}
+        .menu li:nth-child(3){background-color:rgba(0, 0, 0, 0.4);}
+
+    .imgs{position:absolute; top:0px; left:0px;}
+        .imgs li{height:428px; width:690px; position:absolute;}
+        .imgs li:first-child{background:url('images/1.png') no-repeat; background-size:100% auto;}
+        .imgs li:nth-child(2){background:url('images/2.png') no-repeat; background-size:100% auto;}
+        .imgs li:nth-child(3){background:url('images/3.png') no-repeat; background-size:100% auto}
+        .imgs li:nth-child(4){background:url('images/4.png') no-repeat; background-size:100% auto}
+
+    .menu li.active{-webkit-animation-name: to-white; -webkit-animation-duration: 1s; animation-name: to-white; animation-duration: 1s; color:white;}
+
+    .menu li.inactive{-webkit-animation-name: to-gold; -webkit-animation-duration: 1s; animation-name: to-gold; animation-duration: 1s;}
+
+    @-webkit-keyframes to-white {
+    from {color: #c9c393;}
+    to {color: white}
+    }
+
+    @keyframes to-white{
+    from {color: #c9c393;}
+    to {color: white}
+    }
+
+    @-webkit-keyframes to-gold {
+    from {color: white;}
+    to {color: #c9c393;}
+    }
+
+    @keyframes to-gold{
+    from {color: white;}
+    to {color: #c9c393;}
+    }
+
+</style> 
+</head>
+<body>
+	<section class="slide">
+    	<span class="logo"></span>
+        	
+        <article class="contents">
+            <ul class='menu'>
+                <li class='e active'><i>efficacy</i></li>
+                <li class='d'><i>population<br />impact data</i></li>
+                <li class='h'><i>hpv<br />vaccination</i></li>
+                <li class='p'><i>previous<br />exposure</i></li>
+                <li><i>clinic<br />resources</i></li>
+            </ul>
+
+            <ul class='imgs'>
+                <li></li>
+                <li class='hide'></li>
+                <li class='hide'></li>
+                <li class='hide'></li>
+            </ul>
+
+        </article>
+        <!-- footer menu -->
+        <footer>
+        	<ul class="footer-nav">
+                <li><p>Before prescribing, please review the Product Information</p></li>
+        		<li class="common home">
+                	<ul>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                        <li></li>
+                	</ul>
+                </li>
+        	</ul>
+        </footer><!-- end footer -->
+        <!-- overlay -->
+        <div class="overlay">
+        	<div class="wrap"> <span class="close"></span>
+                <h3>REFERENCES:</h3>
+                <ol>
+                    <li>GARDASIL<sup>®</sup> Product Information, February 2016.</li>
+                    <li>Castellsague X <em>et al</em>. British Journal of Cancer. 2011;1–10.</li>
+                    <li>Giuliano A <em>et al</em>. N Engl J Med. 2011;364(5):401–11.</li>
+                    <li>Palefsky JM <em>et al</em>. N Engl J Med. 2011;365:1576–85.</li>
+                </ol>
+            </div>
+        </div><!-- end overlay -->
+	</section>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<script type="text/javascript">
+	$( function(){
+	   setInterval(function(){
+        var c = $('.active').attr('class');
+        var i = $("." + c[0]).index();
+
+        if(i < 3){
+            $('.menu li').removeClass('active').removeClass('inactive');
+            $("." + c[0]).addClass('inactive')
+            $($('.menu li').get(i+1)).addClass('active')
+            $($('.imgs li').get(i)).fadeOut(1000)
+            $($('.imgs li').get(i+1)).fadeIn(1000)
+
+        }
+        else{
+            $('.menu li').removeClass('active').removeClass('inactive');
+            $("." + c[0]).addClass('inactive')
+            $($('.menu li').get(0)).addClass('active');
+            $($('.imgs li').get(i)).fadeOut(1000)
+            $($('.imgs li').get(0)).fadeIn(1000)
+        }
+
+       }, 5000);
+		
+        var slides = ['1_Efficacy/indication.html', '2_Population/genital-warts.html', '3_Previous_Exposure/previous-exposure.html', '4_HPV_Vaccination/Missing-out.html', '5_Clinic_Resources/resources.html']
+
+        /* NAVIGATE TO SECTIONS FROM HOME PAGE */
+        $('.menu li').on('tap', function(){
+            var i = $(this).index();
+            window.location.href = slides[i];
+        })
+
+        /* NAVIGATE TO PI FROM HOME PAGE */
+        $('.common li:nth-child(2)').on('tap', function(){
+        window.location.href = '6_Other/pi.html';
+        })
+
+	})
+</script>
 </body>
 </html>

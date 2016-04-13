@@ -22,11 +22,22 @@ $( function(){
             $(this).addClass('active');
        })
 
-   $('.footer-nav li i').on('tap', function(){
+   /* NAVIGATE TO SLIDES WITHIN SECTION */
+   $('.footer-nav li:not(:nth-child(2)) i').on('tap', function(){
         var n = $(this).html().toLowerCase();
         n = n.replace(/\s/g, "-");
         window.location.href = n + '.html';
     })
+
+   /* NAVIGATE TO HOME FROM SECTIONS */
+   $('.common li:last-child').on('tap', function(){
+   		window.location.href = '../index.html';
+   })
+
+   /* NAVIGATE TO SLIDE FROM SECTIONS */
+   $('.common li:nth-child(2)').on('tap', function(){
+   		window.location.href = '../6_Other/pi.html';
+   })
 
    /***************************************/
 	
