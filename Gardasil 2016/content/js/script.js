@@ -34,7 +34,7 @@ $( function(){
    		window.location.href = '../index.html';
    })
 
-   /* NAVIGATE TO SLIDE FROM SECTIONS */
+   /* NAVIGATE TO PI SLIDE FROM SECTIONS */
    $('.common li:nth-child(2)').on('tap', function(){
    		window.location.href = '../6_Other/pi.html';
    })
