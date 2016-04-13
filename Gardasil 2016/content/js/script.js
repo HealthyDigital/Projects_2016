@@ -22,23 +22,30 @@ $( function(){
             $(this).addClass('active');
        })
 
+  var filename = window.location.pathname;
+  filename = filename.substring(filename.lastIndexOf('/')+1)
+
    /* NAVIGATE TO SLIDES WITHIN SECTION */
-   $('.footer-nav li:not(:nth-child(2)) i').on('tap', function(){
+   $('.footer-nav > li:not(:nth-child(2)) > i').on('tap', function(){
         var n = $(this).html().toLowerCase();
         n = n.replace(/\s/g, "-");
-        window.location.href = n + '.html';
+        window.location = n + '.html';
     })
 
    /* NAVIGATE TO HOME FROM SECTIONS */
-   $('.common li:last-child').on('tap', function(){
-   		window.location.href = '../index.html';
+   $('.common > ul > li:last-child, .back').on('tap', function(){
+   		filename == 'index.html' ? null : window.location= '../index.html'
    })
 
    /* NAVIGATE TO PI SLIDE FROM SECTIONS */
-   $('.common li:nth-child(2)').on('tap', function(){
-   		window.location.href = '../6_Other/pi.html';
+   $('.common > ul > li:nth-child(2)').on('tap', function(){
+   		filename != 'index.html' ? window.location = '../6_Other/pi.html' : window.location = '6_Other/pi.html'
    })
 
+   /* NAVIGATE TO SUMMARY FROM SECTIONS */
+   $('.footer-nav > li:nth-child(2) > i').on('tap', function(){
+      filename != ('summary.html' || 'index.html') ? window.location='../6_Other/summary.html' : null;
+    })
    /***************************************/
 	
 });

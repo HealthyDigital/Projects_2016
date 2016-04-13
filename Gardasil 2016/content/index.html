@@ -133,12 +133,7 @@
         /* NAVIGATE TO SECTIONS FROM HOME PAGE */
         $('.menu li').on('tap', function(){
             var i = $(this).index();
-            window.location.href = slides[i];
-        })
-
-        /* NAVIGATE TO PI FROM HOME PAGE */
-        $('.common li:nth-child(2)').on('tap', function(){
-        window.location.href = '6_Other/pi.html';
+            window.location = slides[i];
         })
 
 	})
