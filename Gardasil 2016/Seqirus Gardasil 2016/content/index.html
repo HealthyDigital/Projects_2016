@@ -8,8 +8,9 @@
 <title>CSL Vaccines</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.footer-nav > li:first-child{background-image: none; width:768px; text-align: left;}
-    .footer-nav > li:first-child > p{padding:20px; padding-left:45px; font-family: 'HelveNeuMedCon'; font-size:14px; text-transform: none; color:#c9c393;}
+	.footer-nav > li:first-child {background-image: none; width:690px; text-align: left; border-left:none; }
+	.footer-nav > .common { border-left:none; box-shadow:none; }
+    .footer-nav > li:first-child > p {padding:20px; padding-left:45px; font-family: 'HelveNeuMedCon'; font-size:14px; text-transform: none; color:#c9c393;}
 
     .logo{right:auto; left:45px; bottom:65px;}
 
@@ -58,11 +59,11 @@
         	
         <article class="contents">
             <ul class='menu'>
-                <li class='e active'><i>efficacy</i></li>
-                <li class='d'><i>population<br />impact data</i></li>
-                <li class='h'><i>hpv<br />vaccination</i></li>
-                <li class='p'><i>previous<br />exposure</i></li>
-                <li><i>clinic<br />resources</i></li>
+                <li class='e active' data-url="1_Efficacy/indication.html"><i>efficacy</i></li>
+                <li class='d' data-url="2_population-impact/genital-warts.html"><i>population<br />impact data</i></li>
+                <li class='h' data-url="3_HPV_Vaccination/when-to-discuss.html"><i>hpv<br />vaccination</i></li>
+                <li class='p' data-url="4_Previous_Exposure/previous-exposure.html"><i>previous<br />exposure</i></li>
+                <li data-url="5_Clinic_Resources/resources.html"><i>clinic<br />resources</i></li>
             </ul>
 
             <ul class='imgs'>
@@ -77,9 +78,9 @@
         <footer>
         	<ul class="footer-nav">
                 <li><p>Before prescribing, please review the Product Information</p></li>
-        		<li class="common home">
+        		<li class="common">
                 	<ul>
-                		<li></li>
+                		<li class="disabled"></li>
                 		<li></li>
                 		<li></li>
                         <li></li>
@@ -128,12 +129,12 @@
 
        }, 5000);
 		
-        var slides = ['1_Efficacy/indication.html', '2_Population/genital-warts.html', '4_HPV_Vaccination/when-to-discuss.html', '3_Previous_Exposure/previous-exposure.html', '5_Clinic_Resources/resources.html']
+      
 
         /* NAVIGATE TO SECTIONS FROM HOME PAGE */
         $('.menu li').on('tap', function(){
-            var i = $(this).index();
-            window.location = slides[i];
+        
+            window.location = $(this).attr("data-url");
         })
 
 	})
