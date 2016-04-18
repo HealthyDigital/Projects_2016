@@ -38,13 +38,13 @@
 
             <div class='s1'>
                 <ul class='posters'>
-                    <li>
+                    <li data-url="13333 Gardasil Clinic poster A3 STYLE OPTIONS FA LR.pdf">
                         <p>A3 Waiting<br />room poster</p>
                     </li>
-                    <li>
+                    <li data-url="13333 Gardasil Clinic poster A3 STYLE OPTIONS FA LR.pdf">
                         <p>A3 Waiting<br />room poster</p>
                     </li>
-                    <li>
+                    <li data-url="13332 Gardasil Patient leaflet DL8p_FA LR.pdf">
                         <p>Patient Information Leaflet</p>
                     </li>
                 </ul>
@@ -52,16 +52,16 @@
 
             <div class='s2 hide'>
                 <ul class='leaflets'>
-                    <li>
+                    <li data-url="13334 Gardasil FAQs cover and pads combined A5 FA-LR.pdf">
                         <p>Patient FAQs</p>
                     </li>
-                    <li>
+                    <li data-url="13334 Gardasil FAQs cover and pads combined A5 FA-LR.pdf">
                         <p>Patient FAQ<br />Leaflets</p>
                     </li>
-                    <li>
+                    <li data-url="3rd_S-CHIN_13332 Gardasil Patient leaflet DL8p_FA HR.PDF">
                         <p>Chinese FAQ<br />Leaflets</p>
                     </li>
-                    <li>
+                    <li data-url="2nd_Viet_13332 Gardasil Patient leaflet DL8p_FA HR.PDF">
                         <p>Vietnamese <br />FAQ Leaflets</p>
                     </li>
                 </ul>
@@ -106,6 +106,9 @@
 
 <script type="text/javascript">
     $( function(){
+		$('.posters > li, .leaflets > li').on('tap', function(){
+			 window.location = '../pdfs/'+$(this).attr("data-url");
+		})
     
          goToNextOrPrev('../6_Other/summary.html', '')
         

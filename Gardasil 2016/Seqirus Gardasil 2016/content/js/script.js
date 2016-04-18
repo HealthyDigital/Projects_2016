@@ -2,9 +2,16 @@
 $( function(){
 	//global variables 
 	var slide = $('.slide'),
-		overlay = $('.overlay');
-	
-		//window.location = "Dukoral-Epidemiology.html"
+		overlay = $('.overlay'),
+		filename = window.location.pathname;
+  		filename = filename.substring(filename.lastIndexOf('/')+1);
+		//overlay
+		$(".common li:first-child:not('.disabled')").on('tap', function(){
+			overlay.addClass('show')
+			.find('.close').on('tap', function(){
+				overlay.removeClass('show');
+			});
+		});
 	
 	//goToNextOrPrev('go-prev', 'go-next');
 
@@ -22,8 +29,7 @@ $( function(){
             $(this).addClass('active');
        })
 
-  var filename = window.location.pathname;
-  filename = filename.substring(filename.lastIndexOf('/')+1)
+  
 
    /* NAVIGATE TO SLIDES WITHIN SECTION */
    $('.footer-nav > li:not(:nth-child(2)) > i').on('tap', function(){
@@ -35,6 +41,10 @@ $( function(){
    /* NAVIGATE TO HOME FROM SECTIONS */
    $('.common > ul > li:last-child, .back').on('tap', function(){
    		filename == 'index.html' ? null : window.location= '../index.html'
+   })
+   
+   $('.common > ul > li:nth-child(3)').on('tap', function(){
+   		window.location = '7_Toolbox/toolbox.html';
    })
 
    /* NAVIGATE TO PI SLIDE FROM SECTIONS */
