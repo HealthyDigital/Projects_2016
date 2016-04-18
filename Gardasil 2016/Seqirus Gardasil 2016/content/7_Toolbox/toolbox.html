@@ -21,25 +21,34 @@
     .s2{float:right;}
         .s2 li{background:url('../images/toolbox_imgs.png') no-repeat; width:340px; height:454px; display: none;}
         .s2 li.active{display: block}
-	
-	
+
+        .s2 li:nth-child(2){background-position:0px -469px;}
+        .s2 li:nth-child(3){background-position:0px -938px;}
+        .s2 li:nth-child(4){background-position:0px -1407px;}
+        .s2 li:nth-child(5){background-position:0px -1876px;}
+        .s2 li:nth-child(6){background-position:0px -2345px;}
+        .s2 li:last-child{background-position:0px -2814px;}
+
+    .contents{overflow:hidden;}
+    
+    
 </style> 
 </head>
 <body>
-	<section class="slide">
-    	<header> <span class="logo"></span>
-        	<h1>TOOLBOX</h1>
+    <section class="slide">
+        <header> <span class="logo"></span>
+            <h1>TOOLBOX</h1>
         </header>
         <article class="contents">
             <div class='s1'>
                 <ul>
-                    <li class='active'><p><em>Giuliano et al.</em> 2011 Efficacy in males</p></li>
-                    <li><p><em>Brotherton et al.</em> Effect of HPV vaccination<br />program on cervical abnormalities</p></li>
-                    <li><p><em>Castellsague et al.</em> 2011 Adult women end of study</p></li>
-                    <li><p><em>Ali et al.</em> 2013 Genital Warts Surveillance</p></li>
-                    <li><p><em>Palefsky et al.</em> 2011 Efficacy of HPV vaccination<br />against anal disease</p></li>
-                    <li><p><em>Grulich et al.</em> 2010 Cancers attributable to<br />human papillomavirus infection</p></li>
-                    <li><p><em>NHMRC Australian Immunisation Handbook:</em><br /><a href='https://www.health.gov.au/internet/immunise/publishing.nsf/Content/7B28E87511E08905CA257D4D001DB1F8/$File/Aus-Imm-Handbook.pdf'>
+                    <li class='Giuliano.pdf active'><p><em>Giuliano et al.</em> 2011 Efficacy in males</p></li>
+                    <li class='Brotherton.pdf'><p><em>Brotherton et al.</em> Effect of HPV vaccination<br />program on cervical abnormalities</p></li>
+                    <li class='Castellsague.pdf'><p><em>Castellsague et al.</em> 2011 Adult women end of study</p></li>
+                    <li class='Ali.pdf'><p><em>Ali et al.</em> 2013 Genital Warts Surveillance</p></li>
+                    <li class='Palefsky.pdf'><p><em>Palefsky et al.</em> 2011 Efficacy of HPV vaccination<br />against anal disease</p></li>
+                    <li class='Grulich.pdf'><p><em>Grulich et al.</em> 2010 Cancers attributable to<br />human papillomavirus infection</p></li>
+                    <li class='NHMRC.pdf'><p><em>NHMRC Australian Immunisation Handbook:</em><br /><a href='https://www.health.gov.au/internet/immunise/publishing.nsf/Content/7B28E87511E08905CA257D4D001DB1F8/$File/Aus-Imm-Handbook.pdf'>
                     https://www.health.gov.au/internet/immunise/publishing.nsf/Content/<br />7B28E87511E08905CA257D4D001DB1F8/$File/Aus-Imm-Handbook.pdf (page 255-243)</a></p></li>
                 </ul>
             </div>
@@ -56,48 +65,55 @@
                 </ul>
             </div>
 
-            <span data-url=''>View paper</span>
+            <span data-url='' class='view'>View paper</span>
            
         
         </article>
         <!-- footer menu -->
         <footer>
-        	<ul class="footer-nav">
-        		<li class="back"></li>
-        		<li class="active"><i>TOOLBOX</i></li>
-        		<li><i></i></li>
+            <ul class="footer-nav">
+                <li class="back"></li>
+                <li class="active"><i>TOOLBOX</i></li>
                 <li><i></i></li>
                 <li><i></i></li>
-        		<li class="common home">
-                	<ul>
-                		<li></li>
-                		<li></li>
-                		<li></li>
+                <li><i></i></li>
+                <li class="common home">
+                    <ul>
                         <li></li>
-                	</ul>
+                        <li></li>
+                        <li></li>s
+                        <li></li>
+                    </ul>
                 </li>
-        	</ul>
+            </ul>
         </footer><!-- end footer -->
         <!-- overlay -->
         <div class="overlay">
-        	<div class="wrap"> <span class="close"></span>
+            <div class="wrap"> <span class="close"></span>
                 <h3>REFERENCES:</h3>
                 <ol>
                     <li>GARDASIL<sup>®</sup> Product Information, February 2016.</li>
                 </ol>
             </div>
         </div><!-- end overlay -->
-	</section>
+    </section>
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/touchy.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 
 <script type="text/javascript">
-	$( function(){
-	
-		goToNextOrPrev('../index.html', '')
-		
-	})
+    $( function(){
+        $('.view').on('tap', function(){
+             window.location = '../pdfs/'+$(this).attr("data-url");
+        })
+    
+         goToNextOrPrev('../6_Other/summary.html', '')
+
+        $('.s1 li').on('tap', function(){
+            $(this).hasClass('active') ? null : $;
+        })
+        
+    })
 </script>
 </body>
 </html>
