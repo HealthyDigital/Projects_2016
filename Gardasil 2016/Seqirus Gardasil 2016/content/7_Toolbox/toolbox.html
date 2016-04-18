@@ -8,29 +8,28 @@
 <title>CSL Vaccines</title>
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <style type="text/css">
-    .s1{float:left;}
-        .s1 li{color:white; font-size:18px; line-height:21px; margin-bottom:15px; font-family: 'GothamNarrowLight'; background-color:rgba(0, 0, 0, 0.3); height:55px; width:450px; display: table; padding-left:10px; position: relative;}
-        .s1 li em{font-style: normal; font-family: 'GothamNarrowMedium'}
-        .s1 li a{display:block; font-size:12px; line-height: 13px; text-decoration: none; color: white}
-        .s1 li p{display: table-cell; vertical-align: middle;}
-        .s1 li:after{content:''; position:absolute; width: 0; height: 0; border-style: solid; border-width: 27.5px 0 27.5px 80px; border-color: transparent transparent transparent rgba(0, 0, 0, 0.3); left:auto; right:-80px;}
+  	.contents > ul, .contents li { position: relative; }
+   	.contents > ul{ width:460px; }
+   	.contents > ul:after, .contents li:after, .view:after { content:''; position:absolute; }
+	.contents > ul:after { right:-450px; top:0; background:url('../images/toolbox_imgs.png') no-repeat; width:340px; height:454px; }
+	.contents li {color:white; font-size:18px; line-height:21px; margin-bottom:15px; font-family: 'GothamNarrowLight'; background-color:rgba(0, 0, 0, 0.2); width:inherit; height:55px; display: table; padding-left:10px; position: relative; }
+	.contents li em, .view {font-style: normal; font-family: 'GothamNarrowMedium'}
+	.contents li i {display:block; font-size:12px; line-height: 13px; text-decoration: none; color: white}
+	.contents li p {display: table-cell; vertical-align: middle;}
+	.contents li:after { width: 0; height: 0; border-style: solid; border-width: 27.5px 0 27.5px 50px; border-color: transparent transparent transparent rgba(0, 0, 0, 0.2); left:auto; right:-50px;}
 
-        .s1 li.active{background-color:rgba(0, 0, 0, 0.6);}
-        .s1 li.active:after{border-color: transparent transparent transparent rgba(0, 0, 0, 0.6);}
-
-    .s2{float:right;}
-        .s2 li{background:url('../images/toolbox_imgs.png') no-repeat; width:340px; height:454px; display: none;}
-        .s2 li.active{display: block}
-
-        .s2 li:nth-child(2){background-position:0px -469px;}
-        .s2 li:nth-child(3){background-position:0px -938px;}
-        .s2 li:nth-child(4){background-position:0px -1407px;}
-        .s2 li:nth-child(5){background-position:0px -1876px;}
-        .s2 li:nth-child(6){background-position:0px -2345px;}
-        .s2 li:last-child{background-position:0px -2814px;}
-
-    .contents{overflow:hidden;}
-    
+	.contents li.active {background-color:rgba(0, 0, 0, 0.35);}
+	.contents li.active:after{border-color: transparent transparent transparent rgba(0, 0, 0, 0.35);}
+	
+	.contents.brotherton > ul:after { background-position:0px -469px; }
+	.s2 li:nth-child(3){background-position:0px -938px;}
+	.s2 li:nth-child(4){background-position:0px -1407px;}
+	.s2 li:nth-child(5){background-position:0px -1876px;}
+	.s2 li:nth-child(6){background-position:0px -2345px;}
+	.s2 li:last-child{background-position:0px -2814px;}
+	
+	.view { position:absolute; right:100px; bottom:25px; padding:10px 20px 11px; font-size:20px; background-color:rgba(0, 0, 0, 0.25); color:#fff; }
+	.view:after { top:0; right:-25px; width:0; height:0; border-top:20px solid transparent; border-bottom:20px solid transparent; border-left:25px solid rgba(0, 0, 0, 0.25); }
     
 </style> 
 </head>
@@ -40,32 +39,19 @@
             <h1>TOOLBOX</h1>
         </header>
         <article class="contents">
-            <div class='s1'>
-                <ul>
-                    <li class='Giuliano.pdf active'><p><em>Giuliano et al.</em> 2011 Efficacy in males</p></li>
-                    <li class='Brotherton.pdf'><p><em>Brotherton et al.</em> Effect of HPV vaccination<br />program on cervical abnormalities</p></li>
-                    <li class='Castellsague.pdf'><p><em>Castellsague et al.</em> 2011 Adult women end of study</p></li>
-                    <li class='Ali.pdf'><p><em>Ali et al.</em> 2013 Genital Warts Surveillance</p></li>
-                    <li class='Palefsky.pdf'><p><em>Palefsky et al.</em> 2011 Efficacy of HPV vaccination<br />against anal disease</p></li>
-                    <li class='Grulich.pdf'><p><em>Grulich et al.</em> 2010 Cancers attributable to<br />human papillomavirus infection</p></li>
-                    <li class='NHMRC.pdf'><p><em>NHMRC Australian Immunisation Handbook:</em><br /><a href='https://www.health.gov.au/internet/immunise/publishing.nsf/Content/7B28E87511E08905CA257D4D001DB1F8/$File/Aus-Imm-Handbook.pdf'>
-                    https://www.health.gov.au/internet/immunise/publishing.nsf/Content/<br />7B28E87511E08905CA257D4D001DB1F8/$File/Aus-Imm-Handbook.pdf (page 255-243)</a></p></li>
-                </ul>
-            </div>
-
-            <div class='s2'>
-                <ul>
-                    <li class='active'></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-
-            <span data-url='' class='view'>View paper</span>
+           
+            <ul>
+                <li class="active" data-url="Giuliano"><p><em>Giuliano et al.</em> 2011 Efficacy in males</p></li>
+                <li data-url="Brotherton"><p><em>Brotherton et al.</em> Effect of HPV vaccination<br />program on cervical abnormalities</p></li>
+                <li data-url="Castellsague"><p><em>Castellsague et al.</em> 2011 Adult women end of study</p></li>
+                <li data-url="Ali"><p><em>Ali et al.</em> 2013 Genital Warts Surveillance</p></li>
+                <li data-url="Palefsky"><p><em>Palefsky et al.</em> 2011 Efficacy of HPV vaccination<br />against anal disease</p></li>
+                <li data-url="Grulich"><p><em>Grulich et al.</em> 2010 Cancers attributable to<br />human papillomavirus infection</p></li>
+                <li data-url="NHMRC"><p><em>NHMRC Australian Immunisation Handbook:</em>
+                <i>https://www.health.gov.au/internet/immunise/publishing.nsf/Content/<br />7B28E87511E08905CA257D4D001DB1F8/$File/Aus-Imm-Handbook.pdf (page 255-243)</i></p></li>
+            </ul>
+        
+            <span data-url="Giuliano" class="view">View paper</span>
            
         
         </article>
@@ -81,7 +67,7 @@
                     <ul>
                         <li></li>
                         <li></li>
-                        <li></li>s
+                        <li></li>
                         <li></li>
                     </ul>
                 </li>
@@ -103,14 +89,23 @@
 
 <script type="text/javascript">
     $( function(){
-        $('.view').on('tap', function(){
-             window.location = '../pdfs/'+$(this).attr("data-url");
-        })
+      
     
-         goToNextOrPrev('../6_Other/summary.html', '')
-
-        $('.s1 li').on('tap', function(){
-            $(this).hasClass('active') ? null : $;
+         goToNextOrPrev('../6_Other/summary.html', '');
+		 
+		var contents = $('.contents'),
+			view = $('.view'); 
+        $('.contents li').on('tap', function(){
+			var t = $(this),
+				data = t.attr('data-url');
+			contents.removeClass('giuliano brotherton castellsague ali palefsky grulich nhmrc').find('li').removeClass('active');
+			t.addClass('active').parents('.contents').addClass((data).toLowerCase());
+			view.attr('data-url', data);
+            //$(this).hasClass('active') ? null : $;
+        });
+		
+		view.on('tap', function(){
+           window.location = '../pdfs/'+$(this).attr("data-url")+'.pdf';
         })
         
     })
