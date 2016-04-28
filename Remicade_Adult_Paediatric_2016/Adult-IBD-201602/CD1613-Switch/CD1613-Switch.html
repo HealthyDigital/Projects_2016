@@ -169,9 +169,14 @@ van Assche <em>et al</em>.<sup>1</sup>
 <script type="text/javascript">
 	$( function(){
 		
-		$('.steroids .as').on('tap', function(){
-			localStorage.setItem('fromSonic', '1');
+		$('.inner-wrapper').on('swiperight', function(){
+			setStore();
 		});
+		$('.steroids .as').on('tap', function(){
+			setStore();
+		});
+		function setStore(){ localStorage.setItem('fromSonic', '1'); }
+		
 		
 		goToSlide('disease .dc', 'CD1601-Disease-course');
 		goToSlide('disease .pi', 'CD1602-Patient-indicators');

@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="CSL Vaccines">
+<title>CSL Vaccines</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<style type="text/css">
+    .posters li{float:left; background:url('../images/posters.png') no-repeat; height:414px; margin-right:20px;}
+        .posters li:first-child{width:235px;}
+        .posters li:nth-child(2){width:235px; background-position:-245px 0px;}
+        .posters li:last-child{width:160px; background-position:-490px 0px;}
+        .posters p{margin-top:350px;}
+
+    .leaflets{height:450px;}
+    .leaflets li{float:left; background:url('../images/leaflets.png') no-repeat; background-size: auto 353px; margin-right:15px;}
+        .leaflets li:first-child{background:url('../images/posters.png') no-repeat; width:167px; height:237px; background-position:-660px 0px; margin-right:20px;}
+        .leaflets li:not(:first-child){height:353px; width:122px;}
+        .leaflets li:nth-child(3){background-position:0px 0px;}
+        .leaflets li:last-child{background-position:0px 0px;}
+        .leaflets li:first-child p{margin-top:250px}
+        .leaflets p{margin-top:370px;}
+
+    .s2 > p{color:white; font-family: 'GothamNarrowLight';}
+        .s2 > p em{font-family: 'GothamNarrowMedium'; color:#c9c393; font-style: normal;}
+
+    
+</style> 
+</head>
+<body>
+    <section class="slide">
+        <header> <span class="logo"></span>
+            <h1>CLINIC RESOURCES</h1>
+        </header>
+        <article class="contents">
+
+            <div class='s1'>
+                <ul class='posters'>
+                    <li data-url="13333 Gardasil Clinic poster A3 STYLE OPTIONS FA LR.pdf">
+                        <p>A3 Waiting<br />room poster</p>
+                    </li>
+                    <li data-url="13333 Gardasil Clinic poster A3 STYLE OPTIONS FA LR.pdf">
+                        <p>A3 Waiting<br />room poster</p>
+                    </li>
+                    <li data-url="13332 Gardasil Patient leaflet DL8p_FA LR.pdf">
+                        <p>Patient Information Leaflet</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class='s2 hide'>
+                <ul class='leaflets'>
+                    <li data-url="13334 Gardasil FAQs cover and pads combined A5 FA-LR.pdf">
+                        <p>Patient FAQs</p>
+                    </li>
+                    <li data-url="13334 Gardasil FAQs cover and pads combined A5 FA-LR.pdf">
+                        <p>Patient FAQ<br />Leaflets</p>
+                    </li>
+                    <li data-url="3rd_S-CHIN_13332 Gardasil Patient leaflet DL8p_FA HR.PDF">
+                        <p>Chinese FAQ<br />Leaflets</p>
+                    </li>
+                    <li data-url="2nd_Viet_13332 Gardasil Patient leaflet DL8p_FA HR.PDF">
+                        <p>Vietnamese <br />FAQ Leaflets</p>
+                    </li>
+                </ul>
+
+                <p>Other useful resources for your patients can be found at: <em>Cancer Council of Victoria - www.hpvvaccine.org.au </em></p>
+            </div>
+        
+        
+        <!-- side tabs -->
+         <ul class="tabs">
+            <li class="active"><span><i>CLINIC</i></span></li>
+            <li><span><i>PATIENT</i></span></li>
+         </ul> <!-- end side tabs -->
+        </article>
+        <!-- footer menu -->
+        <footer>
+            <ul class="footer-nav">
+                <li class="back"></li>
+                <li><i>CLINIC<br/>RESOURCES</i></li>
+                <li class="active"><i>RESOURCES</i></li>
+                <li><i></i></li>
+                <li><i></i></li>
+                <li class="common home">
+                    <ul>
+                        <li class='disabled'></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </li>
+            </ul>
+        </footer><!-- end footer -->
+        <!-- overlay -->
+        <div class="overlay">
+            <div class="wrap"> <span class="close"></span>
+            </div>
+        </div><!-- end overlay -->
+    </section>
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/touchy.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+<script type="text/javascript">
+    $( function(){
+		$('.posters > li, .leaflets > li').on('tap', function(){
+			 window.location = '../pdfs/'+$(this).attr("data-url");
+		})
+    
+         goToNextOrPrev('../6_Other/summary.html', '')
+        
+    })
+</script>
+</body>
+</html>

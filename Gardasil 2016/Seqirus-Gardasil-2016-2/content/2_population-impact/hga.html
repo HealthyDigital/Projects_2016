@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="CSL Vaccines">
+<title>CSL Vaccines</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<style type="text/css">
+
+    .contents > p{font-family: 'GothamNarrowMedium'; font-size:28px; line-height:32px; width:360px;}
+
+    .container{width:450px; height:565px; background-color: rgba(0, 0, 0, 0.3); float:right; position:relative; left:-40px; top:-200px;}
+        .container h3{font-family: 'GothamNarrowMedium'; color:#c22820; background-color:white; text-align: center; font-size:14px; padding-top:10px; margin-top:45px;}
+        .container .graph{display:block; position:relative; width:inherit; height:255px; background: url('../images/graph_2.png') no-repeat; background-size: 425px auto; background-position:37px 13px; background-color:white;}
+        .container .magnify{position:absolute; height:30px; width:30px; border:2px solid white; border-radius: 50%; top:205px; left:-15px; background:url('../images/icons.png') no-repeat; background-size:30px auto; background-position:0px -330px; background-color:#761024;}
+        .container p{font-size:16px; line-height:19px; font-family: 'GothamNarrowLight'; letter-spacing:0.3px; padding:10px; padding-top:20px; color:white;}
+
+    .zoom{position:absolute; width:100%; height:768px; background-color:white; top:0px; left:0px; z-index: 1000;}
+        .zoom h3{width:100%; margin-top:70px; text-align:center; font-size:28px; line-height:32px; font-family: 'GothamNarrowMedium'; color:#c22820;}
+        .zoom .close{height:35px; width:35px; background-size:30px auto; background-position: center -270px; right:75px; top:70px; border:1px solid #646464;}
+        .zoom .graph{display: block; width:inherit; height:520px; background: url('../images/graph_2.png') no-repeat; background-size:845px auto; background-position: 150px 40px;}
+        .zoom p{font-size:16px; line-height:19px; font-family: 'GothamNarrowBook'; color:#282828; padding-left:90px; padding-right:90px; letter-spacing:-0.2px;}
+</style> 
+</head>
+<body>
+	<section class="slide">
+    	<header> <span class="logo"></span>
+        	<h1>POPUPLATION LEVEL IMPACT:<br />
+            <i>HIGH GRADE CERVICAL ABNORMALITIES (HGA)</i></h1>
+        </header>
+        <article class="contents">
+            <p>Incidence of high grade cervical abnormalities <br/>(HGA) significantly reduced (p&lt;0.003) in females less than 18 years of age<sup>3</sup></p>
+
+            <div class='container'>
+                <h3>Incidence of high grade cervical abnormalities<br />in females &lt;18 years</h3>
+                <span class='graph'>
+                    <span class='magnify'></span>
+                </span>
+                <p>Analysis of incidence of cervical abnormalities from Victorian Cervical Cytology Registry before (Jan 1, 2003 to March 31, 2007) and after (April 1, 2007 to Dec 31, 2009) vaccination program commencement. Note: this is an ecological study and data is not currently linked to vaccination status.<sup></sup>
+            </div>
+        </article>
+
+        <!--graph zoom-->
+        <div class='zoom hide'>
+            <h3>Incidence of high grade cervical abnormalities<br />in females &lt;18 years</h3>
+            <span class='close'></span>
+            <span class='graph'></span>
+            <p>Analysis of incidence of cervical abnormalities from Victorian Cervical Cytology Registry before (Jan 1, 2003 to March 31, 2007) and after (April 1, 2007 to Dec 31, 2009) vaccination program commencement. Note: this is an ecological study and data is not currently linked to vaccination status.</p>
+        </div>
+
+        <!-- footer menu -->
+        <footer>
+        	<ul class="footer-nav">
+        		<li class="back"></li>
+                <li><i>POPULATION<br />IMPACT DATA</i></li>
+        		<li><i>GENITAL WARTS</i></li>
+        		<li class="active"><i>HGA</i></li>
+                <li><i></i></li>
+        		<li class="common home">
+                	<ul>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                        <li></li>
+                	</ul>
+                </li>
+        	</ul>
+        </footer><!-- end footer -->
+
+        <!-- overlay -->
+        <div class="overlay">
+        	<div class="wrap"> <span class="close"></span>
+                <h3>REFERENCES:</h3>
+                <ol>
+                    <li>Donovan B<em>et al.</em> Lancet. Inf Diseases 2011; 11-39-44.</li>
+                    <li>Ali H <em>et al.</em> BMJ 2013:346:f2032.</li>
+                    <li>Brotherton JML <em>et al.</em> Lancet 2011; 377: 2085-9.</li>
+                </ol>
+            </div>
+        </div><!-- end overlay -->
+	</section>
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/touchy.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+<script type="text/javascript">
+	$( function(){
+    
+        $('.magnify').on('tap', function(){
+            $('.zoom').fadeIn();
+        })
+
+        $('.close').on('tap', function(){
+            $('.zoom').fadeOut();
+        })
+
+        goToNextOrPrev('genital-warts.html', '')
+        
+    })
+</script>
+</body>
+</html>
