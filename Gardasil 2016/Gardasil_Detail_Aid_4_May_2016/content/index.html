@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="CSL Vaccines">
+<title>CSL Vaccines</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style type="text/css">
+	.footer-nav > li:first-child {background-image: none; width:690px; text-align: left; border-left:none; }
+	.footer-nav > .common { border-left:none; box-shadow:none; }
+    .footer-nav > li:first-child > p {padding:20px; padding-left:45px; font-family: 'HelveNeuMedCon'; font-size:14px; text-transform: none; color:#c9c393;}
+
+    .logo{right:auto; left:45px; bottom:65px;}
+
+    .menu{position:absolute; left:690px; top:0px; font-family: 'HelveNeuMedCon'; font-size:32px; line-height:30px;}
+        .menu li{display:table; width:334px; height:143px;}
+        .menu li i{display:table-cell; vertical-align: middle; padding-left:30px; text-transform: uppercase;}
+        .menu li:first-child, .menu li:nth-child(4){background-color:rgba(0, 0, 0, 0.2);}
+        .menu li:nth-child(2), .menu li:last-child{background-color:rgba(0, 0, 0, 0.3);}
+        .menu li:nth-child(3){background-color:rgba(0, 0, 0, 0.4);}
+
+    .imgs{position:absolute; top:0px; left:0px;}
+        .imgs li{height:428px; width:690px; position:absolute; background:url('images/slideshow.png') no-repeat;}
+        .imgs li:nth-child(2){background-position-y:-452px;}
+        .imgs li:nth-child(3){background-position-y:-904px;}
+        .imgs li:nth-child(4){background-position-y:-1356px;}
+
+    .menu li.active{-webkit-animation-name: to-white; -webkit-animation-duration: 1s; animation-name: to-white; animation-duration: 1s; color:white;}
+
+    .menu li.inactive{-webkit-animation-name: to-gold; -webkit-animation-duration: 1s; animation-name: to-gold; animation-duration: 1s;}
+
+    @-webkit-keyframes to-white {
+    from {color: #c9c393;}
+    to {color: white}
+    }
+
+    @keyframes to-white{
+    from {color: #c9c393;}
+    to {color: white}
+    }
+
+    @-webkit-keyframes to-gold {
+    from {color: white;}
+    to {color: #c9c393;}
+    }
+
+    @keyframes to-gold{
+    from {color: white;}
+    to {color: #c9c393;}
+    }
+
+</style> 
+</head>
+<body>
+	<section class="slide">
+    	<span class="logo"></span>
+        	
+        <article class="contents">
+            <ul class='menu'>
+                <li class='e active'><i><a href="Gardasil_Efficacy/Gardasil_Efficacy_Indication.html">efficacy</a></i></li>
+                <li class='d'><i><a href="Gardasil_Population/Gardasil_Population_Genital_Warts.html">population<br />impact data</a></i></li>
+                <li class='h'><i><a href="Gardasil_HPV_Vaccination/Gardasil_HPV_Vaccination_When_to_Discuss.html">hpv<br />vaccination</a></i></li>
+                <li class='p'><i><a href="Gardasil_Previous_HPV/Gardasil_Previous_HPV_Exposure.html">previous<br />exposure</a></i></li>
+                <li><i><a href="Gardasil_Clinic_Resources/Gardasil_Clinic_Resources.html">clinic<br />resources</a></i></li>
+            </ul>
+
+            <ul class='imgs'>
+                <li></li>
+                <li class='hide'></li>
+                <li class='hide'></li>
+                <li class='hide'></li>
+            </ul>
+
+        </article>
+        <!-- footer menu -->
+        <footer>
+        	<ul class="footer-nav">
+                <li><p>Before prescribing, please review the Product Information</p></li>
+        		<li class="common">
+                	<ul>
+                		<li class="disabled"></li>
+                		<li></li>
+                		<li></li>
+                        <li></li>
+                	</ul>
+                </li>
+        	</ul>
+        </footer><!-- end footer -->
+        <!-- overlay -->
+        <div class="overlay">
+        	<div class="wrap"> <span class="close"></span>
+                <h3>REFERENCES:</h3>
+                <ol>
+                    <li>GARDASIL<sup>®</sup> Product Information, February 2016.</li>
+                    <li>Castellsague X <em>et al</em>. British Journal of Cancer. 2011;1–10.</li>
+                    <li>Giuliano A <em>et al</em>. N Engl J Med. 2011;364(5):401–11.</li>
+                    <li>Palefsky JM <em>et al</em>. N Engl J Med. 2011;365:1576–85.</li>
+                </ol>
+            </div>
+        </div><!-- end overlay -->
+	</section>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<script type="text/javascript">
+	$( function(){
+	   setInterval(function(){
+        var c = $('.active').attr('class');
+        var i = $("." + c[0]).index();
+
+        if(i < 3){
+            $('.menu li').removeClass('active').removeClass('inactive');
+            $("." + c[0]).addClass('inactive')
+            $($('.menu li').get(i+1)).addClass('active')
+            $($('.imgs li').get(i)).fadeOut(1000)
+            $($('.imgs li').get(i+1)).fadeIn(1000)
+
+        }
+        else{
+            $('.menu li').removeClass('active').removeClass('inactive');
+            $("." + c[0]).addClass('inactive')
+            $($('.menu li').get(0)).addClass('active');
+            $($('.imgs li').get(i)).fadeOut(1000)
+            $($('.imgs li').get(0)).fadeIn(1000)
+        }
+
+       }, 5000);
+		
+      
+
+        /* NAVIGATE TO SECTIONS FROM HOME PAGE 
+        $('.menu li').on('click', function(){
+        
+            window.location = $(this).attr("data-url");
+        })*/
+
+       /* $('.footer-nav .common li:nth-child(3)').on('click', function(){
+            window.location = 'Gardasil_Toolbox/Gardasil_Toolbox.html';
+        })*/
+
+	})
+</script>
+</body>
+</html>

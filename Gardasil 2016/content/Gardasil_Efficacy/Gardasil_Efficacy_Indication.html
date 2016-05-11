@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="CSL Vaccines">
+<title>CSL Vaccines</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<style type="text/css">
+	
+.rectangleBox > li{width:780px;background-color: rgba(0, 0, 0, 0.3); padding: 20px}
+.rectangleBox > li:first-child{margin-bottom: 15px;}
+.rectangleBox > li {font-size: 28px; line-height: 32px;color: white;font-family: 'GothamNarrowMedium'; }
+.footnote{ margin-top:25px; letter-spacing: 0.6px; font-family: 'GothamNarrowLight';}
+</style> 
+</head>
+<body>
+	<section class="slide">
+    	<header> <span class="logo"></span>
+        	<h1>INDICATION</h1>
+        </header>
+        <article class="contents">
+        
+        <ul class="rectangleBox">
+        	<li>
+               GARDASIL is indicated in males ages 9 through 26<sup>*</sup> years for<br /> the prevention of anal cancer,
+        	       precancerous or dysplastic<br />lesions, external genital lesions and infection caused by<br/ > HPV types 6/11/16/18.<sup>1</sup>
+            </li>
+        	<li>
+        		GARDASIL is indicated for females aged 9 through 45<sup>*</sup> years<br />for the prevention of cervical, vulvar, vaginal and anal cancer,<br />precancerous or dysplastic lesions, 
+        		genital warts, and infection<br />caused by HPV types 6/11/16/18.<sup>1</sup>
+        	</li>
+        </ul>
+        
+        <p class='footnote'><sup>*</sup>Immunogenicity studies have been conducted to link efficacy in females and males aged 16 to 26 years to the<br />younger populations.</p>
+        
+       
+        </article>
+        <!-- footer menu -->
+        <footer>
+        	<ul class="footer-nav">
+        		<li class="back"></li>
+                <li><i>EFFICACY</i></li>
+        		<li class="active"><i>INDICATION</i></li>
+        		<li><i>FEMALE EFFICACY</i></li>
+                <li><i>MALE EFFICACY</i></li>
+        		<li class="common home">
+                	<ul>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                        <li></li>
+                	</ul>
+                </li>
+        	</ul>
+        </footer><!-- end footer -->
+        <!-- overlay -->
+        <div class="overlay">
+        	<div class="wrap"> <span class="close"></span>
+                <h3>REFERENCES:</h3>
+                <ol>
+                    <li>GARDASIL<sup>®</sup> Product Information, February 2016.</li>
+                    <li>Castellsague X <em>et al</em>. British Journal of Cancer. 2011;1–10.</li>
+                    <li>Giuliano A <em>et al</em>. N Engl J Med. 2011;364(5):401–11.</li>
+                    <li>Palefsky JM <em>et al</em>. N Engl J Med. 2011;365:1576–85.</li>
+                </ol>
+            </div>
+        </div><!-- end overlay -->
+	</section>
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/touchy.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+<script type="text/javascript">
+	$( function(){
+		
+		jumpToSlide('footer-nav > li:nth-child(4)', 'Gardasil_Efficacy_Female');
+		jumpToSlide('footer-nav > li:nth-child(5)', 'Gardasil_Efficacy_Male');
+        goToNextOrPrev('../Gardasil_PI_and_Summary/Gardasil_Summary.html', 'Gardasil_Efficacy_Female.html')
+		
+	})
+</script>
+</body>
+</html>

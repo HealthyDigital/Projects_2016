@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="CSL Vaccines">
+<title>CSL Vaccines</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<style type="text/css">
+
+	h4{font-size:28px; line-height:32px; color:white;}
+    .contents > p{font-family: 'GothamNarrowMedium'; font-size:20px; line-height:23px; color:white; width:360px; margin-top:20px;}
+
+    .container{width:450px; height:440px; background-color: rgba(0, 0, 0, 0.3); float:right; position:relative; left:-40px; top:-195px;}
+        .container h3{font-family: 'GothamNarrowMedium'; color:#c22820; background-color:white; text-align: center; font-size:14px; padding-top:10px}
+        .container .graph{display:block; position:relative; width:inherit; height:255px; background: url('../images/graph_1.png') no-repeat; background-size: 425px auto; background-position:15px 0px; background-color:white;}
+        .container .magnify{position:absolute; height:30px; width:30px; border:2px solid white; border-radius: 50%; top:205px; left:-15px; background:url('../images/icons.png') no-repeat; background-size:30px auto; background-position:0px -330px; background-color:#761024;}
+        .container p{font-size:16px; line-height:19px; font-family: 'GothamNarrowLight'; letter-spacing:-0.6px; padding:10px;}
+
+    .zoom{position:absolute; width:100%; height:768px; background-color:white; top:0px; left:0px; z-index: 1000;}
+        .zoom h3{width:100%; margin-top:70px; text-align:center; font-size:28px; line-height:32px; font-family: 'GothamNarrowMedium'; color:#c22820;}
+        .zoom .close{height:35px; width:35px; background-size:30px auto; background-position: center -270px; right:75px; top:70px; border:1px solid #646464;}
+        .zoom .graph{display: block; width:inherit; height:520px; background: url('../images/graph_1.png') no-repeat; background-size:845px auto; background-position: 110px 10px;}
+        .zoom p{font-size:16px; line-height:19px; font-family: 'GothamNarrowBook'; color:#282828; padding-left:90px; padding-right:90px;}
+</style> 
+</head>
+<body>
+	<section class="slide">
+    	<header> <span class="logo"></span>
+        	<h1>POPUPLATION LEVEL IMPACT:<br />
+            <i>GENITAL WARTS</i></h1>
+        </header>
+        <article class="contents">
+            <h4>Following the introduction of free HPV vaccine for females aged 12-26 years<br />
+            via the National HPV Vaccination Program, population level impacts are<br />
+             already being observed.<sup>1,2</sup></h4>
+            <p>Surveillance to 2011 shows a 92.6% decline in genital warts diagnoses in females less than 21 years of age compared to the pre-vaccination period.<sup>2</sup></p>
+            <p>A significant decline was also observed in females aged 21–30 years.<sup>2</sup></p>
+
+            <div class='container'>
+                <h3>Proportion of Australian females diagnosed with genital<br />warts at first visit, by age group, 2004-2011</h3>
+                <span class='graph'>
+                    <span class='magnify'></span>
+                </span>
+                <p>Retrospective analysis of standardised demographic, genital warts frequency and sexual behaviour information collected at eight public specialist sexual health services from across Australia. Between 2004 and 2011, 85,770 Australian born patients were seen for the first time at the 8 sexual health services. Of these, 7,686 (9%) patients (2,394 women and 5,292 men) were diagnosed as having genital warts.<sup></sup>
+                </p>
+            </div>
+        </article>
+
+        <!--graph zoom-->
+        <div class='zoom hide'>
+            <h3>Proportion of Australian females diagnosed with genital<br />warts at first visit, by age group, 2004–2011</h3>
+            <span class='close'></span>
+            <span class='graph'></span>
+            <p>Retrospective analysis of standardised demographic, genital warts frequency and sexual behaviour information collected at eight public specialist sexual health services from across Australia. Between 2004 and 2011, 85,770 Australian born patients were seen for the first time at the 8 sexual health services. Of these, 7,686 (9%) patients (2,394 women and 5,292 men) were diagnosed as having genital warts.<sup>2</sup></p>
+        </div>
+
+        <!-- footer menu -->
+        <footer>
+        	<ul class="footer-nav">
+        		<li class="back"></li>
+                <li><i>POPULATION<br />IMPACT DATA</i></li>
+        		<li class="active"><i>GENITAL WARTS</i></li>
+        		<li><i>HGA</i></li>
+                <li><i></i></li>
+        		<li class="common home">
+                	<ul>
+                		<li></li>
+                		<li></li>
+                		<li></li>
+                        <li></li>
+                	</ul>
+                </li>
+        	</ul>
+        </footer><!-- end footer -->
+
+        <!-- overlay -->
+        <div class="overlay">
+        	<div class="wrap"> <span class="close"></span>
+                <h3>REFERENCES:</h3>
+                <ol>
+                    <li>Donovan B<em>et al.</em> Lancet. Inf Diseases 2011; 11-39-44.</li>
+                    <li>Ali H <em>et al.</em> BMJ 2013:346:f2032.</li>
+                    <li>Brotherton JML <em>et al.</em> Lancet 2011; 377: 2085-9.</li>
+                </ol>
+            </div>
+        </div><!-- end overlay -->
+	</section>
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/touchy.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+<script type="text/javascript">
+	$( function(){
+    
+        $('.magnify').on('click', function(){
+            $('.zoom').fadeIn();
+        })
+
+        $('.close').on('click', function(){
+            $('.zoom').fadeOut();
+        });
+		
+		
+		jumpToSlide('footer-nav > li:nth-child(4)', 'Gardasil_Population_HGA');
+
+        goToNextOrPrev('../Gardasil_PI_and_Summary/Gardasil_Summary.html', 'Gardasil_Population_HGA.html')
+        
+    })
+</script>
+</body>
+</html>
