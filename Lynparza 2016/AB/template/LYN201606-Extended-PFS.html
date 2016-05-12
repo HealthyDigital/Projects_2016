@@ -68,7 +68,32 @@
 
     /*SLIDE 3*/
     .bodyContainer{ width:930px; height:400px; margin-top:45px;}
-    .bodyContainer > img {background-image: url('./img/dosing_diagram.png'); background-repeat: no-repeat; width: 950px; height: 350px;}
+    .bodyContainer > span {background-image: url('./img/dosing_diagram.png'); background-repeat: no-repeat; width: 950px; height: 350px; position: absolute;}
+
+    .plusButtons > li{background-image: url('./img/+_icon.png'); background-repeat: no-repeat; width: 25px; height: 25px; display: inline-block; margin-top: 110px;}
+    .plusButtons > li:first-child{margin-left:29px;}
+    .plusButtons > li:nth-child(2){margin-top:5px; margin-left:29px; position: absolute;}
+    .plusButtons > li:nth-child(3){margin-left:190px;}
+    .plusButtons > li:last-child{margin-left:540px;}
+
+
+    .bottomArrowS3{margin-top: -90px; width: 200px;}
+    .bottomArrowS3 > li{ display: inline-block; }
+    .bottomArrowS3 > li:first-child{background-image: url('./img/i_icon.png'); width: 85px; height: 85px;}
+
+    .boxLayout {position: absolute; with:860px; height: 170px; margin-top: 150px; margin-left:95px;}
+    .boxLayout > li {width:360px; height:145px; display: inline-block;  }
+    .boxLayout > li:last-child { margin-left: 100px; }
+    
+    .boxDesign > li{width:125px; height:130px; background-color: #b2d144; display: inline-block; margin-left: -5px;}
+    .boxDesign > li:nth-child(2) { width: 100px; height:145px; background-color: #d9e4ea; margin-top:-7px; position: absolute;}
+    .boxDesign > li:last-child {margin-left: 80px;}
+
+
+    .boxArrows > li {position: absolute; width: 0;height: 0;border-top: 15px solid transparent;border-left: 20px solid #b2d144;
+    border-bottom: 15px solid transparent;margin-top: -85px;margin-left: 120px; display: inline-block;}
+    .boxArrows > li:nth-child(2){border-left: 20px solid #d9e4ea; margin-left:215px;}
+    .boxArrows > li:last-child{margin-left: 330px;}
 	
 </style> 
 </head>
@@ -539,9 +564,44 @@ included OS, best overall response, HRQoL, safety and tolerability.
                         </h2>
 
                         <div class="bodyContainer">
-                            <img />
+                            <span></span>
+                            <ul class="boxLayout">
+                            	<li>
+	                            	<ul class="boxDesign">
+	                            		<li></li>
+	                            	    <li></li>
+	                            		<li></li>
+	                            	</ul>
+	                             	<ul class="boxArrows">
+	                             		<li></li>
+	                             		<li></li>
+	                             		<li></li>
+	                             	</ul>
+                            	<li>
+                            	 <ul class="boxDesign">
+                            		<li></li>
+                            		<li></li>
+                            		<li></li>
+                            	 </ul>
+                            	 	<ul class="boxArrows">
+	                             		<li></li>
+	                             		<li></li>
+	                             		<li style="display:none"></li>
+	                             	</ul>
+                            	</li>
+                            </ul>
+                            <ul class="plusButtons">
+                            	<li></li>
+                            	<li></li>
+                            	<li></li>
+                            	<li></li>
+                            </ul>
+
                         </div>
                      </li>
+                      <ul class="bottomArrowS3">
+                          <li></li>
+                      </ul>
                 </ul><!-- end swiper-wrapper -->
                 <!-- Add Arrows -->
        			<span class="swiper-button icon arrow swiper-button-next"></span>
