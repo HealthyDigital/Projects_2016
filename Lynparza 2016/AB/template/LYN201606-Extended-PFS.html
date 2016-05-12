@@ -18,7 +18,17 @@
     .bodyContent > li:first-child > :first-child{padding-top: 20px; padding-left: 20px; padding-right: 20px; font-size: 18px; font-family: "interstatelight";}
     .bodyContent > li:first-child> p:last-child{padding-left: 20px; padding-right: 20px; padding-bottom:20px; font-size: 14px; font-family: "interstatelight";}
     
-    table{ width:600px;/*height:435px;*/overflow: scroll;background-color: white; margin-top:40px;}
+    table{ width:600px;height:400px;overflow: scroll;background-color: white; margin-top:40px;}
+    
+thead, tbody { display: block; }
+
+tbody {
+    height: 395px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+
     td {border:1px solid white;}
     tr:first-child {border:1px solid white;}
 
@@ -34,15 +44,20 @@
     .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(2n +2) > td:first-child {text-align: left; padding-left: 15px;}
 
 
-    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(n+5):nth-child(odd):nth-child(-n+13) > td { background-color: white; font-family: "interstateregular"; font-size: 10px; text-align: center;}
-    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(n+5):nth-child(odd):nth-child(-n+13) > td:first-child {text-align: left; padding-left: 15px;}
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(n+5):nth-child(odd):nth-child(-n+25) > td { background-color: white; font-family: "interstateregular"; font-size: 10px; text-align: center;}
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(n+5):nth-child(odd):nth-child(-n+25) > td:first-child {text-align: left; padding-left: 15px;}
 
     .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(2) > td{ height: 20px; width:175px; text-align: center; background-color: #0c4d72; color: white; font-size: 10px; padding: 5px; 
         font-family: "interstateregular";}
 
     .bodyContent > li{display:inline-block;}
 
+    .bottomArrow{margin-top: 50px; width: 200px;}
+    .bottomArrow > li{ display: inline-block; }
+    .bottomArrow > li:first-child {background-image: url('./img/BRCAm_icon.png'); width: 75px; height: 85px;}
+    .bottomArrow > li:last-child {font-family: "interstateregular"; font-size: 20px; color: #a8c43f; position: absolute; margin-top: 40px; margin-left: 10px;}
 
+    .footnote > p { font-family: "interstatelightCon"; font-size: 12px; }
 
 	
 </style> 
@@ -171,9 +186,103 @@
                                         <td>0</td>
                                         <td>0</td>
                                     </tr>
+                                    <tr>
+                                        <td>Constipation</td>
+                                        <td>28 (21%)</td>
+                                        <td>14 (11%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Decreased appetite</td>
+                                        <td>28 (21%)</td>
+                                        <td>17 (13%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cough</td>
+                                        <td>24 (18%)</td>
+                                        <td>11 (9%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Upper abdominal pain</td>
+                                        <td>24 (18%)</td>
+                                        <td>10 (8%)</td>
+                                        <td>0</td>
+                                        <td>1(< 1%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arthralgia</td>
+                                        <td>23 (17%)</td>
+                                        <td>18 (14%)</td>
+                                        <td>1 (< 1%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Back pain</td>
+                                        <td>22 (16%)</td>
+                                        <td>14 (11%)</td>
+                                        <td>3 (2%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dysgeusia</td>
+                                        <td>22 (16%)</td>
+                                        <td>8 (6%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nasopharyngitis</td>
+                                        <td>20 (15%)</td>
+                                        <td>14 (11%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>   
+                                    <tr>
+                                        <td>Asthenia</td>
+                                        <td>19 (14%)</td>
+                                        <td>12 (9%)</td>
+                                        <td>1 (< 1%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dizziness</td>
+                                        <td>18 (13%)</td>
+                                        <td>9 (7%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Abdominal distension</td>
+                                        <td>17 (13%)</td>
+                                        <td>11 (9%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr> 
+                                    <tr>
+                                        <td>Neutropenia</td>
+                                        <td>7 (5%)</td>
+                                        <td>5 (4%)</td>
+                                        <td>5 (4%)<sup>†</sup></td>
+                                        <td>1 (< 1%)</td>
+                                    </tr>                                             
                                 </tbody>
                             </table>
                         </li>
+                        <li>
+                        <div class="footnote">
+                            <p><sup>†</sup>Includes three patients with a grade 4 AE.<br /> Adapted with permission from Ledermann.<sup>3</sup></p>
+                        </div>
+                        </li>
+                      </ul>
+
+                      <ul class="bottomArrow">
+                          <li></li>
+                          <li>BRCAm</li>
                       </ul>
 
                       <!--slide 1
