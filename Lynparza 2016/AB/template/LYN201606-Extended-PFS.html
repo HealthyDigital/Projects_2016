@@ -10,10 +10,106 @@
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	
-	
-	
-	
+	b{font-weight: bold;}
+
+	@font-face{font-family:minionProRegular;src:url(../fonts/MinionPro-Regular.woff) format('woff'),url(../fonts/MinionPro-Regular.svg#MinionPro-Regular) format('svg');font-weight:400;font-style:normal}
+
+
+	.bodyContent {width:945px;height:445px;}
+
+    .bodyContent > li:first-child {width:315px;height:435px;background-color: #d9e6ec;margin-top:40px;margin-right: 25px;float:left;}
+
+    .bodyContent > li:first-child> p:last-child{padding-left: 20px; padding-right: 20px; padding-bottom:20px; font-size: 14px; font-family: "interstatelight";}
+    .bodyContent > li:first-child > p:first-child, .slide2{padding-top: 20px; padding-left: 20px; padding-right: 20px; font-size: 18px; font-family: "interstatelight";}
+    
+    table{ width:600px;height:400px;overflow: scroll;background-color: white; margin-top:40px;}
+    
+    thead, tbody { display: block; }
+
+    tbody {height: 395px;/* Just for the demo*/overflow-y: auto;    /* Trigger vertical scroll*/overflow-x: hidden;  /* Hide the horizontal scroll */ 
+
+    }
+
+
+    td {border:1px solid white;}
+    tr:first-child {border:1px solid white;}
+
+    .bodyContent > li:nth-child(2) >table > tbody > tr:nth-child(2) > td:first-child {background-color: white;}
+    .bodyContent > li:nth-child(2) > table > tbody > tr:first-child > td{ font-family: "interstateregular"; color: #b2d144; text-align: right; font-size: 10px; height: 20px; vertical-align: middle;} 
+
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(2) > td:first-child{ height: 20px; width:220px; text-align: center;}
+    
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(3) > td {text-align: center; color: white; background-color:#0c4d72; font-size:10px; 
+    	padding: 2px; font-family: "interstateregular"; line-height: 13px;  vertical-align: middle;}
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(3) > td:first-child{background-color: white;}
+
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(2n +2) > td {vertical-align: middle; background-color: #b2d144; 
+    	font-family: "interstateregular"; font-size: 10px; text-align: center;padding-top: 4px; padding-bottom: 4px;}
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(2n +2) > td:first-child {vertical-align: middle; text-align: left; padding-left: 15px;}
+
+
+
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(n+5):nth-child(odd):nth-child(-n+27) > td {vertical-align: middle;  background-color: white; 
+    	font-family: "interstateregular"; font-size: 10px; text-align: center; padding-top: 4px; padding-bottom: 4px;}
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(n+5):nth-child(odd):nth-child(-n+27) > td:first-child {vertical-align: middle; 
+    	text-align: left; padding-left: 15px;}
+
+    .bodyContent > li:nth-child(2) > table > tbody > tr:nth-child(2) > td{height:20px; width:175px; text-align: center; background-color: #0c4d72; 
+    	color: white; font-size: 10px; font-family: "interstateregular";}
+
+    .bodyContent > li{display:inline-block;}
+
+    .bottomArrow{margin-top: 60px; width: 200px;}
+    .bottomArrow > li{ display: inline-block; }
+    .bottomArrow > li:first-child {background-image: url('./img/BRCAm_icon.png'); background-repeat: no-repeat; width: 65px; height: 85px;}
+    .bottomArrow > li:last-child {font-family: "interstateregular"; font-size: 20px; color: #a8c43f; position: absolute; margin-top: 25px; margin-left: 10px;}
+
+    .footnote > p { font-family: "interstatelightCon"; font-size: 12px; }
+
+
+    /*SLIDE 2*/
+
+    .bodyContentS2 > li:first-child > p:first-child{padding-top: 20px; padding-left: 20px; padding-right: 20px; font-size: 18px; font-family: "interstatelight";}
+    .bottomArrowS2{margin-top: 60px; width: 200px;}
+    .bottomArrowS2 > li{ display: inline-block; }
+    .bottomArrowS2 > li:first-child{background-image: url('./img/OPP_icon.png'); background-repeat: no-repeat; width: 65px; height: 85px;}
+    .bottomArrowS2 > li:last-child{font-family: "interstateregular"; font-size: 20px; color: #0c4d72; position: absolute; margin-top: 25px; margin-left: 10px;}
+
+
+    /*SLIDE 3*/
+    .bodyContainer{ width:930px; height:400px; margin-top:45px;}
+    .bodyContainer > span {background-image: url('./img/dosing_diagram.png'); background-repeat: no-repeat; width: 950px; height: 350px; position: absolute;}
+
+ .plusButtons > li{background-image: url('./img/+_icon.png'); background-repeat: no-repeat; width: 25px; height: 25px; display: inline-block; margin-top: 110px;}
+    .plusButtons > li:first-child{margin-left:29px;}
+    .plusButtons > li:nth-child(2){margin-top:5px; margin-left:29px; position: absolute;}
+    .plusButtons > li:nth-child(3){margin-left:180px;}
+    .plusButtons > li:last-child{margin-left:540px;}
+
+
+    .bottomArrowS3{margin-top: -90px; width: 200px;}
+    .bottomArrowS3 > li{ display: inline-block; }
+    .bottomArrowS3 > li:first-child{background-image: url('./img/i_icon.png'); background-repeat: no-repeat; width: 65px; height: 85px;}
+
+    .boxLayout {position: absolute; with:860px; height: 170px; margin-top: 150px; margin-left:95px;}
+    .boxLayout > li {width:360px; height:145px; display: inline-block;  }
+    .boxLayout > li:last-child { margin-left: 100px; }
+    
+    .boxDesign > li{width:125px; height:130px; background-color: #b2d144; display: inline-block; margin-left: -5px; font-family: "interstatelightCon"; 
+    font-size: 17px; line-height: 19px; }
+    .boxDesign > li:nth-child(2) { width: 100px; height:145px; background-color: #d9e4ea; margin-top:-7px; position: absolute; color:#0c4d72; 
+    	font-family: "interstatebold";}
+    .boxDesign > li:last-child {margin-left: 85px;position: absolute; z-index: -1;}
+
+    .boxDesign > li:first-child > p{padding:25px; position: absolute; color: white; text-align:center;}
+    .boxDesign > li:nth-child(2) > p{text-align: center; padding: 50px; padding-left: 15px; padding-right: 15px;}
+    .boxDesign > li:last-child > p{padding-top: 15px; padding-left: 15px; padding-right: 5px; color:white; text-align: center;}
+
+
+    .boxArrows > li {position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid #b2d144;
+    border-bottom: 18px solid transparent;margin-top: -90px;margin-left: 113px; display: inline-block;}
+    .boxArrows > li:nth-child(2){border-left: 20px solid #d9e4ea; margin-left:210px;}
+    .boxArrows > li:last-child{margin-left: 325px;}
 	
 </style> 
 </head>
@@ -35,13 +131,222 @@
                 <ul class="swiper-wrapper">
                 	<!-- slide 1-->
                     <li class="swiper-slide" data-slide="1">
-                         <h2><span>CLINICAL DATA – EXTENDED PFS</span>
-                            ADDING LYNPARZA TO THE TREATMENT PARADIGM ALLOWS WOMEN<br />
-                            LIVING WITH BRCAm PLATINUM-SENSITIVE RELAPSED HIGH GRADE<br />
-                            SEROUS OVARIAN CANCER TO ACTIVELY EXTEND PFS<sup data-ref="3">3</sup>
+                         <h2><span>SAFETY AND TOLERABILITY</span>
+                            THE SAFETY AND TOLERABILITY OF LYNPARZA ARE ACCEPTABLE<br />
+                            FOR ORAL MAINTENANCE TREATMENT ADMINISTRATION<sup data-ref="3">4</sup>
                         </h2>
                       
-                      slide 1
+                      <ul class="bodyContent">
+                        <li>
+                            <p>More patients in the olaparib group than in the placebo<br />group had dose interruptions<br />(49 [36%] of 136 vs 21 [16%]<br /> of 128) or dose reductions 57<br />[42%] vs 28 [22%]): vomiting,<br />nausea, and fatigue were the<br />most common causes of dose
+                            <br />interruptions or reductions in the<br />olaparib group.3,4</p>
+                            <p>Serious adverse events were reported in<br />25 (18%) of 136 patients in the olaparib<br />group and 11 (9%) of 128 patients in
+                            <br />the placebo group; the most common<br />serious adverse event was small intestinal<br />obstruction (two [1%] patients in the
+                            <br />olaparib group and three [2%] in the<br />placebo group.</p>
+                        </li>
+                        <li>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5">OVERALL PATIENT POPULATION</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="2">All Grades</td>
+                                        <td colspan="2">Grade >3</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Olaparib<br />(n=136)</td>
+                                        <td>Placebo<br />(n=128)</td>
+                                        <td>Olaparib<br />(n=136)</td>
+                                        <td>Placebo<br /> (n=128)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Patients with any AE</td>
+                                        <td>132 (97%)</td>
+                                        <td>119 (93%)</td>
+                                        <td>55 (40%)</td>
+                                        <td>28 (22%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nausea</td>
+                                        <td>96 (71%)</td>
+                                        <td>46 (36%)</td>
+                                        <td>3 (2%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fatigue</td>
+                                        <td>71 (52%)</td>
+                                        <td>50 (39%)</td>
+                                        <td>10 (7%)*</td>
+                                        <td>4 (3%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vomiting</td>
+                                        <td>46 (34%)</td>
+                                        <td>18 (14%)</td>
+                                        <td>3 (2%)</td>
+                                        <td>1 (< 1%)</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Diarrhoea</td>
+                                        <td>37 (27%)</td>
+                                        <td>31 (24%)</td>
+                                        <td>3 (2%)</td>
+                                        <td>3 (2%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Abdominal pain</td>
+                                        <td>34 (25%)</td>
+                                        <td>34 (27%)</td>
+                                        <td>3 (2%)</td>
+                                        <td>4 (3%)*</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anaemia</td>
+                                        <td>29 (21%)</td>
+                                        <td>7 (5%)</td>
+                                        <td>7 (5%)*</td>
+                                        <td>1(< 1%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Headache</td>
+                                        <td>28 (21%)</td>
+                                        <td>16 (13%)</td>
+                                        <td>0</td>
+                                        <td>1(1 <%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Constipation</td>
+                                        <td>28 (21%)</td>
+                                        <td>14 (11%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Decreased appetite</td>
+                                        <td>28 (21%)</td>
+                                        <td>17 (13%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dyspepsia</td>
+                                        <td>24 (18%)</td>
+                                        <td>11 (9%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Constipation</td>
+                                        <td>28 (21%)</td>
+                                        <td>14 (11%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Decreased appetite</td>
+                                        <td>28 (21%)</td>
+                                        <td>17 (13%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dyspepsia</td>
+                                        <td>24 (18%)</td>
+                                        <td>11 (9%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cough</td>
+                                        <td>24 (18%)</td>
+                                        <td>13 (10%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Upper abdominal pain</td>
+                                        <td>24 (18%)</td>
+                                        <td>10 (8%)</td>
+                                        <td>0</td>
+                                        <td>1(< 1%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arthralgia</td>
+                                        <td>23 (17%)</td>
+                                        <td>18 (14%)</td>
+                                        <td>1 (< 1%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Back pain</td>
+                                        <td>22 (16%)</td>
+                                        <td>14 (11%)</td>
+                                        <td>3 (2%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dysgeusia</td>
+                                        <td>22 (16%)</td>
+                                        <td>8 (6%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nasopharyngitis</td>
+                                        <td>20 (15%)</td>
+                                        <td>14 (11%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>   
+                                    <tr>
+                                        <td>Asthenia</td>
+                                        <td>19 (14%)</td>
+                                        <td>12 (9%)</td>
+                                        <td>1 (< 1%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dizziness</td>
+                                        <td>18 (13%)</td>
+                                        <td>9 (7%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Abdominal distension</td>
+                                        <td>17 (13%)</td>
+                                        <td>11 (9%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr> 
+                                    <tr>
+                                        <td>Neutropenia</td>
+                                        <td>7 (5%)</td>
+                                        <td>5 (4%)</td>
+                                        <td>5 (4%)<sup>†</sup></td>
+                                        <td>1 (< 1%)</td>
+                                    </tr>                                             
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>
+                        <div class="footnote">
+                            <p><sup>†</sup>Includes three patients with a grade 4 AE.<br /> Adapted with permission from Ledermann.<sup>3</sup></p>
+                        </div>
+                        </li>
+                      </ul>
+
+                      <ul class="bottomArrow">
+                          <li></li>
+                          <li>BRCAm</li>
+                      </ul>
+
+                      <!--slide 1
                       <br />
                        
                         
@@ -51,20 +356,271 @@ relapsed, high-grade serous ovarian cancer who had received two or more platinum
 most recent platinum-based regimen. Patients were randomly assigned to receive olaparib, at a dose of 400 mg twice daily, or placebo. The primary end point
 was progression-free survival according to the Response Evaluation Criteria in Solid Tumours guidelines. Primary endpoint was PFS. Secondary endpoints
 included OS, best overall response, HRQoL, safety and tolerability.
-                        </div>
+                        </div>-->
                        
                     </li>
                     <!-- slide 2 -->
                     <li class="swiper-slide" data-slide="2">
-                         <h2><span>CLINICAL DATA – STUDY OVERVIEW</span>
-                           STUDY 19 WAS A RANDOMISED, DOUBLE-BLIND,<br />
-PLACEBO-CONTROLLED PHASE II CLINICAL TRIAL<sup data-ref="2">2</sup>
+                         <h2><span>SAFETY AND TOLERABILITY</span>
+                        THE SAFETY AND TOLERABILITY OF LYNPARZA ARE ACCEPTABLE<br />
+                        FOR ORAL MAINTENANCE TREATMENT ADMINISTRATION<sup data-ref="2">4</sup>
                         </h2>
-                        <p>In Study 19, Lynparza as maintenance treatment met the primary endpoint of improving PFS in the overall study
-population.<sup data-ref="2">2</sup></p>
-                      slide 2
+                      
+                      <ul class="bodyContent">
+                        <li>
+                            <p class="slide2">The most common adverse<br />events associated with Lynparza<br />monotherapy for patients<br />indetified with BRCAm were<br />
+                               nausea, fatigue and vomiting and<br /> were generally mild to moderate<br />(grade 1 or 2) in severity.<br /> The most common Grade 3<br />
+                               and 4 adverse events reported<br /> for Lynparza vs placebo were<br />fatigue (7% vs 2%) and anaemia<br />(5% vs 2%), neutropenia (4% vs<br />2%)
+                               and vomiting (3% vs 0%)<sup>3,4</sup>
+                            </p>
+                        </li>
+                        <li>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5">PATIENTS WITH BRCA MUTATION</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="2">All Grades</td>
+                                        <td colspan="2">Grade >3</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Olaparib<br />(n=74)</td>
+                                        <td>Placebo<br />(n=62)</td>
+                                        <td>Olaparib<br />(n=74)</td>
+                                        <td>Placebo<br /> (n=62)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Patients with any AE</td>
+                                        <td>72 (97%)</td>
+                                        <td>58 (93%)</td>
+                                        <td>28 (40%)</td>
+                                        <td>11 (22%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nausea</td>
+                                        <td>54 (73%)</td>
+                                        <td>20 (32%)</td>
+                                        <td>1 (1%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fatigue</td>
+                                        <td>40 (54%)</td>
+                                        <td>23 (37%)</td>
+                                        <td>5 (7%)*</td>
+                                        <td>1 (2%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vomiting</td>
+                                        <td>27 (36%)</td>
+                                        <td>5 (8%)</td>
+                                        <td>2 (3%)</td>
+                                        <td>0</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Diarrhoea</td>
+                                        <td>22 (30%)</td>
+                                        <td>12 (19%)</td>
+                                        <td>2 (3%)</td>
+                                        <td>1 (2%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Abdominal pain</td>
+                                        <td>17 (23%)</td>
+                                        <td>18 (29%)</td>
+                                        <td>0</td>
+                                        <td>2 (3%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anaemia</td>
+                                        <td>19 (26%)</td>
+                                        <td>3 (5%)</td>
+                                        <td>4 (5%)*</td>
+                                        <td>1(2%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Headache</td>
+                                        <td>13 (18%)</td>
+                                        <td>10 (16%)</td>
+                                        <td>0</td>
+                                        <td>1(2%)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Constipation</td>
+                                        <td>14 (19%)</td>
+                                        <td>7 (11%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Decreased appetite</td>
+                                        <td>14 (19%)</td>
+                                        <td>6 (10%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dyspepsia</td>
+                                        <td>13 (18%)</td>
+                                        <td>4 (6%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Constipation</td>
+                                        <td>14 (19%)</td>
+                                        <td>7 (11%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Decreased appetite</td>
+                                        <td>14 (19%)</td>
+                                        <td>6 (10%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dyspepsia</td>
+                                        <td>13 (18%)</td>
+                                        <td>4 (6%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cough</td>
+                                        <td>11 (15%)</td>
+                                        <td>7 (11%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Upper abdominal pain</td>
+                                        <td>14 (19%)</td>
+                                        <td>4 (6%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arthralgia</td>
+                                        <td>11 (15%)</td>
+                                        <td>10 (16%)</td>
+                                        <td>1 (< 1%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Back pain</td>
+                                        <td>14 (19%)</td>
+                                        <td>9 (15%)</td>
+                                        <td>2 (3%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dysgeusia</td>
+                                        <td>14 (19%)</td>
+                                        <td>4 (6%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nasopharyngitis</td>
+                                        <td>10 (14%)</td>
+                                        <td>4 (6%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>   
+                                    <tr>
+                                        <td>Asthenia</td>
+                                        <td>12 (16%)</td>
+                                        <td>8 (13%)</td>
+                                        <td>1 (1%)</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dizziness</td>
+                                        <td>11 (15%)</td>
+                                        <td>3 (5%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>    
+                                    <tr>
+                                        <td>Abdominal distension</td>
+                                        <td>9 (12%)</td>
+                                        <td>6 (10%)</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr> 
+                                    <tr>
+                                        <td>Neutropenia</td>
+                                        <td>5 (7%)</td>
+                                        <td>3 (5%)</td>
+                                        <td>3 (4%)<sup>*</sup></td>
+                                        <td>1 (2%)</td>
+                                    </tr>                                             
+                                </tbody>
+                            </table>
+                        </li>
+                        <li>
+                        <div class="footnote">
+                            <p><sup>†</sup>Includes one patient with a grade 4 AE.<br /> Adapted with permission from Ledermann.<sup>3</sup></p>
+                        </div>
+                        </li>
+                      </ul>
+                      <ul class="bottomArrowS2">
+                          <li></li>
+                          <li>OPP</li>
+                      </ul>
                     </li>
-                    
+
+                     <li class="swiper-slide" data-slide="3">
+                        <h2><span>DOSING</span>
+                        LYNPARZA IS THE ONLY ORAL TGA APPROVED MAINTENANCE<br />THERAPY FOR BRCA, PLATINUM-SENSITIVE RELAPSED HIGH<br />
+                        GRADE SEROUS OVARIAN CANCER PATIENTS<sup data-ref="2">4</sup>
+                        </h2>
+
+                        <div class="bodyContainer">
+                            <span></span>
+                            <ul class="boxLayout">
+                            	<li>
+	                            	<ul class="boxDesign">
+	                            		<li><p>Wait to take<br />Lynparza at<br />least<b> 1 hour</b><br />after food</p></li>
+	                            	    <li><p>Lynparza<br />400 mg</p></li>
+	                            		<li><p>Refrain from<br />eating preferably<br />for up to<br /><b>2 hours</b> after taking Lynparza</p></li>
+	                            	</ul>
+	                             	<ul class="boxArrows">
+	                             		<li></li>
+	                             		<li></li>
+	                             		<li></li>
+	                             	</ul>
+                            	<li>
+                            	 <ul class="boxDesign">
+                            		<li><p>Wait to take<br />Lynparza at<br />least <b>1 hour</b><br />after food</p></li>
+                            		<li><p>Lynparza<br />400 mg</p></li>
+                            		<li><p>Refrain from<br />eating preferably<br />for up to<br /><b>2 hours</b> after<br />taking Lynparza</p></li>
+                            	 </ul>
+                            	 	<ul class="boxArrows">
+	                             		<li></li>
+	                             		<li></li>
+	                             		<li style="display:none"></li>
+	                             	</ul>
+                            	</li>
+                            </ul>
+                            <ul class="plusButtons">
+                            	<li></li>
+                            	<li></li>
+                            	<li></li>
+                            	<li></li>
+                            </ul>
+
+                        </div>
+                     </li>
+                      <ul class="bottomArrowS3">
+                          <li></li>
+                      </ul>
                 </ul><!-- end swiper-wrapper -->
                 <!-- Add Arrows -->
        			<span class="swiper-button icon arrow swiper-button-next"></span>
