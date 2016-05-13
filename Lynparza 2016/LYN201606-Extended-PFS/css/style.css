@@ -45,6 +45,7 @@ ol { margin: 0 0 0 10px; padding:0; counter-reset:item; }
 strong { font-weight:normal; font-family:interstatebold; }
 .list { list-style-type:disc; list-style:outside; margin-left:17px; }
 .sym { font-family: "BauhausStdDemi"; }
+
 em { font-style:italic; }
 a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
@@ -67,6 +68,8 @@ a { text-decoration:none; color:inherit; }
 .content, .nav-top { margin:0 auto; position:relative; }
 .content { width: 944px; height:708px; }
 	.content p { margin-bottom:10px; }
+	.content .slim { font-family:interstatelightCon; }
+	.content .slim strong { font-family:interstatebold-condensed; }
 .swiper-container { width:inherit; height:668px; top:-2.5em; padding-top:2.5em; }
 	.content .swiper-button-next, 
 	.content .swiper-button-prev { background:none; }
@@ -108,9 +111,11 @@ a { text-decoration:none; color:inherit; }
 	.overlay .ref .item { text-align:left; display:inline-block; vertical-align:middle; width:52.5%; background:#ffffff; box-shadow:0 1px 4px rgba(2, 46, 71, 0.4); position:relative; }
 	.overlay .ref li { font-size:16px; line-height:22px; margin-bottom:8px; }
 	.overlay .info { min-height:272px; padding-top:60px; bottom:0; background:#004d74; color:#ffffff; font-size:20px; line-height:25px; }
+	.overlay .info h3 + ul { margin-bottom:15px; } 
 	.overlay .nav { bottom:0; background:#ffffff; min-height: 640px; }
 	.overlay .nav:after { content:""; bottom:40px; right:40px; background-position:0 0; }
 	.overlay .video { top:4.5em; left:0; right:0; width:942px; margin:0 auto; }
+	.overlay h3 { margin-bottom:3px; }
 	.video .close { background:#1b3e58; }
 .nav .close { background:none; top:-50px; right:8px; }
 	.nav .close:before { color:#004d74; }

@@ -10,10 +10,10 @@
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.wrap { overflow:hidden; }
-	.content h2 { margin-bottom:30px; }
-	[data-slide='4'] .feature, [data-slide='7'] .feature { float:right; width:605px; height:425px; }
-	[data-slide='4'] .feature { background-image:url(img/graph-lines.png); }
+	.wrap, .reveal { overflow:hidden; }
+	.content h2 { margin-bottom:28px; }
+	[data-slide='4'] .feature, .data .feature { float:right; width:605px; height:425px; }
+	[data-slide='4'] .feature { background-image:url(img/graph_lines.png); }
 	.indicator { width:322px; position:relative; }
 	.indicator, .indicator i { float:left; }
 	.indicator > li, .indicator i em { font-family:interstateregular-condensed; }
@@ -29,16 +29,17 @@
 	.indicator .less.arrow { transform: rotate(180deg); bottom:2px; }
 	
 	.label, .state, .state:after, .key { position:absolute; }
-	.state { background:url(img/graph_state1.png) 0 0 no-repeat;  left:54px; opacity:0; }
+	.state { background-image:url(img/graph_state1.png); background-repeat:no-repeat; left:54px; opacity:0; }
 	.state:after { content:""; left:0; background:url(img/graph_state2.png) 0 0 no-repeat; opacity:0; }
 	.state3 .state { background:url(img/graph_state3.png) 0 0 no-repeat;  }
 	#container .state, #container .state:after { width:556px; height:inherit; background-size:100% auto; }
 	.key { width:595px; right:0; bottom:80px; } 
 	.key li { font-family:interstatelightCon; font-size:14px; line-height:16px; margin-bottom:3px; padding:4px 15px 0; overflow:hidden; }
-	.key li:first-child { font-family:interstateregular-condensed; border-bottom:1px solid rgba(0, 77, 116, 0.5); margin:0 0 4px 15px; padding: 0 0 1px; }
-	.key li > span { float:left; width:17.1%;  }
-	.key li > span:first-child { width:70px; text-align:left; }
-	.key li > span:last-child { text-align:left; width:auto; }
+	.key li:first-child { font-family:interstateregular-condensed; border-bottom:1px solid rgba(0, 77, 116, 0.5); margin:0 0 4px 15px; padding: 0 0 2px; }
+	.key li > span { float:left; width:20px; text-align:center; }
+	.key li > span:nth-child(n+2) { margin-right:13.6%;  }
+	.key li > span:first-child { width:63px; text-align:left; }
+	.key li > span:last-child { margin-right:0; width:auto; }
 	.key li:nth-child(n+2) { background: #99b7c7; color:#ffffff; }
 	.state2 .key li:nth-child(2),
 	.state3 .key li:nth-child(2) { background: #004d74; }
@@ -49,7 +50,7 @@
 	.label { right:0; top:0; font-size:13px; line-height:16px;}
 	.label li { font-family:interstateregular; font-size:20px; line-height:22px; }
 	.footnote.s10 { bottom:6px; width:709px; text-align:justify; font-size:10px; line-height:13px; }
-	.footnote.s12 { bottom:155px; }
+	.footnote.s12 { bottom:160px; }
 	/* states */
 	.state1 .state, .state2 .state, .state2 .state:after, .state3 .state { opacity:1; }
 	
@@ -75,15 +76,152 @@
 	[data-slide='6'] .footnote { position:absolute; bottom:2px; left:0; }
 	
 	/* 7 */
-	[data-slide='7'] .feature { background-image:url(img/graph-lines2.png); }
-	[data-slide='7'] .indicator { width:277px; padding:20px; background:rgba(0, 77, 116, 0.15); }
-	[data-slide='7'] .key li:nth-child(n+2) { padding:0; background:none; color:#004d74; }
-	[data-slide='7'] .key li:last-child { color:#b2d234; }
-	[data-slide='7'] .key li:first-child { margin-left:0; }
+	[data-slide='7'] .feature { background-image:url(img/graph2_lines.png); height:350px; }
+	.data .indicator { width:277px; height:352px; padding:20px; background:rgba(0, 77, 116, 0.15); }
+	.data .key { width:603px; bottom:155px; }
+	.data .key li:nth-child(n+2) { padding:0; background:none; color:#004d74; margin-bottom:3px; }
+	.data .key li:nth-child(3) { color:#b2d234; }
+	.data .key li:first-child { margin-left:0; }
+	.data .key li > span:first-child { width:72px; }
+	.data .key li > span:nth-child(n+2) { font-family:interstateregular; font-size:11px; margin-right:5.24%; }
+	.data .key li > span:last-child { margin-right:0; }
+	.data .footnote.s12 { bottom: 115px; }
+	.data .footnote.s10 { bottom:12px; }
+	#container .data .state, #container .data .state:after { width:605px; }
+	.data .state { left:0; background-image:url(img/graph2_state1.png); opacity:1; }
+	.data .state:after { background-image:url(img/graph2_state2.png); }
+	.data .state, .data .state:after { background-position: 0 0; }
+	.feature > .reveal { position:absolute; left:0; top:0; width:0; height:100%; width:100%;   }
+	/* 8 */
+	[data-slide='8'] .wrap { margin-top:-10px; }
+	.data[data-slide='8'] .indicator { margin-top:10px; }
+	[data-slide='8'] .feature { background-image:url(img/graph3_lines.png); }
+	[data-slide='8'] .feature .label { top: 10px; text-align:right; }
+	.data[data-slide='8'] .state { background-image:url(img/graph3_state1.png); }
+	.data[data-slide='8'] .state:after { background-image:url(img/graph3_state2.png); }
+	[data-slide='8'] .feature, 
+	.data[data-slide='8'] .state, 
+	.data[data-slide='8'] .state:after { background-position-y:-5px;}
+	/* common 8 & 9*/
+	.data[data-slide='8'] .indicator,
+		.data[data-slide='9'] .indicator { height:364px; }
+	.data[data-slide='8'] .key,
+		.data[data-slide='9'] .key { bottom:144px; }
+	.data[data-slide='8'] .footnote.s12 ,
+		.data[data-slide='9'] .footnote.s12{ bottom: 104px; }
+	.data[data-slide='8'] .footnote.s10,
+		.data[data-slide='9'] .footnote.s10 { bottom:6px; }
+	/* 9 */
+	[data-slide='9'] .feature { background-image:url(img/graph4_lines.png); height:350px; }
+	.data[data-slide='9'] .state { background-image:url(img/graph4_state1.png); }
+	.data[data-slide='9'] .state:after { background-image:url(img/graph4_state2.png); }
+	[data-slide='9'] .feature, 
+	.data[data-slide='9'] .state, 
+	.data[data-slide='9'] .state:after { background-position-y:15px;}
+	.data[data-slide='9'] .indicator li { position:relative; padding:0; width:auto; margin-bottom:5px; }
+	.data[data-slide='9'] .key li > span:nth-child(n+2) { margin-right:2.06%; }
+	.data[data-slide='9'] .key li > span:last-child { margin-right:0; }
+	/* 10 */
+	.content .slim { position:absolute; bottom:8px; left:0; margin-bottom:0; }
+	.content [data-slide='10'] .slim { left:55px; }
+	.blocks { overflow:hidden; width:944px; height:394px; margin-top:6px; background:url(img/blocks.svg) 0 26px no-repeat; background-size:100% auto; border-bottom:4px solid #004d74; position:relative; }
+	.blocks > li { font-family:interstateregular-condensed; float:left; width:138px; height:inherit; margin-right:33px; position:relative; }
+	.blocks > li:first-child { margin-left:1px; }
+	.blocks > li:nth-child(2), .blocks > li:last-child { width:283px; }
+	.blocks > li:nth-child(3) { width:140px; margin-right:32px; }
+	.blocks > li:last-child { margin-right:0; }
+	.blocks > li > span { position:absolute; width:100%; top:160px; }
+	.blocks > li > span:first-child { top:53px; font-size:20px; line-height:26px; }
+	.blocks > li:first-child span:first-child i:first-child { top:-52px; }
+	.blocks > li:nth-child(2) span:first-child { top:79px; }
+	.blocks > li:nth-child(2) span:first-child i:first-child { top:-40px; }
+	.blocks > li:nth-child(2) span:first-child i:nth-child(2) { top:-10px; }
+	.blocks > li:nth-child(3) span:first-child { top:119px; }
+	.blocks > li:last-child span:first-child { top:91px; }
+	.blocks > li:last-child span:first-child i:first-child { top:-35px; }
+	.blocks > li:last-child span:first-child i:nth-child(2) { top:-9px; }
+	.blocks > li:last-child span:first-child i:last-child { top:-4px; }
+	.blocks > li span > i { float:left; width:50%; text-align:center; position:relative; } 
+	.blocks > li span > i:nth-child(2) { color:rgba(0, 77, 116, 0.7); }
+	.blocks > li span > i:nth-child(3) { color:rgba(0, 77, 116, 0.4); }
+	.blocks > li span > i:last-child { color:#b2d234; }
+	.blocks > li:nth-child(2n+2) span > i { width:25%; }
+	.blocks > li div { font-size:17px; width:inherit; line-height:21px; text-align:center; position:relative; top:208px; height:176px; }
+	.blocks > li div i { display:block; margin-top:10px; font-family:interstatelightCon; font-size:15px; line-height:20px; }
+	.blocks > li div > p { display:table-cell; vertical-align:middle; width:inherit; height:inherit; margin:0; }
+	.blocks > li div:before { content:"\e603"; position:absolute; width:32px; height:30px; font-size: 32px; right:-28px; top:0; bottom:0; margin:auto 0; -webkit-transform:rotate(-90deg); transform:rotate(-90deg); }
+	.blocks:before { content:""; position:absolute; width:100%; height:4px; background-color:#004d74; top:190px; }
+	/* 11 */
+	.slim > span { display:block; margin-bottom:3px; }
+	[data-slide='11'] .wrap { margin-top:-12px; }
+	[data-slide='11'] .feature { background-image:url(img/graph5_lines.png); height:370px;  }
+	.data[data-slide='11'] .state { background-image:url(img/graph5_state3.png); }
+	.data[data-slide='11'] .state:after { background-image:url(img/graph5_state2.png); }
+	.data[data-slide='11'] .indicator { width:244px; height: 362px; margin-top:12px; }
+	.data[data-slide='11'] .key { width:625px; bottom: 107px; }
+	[data-slide='11'] .label { text-align:right; margin-top:8px; }
+	.data[data-slide='11'] .footnote.s12 { bottom: 123px; }
+	.data[data-slide='11'] .key li:nth-child(4) { color:#f7931d; }
+	.data[data-slide='11'] .key li:last-child { color:#666666; }
+	.data[data-slide='11'] .key li > span:first-child { width:96px; }
+	.data[data-slide='11'] .key li > span:nth-child(n+2) { margin-right:1.95%; }
+	.data[data-slide='11'] .key li > span:last-child { margin-right:0; }
 	
+	/* 12 */
+	[data-slide='12'] > h2 { margin-bottom:58px; }
+	[data-slide='12'] .feature { height:400px; margin-top: 26px; }
+	[data-slide='12'] .feature:after { content:""; position:absolute; left:189px; top:1px; width:655px; height:inherit; background:url(img/bar-chart.svg) 0 0 no-repeat; z-index:-1; }
+	[data-slide='12'] .label { width: 100%; right:auto; left:0; top:10px; }
+	[data-slide='12'] .label li { width:192px; font-family:interstateregular; font-size:12px; line-height:15px; margin-bottom:23px; text-align:right; }
+	[data-slide='12'] .label li:nth-child(n+2) { margin-bottom:32px; }
+	[data-slide='12'] .label li:nth-child(n+6) { position:absolute; top:39px; right:-70px; text-align:left; }
+	[data-slide='12'] .label li:nth-child(6) span:first-child { margin-bottom:127px; }
+	[data-slide='12'] .label li:last-child { top:115px; }
+	[data-slide='12'] .label li:last-child, .bar > li { font-size:11px; }
+	[data-slide='12'] .label li:last-child span { padding-left:17px; position:relative; }
+	[data-slide='12'] .label li:last-child span:after { content:""; position:absolute; width:10px; height:10px; left:0; top:1px; }
+	[data-slide='12'] .label li:last-child span:first-child { margin-bottom:6px; }
+	[data-slide='12'] .label span { display:block; }
+	.bar { margin: 0 0 0 201px; padding: 5px 0 1px; width:545px; border-left:1px solid rgba(0, 77, 116, 0.4); } 
+	.bar > li { height:18px; width:100%; position:relative; margin-left: -1px; }
+	.bar > li span, .bar > li span + i { position:absolute; left:0; }
+	.bar > li span { height:inherit; width:0%; color:#ffffff; }
+	.bar > li span, [data-slide='12'] .label li:last-child span:after { background-color:#004d74; }
+	.bar > li:nth-child(2n+2) span,
+		[data-slide='12'] .label li:last-child span:last-child:after { background-color:#b2d234; color:#004d74; }
+	.bar > li i { padding: 0 10px 0 6px; line-height:18px; opacity:0; }
+	.bar > li span > i { float:right; padding-top:1px; }
+	.bar > li span + i { bottom: -21px; white-space: nowrap; }
+	.bar > li:nth-child(2n+2) { margin-bottom:26px; }
+	.bar > li:nth-child(2) { width:76%; }
+	.bar > li:nth-child(4) { width:87.8%; }
+	.bar > li:nth-child(5) { width:69%;  }
+	.bar > li:nth-child(6) { width:44.5%;  }
+	.bar > li:nth-child(7) { width:45.3%;  }
+	.bar > li:nth-child(8) { width:20%;  }
+	.bar > li:nth-child(9) { width:31%;  }
+	.bar > li:last-child { width:12.3%; }
+	[data-slide='12'] .slim > span { margin-bottom:5px; }
 	
+	/* 13 */
+	.tabular { font-family:interstateregular; font-size:15px; line-height:20px; margin-top:20px;}
+	.tabular th, .header > td { font-family:interstatebold; }
+	.tabular th:nth-child(n+2), .tabular .header > td  { background-color:#004d74; color:#fff; }
+	.tabular .dbl > td { line-height:18px; }
+	.tabular .white > td { background:none; }
+	.tabular th, .tabular td { vertical-align:middle; white-space:nowrap; }
+	.tabular tr > th:first-child { width:620px; color:#b2d234; }
+	.tabular tr > :nth-child(n+2) { text-align:center; }
+	.tabular th { padding:10px 20px; font-size:17px; }
+	.tabular td { padding:5px 20px; background-color:#b2d234; border-right:1px solid rgba(255, 255, 255, 0.9); }
+	.tabular td:last-child { border-right:none; }
+	.intro { background:rgba(0, 77, 116, 0.15); padding:20px 24px;  }
+	/* 14 */
+	[data-slide='14'] .list { height:125px; }
+	[data-slide='14'] .list li { float:left; width:423px; font-size:15px; line-height:20px; }
+	[data-slide='14'] .list li:last-child { float:right; }
 	
-	.indicator li, .key li, .state, .state:after { -webkit-transition:all 0.5s ease; transition:all 0.5s ease; }
+	.indicator li, .key li, .state, .state:after, .bar > li span { -webkit-transition:all 0.5s ease-in-out; transition:all 0.5s ease-in-out; }
 	
 	
 	
@@ -224,11 +362,10 @@ BENEFIT WITH LYNPARZA<sup data-ref="2-3">2,3</sup>
                         <p class="footnote">Adapted with permission from Ledermann.<sup data-ref="2">2</sup></p>
                     </li>
                     <!-- slide 7 -->
-                    <li class="swiper-slide" data-slide="7">
-                         <h2><span>CLINICAL DATA – BRCAm SUB ANALYSIS</span>
-                          PATIENTS WITH BRCAm PLATINUM-SENSITIVE RELAPSED HIGH GRADE
-SEROUS OVARIAN CANCER EXPERIENCED THE GREATEST CLINICAL
-BENEFIT WITH LYNPARZA<sup data-ref="2-3">2,3</sup>
+                    <li class="swiper-slide data" data-slide="7">
+                         <h2><span>CLINICAL DATA – TFST EXPLORATORY ANALYSIS</span>
+                          FOR PATIENTS WITH A BRCA MUTATION, LYNPARZA DELAYS THE NEED
+FOR SUBSEQUENT CHEMOTHERAPY<sup data-ref="3-4">3-4</sup>
                         </h2>
                          <div class="wrap">
                          	<div class="indicator">
@@ -244,27 +381,37 @@ p&lt;0.0001; median 15.6 months<br />
 vs 6.2 months).<sup sup data-ref="3-4">3-4</sup>
                             </div>
                             <div class="feature">
-                                <span class="state"></span>
+                                <div class="reveal"><span class="state"></span></div>
                                 <span class="btn btn-play graph"></span>
-                                <p class="label">HR 0.18 (95% CI 0.10-0.31); p&lt;0.00001;<br />median PFS 11.2 vs 4.3 months.<sup>4</sup></p>
+                                <p class="label">HR 0.33 (95% Cl 0.22-0.50); p&lt;0.0001</p>
                             </div>
                             <ul class="key">
                                 <li>No. at risk</li>
                                 <li>
                                     <span>LYNPARZA</span>
                                     <span>74</span>
-                                    <span>59</span>
-                                    <span>34</span>
-                                    <span>15</span>
-                                    <span>5</span>
+                                    <span>65</span>
+                                    <span>49</span>
+                                    <span>35</span>
+                                    <span>29</span>
+                                    <span>26</span> 
+                                    <span>25</span>
+                                    <span>21</span>
+                                    <span>7</span>
+                                    <span>0</span>
                                     <span>0</span> 
                                 </li>
                                 <li>
                                     <span>PLACEBO</span> 
                                     <span>62</span>
-                                    <span>35</span>
-                                    <span>13</span>
-                                    <span>2</span>
+                                    <span>41</span>
+                                    <span>21</span>
+                                    <span>12</span>
+                                    <span>7</span>
+                                    <span>6</span> 
+                                    <span>5</span>
+                                    <span>5</span>
+                                    <span>1</span>
                                     <span>0</span>
                                     <span>0</span> 
                                 </li>
@@ -274,12 +421,531 @@ vs 6.2 months).<sup sup data-ref="3-4">3-4</sup>
                         <span class="footnote abs s12">Adapted with permission from Ledermann.<sup data-ref="3">3</sup><br />
 *An exploratory retrospective analysis.</span>
                         <div class="footnote abs s10">
-                            <strong>Study design:</strong> This a randomized, double-blind, placebo-controlled, phase 2 study to evaluate maintenance treatment with olaparib in patients with platinumsensitive,
+                            <strong>Study design:</strong> This a randomized, double-blind, placebo-controlled, phase 2 study to evaluate maintenance treatment with olaparib in patients with platinum-sensitive,
 relapsed, high-grade serous ovarian cancer who had received two or more platinum based regimens and had a partial or complete response to their
 most recent platinum-based regimen. Patients were randomly assigned to receive olaparib, at a dose of 400 mg twice daily, or placebo. The primary end point
 was progression-free survival according to the Response Evaluation Criteria in Solid Tumours guidelines. Primary endpoint was PFS. Secondary endpoints
 included OS, best overall response, HRQoL, safety and tolerability.
                         </div>
+                    </li>
+                    <!-- slide 8 -->
+                    <li class="swiper-slide data" data-slide="8">
+                         <h2><span>CLINICAL DATA - TSST EXPLORATORY ANALYSIS</span>
+                          FOR PATIENTS WITH A BRCA MUTATION, LYNPARZA DELAYS THE NEED
+FOR SUBSEQUENT CHEMOTHERAPY<sup data-ref="3-4">3-4</sup>
+                        </h2>
+                         <div class="wrap">
+                         	<div class="indicator">
+                            	In patients with a BRCA<br />
+mutation, the time from<br />
+randomisation to start of second<br />
+subsequent therapy or death<br />
+(TSST)* was 8.6 months longer<br />
+for Lynparza treated patients<br />
+vs placebo (HR 0.44; 95% CI<br />
+0.29–0.67; p=0.00013; median<br />
+23.8 months vs 15.2 months).<sup sup data-ref="3-4">3-4</sup>
+                            </div>
+                            <div class="feature">
+                                <div class="reveal"><span class="state"></span></div>
+                                <span class="btn btn-play graph"></span>
+                                <p class="label">HR 0.44 (95% Cl 0.29-0.67);<br />p=0.00013</p>
+                            </div>
+                            <ul class="key">
+                                <li>No. at risk</li>
+                                <li>
+                                    <span>LYNPARZA</span>
+                                    <span>74</span>
+                                    <span>70</span>
+                                    <span>65</span>
+                                    <span>50</span>
+                                    <span>37</span>
+                                    <span>33</span> 
+                                    <span>30</span>
+                                    <span>23</span>
+                                    <span>9</span>
+                                    <span>0</span>
+                                    <span>0</span> 
+                                </li>
+                                <li>
+                                    <span>PLACEBO</span> 
+                                    <span>62</span>
+                                    <span>60</span>
+                                    <span>45</span>
+                                    <span>30</span>
+                                    <span>20</span>
+                                    <span>17</span> 
+                                    <span>10</span>
+                                    <span>8</span>
+                                    <span>1</span>
+                                    <span>0</span>
+                                    <span>0</span> 
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <span class="footnote abs s12">Adapted with permission from Ledermann.<sup data-ref="3">3</sup><br />
+*An exploratory retrospective analysis.</span>
+                        <div class="footnote abs s10">
+                            <strong>Study design:</strong> This a randomized, double-blind, placebo-controlled, phase 2 study to evaluate maintenance treatment with olaparib in patients with platinum-sensitive,
+relapsed, high-grade serous ovarian cancer who had received two or more platinum based regimens and had a partial or complete response to their
+most recent platinum-based regimen. Patients were randomly assigned to receive olaparib, at a dose of 400 mg twice daily, or placebo. The primary end point
+was progression-free survival according to the Response Evaluation Criteria in Solid Tumours guidelines. Primary endpoint was PFS. Secondary endpoints
+included OS, best overall response, HRQoL, safety and tolerability.
+                        </div>
+                    </li>
+                    <!-- slide 9 -->
+                    <li class="swiper-slide data" data-slide="9">
+                         <h2><span>CLINICAL DATA - OVERALL SURVIVAL</span>
+                         OVERALL SURVIVAL (OS) WAS ASSESSED AS A SECONDARY
+OBJECTIVE<sup data-ref="3">3</sup>
+                        </h2>
+                         <div class="wrap">
+                         	<div class="indicator">
+                            	<ul class="list">
+                                	<li>There was no statistically<br />
+significant difference in OS<br />
+between the two arms in the<br />
+BRCAm population<sup sup data-ref="3">3</sup></li>
+                            		<li>In the BRCAm population there<br />
+was a numerical difference<br />
+of a median of +3 months<br />
+of Lynparza (HR 0.73; 95%<br />
+CI 0.45–1.17; p=0.19; median<br />
+34.9 months Lynparza vs<br />
+31.9 months placebo)<sup sup data-ref="3">3</sup></li>
+                            		
+                            	</ul>
+                            </div>
+                            <div class="feature">
+                                <div class="reveal"><span class="state"></span></div>
+                                <span class="btn btn-play graph"></span>
+                                <p class="label">HR 0.73 (95% Cl 0.45-1.17); p=0.19</p>
+                            </div>
+                            <ul class="key">
+                                <li>No. at risk</li>
+                                <li>
+                                    <span>LYNPARZA</span>
+                                    <span>74</span>
+                                    <span>71</span>
+                                    <span>69</span>
+                                    <span>67</span>
+                                    <span>65</span>
+                                    <span>62</span> 
+                                    <span>56</span>
+                                    <span>53</span>
+                                    <span>50</span>
+                                    <span>48</span>
+                                    <span>39</span> 
+                                    <span>36</span>
+                                    <span>26</span>
+                                    <span>12</span>
+                                    <span>7</span>
+                                    <span>0</span>
+                                    <span>0</span>
+                                </li>
+                                <li>
+                                    <span>PLACEBO</span> 
+                                    <span>62</span>
+                                    <span>62</span>
+                                    <span>58</span>
+                                    <span>52</span>
+                                    <span>50</span>
+                                    <span>46</span> 
+                                    <span>39</span>
+                                    <span>36</span>
+                                    <span>33</span>
+                                    <span>29</span>
+                                    <span>29</span>
+                                    <span>27</span>
+                                    <span>21</span>
+                                    <span>10</span>
+                                    <span>4</span>
+                                    <span>0</span>
+                                    <span>0</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <span class="footnote abs s12">Adapted with permission from Ledermann.<sup data-ref="3">3</sup><br />
+*An exploratory retrospective analysis.</span>
+                        <div class="footnote abs s10">
+                            <strong>Study design:</strong> This a randomized, double-blind, placebo-controlled, phase 2 study to evaluate maintenance treatment with olaparib in patients with platinum-sensitive,
+relapsed, high-grade serous ovarian cancer who had received two or more platinum based regimens and had a partial or complete response to their
+most recent platinum-based regimen. Patients were randomly assigned to receive olaparib, at a dose of 400 mg twice daily, or placebo. The primary end point
+was progression-free survival according to the Response Evaluation Criteria in Solid Tumours guidelines. Primary endpoint was PFS. Secondary endpoints
+included OS, best overall response, HRQoL, safety and tolerability.
+                        </div>
+                    </li>
+                    <!-- slide 10 -->
+                    <li class="swiper-slide" data-slide="10">
+                         <h2><span>CLINICAL DATA - <em>POST-HOC</em> INTERIM EXPLORATORY ANALYSIS OF OS</span>
+                          <em>POST-HOC</em> INTERIM EXPLORATORY ANALYSIS OF OS ADJUSTED FOR
+POST-PROGRESSION PARPi
+                        </h2>
+                        <p>An exploratory post-hoc analysis excluded all patient sites where at least one patient received post-progression
+treatment with a PARPi<sup sup data-ref="3,12">3,12</sup></p>
+                        <p class="footnote slim">BRCAm indicates BRCA1/BRCA2 mutation; OS=overall survival; PARPi=Poly ADP ribose<br >polymerase (PARP) inhibitor; VUS=variant of unknown significance; wt=wild type</p>
+                        <div class="reveal">
+                            <ul class="blocks">
+                                <li>
+                                    <span> <i>256</i><i>82</i> </span>
+                                    <span> <i>patients</i><i>sites</i> </span>
+                                    <div class="icon"><p>265<br />
+    patients<br />
+    randomised<br />
+    from<br />
+    82 sites</p></div>
+                                </li>
+                                <li>
+                                    <span> <i>136</i><i>74</i><i>62</i><i>61</i></span>
+                                    <span> <i>patients</i><i>lynparza</i><i>placebo</i><i>sites</i> </span>
+                                    <div class="icon"><p>136 patients from 61 sites had a BRCAm:<br />
+    74 received lynparza<br />
+    62 received placebo
+    <i>(all remaining patients were either BRCAwt<br />
+    or had a BRCAm VUS and received either<br />
+    lynparza or placebo)</i></p></div>
+                                </li>
+                                <li>
+                                    <span><i>14</i><i>11</i></span>
+                                    <span><i>patients</i><i>sites</i></span>
+                                    <div class="icon"><p>14 patients<br />
+    from 11 sites
+    <i>who had a BRCAm<br />
+    and received<br />
+    placebo subsequently<br />
+    received a PARP<br />
+    inhibitor after<br />
+    progression</i></p></div>
+                                </li>
+                                <li>
+                                    <span> <i>97</i><i>57</i><i>40</i><i>50</i></span>
+                                    <span> <i>patients</i><i>lynparza</i><i>placebo</i><i>sites</i> </span>
+                                    <div class="icon"><p>97 patients from 50 sites had a BRCAm*:<br />
+    57 received lynparza<br />
+    40 received placebo
+    <i>*(these patients formed the analysis<br />
+    population remaining after the exclusion<br />
+    of sites where patients received<br />
+    post-progression PARP inhibitor)</i></p></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- slide 11 -->
+                    <li class="swiper-slide data" data-slide="11">
+                         <h2><span>CLINICAL DATA - <em>POST-HOC</em> INTERIM EXPLORATORY ANALYSIS OF OS</span>
+                          <em>POST-HOC</em> INTERIM EXPLORATORY ANALYSIS OF OS<br />
+(PARPi EXCLUDED SITES; 52% MATURITY)<sup data-ref="12">12</sup>
+                        </h2>
+                         <div class="wrap">
+                         	<div class="indicator">
+                            	<strong>Study design:</strong> Exploratory<br />
+analysis of OS. Patients<br />
+from 71/82 investigational<br />
+sites had not received a<br />
+PARPi post-progression,<br />
+resulting in the inclusion<br />
+of 198/265 (75%) patients,<br />
+of which 97/136 (71%) were<br />
+BRCAm patients.<sup sup data-ref="12">12</sup>
+                            </div>
+                            <div class="feature">
+                                <div class="reveal"><span class="state"></span></div>
+                                <span class="btn btn-play graph"></span>
+                                <p class="label">HR=0.73 (95% CI: 0.45 - 1.17);<br />p=0.192</p>
+                            </div>
+                            <ul class="key">
+                                <li>No. at risk</li>
+                                <li>
+                                    <span>LYNPARZA BRCAm</span>
+                                    <span>74</span>
+                                    <span>71</span>
+                                    <span>69</span>
+                                    <span>67</span>
+                                    <span>65</span>
+                                    <span>62</span> 
+                                    <span>56</span>
+                                    <span>53</span>
+                                    <span>50</span>
+                                    <span>48</span>
+                                    <span>39</span> 
+                                    <span>36</span> 
+                                    <span>26</span>
+                                    <span>12</span>
+                                    <span>1</span>
+                                    <span>0</span>
+                                    <span>0</span> 
+                                </li>
+                                <li>
+                                    <span>PLACEBO BRCAm</span> 
+                                    <span>62</span>
+                                    <span>62</span>
+                                    <span>58</span>
+                                    <span>52</span>
+                                    <span>50</span>
+                                    <span>46</span> 
+                                    <span>39</span>
+                                    <span>36</span>
+                                    <span>33</span>
+                                    <span>29</span>
+                                    <span>29</span> 
+                                    <span>27</span> 
+                                    <span>21</span>
+                                    <span>10</span>
+                                    <span>4</span>
+                                    <span>0</span>
+                                    <span>0</span> 
+                                </li>
+                                <li>
+                                    <span>LYNPARZA BRCAm</span>
+                                    <span>57</span>
+                                    <span>54</span>
+                                    <span>52</span>
+                                    <span>50</span>
+                                    <span>48</span>
+                                    <span>46</span> 
+                                    <span>41</span>
+                                    <span>39</span>
+                                    <span>38</span>
+                                    <span>36</span>
+                                    <span>31</span> 
+                                    <span>28</span> 
+                                    <span>19</span>
+                                    <span>9</span>
+                                    <span>6</span>
+                                    <span>0</span>
+                                    <span>0</span> 
+                                </li>
+                                <li>
+                                    <span>PLACEBO BRCAm</span> 
+                                    <span>40</span>
+                                    <span>40</span>
+                                    <span>38</span>
+                                    <span>32</span>
+                                    <span>31</span>
+                                    <span>27</span> 
+                                    <span>23</span>
+                                    <span>20</span>
+                                    <span>19</span>
+                                    <span>17</span>
+                                    <span>17</span> 
+                                    <span>16</span> 
+                                    <span>12</span>
+                                    <span>4</span>
+                                    <span>1</span>
+                                    <span>0</span>
+                                    <span>0</span> 
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <span class="footnote abs s12">Adapted with permission from Ledermann.<sup data-ref="3">3</sup></span>
+                        <p class="footnote slim"><span>*Post-hoc analysis of OS. P values are NS.</span>
+                        BRCAm indicates BRCA1/BRCA2 mutation; CI=confidence interval; HR=hazard ratio; OS=overall survival;<br />
+PARPi=Poly ADP ribose polymerase (PARP) inhibitor, NS= Not Statistically Significant</p>
+                    </li>
+                    <!-- slide 12 -->
+                    <li class="swiper-slide" data-slide="12">
+                         <h2><span>CLINICAL DATA - POST-HOC INTERIM EXPLORATORY ANALYSIS OF OS</span>
+                          EXPLORATORY POST-HOC ANALYSIS OF STUDY 19<sup data-ref="3,12">3,12</sup>
+                        </h2>
+                        <p>An exploratory post-hoc analysis excluded all patient sites where at least one patient received post-progression
+treatment with a PARPi<sup sup data-ref="3,12">3,12</sup></p>
+                        <div class="feature">
+                        	<ul class="bar">
+                        		<li><span><i>34.9</i></span></li>
+                        		<li><span><i>26.6</i></span><i>HR: 0.52 (95% CI 0.28, 0.97), nominal p=0.039*</i></li>
+                        		<li><span><i>34.9</i></span></li>
+                        		<li><span><i>31.9</i></span><i>HR: 0.73 (95% CI, 0.45, 1.17), p=0.19</i></li>
+                        		<li><span><i>23.8</i></span></li>
+                        		<li><span><i>15.2</i></span><i>HR: 0.44 (95% CI 0.29- 0.67), p=0.00013</i></li>
+                        		<li><span><i>15.6</i></span></li>
+                        		<li><span><i>6.2</i></span><i>HR: 0.33 (95% CI 0.22 - 0.50), p&lt;0.0001</i></li>
+                        		<li><span><i>11.2</i></span></li>
+                        		<li><span><i>4.3</i></span><i>HR: 0.18 (95% CI 0.10, 0.31), p&lt;0.00001</i></li>
+                        	</ul>
+                        	<ul class="label">
+                        		<li>OS adjusted for post-progression<br />
+PARPi therapy<sup data-ref="12">12</sup><br />
+(in PARPi excluded patients)</li>
+                        		<li>OS<sup data-ref="12">12</sup><br />
+(All sites, in patients with BRCAm)</li>
+                        		<li>TSST (exploratory)<sup data-ref="3">3</sup><br />
+(in patients with BRCAm)</li>
+                        		<li>TFST (exploratory)<sup data-ref="3">3</sup><br />
+(in patients with BRCAm)</li>
+                        		<li>PFS<sup data-ref="3">3</sup><br />
+(in patients with BRCAm)</li>
+                        		<li>
+                                	<span>OS for exploratory<br />
+                                    <em>post-hoc</em> analysis<sup data-ref="12">12</sup></span>
+                                    <span>Study 19 endpoints<br />
+of 2nd interim analysis<sup data-ref="3">3</sup></span>
+						
+								</li>
+                        		<li>
+                                	<span>Lynparza</span>
+                                    <span>Placebo</span>
+                                </li>
+                        	</ul>
+                        </div>
+                        <p class="footnote slim">
+                        	<span>*Post-hoc analysis of OS. P values are exploratory</span>
+                            <span><strong>Study design:</strong> Exploratory analysis of Study 19. Patients from 71/82 investigational sites had not received a PARPi post-progression,<br />
+resulting in the inclusion of 198/265 (75%) patients, of which 97/136 (71%) were BRCAm patients.<sup sup data-ref="12">12</sup></span>
+						<span>BRCAm indicates BRCA1/BRCA2 mutation; CI=confidence interval; HR=hazard ratio; OS=overall survival; PARPi=Poly ADP ribose polymerase (PARP) inhibitor;<br />
+PFS=progression free survival; TFST=time to first subsequent treatment (or death); TSST=time to second subsequent treatment (or death)</span></p>
+                    </li>
+                    <!-- slide 13 -->
+                    <li class="swiper-slide" data-slide="13">
+                         <h2><span>CLINICAL DATA - PATIENT CHARACTERISTICS</span>
+                          STUDY 19 HAD A DIVERSE BRCAm PATIENT POPULATION<sup data-ref="3">3</sup>
+                        </h2>
+                        <p class="intro">Study 19 included BRCAm patients from various age groups and ECOG* performance status levels.<sup sup data-ref="3">3</sup></p>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabular">
+                        	<tr>
+                        		<th>PATIENTS WITH BRCAm</th>
+                        		<th>Lynparza (n=74)</th>
+                        		<th>Placebo (n=62)</th>
+                        	</tr>
+                        	<tr>
+                        		<td>Age, years</td>
+                        		<td>57.5 (38-89)</td>
+                        		<td>55.0 (33-84)</td>
+                        	</tr>
+                            <tr class="header">
+                            	<td colspan="3">AGE GROUP</td>
+                            </tr>
+                            <tr>
+                        		<td><span class="sym">&lt;</span>50 years</td>
+                        		<td>19 (26%)</td>
+                        		<td>16 (26%)</td>
+                        	</tr>
+                            <tr class="white">
+                        		<td><span class="sym">&ge;</span>50 to <span class="sym">&lt;</span>65 years</td>
+                        		<td>38 (51%)</td>
+                        		<td>35 (56%)</td>
+                        	</tr>
+                            <tr>
+                        		<td><span class="sym">&ge;</span>65 years</td>
+                        		<td>17 (23%)</td>
+                        		<td>11 (18%)</td>
+                        	</tr>
+                            <tr class="header">
+                            	<td colspan="3">ANCESTRY**</td>
+                            </tr>
+                            <tr>
+                        		<td>Non-Jewish</td>
+                        		<td>60 (81%)</td>
+                        		<td>48 (77%)</td>
+                        	</tr>
+                            <tr class="white">
+                        		<td>Jewish</td>
+                        		<td>14 (19%)</td>
+                        		<td>14 (23%)</td>
+                        	</tr>
+                            <tr class="header">
+                            	<td colspan="3">ECOG* PERFORMANCE STATUS</td>
+                            </tr>
+                            <tr>
+                        		<td>0</td>
+                        		<td>62 (84%)</td>
+                        		<td>45 (73%)</td>
+                        	</tr>
+                            <tr class="white">
+                        		<td>1</td>
+                        		<td>11 (15%)</td>
+                        		<td>15 (24%)</td>
+                        	</tr>
+                             <tr>
+                        		<td>2</td>
+                        		<td>0</td>
+                        		<td>1 (2%)</td>
+                        	</tr>
+                            <tr class="white">
+                        		<td>Unknown</td>
+                        		<td>1 (1%)</td>
+                        		<td>1 (2%)</td>
+                        	</tr>
+                        </table>
+                        
+                        <p class="footnote slim">
+                        	Adapted with permission from Ledermann.<sup sup data-ref="2">2</sup><br />
+                        	*ECOG: Eastern Cooperative Oncology Group<br />
+							**Ancestry was self reported
+                    	</p>
+                    </li>
+                    <!-- slide 14 -->
+                    <li class="swiper-slide" data-slide="14">
+                         <h2><span>CLINICAL DATA - PATIENT CHARACTERISTICS</span>
+                          STUDY 19 HAD A DIVERSE BRCAm PATIENT POPULATION<sup data-ref="3">3</sup>
+                        </h2>
+                        <div class="intro">
+                        	<ul class="list">
+                        		<li>Eligible patients were aged 18 years or older and had recurrent
+ovarian or fallopian tube cancer, or primary peritoneal cancer,
+with high-grade (grade 2 or 3) serous features or a serous
+component, which was platinum-sensitive (defined as no
+disease progression in the first 6 months after the last dose of
+the penultimate line of platinum-based chemotherapy)<sup data-ref="3">3</sup></li>
+                        		<li>Patients entering the study had received two or more previous
+courses of platinum-based chemotherapy and were required
+to&nbsp;have shown an objective response (complete or partial
+response) according to Response Evaluation Criteria In Solid
+Tumors (RECIST) or Gynecologic Cancer Intergroup criteria<sup data-ref="3">3</sup></li>
+                        	</ul>
+                        </div>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabular">
+                        	<tr>
+                        		<th>PATIENTS WITH BRCAm</th>
+                        		<th>Lynparza (n=74)</th>
+                        		<th>Placebo (n=62)</th>
+                        	</tr>
+                            <tr class="header">
+                            	<td colspan="3">OBJECTIVE RESPONSE TO MOST RECENT PLATINUM-BASED REGIMEN</td>
+                            </tr>
+                            <tr>
+                        		<td>Complete response</td>
+                        		<td>36 (49%)</td>
+                        		<td>34 (55%)</td>
+                        	</tr>
+                            <tr class="white">
+                        		<td>Partial response</td>
+                        		<td>38 (51%)</td>
+                        		<td>28 (45%)</td>
+                        	</tr>
+                            <tr class="header">
+                            	<td colspan="3">PRIMARY TUMOUR LOCATION</td>
+                            </tr>
+                            <tr>
+                        		<td>Ovary</td>
+                        		<td>65 (88%)</td>
+                        		<td>54 (87%)</td>
+                        	</tr>
+                            <tr class="white">
+                        		<td>Fallopian tube or primary peritoneal</td>
+                        		<td>9 (12%)</td>
+                        		<td>8 (13%)</td>
+                        	</tr>
+                            <tr class="header dbl">
+                            	<td colspan="3">TIME TO PROGRESSION AFTER COMPLETION OF<br />PENULTIMATE PLATINUM-BASED REGIMEN</td>
+                            </tr>
+                            <tr>
+                        		<td><span class="sym">&gt;</span>6 to <span class="sym">&le;</span>12 months</td>
+                        		<td>28 (38%)</td>
+                        		<td>26 (42%)</td>
+                        	</tr>
+                            <tr class="white">
+                        		<td><span class="sym">&gt;</span>12 months</td>
+                        		<td>46 (62%)</td>
+                        		<td>36 (58%)</td>
+                        	</tr>
+                            
+                        </table>
+                        
+                        <p class="footnote slim">Adapted with permission from Ledermann.<sup data-ref="2">2</sup></p>
                     </li>
                     
                 </ul><!-- end swiper-wrapper -->
@@ -289,6 +955,7 @@ included OS, best overall response, HRQoL, safety and tolerability.
             </div>
             
         	<span class="logo lynp"></span>
+            <span class="btn btn-info hide">i</span>
         </article>
     
     <!-- popup -->
@@ -302,25 +969,28 @@ included OS, best overall response, HRQoL, safety and tolerability.
         </div><!-- end ref -->
          <!-- info -->
         <div class="item info hide"><span class="arrow icon"></span>
-            <ul class="list hide" datd-info="2">
-                <li>Every day hundreds of thousands of dna lesions occur in cells, including single-strand breaks (SSBs).<sup data-ref="7">7</sup></li>
-                <li>The enzyme poly ADP ribose polymerase (PARP) is a key protein required for the efficient repair of
-these SSBs through a mechanism known as base excision repair (BER).<sup data-ref="8-9">8-9</sup></li>
-                <li>When PARP function is inhibited, cells cannot effectively repair SSBs. As a result, these unrepaired
-SSBs are converted to double strand breaks (DSBs) during DNA replication, requiring repair via the
-homologous recombination pathway (HRR).<sup data-ref="10-11">10-11</sup></li>
-            </ul>
-            <!-- 3 -->
-            <ul class="list hide" datd-info="3">
-                <li>SSBs and DSBs are preferentially repaired by error-free mechanisms that utilise poly(ADP-ribose)
-polymerase (PARP) and BReast CAncer susceptibility protein (BRCA)1/2 proteins, respectively.<sup data-ref="7-11">7-11</sup></li>
-            </ul>
-            <!-- 3b -->
-      		 <ul class="list hide" datd-info="3b">
-                <li>With both error-free repair mechanisms blocked, DNA can only be repaired via more error-prone
-repair&nbsp;mechanisms. The resulting build-up of DSBs and erroneous DNA ultimately leads to cell death,
-through a process called Synthetic Lethality.<sup data-ref="7-11">7-11</sup></li>
-            </ul>
+            <!-- 10 -->
+            <div data-info="10">
+            	<h3>RATIONAL:</h3>
+                 <ul class="list" >
+                    <li>In Study 19, 23% of the patients receiving placebo switched to a PARP inhibitor after progression.<sup data-ref="12">12</sup></li>
+                    <li>To investigate whether this had a confounding effect on OS, this article reports an exploratory<br />
+post hoc analysis that excluded all patients from sites where 1 or more placebo patients received<br />
+post-progression PARP inhibitor treatment.<sup data-ref="12">12</sup></li>
+                </ul>
+                <h3>RESULTS:</h3>
+                 <ul class="list" >
+                    <li>The OS hazard ratio (HR), from the site exclusion analysis, was 0.52 (95% confidence interval [CI],
+0.28-0.97) for the 97 BRCAm patients, whereas for the interim OS analysis with all 136 BRCAm
+patients, it was 0.73 (95% CI, 0.45-1.17).<sup data-ref="12">12</sup></li>
+                </ul>
+                <h3>CONCLUSION:</h3>
+                 <ul class="list" >
+                    <li>The numerical improvement in the OS HR suggests that in Study 19, post-progression PARP inhibitor
+treatment had a confounding influence on the interim OS analysis for BRCAm patients. There is a
+degree of uncertainty due to the small sample size and the lack of data maturity.<sup data-ref="12">12</sup></li>
+                </ul>
+            </div>
         </div><!-- end info -->
       
        <!-- navigation -->
@@ -385,8 +1055,13 @@ through a process called Synthetic Lethality.<sup data-ref="7-11">7-11</sup></li
         	paginationClickable: true,
         	direction: 'vertical',
 			nextButton: '.swiper-button-next',
-        	prevButton: '.swiper-button-prev'
+        	prevButton: '.swiper-button-prev',
+			onSlideChangeStart: function(e){
+				console.log(e.activeIndex);
+				//e.slideTo(9);
+			} 
 		  });
+		 mySwiper.slideTo(9);
 		 $('.indicator .arrow').on('tap', function(){ 
 				$(this).toggleClass('less').prev('p').slideToggle();
 		 })
