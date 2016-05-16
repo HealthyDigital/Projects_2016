@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style type="text/css">
 	#container{background-image: url('./img/background.jpg');}
     .swiper-wrapper > li:first-child > h2{color:white;}
@@ -21,6 +22,7 @@
 
 	
 </style> 
+
 </head>
 <body>
 	<section id="container">
@@ -49,7 +51,12 @@
                         <li></li>
                     </ul>  
 
-                     
+                    <li class="swiper-slide" data-slide="2" >
+                         <h2><span>PATIENT SUPPORT</span>
+                            LYNPARZA PATIENT ACCESS PROGRAMME
+                        </h2>
+
+
                 </ul><!-- end swiper-wrapper -->
                 <!-- Add Arrows -->
        			<span class="swiper-button icon arrow swiper-button-next"></span>
@@ -124,6 +131,7 @@
     </div>
 
     </section>
+
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/touchy.js"></script>
@@ -134,10 +142,13 @@
         	paginationClickable: true,
         	direction: 'vertical',
 			nextButton: '.swiper-button-next',
-        	prevButton: '.swiper-button-prev'
+        	prevButton: '.swiper-button-prev',
+            onSlideChangeStart: function(){
+               document.getElementById("container").style.backgroundImage = "none";
+               //document.getElementsByClassName("logo").style.backgroundImage = "url('./img/logos.png');"
+            }
 		  });
-		
-		
+
 	})
 
 </script>
