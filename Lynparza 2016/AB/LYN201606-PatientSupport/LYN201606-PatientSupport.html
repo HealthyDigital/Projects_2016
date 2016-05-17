@@ -33,14 +33,15 @@
 
 
 
-	.firstContent, .secondContent, .thirdContent {width: 240px; height:175px; padding-top: 30px; position: absolute;}
+	.firstContent, .secondContent, .thirdContent, .fourthContent {width: 240px; height:175px; padding-top: 30px; position: absolute;}
 	
 	.firstContent > li:first-child {background-image: url('./img/patients.png'); margin-left:90px; background-repeat: no-repeat; width:120px; height:85px; 
 	margin-bottom: 5px;}
 	
-	.firstContent > li:nth-child(2), .secondContent > li:nth-child(2), .thirdContent > li:nth-child(2) { color:#b2d234; font-family: "interstatebold"; font-size:18px; margin-left: 55px; text-align: center; width: 200px;}
+	.firstContent > li:nth-child(2), .secondContent > li:nth-child(2), .thirdContent > li:nth-child(2)
+	, .fourthContent > li:nth-child(2) { color:#b2d234; font-family: "interstatebold"; font-size:18px; margin-left: 55px; text-align: center; width: 200px;}
 	
-	.firstContent > li:last-child, .secondContent > li:last-child, .thirdContent > li:last-child { color: white; 
+	.firstContent > li:last-child, .secondContent > li:last-child, .thirdContent > li:last-child, .fourthContent > li:last-child { color: white; 
 		font-family: "interstatelightCon"; font-size: 16px; margin-left: 20px; text-align: center; width: 270px;}
 
 	.secondContent {padding-top: 0px; }
@@ -49,6 +50,7 @@
 	.secondContent > li:nth-child(2) {color:#004d74; width:250px; margin-left:35px;}
 	
 	ib {font-family: "interstatebold";}
+	blue {font-family: "interstateregular-condensed"; color:#004d74; }
 
 	.thirdContent {padding:15px;}
 	.thirdContent > li:first-child {background-image: url('./img/bottle.png'); margin-left:55px; background-repeat: no-repeat; width:120px; height:85px; 
@@ -56,6 +58,11 @@
 
 	.thirdContent > li:nth-child(2) {margin-left:-10px; width:300px; font-size:14px;}
 	.thirdContent > li:last-child {margin-left: 0px;}
+
+	.fourthContent {padding-top: 10px;}
+	.fourthContent > li:first-child {background-image: url('./img/patient_continuation.png'); margin-left:60px; background-repeat: no-repeat; width:180px; height:85px; 
+	margin-bottom: 5px;}
+	.fourthContent > li:nth-child(2) {color: #004d74; width:250px; margin-left: 30px;}
 
 
 	/*Got to fix up the arrows edge color*/
@@ -139,7 +146,15 @@
                     			<li>ZEST Healthcare enrolds the patient in<br /> the PAP and delivers LYNPARZA to the<br />nominated pharmacy</li>
                     		</ul>
                     	</li>
-                    	<li></li>
+                    	<li>
+                    		<ul class="fourthContent">
+                    			<li></li>
+                    			<li>PATIENT CONTINUATION</li>
+                    			<li>Doctor completes online continuation from via<br />
+                    				<blue>www.astrazenecaoncology.com.au <br />+<br />writes a private script for patient</blue>
+                    			</li>
+                    		</ul>
+                    	</li>
                     	<li></li>
                     	<li></li>
                     </ul>
