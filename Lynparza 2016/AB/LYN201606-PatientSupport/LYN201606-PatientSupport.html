@@ -20,7 +20,56 @@
     .imageList > li:nth-child(2) {background-image: url('./img/my_lynparza.png');}
     .imageList > li:last-child {background-image: url('./img/starter_kit.png');}
 
+	.diagrams {margin-top:65px; width:938px; height:465px; border:2px solid #0c4d72;}
+	.diagrams > li {display: inline-block; width:307px; height:225px; border-top: 2px solid white; border-left: 3px solid white;}
+	.diagrams > li:nth-child(odd) {background-color: #0c4d72; }
+	.diagrams > li:nth-child(even) {background-color: #b2d144;}
+
+
+	.diagrams >  li:nth-child(4) {border-left:0px solid white;}
+	.diagrams >  li:nth-child(5) {border-left:0px solid white;}
+	.diagrams >  li:nth-child(7) {border-left:0px solid white;}
+	.diagrams >  li:last-child {border-left:0px solid white;}
+
+
+
+	.firstContent, .secondContent, .thirdContent {width: 240px; height:175px; padding-top: 30px; position: absolute;}
 	
+	.firstContent > li:first-child {background-image: url('./img/patients.png'); margin-left:90px; background-repeat: no-repeat; width:120px; height:85px; 
+	margin-bottom: 5px;}
+	
+	.firstContent > li:nth-child(2), .secondContent > li:nth-child(2), .thirdContent > li:nth-child(2) { color:#b2d234; font-family: "interstatebold"; font-size:18px; margin-left: 55px; text-align: center; width: 200px;}
+	
+	.firstContent > li:last-child, .secondContent > li:last-child, .thirdContent > li:last-child { color: white; 
+		font-family: "interstatelightCon"; font-size: 16px; margin-left: 20px; text-align: center; width: 270px;}
+
+	.secondContent {padding-top: 0px; }
+	.secondContent > li:first-child {background-image: url('./img/patient_registration.png'); margin-left:70px; background-repeat: no-repeat; width:160px; 
+	height:85px; }
+	.secondContent > li:nth-child(2) {color:#004d74; width:250px; margin-left:35px;}
+	
+	ib {font-family: "interstatebold";}
+
+	.thirdContent {padding:15px;}
+	.thirdContent > li:first-child {background-image: url('./img/bottle.png'); margin-left:55px; background-repeat: no-repeat; width:120px; height:85px; 
+	margin-bottom: 5px;}
+
+	.thirdContent > li:nth-child(2) {margin-left:-10px; width:300px; font-size:14px;}
+	.thirdContent > li:last-child {margin-left: 0px;}
+
+
+	/*Got to fix up the arrows edge color*/
+    .boxArrowsTop > li {position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid pink;
+    border-bottom: 18px solid transparent;margin-top: 90px;margin-left: 3px; display: inline-block;}
+    .boxArrowsTop > li:nth-child(2){border-left: 20px solid pink; margin-left:310px;}
+    .boxArrowsTop > li:last-child{margin-left: 622px;}
+
+
+    .boxArrowsBottom > li {position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid pink;
+    border-bottom: 18px solid transparent;margin-top: 330px;margin-left: 300px; display: inline-block; transform: rotate(180.0deg); }
+    .boxArrowsBottom > li:nth-child(2){border-left: 20px solid pink; margin-left:606px; transform: rotate(180.0deg); }
+
+
 </style> 
 
 </head>
@@ -55,7 +104,45 @@
                          <h2><span>PATIENT SUPPORT</span>
                             LYNPARZA PATIENT ACCESS PROGRAMME
                         </h2>
+                    <ul class="diagrams">
+                    	<ul class="boxArrowsTop">
+                     		<li></li>
+                     		<li></li>
+                     		<li></li>
+	                    </ul>
+	                    <ul class="boxArrowsBottom">
+                     		<li></li>
+                     		<li></li>
+	                    </ul>
+                    	<li>
+                    		<ul class="firstContent">
+                    			<li></li>
+                    			<li>PATIENT ASSESMENT</li>
+                    			<li>Patient assessed by doctor and indetified<br />as suitable for LYNPARZA</li>
 
+                    		</ul>
+                    	</li> 	
+                    	<li>
+                    		<ul class="secondContent">
+                    			<li></li>
+                    			<li>PATIENT REGISTRATION</li>
+                    			<li>Doctor completes online registration form via<br /><ib>www.astrazenecaoncology.com.au</ib><br />+<br />
+                    			   <ib>writes a private script for patient</ib><br />Doctor provides patient with CMI
+                    			</li>
+
+                    		</ul>
+                    	</li>
+                    	<li>
+                    		<ul class="thirdContent">
+                    			<li></li>
+                    			<li>PRODUCT SUPPLY TO PHARMACY</li>
+                    			<li>ZEST Healthcare enrolds the patient in<br /> the PAP and delivers LYNPARZA to the<br />nominated pharmacy</li>
+                    		</ul>
+                    	</li>
+                    	<li></li>
+                    	<li></li>
+                    	<li></li>
+                    </ul>
 
                 </ul><!-- end swiper-wrapper -->
                 <!-- Add Arrows -->
@@ -144,8 +231,9 @@
 			nextButton: '.swiper-button-next',
         	prevButton: '.swiper-button-prev',
             onSlideChangeStart: function(){
+
                document.getElementById("container").style.backgroundImage = "none";
-               //document.getElementsByClassName("logo").style.backgroundImage = "url('./img/logos.png');"
+               document.getElementsByClassName("logo")[0].style.backgroundImage = 'url("./img/logos.png")';
             }
 		  });
 
