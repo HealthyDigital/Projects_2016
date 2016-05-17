@@ -33,15 +33,16 @@
 
 
 
-	.firstContent, .secondContent, .thirdContent, .fourthContent {width: 240px; height:175px; padding-top: 30px; position: absolute;}
+	.firstContent, .secondContent, .thirdContent, .fourthContent, .fifthContent, .sixthContent {width: 240px; height:175px; padding-top: 30px; position: absolute;}
 	
 	.firstContent > li:first-child {background-image: url('./img/patients.png'); margin-left:90px; background-repeat: no-repeat; width:120px; height:85px; 
 	margin-bottom: 5px;}
 	
 	.firstContent > li:nth-child(2), .secondContent > li:nth-child(2), .thirdContent > li:nth-child(2)
-	, .fourthContent > li:nth-child(2) { color:#b2d234; font-family: "interstatebold"; font-size:18px; margin-left: 55px; text-align: center; width: 200px;}
+	, .fourthContent > li:nth-child(2), .fifthContent > li:nth-child(2) { color:#b2d234; font-family: "interstatebold"; font-size:18px; margin-left: 55px; text-align: center; width: 200px;}
 	
-	.firstContent > li:last-child, .secondContent > li:last-child, .thirdContent > li:last-child, .fourthContent > li:last-child { color: white; 
+	.firstContent > li:last-child, .secondContent > li:last-child, .thirdContent > li:last-child, .fourthContent > li:last-child, 
+	.fifthContent > li:nth-child(3), .sixthContent > li:last-child { color: white; 
 		font-family: "interstatelightCon"; font-size: 16px; margin-left: 20px; text-align: center; width: 270px;}
 
 	.secondContent {padding-top: 0px; }
@@ -64,17 +65,63 @@
 	margin-bottom: 5px;}
 	.fourthContent > li:nth-child(2) {color: #004d74; width:250px; margin-left: 30px;}
 
+	.fifthContent{padding: 0px;}
+	.fifthContent > li:first-child{background-image: url('./img/patient_pickup.png'); margin-left:90px; background-repeat: no-repeat; width:120px; height:55px; 
+	margin-bottom: 5px;}
+	.fifthContent > li:nth-child(4) {background-image: url('./img/patient_pickupBottles.png'); margin-left:70px; background-repeat: no-repeat; width:150px; height:55px; margin-bottom: 5px;}
+	.fifthContent > li:last-child{color: white; 
+		font-family: "interstatelightCon"; font-size: 16px; margin-left: 20px; text-align: center; width: 270px; margin-top:-20px;}
+
+	.sixthContent > li:first-child{background-image: url('./img/sms.png'); margin-left:110px; background-repeat: no-repeat; width:160px; 
+	height:85px; margin-bottom: 20px;}
 
 	/*Got to fix up the arrows edge color*/
     .boxArrowsTop > li {position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid pink;
     border-bottom: 18px solid transparent;margin-top: 90px;margin-left: 3px; display: inline-block;}
     .boxArrowsTop > li:nth-child(2){border-left: 20px solid pink; margin-left:310px;}
-    .boxArrowsTop > li:last-child{margin-left: 622px;}
+    .boxArrowsTop > li:nth-child(3) {margin-left: 622px;}
+    .boxArrowsTop > li:last-child{margin-left: 770px; margin-top:217px; transform: rotate(90deg);}
 
 
     .boxArrowsBottom > li {position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid pink;
-    border-bottom: 18px solid transparent;margin-top: 330px;margin-left: 300px; display: inline-block; transform: rotate(180.0deg); }
+    border-bottom: 18px solid transparent;margin-top: 330px;margin-left: 299px; display: inline-block; transform: rotate(180.0deg); }
     .boxArrowsBottom > li:nth-child(2){border-left: 20px solid pink; margin-left:606px; transform: rotate(180.0deg); }
+
+
+    /*Slide 3*/
+
+    .monthBoxes{margin-top:260px; width:940px; height:90px;}
+    .monthBoxes > li {height: 60px; width:110px; display: inline-block;}
+    .monthBoxes > li > p { padding:23px; color:white; position: absolute; font-family: "interstateregular"; font-size:16px;}
+    .monthBoxes > li:last-child > p {padding-right: 35px; padding-left: 10px;}
+    .monthBoxes > li:nth-child(odd){background-color:#074e73;}
+    .monthBoxes > li:nth-child(even){background-color:#b3d043;}
+
+    .months {font-size:28px;}
+
+
+
+	/*Got to fix up the arrows edge color*/
+    .monthBoxArrowsTop > li {position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid #0e4f72;
+    border-bottom: 18px solid transparent;margin-top: -116px;margin-left: 45px; display: inline-block; transform: rotate(-90deg);}
+    .monthBoxArrowsTop > li:nth-child(2){border-left: 16px solid #0e4f72; margin-left:275px; }
+    .monthBoxArrowsTop > li:nth-child(3) {margin-left: 505px;}
+    .monthBoxArrowsTop > li:last-child{margin-left: 735px;  }
+
+
+    .monthBoxArrowsBottom > li {position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid #b4ce4e;
+    border-bottom: 18px solid transparent;margin-top: -40px;margin-left: 160px; display: inline-block; transform: rotate(90deg);}
+    .monthBoxArrowsBottom > li:nth-child(2){border-left: 16px solid #b4ce4e; margin-left:390px; }
+    .monthBoxArrowsBottom > li:nth-child(3) {margin-left: 620px;}
+    .monthBoxArrowsBottom > li:last-child{margin-left: 850px;  }
+
+    .monthTopStick {width:915px; height:52px; margin-top: -160px;}
+    .monthTopStick > li {background-image: url('./img/monthTopStick.png'); margin-left:60px; background-repeat: no-repeat; width: 120px;
+	height: 80px; display: inline-block; margin-left:3px; margin-top:-25px; margin-right:102px;}
+
+	.monthBottomStick {width:1015px; height:52px; margin-top: 160px;}
+    .monthBottomStick > li {background-image: url('./img/monthBottomStick.png');background-repeat: no-repeat; width: 120px; height: 80px;
+							display: inline-block;	margin-left: 110px;	margin-top: -75px; margin-right: -4px;}
 
 
 </style> 
@@ -113,6 +160,7 @@
                         </h2>
                     <ul class="diagrams">
                     	<ul class="boxArrowsTop">
+                     		<li></li>
                      		<li></li>
                      		<li></li>
                      		<li></li>
@@ -155,10 +203,62 @@
                     			</li>
                     		</ul>
                     	</li>
-                    	<li></li>
-                    	<li></li>
+                    	<li>
+                    		<ul class="fifthContent">
+                    			<li></li>
+                    			<li>PATIENT PICK UP</li>
+                    			<li>Patient takes private script to<br />pharmacy and picks up LYNPARZA</li>
+                    			<li></li>
+								<li>(Patient will pay at Month 3 & 6)</li>
+                    		</ul>
+                    	</li>
+                    	<li>
+                    	    <ul class="sixthContent">
+                    			<li></li>
+                    			<li>Patient receives SMS (or phone call)<br />notification that script is ready for collection</li>
+                    		</ul>
+                    	</li>
                     </ul>
+ 					<li class="swiper-slide" data-slide="3" >
+                         <h2><span>PATIENT SUPPORT</span>
+                            MY LYNPARZA PATIENT SUPPORT PROGRAMME
+                        </h2>
+                        <ul class="monthBoxes">
+                        	<li><p>Month <ib class="months">1</ib></p></li>
+                        	<li><p>Month <ib class="months">2</ib></p></li>
+                        	<li><p>Month <ib class="months">3</ib></p></li>
+                        	<li><p>Month <ib class="months">4</ib></p></li>
+                        	<li><p>Month <ib class="months">5</ib></p></li>
+                        	<li><p>Month <ib class="months">6</ib></p></li>
+                        	<li><p>Month <ib class="months">9</ib></p></li>
+                        	<li><p>Month <ib class="months">12</ib></p></li>
+                        </ul>
+                        <ul class="monthBoxArrowsTop">
+                     		<li></li>
+                     		<li></li>
+                     		<li></li>
+                     		<li></li>
+	                    </ul>
+	                    <ul class="monthBoxArrowsBottom">
+                     		<li></li>
+                     		<li></li>
+                     		<li></li>
+                     		<li></li>
+	                    </ul>
+	                    <ul class="monthTopStick">
+	                    	<li></li>
+	                    	<li></li>
+	                    	<li></li>
+	                    	<li></li>
+	                    </ul>
+	                    <ul class="monthBottomStick">
+	                    	<li></li>
+	                    	<li></li>
+	                    	<li></li>
+	                    	<li></li>
+	                    </ul>
 
+                    </li>
                 </ul><!-- end swiper-wrapper -->
                 <!-- Add Arrows -->
        			<span class="swiper-button icon arrow swiper-button-next"></span>
