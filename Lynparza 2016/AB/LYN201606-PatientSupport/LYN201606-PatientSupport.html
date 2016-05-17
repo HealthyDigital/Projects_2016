@@ -123,8 +123,18 @@
     .monthBottomStick > li {background-image: url('./img/monthBottomStick.png');background-repeat: no-repeat; width: 120px; height: 80px;
 							display: inline-block;	margin-left: 110px;	margin-top: -75px; margin-right: -4px;}
 
-	.textAboveTopStick {position:absolute; width:915px; height: 100px; margin-top:-250px;list-style-type:disc;}
-	.textAboveTopStick > ul {display: inline-block; margin-right:102px;}
+	.textAboveTopStick {position:absolute; width:915px; height: 100px; margin-top:-250px;}
+	.textAboveTopStick > ul {display: inline-block; margin-left:-2px; margin-right:102px; list-style: disc;}
+    .textAboveTopStick > ul:first-child {margin-left:20px;}
+    .textAboveTopStick > ul:last-child > li { margin-left:25px; }
+
+
+    .textBelowBottomStick {position:absolute; width:915px; height: 100px; margin-top:-40px;}
+    .textBelowBottomStick > ul {display: inline-block; margin-left:125px; vertical-align: top; list-style: disc;}
+    .textBelowBottomStick > ul:nth-child(2){margin-left: 135px;}
+    .textBelowBottomStick > ul:nth-child(3){margin-left: 130px;}
+    .textBelowBottomStick > ul:last-child  { margin-left:110px; }
+    .textBelowBottomStick > ul > li {color: #b4ce4e;}
 
 </style> 
 
@@ -254,9 +264,16 @@
 	                    		<li>GP information<br />letter<br />(if requested)</li>
 	                    	</ul>
 	                    	<ul>
-	                    		<li>Welcome Letter</li>
-	                    		<li>GP information<br />letter<br />(if requested)</li>
+	                    		<li>Script<br />reminder letter</li>
+	                    		<li>Newsletter</li>
 	                    	</ul>
+                            <ul>
+                                <li>Carer<br />information</li>
+                                <li>Newsletter</li>
+                            </ul>
+                            <ul>
+                                <li>Newsletter</li>
+                            </ul>
 
 	                    </ul>
 	                    <ul class="monthTopStick">
@@ -272,10 +289,19 @@
 	                    	<li></li>
 	                    </ul>
 	                    <ul class="textBelowBottomStick">
-	                    	<li></li>
-	                    	<li></li>
-	                    	<li></li>
-	                    	<li></li>
+                            <ul>
+                                <li>Newsletter</li>
+                                <li>Carer<br />information</li>
+                            </ul>
+                            <ul>
+                                <li>Newsletter</li>
+                            </ul>
+                            <ul>
+                                <li>Script<br />reminder letter</li>
+                            </ul>
+                            <ul>
+                                <li>Thankyou<br />letter and<br /> feedback<br />survey</li>
+                            </ul>
 	                    </ul>
 
                     </li>
