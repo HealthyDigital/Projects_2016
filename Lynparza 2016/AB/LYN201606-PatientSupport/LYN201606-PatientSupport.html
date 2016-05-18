@@ -15,19 +15,31 @@
     .swiper-wrapper > li:first-child > h2{color:white;}
     .logo{background-image: url('./img/lynparza_logo.png');}
     .imageList{margin-top:120px; width:945px; height:305px;}
-    .imageList > li {width:300px; height:300px; margin-left:10px; display: inline-block;}
+    .imageList > li {width:300px; height:300px; margin-left:10px; display: inline-block; 
+    	background-repeat: no-repeat; background-color:#d9e4ea; 
+    	border-bottom: 4px solid #b3d043; }
     .imageList > li:first-child {background-image: url('./img/patient_program.png');}
     .imageList > li:nth-child(2) {background-image: url('./img/my_lynparza.png');}
-    .imageList > li:last-child {background-image: url('./img/starter_kit.png');}
+    .imageList > li:nth-child(3) {background-image: url('./img/starter_kit.png');}
 
-	.diagrams {margin-top:65px; width:938px; height:465px; border:4px solid #0c4d72;}
+    .imageList > ul { position:absolute; margin-top:-75px; }
+   	.imageList > ul > li {display: inline-block; font-size: 20px; font-family: "interstateregular";}
+   	.imageList > ul > li:first-child {margin-left:20px;}
+   	.imageList > ul > li:nth-child(2) {margin-left:140px;}
+   	.imageList > ul  > li:nth-child(3) {margin-left:120px;}
+
+   	.imageList > ul:last-child > li {margin-top: 5px;}
+   	.imageList > ul:last-child > li {background-image: url('./img/forward_arrow.png'); background-repeat: no-repeat; 
+   	width:25px; height:45px; margin-left:280px;}
+
+	.diagrams {margin-top:65px; width:936px; height:458px; border:4px solid #0c4d72;}
 	.diagrams > li {display: inline-block; width:307px; height:225px; border-top: 2px solid white; border-left: 3px solid white; }
 	.diagrams > li:nth-child(odd) {background-color: #0c4d72; }
-	.diagrams > li:nth-child(even) {background-color: #b2d144;}
+	.diagrams > li:nth-child(even) {background-color: #b2d144; border-top: 0;}
 
-
-	.diagrams >  li:nth-child(4) {border:0px solid white;}
-	.diagrams >  li:nth-child(5) {border:0px solid white;}
+	.diagrams >  li:nth-child(3) {margin-bottom: -3px;}
+	.diagrams >  li:nth-child(4) {border:0px solid white; margin-bottom: -3px;}
+	.diagrams >  li:nth-child(5) {border:0px solid white; margin-bottom: -3px;}
 	.diagrams >  li:nth-child(7) {border:0px solid white;}
 	.diagrams >  li:last-child {border:0px solid white;}
 
@@ -50,8 +62,8 @@
 	height:85px; }
 	.secondContent > li:nth-child(2) {color:#004d74; width:250px; margin-left:35px;}
 	
-	ib {font-family: "interstatebold-condensed";}
-	blue {font-family: "interstateregular-condensed"; color:#004d74; }
+	.secondContent > li > strong {font-family: "interstatebold-condensed";}
+	.fourthContent > li > strong {font-family: "interstateregular-condensed"; color:#004d74; }
 
 	.thirdContent {padding:15px;}
 	.thirdContent > li:first-child {background-image: url('./img/bottle.png'); margin-left:55px; background-repeat: no-repeat; width:120px; height:85px; 
@@ -66,7 +78,7 @@
 	.fourthContent > li:nth-child(2) {color: #004d74; width:250px; margin-left: 30px;}
 
 	.fifthContent{padding: 0px;}
-	.fifthContent > li:first-child{background-image: url('./img/patient_pickup.png'); margin-left:90px; background-repeat: no-repeat; width:120px; height:55px; 
+	.fifthContent > li:first-child{background-image: url('./img/patient_pickup.png'); margin-left:90px; background-repeat: no-repeat; width:120px; height:65px; 
 	margin-bottom: 5px;}
 	.fifthContent > li:nth-child(4) {background-image: url('./img/patient_pickupBottles.png'); margin-left:70px; background-repeat: no-repeat; width:150px; height:55px; margin-bottom: 5px;}
 	.fifthContent > li:last-child{color: white; 
@@ -77,26 +89,27 @@
 
 	/*Got to fix up the arrows edge color*/
     .boxArrowsTop > li {/*position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid pink;
-    border-bottom: 18px solid transparent;*/margin-top: 105px;margin-left: -3px; display: inline-block;
-
-
-    position: absolute;
-    width:0;
-    border-bottom:solid 20px white;
-    border-right:solid 16px transparent;
-    border-left:solid 16px transparent;
-   transform: rotate(90deg);
+    border-bottom: 18px solid transparent;*/
+    margin-top: 105px;
+	margin-left: -5px;
+	display: inline-block;
+	position: absolute;
+	width: 0;
+	border-bottom: solid 19px white;
+	border-right: solid 16px transparent;
+	border-left: solid 16px transparent;
+	transform: rotate(90deg);
 }
 
 .boxArrowsTop > li .empty {
-    position: absolute;
-    top: 3px;
-    left: -13px;
-    width: 0;
-    border-bottom: solid 20px #114e71;
-    border-right: solid 13px transparent;
-    border-left: solid 13px transparent;
-    transform: rotate(0deg);
+	position: absolute;
+	top: 5px;
+	left: -13px;
+	width: 0;
+	border-bottom: solid 18px #114e71;
+	border-right: solid 13px transparent;
+	border-left: solid 13px transparent;
+	transform: rotate(0deg);
 }
 
     .boxArrowsTop > li:nth-child(2){ margin-left:306px;}
@@ -109,16 +122,16 @@
     border-bottom: 18px solid transparent;*/
     position: absolute;
     width:0;
-    border-bottom:solid 20px white;
+    border-bottom:solid 19px white;
     border-right:solid 16px transparent;
     border-left:solid 16px transparent;
 
-    margin-top: 340px;margin-left: 287px; display: inline-block; transform: rotate(270.0deg);}
+    margin-top: 330px;margin-left: 287px; display: inline-block; transform: rotate(270.0deg);}
 
     .boxArrowsBottom > li .empty
     {
             position: absolute;
-            top: 3px;
+            top: 5px;
             left: -13px;
             width: 0;
             border-bottom: solid 20px #114e71;
@@ -183,6 +196,9 @@
     .slide4Image {position:absolute; background-image: url('./img/starter_kit_image.png'); width:665px; height:495px; 
     background-repeat: no-repeat; margin-top:30px; margin-left: 130px;}
 
+    .informationLogo {position: absolute; background-image: url('./img/i_icon.png'); width:60px; height:60px; margin-top:400px; }
+
+
     /*Slide 5*/
     .capsuleBody{width:945px; height:435px; margin-top:40px;}
     .capsuleBody > li {display: inline-block; margin-left:15px; float:left;}
@@ -192,6 +208,8 @@
     .capsuleBody > li:first-child > ul > li {margin-top:20px; margin-left: 35px; margin-right: 35px; list-style: disc;}
     .capsuleBody > li:last-child > ul > li { background-image: url('./img/product_shot.png'); 
     background-repeat:no-repeat; width:610px; height:430px;}
+
+
 
 </style> 
 
@@ -221,6 +239,16 @@
                         <li></li>
                         <li></li>
                         <li></li>
+                        <ul>
+                        	<li>Lynparza Patient<br />Access Programme</li>
+                        	<li>Lynparaza Patient<br />Support Programme</li>
+                        	<li>Lynparza<br />Patient Starter Kit</li>
+                        </ul>
+                        <ul>
+                        	<li></li>
+                        	<li></li>
+                        	<li></li>
+                        </ul>
                     </ul>  
 
                     <li class="swiper-slide" data-slide="2" >
@@ -262,8 +290,8 @@
                     		<ul class="secondContent">
                     			<li></li>
                     			<li>PATIENT REGISTRATION</li>
-                    			<li>Doctor completes online registration form via<br /><ib>www.astrazenecaoncology.com.au</ib><br />+<br />
-                    			   <ib>writes a private script for patient</ib><br />Doctor provides patient with CMI
+                    			<li>Doctor completes online registration form via<br /><strong>www.astrazenecaoncology.com.au</strong><br />+<br />
+                    			   <strong>writes a private script for patient</strong><br />Doctor provides patient with CMI
                     			</li>
 
                     		</ul>
@@ -280,7 +308,7 @@
                     			<li></li>
                     			<li>PATIENT CONTINUATION</li>
                     			<li>Doctor completes online continuation from via<br />
-                    				<blue>www.astrazenecaoncology.com.au <br />+<br />writes a private script for patient</blue>
+                    				<strong>www.astrazenecaoncology.com.au <br />+<br />writes a private script for patient</strong>
                     			</li>
                     		</ul>
                     	</li>
@@ -305,14 +333,14 @@
                             MY LYNPARZA PATIENT SUPPORT PROGRAMME
                         </h2>
                         <ul class="monthBoxes">
-                        	<li><p>Month <ib class="months">1</ib></p></li>
-                        	<li><p>Month <ib class="months">2</ib></p></li>
-                        	<li><p>Month <ib class="months">3</ib></p></li>
-                        	<li><p>Month <ib class="months">4</ib></p></li>
-                        	<li><p>Month <ib class="months">5</ib></p></li>
-                        	<li><p>Month <ib class="months">6</ib></p></li>
-                        	<li><p>Month <ib class="months">9</ib></p></li>
-                        	<li><p>Month <ib class="months">12</ib></p></li>
+                        	<li><p>Month <strong class="months">1</strong></p></li>
+                        	<li><p>Month <strong class="months">2</strong></p></li>
+                        	<li><p>Month <strong class="months">3</strong></p></li>
+                        	<li><p>Month <strong class="months">4</strong></p></li>
+                        	<li><p>Month <strong class="months">5</strong></p></li>
+                        	<li><p>Month <strong class="months">6</strong></p></li>
+                        	<li><p>Month <strong class="months">9</strong></p></li>
+                        	<li><p>Month <strong class="months">12</strong></p></li>
                         </ul>
                         <ul class="monthBoxArrowsTop">
                      		<li></li>
@@ -383,6 +411,7 @@
                         to the My LYNPARZA Patient Support Program (PSP). Your patient can opt-out of the My LYNPARZA PSP at anytime
                         </p>
                         <span class="slide4Image"></span>
+                        <span class="informationLogo"></span>
                     </li>
                     <li class="swiper-slide" data-slide="5" >
                          <h2><span>CAPSULE COMPANION</span>
@@ -496,6 +525,7 @@
                 if(slideID == 1)
                 {
                     document.getElementById("container").style.backgroundImage = 'url("./img/background.jpg")';
+                    document.getElementsByClassName("logo")[0].style.backgroundImage = 'url("./img/lynparza_logo.png")';
                 }
                 else
                 {
