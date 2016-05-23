@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology | Faslodex - Breast Cancer">
+        <title>AstraZeneca Oncology | Faslodex - Breast Cancer</title>
+		
+	<link rel="stylesheet" href="css/style.css" />
+     <link rel="stylesheet" type="text/css" href="css/commons.css" />
+    <link rel="stylesheet" type="text/css" href="css/arimidex.css"/>
+    <link rel="stylesheet" type="text/css" href="css/fonts_arimidex.css"/>
+    <style type="text/css">
+		body { width:1024px; background: url("img/arimidex_bg.png") no-repeat 0 0; background-size: 1024px auto; }
+				
+		.content { 
+			position:absolute;
+			height:555px;
+			width:800px;
+			top:100px;
+			margin-left:100px;
+			color:#666666;
+			font-family: 'SerifReg';
+		}    	
+		
+		.overlay .box  {
+			position:absolute;
+			top:137px;
+			left:100px;
+			width: 832px;
+			height:530px;
+			-webkit-border-radius: 20px; 
+			box-shadow:0px 14px 20px rgba(0,0,0,0.33);
+			padding:25px 5px;
+			font-family: 'SerifReg';
+		}
+		
+		.head {
+			font-size:33px;
+			line-height:36px;
+			position:relative;
+		}
+		
+		.subhead {
+			font-size:23px;
+			line-height:26px;
+			position:relative;
+			color:#dc0b64;
+			 margin-top:20px;
+		}
+		
+		.foot {
+			position:relative;
+			top:80px;
+		}
+		
+		.btn {
+			display:block;
+			float:left;
+			border-top:1px solid #ecece9;
+			border-left: 1px solid e7e9e1;
+			background:#e9e6df;
+			width:220px;
+			height:88px;
+			-webkit-border-radius: 10px; 
+			box-shadow:0px 2px 10px rgba(0,0,0,0.33);
+			margin-right:25px;
+			text-align:center;
+		}
+		
+		.btn:active { 
+			top: 1px;
+			-webkit-box-shadow: 0px 1px 1px rgba(100,100,100,0.5);
+		}
+		
+		.verve {
+			background:#e9e6df url("img/verve_logo.png") no-repeat center center;
+			background-size:auto 50%;
+		}
+		
+		.enhance {
+			background:#e9e6df url("img/enhance_logo.png") no-repeat center center;
+			background-size:70% auto;
+		}
+		
+		.abp {
+			font-family:'HelveticaNeueLTStdMedCnRg';
+			font-size:35px;
+			color:#1f2d5d;
+			font-weight:bold;
+			display:inline-block;
+			vertical-align:middle;
+			height:63px;
+			line-height:60px;
+			margin:12.5px;
+		}
+		
+		.list {
+			margin-top: 50px;
+		}
+		
+		.list li {
+			color:#dc0b64;
+			padding: 20px 0 10px 50px;
+			line-height: 20px;
+			background:url("img/tick_box_s.png") no-repeat left 0;
+		}
+		
+		.left {
+			position:relative;
+			width:407px;
+			height:496px;
+			float:left;
+			top:0px;
+			left:0px;
+		}
+		
+		.right {
+			position:relative;
+			float:left;
+			top:0px;
+			left:0px;
+			width:400px;
+			padding-top:100px;
+		}
+
+		#content-1 .right{
+			left:65px;
+		}
+
+		#content-3 .right{
+			left:45px;
+			top:-30px;
+		}
+		
+		#content-1 .left {
+			background:url("img/verve_image.png") no-repeat left 0;
+			background-size:407px auto;
+			
+		}
+		
+		#content-1 ul li:before {
+			color: #dc0b64;
+			content: "•";
+			font-size: 1.4em;
+			padding-right: 0.3em;
+			position: relative;
+			top: 0.15em;
+			left:0px;
+			margin-left: -20px;
+		}
+		
+		#content-1 ul li {
+			list-style-type: none;
+			margin-bottom: 10px;
+			font-family: 'HelveticaNeueLTStdRegular';
+			font-size:17px;
+			line-height: 19px;
+			width: 200px
+		}
+		
+		#content-1 ul {
+			margin-left:20px;
+			margin-top:35px;
+		}
+		
+		#content-2 .left {
+			background:url("img/enhance_mags.png") no-repeat 45px 20px;
+			background-size:350px auto;
+			
+		}
+		
+		#content-2 .right {
+			width:380px;
+			padding-left:35px;
+		}
+		
+		#content-3 .head {
+			color:#1f2d5d;
+			font-weight:bold;
+			font-family: 'HelveticaNeueLTStdMedCnRg';
+			-webkit-font-smoothing: antialiased;
+			font-size:28px;
+		}
+		
+		#content-3 .subhead {
+			color:#666666;
+			font-weight:lighter;
+			font-size: 20px;
+			width: 300px
+		}
+		
+		#content-3 .left {
+			background:url("img/ABAP_image.png") no-repeat 0px 70px;
+			background-size:410px auto;
+			
+		}
+
+		#content-3 a:not(.button){
+			text-decoration: none;
+			color:#1f2d5d;
+			font-weight:bold;
+			font-family: 'HelveticaNeueLTStdMedCnRg';
+			-webkit-font-smoothing: antialiased;
+		}
+
+		.logo{
+			display:block;
+			position:absolute;
+			width:182px;
+			height:50px;
+			top:79px;
+			left:801px;
+			background:url('img/arimidex_logo.png') no-repeat;
+			background-size: 100% auto;
+		}
+
+		.pi{
+			position:absolute;
+			width:70px;
+			height:40px;
+			background: url('img/pi_button.png') no-repeat;
+			background-size: 100% auto;
+			top:auto;
+			left:auto;
+			right:5px;
+			bottom:15px;
+		}
+
+		.pi:active{bottom:13px;}
+
+
+ </style>
+</head>
+
+<body class='arimidex'>
+<div id="container" class="container arimiGrey" >
+<span class="logo"></span>
+<span class='pi'></span>
+	<div class="content">
+		<div class="head">Three good reasons to select ARIMIDEX<br/>over generic anastrozole</div>
+		<div class="list">
+			<ul>
+				<li>NO brand price premium. </li>
+				<li>Only ARIMIDEX patients are eligible to enrol in the Verve Patient<br/>Support Programme.</li>
+				<li>Eligible ARIMIDEX patients may also be enrolled in the ARIMIDEX<br/>Bisphosphonate Access Programme.</li>
+			</ul>
+		</div>
+		<div class="foot">
+			<a href="#" class="btn verve" id="btn-1"></a>
+			<a href="#" class="btn enhance" id="btn-2"></a>
+			<a href="#" class="btn " id="btn-3"><span class="abp">ABAP</span></a>
+		</div>
+	</div>
+   
+	<div id="content-1" class="overlay">
+		<div class="box">
+			<div class="left">
+			</div>
+			<div class="right">
+				<div class="head">Verve patient<br/> support programme</div>
+				<div class="subhead">Verve provides<br/>ongoing support:</div>
+				<div>
+					<ul>
+						<li>Welcome pack, including information about ARIMIDEX and Verve.</li>
+						<li>Regular magazines with up-to-date news, views, lifestyle tips, and shared patient stories, as well as HCP options.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="closeButton" class="close-btn">
+			<a class="button" href="#">X</a>
+		</div>
+	</div>
+	<div id="content-2" class="overlay">
+		<div class="box">
+			<div class="left">
+			</div>
+			<div class="right">
+				<div class="head">The benefits of support from AstraZeneca</div>
+				<div class="subhead">Resources from the ENHANCE<br/>Consultative Group on the<br/>management of side effects<br/>in women being treated with<br/>hormonal therapies for breast<br/>cancer</div>
+			</div>
+		</div>
+		<div id="closeButton" class="close-btn">
+			<a class="button" href="#">X</a>
+		</div>
+	</div>
+	<div id="content-3" class="overlay">
+		<div class="box">
+			<div class="left">
+			</div>
+			<div class="right">
+				<div class="head">Arimidex<br/>Bisphosphonate<br/>Access Programme</div>
+				<div class="subhead">Some Arimidex patients may also be eligible for enrolment in the Arimidex Bisphosphonate Access Programme.</div>
+				<div class="subhead">Patients will need to continue to choose branded ARIMIDEX rather than a generic alternative to remain in this programme.
+
+				<br />
+				<br />
+				<a href ='http://www.astrazenecaoncology.com.au'>www.astrazenecaoncology.com.au</a>
+				</div>
+				
+			</div>
+		</div>
+		<div id="closeButton" class="close-btn">
+			<a class="button" href="#">X</a>
+		</div>
+	</div>
+</div>
+  
+   
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.tools.min.js"></script>
+<script src="js/functions_arimidex.js"></script>
+<script src="js/zoladex_script.js"></script>
+<!--<script src="js/EDetailerPage.min.js"></script>
+<script src="js/functions_faslodex.js"></script>-->
+<script src="js/touchy.js" type="text/javascript" charset="utf-8"></script>	
+<script src="js/script.js" type="text/javascript" charset="utf-8"></script>	
+
+<script type="text/javascript" charset="utf-8">
+	$(function(){
+
+		nav('.pi', 'Arimidex13PI', 'AZAUBREF');
+
+		//go to slide
+		function nav(btn, asset, id){
+			"use strict";
+			$(btn).on('tap', function(){
+				id = id ? ', '+id+'' : '';
+				document.location = 'veeva:gotoSlide('+asset+'.zip'+id+')';
+			});
+		}
+
+		$(document).on('touchmove', function(e){ e.preventDefault(); });
+
+	})
+</script>	
+
+</body>
+</html>

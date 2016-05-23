@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'SerifReg';
+    src: url(//:) format('no404'), 
+         url('../fonts/serif-regular-webfont.woff') format('woff'),
+         url('../fonts/serif-regular-webfont.svg#SerifRgRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelvNewLightCond';
+    src: url(//:) format('no404'), 
+         url('../fonts/helveticaneueltstd-ltcn-webfont.woff') format('woff'),
+         url('../fonts/helveticaneueltstd-ltcn-webfont.svg#HelveticaNeueLTStdLtCnRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStdMedRegular';
+    src: url(//:) format('no404'), 
+         url('../fonts/helveticaneueltstd-md-webfont.woff') format('woff'),
+         url('../fonts/helveticaneueltstd-md-webfont.svg#HelveticaNeueLTStdMedRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStdMedCnRg';
+    src: url(//:) format('no404'), 
+         url('../fonts/helveticaneueltstd-mdcn-webfont.woff') format('woff'),
+         url('../fonts/helveticaneueltstd-mdcn-webfont.svg#HelveticaNeueLTStdMedCnRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeueLTStdRegular';
+    src: url(//:) format('no404'), 
+         url('../fonts/helveticaneueltstd-roman-webfont.woff') format('woff'),
+         url('../fonts/helveticaneueltstd-roman-webfont.svg#HelveticaNeueLTStdRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeueReg';
+    src: url(//:) format('no404'), 
+         url('../fonts/HelveticaNeueReg.woff') format('woff'),
+         url('../fonts/HelveticaNeueReg.svg#HelveticaNeue-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

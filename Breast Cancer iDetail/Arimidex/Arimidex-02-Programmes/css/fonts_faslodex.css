@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Black';
+    src: url(//:) format('no404'), 
+         url('../fonts/avenirltstd-black-webfont.woff') format('woff'),
+         url('../fonts/avenirltstd-black-webfont.svg#AvenirLTStd65MediumBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url(//:) format('no404'), 
+         url('../fonts/avenirltstd-book-webfont.woff') format('woff'),
+         url('../fonts/avenirltstd-book-webfont.svg#AvenirLTStd45BookRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heavy';
+    src: url(//:) format('no404'), 
+         url('../fonts/avenirltstd-heavy-webfont.woff') format('woff'),
+         url('../fonts/avenirltstd-heavy-webfont.svg#AvenirLTStd55RomanBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url(//:) format('no404'), 
+         url('../fonts/AveniMed.woff') format('woff'),
+         url('../fonts/AveniMed.svg#Avenir-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

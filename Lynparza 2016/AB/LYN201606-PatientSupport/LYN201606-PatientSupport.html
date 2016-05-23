@@ -15,21 +15,33 @@
     .swiper-wrapper > li:first-child > h2{color:white;}
     .logo{background-image: url('./img/lynparza_logo.png');}
     .imageList{margin-top:120px; width:945px; height:305px;}
-    .imageList > li {width:300px; height:300px; margin-left:10px; display: inline-block;}
+    .imageList > li {width:300px; height:300px; margin-left:10px; display: inline-block; 
+    	background-repeat: no-repeat; background-color:#d9e4ea; 
+    	border-bottom: 10px solid #b3d043; }
     .imageList > li:first-child {background-image: url('./img/patient_program.png');}
     .imageList > li:nth-child(2) {background-image: url('./img/my_lynparza.png');}
-    .imageList > li:last-child {background-image: url('./img/starter_kit.png');}
+    .imageList > li:nth-child(3) {background-image: url('./img/starter_kit.png');}
 
-	.diagrams {margin-top:65px; width:938px; height:465px; border:2px solid #0c4d72;}
-	.diagrams > li {display: inline-block; width:307px; height:225px; border-top: 2px solid white; border-left: 3px solid white;}
+    .imageList > ul { position:absolute; margin-top:-75px; }
+   	.imageList > ul > li {display: inline-block; font-size: 20px; font-family: "interstateregular";}
+   	.imageList > ul > li:first-child {margin-left:20px;}
+   	.imageList > ul > li:nth-child(2) {margin-left:140px;}
+   	.imageList > ul  > li:nth-child(3) {margin-left:120px;}
+
+   	.imageList > ul:last-child > li {margin-top: -5px;}
+   	.imageList > ul:last-child > li {background-image: url('./img/forward_arrow.png'); background-repeat: no-repeat; 
+   	width:25px; height:45px; margin-left: 280px; transform: scale(0.6);}
+
+	.diagrams {margin-top:65px; width:936px; height:458px; border:4px solid #0c4d72;}
+	.diagrams > li {display: inline-block; width:307px; height:225px; border-top: 2px solid white; border-left: 3px solid white; }
 	.diagrams > li:nth-child(odd) {background-color: #0c4d72; }
-	.diagrams > li:nth-child(even) {background-color: #b2d144;}
+	.diagrams > li:nth-child(even) {background-color: #b2d144; border-top: 0;}
 
-
-	.diagrams >  li:nth-child(4) {border-left:0px solid white;}
-	.diagrams >  li:nth-child(5) {border-left:0px solid white;}
-	.diagrams >  li:nth-child(7) {border-left:0px solid white;}
-	.diagrams >  li:last-child {border-left:0px solid white;}
+	.diagrams >  li:nth-child(3) {margin-bottom: -3px;}
+	.diagrams >  li:nth-child(4) {border:0px solid white; margin-bottom: -3px;}
+	.diagrams >  li:nth-child(5) {border:0px solid white; margin-bottom: -3px;}
+	.diagrams >  li:nth-child(7) {border:0px solid white;}
+	.diagrams >  li:last-child {border:0px solid white;}
 
 
 
@@ -39,35 +51,43 @@
 	margin-bottom: 5px;}
 	
 	.firstContent > li:nth-child(2), .secondContent > li:nth-child(2), .thirdContent > li:nth-child(2)
-	, .fourthContent > li:nth-child(2), .fifthContent > li:nth-child(2) { color:#b2d234; font-family: "interstatebold"; font-size:18px; margin-left: 55px; text-align: center; width: 200px;}
+	, .fourthContent > li:nth-child(2), .fifthContent > li:nth-child(2) { color:#b2d234; font-family: "interstatebold-condensed"; 
+	font-size:18px; margin-left: 55px; text-align: center; width: 200px;}
 	
 	.firstContent > li:last-child, .secondContent > li:last-child, .thirdContent > li:last-child, .fourthContent > li:last-child, 
 	.fifthContent > li:nth-child(3), .sixthContent > li:last-child { color: white; 
 		font-family: "interstatelightCon"; font-size: 16px; margin-left: 20px; text-align: center; width: 270px;}
 
-	.secondContent {padding-top: 0px; }
-	.secondContent > li:first-child {background-image: url('./img/patient_registration.png'); margin-left:70px; background-repeat: no-repeat; width:160px; 
-	height:85px; }
+	.secondContent {padding-top: 20px; }
+	.secondContent > li:first-child {background-image: url('./img/patient_registration.png'); margin-left:70px; background-repeat: no-repeat; width:170px; 
+	height:80px; }
 	.secondContent > li:nth-child(2) {color:#004d74; width:250px; margin-left:35px;}
 	
-	ib {font-family: "interstatebold";}
-	blue {font-family: "interstateregular-condensed"; color:#004d74; }
+	.secondContent > li > strong {font-family: "interstatebold-condensed";}
+	.fourthContent > li > strong {font-family: "interstateregular-condensed"; color:#004d74; }
 
 	.thirdContent {padding:15px;}
 	.thirdContent > li:first-child {background-image: url('./img/bottle.png'); margin-left:55px; background-repeat: no-repeat; width:120px; height:85px; 
 	margin-bottom: 5px;}
 
-	.thirdContent > li:nth-child(2) {margin-left:-10px; width:300px; font-size:14px;}
+	.thirdContent > li:nth-child(2) {margin-left:-10px; width:300px; }
 	.thirdContent > li:last-child {margin-left: 0px;}
 
 	.fourthContent {padding-top: 10px;}
-	.fourthContent > li:first-child {background-image: url('./img/patient_continuation.png'); margin-left:60px; background-repeat: no-repeat; width:180px; height:85px; 
+	.fourthContent > li:first-child {background-image: url('./img/patient_continuation.png'); margin-left:60px; background-repeat: no-repeat; width:180px; height:90px; 
 	margin-bottom: 5px;}
 	.fourthContent > li:nth-child(2) {color: #004d74; width:250px; margin-left: 30px;}
 
 	.fifthContent{padding: 0px;}
-	.fifthContent > li:first-child{background-image: url('./img/patient_pickup.png'); margin-left:90px; background-repeat: no-repeat; width:120px; height:55px; 
-	margin-bottom: 5px;}
+	.fifthContent > li:first-child{
+
+		background-image: url('./img/patient_pickup.png');
+		margin-left: 70px;
+		background-repeat: no-repeat;
+		width: 155px;
+		height: 75px; 
+		margin-bottom: 5px;	
+	}
 	.fifthContent > li:nth-child(4) {background-image: url('./img/patient_pickupBottles.png'); margin-left:70px; background-repeat: no-repeat; width:150px; height:55px; margin-bottom: 5px;}
 	.fifthContent > li:last-child{color: white; 
 		font-family: "interstatelightCon"; font-size: 16px; margin-left: 20px; text-align: center; width: 270px; margin-top:-20px;}
@@ -76,23 +96,69 @@
 	height:85px; margin-bottom: 20px;}
 
 	/*Got to fix up the arrows edge color*/
-    .boxArrowsTop > li {position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid pink;
-    border-bottom: 18px solid transparent;margin-top: 90px;margin-left: 3px; display: inline-block;}
-    .boxArrowsTop > li:nth-child(2){border-left: 20px solid pink; margin-left:310px;}
-    .boxArrowsTop > li:nth-child(3) {margin-left: 622px;}
-    .boxArrowsTop > li:last-child{margin-left: 770px; margin-top:217px; transform: rotate(90deg);}
+    .boxArrowsTop > li {/*position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid pink;
+    border-bottom: 18px solid transparent;*/
+    margin-top: 105px;
+	margin-left: -5px;
+	display: inline-block;
+	position: absolute;
+	width: 0;
+	border-bottom: solid 19px white;
+	border-right: solid 16px transparent;
+	border-left: solid 16px transparent;
+	transform: rotate(90deg);
+}
 
 
-    .boxArrowsBottom > li {position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid pink;
-    border-bottom: 18px solid transparent;margin-top: 330px;margin-left: 299px; display: inline-block; transform: rotate(180.0deg); }
-    .boxArrowsBottom > li:nth-child(2){border-left: 20px solid pink; margin-left:606px; transform: rotate(180.0deg); }
+.plusSignBreak {margin-top:-7px; margin-bottom: -10px;}
 
+.boxArrowsTop > li .empty {
+	position: absolute;
+	top: 5px;
+	left: -13px;
+	width: 0;
+	border-bottom: solid 18px #114e71;
+	border-right: solid 13px transparent;
+	border-left: solid 13px transparent;
+	transform: rotate(0deg);
+}
 
+    .boxArrowsTop > li:nth-child(2){ margin-left:306px;}
+    .boxArrowsTop > li:nth-child(3) {margin-left: 619px;}
+    .boxArrowsTop > li:last-child{margin-left: 770px; margin-top:230px; transform: rotate(180deg);}
+
+    .boxArrowsTop > li:nth-child(3) .empty{ border-bottom: solid 20px #b3cf4f;}
+
+    .boxArrowsBottom > li {/*position: absolute; width: 0;height: 0;border-top: 18px solid transparent;border-left: 16px solid pink;
+    border-bottom: 18px solid transparent;*/
+    position: absolute;
+    width:0;
+    border-bottom:solid 19px white;
+    border-right:solid 16px transparent;
+    border-left:solid 16px transparent;
+
+    margin-top: 330px;margin-left: 287px; display: inline-block; transform: rotate(270.0deg);}
+
+    .boxArrowsBottom > li .empty
+    {
+            position: absolute;
+            top: 5px;
+            left: -13px;
+            width: 0;
+            border-bottom: solid 20px #114e71;
+            border-right: solid 13px transparent;
+            border-left: solid 13px transparent;
+            transform: rotate(0deg);
+    }
+
+    .boxArrowsBottom > li:nth-child(2){border-left: 16px solid transparent; margin-left:598px;  }
+
+    .boxArrowsBottom > li:nth-child(2) > .empty { border-bottom: solid 20px #b3cf4f; }
     /*Slide 3*/
 
     .monthBoxes{margin-top:260px; width:940px; height:90px;}
     .monthBoxes > li {height: 60px; width:110px; display: inline-block;}
-    .monthBoxes > li > p { padding:23px; color:white; position: absolute; font-family: "interstateregular"; font-size:16px;}
+    .monthBoxes > li > p { padding:23px; padding-top:20px; color:white; position: absolute; font-family: "interstateregular"; font-size:16px;}
     .monthBoxes > li:last-child > p {padding-right: 35px; padding-left: 10px;}
     .monthBoxes > li:nth-child(odd){background-color:#074e73;}
     .monthBoxes > li:nth-child(even){background-color:#b3d043;}
@@ -123,18 +189,48 @@
     .monthBottomStick > li {background-image: url('./img/monthBottomStick.png');background-repeat: no-repeat; width: 120px; height: 80px;
 							display: inline-block;	margin-left: 110px;	margin-top: -75px; margin-right: -4px;}
 
-	.textAboveTopStick {position:absolute; width:915px; height: 100px; margin-top:-250px;}
-	.textAboveTopStick > ul {display: inline-block; margin-left:-2px; margin-right:102px; list-style: disc;}
+	.textAboveTopStick {position:absolute; width:915px; height: 100px; margin-top:-260px;}
+	.textAboveTopStick > ul {display: inline-block; margin-left:-2px; margin-right:102px; list-style: disc; line-height: 25px;}
     .textAboveTopStick > ul:first-child {margin-left:20px;}
     .textAboveTopStick > ul:last-child > li { margin-left:25px; }
 
 
     .textBelowBottomStick {position:absolute; width:915px; height: 100px; margin-top:-40px;}
-    .textBelowBottomStick > ul {display: inline-block; margin-left:125px; vertical-align: top; list-style: disc;}
+    .textBelowBottomStick > ul {display: inline-block; margin-left:125px; vertical-align: top; list-style: disc; line-height: 25px;}
     .textBelowBottomStick > ul:nth-child(2){margin-left: 135px;}
     .textBelowBottomStick > ul:nth-child(3){margin-left: 130px;}
     .textBelowBottomStick > ul:last-child  { margin-left:110px; }
     .textBelowBottomStick > ul > li {color: #b4ce4e;}
+
+    /*SLIDE 4*/
+    .subHeading {margin-top:50px; font-family: "interstatelight"; word-spacing: -0.1em; font-size: 18px;}
+    .slide4Image {
+		position: absolute;
+		background-image: url('./img/starter_kit_image.png');
+		width: 855px;
+		height: 495px; 
+		background-repeat: no-repeat;
+		margin-top: 30px;
+		margin-left: 30px;
+    }
+
+    .informationLogo {position: absolute; background-image: url('./img/i_icon.png'); width:60px; height:60px; margin-top:440px; }
+
+
+    /*Slide 5*/
+    .capsuleBody{width:945px; height:435px; margin-top:40px;}
+    .capsuleBody > li {display: inline-block; margin-left:15px; float:left;}
+    .capsuleBody > li:first-child{width:305px; height:430px; background-color:#d9e4ea;}
+    .capsuleBody > li:last-child{width:605px; height:430px; background-color:#d9e4ea; }
+
+    .capsuleBody > li:first-child > ul {margin-top:20px; margin-left: 35px; margin-right: 29px; }
+
+    .capsuleBody > li:first-child > ul > li { list-style: disc; font-size: 18px; 
+    font-family: "interstatelight"; line-height: 22px; word-spacing: -0.13em;}
+    .capsuleBody > li:last-child > ul > li { background-image: url('./img/product_shot.png'); 
+    background-repeat:no-repeat; width:610px; height:430px;}
+
+
 
 </style> 
 
@@ -164,6 +260,16 @@
                         <li></li>
                         <li></li>
                         <li></li>
+                        <ul>
+                        	<li>Lynparza Patient<br />Access Programme</li>
+                        	<li>Lynparaza Patient<br />Support Programme</li>
+                        	<li>Lynparza<br />Patient Starter Kit</li>
+                        </ul>
+                        <ul>
+                        	<li></li>
+                        	<li></li>
+                        	<li></li>
+                        </ul>
                     </ul>  
 
                     <li class="swiper-slide" data-slide="2" >
@@ -172,14 +278,26 @@
                         </h2>
                     <ul class="diagrams">
                     	<ul class="boxArrowsTop">
-                     		<li></li>
-                     		<li></li>
-                     		<li></li>
-                     		<li></li>
+                     		<li>
+                                <div class="empty"></div>     
+                            </li>
+                     		<li>
+                                <div class="empty"></div>     
+                            </li>
+                     		<li>
+                                <div class="empty"></div>     
+                            </li>
+                     		<li>
+                                <div class="empty"></div>     
+                            </li>
 	                    </ul>
 	                    <ul class="boxArrowsBottom">
-                     		<li></li>
-                     		<li></li>
+                     		<li>
+                                <div class="empty"></div>     
+                            </li>
+                     		<li>
+                                <div class="empty"></div>     
+                            </li>
 	                    </ul>
                     	<li>
                     		<ul class="firstContent">
@@ -193,8 +311,8 @@
                     		<ul class="secondContent">
                     			<li></li>
                     			<li>PATIENT REGISTRATION</li>
-                    			<li>Doctor completes online registration form via<br /><ib>www.astrazenecaoncology.com.au</ib><br />+<br />
-                    			   <ib>writes a private script for patient</ib><br />Doctor provides patient with CMI
+                    			<li>Doctor completes online registration form via<br /><strong>www.astrazenecaoncology.com.au 
+                    			<p class="plusSignBreak">+</p>writes a private script for patient</strong><br />Doctor provides patient with CMI
                     			</li>
 
                     		</ul>
@@ -211,7 +329,7 @@
                     			<li></li>
                     			<li>PATIENT CONTINUATION</li>
                     			<li>Doctor completes online continuation from via<br />
-                    				<blue>www.astrazenecaoncology.com.au <br />+<br />writes a private script for patient</blue>
+                    				<strong>www.astrazenecaoncology.com.au <p class="plusSignBreak">+</p> writes a private script for patient</strong>
                     			</li>
                     		</ul>
                     	</li>
@@ -236,14 +354,14 @@
                             MY LYNPARZA PATIENT SUPPORT PROGRAMME
                         </h2>
                         <ul class="monthBoxes">
-                        	<li><p>Month <ib class="months">1</ib></p></li>
-                        	<li><p>Month <ib class="months">2</ib></p></li>
-                        	<li><p>Month <ib class="months">3</ib></p></li>
-                        	<li><p>Month <ib class="months">4</ib></p></li>
-                        	<li><p>Month <ib class="months">5</ib></p></li>
-                        	<li><p>Month <ib class="months">6</ib></p></li>
-                        	<li><p>Month <ib class="months">9</ib></p></li>
-                        	<li><p>Month <ib class="months">12</ib></p></li>
+                        	<li><p>Month <strong class="months">1</strong></p></li>
+                        	<li><p>Month <strong class="months">2</strong></p></li>
+                        	<li><p>Month <strong class="months">3</strong></p></li>
+                        	<li><p>Month <strong class="months">4</strong></p></li>
+                        	<li><p>Month <strong class="months">5</strong></p></li>
+                        	<li><p>Month <strong class="months">6</strong></p></li>
+                        	<li><p>Month <strong class="months">9</strong></p></li>
+                        	<li><p>Month <strong class="months">12</strong></p></li>
                         </ul>
                         <ul class="monthBoxArrowsTop">
                      		<li></li>
@@ -303,6 +421,38 @@
                                 <li>Thankyou<br />letter and<br /> feedback<br />survey</li>
                             </ul>
 	                    </ul>
+
+                    </li>
+
+                    <li class="swiper-slide" data-slide="4" >
+                         <h2><span>PATIENT SUPPORT</span>
+                            LYNPARZA PATIENT SUPPORT KIT
+                        </h2>
+                        <p class="subHeading">All patients who are registered on the LYNPARZA Patient Access Programme will receive a Patient Starter Kit and access
+                        to the My LYNPARZA Patient Support Program (PSP). Your patient can opt-out of the My LYNPARZA PSP at anytime
+                        </p>
+                        <span class="slide4Image"></span>
+                        <span class="informationLogo"></span>
+                    </li>
+                    <li class="swiper-slide" data-slide="5" >
+                         <h2><span>CAPSULE COMPANION</span>
+                            THE CAPSULE COMPANION IS A SIMPLE WAY TO ORGANISE<br />AND TRANSPORT ONE DAY'S DOSE OF MEDICATION
+                        </h2>
+                        <ul class="capsuleBody">
+                            <li>
+                                <ul>
+                                    <li>It is specifically designed to be bother discreet and portable</li>
+                                    <li>This case helps organise patients' medication during their daily life at home and with friends and family</li>
+                                    <li>The capsule companion is available from AstraZeneca as part of the Patient Starter Kit<br />(available as part of the LPAP)
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </li>
+                        </ul>
 
                     </li>
                 </ul><!-- end swiper-wrapper -->
@@ -392,9 +542,18 @@
 			nextButton: '.swiper-button-next',
         	prevButton: '.swiper-button-prev',
             onSlideChangeStart: function(){
+                var slideID = $(".swiper-slide-active").attr("data-slide");
+                if(slideID == 1)
+                {
+                    document.getElementById("container").style.backgroundImage = 'url("./img/background.jpg")';
+                    document.getElementsByClassName("logo")[0].style.backgroundImage = 'url("./img/lynparza_logo.png")';
+                }
+                else
+                {
+                   document.getElementById("container").style.backgroundImage = "none";
+                   document.getElementsByClassName("logo")[0].style.backgroundImage = 'url("./img/logos.png")';
+               }
 
-               document.getElementById("container").style.backgroundImage = "none";
-               document.getElementsByClassName("logo")[0].style.backgroundImage = 'url("./img/logos.png")';
             }
 		  });
 

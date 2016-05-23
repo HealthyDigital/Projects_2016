@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+    <style type="text/css">
+        .feature{margin-top:115px;;}
+        .lady1, .lady2{display: block; width:329px; height:267px; margin-top:25px;}
+        .lady1:active, .lady2:active{position:relative; top:2px;}
+            .lady1{background:url('img/lady1.png') no-repeat; background-size: 100% auto; float:left; margin-left:120px;}
+            .lady2{background:url('img/lady2.png') no-repeat; background-size: 100% auto; float:right; margin-right:120px;}
+
+        .feature > p{margin-top:20px; color: #444444; font-size:16px;}
+        h1, .feature > p{margin-left:125px;}
+
+        div.pbs{border:1px solid black; width: 740px; position: relative; margin-left: 0; margin:0 auto; margin-top:320px; text-align: center; font-family: 'HelveticaNeueLTStd-Lt'; font-size: 20px; line-height: 24px; padding:20px;}
+
+        strong{font-family: 'HelveticaNeueLTStd-Md';}
+
+    </style>
+    </head>
+    <body class='zoladex'>
+        <div class='container'>
+            <span class='logo'></span>
+            <span class='footer'></span>
+            <span class='ref'></span>
+            <span class='pi'></span>
+
+            <div class='feature'>
+                <h1>Zoladex<sup>®</sup> 3.6mg:<br />Early and advanced breast cancer<sup>1*</sup></h1>
+                <p>* Pre and perimenopausal women suitable for hormone manipulation.</p>
+                <span class='lady1'></span>
+                <span class='lady2'></span>
+                <div class='pbs'><strong>PBS Information:</strong> Restricted Benefit. Breast Cancer<br /> The condition must be hormone receptor positive.</div>
+            </div>
+
+        <div class='ref'>
+            <p>References:</p>
+            <ul>
+                <li>Zoladex 3.6mg Approved Product Information. Date of TGA<br /> approval 11 November 2010. Date of most recent amendment<br />25 June 2015</li>
+            </ul>
+        </div>
+
+        </div>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            navToSlide('.lady1', 'Zoladex-01-EP')
+            navToSlide('.lady2', 'Zoladex-05-AP')
+        }); 
+    </script>
+    </body>
+</html> 
