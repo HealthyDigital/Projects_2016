@@ -1,0 +1,56 @@
+/* CSS Document reset */
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .60em}sub {vertical-align: sub}sup {vertical-align: super ; line-height:10px; }
+* {-webkit-text-size-adjust: none; -webkit-user-select: none; }* { -webkit-user-select: none; }
+
+.container {position:relative; width: 1024px; height:768px; overflow: hidden;}
+.slide{position:absolute; top:0px; left:0px; width:inherit; height:inherit;}
+li{list-style: none}
+em{font-style: italic;}
+/*.slide > h1, .slide > div, .slide > p{margin-left:70px;}*/
+
+.ref{
+	position:absolute;
+	width:50px;
+	height:30px;
+	background: url('../img/icon_references.png') no-repeat;
+	background-size:auto 100%;
+	top:690px;
+	left:42px;
+}
+.ref.white{
+	background-position-x:-53px;
+}
+.pi{
+	position:absolute;
+	width:70px;
+	height:40px;
+	background: url('../img/pi_button.png') no-repeat;
+	background-size: 100% auto;
+	top:auto;
+	left:auto;
+	right:5px;
+	bottom:15px;
+}
+.references{
+	position:absolute;
+	border-radius: 25px;
+	padding: 20px;
+	left:75px;
+	top:768px;
+	display: none;
+}
+
+.references ul{
+	margin-left:15px;
+}
+.references ul li{
+	list-style: decimal;
+}
+.references ul li:not(:last-child){
+	margin-bottom:5px;
+}
+
+.ref:active{top:692px;}
+.pi:active{bottom:13px;}
+
+h1 sup{position:relative; font-size:40%; top:-5px;}

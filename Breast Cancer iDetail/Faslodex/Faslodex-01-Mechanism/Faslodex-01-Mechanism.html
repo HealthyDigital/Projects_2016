@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+    <style type="text/css">
+        i{display:block}
+
+        .feature > i:nth-child(2){
+            margin-top:20px;
+            margin-bottom:10px;
+        }
+
+        .mechanisms{margin-top:20px;}
+
+        .mechanisms > li{
+            float:left;
+            height:475px;
+            width:240px;
+            position:relative;
+            background: url('img/mechanisms.png') no-repeat;
+            background-position: center;
+            background-size:240px auto;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .mechanisms > li:not(:first-child){
+            paddding-left:70px;
+            padding-right:70px;
+            border-left:1px solid #cdcdcc;}
+
+        .mechanisms > li:first-child{padding-right:70px; background-position-y:0px;}
+        .mechanisms > li:nth-child(2){background-position-y:-496px;}
+        .mechanisms > li:last-child{background-position-y:-992px;}
+
+        .grey-buttons{
+            position:absolute;
+            left:465px;
+            top:0px;
+        }
+
+        .grey-buttons > li{
+            text-transform: uppercase;
+            text-align: center;
+            font-size:15px;
+            width:150px;
+            padding-top:13px;
+            padding-bottom:7px;
+            background: -webkit-linear-gradient(#f4f4f4, #dcdcdb);
+            background: linear-gradient(#f4f4f4, #dcdcdb);
+            border-top:2px solid #eeeeee;
+            border-left:2px solid #eeeeee;
+            border-bottom:1px solid #eeeeee;
+            border-radius:3px; 
+        }
+
+        .grey-buttons > li:first-child{margin-bottom:10px;}
+
+        div.video{
+            position:absolute;
+            width:1024px;
+            top:95px;
+            left:-40px;
+            background:rgba(0, 0, 0, 0.8);
+            display: none
+        }
+
+        div.video > video{
+            display:block;
+            margin:0 auto;
+        }
+
+        .info-buttons{
+            position:absolute;
+            left:auto;
+            right:70px;
+            top:245px;
+        }
+
+        /* icons*/
+        .info-buttons > li{
+            background:url('img/icon_sprite.png') no-repeat;
+            background-size:61px auto;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .info-buttons > li{
+            height:40px;
+            width:40px;
+            background-position: -9px -2px;
+            margin-bottom:85px;
+        }
+
+        /* button box shadows */
+        .info-buttons > li, .grey-buttons > li{
+            box-shadow: 3px 3px 5px #888888;
+        }
+
+        /* clicking buttons */
+        .info-buttons > li:active, .grey-buttons > li:active{
+            position:relative;
+            top:2px;
+            box-shadow: none;
+        }
+
+        /* popup bubbles, popup legend */
+        .popup-bubbles > li, div.legend{
+            background:url('img/popup_sprite.png') no-repeat;
+            background-size:280px auto;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .popup-bubbles{
+            position:relative;
+            left:auto;
+            right:125px;
+            top:-18px;
+        }
+
+        .popup-bubbles > li{
+            position:absolute;
+            height:180px;
+            width:280px;
+            display:none;
+        }
+        
+        .popup-bubbles p{
+            font-size:12px;
+            line-height: 14px;
+            padding-left:15px;
+        }
+
+        .popup-bubbles > li:last-child{
+            background-position-y:-177px;
+            top:185px;}
+
+        .popup-bubbles li:first-child p:first-child{padding-top:20px;}
+        .popup-bubbles li:first-child p:last-child{padding-top:50px;}
+        .popup-bubbles li:last-child p{padding-top:65px;}
+
+
+        div.legend{
+            top:40px;
+            left:465px;
+            position:absolute;
+            height:320px;
+            width:280px;
+            background-position-y: -355px;
+            font-size:11px;
+            display:none;
+        }
+
+        div.legend ul{padding-top:24px;}
+
+        div.legend li{
+            margin-left:65px;
+            margin-bottom:17px;
+        }
+
+        .mechanisms-large{
+            width:inherit;
+            height: inherit;
+            position:absolute;
+            top:40px;
+            display: none
+        }
+
+        .mechanisms-large li{
+            float:left;
+            position:absolute;
+            background: url('img/mechanisms.png') no-repeat;
+            background-size:330px auto;
+            height:640px;
+            width:100%;
+            background-position: center 0 ;
+            image-rendering: -webkit-optimize-contrast;
+            display:none;
+        }
+
+        .mechanisms-large li:first-child{background-position-y:0px;}
+        .mechanisms-large li:nth-child(2){background-position-y:-684px;}
+        .mechanisms-large li:last-child{background-position-y:-1366px;}
+
+
+    </style>
+    </head>
+    <body class='faslodex'>
+        <div class="container" >
+            <span class='ref'></span>
+            <span class='pi'></span>
+            <span class='logo'></span>
+            <div class='feature'>
+                <h1>FASLODEX 500 mg</h1>
+                <i>Faslodex 500 mg for postmenopausal women with ER+ locally<br /> advanced or metastatic breast cancer with disease progression<br /> following prior tamoxifen therapy<sup>1</sup></i>
+                <h2>MECHANISM OF ACTION</h2>
+                <i>FASLODEX is an ER antagonist with NO known agonist activity<sup>2</sup></i>
+
+                <!--legend and new video buttons -->
+                <ul class='grey-buttons grey'>
+                    <li class='legend'>legend</li>
+                    <li class='video'>view video</li>
+                </ul>
+
+
+                <ul class='mechanisms'>
+                    <li class='o'></li>
+                    <li class='s'></li>
+                    <li class='f'>
+                        <ul class='popup-bubbles grey'>
+                            <li>
+                                <p>Binds <span class='book'>competitively<br />at the ER, creating a<br />conformational change<sup>2-5</sup></span></p>
+                                <p>Blocks <span class='book'>the binding of<br />oestradiol to the ER in a<br />dose-dependent manner<sup>2,6</sup></span></p>
+                            </li>
+                            <li>
+                                <p>Accelerates <span class='book'>degradation<br /> of the ER in a dose-<br />dependent manner<br/> and inhibits both<br /> dimerisation and nuclear<br /> translocation<sup>2,3,6</sup></span></p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- i info buttons -->
+                <ul class='info-buttons'>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+                <div class='legend grey book'>
+                    <ul>
+                        <li>Oestradiol</li>
+                        <li>Tamoxifen</li>
+                        <li>FASLODEX</li>
+                        <li>ERE (oestrogen response<br /> element)</li>
+                        <li>AF1 (activation function 1)</li>
+                        <li>AF2 (activation function 2)</li>
+                        <li>Coactivator</li>
+                        <li>ER (oestrogen receptor)</li>
+                        <li>ER inactive</li>
+                        <li>RNA polymerase ||</li>
+                    </ul>
+                </div>
+
+                <div class='video'>
+                    <video src="video/faslodex.mp4" width="746" height="560" id = 'vid' controls></video>
+                </div>
+
+            </div>
+            <div class='mechanisms-large'>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <span class='close'></span>
+            </div>
+            <div class='ref'>
+                <ul>
+                    <li>Faslodex Approved Product Information. Date of TGA approval<br />6 March 2006. Date of Most recent amendment 22 October 2014.</li>
+                    <li>Howell A. <em>Int J Gynecol Cancer</em> 2006; 16 Suppl 2: 521–3.</li>
+                    <li>Wakeling AE. <em>Endocr Relat Cancer</em> 2000; 7(1): 17–28.</li>
+                    <li>Dowsett M <em>et al. Breast Cancer Res Treat</em> 2005; 93 Suppl 1: S11–8.</li>
+                    <li>Parker MG. <em>Breast Cancer Res Treat</em> 1993; 26(2): 131–7.</li>
+                    <li>Carlson RW. <em>Clin Breast Cancer</em> 2005; 6 Suppl 1: S5–8.</li>
+                </ul>
+            </div>
+        </div>
+
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            $('.info-buttons > li').on('tap', function(){
+                var i = $(this).index();
+                var item = $('.popup-bubbles > li').get(i);
+                show_hide(item)
+            })
+
+            $('.grey-buttons > li').on('tap', function(){
+                var c = $(this).attr('class')
+                var item = $('div.' + c);
+
+                if(c == 'video'){
+                    var v = document.getElementById('vid');
+                    if($(item).is(':visible')){
+                        $(item).fadeOut();
+                        $(this).html('view video');
+                        vid.pause()
+                    }
+                    else{
+                        $(item).fadeIn();
+                        $(this).html('close');
+                        vid.currentTime = 0;
+                        vid.play();
+                    }
+                }
+                else{
+                    show_hide(item);
+                }
+            })
+
+            $('.mechanisms > li:not(.info-buttons)').on('tap', function(){
+               var i = $(this).index();
+               $('.container > *').fadeOut();
+               $($('.mechanisms-large li').get(i)).add('.mechanisms-large').fadeIn();
+            })
+
+            $('.close').on('tap', function(){
+                $('.container > *:not(div.ref)').fadeIn();
+                $('.mechanisms-large, .mechanisms-large li').fadeOut();
+                
+            })
+
+            function show_hide(e){
+                $(e).is(':visible') ? $(e).fadeOut() : $(e).fadeIn();
+            }
+        });
+
+    </script>
+    </body>
+</html> 

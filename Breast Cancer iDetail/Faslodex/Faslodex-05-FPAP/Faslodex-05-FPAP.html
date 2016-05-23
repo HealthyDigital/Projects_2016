@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+    <style type="text/css">
+        /* common accross pages 
+
+        pg1 = faslodex dosing
+        pg2 = eligibility
+        pg3 = how does the programme work?
+        pg4 = faq
+
+
+        */
+
+         body{
+            font-family: 'AvenirLTStd-Medium';
+        }
+
+        strong{
+            font-family: 'AvenirLTStd-Heavy';
+        }
+
+        .faslodex .feature{
+            position:absolute;
+            top:40px;
+            left:40px;
+            margin: 0
+        }
+
+        .feature p, .feature ul{
+            color: rgba(51, 51, 51, 51);
+        }
+        
+        /* setting popup display */
+        .feature:not(.home){
+            display:none;
+        }
+        
+        .faslodex .close{
+            left:910px;
+        }
+
+        .lower{
+            text-transform: none;
+        }
+
+        .pg2, .pg3{
+            font-size:18px; line-height:22px;
+        }
+        
+
+        /* rounded bubble boxes on home page and dosing page */
+        .row1 > span, .row2 > span{
+            display:inline-block;
+            position:relative;
+            border-radius:10px;
+            padding-top:10px;
+            padding-bottom:10px;
+            font-size: 15px;
+            line-height:19px;
+            text-align: center;
+            margin-bottom:20px;
+        }
+
+        .row1 > span{
+            color: white;
+            background-color: #743a91;
+            border:1px solid #743a91;
+        }
+
+        .row1 > span.orange{
+            background-color: #f98f3e;
+            border:1px solid #f98f3e;
+            color: white;
+        }
+
+        .row2 > span{
+            border:2px solid #989898;
+            background-color: white;
+            color: rgba(51, 51, 51, 51);
+        }
+
+
+        /* buttons */
+        .button{
+            width:220px;
+            height:40px;
+            background: -webkit-linear-gradient(#fa9847, #f88439);
+            background: linear-gradient(#fa9847, #f88439);
+            border-radius: 5px; box-shadow: 3px 3px 3px #888888;
+            text-align: center;
+            text-transform: uppercase;
+            display:table-cell;
+            vertical-align: middle;
+            font-size: 14px;
+            line-height:16px;
+            color: white;
+        }
+        
+        .button:active{
+            position:relative;
+            top:2px; box-shadow:
+            none;}
+
+
+        /* common colours */
+        .feature .dark-grey{
+            color: rgba(51, 51, 51)
+        }
+
+        .feature .purple{
+            color:#733C97;
+        }
+
+
+        /* home page */
+        .flow-chart{
+            margin-top:125px;
+        }
+
+        .flow-chart li{
+            margin-bottom: 10px
+        }
+
+        .flow-chart .row1{
+            margin-bottom:-15px;
+        }
+
+        .flow-chart li:first-child{
+            margin-bottom: 30px;
+            font-size: 20px
+        }
+
+        .flow-chart li > span{
+            width:200px
+        }
+
+        .flow-chart span:not(:last-child){
+            margin-right:30px;
+        }
+
+        .flow-chart .row1 span:not(:last-child):after{
+            content:'';
+            display:inline-block;
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 15px solid #7f7e82;
+            position:absolute;
+            top:10px;
+            left:auto;
+            right:-25px;
+        }
+
+        .flow-chart .row2 > span:nth-child(2){
+            padding-top:0px;
+            padding-bottom: 1px;
+            top:9px;
+        }
+
+        .flow-chart a{
+            text-decoration: none; color: #733C97;
+        }
+
+        .flow-chart > li > .button{
+            position:relative;
+            left:225px;
+        }
+
+
+       /* pg1 faslodex dosing */
+       .dose-chart{
+            margin-top:135px;
+        }
+
+        .dose-chart .row1 > span{
+            font-size:18px;
+        }
+
+        .dose-chart .row1 > span:first-child{
+            width:370px;
+        }
+
+        .dose-chart .row1 > span:last-child{
+            width:230px;
+        }
+
+        .dose-chart .row2 > span{
+            width:180px;
+            padding-top:100px;
+            margin-right:0px;
+        }
+
+        .dose-chart .row2 > span:last-child{
+            width:230px; 
+        }
+
+        .dose-chart .row2:after{
+            content:"";
+            background:url('img/arrow.png') no-repeat;
+            width:580px;
+            height:100px;
+            background-size:100% auto;
+            position:absolute;
+            left:15px;
+            top:235px
+        }
+
+        .dose-chart > li > ul li{
+            list-style-type: disc;
+            color: #724199;
+            margin-bottom:10px;
+            margin-left:20px;
+        }
+
+
+        /* pg2 - eligibility */
+        .pg2 > p{
+            margin-top:70px;
+        }
+
+        .pg2 > ul{
+            margin-left:35px;   
+        }
+
+        .pg2 > ul li{
+            width:555px;
+            margin-top:30px;
+            position:relative;
+        }
+
+        .pg2 > ul li:before{
+            content:'';
+            background:url('img/tick.png') no-repeat;
+            position:absolute;
+            background-size:100% auto;
+            width:50px;
+            height:50px;
+            left:-45px;
+            top:-10px;
+        }
+
+
+        /* dropdown pages 3 and 4 */
+        .dropdown-wrapper{
+            width: 695px;
+            height:550px;
+            overflow-y:auto;
+            overflow-x: hidden;
+        }
+
+        .dropdown-menu{
+            margin-left:20px;
+            font-size:18px;
+            margin-bottom: 20px
+        }
+
+        .dropdown-menu li{
+            position: relative;
+        }
+
+        .dropdown-menu > li{
+            font-family: 'AvenirLTStd-Heavy';
+            color: #F7922A;
+            list-style-type: decimal;
+            padding-bottom:25px;
+            padding-top:20px;
+            border-bottom:1px solid #989898;
+            width:650px;
+            line-height: 23px;
+
+        }
+
+        .dropdown-menu > li.minimized:before{
+            content:'';
+            position:absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent; 
+            border-right: 10px solid transparent;
+            border-top: 10px solid #744094;
+            left:auto;
+            right:0px;
+            top:35px;
+            opacity:0.4;
+        }
+
+        .dropdown-menu > li:not(.minimized):before{
+            content:'';
+            position:absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #744094;
+            left:auto;
+            right:0px;
+            top:25px;
+        }
+
+        .dropdown{
+            font-family: 'AvenirLTStd-Medium';
+            width:595px;
+            display: none;
+            line-height: 23px;
+        }
+
+        .dropdown li{
+            margin-top:10px;
+            text-indent:-0.7em;
+            margin-left:25px;
+        }
+
+        .dropdown li:before{
+            content: "• ";
+            color: #f98f40;
+            position:relative;
+            left:-10px;
+        }
+        
+        .dropdown li.small{
+            margin-left:50px
+        }
+        
+        .dropdown li.small:before{
+            color:#733C97;
+        }
+
+        .dropdown em{
+            font-style: italic;
+        }
+
+        .dropdown li em{
+            color:#733C97;
+        }
+
+        .dropdown p{margin-top:20px;}
+
+
+        /* pg3 and pg4 */
+        .pg3 > p, .pg4 > p{
+            margin-top:40px
+        }
+
+        .pg3 > h1{
+            margin-bottom:20px;
+        }
+
+        .pg3 > ul{
+            margin-bottom:20px;
+        }
+
+        .pg3 .dropdown-menu li.extra-padding{
+            padding-bottom:20px;
+        }
+
+        .pg4 .dropdown-menu{
+            margin-top:40px;
+        }
+
+
+        /* fixed sidebar*/
+        .sidebar{
+            position:fixed;
+            left:770px;
+            top:230px;
+        }
+        
+        .sidebar .grape-lady{
+            height:243px;
+            background:url('img/older_lady.png') no-repeat;
+            background-size:100% auto;
+        }
+        
+        .sidebar li{
+            width:220px;
+            margin-bottom:10px;
+        }
+        
+        .sidebar li:not(:first-child){
+            display:table;
+        }
+        
+        .sidebar:before{
+            content:'';
+            display:block;
+            position:absolute;
+            width:1px;
+            height:420px;
+            background-color:#989898;
+            left:-35px; 
+        }
+
+        
+
+    </style>
+    </head>
+    <body class='faslodex'>
+        <div class="container" >
+            <span class='ref'></span>
+            <span class='pi'></span>
+            <span class='logo'></span>
+            
+            <!-- main page -->    
+            <div class='feature home'> 
+                
+                <h1>faslodex patient access<br />programme</h1>
+
+                <ul class='flow-chart'>
+                    <li><a href='http://www.astrazenecaoncology.com.au/'>Enrol online at <strong>www.astrazenacaoncology.com.au</strong></a></li>
+                    <li class='row1'>
+                        <span class='orange'>INITIAL THERAPY<br />(First month)</span>
+                        <span>SUBSEQUENT THERAPY<br />(2nd, 3rd & 4th month)</span>
+                        <span>ONGOING THERAPY<br />(5th month onwards)</span>
+                    </li>
+                    <li class='row2'>
+                        <span>Starting dose and<br/>loading dose funded<br />by AstraZeneca</span>
+                        <span>&nbsp;<br />Next 3 doses<br />funded by patient<br />&nbsp;</span>
+                        <span>Further ongoing<br />doses funded<br />by AstraZeneca</span>
+                    </li>
+                    <li><span class='button pg1'>FASLODEX DOSING</span></li>
+                </ul>
+            </div>
+
+
+            <!-- faslodex dosing -->
+            <div class='feature pg1'>
+                <span class='close'></span>
+                <h1>faslodex 500 <span class='lower'>mg</span> dosing<sup>1</sup></h1>
+                <ul class='dose-chart'>
+                    <li class='row1'>    
+                        <span class='orange'>First month (Starting dose)</span>
+                        <span>Following Months</span>
+                    </li>
+                    <li class='row2'>
+                        <span><span class='orange'>Day1</span><br /><span>500 mg</span></span>
+                        <span><span class='orange'>Day 15 (loading dose)</span><br /><span>500 mg</span></span>
+                        <span><span class='orange'>Monthly</span><br /><span>500 mg</span></span>
+                        
+                    </li>
+                    <li>
+                        <ul>
+                            <li>To be administered intramuscularly - one injection in each buttock<sup>1</sup></li>
+                            <li>The injection should be administered slowly (1-2 minutes per injection)<sup>1</sup></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- faslodex eligibility -->
+            <div class='feature pg2'>
+                <span class='close'></span>
+                <h1>WHAT ARE THE ELIGIBILITY <br /> CRITERIA FOR THE PROGRAMME?</h1>
+                <p><strong>Under this programme, AstraZeneca will supply a proportion of the<br />
+                    patient’s FASLODEX treatment free of charge for patients who:</strong></p>
+                <ul>
+                    <li>are using FASLODEX as per the approved indication for use in Australia: <em>the treatment of postmenopausal women with hormone receptor positive, locally advanced or metastatic breast cancer who have progressive disease following prior tamoxifen therapy<sup>1</sup></em></li>
+                    <li>are deemed appropriate to start treatment with FASLODEX 500 mg (for NEW patients)</li>
+                    <li>are deemed by their doctor to be demonstrating an ongoing clinical benefit from FASLODEX 500 mg (for patients being MAINTAINED on therapy).</li>
+                </ul>
+            </div>
+
+
+            <!-- how the programme works -->
+            <div class='feature pg3'>
+                <h1>How does the FASLODEX patient<br />access programme work?</h1>
+                <span class='close'></span>
+                <div class='dropdown-wrapper'>
+                    <p class='purple'>Step-By-Step Guide for Physicians</p>
+                    <ul class='dropdown-menu'>
+                        <li class='minimized'><span class='purple'>Enrolling an eligible patient for initial treatment</span>
+                            <div class='dropdown'>
+                                <p>Advise the patient of the programme and explain that the <em>first month is free.</em> They will be required to pay for 3 months of therapy (month 2, 3 and 4) if they continue on FASLODEX, being eligible for free stock again following the 4th completed month of therapy.</p>
+                                <ul>
+                                    <li>To enrol a patient, complete the <em>Patient Registration Form</em> and<br />sign, date, and <em>fax or email to Symbion on 1300 016 995 or symbion.map@symbion.com.au.</em> The <em>Patient Registration Form</em> acts as an order form for the patient’s first delivery of FASLODEX so it’s important that all details are accurate and that all required fields are completed. (Note that a physical address must be provided for delivery, PO boxes are not suitable).</li>
+                                    <li>You can also complete patient registration online at<br /><em>www.astrazenecaoncology.com.au</em></li>
+                                    <li class='small'><em>Write a prescription for FASLODEX</em> for the patient to take to the nominated pharmacy for collection of their initial month’s supply of FASLODEX.</li>
+                                    <li>Provide patient with the <em>Patient Guide</em> containing an overview of the programme and information on FASLODEX.</li>
+                                    <li> Review patient <em>at least 5 days</em> before next injection to determine whether continuation of FASLODEX required.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='minimized'><span class='purple'>Subsequent treatment – For patients demonstrating ongoing clinical<br />
+                            benefit after their first month of treatment.</span>
+                            <div class='dropdown'>
+                                <ul>
+                                    <li> Prescribe FASLODEX as a private prescription and advise the patient they will be required to pay for the next 3 months of therapy and to <em>present their prescription at their pharmacy for processing.</em></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='minimized'><span class='purple'>Maintenance treatment – For patients continuing to gain clinical benefit<br />
+                            after their 4th month of treatment.</span>
+                            <div class='dropdown'>
+                                <p>Patients enrolled in the programme who have completed their fourth month of therapy and continue to gain a positive clinical benefit are <span class='purple'>eligible for continued supply of FASLODEX free of charge.</span></p>
+                                <ul>
+                                    <li>It is recommended that the patient is assessed to determine whether continuation of FASLODEX is required.</li>
+                                    <li>Complete the <em>Patient Continuation Form and fax or email to Symbion on 1300 016 995 or symbion.map@symbion.com.au.</em></li>
+                                    <li>Allow 5 working days for delivery of FASLODEX.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <p>On a monthly basis, continue to complete and return the Patient Continuation<br />Form as described above, until the patient no longer requires FASLODEX.</p>
+                </div>
+            </div>
+
+
+            <!-- FAQ -->
+            <div class='feature pg4'>
+                <span class='close'></span>
+                <h1>frequently asked questions</h1>
+                <div class='dropdown-wrapper'>
+                    <ul class='dropdown-menu orange'>
+                        <li class='minimized'><span class='purple'>How long will AstraZeneca continue to fund FASLODEX under this <br />programme?</span>
+                            <div class='dropdown'>
+                                <p>The Programme is open for new enrolments until <span class='purple'>31st December, 2016.</span> <br />
+                                For all patients who have entered the programme, AstraZeneca will<br />
+                                continue to provide FASLODEX free of charge for the proportion of<br />
+                                treatment specified until such time as:</p>
+                                <ul>
+                                    <li>the Doctor deems that the patient is no longer gaining any clinical benefit from treatment; or</li>
+                                    <li>until FASLODEX becomes available on the PBS.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='minimized'><span class='purple'>How will patients receive their initial supply of stock under the<br /> programme?</span>
+                            <div class='dropdown'>
+                                <ul>
+                                    <li><span class='purple'><em>Following receipt of the Patient Registration Form, Symbion will process the order.</em></span></li>
+                                    <li><span class='purple'><em>The Patient Registration Form will secure the initial 2 doses of FASLODEX (ie: starting dose and additional loading dose required when FASLODEX is initiated)</em></span></li>
+                                    <li><span class='dark-grey'>Symbion will arrange couriered delivery of FASLODEX to the pharmacy nominated on the Patient Registration Form.</span></li>
+                                    <li><span class='dark-grey'>The nominated pharmacy will store FASLODEX (refrigerated between 2 – 8°C) until patient presents for collection.</span></li>
+                                    <li><span class='dark-grey'>Please allow 5 working days for delivery of FASLODEX to the specified pharmacist. FASLODEX will not be delivered on Fridays or on a day before a public holiday to ensure the cold chain storage requirements are enforced.</span>
+                                    <li><span class='dark-grey'>Please contact AstraZeneca Medical Information on 1800 805 342 or via email at medinfo.australia@astrazeneca.com for any further enquiries.</span></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class='minimized'><span class='purple'>How are orders made for additional FASLODEX stock?</span>
+                            <div class='dropdown'>
+                                <p>After a patient has been registered for the programme and received four months of therapy (first month funded by AstraZeneca and subsequent months funded by the patient via private prescription) additional stock can be ordered for the patient on a monthly basis using the <em><span class='purple'<em>Patient Continuation Form or online at www.astrazenecaoncology.com.au.<br /><br />Following receipt of the Patient Continuation Form, Symbion will process these orders</span></em> and arrange delivery of stock in the same process outlined for initial orders above.</p>
+                            </div>
+                        </li>
+                        <li class='minimized'><span class='purple'>Will AstraZeneca collect any data on patients enrolled in this programme?</span>
+                            <div class='dropdown'>
+                                <p>AstraZeneca will only collect de-identified data for the purpose of<br />
+                                administering the programme. <span class='purple'><em>The Registration Form acts as an order form for the patient’s first delivery of FASLODEX. All fields in the form must be completed to enable registration and processing of the first order of FASLODEX. Please note that the form requires a physical address be provided for the nominated pharmacy (not a PO box) to enable delivery of stock.</em></span></p>
+                            </div>
+                        </li>
+                        <li class='minimized'><span class='purple'>Will health funds subsidise the cost borne by the patient for FASLODEX<br /> treatment?</span>
+                            <div class='dropdown'>
+                                <p>Private health funds differ in terms of policies for reimbursement of costs associated with cancer treatments and this may depend on whether the patient is receiving treatment at home or whilst in hospital. AstraZeneca advises patients to contact their policy provider and seek clarification on entitlement to claim for costs associated with this treatment.</p>
+                            </div>
+                        </li>
+                        <li class='minimized'><span class='purple'>Who do I contact if I have specific questions regarding FASLODEX or the<br />FASLODEX Patient Access Programme?</span>
+                            <div class='dropdown'>
+                                <p>Please contact AstraZeneca Medical Information on <span class='purple'><em>1800 805 342</em></span> or via<br />email <span class='purple'><em>at medinfo.australia@astrazeneca.com</em></span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class='sidebar'>
+                <li class='grape-lady'></li>
+                <li><span class='button pg2'>eligibility</span></li>
+                <li><span class='button pg3'>how does the<br />programme work?</span></li>
+                <li><span class='button pg4'>frequently<br />asked questions</span></li>
+            </ul>
+
+            <div class='ref'>
+                <ul>
+                    <li>Faslodex Approved Product Information. Date of TGA approval<br />6 March 2006. Date of Most recent amendment 22 October 2014</li>
+                </ul>
+            </div>
+
+        </div>
+
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            var dosing = document.getElementsByClassName('button')[0]
+            //alert(dosing)
+
+            $('.button').on('tap', function(){
+                var pg = '.' + ($(this).attr('class').split(' '))[1];
+                $('.feature, .logo, .ref').fadeOut();
+                $(pg).fadeIn();
+            })
+
+            $('.close').on('tap', function(){
+                $('.feature').fadeOut();
+                $('.home, .logo, span.ref').fadeIn();
+            })
+
+            $('.dropdown-menu > li').on('tap', function(){
+                var droplist = $(this).children('.dropdown');
+                if($(this).hasClass('minimized')){
+                    $(this).removeClass('minimized')
+                    $(droplist).slideDown()
+                }
+                else{
+                    $(this).addClass('minimized')
+                    $(droplist).slideUp()
+                }
+            })
+        });
+
+    </script>
+    </body>
+</html> 

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+    <style type="text/css">
+
+        .feature{
+            position:absolute;
+            top:126px;
+            left:40px;
+        }
+
+        .feature > ul{
+            margin-top:20px;
+        }
+
+        .feature li{
+            font-size:21px; 
+            line-height:26px;
+        }
+
+       .feature li:before{
+            content:'•';
+            display: inline-block;
+            color:#e9167d;
+            border-radius: 100%;
+            position:relative;
+            left:-5px;
+        }
+
+        .feature li.small{
+            font-size:17px;
+            line-height:22px;
+            margin-left:20px;
+            margin-bottom:10px;
+            margin-top:5px;
+        }
+
+        .graph{
+            display:block;
+            width:845px;
+            height:402px;
+            margin-top:-10px;
+            margin-left:80px;
+            background:url('img/graphs.png') no-repeat;
+            background-size:100% auto;
+            image-rendering:-webkit-optimize-contrast;
+        }
+
+        .feature.f2 .graph{
+            background-position-y:-406px;
+        }
+
+        .button{
+            position:absolute;
+            top:433px;
+            left:43px;
+            width:50px;
+            height:115px;
+            background:url('img/slider.png');
+            background-size: 100% auto;
+            -webkit-transition: background-color 0.5s;
+            transition: background-color 0.5s;
+        }
+        
+        .button .circle{
+            left:0px;
+            height:45px;
+            width:50px;
+            position:relative;
+            display:inline-block;
+            background:inherit;
+            background-position-y:-283px;
+            background-color: transparent;
+            -webkit-transition: top 0.5s;
+            transition: top 0.5s
+        }
+
+        .button .text{
+            font-family: 'SerifaStd-Bold';
+            font-size:15px;
+            color: white;
+            position:absolute;
+            left:10px;
+            -webkit-transition: top 0.5s;
+            transition: top 0.5s
+        }
+        
+        .container.f1 .button{background-color: #6b5f8a}
+        .container.f1 .circle{top:2px;}
+        .container.f1 .button .text{top:70px;}
+
+        .container.f2 .button{background-color: #ef0085}
+        .container.f2 .circle{top:68px;}
+        .container.f2 .text{
+            top:35px;
+            left:15px;}
+
+        .footnote{
+            font-family: 'HelveNeuLigCon';
+            position:absolute;
+            top:auto;
+            bottom:55px;
+            left:160px;
+            color: #4D4D4D;
+            font-size:12px;
+        }
+
+        span.study{
+            position:absolute;
+            top:auto;
+            bottom:47px;
+            left:100px;
+            width:30px;
+            height:30px;
+            background:url('img/info.png') no-repeat;
+            background-size:100% auto;
+            image-rendering:-webkit-optimize-contrast;
+        }
+
+        span.study:active{
+            bottom:45px;
+        }
+
+        div.study p{
+            width:436px;
+        }
+
+        .zoladex div.study{
+            line-height: 17px
+        }
+
+        
+    </style>
+    </head>
+    <body class='zoladex'>
+        <div class="container f1" >
+            <span class='logo'></span>
+            <span class='footer'></span>
+            <span class='ref'></span>
+            <span class='pi'></span>
+            <span class='study'></span>
+
+            <div class='feature f1''>
+                <h2>Zoladex<sup>®</sup> is as effective as CMF* chemotherapy for disease-free survival (DFS)<br />in ER+ early premenopausal breast cancer<sup>1,2</sup></h2>
+                <ul>
+                    <li>In ER positive, pre and perimenopausal patients (at a median follow-up of 7.3 years)<sup>2</sup></li>
+                    <li>Disease-free survival was equivalent between Zoladex and CMF<sup>*2</sup></li>
+                    <li class='small'>HR=1.05; 95% CI:0.88–1.24; P=0.597<sup>2</sup></li>
+                </ul>
+                <span class='graph'></span>
+            </div>
+
+            <div class='feature f2 hide'>
+                <h2>Zoladex<sup>®</sup> is as effective as CMF* chemotherapy for overall survival (OS) in ER+ early premenopausal breast cancer<sup>1,2</sup></h2>
+                <ul>
+                    <li>In ER positive, pre and perimenopausal patients (at a median follow-up of 7.3 years)<sup>2</sup></li>
+                    <li>Overall survival was non-inferior to CMF*<sup>2</sup></li>
+                    <li class='small'>HR=0.94; 95% CI:0.75-1.18; P=0.622<sup>2</sup></li>
+                </ul>
+                <span class='graph'></span>
+            </div>
+
+            <div class='button'>
+                <span class='text'>DFS</span>
+                <span class='circle'></span>
+            </div>
+
+            <p class='footnote'>*cyclophosphamide, methotrexate and fluorouracil</p>
+
+            <div class='ref'>
+                <p>References:</p>
+                <ul>
+                    <li>Jonat W et al. <em>J Clin Oncol 2002</em>;20(24):4628-35</li>
+                    <li>Kaufmann M et al. <em>Eur J Cancer </em>;39:1711-1717</li>
+                    <li>De Haes H et al. <em>J Clin Oncol 2003</em>; 21 (24): 4510-4516</li>
+                </ul>
+            </div>
+
+            <div class='study'>
+                <p>Study Design (ZEBRA study<sup>1,2</sup>)<br />
+                    International, multicentre, open, randomised study in premenopausal patients with node-positive early breast cancer.<br /> 
+                    After local therapy for breast cancer (mastectomy or breast-conserving therapy with or without radiotherapy, according to local practice), patients were randomised in a 1:1 ratio to receive goserelin 3.6mg every 28 days for 2 years or 6 x 28 day cycles of CMF chemotherapy (cyclophosphamide 500mg/m<sup>2</sup> intravenously (IV) on days 1 and 8, or 100mg/m<sup>2</sup> orally on days 1 through 14, methotrexate 40mg/m2 IV on days 1 and 8 and fluorouracil 600mg/m<sup>2</sup> IV on days 1 and 8)<br />
+                    The primary efficacy parameters were disease-free survival (DFS) and overall survival (OS).<br />
+                    Safety was assessed by overall therapy tolerance and the occurrence of adverse events.
+                </p>
+            </div>
+
+        </div>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('.button').on('tap', function(){
+                if($('.container').hasClass('f1')){
+                    $('.container').removeClass('f1').addClass('f2');
+                    $('.button .text').html('OS')
+                    $('.f1').fadeOut();
+                    $('.f2').fadeIn();
+                }
+                else{
+                    $('.container').removeClass('f2').addClass('f1');
+                    $('.button .text').html('DFS')
+                    $('.f2').fadeOut();
+                    $('.f1').fadeIn();
+                }
+            })
+
+
+        });
+    </script>
+    </body>
+</html> 

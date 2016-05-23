@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="AstraZeneca | LYNPARZA">
+<title>AstraZeneca | LYNPARZA</title>
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style type="text/css">
+	.green{
+        color:#b2d234
+    }
+
+    .statement{
+        margin-top:25px;
+        text-align: center;
+    }
+
+    .figure{
+        display: block;
+        width:184px;
+        height:319px;
+        background:url('img/dark_blue_figure.png') no-repeat;
+        background-size:auto 100%;
+        margin:0 auto;
+        margin-top:30px;
+    }
+
+    .box1{
+        float:left;
+    }
+
+    .box2{
+        float:right;
+    }
+
+    .box{
+        width:455px;
+        height:317px;
+        background-color: #d9e4e9;
+        position: relative;
+    }
+
+    .text{
+        display: block;
+        width:inherit;
+        height:132px;
+        background:url('img/text.png') no-repeat;
+        background-size: 100% auto;
+    }
+
+    .box h1{
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        font-size: 70px;
+        line-height: 99px;
+        background:white;
+        border-top:3px solid #004d74;
+        border-bottom: 3px solid #004d74;
+        letter-spacing: -5px;
+    }
+
+    .btn{
+        position: relative;
+        margin:0 auto;
+        left: auto;
+        display: block;
+        bottom:-5px;
+    }
+
+    .box > p{
+        position: absolute;
+        top:0px;
+        display: table-cell;
+        background-color: inherit;
+        text-align: center;
+        display: none;
+    }
+
+    .box1 > p{
+         padding: 102px 60px 102px 60px;
+    }
+
+    .box2 > p{
+        padding:80px 60px 80px 60px;
+    }
+
+</style> 
+</head>
+<body>
+	<section id="container" data-slide="home">
+    	<nav class="nav-top icon">
+            <ul>
+                <li data-href="home"></li>
+                <li data-href="warning">Contraindications<br />and Warnings</li>
+                <li data-href="pi">PI</li>
+                <li data-href="bibliography"></li>
+                <li data-href="resource"></li>
+                <li data-href="menu"></li>
+            </ul>
+        </nav>
+    	<article class="content">
+            <span class='logo lymp'></span>
+            <h3 class='green'>SUMMARY</h3>
+            <h2>LYNPARZA IS THE ONLY ORAL TGA APPROVED MAINTENANCE
+            THERAPY FOR BRCAm PLATINUM-SENSITIVE RELAPSED HIGH
+            GRADE SEROUS OVARIAN CANCER PATIENTS<sup data-ref="4">4</sup></h2>
+            <p class='statement'><strong>I have high grade serous ovarian cancer</strong></p>
+            
+            <div class='box box1'>
+                <span class='text'></span>
+                <h1 class='green'>test me</h1>
+                <p class='info'>All ovarian cancer patients should be offered genetic testing.<sup data-ref="6">6</sup><br/>
+                Those who have a confirmed BRCAm status are eligible for maintenance treatment with Lynparza.<sup data-ref="4">4</sup></p>
+                <span class='btn'>x</span>
+                <span class='btn info'>i</span>
+            </div>
+            
+            <div class='box box2'>
+                <span class='text'></span>
+                <h1 class='green'>treat me</h1>
+                <p class='info'>
+                    Maintenance treatment with Lynparza has demonstrated significant benefit for BRCAm platinum-sensitive relapsed high grade serous ovarian cancer patients, <strong>prolonging PFS by  a median of 6.9 months</strong> vs placebo 11.2 vs 4.3 months; p&lt;0.00001.4
+                </p>
+                <span class='btn'>x</span>
+                <span class='btn'>i</span>
+            </div>
+            
+            <span class='figure'></span>
+        </article>
+    </section>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/TimelineLite.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$( function(){
+		$(".btn").on('tap', function(){
+            var popup = $(this).siblings('p');
+            $(popup).is(':visible') ? $().ad.fadeOut() : $(popup, this).fadeIn();
+        })
+		
+	})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+    <style type="text/css">
+        .container > .logo{
+            width:246px;
+            height:64px;
+            left:392px;
+        }
+
+        .faslodex h3{
+            font-size:18px;
+            line-height: 23px;
+            text-align: left;
+        }
+
+        .graph{
+            position: relative;
+            margin-top:90px;
+            width:490px;
+            font-size:13px;
+            line-height:16px;
+        }
+
+        .g1{
+            float:left;
+        }
+
+        .g1:before{
+            content:'';
+            position: absolute;
+            display:block;
+            width:1px;
+            height:520px;
+            background-color: #d5d4d6;
+            left:480px;
+        }
+
+        .g2{
+            float:right;
+        }
+
+        .graph > ul{
+            margin-top:15px;
+        }
+
+        .graph > ul li{
+            list-style-type: disc;
+            margin-left:15px;
+            margin-bottom: 5px
+        }
+
+        .graph > p{
+            margin-top:10px;
+            margin-left:5px;
+        }
+
+        .img{
+            margin-top:20px;
+            margin-left:5px;
+            display:block;
+            background:url('img/graphs.png') no-repeat;
+            background-size:100% auto;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .g1 .img{
+            height:340px;
+            width:425px;
+        }
+
+        .g2 .img{
+            height:335px;
+            width:425px;
+            background-position-y:-347px;
+        }
+
+        .graph.zoom{
+            float:none;
+            margin-top:20px;
+            margin-left:225px;
+        }
+
+        .graph.zoom:before{
+            display: none;
+        }
+
+        .graph.zoom .img{
+            height:430px;
+            width:530px;
+            margin-left:-25px;
+        }
+
+        .graph.g2.zoom .img{
+            background-position-y: -430px;
+            height:450px;
+        }
+
+        .home .close{
+            display: none;
+        }
+
+        span.patient{
+            position:absolute;
+            left:150px;
+            top:auto;
+            bottom:47px;
+            text-transform: uppercase;
+            text-align: center;
+            font-size:15px;
+            width:200px;
+            padding-top:15px;
+            padding-bottom:9px;
+            background: -webkit-linear-gradient(#f4f4f4, #dcdcdb);
+            background: linear-gradient(#f4f4f4, #dcdcdb);
+            border-top:2px solid #eeeeee;
+            border-left:2px solid #eeeeee;
+            border-bottom:1px solid #eeeeee;
+            border-radius:3px; 
+        }
+
+        span.info{
+            position:absolute;
+            top:auto;
+            bottom:47px;
+            left:100px;
+            height:40px;
+            width:40px;
+            background:url('img/icon_sprite.png') no-repeat;
+            background-size:61px auto;
+            background-position: -9px -2px;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        span.info:active, span.patient:active{
+            bottom:45px;
+            box-shadow: none;
+        }
+
+        span.patient, span.info{box-shadow: 3px 3px 5px #888888;}
+
+        /* pie chart popup*/
+
+        .popup{
+            position:absolute;
+            display:none;
+            top:0px;
+        }
+
+        .patient span{
+            display:block;
+        }
+        
+        .charts{
+            float:left;
+            height:512px;
+            width:360px;
+            background:url('img/pie-charts.png') no-repeat;
+            background-size:auto 100%;
+            font-size:15px;
+            line-height:18px;
+            background-position: right;
+            margin-top:30px;
+            margin-left:40px;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .charts > span:first-child{
+            margin-top:20px;
+        }
+
+        .charts > span:nth-child(2){
+            margin-top:235px;
+        }
+
+        strong{
+            font-family: 'AvenirLTStd-Heavy';
+        } 
+
+        .box{
+            float:right;
+            margin-top:60px;
+            background-color: #cfc1dc;
+            padding:40px;
+            width:450px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        } 
+
+        .box > ul li{
+            text-indent:-5px;
+            width:365px;
+            margin-bottom:10px;
+        }
+
+        .bulleted li:before{
+            content:'•';
+            display: inline-block;
+            color:#f98f40;
+            border-radius: 100%;
+            position:relative;
+            left:-5px;
+        }
+
+        .box > p{
+            margin-top:20px;
+            font-size:14px;
+        }
+
+        .colored{
+            float:right;
+            margin-top:60px;
+            margin-right:50px;
+        }
+
+        .colored li{
+            margin-bottom:10px;
+            width:450px;
+            text-indent:-20px;
+        }
+
+        .colored li:before{
+            content:'';
+            display:inline-block;
+            height:20px;
+            width:20px;
+            border-radius: 100%;
+            position:relative;
+            left:-10px;
+            top:5px;
+
+        }
+
+        .colored li:first-child:before{background-color: #f98f40}
+        .colored li:nth-child(2):before{background-color: #c1d550}
+        .colored li:nth-child(3):before{background-color: #743d93}
+        .colored li:last-child:before{
+            background-color:white;
+            border:1px solid #b3b3b4;
+        }
+
+        /* comparison popup page */
+        .flowChart{
+            float:left;
+            display:block;
+            width:550px;
+            height:345px;
+            background:url('img/flow-chart.png') no-repeat;
+            background-size:100% auto;
+            margin-top:50px;
+            margin-bottom:30px;
+            image-rendering: -webkit-optimize-contrast;
+        }
+
+        .info .feature > p{
+            float:left;
+            font-size:14px;
+            line-height:18px;
+            margin-bottom:10px;
+        }
+
+        .info .feature > div{
+            float:right;
+            margin-right:120px;
+            margin-top:130px;
+        }
+
+        .info .feature > div li{
+            margin-left:15px;
+            text-indent: -5px;
+            margin-top:20px;
+            line-height:22px;
+        }
+
+        .footnote{
+            position:absolute;
+            color: black;
+            font-size: 9px;
+            font-family: 'AvenirLTStd-Book';
+            top:660px;
+            left:60px;
+        }
+
+        .light{
+            font-family: 'AvenirLTStd-Light';
+        }
+
+    </style>
+    </head>
+    <body class='faslodex'>
+        <div class="container home" >
+            <span class='ref'></span>
+            <span class='pi'></span>
+            <span class='logo'></span>
+            <span class='info'></span>
+            <span class='patient grey'>patient background</span>
+            
+            <div class='feature'>
+                <span class='close'></span>
+                <div class='graph g1'>
+                    <h3>PROLONGED PROGRESSION-FREE SURVIVAL (PFS)<br /> WITH FASLODEX 500mg IN CONFIRM<sup>1*</sup></h3>
+                    <ul>
+                        <li>Median PFS: 6.5 months compared to 5.5 months with FASLODEX 250 mg<sup>1</sup></li>
+                        <li>20% reduction in risk of progression compared to FASLODEX 250 mg<sup>1</sup></li>
+                    </ul>
+                    <p class='grey'>*HR=0.80; 95% CI 0.68-0.94; p=0.006 compared with FASLODEX 250 mg<sup>1</sup></p>
+                    <span class='img'></span>
+                </div>
+
+                <div class='graph g2'>
+                    <h3>CONFIRM FINAL OVERALL SURVIVAL DATA<br /> AT 75% MATURITY<sup>2,3</sup></h3>
+                    <ul>
+                        <li>FASLODEX 500 mg was associated with a 4.1-month increase in median OS<br /> and a 19% reduction in risk of death compared with FASLODEX 250 mg*</li>
+                        <li>Median OS was 26.4 months with FASLODEX 500 mg compared to<br />22.3 months with FASLODEX 250 mg<sup>3</sup>*</li>
+                    </ul>
+                    <p class='grey'>*HR=0.81; 95% CI 0.69-0.96; p=0.02 (nominal p-value as no adjustment<br /> was made for multiplicity) compared with FASLODEX 250 mg<sup>3</sup></p>
+                     <span class='img'></span>
+                </div>
+            </div>
+
+            <div class='ref'>
+                <ul>
+                    <li>Di Leo A <em>et al. J Clin Oncol</em> 2010; 28(30): 4594–600.</li>
+                    <li>Faslodex Approved Product Information. Date of first inclusion in the<br />ARTG: 6 March 2006. Date of most recent amendment: 29 March 2016.</li>
+                    <li>Di Leo A <em>et al. J Natl Cancer Inst</em> 2014; 106(1):djt337. Epub 2013 Dec 7.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--patient history popup-->
+        <div class='container popup patient'>
+            <span class='ref'></span>
+            <span class='pi'></span>
+            <div class='feature'>    
+                <span class='close'></span>
+                <h1>CONFIRM: PATIENT HISTORY<br />AT RANDOMISATION</h1>
+                
+                <span class='charts orange'>
+                    <span>FULVESTRANT<br />250mg</span>
+                    <span>FULVESTRANT<br />500mg</span>
+                </span>
+                
+                <div class='box'>
+                    <ul class='grey book bulletted'>
+                        <li><strong>&gt;50% had a recurrence</strong> during or &le;12 months after completing adjuvant hormonal therapy<sup>1†</sup></li>
+                        <li>&gt;<strong>1 in 3 had progressed</strong> on their first-line endocrine treatment for <em>de novo</em> advanced disease<sup>1†</sup></li>
+                    </ul>
+                    <p>†Randomised patients from both treatment groups</p>
+                </div>
+
+                <ul class='grey colored light'>
+                    <li>Recurrence during or ≤12 months after completing adjuvant hormonal therapy</li>
+                    <li>Recurrence &gt;12 months after completing adjuvant hormonal therapy and after progression on 1st line endocrine therapy  for advanced disease</li>
+                    <li>Progressed on 1st line endocrine treatment for de novo advanced disease</li>
+                    <li>Other</li>
+                </ul>
+                <p class='footnote'>Adapted from Di Leo A et al, 2010.1</p>
+            </div>
+
+            <div class='ref'>
+                <ul>
+                    <li>Di Leo A et al. J Clin Oncol 2010; 28(30): 4594–600.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Comparison info page -->
+        <div class='container popup info'>
+            <span class='ref'></span>
+            <span class='pi'></span>
+            <div class='feature'> 
+                <span class='close'></span>
+                <h1><span class='orange'>co</span>mpariso<span class='orange'>n</span> of <span class='orange'>f</span>aslodex<br /><span class='orange'>i</span>n <span class='orange'>r</span>ecurrent or <span class='orange'>m</span>etastatic<br />breast cancer <span class='orange'>(confirm)<sup>1</sup></span></h1>
+                 <div>
+                    <p>Planned number of injections per<br /> month was the same in both groups:<sup>1</sup></p>
+                    <ul class='grey book bulleted'>
+                        <li>500 mg arm: 2 x 250 mg on days<br /> 0, 14, 28, and every 28 (±3) days<br /> thereafter</li>
+                        <li>250 mg arm: 1 x 250 mg plus 1 X<br /> placebo, same as above, except<br /> day 14 (2 placebo injections only)</li>
+                    </ul>
+                </div>
+                <span class='flowChart'></span>
+                <p>*FASLODEX is indicated for postmenopausal women with ER+ locally advanced or<br /> metastatic breast cancer with disease progression following prior tamoxifen therapy<sup>2</sup></p>
+                <p><sup>†</sup>1 patient was excluded from the safety analysis for not receiving any randomised treatment</p>
+               
+            </div>
+
+            <div class='ref'>
+                <ul>
+                    <li>Di Leo A et al. J Clin Oncol 2010; 28(30): 4594–600.</li>
+                    <li>Faslodex Approved Product Information. Date of first inclusion in the<br />ARTG: 6 March 2006. Date of most recent amendment: 29 March 2016.</li>
+                </ul>
+            </div>
+        </div>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            $('.graph').on('tap', function(){
+                $(this).add('.close').addClass('zoom').hide().fadeIn();
+                $('.container > span, .feature > *:not(.zoom)').hide();
+            })
+
+            $('.home .close').on('tap', function(){
+                $(this).add('.graph').removeClass('zoom').hide().fadeIn();
+                $('.container > span, .feature > *').fadeIn();
+            })
+
+            $('span.patient, span.info').on('tap', function(){
+                var c = 'div.' + $(this).attr('class').split(' ')[0]
+                $(c).addClass('active').fadeIn();
+            })
+
+            $('.close').on('tap', function(){
+                $('.home').fadeIn();
+                $('.active').removeClass('.active').fadeOut();
+            })
+        });
+
+    </script>
+    </body>
+</html> 
