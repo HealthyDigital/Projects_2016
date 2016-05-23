@@ -1,0 +1,111 @@
+/* FASLODEX */
+.container{
+	background-color: #ede9f4;
+	font-family: 'AvenirLTStd-Medium';
+	color: #724199
+}
+
+.container:before{
+	content:'';
+	background:url('../img/bottom_graphic.png') no-repeat;
+	background-size: 100% auto;
+	position:absolute;
+	width:100%;
+	height:72px;
+	top:auto;
+	bottom:0px;
+}
+
+.feature{
+	margin-top:40px;
+	margin-left:40px;
+	position:relative;
+}
+
+.logo{
+	display:block;
+	width:140px;
+	height:73px;
+	position:absolute;
+	top:40px;
+	left:auto;
+	right:40px;
+	background:url('../img/faslodex_logo_purple.png') no-repeat;
+	background-size: 100% auto;
+}
+
+.pi{
+	right:10px;
+	bottom:32px;
+}
+
+.pi:active{
+	bottom:30px;
+}
+
+.references{
+	font-family: 'AvenirLTStd-Book';
+	background-color: rgba(51, 50, 51, 0.9);
+	color:white;
+	display: none;
+	font-size:10px;
+	line-height:14px;
+}
+
+h1, h2, h3{
+	font-family: 'AvenirLTStd-Black';
+}
+
+h1{
+	font-size:34px;
+	line-height:35px;
+	text-transform: uppercase;
+}
+
+h2{
+	font-size:20px;
+	line-height:36px;
+}
+
+h3{
+	font-size:18px;
+	text-align: center;
+}
+
+i{
+	display:block;
+	font-size:13px;
+	line-height:15px;
+}
+
+.orange{
+	color:#F7922A;
+}
+
+.grey{
+	color:#666767;
+}
+
+.book{
+	font-family: 'AvenirLTStd-Book';
+}
+
+.close{
+	background:url('../img/icon_sprite.png') no-repeat;
+	background-size:61px auto;
+	background-position: -6px -51px;
+	box-shadow: 3px 3px 5px #888888;
+	border-radius: 100%;
+	position:absolute;
+	height:48px;
+	width:48px;
+	top:-20px;
+	right:20px;
+	left:auto;
+}
+
+.close:active{
+	top:-18px;
+	box-shadow: none;
+}
+

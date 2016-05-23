@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+    <style type="text/css">
+        .feature{
+            margin-top:126px;
+            margin-left:40px;
+        }
+
+        .feature > h1{font-size:31px;}
+        .points{margin-left:20px; margin-top:20px;}
+        .points li{list-style: disc; font-size:26px; line-height:32px; color:#e9167d;}
+        .points li.small{font-size:21px; line-height:26px;}
+        .points sup{font-size: 40%}
+        .points span{color: black}
+
+        .circle{background:url('img/b-circle.png') no-repeat; background-size: 100% auto; position:absolute;}
+
+        /* pink/purple button */
+        .button-container{margin-top:130px;}
+        .button{width:151px; height:51px; background:url('img/b-oval.png') no-repeat; background-size:auto 100%; position:relative; margin:0 auto;}
+            .button li:first-child{font-family: 'SerifaStd-Bold'; font-size:24px; color: white; position:absolute; top:16px;}
+            .button .circle{height:50px; width:50px; top:1px;}
+            .purple .button li:first-child{left:70px;}
+            .purple .button{background-color:#6b5f8a;;}
+            .purple .button .circle{left:7px;}
+            .pink .button li:first-child{left:40px;}
+            .pink .button{background-color:#e9167d;}
+            .pink .button .circle{left:94px;}
+
+        /* colored bars */
+        .toggle{margin-top:40px; margin-left:22px;}
+        .toggle .t{color: #28215C}
+        .toggle > li{display:block; position:relative; width:939px; height:46px; border:1px solid #d4d4d4; border-radius:30px; font-family: 'SerifaStd-Light'; font-size:20px; background-color:white;}
+            .toggle > li > span{display:inline-block;}
+            .toggle > li .z, .toggle >li .t{position:absolute; top:16px;}
+            .toggle > li .z{color:white;}
+            .toggle > li .t{color:#261952}
+            .toggle > li > .b{position:absolute; height:36px; background-color: black; border-radius: 36px; top:5px;}
+            .toggle > li:first-child .b{background-color: #261952}
+            .toggle > li:last-child .b{background-color: #e9167d}
+            .purple .toggle > li:first-child .b{width:727px;}
+            .purple .toggle > li:last-child .b{width:579px;}
+            .purple .toggle > li .t{left:820px}
+            .purple .toggle > li .z{left:25px}
+            .purple .toggle > li .b{left:5px;}
+            .pink .toggle > li:first-child .b{width:740px; left:194px;}
+            .pink .toggle > li:last-child .b{width:662px; left:272px}
+            .pink .toggle > li .t{left:40px;}
+            .pink .toggle > li .z{left:788px}
+            .toggle div{width:100%; text-align: center; font-family: 'SerifaStd-Bold'; margin-top:20px; margin-bottom:20px; font-size: 20px; background-color: white; position: relative; color: #261952}
+
+        /* transitions */
+        .button{-webkit-transition: background-color 0.5s; -webkit-transition: background-color 0.5s;}
+        .toggle > li .b{-webkit-transition: width 0.5s, left 0.5s; transition: width 0.5s, left 0.5s;}
+        .button li:first-child, .circle, .toggle > li .t, .toggle > li .z{-webkit-transition: left 0.5s; transition: left 0.5s;}
+        .tab, .tab:before, .tab:after{-webkit-transition: background-color 0.5s; -webkit-transition: background-color 0.5s;}
+
+        .box{width:300px; font-family: 'SerifaStd-Light'; font-size:14px; line-height:26px; text-align: center; margin:0 auto; margin-top:30px; position: relative; color:#808080;}
+            .box > span{width:300px; border-top:1px solid #d4d4d4; border-bottom:1px solid #d4d4d4; padding:10px; background-color: white;}
+
+        /* 3 point slider on bottom */
+        .slider-container{position:absolute; border:1px solid #d4d4d4; width:300px; height:55px; border-radius: 30px; top:656px; left:381px;}
+        .slider{margin-left:70px; margin-top:22.5px;}
+        .slider li{float:left; position:relative;}
+        .slider > .tab{width:80px; height:10px;}
+        .slider > .mid{height:25px; width:25px; left:-94px; top:-9px;}
+
+        .slider-container p{
+            font-family: 'SerifaStd-Bold';
+            font-size: 20px;
+            color: #261952;
+            display: inline-block;
+            position: absolute;
+            top:auto;
+            bottom:10px;
+        }
+
+        .slider-container p:first-child{
+            left:-50px;
+        }
+
+        .slider-container p:last-child{
+            left:310px;
+        }
+
+            /* end circles */
+            #left-tab:before, #right-tab:after{content:""; display:block; position:absolute; width:25px; height:25px; border-radius: 100%; top:-8px;}
+            #left-tab:before{left:-24px}
+            #right-tab:after{left:78px;}
+
+            /* middle circles */
+            #left-tab:after, #right-tab:before{content:""; display:block; position:absolute; height:25px; width:12.5px; top:-8px;}
+            #right-tab:before{border-radius: 0 25px 25px 0; -webkit-border-radius: 0 25px 25px 0; left:-1px;}
+            #left-tab:after{border-radius: 25px 0 0 25px; -webkit-border-radius:25px 0 0 25px; left:67px;}
+
+            /* circle */
+            .slider > .circle{height:40px; width:40px; top:-16px;}
+            .slider.middle > .circle{left:-127px;}
+            .slider.left > .circle{left:-215px;}
+            .slider.right > .circle{left:-35px;}
+
+            /* toggle colours */
+            .slider.middle > #left-tab, .slider.middle > #left-tab:before, .slider.middle > #left-tab:after{background-color: #999999;}
+            .slider.middle > #right-tab, .slider.middle > #right-tab:before, .slider.middle > #right-tab:after{background-color: #d9d9d9;}
+            .slider.left > .tab, .slider.left > .tab:before, .slider.left > .tab:after{background-color: #999999;}
+            .slider.right > .tab, .slider.right > .tab:before, .slider.right > .tab:after{background-color: #d9d9d9;}
+
+            .graphs > li{display:none; position:absolute;}
+            .line{width:1px; height:319px; position:absolute; background-color: #d4d4d4; left:490px; top:175px;}
+
+        /* failure free survival and overall survival */
+        .graphs > li > .graph{
+            height:340px;
+            width:990px;
+            background:url('img/graphs2.png') no-repeat;
+            background-size:100% auto;
+            margin-top:30px;
+            margin-left:-20px;}
+
+        .graphs > li:nth-child(2) > .graph{
+            background-position-y:-365px;
+        }
+
+        .points.f1, .points.f2, .foot.f1, .foot.f2{
+            position: absolute;
+            left:0px;
+        }
+
+        .f2{
+            display: none;
+        }
+
+        /* study */
+        span.study {
+            position: absolute;
+            top: auto;
+            bottom: 47px;
+            left: 100px;
+            width: 30px;
+            height: 30px;
+            background: url('img/info.png') no-repeat;
+            background-size: 100% auto;
+        }   
+
+        div.study{
+            line-height: 17px
+        }
+       
+    </style>
+    </head>
+    <body class='zoladex'>
+        <div class="container purple">
+            <span class='logo'></span>
+            <span class='footer'></span>
+            <span class='ref'></span>
+            <span class='pi'></span>
+            <span class='study'></span>
+            <div class='feature'>
+                <h1>Zoladex<sup>®</sup> 3.6mg in Advanced Premenopausal Breast Cancer<sup>1,2</sup></h1>
+
+                <ul class='graphs'>
+                    <!-- LEFT TOGGLE -->
+
+                    <li>
+                        <ul class='points'>
+                            <li><span>Zoladex achieved similar failure-free survival (FFS) compared with oophorectomy<sup>2</sup></span></li>
+                            <li class='small'><span>There was no statistically significant differences between Zoladex and oophorectomy<sup>2</sup></span></li>
+                        </ul>
+                        <ul class='graph'></ul>
+                    </li>
+
+                    <!-- RIGHT TOGGLE -->
+
+                    <li>
+                        <ul class='points'>
+                            <li><span>Zoladex achieved similar overall survival (OS) compared with oophorectomy<sup>2</sup></span></li>
+                            <li class='small'><span>There was no statistically significant differences between Zoladex and oophorectomy<sup>2</sup></span></li>
+                        </ul>
+                        <ul class='graph'></ul>
+                    </li>
+
+                    <!-- MIDDLE TOGGLE -->
+                    <li>
+                        <ul class='points f1'>
+                            <li><span>Zoladex achieved similar median failure-free survival (FFS) compared to oophorectomy in premenopausal patients with advanced breast cancer<sup>2</sup></span></li>
+                        </ul>
+                        <ul class='points f2'>
+                            <li><span>Zoladex achieved similar median overall survival (OS) compared to oophorectomy<br /> in premenopausal patients with advanced breast cancer<sup>2</sup></span></li>
+                        </ul>
+                        <span class='line'></span>
+                        <div class='button-container'>
+                            <ul class='button'>
+                                <li>FFS</li>
+                                <li class='circle'></li>
+                            </ul>
+                        </div>
+                        <ul class='toggle'>
+                            <li>
+                                <span class='t'>6 months</span>
+                                <span class='b'></span>
+                                <span class='z'>Zoladex 3.6mg</span>
+                            </li>
+                            <div>VS</div>
+                            <li>
+                                <span class='t'>4 months</span>
+                                <span class='b'></span>
+                                <span class='z'>oophorectomy</span>
+                            </li>
+                        </ul>
+                        <div class='box'>
+                            <span class='foot f1'>HR=0.73, 95% CI:0.51-1.04 (no p value reported<sup>2</sup>)</span>
+                            <span class='foot f2'>HR=0.80, 95% CI:0.53-1.20 (no p value reported<sup>2</sup>)</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+           <div class='slider-container'>
+                <p>FFS</p>
+                <ul class='slider middle'>
+                    <li class='tab' id='left-tab'></li>
+                    <li class='tab' id='right-tab'></li>
+                    <li class="mid"></li>
+                    <li class='circle'></li>
+                </ul>
+                <p>OS</p>
+           </div>
+            <div class='ref'>
+                <p>References:</p>
+                <ul>
+                    <li>Zoladex 3.6mg Approved Product Information. Date of TGA approval 11 November 2010. Date of most recent amendment 25 June 2015</li>
+                    <li>Taylor CW et al. <em>J Clin Oncol 1998</em>; 16 (3): 994-9</li>
+                </ul>
+            </div>
+            <div class='study'>
+                <p>Study Design (Taylor C W et al.2 )<br />
+                    Patients were randomly assigned to treatment with surgical<br />
+                    oophorectomy versus monthly goserelin 3.6mg.<br />
+                    The primary objective of the study was to compare the<br />
+                    failure-free survival (FFS) and overall survival (OS) of<br />
+                    premenopausal patients with metastatic breast cancer.<br />
+                    The study was initially designed as an equivalence study<br />
+                    with 80% power to rule out a 50% improvement in survival<br />
+                    due to oophorectomy. Due to slow accrual the study was<br />
+                    terminated early which resulted in a final power of 60%<br />
+                    for the alternative hyposthesis of equal survival distributions.</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('.graphs > li:last-child').fadeIn();
+            
+            $('.button').on('tap', function(){
+                if($('.container').hasClass('pink')){
+                    $('.container').removeClass('pink').addClass('purple');
+                    $('.button > li:first-child').html('FFS');
+                    $('.toggle > li:first-child > .t').html('6 months');
+                    $('.toggle > li:last-child > .t').html('4 months')
+                    $('.f1').fadeIn();
+                    $('.f2').fadeOut();
+                }
+                else{
+                    $('.container').removeClass('purple').addClass('pink');
+                    $('.button > li:first-child').html('OS');
+                    $('.toggle > li:first-child > .t').html('37 months');
+                    $('.toggle > li:last-child > .t').html('33 months');
+                    $('.f2').fadeIn();
+                    $('.f1').fadeOut();
+                }
+            });
+
+           $('.slider > li:not(.circle)').on('tap', function(){
+                var i = $(this).index();
+                if(i == 0){
+                    $('.slider').attr('class', 'slider left')
+                }
+                else if(i == 1){
+                    $('.slider').attr('class', 'slider right')
+                }
+                else if(i == 2){
+                    $('.slider').attr('class', 'slider middle')
+                }
+                $('.graphs > li').fadeOut()
+                var element = $($('.graphs > li').get(i)).fadeIn()
+           })
+
+
+        });
+    </script>
+    </body>
+</html> 

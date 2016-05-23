@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+
+        <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+        <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+        <style type="text/css">
+
+            .feature{margin-top:117px; margin-left:40px;}
+            .box{display:inline-block; height:690px; width:940px; border-radius: 10px; background-color:white; margin-top: 25px; text-align: center; box-shadow: 0px 0px 20px #888888;}
+                .box table{margin-left:30px;; margin-top:40px;}
+                .box strong{font-family: 'HelveticaNeueLTStd-Md';}
+                .box i{font-family: Helvetica}
+                .box td{vertical-align: middle; height: 100px;}
+                .box td > span{display: inline-block; border-radius: 5px}
+
+                /* second column */
+                .box td:nth-child(2){width:520px;}
+                .box td:nth-child(2) > span{width:500px; padding-top:20px; padding-bottom:20px; border:1px solid #c8c8c8; font-family: 'HelveticaNeueLTStd-Lt'; font-size:16px; line-height:22px;}
+
+                /* third column */
+                .box td:last-child{width:100px; font-family: 'HelveticaNeueLTStd-Roman'; font-size:10px; line-height:12px; color: white}
+                .box td:last-child > span{width:88px; padding-top:20px; padding-bottom:20px;}
+                .box tr:first-child > td:last-child > span{background-color: #dc0963}
+                .box tr:nth-child(2) > td:last-child > span{background-color: #3e2263}
+                .box tr:nth-child(3) > td:last-child > span{background-color: #733594}
+                .box tr:last-child > td:last-child > span{background-color: #34c2dd}
+
+                /* padding for row 3 column 2 with one line */
+                .box tr:nth-child(3) > td:nth-child(2) > span {padding-top:31px; padding-bottom:31px;}
+
+                /* logos */
+                .box tr > td:first-child{width:200px;}
+                .box tr:first-child > td:first-child{background:url('img/arimidex_logo.png') no-repeat; background-size:100% auto; background-position: center;}
+                .box tr:nth-child(2) > td:first-child{background:url('img/zoladex_logo.png') no-repeat; background-size:100% auto; background-position: center;}
+                .box tr:nth-child(3) > td:first-child{background:url('img/faslodex_logo.png') no-repeat; background-size:100% auto; background-position: center;}
+                .box tr:last-child > td:first-child{background:url('img/nolvadex.png') no-repeat; background-size:80% auto; background-position: center;}
+
+                .box p{font-family: 'HelveticaNeueLTStd-Lt'; font-size:16px; line-height:20px; letter-spacing:-0.5px; margin-top:40px;}
+                .box .footnote{display:block; margin-top:10px; font-size:9px; line-height:13px; letter-spacing: normal; text-decoration: none; color: #666767}
+                .box .footnote a{text-decoration: none; color: #666767}
+
+        </style>
+    </head>
+    <body class='intro'>
+        <div class="container">
+                <span class='logo'></span>
+
+            <div class='feature'>
+                <h1>Prescribing Information</h1>
+                <div class='box'>
+                    <table>
+                        <tr id='arimidex'>
+                            <td></td>
+                            <td>
+                                <span>
+                                    <strong>PBS Information:</strong>
+                                    <i>Arimidex Restricted Benefit.</i><br />
+                                    Breast cancer. The condition must be hormone receptor positive.
+                                </span>
+                            </td>
+                            <td><span>ARIMIDEX APPROVED PRODUCT INFORMATION</span></td>
+                        </tr>
+                        <tr id='zoladex'>
+                            <td></td>
+                            <td>
+                                <span>
+                                    <strong>PBS Information:</strong>
+                                    <i>Zoladex 3.6mg Restricted Benefit.</i><br />
+                                    Breast cancer. The condition must be hormone receptor positive.
+                                </span>
+                            </td>
+                            <td><span>ZOLADEX APPROVED PRODUCT INFORMATION</span></td>
+                        </tr>
+                        <tr id='faslodex'>
+                            <td></td>
+                            <td>
+                                <span>
+                                    <strong>PBS Information:</strong>
+                                    <i>Faslodex.</i> This product is not listed on the PBS.
+                                </span>
+                            </td>
+                            <td><span>FASLODEX APPROVED PRODUCT INFORMATION</span></td>
+                        </tr>
+                        <tr id='nolvadex'>
+                            <td></td>
+                            <td>
+                                <span>
+                                    <strong>PBS Information:</strong>
+                                    <i>Nolvadex Restricted Benefit.</i><br />
+                                    Breast cancer. The condition must be hormone receptor positive.
+                                </span>
+                            </td>
+                            <td><span>NOLVADEX APPROVED PRODUCT INFORMATION</span></td>
+                        </tr>
+                    </table>
+
+                    <p>Please review Product Information before Prescribing. Product Information is available via the link on this page or on request from AstraZeneca<br /></p>
+                    <p class='footnote'>Arimidex®, Zoladex®, Faslodex® and Nolvadex-D® are registered trademarks of the AstraZeneca group of companies. AstraZeneca Pty. Ltd. ABN 54 009 682 311. 5 Alma Road, North Ryde, NSW 2113.<br />AstraZeneca Medical Information: 1800 805 342. www.astrazeneca.com.au. 424724.022, WL291957, April 2016</p>
+
+                </div>
+            </div>
+        </div>
+         <script>
+            $(document).ready(function(){
+                navToSlide('#arimidex', 'Arimidex13PI', 'AZAUBREF')
+                navToSlide('#zoladex', 'Zoladex15PI', 'AZAUBREF')
+                navToSlide('#faslodex', 'Faslodex16PI', 'AZAUBREF')
+            }); 
+    </script>
+    </body>
+</html> 

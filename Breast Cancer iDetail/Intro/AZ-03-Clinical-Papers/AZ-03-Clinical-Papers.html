@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+
+        <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+        <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/ftscroller.js" type="text/javascript" charset="utf-8"></script>
+        <style type="text/css">
+
+            h1{margin-top:117px; margin-left:40px;}
+
+            .scrollable{display:inline-block; background-color: white; height:485px; width:100%; margin-top:20px; overflow-x:auto;  box-shadow: 0px 0px 20px #888888;}
+                .scrollable ul{list-style-type:none; white-space:nowrap; overflow-x:auto; margin-top:50px; margin-left:30px;}
+                .scrollable li{ display:inline-block; height:400px; width:220px; margin-right:25px; background:url('img/papers.png') no-repeat; background-size: auto 306px; background-position-y:25px;}
+                .scrollable li > span{display:block;}
+                .scrollable li > span:first-child{font-family: 'HelveticaNeueLTStd-Bd'; font-size:13px; line-height:20px; text-transform: uppercase; text-indent: 15px; color:#EC0089;}
+                .scrollable li > span:last-child{font-family: Helvetica; font-size:18px; line-height:20px; margin-top:330px; text-align: center;}
+
+                .scrollable li:nth-child(2){background-position-x: -246px}
+                .scrollable li:nth-child(3){background-position-x: -492px}
+                .scrollable li:nth-child(4){background-position-x: -738px}
+                .scrollable li:nth-child(5){background-position-x: -984px}
+                .scrollable li:nth-child(6){background-position-x: -1230px}
+                .scrollable li:nth-child(7){background-position-x: -1476px}
+                .scrollable li:nth-child(8){background-position-x: -1722px}
+                .scrollable li:nth-child(9){background-position-x: -1968px}
+                .scrollable li:last-child{background-position-x: -2214px}
+
+        </style>
+    </head>
+    <body class='intro'>
+        <div class="container">
+            <span class='logo'></span>
+            <span class='pi'></span>
+
+            <h1>Clinical Papers</h1>
+
+            <div class='scrollable'>
+                <ul id='cp'>
+                    <li class='ATAC2002'>
+                        <span>Arimidex</span>
+                        <span>The ATAC Trialists’ Group.<br />(2002) <em>Lancet.</em></span>
+                    </li>
+                    <li class='ATAC2005'>
+                        <span>Arimidex</span>
+                        <span>The ATAC Trialists’ Group.<br />(2005) <em>Lancet.</em></span>
+                    </li>
+                    <li class='ATAC2008'>
+                        <span>Arimidex</span>
+                        <span>The ATAC Trialists’ Group.<br />(2008) <em>Lancet Oncol.</em></span>
+                    </li>
+                    <li class='ATAC2010'>
+                        <span>Arimidex</span>
+                        <span>Cuzick J <em>et al.</em><br />(2010) <em>Lancet Oncol.</em></span>
+                    </li>
+                    <li class='Jonat2002'>
+                        <span>Zoladex</span>
+                        <span>Jonat W <em>et al.</em><br />(2002) <em>J Clin Oncol.</em></span>
+                    </li>
+                    <li class='DeHaes2013'>
+                        <span>Zoladex</span>
+                        <span>de Haes H <em>et al.</em><br />(2003) <em>J Clin Oncol.</em></span>
+                    </li>
+                    <li class='TaylorCWJCO1998'>
+                        <span>Zoladex</span>
+                        <span>Taylor CW <em>et al.</em><br />(1998) <em>J Clin Oncol.</em></span>
+                    </li>
+                    <li class='KaufmannEurJCancer2003'>
+                        <span>Zoladex</span>
+                        <span>Kaufmann M <em>et al.</em><br />(2003) <em>European J Cancer.</em></span>
+                    </li>
+                    <li class='DiLeo2010'>
+                        <span>Faslodex</span>
+                        <span>Di Leo A <em>et al.</em><br />(2010) <em>J Clin Oncol.</em></span>
+                    </li>
+                    <li class='DiLeo2014'>
+                        <span>Faslodex</span>
+                        <span>Di Leo A <em>et al.</em> (2014)<br /> <em>J Natl Cancer Inst.</em></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            var containerElement, scroller;
+            containerElement = document.getElementById('cp');
+            scroller = new FTScroller(containerElement, {
+                scrollbars: true,
+                scrollingX: true
+            });
+
+        }); 
+    </script>
+    <script>
+        $(function(){
+
+            openPaper()
+            navToSlide('.pi', 'AZ-02-PIs')
+
+            function openPaper(){
+                $('.scrollable li').on('tap', function(){
+                var name = $(this).attr('class');
+                document.location = 'veeva:gotoSlide('+name+'.zip, AZAUBREF)';
+                })
+            }
+        })
+
+    </script>
+</html> 

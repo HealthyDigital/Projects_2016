@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+        <link rel="stylesheet" href="css/zoladex.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+    <style type="text/css">
+        .slide > .feature{margin-top:126px; margin-left:110px; font-family: 'SerifaStd-Roman';}
+
+        .tick-list{margin-left:35px; margin-top:40px; font-size:25px; line-height:30px; position:relative; color: black}
+            .tick-list li{margin-bottom:10px;}
+            .tick-list li:before{content:''; display:inline-block; height:25px; width:20px; background:url('img/tick.png') no-repeat; background-size: 100% auto; position:absolute; left:-30px;}
+
+        .popup-video, .feature-img{position:absolute;}
+            .popup-video{top:240px; height:425px; width:563px; left:auto; background-color:rgba(0,0,0,0.7); display:table; vertical-align: middle; right:40px; display: none}
+            .popup-video > video{height:415px; display:table-cell; margin-left:5px; margin-top:5px; }
+
+        .feature-img{top:250px; height:400px; width:550px; left:432px; background:url('img/feature.png') no-repeat; background-size:100% auto;}
+
+        .purple .button{background-color: #2c1b59}
+        .purple .circle{left:4px;}
+
+        .pink .button{background-color: #ef0085}
+        .pink .circle{left:156px;}
+        .pink .text{opacity:0;}
+
+        .button{position:absolute; top:599px; left:122px; width:219px; height:64px; background:url('img/slider.png'); background-size: auto 64px; -webkit-transition: background-color 0.5s; transition: background-color 0.5s;}
+            .button .circle{position:relative; display:inline-block; height:58px; width:58px; background:inherit; background-position-x:-223px; top:4px; background-color: transparent; -webkit-transition: left 0.5s; transition: left 0.5s;}
+            .button .text{position:relative; display:block; font-size:15px; line-height:16px; color:white; text-transform: uppercase; top:-56px; left:75px; -webkit-transition: opacity 0.5s; transition: opacity 0.5s;}
+
+
+    </style>
+    </head>
+    <body class='zoladex'>
+        <div class="container">
+            <span class='logo'></span>
+            <span class='footer'></span>
+            <span class='ref'></span>
+            <span class='pi'></span>
+            <div class='slide purple'>
+                <span class='logo'></span>
+                <span class='ref'></span>
+                <div class='feature'>
+                    <h1>Zoladex SafeSystem<sup>®</sup><br />Simple, one-step delivery<sup>1</sup></h1>
+                    <ul class='tick-list'>
+                        <li>No pre - mixing</li>
+                        <li>No refrigeration</li>
+                        <li>No need to change<br />needles</li>
+                    </ul>
+                    <span class='feature-img'></span>
+                    <div class='popup-video'>
+                        <video id='zvideo' controls>
+                          <source src="vid/ZoladexAdminVideo.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class='button'>
+                        <span class='circle'></span>
+                        <span class='text'>See ZolaDex<sup>®</sup><br />Safesystem<sup>®</sup><br />in action</span>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class='ref'>
+                References:
+                <ul>
+                    <li>Zoladex 3.6mg Approved Product Information. Date of TGA approval 11 November 2010. Date of most recent amendment 25 June 2015</li>
+                </ul>
+            </div>
+        </div>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(document).ready(function(){
+            $('.button').on('tap', function(){
+                var v = document.getElementById('zvideo')
+                if($('.slide').hasClass('purple')){
+                    $('.slide').removeClass('purple').addClass('pink');
+                    $('.popup-video').fadeIn();
+                    zvideo.currentTime = 0;
+                    zvideo.play()
+                }
+                else{
+                    $('.slide').removeClass('pink').addClass('purple');
+                    $('.popup-video').fadeOut();
+                    zvideo.paused ? null : zvideo.pause();
+                }
+            })
+        }); 
+    </script>
+    </body>
+</html> 

@@ -1,0 +1,175 @@
+/* CSS Document reset */
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .60em}sub {vertical-align: sub}sup {vertical-align: super ; line-height:10px; }
+* {-webkit-text-size-adjust: none; -webkit-user-select: none; }* { -webkit-user-select: none; }
+
+.container {position:relative; width: 1024px; height:768px; overflow: hidden;}
+li{list-style: none}
+em{font-style: italic;}
+.hide{display: none;}
+
+span.ref{
+	position:absolute;
+	width:50px;
+	height:30px;
+	background: url('../img/icon_references.png') no-repeat;
+	background-size:auto 100%;
+	top:690px;
+	left:42px;
+}
+span.ref.white{
+	background-position-x:-53px;
+}
+.pi{
+	position:absolute;
+	width:70px;
+	height:40px;
+	background: url('../img/pi_button.png') no-repeat;
+	background-size: 100% auto;
+	top:auto;
+	left:auto;
+	right:5px;
+	bottom:15px;
+}
+div.ref, div.study{
+	position:absolute;
+	border-radius: 25px;
+	padding: 20px;
+	left:75px;
+	top:auto;
+	bottom:80px;
+	display: none;
+}
+
+div.ref ul{
+	margin-left:15px;
+}
+div.ref ul li{
+	list-style: decimal;
+}
+div.ref ul li:not(:last-child){
+	margin-bottom:5px;
+}
+
+span.ref:active{top:692px;}
+.pi:active{bottom:13px;}
+
+h1 sup{position:relative; font-size:40%; top:-5px;}
+
+
+/* ZOLADEX */
+.zoladex{
+	font-family: 'SerifaStd-Light';
+}
+
+/* header */
+.zoladex .container:before{
+	content:'';
+	display: block; 
+	width:100%; 
+	height:75px; 
+	background-color:#e9167d;
+	border-bottom: 3px solid #261952;
+	position:absolute;
+	top:0px;
+}
+.zoladex .footer{
+	display:block; 
+	width:100%; 
+	height:22px; 
+	background-color:#261952;
+	border-top: 3px solid #e9167d; 
+	position:absolute; 
+	bottom:0px;
+}
+
+.zoladex .logo{
+	display:block;
+	width:160px;
+	height:73px;
+	position:absolute;
+	top:14px;
+	left:830px;
+	background:url('../img/zoladex_logo.png') no-repeat;
+	background-size: 100% auto;
+}
+.zoladex h1{
+	font-size:40px;
+	line-height:45px;
+	color: #28215C;
+	font-family: 'SerifaStd-Roman';
+}
+.zoladex h2{
+	font-size:25px;
+	line-height:30px;
+	color: #28215C;
+	font-family: 'SerifaStd-Roman';
+}
+.zoladex div.ref, div.study{
+	font-family: 'HelveNeuLigCon';
+	background-color: #291a5b;
+	color: white;
+	font-size:12px;
+	line-height:14px;
+}
+
+.zoladex div.ref > p{
+	margin-left:5px;
+	margin-bottom:5px;
+}
+
+.zoladex .pi{bottom:-5px;}
+.zoladex .pi:active{bottom:-7px;}
+
+
+
+/*********************************
+	ARIMIDEX
+*********************************/
+.arimidex{
+	font-family: 'HelveticaNeueLTStd-Roman';
+	font-size:13px;
+	line-height:18px;
+	color: #666767;
+}
+
+
+.arimidex div.ref{
+	font-family: 'ArialNarrow';
+	font-size:9px;
+	line-height:10px;
+	color: white;
+	background-color: #333333;
+	z-index: 5000;
+}
+
+.arimidex .logo{
+	display:block;
+	position:absolute;
+	width:182px;
+	height:50px;
+	top:79px;
+	left:801px;
+	background:url('../img/arimidex_logo.png') no-repeat;
+	background-size: 100% auto;
+}
+
+.arimidex h1{
+	 font-family: 'Serif-Regular';
+	 font-size:31px;
+	 line-height:35px;
+}
+
+.pink{color: #dc0b64;}
+
+body.arimidex {
+	background: url("../img/arimidex_bg.png") no-repeat 0 0; 
+	background-size: 1024px auto;
+}
+
+
+
+
+
+
+
+
