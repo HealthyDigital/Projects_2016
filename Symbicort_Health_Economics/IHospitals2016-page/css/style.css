@@ -65,9 +65,7 @@ header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
 .content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
 margin-left: 500px;}
 
-	.footnote { margin-top:20px; font-size:14px; line-height:16px; font-family: "HelveticaNeueLTStd"; margin-left: 60px; 
-	color:#3f4444;
-}
+
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
 
