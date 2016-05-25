@@ -13,7 +13,7 @@
 	.intro, .swiper-scroll { float:left; }
 	.intro { width:274px; height:395px; padding:25px 20px 20px; margin-right:22px; background-color:rgba(0, 77, 116, 0.15); }
 	.intro i { display:block; margin-top:5px; font-size:14px; line-height:20px; }
-	.swiper-container.swiper-scroll { width:608px; height:405px; top:auto; padding:0;  }
+	.swiper-container.swiper-scroll { width:608px; height:405px; }
 	.swiper-scroll h4 { color:#b2d234; text-align:right; }
 	.swiper-scroll h4, .swiper-scroll .tabular { font-size:11px; line-height:14px; }
 	.swiper-scroll .tabular { margin-top:5px; }
@@ -32,7 +32,7 @@
 	.brcam .two, .one { display:inline; }
 	/* 21 */
 	.dosing { font-family:interstatelightCon; height:395px;  position:relative; }
-	.dosing:before, .dosing:after, .dosing > li:after { content:""; position:absolute; z-index:2; }
+	.dosing:before, .dosing:after, .dosing > li:after, .btn.plus:before, .btn.plus:after { content:""; position:absolute; z-index:2; }
 	.dosing:before, .dosing:after { width:82px; height:inherit; top:0; background-image:url(img/dosing.svg); background-repeat:no-repeat; }
 	.dosing:after { left:483px; background-position-y:-409px; }
 	.dosing > li { float:left; width:131px; height:130px; background-color:#b2d234; color:#ffffff; position:relative;  top:165px; text-align:center; }
@@ -40,12 +40,37 @@
 	.dosing > .parza { width:105px; height:140px; margin-top:-5px; color:#004d74; }
 	.dosing > .parza, .dosing > .parza:after { background-color:#d9e4ea; }
 	.dosing > li:nth-child(3) { margin-right:115px; }
-	.dosing > li:after { width:20px; height:20px; right:-10px; top:0; bottom:0; margin:auto 0; -webkit-transform:rotate(45deg); transform:rotate(45deg); background-color:#b2d234; }
+	.dosing > li:after { width:20px; height:20px; right:-9px; top:0; bottom:0; margin:auto 0; -webkit-transform:rotate(45deg); transform:rotate(45deg); background-color:#b2d234; }
 	.dosing > li:last-child:after { display:none; }
 	.dosing > li i { display:table-cell; width:inherit; height:inherit; vertical-align:middle; }
 	.dosing strong { font-family:interstatebold-condensed; }
+	.popup-info { position:absolute; left:98px; bottom:70px; width:420px; height:65px; padding:48px 25px 18px; background-color:#004d74; color:#ffffff; z-index:5; }
+	.popup-info .close { width:38px; height: 38px;right: 0px; top: 0px; background:none; }
+	.popup-info .close:before { font-size:38px; }
+	.btn.plus { width:23px; height:23px; bottom:auto; top:275px; left:28px; background:none; border:2px solid #80a6ba; border-radius:200px; }
+	.btn.plus.plus2 { top:164px; left:85px; }
+	.btn.plus.plus3 { left:260px; }
+	.btn.plus.plus4 { left:860px; }
+	.btn.plus:before, .btn.plus:after { left:0; right:0; top:0; bottom:0; margin:auto auto; background-color:#80a6ba; }
+	.btn.plus:before { width:3px; height:14px; }
+	.btn.plus:after { width:14px; height:3px; }
+	.btn.plus.active { border-color: #4d829e; }
+	.btn.plus.active:before, .btn.plus.active:after { background-color:#4d829e; }
 	
-	.dosing, .dosing:before, .dosing:after { background-size:100% auto; }
+	/* 21b */
+	[data-slide='21b'] > h2 { margin-bottom:65px; letter-spacing:-0.015em; }
+	.capsule { width:624px; height:420px; margin: 0 0 80px 250px; background-image:url(img/capsule.svg); background-repeat:no-repeat; position:relative; }
+	.capsule li { position:absolute; left:0; top:155px; font-size:21px; line-height:24px; font-family:interstatebold-condensed; text-align:center; }
+	.capsule li:nth-child(2) { top:95px; left:240px; }
+	.capsule li:nth-child(3), .capsule li:nth-child(6) { left:auto; right:-2px; }
+	.capsule li:nth-child(4),
+	.capsule li:nth-child(6) { top:375px; }
+	.capsule li:nth-child(5) { top:320px; left:264px; }
+	.capsule li:nth-child(n+7) { top:40px; left:-200px; font-size:27px; line-height:30px; color:#b2d234; font-family:interstateregular-condensed; }
+	.capsule li:last-child { top:265px; }
+	
+	.dosing, .dosing:before, .dosing:after, .capsule { background-size:100% auto; }
+	.overlay .item.info { font-size:18px; line-height:23px; }
     	
 	.tabular span { -webkit-transition:all 0.5s ease-in-out; transition:all 0.5s ease-in-out; }
 	
@@ -315,8 +340,53 @@ for up to<br />
 taking Lynparza</i>
                             </li>
                         </ul>
+                        
+                        <span class="btn plus plus1 active"></span>
+                        <span class="btn plus plus2"></span>
+                        <span class="btn plus plus3"></span>
+                        <span class="btn plus plus4"></span>
+                        <div class="popup-info"><span class="icon close"></span>
+                        	<span data-info="1" class="">
+                            	Due to the effect of food on Lynparza absorption,<br />
+                                Lynparza should be taken at the same time relative<br />
+                                to time of eating, and preferably after food intake<sup data-ref="4">4</sup>
+							</span>
+                        	<span data-info="2" class="hide">
+                            	Patients should start treatment with Lynparza no<br />
+                                later than 8 weeks after completion of their final<br />
+                                dose of the platinum-containing regimen<sup data-ref="4">4</sup>
+							</span>
+                            <span data-info="3" class="hide">
+                            	The recommended dose of Lynparza is 400mg<br />
+                                (eight 50mg capsules) taken twice daily, equivalent<br />
+                                to a total daily dose of 800 mg<sup data-ref="4">4</sup>
+							</span>
+                            <span data-info="4" class="hide">
+                            	It is recommended that treatment be continued<br />
+                                until disease progression of the underlying disease<sup data-ref="4">4</sup>
+							</span>
+                        	
+                        </div>
             		</li>
-                    
+                    <!-- slide 21 -->
+                    <li class="swiper-slide" data-slide="21b">
+                         <h2><span>DOSING</span>
+                         	DOSE ADJUSTMENTS MAY BE REQUIRED TO MANAGE ADVERSE EVENTS
+SUCH AS NAUSEA, VOMITING, DIARRHOEA, AND ANAEMIA<sup data-ref="4">4</sup>
+                        </h2>
+                        <ul class="capsule">
+                        	<li>400 mg twice daily</li>
+                            <li>RECOMMENDED<br />REDUCTION</li>
+                        	<li>200 mg twice daily</li>
+                        	<li>200 mg twice daily</li>
+                            <li>FINAL<br />REDUCTION</li>
+                        	<li>100 mg twice daily</li>
+                        	
+                        	<li>If dose reduction<br />is necessary:</li>
+                        	<li>If further dose<br />reduction is<br />necessary:</li>
+                        </ul>
+                        <div class="footnote slim">Adapted from Lynparza (olaparib) Approved Product lnformation.<sup data-ref="4">4</sup></div>
+                    </li>
             	</ul><!-- end swiper-wrapper -->
                 <!-- Add Arrows -->
        			<span class="swiper-button icon arrow swiper-button-next"></span>
@@ -337,14 +407,17 @@ taking Lynparza</i>
             </div>
         </div><!-- end ref -->
          <!-- info -->
-        <div class="item info hide" data-info="18"><span class="arrow icon"></span>
-        <h4>PATIENT SUPPORT KIT INCLUDES:</h4>
+        <div class="item info " data-info="18"><span class="arrow icon"></span>
         <ul class="list">
-        	<li>LYNPARZA Patient Information Booklet</li>
-        	<li>LYNPARZA Patient Diary</li>
-        	<li>LYNPARZA Capsule Companion</li>
-        	<li>LYNPARZA Consumer Medicine Information</li>
-            <li>Ovarian Cancer Australia resilience kit registration</li>
+        	<li>The recommended dose of Lynparza is 400mg (eight 50mg capsules) taken twice daily, equivalent to a total<br />daily dose of 800 mg<sup data-ref="4">4</sup></li>
+<li>Patients should start treatment with Lynparza no later than 8 weeks after completion of their final dose<br />
+of the platinum-containing regimen<sup data-ref="4">4</sup></li>
+<li>Due to the effect of food on Lynparza absorption, patients should take Lynparza should be take<br />
+at the same time relative to time of eating, and preferably after food intake<sup data-ref="4">4</sup></li>
+<li>It is recommended that treatment be continued until disease progression of the underlying disease<sup data-ref="4">4</sup></li>
+<li>Baseline testing, followed by monthly monitoring, of complete blood counts is recommended for the first<br />
+12 months of treatment and periodically after this time to monitor for clinically significant changes in any<br />
+parameter during treatment<sup data-ref="4">4</sup></li>
         </ul>
            
         </div><!-- end info -->
@@ -439,7 +512,7 @@ taking Lynparza</i>
 				t.hasClass('brcam') ? txtArrow.text('BRCAm') : txtArrow.text('OPP');
 		})
 
-		mySwiper.slideTo(1);
+		mySwiper.slideTo(3);
 		/* $('.indicator .arrow').on('tap', function(){ 
 				$(this).toggleClass('less').prev('p').slideToggle();
 		 })*/

@@ -12,16 +12,16 @@
 		"10" : "Extended-PFS > Post-Hoc-interim-exploratory",
 		"11" : "Extended-PFS > Patient-characteristics",
 		"12" : "07-BRCAm-testing",
-		"13" : "About-BRCAm",
-		"14" : "Testing-guidelines",
-		"15" : "BRCAm-status",
-		"16" : "LYNPARZA-patient-access",
-		"17" : "Patient-support-programme",
-		"18" : "Patient-support-kit",
-		"19" : "Capsule-companion",
-		"20" : "Safety-and-tolerability",
-		"21" : "Dosing",
-		"22" : "Summary"
+		"13" : "07-BRCAm-testing",
+		"14" : "07-BRCAm-testing",
+		"15" : "07-BRCAm-testing",
+		"16" : "08-Patient-support",
+		"17" : "08-Patient-support",
+		"18" : "08-Patient-support",
+		"19" : "08-Patient-support",
+		"20" : "09-Safety-and-tolerability",
+		"21" : "09-Safety-and-tolerability",
+		"22" : "10-Summary"
 	}],
 	
 }
