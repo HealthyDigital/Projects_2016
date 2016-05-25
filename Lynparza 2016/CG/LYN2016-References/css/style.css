@@ -33,7 +33,7 @@ body { font-family: "interstatelight", Arial, Helvetica, sans-serif;font-size: 1
 	overflow:hidden;
 	background: #ffffff }
 h1 { font-size:30px; line-height:20px; margin-bottom:20px; }	
-h2 { font-size:28px; line-height:31px; margin-bottom:28px; }
+h2 { font-size:28px; line-height:31px;  }
 	h2 > span { display:block; font-size:20px; line-height:24px; color:#b2d234; }
 h3 { font-size: 20px; }
 h4 { font-size: inherit; }
@@ -78,7 +78,6 @@ a { text-decoration:none; color:inherit; }
 	.content .swiper-button-prev:after { content:""; position:absolute; top:0; left:-530px; width:1024px; height:40px; background:#ffffff; z-index:-1; }
 	.content .swiper-button-next.swiper-button-disabled, 
 	.content .swiper-button-prev.swiper-button-disabled { opacity:0; }
-.wrap, .reveal { overflow:hidden; }
 	.footnote { font-size:12px; line-height:16px; }
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
@@ -140,7 +139,7 @@ a { text-decoration:none; color:inherit; }
 	.section .active { background:rgba(0, 77, 116, 1); color:#ffffff;  }
 	.section > .active > span, .section > li li.active { border-bottom-width:5px; border-bottom-color:#b2d234; }
 	.overlay .section li { margin-bottom:0; }
-#container, .overlay .nav:after, .logo, .feature, .btn { background-size:100% auto; background-repeat:no-repeat; }
+#container, .overlay .nav:after, .logo, .feature { background-size:100% auto; background-repeat:no-repeat; }
 
 /* animation */
 @keyframes ready { 0% { opacity: 0.3; } 70% { opacity: 0.8; } 100% { opacity: 0.4; } }

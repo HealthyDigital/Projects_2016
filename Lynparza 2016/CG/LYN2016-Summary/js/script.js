@@ -11,7 +11,7 @@ $( function(){
 		nav = overlay.find('.nav'),
 		currentSection = localStorage.getItem('currentSection');
 	
-	//close menu
+	/*//close menu
 	$('.close').on('tap', function(){
 		var t = $(this).parent();
 			t.addClass('bounceOutUp');

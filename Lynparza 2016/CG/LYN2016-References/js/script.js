@@ -15,7 +15,7 @@ $( function(){
 	$('.close').on('tap', function(){
 		var t = $(this).parent();
 			t.addClass('bounceOutUp');
-		//removeAnimation(t, true);
+		removeAnimation(t, true);
 	});
 	
 	//go to slide 
