@@ -60,7 +60,7 @@ header > p{padding-top: 75px; padding-left: 100px; font-family: lexiRegular; col
 .content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
 margin-left: 500px;}
 
-	.footnote { font-size:12px; line-height:16px; }
+	.footnote { font-size:12px; line-height:16px; margin-top:23px;}
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
 

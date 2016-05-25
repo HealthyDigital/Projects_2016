@@ -50,7 +50,7 @@ em { font-style:italic; }
 a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
 
-header {width:1024px; height:145px; background-color: #951e63; margin-bottom:65px;}
+header {width:1024px; height:145px; background-color: #951e63; margin-bottom:108px;}
 header > p:first-child{padding-top: 45px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 20px; 
 margin-bottom: 8px;}
 header > p:last-child {padding-left: 100px; font-family: lexiRegular; color: white; font-size: 18px; }

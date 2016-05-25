@@ -56,7 +56,7 @@ header > strong {padding-left: 100px; font-family: lexiRegular; color: white; fo
 header > sup {font-family: lexiRegular; color: white; font-size: 15px;}
 
 .content, .nav-top { margin:0 auto; position:relative; }
-.content { width: 730px; height:530px; margin-left: 100px; margin-right:100px;margin-bottom: 48px;}
+.content { width: 730px; height:350px; margin-left: 100px; margin-right:100px;margin-bottom: 48px;}
 
 .content p{color: #506061;font-family: "helveticaRoman"; margin-bottom:25px;}
 .content p strong { color: #4f5656; font-family: "helveticaBold";}
@@ -66,7 +66,7 @@ header > sup {font-family: lexiRegular; color: white; font-size: 15px;}
 .content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
 margin-left: 500px;}
 
-	.footnote { font-size:12px; line-height:16px; }
+	.footnote { font-size:12px; line-height:16px; color: #506061;font-family: "helveticaRoman"; margin-left: 100px; width:825px;}
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
 
