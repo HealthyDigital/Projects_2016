@@ -33,7 +33,7 @@ ul {list-style: none;}
 
 
 .close > p { font-family:"proximaBold"; font-size:30px; color: white; margin-left: 4px; margin-top: 4px;}
-.logo, .popup, .controls, .popup .ref, .close, .inner-close, .bull li:before, .note, .info { position:absolute; }
+.logo, #popup, .controls, .popup .ref, .close, .inner-close, .bull li:before, .note, .info { position:absolute; }
 .close, .inner-close { right: 15px; top: 15px; width:30px; height:30px; /*background: url('../img/close.png') 0 0 no-repeat;*/ border:1px solid #fff; -webkit-border-radius:100px; z-index:10;  }
 
     .contents > .close, .inner-close { border-color:#787878; background-position-y:-23px; display:none; }
@@ -44,29 +44,24 @@ ul {list-style: none;}
 .close, .inner-close, .logo, .info, .bull li:before { background-size:100% auto; }
 
 
+#popup {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
 
+    background-color: rgba(0,0,0, 0.8);
+    overflow-x: hidden;
+    /*transition: 0.5s;*/
+}
 
 </style> 
 
 </head>
 <body>
-    <div class="popup">
-        <span class="close"><p>X</p></span>
-        <ul class="bodyContent">
-            <li>A systematic review and network meta-analysis funded by the Canadian government* set out to answer the question: “What is the comparative effectiveness and safety of long-acting inhaled agents (ICS, LABA, LAMA) alone or in any combination for patients with COPD?”#</li>
-            <li>More than 200 RCTs in 134,692 patients were reviewed in one of the most comprehensive systematic reviews published to date.</li>
-            <li>The results from 20 RCTs of at least 12 weeks duration in 26,141 patients showed that Spiriva®/Symbicort® (triple therapy) was associated with the 
-                highest probability of reducing the risk of moderate-to-severe exacerbations 
-                for patients who experienced an exacerbation in the last year.1 # </li>
-            <ul>
-                <li>*Ontario Ministry of Health and Long-Term Care Health System Research Fund</li>
-                <li>RCT = randomised controlled trial.</li>
-                <li># The authors highlighted several limitations of this analysis:</li>
-                <li>– since the original literature search in Dec. 2013, 21 new trials were published; particularly evident for LAMA/LABA combinations.</li>
-                <li>– many of the included RCTs were at high risk of bias, in terms of Cochrane risk-of-bias-criteria.</li>
-            </ul>
-        </ul>
-    </div>
+
 	<section id="container">
 	<header>
 		<p>Moderate-to-severe exacerbations for patients<br />who experienced an exacerbation in the past year</p>
@@ -84,7 +79,23 @@ ul {list-style: none;}
             <p class="footnote">BUDE, budesonide; FLUT, fluticasone; FORM, formoterol; INDAC, indacaterol; SALM, slameterol; VILA, vilanterol; GLYC, glycopyrronium bromide; TIOT, tiotropium; FORM/<br />BECLO, formoterol/beclomethasone; FORM/BUDE, formoterol/budesonide; VILA/FLUT, vilanterol/fluticasone; SALM/FLUT, salmeterol/fluticasone; TIOT/SALM, tiotropium/<br />salmeterol; INDA/GLYC, indacaterol/glycopyrronium; TIOT/FLUT/SALM, tiotropium/fluticasone/salmeterol; TIOT/BUDE/FORM, tiotropium/budesonide/formoterol<br /> Reference: 1. Tricco AC et al. BMJ Open 2015;5:e009183. Comparative safety and effectiveness of long-acting inhaled agents for treating chronic obstructive pulmonary<br /> disease: A systematic review and network meta-analysis.</p>
 
 
-
+    <div id="popup">
+        <span class="close"><p>X</p></span>
+        <ul class="bodyContent">
+            <li>A systematic review and network meta-analysis funded by the Canadian government* set out to answer the question: “What is the comparative effectiveness and safety of long-acting inhaled agents (ICS, LABA, LAMA) alone or in any combination for patients with COPD?”#</li>
+            <li>More than 200 RCTs in 134,692 patients were reviewed in one of the most comprehensive systematic reviews published to date.</li>
+            <li>The results from 20 RCTs of at least 12 weeks duration in 26,141 patients showed that Spiriva®/Symbicort® (triple therapy) was associated with the 
+                highest probability of reducing the risk of moderate-to-severe exacerbations 
+                for patients who experienced an exacerbation in the last year.1 # </li>
+            <ul>
+                <li>*Ontario Ministry of Health and Long-Term Care Health System Research Fund</li>
+                <li>RCT = randomised controlled trial.</li>
+                <li># The authors highlighted several limitations of this analysis:</li>
+                <li>– since the original literature search in Dec. 2013, 21 new trials were published; particularly evident for LAMA/LABA combinations.</li>
+                <li>– many of the included RCTs were at high risk of bias, in terms of Cochrane risk-of-bias-criteria.</li>
+            </ul>
+        </ul>
+    </div>
     </section>
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
@@ -92,16 +103,25 @@ ul {list-style: none;}
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-        $(".popup").css("display","none");
+        //$(".popup").css("display","none");
         $(".s").click(function(){
-            $("#container").css("display","none");
-            $("body").css("background-color","rgba(101,105,105,0.80)");
+            //$("header").css("display","none");
+           // $("article").css("display","none");
 
-            $(".popup").css("display","block");
+
+            //$(".popup").css("display","block");
+            //$(".popup").css("background-color","rgba(0,0,0,0.80)");
+            document.getElementById("popup").style.width = "1024px";
+            document.getElementById("popup").style.height = "768px";
         });
         $(".r").click(function(){
             //If reference Button Clicked
         });
+        $("span > p").click(function(){
+            document.getElementById("popup").style.width = "0";
+            document.getElementById("popup").style.height = "0";
+        })
+
 	});
 
 

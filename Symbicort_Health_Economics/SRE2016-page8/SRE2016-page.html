@@ -47,7 +47,7 @@ ul{list-style: none;}
 
 
 .close > p { font-family:"proximaBold"; font-size:30px; color: white; margin-left: 4px; margin-top: 4px;}
-.logo, .popup, .controls, .popup .ref, .close, .inner-close, .bull li:before, .note, .info { position:absolute; }
+.logo, #popup, .controls, .popup .ref, .close, .inner-close, .bull li:before, .note, .info { position:absolute; }
 .close, .inner-close { right: 15px; top: 15px; width:30px; height:30px; /*background: url('../img/close.png') 0 0 no-repeat;*/ border:1px solid #fff; -webkit-border-radius:100px; z-index:10;  }
 
     .contents > .close, .inner-close { border-color:#787878; background-position-y:-23px; display:none; }
@@ -57,35 +57,24 @@ ul{list-style: none;}
     .nav .close:before { color:#004d74; }
 .close, .inner-close, .logo, .info, .bull li:before { background-size:100% auto; }
 
+#popup {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0, 0.8);
+    overflow-x: hidden;
+    /*transition: 0.5s;*/
+}
 
 </style> 
 
 </head>
 <body>
-  <div class="popup">
-            <span class="close"><p>X</p></span>
-                    <ul class="bodyContentLeft">
-                        <h4>Welte <em>et al.</em> study design:</h4>
-                        <li>A 12-week, randomised, double-blind, parallel-group<br />
-                            study in 660 patients (≥40 yrs) with moderate-severe<br />COPD (FEV<sub>1</sub> ≤50% predicted normal and a history<br />
-                            of exacerbations requiring systemic steroids<br /> and/or antibiotics).
-                        </li>
-                        <li>Patients received tiotrpium (18Ug) once-daily plus either<br />Symbicort<sup>&reg;</sup> 400/12ug or placebo twice daily. Terbutaline
-                        <br />0.5mg was used as reliever medication as-needed<br />throughout the run in and treatment period. The primary<br />
-                        outcome was clinic pre-dose FEV<sub>1</sub> evaluated as <br /> change from randomisation to 12 weeks.
-                        </li>
 
-                    </ul>
-                    <ul class="bodyContentRight">
-                        <li>Over 12 weeks of treatment:<sup>1</sup></li>
-                        <li>Symbicort 400/12 bd + tiotropium significantly<br /> prolonged time to first exacerbation vs. tiotropium<br />+ placebo; 
-                            <em>p< 0.001</em></li>
-                        <li>Symbicort 400/12 bd + tiotropium significantly<br />improved post-dose FEV<sub>1</sub> by 11% (at both 5 and<br />
-                            60 minutes post-dose) vs. tiotropium + placebo;<br /><em>p< 0.001</em>
-                        </li>
-                        <li>Reference: 1. Welte T <em>et al. Am J Respir Crit Care Med.</em> 2009; 180:741-50.
-                    </ul>
-        </div>
 	<section id="container">
 	<header>
 		<p>Significant reduction in exacerbations*<br />and hospitalisations when Symbicort is added to Spiriva<sup>&reg1</sup></p>
@@ -125,7 +114,30 @@ ul{list-style: none;}
             Reference: 1. Welte T <em>et al. Am J Respir Crit Care Med</em> 2009; 180:741–750.</p>
 
         </article>
+            <div id="popup">
+                <span class="close"><p>X</p></span>
+                        <ul class="bodyContentLeft">
+                            <h4>Welte <em>et al.</em> study design:</h4>
+                            <li>A 12-week, randomised, double-blind, parallel-group<br />
+                                study in 660 patients (≥40 yrs) with moderate-severe<br />COPD (FEV<sub>1</sub> ≤50% predicted normal and a history<br />
+                                of exacerbations requiring systemic steroids<br /> and/or antibiotics).
+                            </li>
+                            <li>Patients received tiotrpium (18Ug) once-daily plus either<br />Symbicort<sup>&reg;</sup> 400/12ug or placebo twice daily. Terbutaline
+                            <br />0.5mg was used as reliever medication as-needed<br />throughout the run in and treatment period. The primary<br />
+                            outcome was clinic pre-dose FEV<sub>1</sub> evaluated as <br /> change from randomisation to 12 weeks.
+                            </li>
 
+                        </ul>
+                        <ul class="bodyContentRight">
+                            <li>Over 12 weeks of treatment:<sup>1</sup></li>
+                            <li>Symbicort 400/12 bd + tiotropium significantly<br /> prolonged time to first exacerbation vs. tiotropium<br />+ placebo; 
+                                <em>p< 0.001</em></li>
+                            <li>Symbicort 400/12 bd + tiotropium significantly<br />improved post-dose FEV<sub>1</sub> by 11% (at both 5 and<br />
+                                60 minutes post-dose) vs. tiotropium + placebo;<br /><em>p< 0.001</em>
+                            </li>
+                            <li>Reference: 1. Welte T <em>et al. Am J Respir Crit Care Med.</em> 2009; 180:741-50.
+                        </ul>
+            </div>
     </section>
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
@@ -133,16 +145,24 @@ ul{list-style: none;}
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-        $(".popup").css("display","none");
+        //$(".popup").css("display","none");
         $(".s").click(function(){
-            $("#container").css("display","none");
-            $("body").css("background-color","rgba(0,0,0,0.80)");
+            //$("header").css("display","none");
+           // $("article").css("display","none");
 
-            $(".popup").css("display","block");
+
+            //$(".popup").css("display","block");
+            //$(".popup").css("background-color","rgba(0,0,0,0.80)");
+            document.getElementById("popup").style.width = "1024px";
+            document.getElementById("popup").style.height = "768px";
         });
         $(".r").click(function(){
             //If reference Button Clicked
         });
+        $("span > p").click(function(){
+            document.getElementById("popup").style.width = "0";
+            document.getElementById("popup").style.height = "0";
+        })
 	});
 
 
