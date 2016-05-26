@@ -254,6 +254,19 @@ body.arimidex {
 	background-size: 100% auto;
 }
 
+.faslodex .logo.white{
+    display:block;
+    width:140px;
+    height:73px;
+    position:absolute;
+    top:40px;
+    left:auto;
+    right:40px;
+    background:url('../img/faslodex_logo.png') no-repeat;
+    background-size: 100% auto;
+}
+
+
 .faslodex .pi{
 	right:10px;
 	bottom:32px;

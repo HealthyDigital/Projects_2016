@@ -26,6 +26,20 @@
 }
 
 @font-face {
+    font-family: 'HelveticaNeueLTStd-BdCn';
+    src: url(//:) format('no404'), 
+         url('../fonts/HelveticaNeueLTStd-BdCn.woff') format('woff'),
+         url('../fonts/HelveticaNeueLTStd-BdCn.svg#HelveticaNeueLTStd-BdCn') format('svg');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueLTStd-BlkCn';
+    src: url(//:) format('no404'), 
+         url('../fonts/HelveticaNeueLTStd-BlkCn.woff') format('woff'),
+         url('../fonts/HelveticaNeueLTStd-BlkCn.svg#HelveticaNeueLTStd-BlkCn') format('svg');
+}
+
+@font-face {
     font-family: 'HelveticaNeueLTStdMedCnRg';
     src: url(//:) format('no404'), 
          url('../fonts/helveticaneueltstd-mdcn-webfont.woff') format('woff'),

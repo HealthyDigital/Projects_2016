@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="AstraZeneca | LYNPARZA">
+<title>AstraZeneca | LYNPARZA</title>
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<style type="text/css">
+    .content p:first-child{
+        font-size:23px;
+        line-height:29px;
+        letter-spacing: -0.9px;
+        margin-top:50px;
+        margin-bottom:0px;
+    }
+
+    .content p:last-child{
+        line-height: 16px;
+        margin-top:50px;
+    }
+
+    .graph{
+        width:900px;
+        height:369px;
+        background:url('img/graph.png') no-repeat;
+        background-size:auto 100%;
+        position: relative;
+    }
+
+    .graph li{
+        list-style: none;
+    }
+
+    .graph > li{
+        position: absolute;
+    }
+
+    .graph li, .content p:last-child{
+        font-family:HelveNeuLigCon;
+        font-size:14px;
+        color: #506061;
+    }
+
+     /* y axis label */
+    .graph > li:first-child{
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        left:-150px;
+        top:170px;
+    }
+
+    /* x axis label */
+    .graph > li:nth-child(2){
+        left:300px;
+        top:352px;
+    }
+
+    /* y axis scale */
+    .graph > li:nth-child(3){
+        left:18px;
+        top:37px;
+        text-align: right;
+    }
+
+    /* y axis scale spacing */
+    .graph > li:nth-child(3) li{
+        height:55px;
+    }
+
+    /* x axis scale */
+    .graph > li:nth-child(4){
+        left:47px;
+        top:332px;
+    }
+
+    /* x axis scale spacing */
+    .graph > li:nth-child(4) li{
+        float:left;
+        width:114px;
+    }
+
+    header > p{
+        padding-top:50px;
+    }
+
+</style> 
+
+</head>
+<body>
+	<section id="container">
+	<header>
+		<p>The time between successive exacerbations decreases<br />following a hospitalisation from acute COPD<sup>1</sup></p>
+	</header>
+    	<article class="content">
+
+    		<p>Hazard rates for repeated hospitalisations or death 73,106 patients, from the<br />time of their
+            first hospitalisation for a COPD exacerbation decrease over time<sup>1</sup></p>
+
+            <ul class="graph">
+                <li>Rate of next hospitalised exacerbation or death per 10,000/day</li>
+                <li>Time after first severe exacerbation (years)</li>
+                <li>
+                    <ul>
+                        <li>100</li>
+                        <li>80</li>
+                        <li>60</li>
+                        <li>40</li>
+                        <li>20</li>
+                        <li>0</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>0</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                    </ul>
+                </li>
+                
+            </ul>
+
+            <p>Time between successive exacerbations estimated using median time to next exacerbation or death,
+            whichever occurred first. <br />Reference: 1. Suissa S<em>et al.</em> Thorax 2012; 67:957-63.</p>
+
+        </article>
+
+    </section>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$( function(){
+
+	});
+
+
+
+</script>
+</body>
+</html>
