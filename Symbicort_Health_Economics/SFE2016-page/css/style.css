@@ -25,7 +25,7 @@
 [data-href=home]:before{ content:"\e607"; top:-3px; }
 [data-href=bibliography]:before{font-family:iconBook; content:"\e900"; font-size: 20px; top:-1px; }
 .arrow:before{content:"\e603"; font-size: 38px;}
-.close:before{content:"\e604"; font-size: 44px; color:#ffffff; }
+
 
 /*[data-href=home]:before{content:"\e602"}
   =============  */
@@ -68,8 +68,7 @@ header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
 margin-left: 500px;}
 
 	.footnote { font-size:12px; line-height:16px; }
-.close, .arrow { width:44px;   }
-.close { height:44px; right:10px; top:10px; background: #004d74; }
+
 
 
 .overlay, .overlay .item, .overlay > div, .icon /*.icon :before*/ { -webkit-transition:all 0.4s ease-in-out; transition:all 0.4s ease-in-out; }

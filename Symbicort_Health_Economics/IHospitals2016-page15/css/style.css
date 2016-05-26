@@ -25,7 +25,7 @@
 [data-href=home]:before{ content:"\e607"; top:-3px; }
 [data-href=bibliography]:before{font-family:iconBook; content:"\e900"; font-size: 20px; top:-1px; }
 .arrow:before{content:"\e603"; font-size: 38px;}
-.close:before{content:"\e604"; font-size: 44px; color:#ffffff; }
+
 
 /*[data-href=home]:before{content:"\e602"}
   =============  */
@@ -66,8 +66,6 @@ header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
 margin-left: 500px;}
 
 
-.close, .arrow { width:44px;   }
-.close { height:44px; right:10px; top:10px; background: #004d74; }
 
 
 .overlay, .overlay .item, .overlay > div, .icon /*.icon :before*/ { -webkit-transition:all 0.4s ease-in-out; transition:all 0.4s ease-in-out; }
@@ -101,9 +99,7 @@ margin-left: 500px;}
 	.overlay .nav { bottom:0; background:#ffffff; min-height: 640px; }
 	.overlay .nav:after { content:""; bottom:40px; right:40px; background-position:0 0; }
 	.overlay .video { top:4.5em; left:0; right:0; width:942px; margin:0 auto; }
-	.video .close { background:#1b3e58; }
-.nav .close { background:none; top:-50px; right:8px; }
-	.nav .close:before { color:#004d74; }
+
 	.section > li { float:left; width:130px; margin-right:5px; background:rgba(0, 77, 116, 0.1); font-size:15px; line-height:18px; }
 	.section > li:last-child { margin-right:0; }
 	.section > li > span { border-bottom:5px solid #004d74; }

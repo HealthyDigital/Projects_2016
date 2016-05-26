@@ -55,16 +55,88 @@ input{
     box-shadow:inset 2px 2px 5px #888;
     border: 1px solid #b8b8b8;
 }
+.bodyContent {width:567px; height:585px; margin-left: 255px; margin-right:255px; margin-top:73px;}
+.bodyContent > li:first-child, .bodyContent > li:nth-child(3) ,
+.bodyContent > li:nth-child(5) {margin: 0 auto; width:252px; height:102px; margin-bottom: 11px; border:1px solid white;}
+
+.bodyContent > li:nth-child(2), .bodyContent > li:nth-child(4) {background-image: url('./img/whiteArrow.png'); 
+background-repeat: no-repeat; width:52px; height:40px; margin: 0 auto; margin-bottom: 11px;}
+
+.bodyContent > li:nth-child(2) > p{margin-left: 70px; color: white; width: 111px; height:28px; font-size:14px; font-family: "lexiRegular"; line-height: 15px;}
+ul{ list-style: none; }
+
+
+.bodyContent > ul:nth-child(6) > li:first-child, .bodyContent > ul:nth-child(6) > li:last-child {background-image: url('./img/whiteArrow.png'); 
+background-repeat: no-repeat; width:52px; height:40px; margin: 0 auto; margin-bottom: 11px;}
+
+.bodyContent > ul:nth-child(6) > li {display: inline-block; vertical-align: middle;  color: white; font-size: 14px;
+font-family: "lexiRegular";}
+.bodyContent > ul:nth-child(6) {text-align: center; margin-bottom: 11px;}
+
+.bodyContent > ul:nth-child(7) > li {display: inline-block; width: 250px; height: 100px; 
+    margin-left: 15px; text-align: center; color: white; 
+    font-size:17px; font-family: "lexiRegular"; line-height: 18px;}
+.bodyContent > ul:nth-child(7) > li:first-child { background-color: #003665; }
+.bodyContent > ul:nth-child(7) > li:last-child  { background-color: #3b4242; }
+
+.bodyContent > ul:nth-child(7) > li > p {padding-top: 25px;}
+
+.bodyContent {margin-bottom: 42px;}
+
+
+.footnote { margin-left:68px; font-family: "HelveticaNeueLTStd"; font-size:14px; color:white;}
+
+
+
+.close > p { font-family:"proximaBold"; font-size:30px; color: white; margin-left: 4px; margin-top: 4px;}
+.logo, .popup, .controls, .popup .ref, .close, .inner-close, .bull li:before, .note, .info { position:absolute; }
+.close, .inner-close { right: 15px; top: 15px; width:30px; height:30px; /*background: url('../img/close.png') 0 0 no-repeat;*/ border:1px solid #fff; -webkit-border-radius:100px; z-index:10;  }
+
+    .contents > .close, .inner-close { border-color:#787878; background-position-y:-23px; display:none; }
+    .video .close { background:#1b3e58; }
+    
+.nav .close { background:none; top:-50px; right:8px; }
+    .nav .close:before { color:#004d74; }
+.close, .inner-close, .logo, .info, .bull li:before { background-size:100% auto; }
+
+
+
 
 </style> 
 
 </head>
 <body>
+                     <!--popups -->
+        <div class="popup">
+            <span class="close"><p>X</p></span>
+            <ul class="bodyContent">
+                <li></li>
+                <li><p>No predfined<br />exclusion criteria</p></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <ul>
+                    <li></li>
+                    <li>Pairwise matching (1:1)</li>
+                    <li></li>
+                </ul>
+                <ul>
+                    <li><p>Symbicort<sup>&reg;</sup><br />matched cohort<br />n=2,734</p></li>
+                    <li><p>Seretide<sup>&reg;</sup><br />matched cohort*<br />n=2,734</p></li>
+                </ul>
+            </ul>
+            <p class="footnote">Adapted from LArsson <em>et al.</em> 2013<sup>1</sup><br />
+            *All but 4 patients in the Seretide<sup>&reg;</sup> group at index date could be matched within larger Symbicort cohort</p>
+        </div>
 	<section id="container">
 	<header>
 		<p>Impact on hospitalisations on average over 12 months</p>
 
 	</header>
+        <ul class="controls">
+            <li class="r">R</li>
+            <li class="s disb">S</li>
+        </ul>
     	<article class="content">
 
     	<p>Based on <input type="text" value="800" /> admissions and current share of Symbicort<sup>&reg;</sup> vs Seretide<sup>&reg;</sup></p>
@@ -135,7 +207,16 @@ input{
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
+        $(".popup").css("display","none");
+        $(".s").click(function(){
+            $("#container").css("display","none");
+            $("body").css("background-color","rgba(101,105,105,0.80)");
 
+            $(".popup").css("display","block");
+        });
+        $(".r").click(function(){
+            //If reference Button Clicked
+        });
 	});
 
 

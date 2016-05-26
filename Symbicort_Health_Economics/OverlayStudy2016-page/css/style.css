@@ -66,9 +66,8 @@ margin-left: 500px;}
 	.popup p { margin-bottom: 10px; }
 	.popup .footnote { font-size:14px; line-height:16px; }
 	.popup .nbtm { margin-bottom:3px; }
-	.close, .inner-close { right: 15px; top: 15px; width:30px; height:30px; background: url('../img/close.png') 0 0 no-repeat; border:1px solid #fff; -webkit-border-radius:100px; z-index:10;  }
 
-.close, .inner-close { right: 15px; top: 15px; width:30px; height:30px; background: url('../img/close.png') 0 0 no-repeat; border:1px solid #fff; -webkit-border-radius:100px; z-index:10;  }
+.close, .inner-close { right: 15px; top: 15px; width:30px; height:30px;  border:1px solid #fff; -webkit-border-radius:100px; z-index:10;  }
 	.contents > .close, .inner-close { border-color:#787878; background-position-y:-23px; display:none; }
 	.video .close { background:#1b3e58; }
 .nav .close { background:none; top:-50px; right:8px; }

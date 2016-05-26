@@ -18,14 +18,13 @@
 @font-face{font-family:helveticaRoman;src:url(../fonts/HelveticaNeueLTStd-Roman.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Roman.svg#icon-book) format('svg');font-weight:400;font-style:normal}
 
 
-
 .icon :before, .icon:before {font-family:lynparza-icons;speak:none;font-style:normal;font-weight:400; line-height:1em;font-variant:normal;text-transform:none;position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 [data-href=menu]:before{content:"\e601"; top:-2px; }
 [data-href=resource]:before{content:"\e600"}
 [data-href=home]:before{ content:"\e607"; top:-3px; }
 [data-href=bibliography]:before{font-family:iconBook; content:"\e900"; font-size: 20px; top:-1px; }
 .arrow:before{content:"\e603"; font-size: 38px;}
-.close:before{content:"\e604"; font-size: 44px; color:#ffffff; }
+
 
 /*[data-href=home]:before{content:"\e602"}
   =============  */
@@ -68,8 +67,17 @@ margin-left: 500px;}
 	.footnote { margin-top:20px; font-size:14px; line-height:16px; font-family: "HelveticaNeueLTStd"; margin-left: 0px; 
 	color:#3f4444;
 }
-.close, .arrow { width:44px;   }
-.close { height:44px; right:10px; top:10px; background: #004d74; }
+/*.close, .arrow { width:44px;   }
+.close { height:44px; right:10px; top:10px; background: #004d74; }*/
+
+.logo, .popup, .controls, .popup .ref, .close, .inner-close, .bull li:before, .note, .info { position:absolute; }
+
+.close, .inner-close { right: 15px; top: 15px; width:30px; height:30px; /*background: url('../img/close.png') 0 0 no-repeat;*/ border:1px solid #fff; -webkit-border-radius:100px; z-index:10;  }
+	.contents > .close, .inner-close { border-color:#787878; background-position-y:-23px; display:none; }
+	.video .close { background:#1b3e58; }
+.nav .close { background:none; top:-50px; right:8px; }
+	.nav .close:before { color:#004d74; }
+.close, .inner-close, .logo, .info, .bull li:before { background-size:100% auto; }
 
 
 .overlay, .overlay .item, .overlay > div, .icon /*.icon :before*/ { -webkit-transition:all 0.4s ease-in-out; transition:all 0.4s ease-in-out; }
