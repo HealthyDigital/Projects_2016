@@ -50,8 +50,8 @@ em { font-style:italic; }
 a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
 
-header {width:1024px; height:145px; background-color: #951e63; margin-bottom:64px;}
-header > p{padding-top: 40px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 24px; line-height: 32px;}
+header {width:1024px; height:145px; background-color: #951e63; margin-bottom:50px;}
+header > p{padding-top: 75px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 32px;}
 header > sup {font-family: lexiRegular; color: white; font-size: 15px;}
 
 .content, .nav-top { margin:0 auto; position:relative; }
@@ -65,11 +65,11 @@ header > sup {font-family: lexiRegular; color: white; font-size: 15px;}
 .content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
 margin-left: 500px;}
 
-	.footnote { font-size: 14px;
+	.footnote { font-size: 10px;
 				font-family: "HelveticaNeueLTStd";
 				line-height: 15px;
 				color: #3f4444;
-				word-spacing:-0.2em; margin-top:65px;}
+				word-spacing:-0.2em; margin-top:20px;}
 
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
