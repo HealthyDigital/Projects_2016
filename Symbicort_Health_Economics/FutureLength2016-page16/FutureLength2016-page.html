@@ -94,28 +94,7 @@ font-family: "lexiRegular";}
 
 </head>
 <body>
-                     <!--popups -->
-        <div class="popup">
-            <span class="close"><p>X</p></span>
-            <ul class="bodyContent">
-                <li></li>
-                <li><p>No predfined<br />exclusion criteria</p></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <ul>
-                    <li></li>
-                    <li>Pairwise matching (1:1)</li>
-                    <li></li>
-                </ul>
-                <ul>
-                    <li><p>Symbicort<sup>&reg;</sup><br />matched cohort<br />n=2,734</p></li>
-                    <li><p>Seretide<sup>&reg;</sup><br />matched cohort*<br />n=2,734</p></li>
-                </ul>
-            </ul>
-            <p class="footnote">Adapted from LArsson <em>et al.</em> 2013<sup>1</sup><br />
-            *All but 4 patients in the Seretide<sup>&reg;</sup> group at index date could be matched within larger Symbicort cohort</p>
-        </div>
+
 	<section id="container">
 	<header>
 		<p>Potential impact on future length of stay</p>
@@ -150,7 +129,28 @@ font-family: "lexiRegular";}
             <p class="footnote">Reference: 1. Larsson K et al. J Intern Med 2013; 273:584-594.</p>
 
         </article>
-
+                     <!--popups -->
+        <div class="popup">
+            <span class="close"><p>X</p></span>
+            <ul class="bodyContent">
+                <li></li>
+                <li><p>No predfined<br />exclusion criteria</p></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <ul>
+                    <li></li>
+                    <li>Pairwise matching (1:1)</li>
+                    <li></li>
+                </ul>
+                <ul>
+                    <li><p>Symbicort<sup>&reg;</sup><br />matched cohort<br />n=2,734</p></li>
+                    <li><p>Seretide<sup>&reg;</sup><br />matched cohort*<br />n=2,734</p></li>
+                </ul>
+            </ul>
+            <p class="footnote">Adapted from LArsson <em>et al.</em> 2013<sup>1</sup><br />
+            *All but 4 patients in the Seretide<sup>&reg;</sup> group at index date could be matched within larger Symbicort cohort</p>
+        </div>
     </section>
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
@@ -160,14 +160,19 @@ font-family: "lexiRegular";}
 	$( function(){
         $(".popup").css("display","none");
         $(".s").click(function(){
-            $("#container").css("display","none");
-            $("body").css("background-color","rgba(101,105,105,0.80)");
+            $("header").css("display","none");
+            $("article").css("display","none");
+
 
             $(".popup").css("display","block");
+            $(".popup").css("background-color","rgba(0,0,0,0.80)");
+
         });
         $(".r").click(function(){
             //If reference Button Clicked
         });
+
+
 	});
 
 
