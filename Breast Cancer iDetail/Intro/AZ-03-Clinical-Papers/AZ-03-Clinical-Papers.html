@@ -36,11 +36,11 @@
         </style>
     </head>
     <body class='intro'>
-        <div class="container">
-            <span class='logo'></span>
+        <div class="container" id="ct">
+            <span class='logo' id="logo"></span>
             <span class='pi'></span>
 
-            <h1>Clinical Papers</h1>
+            <h1 id="title">Clinical Papers</h1>
 
             <div class='scrollable'>
                 <ul id='cp'>
@@ -52,11 +52,11 @@
                         <span>Arimidex</span>
                         <span>The ATAC Trialists’ Group.<br />(2005) <em>Lancet.</em></span>
                     </li>
-                    <li class='ATAC2008'>
+                    <li class='ATAC2008n'>
                         <span>Arimidex</span>
                         <span>The ATAC Trialists’ Group.<br />(2008) <em>Lancet Oncol.</em></span>
                     </li>
-                    <li class='ATAC2010'>
+                    <li class='Cuzick2010n'>
                         <span>Arimidex</span>
                         <span>Cuzick J <em>et al.</em><br />(2010) <em>Lancet Oncol.</em></span>
                     </li>
@@ -64,7 +64,7 @@
                         <span>Zoladex</span>
                         <span>Jonat W <em>et al.</em><br />(2002) <em>J Clin Oncol.</em></span>
                     </li>
-                    <li class='DeHaes2013'>
+                    <li class='DeHaes2013n'>
                         <span>Zoladex</span>
                         <span>de Haes H <em>et al.</em><br />(2003) <em>J Clin Oncol.</em></span>
                     </li>
@@ -76,7 +76,7 @@
                         <span>Zoladex</span>
                         <span>Kaufmann M <em>et al.</em><br />(2003) <em>European J Cancer.</em></span>
                     </li>
-                    <li class='DiLeo2010'>
+                    <li class='DiLeo2010n'>
                         <span>Faslodex</span>
                         <span>Di Leo A <em>et al.</em><br />(2010) <em>J Clin Oncol.</em></span>
                     </li>
@@ -96,8 +96,26 @@
                 scrollbars: true,
                 scrollingX: true
             });
-
+            
         }); 
+        
+        
+        var ct = document.getElementById('ct');
+        ct.addEventListener('swipeleft', function(e) {
+            var elem = e.target;
+            if(elem.id && (elem.id == 'ct' || elem.id=='title' || elem.id=='logo')) {
+//                 console.log('elem ' + elem.id +' swipeLeft');
+                document.location = 'veeva:nextSlide()';
+            }
+        });
+        ct.addEventListener('swiperight', function(e) {
+            var elem = e.target;
+            if(elem.id && (elem.id == 'ct' || elem.id=='title' || elem.id=='logo')) {
+//                 console.log('elem ' + elem.id + ' swiperight');
+                document.location = 'veeva:prevSlide()';
+            }
+        });
+
     </script>
     <script>
         $(function(){
@@ -108,10 +126,10 @@
             function openPaper(){
                 $('.scrollable li').on('tap', function(){
                 var name = $(this).attr('class');
+                //console.log('veeva:gotoSlide('+name+'.zip, AZAUBREF)');
                 document.location = 'veeva:gotoSlide('+name+'.zip, AZAUBREF)';
-                })
+                });
             }
         })
-
     </script>
 </html> 

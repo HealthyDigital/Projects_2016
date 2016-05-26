@@ -256,7 +256,7 @@
         }
 
         .dropdown-menu{
-            margin-left:20px;
+            margin-left:28px;
             font-size:18px;
             margin-bottom: 20px
         }
@@ -304,7 +304,7 @@
             top:25px;
         }
 
-        .dropdown{
+        .dropdown {
             font-family: 'AvenirLTStd-Medium';
             width:595px;
             display: none;
@@ -315,6 +315,7 @@
             margin-top:10px;
             text-indent:-0.7em;
             margin-left:25px;
+            border-color:transparent;
         }
 
         .dropdown li:before{
@@ -322,7 +323,10 @@
             color: #f98f40;
             position:relative;
             left:-10px;
+            border-color:transparent;
         }
+        
+        
         
         .dropdown li.small{
             margin-left:50px
@@ -340,7 +344,7 @@
             color:#733C97;
         }
 
-        .dropdown p{margin-top:20px;}
+        .dropdown p{margin-top:20px; font-size: 17px;}
 
 
         /* pg3 and pg4 */
@@ -525,7 +529,7 @@
                                 continue to provide FASLODEX free of charge for the proportion of<br />
                                 treatment specified until such time as:</p>
                                 <ul>
-                                    <li>the Doctor deems that the patient is no longer gaining any clinical benefit from treatment; or</li>
+                                    <li>the doctor deems that the patient is no longer gaining any clinical benefit from treatment; or</li>
                                     <li>until FASLODEX becomes available on the PBS.</li>
                                 </ul>
                             </div>
@@ -576,7 +580,7 @@
 
             <div class='ref'>
                 <ul>
-                    <li>Faslodex Approved Product Information. Date of TGA approval<br />6 March 2006. Date of Most recent amendment 22 October 2014</li>
+                    <li>Faslodex Approved Product Information. Date of first inclusion in the<br />ARTG: 6 March 2006. Date of most recent amendment: 29 March 2016.</li>
                 </ul>
             </div>
 
@@ -593,6 +597,9 @@
             $('.button').on('tap', function(){
                 var pg = '.' + ($(this).attr('class').split(' '))[1];
                 $('.feature, .logo, .ref').fadeOut();
+                if(pg == '.pg2') { 
+                	$('span.ref').fadeIn();
+                }
                 $(pg).fadeIn();
             })
 
@@ -612,6 +619,10 @@
                     $(droplist).slideUp()
                 }
             })
+            
+            $('.dropdown-wrapper').on('touchmove', function(e){
+            	e.stopPropagation();
+            });
         });
 
     </script>

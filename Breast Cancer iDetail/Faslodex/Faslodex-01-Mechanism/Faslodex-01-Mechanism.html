@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/fonts.css" />
     <style type="text/css">
+        h1 span {
+            text-transform: none;
+        }
+        
         i{display:block}
 
         .feature > i:nth-child(2){
@@ -22,7 +26,7 @@
             height:475px;
             width:240px;
             position:relative;
-            background: url('img/mechanisms.png') no-repeat;
+            background: url('img/mechanismsn.png') no-repeat;
             background-position: center;
             background-size:240px auto;
             image-rendering: -webkit-optimize-contrast;
@@ -34,8 +38,8 @@
             border-left:1px solid #cdcdcc;}
 
         .mechanisms > li:first-child{padding-right:70px; background-position-y:0px;}
-        .mechanisms > li:nth-child(2){background-position-y:-496px;}
-        .mechanisms > li:last-child{background-position-y:-992px;}
+        .mechanisms > li:nth-child(2){background-position-y:-477px;}
+        .mechanisms > li:last-child{background-position-y:-955px;}
 
         .grey-buttons{
             position:absolute;
@@ -172,8 +176,8 @@
         .mechanisms-large li{
             float:left;
             position:absolute;
-            background: url('img/mechanisms.png') no-repeat;
-            background-size:330px auto;
+            background: url('img/mechanismsL.png') no-repeat;
+            background-size:306px auto;
             height:640px;
             width:100%;
             background-position: center 0 ;
@@ -182,10 +186,23 @@
         }
 
         .mechanisms-large li:first-child{background-position-y:0px;}
-        .mechanisms-large li:nth-child(2){background-position-y:-684px;}
-        .mechanisms-large li:last-child{background-position-y:-1366px;}
+        .mechanisms-large li:nth-child(2){background-position-y:-640px;}
+        .mechanisms-large li:last-child{background-position-y:-1280px;}
 
-
+        .footnote{ 
+            position: absolute; 
+			font-family: 'HelveNeuLigCon'; 
+			font-size: 12px; 
+			top: 660px;
+			left: 58px;
+			width: 300px;
+			display: inline-block;
+			color:#000;
+        }
+        .footnote i{
+            font-style: italic;
+            display: inline;
+        }
     </style>
     </head>
     <body class='faslodex'>
@@ -194,7 +211,7 @@
             <span class='pi'></span>
             <span class='logo'></span>
             <div class='feature'>
-                <h1>FASLODEX 500 mg</h1>
+                <h1>FASLODEX 500 <span>mg</span></h1>
                 <i>Faslodex 500 mg for postmenopausal women with ER+ locally<br /> advanced or metastatic breast cancer with disease progression<br /> following prior tamoxifen therapy<sup>1</sup></i>
                 <h2>MECHANISM OF ACTION</h2>
                 <i>FASLODEX is an ER antagonist with NO known agonist activity<sup>2</sup></i>
@@ -246,7 +263,7 @@
                 <div class='video'>
                     <video src="video/faslodex.mp4" width="746" height="560" id = 'vid' controls></video>
                 </div>
-
+                <p class="footnote">Adapted from Dowsett <i>et al</i>, 2005<sup>4</sup></p>
             </div>
             <div class='mechanisms-large'>
                 <ul>
@@ -258,7 +275,7 @@
             </div>
             <div class='ref'>
                 <ul>
-                    <li>Faslodex Approved Product Information. Date of TGA approval<br />6 March 2006. Date of Most recent amendment 22 October 2014.</li>
+                    <li>Faslodex Approved Product Information. Date of first inclusion in the<br />ARTG: 6 March 2006. Date of most recent amendment: 29 March 2016.</li>
                     <li>Howell A. <em>Int J Gynecol Cancer</em> 2006; 16 Suppl 2: 521–3.</li>
                     <li>Wakeling AE. <em>Endocr Relat Cancer</em> 2000; 7(1): 17–28.</li>
                     <li>Dowsett M <em>et al. Breast Cancer Res Treat</em> 2005; 93 Suppl 1: S11–8.</li>

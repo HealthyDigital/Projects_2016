@@ -65,20 +65,23 @@
             margin-top:20px;
             margin-left:5px;
             display:block;
-            background:url('img/graphs.png') no-repeat;
+            background:url('img/graphsn.png') no-repeat;
             background-size:100% auto;
             image-rendering: -webkit-optimize-contrast;
         }
 
         .g1 .img{
-            height:340px;
-            width:425px;
+            height: 360px;
+			width: 475px;
+			margin-left: 0px;
         }
 
         .g2 .img{
-            height:335px;
-            width:425px;
-            background-position-y:-347px;
+			height: 355px;
+			width: 475px;
+			background-position-y: -360px;
+			margin-top: 15px;
+			margin-left: -10px;
         }
 
         .graph.zoom{
@@ -92,13 +95,13 @@
         }
 
         .graph.zoom .img{
-            height:430px;
+            height:400px;
             width:530px;
             margin-left:-25px;
         }
 
         .graph.g2.zoom .img{
-            background-position-y: -430px;
+            background-position-y: -400px;
             height:450px;
         }
 
@@ -195,8 +198,10 @@
 
         .box > ul li{
             text-indent:-5px;
-            width:365px;
-            margin-bottom:10px;
+			width: 385px;
+			margin-bottom: 10px;
+			font-size: 18px;
+			line-height: 22px;
         }
 
         .bulleted li:before{
@@ -211,6 +216,7 @@
         .box > p{
             margin-top:20px;
             font-size:14px;
+            font-family: 'AvenirLTStd-Light';
         }
 
         .colored{
@@ -220,9 +226,10 @@
         }
 
         .colored li{
-            margin-bottom:10px;
+            margin-bottom:9px;
             width:450px;
             text-indent:-20px;
+            line-height: 19px;
         }
 
         .colored li:before{
@@ -281,10 +288,15 @@
         .footnote{
             position:absolute;
             color: black;
-            font-size: 9px;
+            font-size: 12px;
             font-family: 'AvenirLTStd-Book';
             top:660px;
             left:60px;
+        }
+
+        .footnote i{
+            font-style: italic;
+            display: inline;
         }
 
         .light{
@@ -357,10 +369,10 @@
                 <ul class='grey colored light'>
                     <li>Recurrence during or ≤12 months after completing adjuvant hormonal therapy</li>
                     <li>Recurrence &gt;12 months after completing adjuvant hormonal therapy and after progression on 1st line endocrine therapy  for advanced disease</li>
-                    <li>Progressed on 1st line endocrine treatment for de novo advanced disease</li>
+                    <li>Progressed on 1st line endocrine treatment for <em>de novo</em> advanced disease</li>
                     <li>Other</li>
                 </ul>
-                <p class='footnote'>Adapted from Di Leo A et al, 2010.1</p>
+                <p class='footnote'>Adapted from Di Leo A <i>et al</i>, 2010.<sup>1</sup></p>
             </div>
 
             <div class='ref'>
@@ -409,7 +421,8 @@
 
             $('.home .close').on('tap', function(){
                 $(this).add('.graph').removeClass('zoom').hide().fadeIn();
-                $('.container > span, .feature > *').fadeIn();
+                $(this).addClass('nofade').hide();
+                $('.container > span, .feature > *').not('.nofade').fadeIn();
             })
 
             $('span.patient, span.info').on('tap', function(){
@@ -417,7 +430,7 @@
                 $(c).addClass('active').fadeIn();
             })
 
-            $('.close').on('tap', function(){
+            $('.popup .close').on('tap', function(){
                 $('.home').fadeIn();
                 $('.active').removeClass('.active').fadeOut();
             })
