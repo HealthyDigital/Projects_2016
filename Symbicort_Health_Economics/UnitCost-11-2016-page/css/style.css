@@ -53,6 +53,7 @@ a { text-decoration:none; color:inherit; }
 header {width:1024px; height:145px; background-color: #951e63; margin-bottom:30px;}
 header > p{padding-top: 75px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 20px; }
 header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
+sup {font-size:12px;}
 
 .content, .nav-top { margin:0 auto; position:relative; }
 .content { width: 730px; height:530px; margin-left: 60px; margin-right:100px;margin-bottom: 48px;}

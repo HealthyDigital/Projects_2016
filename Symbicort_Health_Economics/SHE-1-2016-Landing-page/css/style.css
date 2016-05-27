@@ -48,7 +48,7 @@ a { text-decoration:none; color:inherit; }
 	/*.content p { margin-bottom:10px; }*/
 
 .content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}
-.content > h3 {font-size: 25px; color: white;}
+.content > h3 {font-size: 25px; color: white; font-family: "lexiRegular";}
 .content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
 margin-left: 600px;}
 

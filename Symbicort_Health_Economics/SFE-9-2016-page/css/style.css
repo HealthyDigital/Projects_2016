@@ -33,7 +33,8 @@
 body { font-family: "interstatelight", Arial, Helvetica, sans-serif;font-size: 18px;line-height: 22px;background: #111; color:#004d74; -webkit-font-smoothing: antialiased; }
 .controls {position: absolute;}
 .controls { width:36px; left:14px; top:205px; z-index:21; }
-	.controls > li { width:30px; height:30px; border:1px solid #787878; -webkit-border-radius:500px; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px; color:#787878; }
+	.controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+	border:1px solid #3F4344; -webkit-border-radius:500px; color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;  }
 
 #container {
 	font-family:inherit;
@@ -66,8 +67,6 @@ header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
 .content > h3 {font-size: 25px; color: white;}
 .content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
 margin-left: 500px;}
-
-	.footnote { font-size:12px; line-height:16px; }
 
 
 

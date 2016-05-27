@@ -32,7 +32,8 @@
 body { font-family: "interstatelight", Arial, Helvetica, sans-serif;font-size: 18px;line-height: 22px;background: #111; color:#004d74; -webkit-font-smoothing: antialiased; }
 .controls {position: absolute;}
 .controls { width:36px; left:14px; top:205px; z-index:21; }
-	.controls > li { width:30px; height:30px; border:1px solid #787878; -webkit-border-radius:500px; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px; color:#787878; }
+	.controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+	border:1px solid #3F4344; -webkit-border-radius:500px; color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;  }
 
 #container {
 	font-family:inherit;
