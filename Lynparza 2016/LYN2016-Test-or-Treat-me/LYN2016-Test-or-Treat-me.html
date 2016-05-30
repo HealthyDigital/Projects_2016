@@ -41,12 +41,12 @@
        		<aside>
                 <h1 class="btm">
                     <span>I have high grade serous ovarian cancer</span>
-                    TEST ME
+                    <i>TEST ME</i>
                     <span>for BRCAm</span>
                 </h1>
                  <h1>
                     <span>If I am positive</span>
-                    TREAT ME<sup>*</sup>
+                    <i>TREAT ME<sup>*</sup></i>
                     <span>with Lynparza<sup>TM</sup></span>
                 </h1>
                 
@@ -125,24 +125,21 @@
 
     </section>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
 <script type="text/javascript" src="js/TimelineLite.min.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/touchy.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-		$('.main-menu > span').on('tap', function(){
-			var asset, id;
-			if($(this).hasClass('adult')){ 
-				id = 'A_IBD2016'; 
-				asset = 'CDUC16-Adult-IBD'; 
-			}else{ 
-				id = 'P_IBD2016'; 
-				asset = 'Paediatric-IBD'; 
-				
-			}	
-			localStorage.setItem('currentSection', asset);
-			document.location = 'veeva:gotoSlide('+asset+'.zip, '+id+')';
+		var h1 = $('h1 > i'),
+			asset = ""
+		tl.staggerFrom(h1, 2.2, {autoAlpha:0.35, repeat:-1, yoyo:true }, 1)
+		$('aside > h1').on('tap', function(){
+			asset = $(this).index() === 0 ? "LYN201607-BRCAm-testing" : "LYN201609-Safety-and-tolerability";
+			//console.log($(this).index()+' :: '+asset);
+			//localStorage.setItem('currentSection', asset);
+			//document.location = 'veeva:gotoSlide('+asset+'.zip)';
 		})
 		
 	})

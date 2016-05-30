@@ -4,20 +4,20 @@ $( function(){
 	$(document).on('touchmove',function(e){
  		e.preventDefault();
 	});
-	var container = $('#container'),
+	/*var container = $('#container'),
 		overlay = $('.overlay'),
 		ref = overlay.find('.ref'),
 		info = overlay.find('.info'),
 		nav = overlay.find('.nav'),
-		currentSection = localStorage.getItem('currentSection');
+		currentSection = localStorage.getItem('currentSection');*/
 	
 	//close menu
-	$('.close').on('tap', function(){
+/*	$('.close').on('tap', function(){
 		var t = $(this).parent();
 			t.addClass('bounceOutUp');
-		removeAnimation(t, true);
+		//removeAnimation(t, true);
 	});
-	
+	*/
 	//go to slide 
 	//goToSlide('btn-mpi', 'AP-IBD1618-PI');
 	
@@ -45,3 +45,5 @@ function goToSlide(btn, asset){
 		//document.location = 'veeva:gotoSlide('+asset+'.zip'+ id +')';
 	});
 }
+//global timeline
+var tl = new TimelineLite();
