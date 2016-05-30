@@ -76,10 +76,17 @@ a { text-decoration:none; color:inherit; }
 	.content .swiper-button-next { top:auto; bottom:-4px; }
 	.content .swiper-button-prev { transform:rotate(180deg); }
 	.content .swiper-button-prev:after { content:""; position:absolute; top:-5px; left:-500px; width:1024px; height:44px; background:#ffffff; z-index:-1; }
+	.swiper-container.swiper-scroll { top:auto; padding:0;  }
 	.content .swiper-button-next.swiper-button-disabled, 
 	.content .swiper-button-prev.swiper-button-disabled { opacity:0; }
+	.content .swiper-container-vertical>.swiper-scrollbar, .content .swiper-scrollbar-drag {  border-radius:0; }
+	.content .swiper-container-vertical>.swiper-scrollbar { width:10px; background:rgba(0, 77, 116, 0.15); }
+	.content .swiper-scrollbar-drag { background:rgba(0, 77, 116, 1); }
+	.swiper-scroll .swiper-slide { height: auto; -webkit-box-sizing: border-box; box-sizing: border-box; padding: 5px 30px 2em 2px; }
+	.swiper-scroll:after { content:""; position:absolute; width:97%; height:30px; left:0; bottom:-2px; background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #ffffff); z-index:2; }
 .wrap, .reveal { overflow:hidden; }
 	.footnote { font-size:12px; line-height:16px; }
+	.footnote sup { font-size:0.72em; }
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
 .arrow { height:30px; top:7px; left:0; right:0; margin:0 auto; }

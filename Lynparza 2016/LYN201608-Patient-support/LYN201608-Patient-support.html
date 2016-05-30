@@ -40,7 +40,7 @@
 	[data-slide='16b'] h4, 
 	[data-slide='16b'] strong { font-family:interstatebold-condensed; }
 	[data-slide='16b'] h4 { font-size:18px; margin-bottom:2px; }
-	[data-slide='16b'] span, [data-slide='16b'] i { font-family:interstateregular-condensed; }
+	[data-slide='16b'] .patient span, [data-slide='16b'] i { font-family:interstateregular-condensed; }
 	[data-slide='16b'] i { display:block; line-height:10px; margin-top: -8px; padding-top: 9px; }
 	[data-slide='16b'] em { font-style:normal; letter-spacing:-0.015em; }
 	.patient:before, .patient li:after, .patient li:before { content:""; position:absolute; z-index:2;}
@@ -84,10 +84,16 @@
 	.support li:last-child { left:828px; }
 	.support li p { padding-left:10px; margin:0; }
 	.support li p:before { content:"• "; display:inline-block; width:10px; margin-left:-10px;  }
-	/* 17 */
-	[data-slide='17'] h2 { margin-bottom:35px; }
-	[data-slide='17'] h2 + p { letter-spacing:-0.016em; }
-	[data-slide='17'] .feature { height:480px; margin-top:25px; background-image:url(img/starter_kit_image.png); }
+	/* 18 */
+	[data-slide='18'] h2 { margin-bottom:35px; }
+	[data-slide='18'] h2 + p { letter-spacing:-0.016em; }
+	[data-slide='18'] .feature { height:480px; margin-top:25px; background-image:url(img/starter_kit_image.png); }
+	/* 19 */
+	.companion { height:434px; margin-top:32px; }
+	.companion > li { float:left; width:573px; height:389px; padding:25px 20px 20px; background-color:rgba(0, 77, 116, 0.08); position:relative; }
+	.companion > li:first-child { width:274px; margin-right:16px; background-color:rgba(0, 77, 116, 0.15); }
+	.companion > li:last-child:after { content:""; position:absolute; width:585px; height:406px; top:0; bottom:0; left:0; right:0; margin: auto auto; background:url(img/product_shot.png) 0 0 no-repeat; background-size:100% auto; }
+	.companion > li li { margin-bottom:5px; }
 	
 	/*.logo  { -webkit-transition:all 0.5s ease-in-out; transition:all 0.5s ease-in-out; }*/
 	
@@ -210,14 +216,38 @@ survey</p>
                             </li>
                         </ul>
             		</li>
-                    <!-- slide 17-->
-                    <li class="swiper-slide" data-slide="17">
+                    <!-- slide 18-->
+                    <li class="swiper-slide" data-slide="18">
                          <h2><span>PATIENT SUPPORT</span>
                          	LYNPARZA PATIENT SUPPORT KIT
                         </h2>
                         <p>All patients who are registered on the LYNPARZA Patient Access Programme will receive a Patient Starter Kit and access
 to the My LYNPARZA Patient Support Program (PSP). Your patient can opt-out of the My LYNPARZA PSP at anytime</p>
                         <div class="feature"></div>
+            		</li>
+                    <!-- slide 19-->
+                    <li class="swiper-slide" data-slide="19">
+                         <h2><span>CAPSULE COMPANION</span>
+                         	THE CAPSULE COMPANION IS A SIMPLE WAY TO ORGANISE<br />
+AND TRANSPORT ONE DAY’S DOSE OF MEDICATION
+                        </h2>
+                        <ul class="companion">
+                            <li>
+                            	<ul class="list">
+                            		<li>It is specifically designed to<br />
+be both discreet and portable</li>
+<li>This case helps organise<br />
+patients’ medication during<br />
+their daily life at home and<br />
+with friends and family</li>
+<li>The capsule companion is<br />
+available from AstraZeneca as<br />
+part of the Patient Starter Kit<br />
+(available as part of the LPAP)</li>
+                            	</ul>
+                            </li>
+                            <li></li>
+                        </ul>
             		</li>
                     
             	</ul><!-- end swiper-wrapper -->
@@ -226,7 +256,7 @@ to the My LYNPARZA Patient Support Program (PSP). Your patient can opt-out of th
         		<span class="swiper-button icon arrow swiper-button-prev"></span>
         	</div>
         	<span class="logo lynp"></span>
-            <span class="btn btn-info">i</span>
+            <span class="btn btn-info hide">i</span>
         </article>
     
     <!-- popup -->
@@ -239,7 +269,15 @@ to the My LYNPARZA Patient Support Program (PSP). Your patient can opt-out of th
             </div>
         </div><!-- end ref -->
          <!-- info -->
-        <div class="item info hide"><span class="arrow icon"></span>
+        <div class="item info hide" data-info="18"><span class="arrow icon"></span>
+        <h4>PATIENT SUPPORT KIT INCLUDES:</h4>
+        <ul class="list">
+        	<li>LYNPARZA Patient Information Booklet</li>
+        	<li>LYNPARZA Patient Diary</li>
+        	<li>LYNPARZA Capsule Companion</li>
+        	<li>LYNPARZA Consumer Medicine Information</li>
+            <li>Ovarian Cancer Australia resilience kit registration</li>
+        </ul>
            
         </div><!-- end info -->
        <!-- navigation -->
@@ -294,6 +332,7 @@ to the My LYNPARZA Patient Support Program (PSP). Your patient can opt-out of th
 
     </section>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
 <script type="text/javascript" src="js/TimelineLite.min.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/touchy.js"></script>
@@ -312,7 +351,7 @@ to the My LYNPARZA Patient Support Program (PSP). Your patient can opt-out of th
 				//e.slideTo(9);
 			} 
 		  });
-		mySwiper.slideTo(2);
+		mySwiper.slideTo(4);
 		/* $('.indicator .arrow').on('tap', function(){ 
 				$(this).toggleClass('less').prev('p').slideToggle();
 		 })*/
