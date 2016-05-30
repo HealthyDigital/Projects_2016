@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="AstraZeneca | LYNPARZA">
+<title>AstraZeneca | LYNPARZA</title>
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<style type="text/css">
+
+.feature {width:825px; height:350px; margin-top: 100px;}
+.footText {margin-top: 10px; font-family: "HelveticaNeueLTStd"; line-height: 16px; font-size: 12px; color: #506061;}
+
+ul { list-style: none; }
+.footnote {word-spacing: -0.01em; margin-top: 20px; font-size: 11px; font-family: "HelveticaNeueLTStd";
+margin-top:20px;  line-height:16px; font-family: "HelveticaNeueLTStd"; margin-left: 60px; 
+    color:#3f4444;}
+
+table{
+    width:824px;
+    height:413px;
+    border-bottom: 2px solid #003665;
+}
+
+table > tbody > tr:first-child {background-color: #003665;}
+
+table > tbody > tr:nth-child(2n + 2) {background-color: #e4ecf0;}
+table > tbody > tr:nth-child(2n + 3) {background-color: #bbced9;}
+
+table > tbody > tr:first-child > td { color:white; font-family: "lexiBold"; font-size:18px; text-align: right; 
+vertical-align: bottom; height:52px;}
+
+table > tbody > tr:nth-child(n + 2) > td:first-child {text-align: left; font-family: "helveticaRoman"; font-size:18px;
+color:#3f4444; padding-left: 10px; vertical-align: middle; height:52px;
+}
+table > tbody > tr > td {font-family: "helveticaRoman"; font-size:18px;
+color:#3f4444; text-align: right; padding-right: 10px; vertical-align: middle;}
+
+table > tbody > tr:nth-child(n + 7) > td, 
+table > tbody > tr:nth-child(n + 7) > td:first-child {font-size:18px; font-family: "helveticaBold"; vertical-align: middle;}
+
+table > tbody > tr > td:nth-child(n + 2){ border-right:1px solid #618aa2; }
+table > tbody > tr:first-child > td {border:none;}
+table > tbody > tr > td:last-child {border:none;}
+
+
+input[type=text]{text-align: right; font-family: "helveticaRoman"; width:100px; height:30px; font-size: 14px; padding-right: 5px; line-height: 40px;}
+input{
+    -webkit-appearance:none;
+background-color: #f5f5f5;
+-moz-box-shadow: inset 2px 2px 5px #888;
+box-shadow: inset 2px 1px 10px 1px rgba(0, 0, 0, 0.25);
+border: 1px solid #e8e8e8;
+}
+.bodyContent {width:567px; height:585px; margin-left: 255px; margin-right:255px; margin-top:73px;}
+.bodyContent > li:first-child, .bodyContent > li:nth-child(3) ,
+.bodyContent > li:nth-child(5) {margin: 0 auto; width:252px; height:102px; margin-bottom: 11px; border:1px solid white;}
+
+.bodyContent > li:nth-child(2), .bodyContent > li:nth-child(4) {background-image: url('./img/whiteArrow.png'); 
+background-repeat: no-repeat; width:52px; height:40px; margin: 0 auto; margin-bottom: 11px;}
+
+.bodyContent > li:nth-child(2) > p{margin-left: 70px; color: white; width: 111px; height:28px; font-size:14px; font-family: "lexiRegular"; line-height: 15px;}
+ul{ list-style: none; }
+
+
+.bodyContent > ul:nth-child(6) > li:first-child, .bodyContent > ul:nth-child(6) > li:last-child {background-image: url('./img/whiteArrow.png'); 
+background-repeat: no-repeat; width:52px; height:40px; margin: 0 auto; margin-bottom: 11px;}
+
+.bodyContent > ul:nth-child(6) > li {display: inline-block; vertical-align: middle;  color: white; font-size: 14px;
+font-family: "lexiRegular";}
+.bodyContent > ul:nth-child(6) {text-align: center; margin-bottom: 11px;}
+
+.bodyContent > ul:nth-child(7) > li {display: inline-block; width: 250px; height: 100px; 
+    margin-left: 15px; text-align: center; color: white; 
+    font-size:17px; font-family: "lexiRegular"; line-height: 18px;}
+.bodyContent > ul:nth-child(7) > li:first-child { background-color: #003665; }
+.bodyContent > ul:nth-child(7) > li:last-child  { background-color: #3b4242; }
+
+.bodyContent > ul:nth-child(7) > li > p {padding-top: 25px;}
+
+.bodyContent {margin-bottom: 42px;}
+
+.bodyContent > li:first-child > p:first-child, .bodyContent > li:nth-child(3) > p:first-child
+,.bodyContent > li:nth-child(5) > p:first-child {font-size:17px; font-family: "lexiRegular"; text-align: center; color: white; margin-top:10px;}
+
+.bodyContent > li > p:nth-child(2) {font-size:14px; font-family: "HelveticaNeueLTStd"; text-align: center; color: white; word-spacing: -0.4em;}
+
+.bodyContent > li { vertical-align: middle; }
+
+.noPredefined{margin-left: 70px; color: white; width: 111px; height:28px; font-size:14px; font-family: "lexiRegular"; line-height: 15px; text-align: justify;}
+
+
+
+
+.close > p { font-family:"proximaBold"; font-size:30px; color: white; margin-left: 4px; margin-top: 4px;}
+.logo, .popup, .controls, #popup .ref, .close, .inner-close, .bull li:before, .note, .info { position:absolute; }
+.close, .inner-close { right: 15px; top: 15px; width:30px; height:30px; /*background: url('../img/close.png') 0 0 no-repeat;*/ border:1px solid #fff; -webkit-border-radius:100px; z-index:10;  }
+
+    .contents > .close, .inner-close { border-color:#787878; background-position-y:-23px; display:none; }
+    .video .close { background:#1b3e58; }
+    
+.nav .close { background:none; top:-50px; right:8px; }
+    .nav .close:before { color:#004d74; }
+.close, .inner-close, .logo, .info, .bull li:before { background-size:100% auto; }
+
+
+#popup {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0, 0.8);
+    overflow-x: hidden;
+    /*transition: 0.5s;*/
+}
+
+</style> 
+
+</head>
+<body>
+
+	<section id="container">
+	<header>
+		<p>Impact on hospitalisations on average over 12 months</p>
+
+	</header>
+        <ul class="controls">
+            <li class="r">R</li>
+            <li class="s disb">S</li>
+        </ul>
+    	<article class="content">
+
+    	<p>Based on <input type="text" value="800" /> admissions and current share of Symbicort<sup>&reg;</sup> vs Seretide<sup>&reg;</sup></p>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="2">CURRENT</td>
+                    <td>FUTURE<br />(ESTIMATE)</td>
+                    <td>CHANGE</td>
+                </tr>
+                <tr>
+                    <td>Symbicort Patient share, % </td>
+                    <td><input type="text" value="20%" /></td>
+                    <td><input type="text" value="70%" /></td>
+                    <td>50%</td>
+                </tr>
+                <tr>
+                	<td>Seretide<sup>&reg;</sup> Patient share, %</td>
+                	<td>80%</td>
+                	<td>30%</td>
+                	<td>-50%</td>
+                </tr>
+                <tr>
+                	<td>COPD related hospitalisations - Symbicort</td>
+                	<td>24</td>
+                	<td>84</td>
+                	<td>60</td>
+                </tr>
+                <tr>
+                	<td>COPD related hospitalisations - Seretide<sup>&reg;</sup></td>
+                	<td>134</td>
+                	<td>50</td>
+                	<td>-84</td>
+                </tr>
+                <tr>
+                	<td>COPD related hospitalisations - Total</td>
+                	<td>158</td>
+                	<td>134</td>
+                	<td>-24</td>
+                </tr>
+                <tr>
+                	<td>Total Cost* if uncomplicated</td>
+                	<td>$887,040</td>
+                	<td>$752,640</td>
+                	<td>-$134,400</td>
+                </tr>
+                <tr>
+                	<td>Total Cost* if complicated</td>
+                	<td>$1,584,000</td>
+                	<td>$1,344,000</td>
+                	<td>-$240,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        </article>
+    		<p class="footnote">*Of predicted hospitalisations in the next year<br />
+                COPD related hospitalisations with Symbicort: 0.15.1 COPD related hospitalisations with Seretide®: 0.21.1 Cost/COPD related hospitalisation - Uncomplicated: $5,600.2<br /> Cost/COPD related hospitalisation - Complicated: $10,000.2 Based on a population-based, retrospective, observational registry study.<br />
+                Reference: 1. Larsson K <em>et al. J Intern Med</em> 2013; 273:584–594. 2. Round 17 (2012-13) National Public Cost Weight Tables - version 6.0
+    		</p>
+           <!--popups -->
+            <div id="popup"> 
+                <span class="close"><p>X</p></span>
+                <ul class="bodyContent">
+                    <li><p>Linked data from 76 centres<br />throughout Sweden</p><p>(Approximately 8% of the Swedish population)</p></li>
+                    <li><p class="noPredefined">No predefined<br />exclusion criteria</p></li>
+                    <li><p>Patients with<br />physician-diagnosed COPD<br />n=21,361</p><p>(Primary analysis set)</p></li>
+                    <li></li>
+                    <li><p>Patients with a record<br />of fixed ICS/LABA therapy<br />at index date n=9,893</p></li>
+                    <ul>
+                        <li></li>
+                        <li>Pairwise matching (1:1)</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li><p>Symbicort<sup>&reg;</sup><br />matched cohort<br />n=2,734</p></li>
+                        <li><p>Seretide<sup>&reg;</sup><br />matched cohort*<br />n=2,734</p></li>
+                    </ul>
+                </ul>
+                <p class="footnote">Adapted from LArsson <em>et al.</em> 2013<sup>1</sup><br />
+                *All but 4 patients in the Seretide<sup>&reg;</sup> group at index date could be matched within larger Symbicort cohort</p>
+        </div>
+    </section>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$( function(){
+        //$(".popup").css("display","none");
+        $(".s").click(function(){
+            //$("header").css("display","none");
+           // $("article").css("display","none");
+
+
+            //$(".popup").css("display","block");
+            //$(".popup").css("background-color","rgba(0,0,0,0.80)");
+            document.getElementById("popup").style.width = "1024px";
+            document.getElementById("popup").style.height = "768px";
+        });
+        $(".r").click(function(){
+            //If reference Button Clicked
+        });
+        $("span > p").click(function(){
+            document.getElementById("popup").style.width = "0";
+            document.getElementById("popup").style.height = "0";
+        })
+
+	});
+
+
+
+</script>
+</body>
+</html>

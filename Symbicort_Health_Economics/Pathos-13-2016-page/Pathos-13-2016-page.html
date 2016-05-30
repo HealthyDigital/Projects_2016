@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="AstraZeneca | LYNPARZA">
+<title>AstraZeneca | LYNPARZA</title>
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<style type="text/css">
+
+.feature {width:825px; height:350px; margin-top: 100px;}
+.footText {margin-top: 10px; font-family: "HelveticaNeueLTStd"; line-height: 16px; font-size: 12px; color: #506061;}
+
+ul { list-style: none; }
+.bodyContent {width:755px; height: 335px;}
+.bodyContent > li:first-child {width: 440px; height: 55px; margin-bottom: 8px; background-color: #ffac12;}
+.bodyContent > li:nth-child(2) {width: 600px; height: 86px; margin-bottom: 8px; background-color: #bed500;}
+.bodyContent > li:nth-child(3) {width: 785px; height: 111px; margin-bottom: 8px; background-color: #003665;}
+.bodyContent > li:nth-child(4) {width: 785px; height: 57px; background-color: #f01373;}
+.bodyContent > li > p:first-child { color: white; font-family: "lexiRegular"; font-size: 23px; line-height: 27px; 
+padding-top: 15px; padding-left: 20px;}
+
+
+
+.bodyContent2 {width:567px; height:585px; margin-left: 255px; margin-right:255px; margin-top:73px;}
+.bodyContent2 > li:first-child, .bodyContent2 > li:nth-child(3) ,
+.bodyContent2 > li:nth-child(5) {margin: 0 auto; width:252px; height:102px; margin-bottom: 11px; border:1px solid white;}
+
+.bodyContent2 > li:nth-child(2), .bodyContent2 > li:nth-child(4) {background-image: url('./img/whiteArrow.png'); 
+background-repeat: no-repeat; width:52px; height:40px; margin: 0 auto; margin-bottom: 11px;}
+
+.bodyContent2 > li:nth-child(2) > p{margin-left: 70px; color: white; width: 111px; height:28px; font-size:14px; font-family: "lexiRegular"; line-height: 15px;}
+ul{ list-style: none; }
+
+
+.bodyContent2 > ul:nth-child(6) > li:first-child, .bodyContent2 > ul:nth-child(6) > li:last-child {background-image: url('./img/whiteArrow.png'); 
+background-repeat: no-repeat; width:52px; height:40px; margin: 0 auto; margin-bottom: 11px;}
+
+.bodyContent2 > ul:nth-child(6) > li {display: inline-block; vertical-align: middle;  color: white; font-size: 14px;
+font-family: "lexiRegular";}
+.bodyContent2 > ul:nth-child(6) {text-align: center; margin-bottom: 11px;}
+
+.bodyContent2 > ul:nth-child(7) > li {display: inline-block; width: 250px; height: 100px; 
+    margin-left: 15px; text-align: center; color: white; 
+    font-size:17px; font-family: "lexiRegular"; line-height: 18px;}
+.bodyContent2 > ul:nth-child(7) > li:first-child { background-color: #003665; }
+.bodyContent2 > ul:nth-child(7) > li:last-child  { background-color: #3b4242; }
+
+.bodyContent2 > ul:nth-child(7) > li > p {padding-top: 25px;}
+
+.bodyContent2 {margin-bottom: 42px;}
+
+
+.bodyContent2 > li:first-child > p:first-child, .bodyContent2 > li:nth-child(3) > p:first-child
+,.bodyContent2 > li:nth-child(5) > p:first-child {font-size:17px; font-family: "lexiRegular"; text-align: center; color: white; margin-top:10px;}
+
+.bodyContent2 > li > p:nth-child(2) {font-size:14px; font-family: "HelveticaNeueLTStd"; text-align: center; color: white; word-spacing: -0.4em;}
+
+.bodyContent2 > li { vertical-align: middle; }
+
+.noPredefined{margin-left: 70px; color: white; width: 111px; height:28px; font-size:14px; font-family: "lexiRegular"; line-height: 15px; text-align: justify;}
+
+
+    .footnote { font-size: 11.5px;
+                font-family: "HelveticaNeueLTStd";
+                line-height: 15px;
+                color: #3f4444;
+                word-spacing: -0.249em; margin-top:30px; width:785px;}
+
+
+.close > p { font-family:"proximaBold"; font-size:30px; color: white; margin-left: 4px; margin-top: 4px;}
+.logo, #popup, .controls, .popup .ref, .close, .inner-close, .bull li:before, .note, .info { position:absolute; }
+.close, .inner-close { right: 15px; top: 15px; width:30px; height:30px; /*background: url('../img/close.png') 0 0 no-repeat;*/ border:1px solid #fff; -webkit-border-radius:100px; z-index:10;  }
+
+    .contents > .close, .inner-close { border-color:#787878; background-position-y:-23px; display:none; }
+    .video .close { background:#1b3e58; }
+    
+.nav .close { background:none; top:-50px; right:8px; }
+    .nav .close:before { color:#004d74; }
+.close, .inner-close, .logo, .info, .bull li:before { background-size:100% auto; }
+
+
+
+#popup {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0, 0.8);
+    overflow-x: hidden;
+    /*transition: 0.5s;*/
+}
+</style> 
+
+</head>
+<body>
+
+	<section id="container">
+	<header>
+		<p>PATHOS study<sup>1</sup></p>
+	</header>
+        <ul class="controls">
+            <li class="r">R</li>
+            <li class="s disb">S</li>
+        </ul>
+    	<article class="content">
+    		<p>A population-based, retrospective observational registry study linking data<br />from 
+    		primary care medical records and national registries in Sweden:</p>
+
+    		<ul class="bodyContent">
+    			<li><p>9,893 patients up to 11 years follow up</p></li>
+    			<li><p>2 matched cohorts of 2,734 patients each with similar characteristics were compared</p></li>
+    			<li><p>No formal stratification of primary healthcare centres but effor made to ensure that the
+    				   sample was representative of the Swedish population<br />(i.e. mixture rural/urban, private
+    				   /public small/large centre size)</p></li>
+    			<li><p>Data based on 'real-word' evidence (increasingly sought after by PBAC)</p></li>
+    		</ul>
+    		<p class="footnote">Limitations: Unknown confounding factors and data is limited to the variables recorded.
+    		COPD diagnosis accuracy and severity could not be fully verified. Medication<br />use is based on prescriptions
+    		not actual use. Nevertheless, as the study is based on a large sample (almost 5500 individuals), it is not likely
+    		that potential confounding<br />factors would differ between the cohorts.<br /><br />Reference:
+    		1. Larsson K <em>et al. J Intern Med</em> 2013; 273:584-594.</p>
+
+        </article>
+           <!--popups -->
+            <div id="popup"> 
+                <span class="close"><p>X</p></span>
+                <ul class="bodyContent2">
+                    <li><p>Linked data from 76 centres<br />throughout Sweden</p><p>(Approximately 8% of the Swedish population)</p></li>
+                    <li><p class="noPredefined">No predefined<br />exclusion criteria</p></li>
+                    <li><p>Patients with<br />physician-diagnosed COPD<br />n=21,361</p><p>(Primary analysis set)</p></li>
+                    <li></li>
+                    <li><p>Patients with a record<br />of fixed ICS/LABA therapy<br />at index date n=9,893</p></li>
+                    <ul>
+                        <li></li>
+                        <li>Pairwise matching (1:1)</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li><p>Symbicort<sup>&reg;</sup><br />matched cohort<br />n=2,734</p></li>
+                        <li><p>Seretide<sup>&reg;</sup><br />matched cohort*<br />n=2,734</p></li>
+                    </ul>
+                </ul>
+                <p class="footnote">Adapted from LArsson <em>et al.</em> 2013<sup>1</sup><br />
+                *All but 4 patients in the Seretide<sup>&reg;</sup> group at index date could be matched within larger Symbicort cohort</p>
+        </div>
+    </section>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$( function(){
+        //$(".popup").css("display","none");
+        $(".s").click(function(){
+            //$("header").css("display","none");
+           // $("article").css("display","none");
+
+
+            //$(".popup").css("display","block");
+            //$(".popup").css("background-color","rgba(0,0,0,0.80)");
+            document.getElementById("popup").style.width = "1024px";
+            document.getElementById("popup").style.height = "768px";
+        });
+        $(".r").click(function(){
+            //If reference Button Clicked
+        });
+        $("span > p").click(function(){
+            document.getElementById("popup").style.width = "0";
+            document.getElementById("popup").style.height = "0";
+        })
+
+	});
+
+
+
+</script>
+</body>
+</html>

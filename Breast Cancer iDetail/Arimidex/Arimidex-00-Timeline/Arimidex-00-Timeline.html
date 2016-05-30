@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
 <meta charset="UTF-8">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology | Faslodex - Breast Cancer">
         <title>AstraZeneca Oncology | Faslodex - Breast Cancer</title>
-		
+
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/default_skin.css"/>
@@ -151,8 +152,9 @@
 </head>
 
 <body class='arimidex'>
-	<div class="container">
-		<span class='title'></span>
+	<div class="container" id="ct">
+		<span class='title' id="title"></span>
+		<div id="eventContainer">
 		<div class='arrow'></div>
 	   	<div class="sky-carousel">
 			<div class="sky-carousel-wrapper">
@@ -282,6 +284,7 @@
 			</div>
 		</div>
 
+		</div>
 		<span class='ref'></span>
 		<span class='pi'></span>
 		<div class='ref'>
@@ -341,7 +344,26 @@
 				selectByClick: false*/
 			});	
 
+			
+			
 		})
+		
+		var ct = document.getElementById('ct');
+		ct.addEventListener('swipeleft', function(e) {
+			var elem = e.target;
+			if(elem.id && (elem.id == 'ct' || elem.id=='title')) {
+// 			    console.log('elem ' + elem.id +' swipeLeft');
+			    document.location = 'veeva:nextSlide()';
+			}
+        });
+		ct.addEventListener('swiperight', function(e) {
+			var elem = e.target;
+			if(elem.id && (elem.id == 'ct' || elem.id=='title')) {
+// 			    console.log('elem ' + elem.id + ' swiperight');
+			    document.location = 'veeva:prevSlide()';
+			}
+        });
+		
 	</script>	
 
 </body>

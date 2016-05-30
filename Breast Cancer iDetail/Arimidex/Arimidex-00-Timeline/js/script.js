@@ -1,7 +1,7 @@
 // JavaScript Document
 $( function(){
 	//prevent iPad rubber band effect
-	$(document).on('touchmove', function(e){ e.preventDefault(); });
+	$(document).on('touchmove', function(e){ e.preventDefault();});
 	
 	//navigation
 	navToSlide('.zoladex .pi', 'Zoladex15PI', 'AZAUBREF');

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="AstraZeneca | LYNPARZA">
+<title>AstraZeneca | LYNPARZA</title>
+<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<style type="text/css">
+
+.feature {width:825px; height:350px; margin-top: 100px;}
+.footText {margin-top: 10px; font-family: "HelveticaNeueLTStd"; line-height: 16px; font-size: 12px; color: #506061;}
+
+
+.bodyContent {width:800px; height:350px;}
+.bodyContent > li {width:380px; height:79px; display: inline-block; margin-bottom: 40px; margin-left:16px;}
+.bodyContent > li:first-child, .bodyContent > li:nth-child(2), 
+.bodyContent > li:nth-child(5), .bodyContent > li:nth-child(7){font-size: 22px; font-family: "lexiRegular"; height:30px;
+margin-bottom: 0px; vertical-align: middle; }
+
+.bodyContent > li:nth-child(3) {font-size:24px; font-family: "lexiRegular"; line-height: 29px;}
+
+input[type=text]{text-align: right; font-family: "helveticaRoman";  font-size: 34px; padding-right: 13px; vertical-align: middle; line-height: 87px; color: #4f5656;}
+input{
+   -webkit-appearance:none;
+	width:300px; height:77px;
+background-color: #f5f5f5;
+-moz-box-shadow: inset 2px 2px 5px #888;
+box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.25);
+border: 1px solid #e8e8e8;
+}
+</style> 
+
+</head>
+<body>
+	<section id="container">
+	<header>
+		<p>Burden to hospital<sup>1</sup></p>
+
+	</header>
+    	<article class="content">
+
+       		<p>Public hospital admitted patient - COPD average length of stay (ALOS)<br /> is <strong>7.4</strong>
+       		days at a cost of <strong>$10K</strong> for a patient with complications and <strong>4.1</strong> days at a cost 
+       		of <strong>$5.6K</strong> for patients without complications (Based on DRG- 65A & 65B)<sup>1</sup>
+       		</p>
+
+       		<ul class="bodyContent">
+       			<li>Cost of uncomplicated</li>
+       			<li>Cost of complicated</li>
+       			<li><input type="text" value="$5,600" /></li>
+       			<li><input type="text" value="$10,000" /></li>
+       			<li>Average number of admissions<br />in your hospital:</li>
+       			<li><input type="text" value="0" /></li>
+       			<li>Range of Cost Burden of COPD<br />related admissions for your hospital:</li>
+       			<li><input type="text" value="0" /></li>
+       		</ul>
+        </article>
+       		<p class="footnote">Reference:1.National Hospital Cost Data Collection Australian Public Hospitals Cost Report 2012-2013. Round 17, independent Hospital Pricing Authority.</p>
+    </section>
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+	$( function(){
+
+	});
+
+
+
+</script>
+</body>
+</html>
