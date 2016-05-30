@@ -66,11 +66,11 @@ header > sup {font-family: lexiRegular; color: white; font-size: 15px;}
 .content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
 margin-left: 500px;}
 
-	.footnote { font-size: 10px;
+	.footnote { font-size: 12px;
 				font-family: "HelveticaNeueLTStd";
 				line-height: 15px;
 				color: #3f4444;
-				word-spacing:-0.2em; margin-top:20px;}
+				word-spacing:-0.2em; margin-top:20px; width: 823px;}
 
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
