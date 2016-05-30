@@ -9,6 +9,7 @@
 @font-face{font-family:interstatelight;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/interstate/light/interstate_light.woff) format('woff'),url(../fonts/interstate/light/interstate_light.ttf) format('truetype'),url(../fonts/interstate/light/interstate_light.svg#Interstate-Light) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:interstatelightCon;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/Interstate-LightCondensed.woff),url(../fonts/Interstate-LightCondensed.svg#Interstate-LightCondensed) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:HelveticaNeueLTStd;src:url(../fonts/HelveticaNeueLTStd-Lt.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:HelveticaLightCn;src:url(../fonts/HelveticaNeueLTStd-Cn.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Cn.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:MarydaleBold;src:url(../fonts/MarydaleBold.woff) format('woff'),url(../fonts/MarydaleBold.svg#MarydaleBold) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:BauhausStdDemi;src:url(../fonts/BauhausStd-Demi.woff) format('woff'),url(../fonts/BauhausStd-Demi.svg#BauhausStd-Demi) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:lynparza-icons;src:url(../fonts/lynparza-icons/lynparza-icons.eot?-avm2fj);src:url(../fonts/lynparza-icons/lynparza-icons.eot?#iefix-avm2fj) format('embedded-opentype'),url(../fonts/lynparza-icons/lynparza-icons.woff?-avm2fj) format('woff'),url(../fonts/lynparza-icons/lynparza-icons.ttf?-avm2fj) format('truetype'),url(../fonts/lynparza-icons/lynparza-icons.svg?-avm2fj#icomoon) format('svg');font-weight:400;font-style:normal}
@@ -51,11 +52,11 @@ em { font-style:italic; }
 a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
 
-header {width:1024px; height:145px; background-color: #951e63; margin-bottom:65px;}
-header > p:first-child{padding-top: 35px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 22px; line-height: 20px; 
+header {width:1024px; height:145px; background-color: rgb(131,0,81); margin-bottom:65px;}
+header > p:first-child{padding-top: 35px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 22px; line-height: 24px; 
 margin-bottom: 8px;}
-header > p:last-child {padding-left: 100px; font-family: lexiRegular; color: white; font-size: 14px;
-word-spacing: -0.1em; }
+header > p:last-child {padding-left: 100px; font-family: "HelveticaLightCn"; color: white; font-size: 18px;
+word-spacing: -0.1em; line-height: 20px;}
 header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
 header > p > strong {margin-left: 5px;}
 
