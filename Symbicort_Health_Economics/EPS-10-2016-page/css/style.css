@@ -24,7 +24,7 @@
 
 /*[data-href=home]:before{content:"\e602"}
   =============  */
-sup{font-size: 14px;}
+sup{font-size: 14px; position: relative; top:-7px;}
 body { font-family: "interstatelight", Arial, Helvetica, sans-serif;font-size: 18px;line-height: 22px;background: #111; color:#004d74; -webkit-font-smoothing: antialiased; }
 #container {
 	font-family:inherit;

@@ -57,7 +57,7 @@ header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
 .content, .nav-top { margin:0 auto; position:relative; }
 .content { width: 730px; height:530px; margin-left: 60px; margin-right:100px;margin-bottom: 48px;}
 
-.content p:first-child{color: #506061;font-family: "helveticaRoman"; margin-bottom:25px; font-size: 19px; line-height: 29px;}
+.content p:first-child{color: #506061;font-family: "helveticaRoman"; margin-bottom:25px; font-size: 23px; line-height: 29px; width:824px;}
 .content p:first-child strong { color: #4f5656; font-family: "helveticaBold";}
 
 .content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}

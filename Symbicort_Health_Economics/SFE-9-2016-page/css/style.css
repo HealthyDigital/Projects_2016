@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document reset */
-* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .60em}sub {vertical-align: sub}sup {vertical-align: super ; line-height:10px; }
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .60em}sub {vertical-align: sub}sup {vertical-align: super ; line-height:10px; font-size:13px;}
 /* ============= custom fonts   ============= */
 @font-face{font-family:interstateblack;src:url(../fonts/interstate/black/interstateblack.eot);src:url(../fonts/interstate/black/interstateblack.eot) format('embedded-opentype'),url(../fonts/interstate/black/interstateblack.woff) format('woff'),url(../fonts/interstate/black/interstateblack.ttf) format('truetype'),url(../fonts/interstate/black/interstateblack.svg#InterstateRegular) format('svg')}
 @font-face{font-family:interstateregular;src:url(../fonts/interstate/regular/interstateregular.eot);src:url(../fonts/interstate/regular/interstateregular.eot) format('embedded-opentype'),url(../fonts/interstate/regular/interstateregular.woff) format('woff'),url(../fonts/interstate/regular/interstateregular.ttf) format('truetype'),url(../fonts/interstate/regular/interstateregular.svg#InterstateRegular) format('svg')}
@@ -54,8 +54,10 @@ a { text-decoration:none; color:inherit; }
 header {width:1024px; height:145px; background-color: #951e63; margin-bottom:108px;}
 header > p:first-child{padding-top: 45px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 20px; 
 margin-bottom: 8px;}
-header > p:last-child {padding-left: 100px; font-family: lexiRegular; color: white; font-size: 18px; }
+header > p:last-child {padding-left: 100px; font-family: lexiRegular; color: white; font-size: 14px; }
 header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
+header > p > strong {margin-left:5px;}
+
 
 .content, .nav-top { margin:0 auto; position:relative; }
 .content { width: 730px; height:530px; margin-left: 100px; margin-right:100px;margin-bottom: 48px;}

@@ -52,7 +52,8 @@ a { text-decoration:none; color:inherit; }
 
 .content > h1 {padding-top: 175px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}
 .content > h3 {font-size: 25px; color: white;}
-.content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 50px;
+.content > span:first-child {background-image: url('../img/PI.png'); background-repeat: no-repeat; background-size: 100% auto; width:824px; height:575px; position: absolute;}
+.content > span:last-child {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 600px;
 margin-left: 600px;}
 
 	.footnote { font-size:12px; line-height:16px; }
