@@ -63,7 +63,7 @@ header > p > strong {margin-left:5px;}
 .content, .nav-top { margin:0 auto; position:relative; }
 .content { width: 730px; height:530px; margin-left: 100px; margin-right:100px;margin-bottom: 48px;}
 
-.content p{color: #506061;font-family: "helveticaRoman"; margin-bottom:25px;}
+.content p{color: #506061;/*font-family: "helveticaRoman"; margin-bottom:25px;*/}
 .content p strong { color: #4f5656; font-family: "helveticaBold";}
 
 .content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}

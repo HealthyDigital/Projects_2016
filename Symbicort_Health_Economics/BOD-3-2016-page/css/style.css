@@ -48,13 +48,13 @@ em { font-style:italic; }
 a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
 
-header {width:1024px; height:145px; background-color: rgb(131,0,81); margin-bottom:30px;}
-header > p{padding-top: 75px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px;}
+header {width:1024px; height:145px; background-color: rgb(131,0,81); margin-bottom:39px;}
+header > p{padding-top: 77.5px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px;}
 
 .content, .nav-top { margin:0 auto; position:relative; }
 .content { width: 730px; height:530px; margin-left: 100px; margin-right:100px;margin-bottom: 48px;}
 
-.content p:nth-child(2){color: #506061;font-family: "helveticaRoman"; margin-bottom:25px;}
+.content p:nth-child(2){color: #506061;font-family: "helveticaRoman"; margin-bottom:15px;}
 .content p:nth-child(2) strong { color: #4f5656; font-family: "helveticaBold";}
 
 .content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}
@@ -62,7 +62,7 @@ header > p{padding-top: 75px; padding-left: 100px; font-family: lexiRegular; col
 .content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
 margin-left: 500px;}
 
-	.footnote { font-size:14px; line-height:16px; margin-top:23px; font-family: "HelveticaLightCn"; color:#3f4444;}
+	.footnote { font-size:14px; line-height:16px; margin-top:18px; font-family: "HelveticaLightCn"; color:#3f4444;}
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
 
