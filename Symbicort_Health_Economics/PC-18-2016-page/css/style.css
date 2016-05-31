@@ -8,7 +8,7 @@
 @font-face{font-family:interstatebold;src:url(../fonts/interstate/bold/interstate_bold.eot);src:url(../fonts/interstate/bold/interstate_bold.eot?#iefix) format("embedded-opentype"),url(../fonts/interstate/bold/interstate_bold.woff) format("woff"),url(../fonts/interstate/bold/interstate_bold.ttf) format("truetype"),url(../fonts/interstate/bold/interstate_bold.svg#interstateregular) format("svg");font-weight:400;font-style:normal}@font-face{font-family:interstatebold-condensed;src:url(../fonts/interstate/bold-condensed/interstateboldcond.eot);src:url(../fonts/interstate/bold-condensed/interstateboldcond.eot) format('embedded-opentype'),url(../fonts/interstate/bold-condensed/interstateboldcond.woff) format('woff'),url(../fonts/interstate/bold-condensed/interstateboldcond.ttf) format('truetype'),url(../fonts/interstate/bold-condensed/interstateboldcond.svg#InterstateRegular) format('svg')}
 @font-face{font-family:interstatelight;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/interstate/light/interstate_light.woff) format('woff'),url(../fonts/interstate/light/interstate_light.ttf) format('truetype'),url(../fonts/interstate/light/interstate_light.svg#Interstate-Light) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:interstatelightCon;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/Interstate-LightCondensed.woff),url(../fonts/Interstate-LightCondensed.svg#Interstate-LightCondensed) format('svg');font-weight:400;font-style:normal}
-@font-face{font-family:HelveticaLightCn;src:url(../fonts/HelveticaNeueLTStd-Cn.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Cn.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:HelveticaLightCn;src:url(../fonts/HelveNeuLigCon.woff) format('woff'),url(../fonts/HelveNeuLigCon.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:HelveticaNeueLTStd;src:url(../fonts/HelveticaNeueLTStd-Lt.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:MarydaleBold;src:url(../fonts/MarydaleBold.woff) format('woff'),url(../fonts/MarydaleBold.svg#MarydaleBold) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:BauhausStdDemi;src:url(../fonts/BauhausStd-Demi.woff) format('woff'),url(../fonts/BauhausStd-Demi.svg#BauhausStd-Demi) format('svg');font-weight:400;font-style:normal}
@@ -71,7 +71,7 @@ margin-left: 500px;}
 				font-family: "HelveticaLightCn";
 				line-height: 15px;
 				color: #3f4444;
-				word-spacing:-0.2em; margin-top:20px; width: 823px;}
+				margin-top:20px; width: 823px;}
 
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
