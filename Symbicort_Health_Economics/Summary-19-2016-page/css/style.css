@@ -9,6 +9,7 @@
 @font-face{font-family:interstatelight;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/interstate/light/interstate_light.woff) format('woff'),url(../fonts/interstate/light/interstate_light.ttf) format('truetype'),url(../fonts/interstate/light/interstate_light.svg#Interstate-Light) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:interstatelightCon;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/Interstate-LightCondensed.woff),url(../fonts/Interstate-LightCondensed.svg#Interstate-LightCondensed) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:HelveticaNeueLTStd;src:url(../fonts/HelveticaNeueLTStd-Lt.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:HelveticaLightCn;src:url(../fonts/HelveticaNeueLTStd-Cn.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Cn.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:MarydaleBold;src:url(../fonts/MarydaleBold.woff) format('woff'),url(../fonts/MarydaleBold.svg#MarydaleBold) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:BauhausStdDemi;src:url(../fonts/BauhausStd-Demi.woff) format('woff'),url(../fonts/BauhausStd-Demi.svg#BauhausStd-Demi) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:lynparza-icons;src:url(../fonts/lynparza-icons/lynparza-icons.eot?-avm2fj);src:url(../fonts/lynparza-icons/lynparza-icons.eot?#iefix-avm2fj) format('embedded-opentype'),url(../fonts/lynparza-icons/lynparza-icons.woff?-avm2fj) format('woff'),url(../fonts/lynparza-icons/lynparza-icons.ttf?-avm2fj) format('truetype'),url(../fonts/lynparza-icons/lynparza-icons.svg?-avm2fj#icomoon) format('svg');font-weight:400;font-style:normal}
@@ -50,7 +51,7 @@ em { font-style:italic; }
 a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
 
-header {width:1024px; height:145px; background-color: #951e63; margin-bottom:110px;}
+header {width:1024px; height:145px; background-color: rgb(131,0,81); margin-bottom:110px;}
 header > p{padding-top: 75px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 32px;}
 header > sup {font-family: lexiRegular; color: white; font-size: 15px;}
 
@@ -65,11 +66,11 @@ header > sup {font-family: lexiRegular; color: white; font-size: 15px;}
 .content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
 margin-left: 500px;}
 
-	.footnote { font-size: 11px;
-				font-family: "HelveticaNeueLTStd";
+	.footnote { font-size: 14px;
+				font-family: "HelveticaLightCn";
 				line-height: 15px;
 				color: #3f4444;
-				margin-top:30px;}
+				margin-top:30px; word-spacing: -0.2em;}
 
 .close, .arrow { width:44px;   }
 .close { height:44px; right:10px; top:10px; background: #004d74; }
