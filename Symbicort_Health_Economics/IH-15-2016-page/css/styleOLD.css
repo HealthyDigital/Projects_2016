@@ -20,6 +20,8 @@
 @font-face{font-family:helveticaRoman;src:url(../fonts/HelveticaNeueLTStd-Roman.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Roman.svg#icon-book) format('svg');font-weight:400;font-style:normal}
 
 
+
+
 .icon :before, .icon:before {font-family:lynparza-icons;speak:none;font-style:normal;font-weight:400; line-height:1em;font-variant:normal;text-transform:none;position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 [data-href=menu]:before{content:"\e601"; top:-2px; }
 [data-href=resource]:before{content:"\e600"}
@@ -30,17 +32,15 @@
 
 /*[data-href=home]:before{content:"\e602"}
   =============  */
-header {width:1024px; height:145px; background-color: rgb(131,0,81);}
 
 body { font-family: "interstatelight", Arial, Helvetica, sans-serif;font-size: 18px;line-height: 22px;background: #111; color:#004d74; -webkit-font-smoothing: antialiased; }
+
 #container {
 	font-family:inherit;
 	width: 1024px;
 	height:768px;
 	position:relative;
 	overflow:hidden;
-
-
 }
 .list { list-style-type:disc; list-style:outside; margin-left:17px; }
 .sym { font-family: "BauhausStdDemi"; }
@@ -48,15 +48,15 @@ em { font-style:italic; }
 a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
 
+header {width:1024px; height:145px; background-color: rgb(131,0,81);}
+
 .content, .nav-top { margin:0 auto; position:relative; }
-.content {width: 824px;
+.content { width: 824px;
 /* min-height: 580px; */
 margin: 0 auto;
 position: relative;}
 
 
-.close, .arrow { width:44px;   }
-.close { height:44px; right:10px; top:10px;  }
 
 
 .overlay, .overlay .item, .overlay > div, .icon /*.icon :before*/ { -webkit-transition:all 0.4s ease-in-out; transition:all 0.4s ease-in-out; }
@@ -90,9 +90,7 @@ position: relative;}
 	.overlay .nav { bottom:0; background:#ffffff; min-height: 640px; }
 	.overlay .nav:after { content:""; bottom:40px; right:40px; background-position:0 0; }
 	.overlay .video { top:4.5em; left:0; right:0; width:942px; margin:0 auto; }
-	.video .close { background:#1b3e58; }
-.nav .close { background:none; top:-50px; right:8px; }
-	.nav .close:before { color:#004d74; }
+
 	.section > li { float:left; width:130px; margin-right:5px; background:rgba(0, 77, 116, 0.1); font-size:15px; line-height:18px; }
 	.section > li:last-child { margin-right:0; }
 	.section > li > span { border-bottom:5px solid #004d74; }

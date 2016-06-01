@@ -30,7 +30,7 @@
 
 /*[data-href=home]:before{content:"\e602"}
   =============  */
-header {width:1024px; height:145px; background-color: rgb(131,0,81); margin-bottom:39px;}
+header {width:1024px; height:145px; background-color: rgb(131,0,81);}
 
 body { font-family: "interstatelight", Arial, Helvetica, sans-serif;font-size: 18px;line-height: 22px;background: #111; color:#004d74; -webkit-font-smoothing: antialiased; }
 #container {
