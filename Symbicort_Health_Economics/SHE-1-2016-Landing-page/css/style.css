@@ -9,22 +9,29 @@
 @font-face{font-family:interstatelight;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/interstate/light/interstate_light.woff) format('woff'),url(../fonts/interstate/light/interstate_light.ttf) format('truetype'),url(../fonts/interstate/light/interstate_light.svg#Interstate-Light) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:interstatelightCon;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/Interstate-LightCondensed.woff),url(../fonts/Interstate-LightCondensed.svg#Interstate-LightCondensed) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:HelveticaNeueLTStd;src:url(../fonts/HelveticaNeueLTStd-Lt.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:HelveticaLightCn;src:url(../fonts/HelveNeuLigCon.woff) format('woff'),url(../fonts/HelveNeuLigCon.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:MarydaleBold;src:url(../fonts/MarydaleBold.woff) format('woff'),url(../fonts/MarydaleBold.svg#MarydaleBold) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:BauhausStdDemi;src:url(../fonts/BauhausStd-Demi.woff) format('woff'),url(../fonts/BauhausStd-Demi.svg#BauhausStd-Demi) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:lynparza-icons;src:url(../fonts/lynparza-icons/lynparza-icons.eot?-avm2fj);src:url(../fonts/lynparza-icons/lynparza-icons.eot?#iefix-avm2fj) format('embedded-opentype'),url(../fonts/lynparza-icons/lynparza-icons.woff?-avm2fj) format('woff'),url(../fonts/lynparza-icons/lynparza-icons.ttf?-avm2fj) format('truetype'),url(../fonts/lynparza-icons/lynparza-icons.svg?-avm2fj#icomoon) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:iconBook;src:url(../fonts/lynparza-icons/icon-book.woff) format('woff'),url(../fonts/lynparza-icons/icon-book.ttf) format('truetype'),url(../fonts/lynparza-icons/icon-book.svg#icon-book) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:lexiRegular;src:url(../fonts/Lexia-Regular.woff) format('woff'),url(../fonts/Lexia-Regular.svg#icon-book) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:lexiBold;src:url(../fonts/Lexia-Bold.woff) format('woff'),url(../fonts/Lexia-Bold.svg#icon-book) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:helveticaBold;src:url(../fonts/HelveticaNeueLTStd-Bd.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Bd.svg#icon-book) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:helveticaRoman;src:url(../fonts/HelveticaNeueLTStd-Roman.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Roman.svg#icon-book) format('svg');font-weight:400;font-style:normal}
+
+
 .icon :before, .icon:before {font-family:lynparza-icons;speak:none;font-style:normal;font-weight:400; line-height:1em;font-variant:normal;text-transform:none;position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 [data-href=menu]:before{content:"\e601"; top:-2px; }
 [data-href=resource]:before{content:"\e600"}
 [data-href=home]:before{ content:"\e607"; top:-3px; }
 [data-href=bibliography]:before{font-family:iconBook; content:"\e900"; font-size: 20px; top:-1px; }
 .arrow:before{content:"\e603"; font-size: 38px;}
-.close:before{content:"\e604"; font-size: 44px; color:#ffffff; }
+
 
 /*[data-href=home]:before{content:"\e602"}
   =============  */
-sup{font-size: 13px;position: relative; top:-7px;}
+header {width:1024px; height:145px; background-color: rgb(131,0,81); margin-bottom:39px;}
+
 body { font-family: "interstatelight", Arial, Helvetica, sans-serif;font-size: 18px;line-height: 22px;background: #111; color:#004d74; -webkit-font-smoothing: antialiased; }
 #container {
 	font-family:inherit;
@@ -32,7 +39,7 @@ body { font-family: "interstatelight", Arial, Helvetica, sans-serif;font-size: 1
 	height:768px;
 	position:relative;
 	overflow:hidden;
-	background: rgb(131,0,81);	 
+
 
 }
 .list { list-style-type:disc; list-style:outside; margin-left:17px; }
@@ -42,19 +49,14 @@ a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
 
 .content, .nav-top { margin:0 auto; position:relative; }
-.content { width: 824px; height:645px; margin-top:48px; margin-left: 100px; margin-right:100px;
-	margin-bottom: 48px;}
+.content {width: 824px;
+/* min-height: 580px; */
+margin: 0 auto;
+position: relative;}
 
-	/*.content p { margin-bottom:10px; }*/
 
-.content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}
-.content > h3 {font-size: 25px; color: white; font-family: "lexiRegular";}
-.content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
-margin-left: 600px;}
-
-	.footnote { font-size:12px; line-height:16px; }
 .close, .arrow { width:44px;   }
-.close { height:44px; right:10px; top:10px; background: #004d74; }
+.close { height:44px; right:10px; top:10px;  }
 
 
 .overlay, .overlay .item, .overlay > div, .icon /*.icon :before*/ { -webkit-transition:all 0.4s ease-in-out; transition:all 0.4s ease-in-out; }

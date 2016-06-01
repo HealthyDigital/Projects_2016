@@ -53,13 +53,18 @@ a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
 
 header {width:1024px; height:145px; background-color: rgb(131,0,81); margin-bottom:30px;}
-header > p{padding-top: 75px; padding-left: 60px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 20px; }
+header > p{padding-top: 75px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 20px; }
 
 sup {font-size:6.5px;}
 header > sup {font-family: lexiRegular; color: white; }
 
 .content, .nav-top { margin:0 auto; position:relative; }
-.content { width: 730px; height:530px; margin-left: 60px; margin-right:100px;margin-bottom: 48px;}
+.content { 
+width: 824px;
+/* min-height: 580px; */
+margin: 0 auto;
+
+position: relative;}
 
 .content p{color: #506061; margin-bottom:25px;}
 .content p strong { color: #4f5656; font-family: "helveticaBold";}

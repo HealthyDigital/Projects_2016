@@ -11,7 +11,33 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style type="text/css">
 
-.feature {width:825px; height:323px; margin-top: 100px; margin-bottom: 90px; background-image:url('./img/fewerexacerbations_graph.png'); background-size: 100% auto;}
+    .controls {position: absolute;}
+    .controls { width:36px; left:14px; top:205px; z-index:21; }
+        .controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+        border:1px solid #3F4344; -webkit-border-radius:500px; color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;  }
+
+    #container {
+        background: white;   
+    }
+header{margin-bottom: 108px;}
+header > p:first-child{padding-top: 45px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 20px; 
+margin-bottom: 8px;}
+header > p:last-child {padding-left: 100px; font-family: "HelveticaLightCn"; color: white; font-size: 18px; }
+header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
+header > p > strong {margin-left:5px;}
+
+
+.content p{color: #506061;/*font-family: "helveticaRoman"; margin-bottom:25px;*/}
+.content p strong { color: #4f5656; font-family: "helveticaBold";}
+
+.content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}
+.content > h3 {font-size: 25px; color: white;}
+.content > span {background-image: url('./img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
+margin-left: 500px;}
+
+
+
+.feature {width:824px; height:323px; margin-top: 100px; margin-bottom: 90px; background-image:url('./img/fewerexacerbations_graph.png'); background-size: 100% auto;}
 .footText {margin-top: 10px; font-family: "HelveticaNeueLTStd"; line-height: 16px; font-size: 12px; color: #506061;}
 
 ul { list-style: none; }
