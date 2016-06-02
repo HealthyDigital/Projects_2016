@@ -10,32 +10,24 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style type="text/css">
+#container {
+    background: white;   
+}
+header { margin-bottom: 64px; }
+header > p{padding-top: 60px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 32px;}
+.footText {margin-top: 28px; font-family: "HelveticaLightCn"; line-height: 16px; font-size: 14px; color: #506061;}
+.feature { background-image: url('./img/hazard_rates.png'); background-size: 100% auto; width:824px;height: 365px;}
 
-/*.graphLines{width:770px; height:315px;  position: relative; margin-left:60px;}
-.graphLines > li:first-child {transform: rotate(270deg); font-size: 14px; color:#3f4444; 
-    font-family: "HelveticaNeueLTStd"; position: absolute; margin-left:-250px; margin-top:170px;}
-ul{list-style: none;}
+.content p:first-child{color: #506061;font-family: "helveticaRoman"; margin-bottom:31px; font-size: 23px; width: 800px;
+line-height: 29px;}
+.content p:last-child{font-size: 14px;}
+.content p strong { color: #4f5656; font-family: "helveticaBold";}
 
-.graphLines > ul {position:absolute; }
-.graphLines > ul:nth-child(2){border-left: 1px solid black;}
-.graphLines > ul:nth-child(2) > li:first-child {margin-top: -5px;}
-.graphLines > ul:nth-child(2) > li{ position: relative; margin-bottom: 50px; margin-left: -35px; font-size:14px; color:#3f4444;}
-.graphLines > ul > li:last-child {margin-bottom: 5px;}
-.graphLines > ul:nth-child(2) > li:nth-child(5) {margin-bottom: 55px;}
-.graphLines > ul:nth-child(3) { margin-left:-10px; border-top:1px solid black; margin-top: 368px;}
-.graphLines > ul:nth-child(3) > li { display: inline-block;  margin-left:100px; margin-top:20px;  font-size:14px; color:#3f4444;}
-.graphLines > ul:nth-child(3) > li:first-child{margin-left: 6px;}
+.content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}
+.content > h3 {font-size: 25px; color: white;}
+.content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
+margin-left: 500px;}
 
-.graphLines > p:nth-child(4) {margin-top:430px;  margin-left:240px; position: absolute; font-family: "HelveticaNeueLTStd";}
-
-.footText {margin-top: 150px; font-family: "HelveticaNeueLTStd"; line-height: 16px; font-size: 12px; color: #506061;}
-
-.graphLines > span {background-image: url('./img/hazard_rates.png'); background-repeat: no-repeat; width: 700px; 
-height: 315px; position: absolute; margin-top:50px; transform: scale(0.9); margin-left: -35px;}
-
-*/
-.footText {margin-top: 38px; font-family: "HelveticaNeueLTStd"; line-height: 16px; font-size: 12px; color: #506061;}
-.feature { background-image: url('./img/hazard_rates.png'); background-size: 100%; width:800px;height: 360px;}
 </style> 
 
 </head>
@@ -51,31 +43,6 @@ height: 315px; position: absolute; margin-top:50px; transform: scale(0.9); margi
         <div class="feature">
             
         </div>
-
-
-            <!--<ul class="graphLines">
-                <li>Rate of next hospitalised exacerbation or death per 10,000/day</li>
-                    <ul>
-                        <li>100</li>
-                        <li>80</li>
-                        <li>60</li>
-                        <li>40</li>
-                        <li>20</li>
-                        <li>0</li>
-                    </ul>
-                    <ul>
-                        <li>0</li>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                    </ul>
-                <p class="footText">Time after first serve exacerbation (years)</p>
-                <span></span>
-            </ul>
--->
  		    <p class="footText">Time between successive exacerbations estimated using median time to next exacerbation or death,
             whichever occurred first. <br />Reference: 1. Suissa S <em>et al.</em> Thorax 2012; 67:957-63.</p>
 

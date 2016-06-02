@@ -9,6 +9,7 @@
 @font-face{font-family:interstatelight;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/interstate/light/interstate_light.woff) format('woff'),url(../fonts/interstate/light/interstate_light.ttf) format('truetype'),url(../fonts/interstate/light/interstate_light.svg#Interstate-Light) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:interstatelightCon;src:url(../fonts/interstate/light/interstate_light.eot?#iefix) format('embedded-opentype'),url(../fonts/Interstate-LightCondensed.woff),url(../fonts/Interstate-LightCondensed.svg#Interstate-LightCondensed) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:HelveticaNeueLTStd;src:url(../fonts/HelveticaNeueLTStd-Lt.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Lt.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:HelveticaLightCn;src:url(../fonts/HelveNeuLigCon.woff) format('woff'),url(../fonts/HelveNeuLigCon.svg#HelveticaNeueLTStd-Lt) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:MarydaleBold;src:url(../fonts/MarydaleBold.woff) format('woff'),url(../fonts/MarydaleBold.svg#MarydaleBold) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:BauhausStdDemi;src:url(../fonts/BauhausStd-Demi.woff) format('woff'),url(../fonts/BauhausStd-Demi.svg#BauhausStd-Demi) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:lynparza-icons;src:url(../fonts/lynparza-icons/lynparza-icons.eot?-avm2fj);src:url(../fonts/lynparza-icons/lynparza-icons.eot?#iefix-avm2fj) format('embedded-opentype'),url(../fonts/lynparza-icons/lynparza-icons.woff?-avm2fj) format('woff'),url(../fonts/lynparza-icons/lynparza-icons.ttf?-avm2fj) format('truetype'),url(../fonts/lynparza-icons/lynparza-icons.svg?-avm2fj#icomoon) format('svg');font-weight:400;font-style:normal}
@@ -17,7 +18,6 @@
 @font-face{font-family:lexiBold;src:url(../fonts/Lexia-Bold.woff) format('woff'),url(../fonts/Lexia-Bold.svg#icon-book) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:helveticaBold;src:url(../fonts/HelveticaNeueLTStd-Bd.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Bd.svg#icon-book) format('svg');font-weight:400;font-style:normal}
 @font-face{font-family:helveticaRoman;src:url(../fonts/HelveticaNeueLTStd-Roman.woff) format('woff'),url(../fonts/HelveticaNeueLTStd-Roman.svg#icon-book) format('svg');font-weight:400;font-style:normal}
-
 
 
 .icon :before, .icon:before {font-family:lynparza-icons;speak:none;font-style:normal;font-weight:400; line-height:1em;font-variant:normal;text-transform:none;position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
@@ -30,20 +30,16 @@
 
 /*[data-href=home]:before{content:"\e602"}
   =============  */
+header {width:1024px; height:145px; background-color: rgb(131,0,81); margin-bottom:39px;}
 
 body { font-family: "interstatelight", Arial, Helvetica, sans-serif;font-size: 18px;line-height: 22px;background: #111; color:#004d74; -webkit-font-smoothing: antialiased; }
-.controls {position: absolute;}
-.controls { width:36px; left:14px; top:205px; z-index:21; }
-	.controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
-	border:1px solid #3F4344; -webkit-border-radius:500px; color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;  }
-
 #container {
 	font-family:inherit;
 	width: 1024px;
 	height:768px;
 	position:relative;
 	overflow:hidden;
-	background: white;	 
+
 
 }
 .list { list-style-type:disc; list-style:outside; margin-left:17px; }
@@ -52,27 +48,15 @@ em { font-style:italic; }
 a { text-decoration:none; color:inherit; }
 #container .hide { display:none; }
 
-header {width:1024px; height:145px; background-color: #951e63; margin-bottom:54px;}
-header > p{padding-top: 60px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 32px;}
-header > sup {font-family: lexiRegular; color: white; font-size: 15px;}
-
 .content, .nav-top { margin:0 auto; position:relative; }
-.content { width: 730px; height:530px; margin-left: 100px; margin-right:100px;margin-bottom: 48px;}
+.content {width: 824px;
+/* min-height: 580px; */
+margin: 0 auto;
+position: relative;}
 
-/*.content p{color: #506061;font-family: "helveticaRoman"; margin-bottom:25px; font-size:22px; line-height: 29px;}*/
-.content > p:first-child {font-size:24px; margin-bottom: 15px; color:#004A77; font-family: "lexiRegular";}
 
-.content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}
-.content > h3 {font-size: 25px; color: white;}
-.content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
-margin-left: 500px;}
-
-	.footnote { font-size: 10px;
-				font-family: "HelveticaNeueLTStd";
-				line-height: 15px;
-				color: #3f4444;
-				word-spacing:-0.2em; margin-top:30px;}
-
+.close, .arrow { width:44px;   }
+.close { height:44px; right:10px; top:10px;  }
 
 
 .overlay, .overlay .item, .overlay > div, .icon /*.icon :before*/ { -webkit-transition:all 0.4s ease-in-out; transition:all 0.4s ease-in-out; }

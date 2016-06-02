@@ -11,13 +11,16 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style type="text/css">
 
-.feature {width:735px; height:435px;  background-image: url('./img/significantreduction_graph.png'); background-repeat: no-repeat;
-background-size: 100%;
+header{margin-bottom: 60px;}
+
+.feature {width:824px; height:435px;  background-image: url('./img/significantreduction_graph.png'); background-repeat: no-repeat;
+background-size: 100% auto;
 }
-.footText {margin-top: 10px; font-family: "HelveticaNeueLTStd"; line-height: 16px; font-size: 12px; color: #506061;}
+.footText {margin-top: 10px; font-family: "HelveticaLightCn"; line-height: 16px; font-size: 12px; color: #506061;}
 
 ul { list-style: none; }
-.footnote {word-spacing: -0.166em; }
+.footnote { font-family: "HelveticaLightCn"; font-size: 14px;
+letter-spacing: -0.02em; margin-top:6px; line-height: 16px;}
 
 
 .bodyContentLeft {margin-top: 236px; margin-left: 68px; width:440px; height:305px;}
@@ -28,7 +31,30 @@ h4 {font-size:24px; font-family: "lexiRegular"; margin-bottom: 24px;}
 ul { list-style: none; font-family: "HelveticaNeueLTStd"; font-size:18px; color: white; }
 .bodyContentRight > li:first-child {margin-left:-15px;}
 .bodyContentRight > li:nth-child(2), .bodyContentRight > li:nth-child(3) {list-style: disc;}
-.bodyContentRight > li:last-child {font-size:14px; font-family: "HelveticaNeueLTStd";}
+.bodyContentRight > li:last-child {font-size:14px; font-family: "HelveticaLightCn";}
+
+.controls {position: absolute;}
+.controls { width:36px; left:14px; top:205px; z-index:21; }
+    .controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+    border:1px solid #3F4344; -webkit-border-radius:500px; color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;  }
+
+#container {
+    background: white;   
+}
+
+header > p:first-child{padding-top: 35px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 22px; line-height: 24px; }
+header > p:last-child {padding-left: 100px; font-family: "HelveticaLightCn"; color: white; font-size: 18px;
+word-spacing: -0.1em; line-height: 23px;}
+header > sup {font-family: lexiRegular; color: white; font-size: 12px;}
+header > p > strong {margin-left: 5px;}
+
+.content p{color: #506061;/*font-family: "helveticaRoman"; margin-bottom:25px;*/}
+.content p strong { color: #4f5656; font-family: "helveticaBold";}
+
+.content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}
+.content > h3 {font-size: 25px; color: white;}
+.content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
+margin-left: 500px;}
 
 
 
@@ -75,25 +101,6 @@ ul { list-style: none; font-family: "HelveticaNeueLTStd"; font-size:18px; color:
 
         <div class="feature"></div>
 
-            <!--<ul class="graphLines">
-                <li>Exacerbations/patient</li>
-                    <ul>
-                        <li>0.4</li>
-                        <li>0.3</li>
-                        <li>0.2</li>
-                        <li>0.1</li>
-                        <li>0.0</li>
-                    </ul>
-                    <ul>
-                        <li>0</li>
-                        <li>15</li>
-                        <li>30</li>
-                        <li>45</li>
-                        <li>60</li>
-                        <li>75</li>
-                        <li>90</li>
-                    </ul>
-            </ul>-->
 
     		<p class="footnote">Adapted from Welte et al. 2009.1 A 12-week, randomised, double-blind, parallel-group study in 660 patients (≥40 yrs) with moderate-severe COPD (FEV1 ≤50% predicted normal and a history of exacerbations requiring systemic steroids and/or antibiotics).<br />
             Reduction in rate of exacerbations and hospitalisations at 12 weeks; Symbicort 400/12 bd + tiotropium 18µg od vs. tiotropium 18µg od + placebo.<br />

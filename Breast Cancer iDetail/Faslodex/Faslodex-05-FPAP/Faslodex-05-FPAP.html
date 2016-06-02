@@ -548,7 +548,7 @@
                         </li>
                         <li class='minimized'><span class='purple'>How are orders made for additional FASLODEX stock?</span>
                             <div class='dropdown'>
-                                <p>After a patient has been registered for the programme and received four months of therapy (first month funded by AstraZeneca and subsequent months funded by the patient via private prescription) additional stock can be ordered for the patient on a monthly basis using the <em><span class='purple'<em>Patient Continuation Form or online at www.astrazenecaoncology.com.au.<br /><br />Following receipt of the Patient Continuation Form, Symbion will process these orders</span></em> and arrange delivery of stock in the same process outlined for initial orders above.</p>
+                                <p>After a patient has been registered for the programme and received four months of therapy (first month funded by AstraZeneca and subsequent months funded by the patient via private prescription) additional stock can be ordered for the patient on a monthly basis using the <em><span class='purple'>Patient Continuation Form or online at www.astrazenecaoncology.com.au.<br /><br />Following receipt of the Patient Continuation Form, Symbion will process these orders</span></em> and arrange delivery of stock in the same process outlined for initial orders above.</p>
                             </div>
                         </li>
                         <li class='minimized'><span class='purple'>Will AstraZeneca collect any data on patients enrolled in this programme?</span>
@@ -591,21 +591,22 @@
     <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
     <script>
         $(document).ready(function(){
+        	$('span.ref').hide();
             var dosing = document.getElementsByClassName('button')[0]
             //alert(dosing)
 
             $('.button').on('tap', function(){
                 var pg = '.' + ($(this).attr('class').split(' '))[1];
                 $('.feature, .logo, .ref').fadeOut();
-                if(pg == '.pg2') { 
+                if(pg == '.pg2' || pg == '.pg1') { 
                 	$('span.ref').fadeIn();
                 }
                 $(pg).fadeIn();
             })
 
             $('.close').on('tap', function(){
-                $('.feature').fadeOut();
-                $('.home, .logo, span.ref').fadeIn();
+                $('.feature, .ref').fadeOut();
+                $('.home, .logo').fadeIn();
             })
 
             $('.dropdown-menu > li').on('tap', function(){

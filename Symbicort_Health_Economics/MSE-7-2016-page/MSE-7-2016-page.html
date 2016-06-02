@@ -11,15 +11,38 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style type="text/css">
 
-.feature {width:825px; height:380px; margin-top: 100px; background-image: url('./img/moderatesevere_graph.png'); background-size: 100%;
+.feature {width:824px; height:380px; margin-top: 100px; background-image: url('./img/moderatesevere_graph.png'); background-size: 100% auto;
 background-repeat: no-repeat;
 }
-.footText {margin-top: 10px; font-family: "HelveticaNeueLTStd"; line-height: 16px; font-size: 12px; color: #506061;}
+.footText {margin-top: 10px; font-family: "HelveticaLightCn"; line-height: 16px; font-size: 12px; color: #506061;}
 
 ul { list-style: none; }
 
+#container {
+    background: white;   
+}
 
+header > p{padding-top: 35px; padding-left: 100px; font-family: lexiRegular; color: white; font-size: 30px; line-height: 32px;}
+header > strong {padding-left: 100px; font-family: lexiRegular; color: white; font-size: 22px; line-height: 32px;}
+header > sup {font-family: lexiRegular; color: white; font-size: 15px;}
 
+.content p{color: #506061;/*font-family: "helveticaRoman"; margin-bottom:25px;*/}
+.content p strong { color: #4f5656; font-family: "helveticaBold";}
+
+.content > h1 {padding-top: 125px; font-family: lexiRegular; color: white; font-size: 55px; line-height: 55px; margin-bottom: 35px;}
+.content > h3 {font-size: 25px; color: white;}
+.content > span {background-image: url('../img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; margin-top: 200px;
+margin-left: 500px;}
+
+    .footnote { font-size:14px; line-height:16px; color: #506061;font-family: "HelveticaLightCn"; margin-top:45px; width: 840px;
+    letter-spacing: -0.01em;}
+
+.controls {position: absolute;}
+.controls { width:36px; left:14px; top:205px; z-index:21; }
+    .controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+    border:1px solid #3F4344; -webkit-border-radius:500px; color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;  }
+
+    
 .bodyContent {margin-top:111px; margin-left:68px; width:888px; height:555px; background-color: #003665; }
 .bodyContent > li {font-family: "lexiRegular"; font-size: 24px; line-height: 30px; color: white; margin-bottom: 16px; padding-left: 38px;
 padding-right: 29px; }
@@ -28,7 +51,7 @@ ul {list-style: none;}
 .bodyContent > li:nth-child(3) { margin-bottom: 26px; }
 
 .bodyContent > ul:nth-child(4) {padding-left: 38px; color: white;}
-.bodyContent > ul:nth-child(4) { font-size:14px; font-family: "HelveticaNeueLTStd";  line-height: 16px;}
+.bodyContent > ul:nth-child(4) { font-size:14px; font-family: "HelveticaLightCn";  line-height: 16px;}
 .bodyContent > ul:nth-child(4) > li:nth-child(4), .bodyContent > ul:nth-child(4) > li:nth-child(5) {margin-left: 15px;}
 
 
@@ -57,13 +80,17 @@ ul {list-style: none;}
     /*transition: 0.5s;*/
 }
 
-.sideText{
+/*.sideText{
     width:282px;
     height:266px;
     position: absolute;
     margin-top: -350px;
 }
+.sideText > li {font-family: "HelveticaNeueLTStd"; font-size:11px; color: #3A4242;}
+.sideText > li:first-child {margin-left: 133px; font-size: 10px; margin-top:3px;}
 
+.sideText > li:nth-child(2) {margin-left: 60px; margin-top:1px; font-size: 12px;}
+*/
 </style> 
 
 </head>
@@ -82,7 +109,9 @@ ul {list-style: none;}
 
             <div class="feature"></div>
 
-            <ul class="sideText">
+           <!--<ul class="sideText">
+                <li>(tiotropium+budesonide/formoterol)</li>
+                <li>(indacterol/glycopyrronium bromide)</li>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -93,22 +122,21 @@ ul {list-style: none;}
                 <li></li>
                 <li></li>
                 <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            </ul>-->
+            <p class="footnote">Reference: 1. Tricco AC <em>et al. BMJ Open</em> 2015;5:e009183. Comparative safety and effectiveness of long-acting inhaled agents for treating chronic obstructive pulmonary
+            <br />disease: A systematic review and network meta-analysis.</p>
+
 
         </article>
-            <p class="footnote">BUDE, budesonide; FLUT, fluticasone; FORM, formoterol; INDAC, indacaterol; SALM, slameterol; VILA, vilanterol; GLYC, glycopyrronium bromide; TIOT, tiotropium; FORM/<br />BECLO, formoterol/beclomethasone; FORM/BUDE, formoterol/budesonide; VILA/FLUT, vilanterol/fluticasone; SALM/FLUT, salmeterol/fluticasone; TIOT/SALM, tiotropium/<br />salmeterol; INDA/GLYC, indacaterol/glycopyrronium; TIOT/FLUT/SALM, tiotropium/fluticasone/salmeterol; TIOT/BUDE/FORM, tiotropium/budesonide/formoterol<br /> Reference: 1. Tricco AC <em>et al. BMJ Open</em> 2015;5:e009183. Comparative safety and effectiveness of long-acting inhaled agents for treating chronic obstructive pulmonary<br /> disease: A systematic review and network meta-analysis.</p>
-
 
     <div id="popup">
         <span class="close"><p>X</p></span>
         <ul class="bodyContent">
-            <li>A systematic review and network meta-analysis funded by the Canadian government* set out to answer the question: “What is the comparative effectiveness and safety of long-acting inhaled agents (ICS, LABA, LAMA) alone or in any combination for patients with COPD?”#</li>
+            <li>A systematic review and network meta-analysis funded by the Canadian government* set out to answer the question: “What is the comparative effectiveness and safety of long-acting inhaled agents (ICS, LABA, LAMA) alone or in any combination for patients with COPD?”<sup>#</sup></li>
             <li>More than 200 RCTs in 134,692 patients were reviewed in one of the most comprehensive systematic reviews published to date.</li>
-            <li>The results from 20 RCTs of at least 12 weeks duration in 26,141 patients showed that Spiriva®/Symbicort® (triple therapy) was associated with the 
+            <li>The results from 20 RCTs of at least 12 weeks duration in 26,141 patients showed that Spiriva<sup>®</sup>/Symbicort<sup>®</sup> (triple therapy) was associated with the 
                 highest probability of reducing the risk of moderate-to-severe exacerbations 
-                for patients who experienced an exacerbation in the last year.1 # </li>
+                for patients who experienced an exacerbation in the last year.<sup>1#</sup> </li>
             <ul>
                 <li>*Ontario Ministry of Health and Long-Term Care Health System Research Fund</li>
                 <li>RCT = randomised controlled trial.</li>

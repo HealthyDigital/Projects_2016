@@ -10,7 +10,11 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style type="text/css">
+#container {
 
+    background: rgb(131,0,81);   
+
+}
 .boxes { width:350px; height:645px; margin: 0 auto; list-style: none; }
 .boxes > li{ width:350px; height:195px; margin-bottom: 30px;}
 .boxes > li:first-child {background-color: #f3b728; }
@@ -24,6 +28,12 @@
 .boxes > li > p{font-family: lexiRegular;color: white; font-size: 55px; line-height: 55px; padding-top: 75px; 
 	padding-left: 25px; padding-right: 25px; padding-bottom: 24px;}
 	.boxes > li:last-child > p {padding-top:50px;}
+
+.content { width: 824px; height:645px; margin-top:48px; margin-left: 100px; margin-right:100px;
+    margin-bottom: 48px;}
+.content > span {background-image: url('./img/AZ_Logo.png'); background-repeat: no-repeat; width:240px; height:80px; position: absolute; 
+    margin-top: 535px;
+    margin-left: 600px;}
 </style> 
 
 </head>
@@ -32,7 +42,7 @@
 
     	<article class="content">
     		<ul class="boxes">
-    			<li><p>Burden of Disease</p></li>
+    			<li><p>Burden<br />of Disease</p></li>
     			<li><p>Clinical Data</p></li>
     			<li><p>Economic Value</p></li>
     		</ul>
