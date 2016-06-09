@@ -1,27 +1,71 @@
 {
-	"slides" : [{ 
-		"1" : "04-Unmet-need",
-		"2" : "05-PARPi",
-		"3" : "05-PARPi",
-		"4" : "06-Extended-PFS",
-		"5" : "06-Extended-PFS",
-		"6" : "06-Extended-PFS",
-		"7" : "06-Extended-PFS",
-		"8" : "06-Extended-PFS",
-		"9" : "06-Extended-PFS",
-		"10" : "06-Extended-PFS",
-		"11" : "06-Extended-PFS",
-		"12" : "07-BRCAm-testing",
-		"13" : "07-BRCAm-testing",
-		"14" : "07-BRCAm-testing",
-		"15" : "07-BRCAm-testing",
-		"16" : "08-Patient-support",
-		"17" : "08-Patient-support",
-		"18" : "08-Patient-support",
-		"19" : "08-Patient-support",
-		"20" : "09-Safety-and-tolerability",
-		"21" : "09-Safety-and-tolerability",
-		"22" : "10-Summary"
-	}],
-	
+	"slides" : [
+		{ "id": 1, "key": "04-Unmet-need" },
+		{ "id": 2, "key": "05-Mechanism-of-action" },
+		{ "id": 3, "key": "05-Mechanism-of-action" },
+		{ "id": 4, "key": "06-Clinical-data" },
+		{ "id": 5, "key": "06-Clinical-data" },
+		{ "id": 6, "key": "06-Clinical-data" },
+		{ "id": 7, "key": "06-Clinical-data" },
+		{ "id": 8, "key": "06-Clinical-data" },
+		{ "id": 9, "key": "06-Clinical-data" },
+		{ "id": 10, "key": "06-Clinical-data" },
+		{ "id": 11, "key": "06-Clinical-data" },
+		{ "id": 12, "key": "07-BRCAm-testing" },
+		{ "id": 13, "key": "07-BRCAm-testing" },
+		{ "id": 14, "key": "07-BRCAm-testing" },
+		{ "id": 15, "key": "07-BRCAm-testing" },
+		{ "id": 16, "key": "08-Patient-support" },
+		{ "id": 17, "key": "08-Patient-support" },
+		{ "id": 18, "key": "08-Patient-support" },
+		{ "id": 19, "key": "08-Patient-support" },
+		{ "id": 20, "key": "09-Safety-and-tolerability" },
+		{ "id": 21, "key": "09-Safety-and-tolerability" },
+		{ "id": 22, "key": "10-Summary" }
+	],
+	"references":[
+		{ 
+			"id": 1, "title": "Weil, MK. and Chen, M.D. 2011. PARP inhibitor treatment in ovarian and breast cancer. <em>Curr Prob Cancer</em>. 35(1), pp.7–50." 
+		}, {
+			"id":2, "title":" Ledermann, J. et al. 2012. Olaparib maintenance therapy in platinum-sensitive relapsed ovarian cancer. <em>N Engl J Med</em>. 366(15), pp.1382-1392." 
+		}, {
+			"id":3, "title":"Ledermann, J. et al. 2014. Olaparib maintenance therapy in patients with platinum-sensitive relapsed serous ovarian cancer: a preplanned retrospective analysis of outcomes by BRCA status in a randomized phase 2 trial. <em>Lancet Oncol</em>. 15(8), pp.852-856." 
+		}, {
+			"id":4, "title":"Lynparza (olaparib) Approved Product Information. 7 January 2016" 
+		}, {
+			"id":"5", "title":" Goff, B.A. et al. 2000. Ovarian carcinoma diagnosis. <em>Cancer</em>. 89(10), pp.2068-75." 
+		}, {
+			"id":6, "title":"Ledermann, J. and Raja, F.A. et al. 2013. Newly diagnosed and relapsed epithelial ovarian carcinoma: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up. <em>Ann Oncol</em>. 24(6), pp.24-32." 
+		}, {
+			"id":7, "title":"Caldecott, K.W. 2003. Protein–proteins interactions during mammalian DNA singlestrand break repair. <em>Biochem Soc Trans.</em> 31 (Pt 1), pp.247-251." 
+		}, {
+			"id":8, "title":"Langelier, M.F. et al. 2014. PARP-2 and PARP-3 are selectively activated by 5 phosphorylated DNA breaks through an allosteric regulatory mechanism shared with PARP-1. <em>Nucleic Acids Res</em>. 42(12), pp.7762-7775." 
+		}, {
+			"id":9, "title":"Hegde, M.L. et al. 2008. Early Steps in the DNA Base Excision/Single-Strand Interruption Repair Pathway in Mammalian Cells. <em>Cell Res</em>. 18(1), pp.27–47." 
+		},{
+			"id":10, "title":"Amal, A. and Ganesan. S. 2011. BRCA1, PARP, and 53BP1: conditional synthetic lethality and synthetic viability. <em>Journal of Molecular Cell Biology</em>. 3, pp. 66-74." 
+		}, {
+			"id":11, "title":"Weston, V.J. and Oldreive, CE. et al. 2010. The PARP inhibitor olaparib induces significant killing of ATM-deficient lymphoid tumor cells in vitro and in vivo. <em>Blood</em>. 116(22), pp. 4578-4587." 
+		}, {
+			"id":12, "title":"Matulonis UA et al. Olaparib maintenance therapy in patients with platinum-sensitive, relapsed serous ovarian cancer and a BRCA mutation: Overall survival adjusted for postprogression poly(adenosine diphosphate ribose) polymerase inhibitor therapy. <em>Cancer</em>. 2016 Apr 8. doi: 10.1002/cncr.29995. [Epub ahead of print]" 
+		}, {
+			"id":13, "title":"Aslop, K. et al. 2012.BRCA mutation frequency and patterns of treatment response in BRCA mutation–positive women with ovarian cancer: A report from the Australian Ovarian Cancer Study Group. <em>J Clin Oncol</em>. (30)21, pp.2655-2663." 
+		}, {
+			"id": 14, "title":"Stavropoulo, A.V. et al. 2013. Prevalence of BRCA1 mutations in familial and sporadic Greek ovarian cancer cases. <em>PLOS One</em>. 8(3), pp.1-10."
+		}, {
+			"id": 15, "title":"Pal, T. et al. 2005. BRCA1 and BRCA2 Mutations. Account for a Large Proportion of Ovarian Carcinoma Cases. <em>Cancer</em>. 104(12), pp.2807-2816."
+		}, {
+			"id": 16, "title":"Song, H. et al. 2014. The contribution of deleterious germline mutations in BRCA1,BRCA2 and the mismatch repair genes to ovarian cancer in the population. <em>Hum Mol Genet</em>. 23(17), pp.4703-4709."
+		}, {
+			"id": 17, "title":"Kurian, A.W. 2010. BRCA1 and BRCA2 mutations across race and ethnicity: distribution and clinical implications. <em>Curr Opin Obstet Gynecol</em>. 22(1), pp.72-78."
+		}, {
+			"id": 18, "title":"Society of Gynecologic Oncology. [Online]. [Accessed 12 March 2015]. Available from: <a href='https://www.sgo.org/clinicalpracticeguidelines/genetic-testing-for-ovariancancer/' target='_blank'>https://www.sgo.org/clinicalpracticeguidelines/genetic-testing-for-ovariancancer/</a>."
+		}, {
+			"id": 19, "title":"Referenced with permission from the NCCN Clinical Practice Guidelines in Oncology (NCCN Guidelines<sup>®</sup>) for Genetic/ Familial High-Risk Assessment: Breast and Ovarian V.2.2014. © National Comprehensive Cancer Network, Inc 2014. All rights reserved. [Accessed 12 March, 2015]. To view the most recent and complete version of the guideline, go online to NCCN.org. NATIONAL COMPREHENSIVE CANCER NETWORK<sup>®</sup>, NCCN<sup>®</sup>, NCCN GUIDELINES<sup>®</sup>, and all other NCCN Content are trademarks owned by the National Comprehensive Cancer Network, Inc."
+		}, {
+			"id": 20, "title":"Trainer, A.H. et al. 2010. Moving towards personalized medicine. <em>Int J Gynecol Cancer</em>. 20(5), pp.704-716."
+		}, {
+			"id": 21, "title":"Liu, G. et al. 2012. Differing clinical impact of BRCA1 and BRCA2 mutations in serous ovarian cancer. <em>Pharmacogenomics</em>. 13(13), pp.1523–1535."
+		}
+	]
 }

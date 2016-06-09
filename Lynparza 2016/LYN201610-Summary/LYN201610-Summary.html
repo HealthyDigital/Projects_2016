@@ -98,7 +98,8 @@ a median of 6.9 months</strong> vs placebo<br />
 <script type="text/javascript">
 	$( function(){
 		var li = $('.test > li');
-			tl.staggerTo(li, 0.5, { delay:0.5, scale:1, opacity:1 }, 0.6 );
+			tl.from(li.parent(), 0.35, { delay:0.3, scale:0, opacity:0 } )
+			.staggerTo(li, 0.5, { scale:1, opacity:1 }, 0.35 );
 		
 		$('.btn').on('tap', function(){
 			var t = $(this),
