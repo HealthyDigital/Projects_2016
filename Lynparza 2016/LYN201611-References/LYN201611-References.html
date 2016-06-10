@@ -34,27 +34,8 @@
             <div class="swiper-container swiper-scroll">
                 <ul class="swiper-wrapper">
                 	<!-- slide 23-->
-                    <li class="swiper-slide" data-slide="23">
-                 		 <ol>
-                         	<li> Weil, MK. and Chen, M.D. 2011. PARP inhibitor treatment in ovarian and breast cancer. Curr Prob Cancer. 35(1), pp.7–50.</li>
-                         	<li>Ledermann, J. et al. 2012. Olaparib maintenance therapy in platinum-sensitive relapsed ovarian cancer. N Engl J Med. 366
-(15), pp.1382-1392.</li>
-                         	<li>Ledermann, J. et al. 2014. Olaparib maintenance therapy in patients with platinum-sensitive relapsed serous ovarian
-cancer: a preplanned retrospective analysis of outcomes by BRCA status in a randomized phase 2 trial. Lancet Oncol. 15(8),
-pp.852-856.</li>
-                         	<li>Lynparza (olaparib) Approved Product Information. 7 January 2016</li>
-                         	<li>Goff, B.A. et al. 2000. Ovarian carcinoma diagnosis. Cancer. 89(10), pp.2068-75.</li>
-                         	<li>Ledermann, J. and Raja, F.A. et al. 2013. Newly diagnosed and relapsed epithelial ovarian carcinoma: ESMO Clinical Practice
-Guidelines for diagnosis, treatment and follow-up. Ann Oncol. 24(6), pp.24-32.</li>
-                         	<li>Caldecott, K.W. 2003. Protein–proteins interactions during mammalian DNA singlestrand break repair. Biochem Soc Trans. 31 (Pt 1), pp.247-251.</li>
-                         	<li>Langelier, M.F. et al. 2014. PARP-2 and PARP-3 are selectively activated by 5 phosphorylated DNA breaks through an
-allosteric regulatory mechanism shared with PARP-1. Nucleic Acids Res. 42(12), pp.7762-7775.</li>
-                         	<li>Hegde, M.L. et al. 2008. Early Steps in the DNA Base Excision/Single-Strand Interruption Repair Pathway in Mammalian
-Cells. Cell Res. 18(1), pp.27–47.</li>
-                         	<li>Amal, A. and Ganesan. S. 2011. BRCA1, PARP, and 53BP1: conditional synthetic lethality and synthetic viability. Journal of
-Molecular Cell Biology. 3, pp. 66-74.</li>
-                         </ol>
-         
+                    <li class="swiper-slide biblio" data-slide="23">
+                 		 <ol></ol>
             		</li>
                     
             	</ul><!-- end swiper-wrapper -->
@@ -62,34 +43,10 @@ Molecular Cell Biology. 3, pp. 66-74.</li>
                 <div class="swiper-scrollbar"></div>
         	</div>
         	<span class="logo lynp"></span>
-            <span class="btn icon btn-arrow brcam hide"><i>BRCAm</i></span>
-            <span class="btn btn-info ">i</span>
         </article>
     
     <!-- popup -->
-    <div class="overlay shade ">
-    	<!-- reference -->
-    	<div class="ref hide">
-            <div class="item"> <span class="close icon"></span>
-                <h1>References</h1>
-                <ol></ol>
-            </div>
-        </div><!-- end ref -->
-         <!-- info -->
-        <div class="item info " data-info="18"><span class="arrow icon"></span>
-        <ul class="list">
-        	<li>The recommended dose of Lynparza is 400mg (eight 50mg capsules) taken twice daily, equivalent to a total<br />daily dose of 800 mg<sup data-ref="4">4</sup></li>
-<li>Patients should start treatment with Lynparza no later than 8 weeks after completion of their final dose<br />
-of the platinum-containing regimen<sup data-ref="4">4</sup></li>
-<li>Due to the effect of food on Lynparza absorption, patients should take Lynparza should be take<br />
-at the same time relative to time of eating, and preferably after food intake<sup data-ref="4">4</sup></li>
-<li>It is recommended that treatment be continued until disease progression of the underlying disease<sup data-ref="4">4</sup></li>
-<li>Baseline testing, followed by monthly monitoring, of complete blood counts is recommended for the first<br />
-12 months of treatment and periodically after this time to monitor for clinically significant changes in any<br />
-parameter during treatment<sup data-ref="4">4</sup></li>
-        </ul>
-           
-        </div><!-- end info -->
+    <div class="overlay ">
        <!-- navigation -->
         <div class="item nav hide"><span class="close icon"></span>
         	<ul class="section">
@@ -136,8 +93,8 @@ parameter during treatment<sup data-ref="4">4</sup></li>
                 </li>
         		<li data-href="22"><span>Summary</span></li>
         	</ul>
-            
         </div><!-- end nav -->
+        
     </div>
 
     </section>
@@ -149,15 +106,17 @@ parameter during treatment<sup data-ref="4">4</sup></li>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-		var swiperScroll = new Swiper('.swiper-scroll', {
-			scrollbar: '.swiper-scrollbar',
-			direction: 'vertical',
-			slidesPerView: 'auto',
-			mousewheelControl: true,
-			freeMode: true,
-			scrollbarDraggable: true,
-			scrollbarHide: false
-		});
+		setTimeout( function(){
+			var swiperScroll = new Swiper('.swiper-scroll', {
+				scrollbar: '.swiper-scrollbar',
+				direction: 'vertical',
+				slidesPerView: 'auto',
+				mousewheelControl: true,
+				freeMode: true,
+				scrollbarDraggable: true,
+				scrollbarHide: false
+			});
+		}, 150)
 		
 	
 		/* $('.indicator .arrow').on('tap', function(){ 

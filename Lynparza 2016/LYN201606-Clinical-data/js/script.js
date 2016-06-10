@@ -12,7 +12,9 @@ $( function(){
 		btn = $('.content > .btn, .nav-top [data-href=menu]'),
 		btnMenu = $('.nav-top [data-href=menu]'),
 		info = overlay.find('.info'),
-		btnClose = overlay.find('.arrow, .close');
+		btnClose = overlay.find('.arrow, .close'),
+		ref = overlay.find('.ref'),
+		btnNavRef = $('.nav li > span, .menu > li, sup[data-ref]');
 		
 		btn.on('tap', function(){
 			var $this = $(this);
@@ -28,24 +30,122 @@ $( function(){
 				video.show();
 				overlay.find('video').get(0).play();
 			}else {
-				
 				overlay.find('.nav').show();
 				btnMenu.css('opacity', 0);
 				
 			}
 		});
-		//close overlay
-		btnClose.on('tap', function(){
-			overlay.find('video').get(0).pause();
-			btnMenu.css('opacity', 1);
-			overlay.removeClass('show');
-			applyShade(overlay);
-		});	
+		//get config data
+		$.getJSON('js/config.json', getData);
+		
+		//navigation
+		function getData(data){
+			var isMenu = false, 
+				isRange = 0,
+				rMin = 0, rMax = 0,
+				key = 'LYN2016';
+			//set references
+			$.each(data.references, function(k, v){
+				$('<li />', { class:"hide", html: "<i>"+[v][0].id+".</i>"+[v][0].title }).appendTo($('.overlay .ref ol, .biblio > ol'));
+			});
+			btnNavRef.on('tap', function(){
+				var $this = $(this),
+					id = parseInt($this.parent().attr('data-href'));
+				//items.hide();
+				//determine item & swap 
+				if($this.parents('.nav').length) {
+					isMenu = true;
+				}else if($this.parent('.menu').length){
+					id = parseInt($this.attr('data-href').split('-')[0]);
+					isMenu = true;
+				}else{
+					isMenu = false;
+				}
+				//console.log(id)
+				if(isMenu){
+					$.each(data.slides, function(k, v){
+						if([v][0].id === id){
+							//console.log([v][0].key);
+							localStorage.setItem('activeSlide',	[v][0].key+'_'+$this.attr('data-href'));
+							goToSlide(key+[v][0].key);
+						}
+					});
+					localStorage.setItem('slideID',	$this.attr('data-href'));
+					
+				}else{
+					//set ref id
+					id = $this.attr('data-ref');
+					//check if range & set min/max values
+					isRange = id.indexOf('-') !== -1 ? true : false;
+					id = id.split(new RegExp('[-|,]', 'g'));
+					var a = parseInt(id[0]),
+						b = $.isNumeric(id[1]) ? parseInt(id[1]) : 0;
+					//reorder reverse input
+					if(a > b){ rMin = b; rMax = a; }else{ rMin = a; rMax = b; }
+					//hide all refs
+					ref.find('ol > li').hide();
+					applyShade(overlay);
+					overlay.addClass('show').find('.ref').show();
+					//console.log(rMin +' : '+rMax )
+					if(isRange && rMax !== 0){
+						for(var i=rMin; i<=rMax; i++){
+							matchRefs(i);
+							//console.log(i);
+						}
+					}else if(!isRange && rMax !== 0){
+						for(var i=0; i < id.length; i++){
+							matchRefs(id[i]);
+							//console.log(id[i]);
+						}
+					}else{
+						matchRefs(rMin);
+					}
+				}
+				overlay.addClass('down');
+			});
+			//loop through ref list
+			function matchRefs(n){
+				ref.find('ol > li').each(function() {
+					var $this = $(this);
+						if(parseInt($this.find('i').text()) === parseInt(n)){
+							$this.show();
+						}
+				});
+				var h1 = ref.find('h1');
+					ref.find('li:visible').length > 1 ? h1.text('References') : h1.text('Reference');
+			}
+		}
+	if(!$.isEmptyObject(activeSlide)){
+		content.addClass(activeSlide);
+	}
+	
+		
+	//close overlay
+	btnClose.on('tap', function(){
+		var $this = $(this),
+			overlay = $this.parents('.overlay');
+		if(video.length){ overlay.find('video').get(0).pause(); }
+		btnMenu.css('opacity', 1);
+		
+		if(overlay.find('.info').is(':visible') && $this.parents('.ref').length){
+			$this.parents('.ref').hide();
+		}else{
+			items.hide();
+			overlay.removeClass('show down shade');
+		}
+		//
+		//
+		//applyShade(overlay);
+		if(!$.isEmptyObject(backToResources) && backToResources === '1'){
+			goToSlide('LYN201613-Resources');
+			localStorage.setItem('backToResources', '');
+		}
+	});	
 	//top menu go to slide >>
 	$('.nav-top').on('tap', "li:not('[data-href=menu]')", function(){
 		var $this = $(this),
 			km = '', id = '';
-			console.log($this.attr('data-href'))
+			//console.log($this.attr('data-href'))
 			switch($this.attr('data-href')){
 				case "warning":
 					km = 'LYN201612-Contraindications';
@@ -78,11 +178,14 @@ function goToSlide(km, id){
 	
 }
 //global timeline
-var tl = new TimelineLite();
+var tl = new TimelineLite(),
+	slideID = localStorage.getItem('slideID'),
+	activeSlide = localStorage.getItem('activeSlide'),
+	backToResources = localStorage.getItem('backToResources');
 
 ///add shade class
 function applyShade(e){
 	setTimeout( function(){
-		e.toggleClass('shade');
+		e.addClass('shade');
 	}, 400);
 }

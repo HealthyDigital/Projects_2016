@@ -274,7 +274,7 @@
                                 <span class="state one"></span>
                                 <span class="state two"></span>
                                 <span class="btn btn-play graph"></span>
-                                <p class="label">HR 0.18 (95% CI 0.10-0.31); p&lt;0.00001;<br />median PFS 11.2 vs 4.3 months.<sup>4</sup></p>
+                                <p class="label">HR 0.18 (95% CI 0.10-0.31); p&lt;0.00001;<br />median PFS 11.2 vs 4.3 months.<sup data-ref="4">4</sup></p>
                             </div>
                             <ul class="key">
                                 <li>No. at risk</li>
@@ -327,7 +327,7 @@ response to prior platinum-based
 therapy (N=265).<sup data-ref="2">2*</sup></li>
                                 <li>Lynparza<br />
 400 mg po bid
-<span class="rand">Randomised 1:1<sup>2</sup></span>
+<span class="rand">Randomised 1:1<sup data-ref="2">2</sup></span>
 Placebo<br />
 po bid
 </li>
@@ -1068,6 +1068,7 @@ degree of uncertainty due to the small sample size and the lack of data maturity
 			tl6 = new TimelineLite(),
 			tl7 = new TimelineLite(),
 		 	play1 = $("[data-slide=4] .btn-play" ),
+			key0 = $("[data-slide=4] .key" ),
 		 	state1 = play1.parent().find('.one'),
 			state2 = play1.parent().find('.two'),
 		 	ind1 = $('.indicator >li:first-child'),
@@ -1102,6 +1103,7 @@ degree of uncertainty due to the small sample size and the lack of data maturity
 			key2 = $("[data-slide='10b'] .key li:nth-child(4), [data-slide='10b'] .key li:last-child"),
 			bar = $('.bar > li span'),
 			barLabel = $('.bar span > i'),
+			info = $(".btn-info"),
 			isplayed = false;
 			//
 		 var mySwiper = new Swiper('.swiper-container', {
@@ -1117,8 +1119,10 @@ degree of uncertainty due to the small sample size and the lack of data maturity
 					tl6.pause(0);
 					arrow.removeClass('less')
 				 		.parent().find('p').slideUp();
-					e.activeIndex === 6 ? tl5.play() : tl5.pause(0);
+					if(e.activeIndex === 6){ tl5.play(); info.show();  }else{ tl5.pause(0); info.hide(); }
 					e.activeIndex === 8 ? tl7.play() : tl7.pause(0);
+					//e.activeIndex === 8 ? info.show() : info.hide();
+					//console.log(e.activeIndex);
 				} 
 		  });
 
@@ -1127,9 +1131,11 @@ degree of uncertainty due to the small sample size and the lack of data maturity
 			 .to(state1, 0.5, {opacity: 1 }, 'cl')
 			 .to(ind2, 0.2, { className: '-=active'}, 'cl')
 			 .to(ind1, 0.3, { className: '+=active'}, 'cl')
+			 .to(key0.find('li:last-child'), 0.35, { backgroundColor: '#b2d234'}, 'cl')
 			 .addPause()
 			 .call(slideUpDown, 0)
 			 .to(state2, 0.5, { opacity: 1}, 'feat' )	
+			 .to(key0.find('li:nth-child(2)'), 0.35, { backgroundColor: '#004d74'}, 'feat')
 			 .addPause()
 			 .call(slideUpDown, 0)
 			 .to(state2, 0.3, { css:{className: '+=three'} }, 'lab')
@@ -1208,11 +1214,11 @@ degree of uncertainty due to the small sample size and the lack of data maturity
 		// slide 6 >>
 		tl5.to(reveal4, 0.2, { width:'18%', ease:Power0.easeOut }, '+=0.2')
 			.to(block, 0.35, { opacity: 1, ease:Power0.easeOut }, '-=0.3')
-			.to(reveal4, 0.2, { width:'51%', ease:Power0.easeOut}, '+=0.05', 'flag' )
+			.to(reveal4, 0.2, { width:'51%', ease:Power0.easeOut}, '+=0.015', 'flag' )
 			.to(block2, 0.35, { opacity: 1, ease:Power0.easeOut }, 'flag' )
-			.to(reveal4, 0.25, { width:'69%', ease:Power0.easeOut }, '+=0.05', 'flag2' )
+			.to(reveal4, 0.25, { width:'69%', ease:Power0.easeOut }, '+=0.005', 'flag2' )
 			.to(block3, 0.35, { opacity: 1, ease:Power0.easeOut }, 'flag2')
-			.to(reveal4, 0.2, { width:'100%', ease:Power0.easeOut }, '+=0.05', 'flag3'  )
+			.to(reveal4, 0.2, { width:'100%', ease:Power0.easeOut }, '+=0.005', 'flag3'  )
 			.to(block4, 0.35, { opacity: 1, ease:Power0.easeOut }, 'flag3' )
 		
 		//slide 7 >> 

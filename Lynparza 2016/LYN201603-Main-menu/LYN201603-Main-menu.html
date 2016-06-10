@@ -49,7 +49,7 @@
         </nav>
     	<article class="content">
         	<ul class="menu icon">
-        		<li data-href="1"><span>Unmet need</span></li>
+        		<li data-href="1"><span>Unmet need<sup data-ref='6'>1</sup></span></li>
         		<li data-href="2"><span>Mechanism of action</span></li>
         		<li data-href="4"><span>Clinical data</span></li>
         		<li data-href="12"><span>Why BRCAm<br />is important</span></li>
@@ -61,7 +61,7 @@
         </article>
     
     <!-- popup -->
-    <div class="overlay shade ">
+    <div class="overlay">
     	<!-- reference -->
     	<div class="ref hide">
             <div class="item"> <span class="close icon"></span>
@@ -133,7 +133,11 @@
 <script type="text/javascript">
 	$( function(){
 		var li = $('.menu > li');
-			tl.staggerFrom(li, 0.5, { scale:0, opacity:0, yoyo:true }, 0.1 );
+			tl.staggerFrom(li, 0.35, { scale:0, opacity:0, rotation:-180, yoyo:true }, 0.1 );
+			
+		li.on('tap', function(){
+			
+		})
 		
 	});
 

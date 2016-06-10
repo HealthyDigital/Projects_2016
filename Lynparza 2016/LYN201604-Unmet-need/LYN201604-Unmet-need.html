@@ -42,7 +42,8 @@
             </ul>
         </nav>
     	<article class="content">
-        	<h2>
+        	<div class="swiper-slide-active" data-slide="2">
+            	<h2>
             	<span>UNMET NEED</span>
                 UNMET NEED IN OVARIAN CANCER
             </h2>
@@ -61,6 +62,7 @@
             	<li>YEAR 4</li>
             	<li>YEAR 5</li>
             </ul>
+            </div>
         
         	<span class="logo lynp"></span>
             <span class="btn btn-info">i</span>
@@ -77,8 +79,8 @@
         </div><!-- end ref -->
          <!-- info -->
         <div class="item info hide"><span class="arrow icon"></span>
-       <p>The early symptoms of ovarian cancer are often missed and the disease is generally not detected until an&nbsp;advanced stage when chances for cure are poor.<sup>5</sup></p>
-<p>Until now, there have been limited maintenance therapies available to treat women with ovarian cancer and&nbsp;no treatment specifically for patients who have a BRCA mutation.<sup>6</sup></p>
+       <div data-info="2"><p>The early symptoms of ovarian cancer are often missed and the disease is generally not detected until an&nbsp;advanced stage when chances for cure are poor.<sup data-ref="5,6">5</sup></p>
+<p>Until now, there have been limited maintenance therapies available to treat women with ovarian cancer and&nbsp;no treatment specifically for patients who have a BRCA mutation.<sup data-ref="5,6">6</sup></p></div>
            
         </div><!-- end info -->
        <!-- navigation -->
@@ -144,8 +146,8 @@
 			li = $('.women > li'),
 			li2 = $('.women > li:nth-child(n+4)'),
 			key = $('.key > li:last-child');
-			tl.staggerTo(li, 0.8, { opacity:1, delay: 1 }, 0.2)
-			.staggerTo(li2, 0.5, { css:{ className: '+=highlight', backgroundColor:'rgba(178, 210, 52, 1)'} }, 0.15, '-=0.4')
+			tl.staggerTo(li, 0.8, { opacity:1, delay: 0.5 }, 0.2)
+			.staggerTo(li2, 0.5, { css:{ className: '+=highlight', backgroundColor:'rgba(178, 210, 52, 1)'} }, 0.15, '-=0.8')
 			.to(key, 0.5, { opacity: 1 }, '-=0.3')
 			.to(label, 0.5, {css:{left:'580px'}}, '-=0.4');
 		//setTimeout( function(){ $('.content').addClass('highlight') }, 2000)

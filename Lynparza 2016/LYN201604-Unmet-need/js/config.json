@@ -19,13 +19,13 @@
 		{ "id": 17, "key": "08-Patient-support" },
 		{ "id": 18, "key": "08-Patient-support" },
 		{ "id": 19, "key": "08-Patient-support" },
-		{ "id": 20, "key": "09-Safety-and-tolerability" },
-		{ "id": 21, "key": "09-Safety-and-tolerability" },
+		{ "id": 20, "key": "09-Dosing-and-administration" },
+		{ "id": 21, "key": "09-Dosing-and-administration" },
 		{ "id": 22, "key": "10-Summary" }
 	],
 	"references":[
 		{ 
-			"id": 1, "title": "Weil, MK. and Chen, M.D. 2011. PARP inhibitor treatment in ovarian and breast cancer. <em>Curr Prob Cancer</em>. 35(1), pp.7–50." 
+			"id": 1, "title": "Weil, MK. and Chen, M.D. 2011. PARP inhibitor treatment in ovarian and&nbsp;breast cancer. <em>Curr Prob Cancer</em>. 35(1), pp.7–50." 
 		}, {
 			"id":2, "title":" Ledermann, J. et al. 2012. Olaparib maintenance therapy in platinum-sensitive relapsed ovarian cancer. <em>N Engl J Med</em>. 366(15), pp.1382-1392." 
 		}, {
@@ -33,11 +33,11 @@
 		}, {
 			"id":4, "title":"Lynparza (olaparib) Approved Product Information. 7 January 2016" 
 		}, {
-			"id":"5", "title":" Goff, B.A. et al. 2000. Ovarian carcinoma diagnosis. <em>Cancer</em>. 89(10), pp.2068-75." 
+			"id":5, "title":" Goff, B.A. et al. 2000. Ovarian carcinoma diagnosis. <em>Cancer</em>. 89(10), pp.2068-75." 
 		}, {
-			"id":6, "title":"Ledermann, J. and Raja, F.A. et al. 2013. Newly diagnosed and relapsed epithelial ovarian carcinoma: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up. <em>Ann Oncol</em>. 24(6), pp.24-32." 
+			"id":6, "title":"Ledermann, J. and Raja, F.A. et al. 2013. Newly diagnosed and relapsed&nbsp;epithelial ovarian carcinoma: ESMO Clinical Practice Guidelines&nbsp;for diagnosis, treatment and follow-up. <em>Ann Oncol</em>. 24(6), pp.24-32." 
 		}, {
-			"id":7, "title":"Caldecott, K.W. 2003. Protein–proteins interactions during mammalian DNA singlestrand break repair. <em>Biochem Soc Trans.</em> 31 (Pt 1), pp.247-251." 
+			"id":7, "title":"Caldecott, K.W. 2003. Protein–proteins interactions during mammalian&nbsp;DNA singlestrand break repair. <em>Biochem Soc Trans.</em> 31 (Pt 1), pp.247-251." 
 		}, {
 			"id":8, "title":"Langelier, M.F. et al. 2014. PARP-2 and PARP-3 are selectively activated by 5 phosphorylated DNA breaks through an allosteric regulatory mechanism shared with PARP-1. <em>Nucleic Acids Res</em>. 42(12), pp.7762-7775." 
 		}, {

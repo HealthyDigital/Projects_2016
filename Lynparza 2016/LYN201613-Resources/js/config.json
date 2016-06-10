@@ -19,8 +19,8 @@
 		{ "id": 17, "key": "08-Patient-support" },
 		{ "id": 18, "key": "08-Patient-support" },
 		{ "id": 19, "key": "08-Patient-support" },
-		{ "id": 20, "key": "09-Safety-and-tolerability" },
-		{ "id": 21, "key": "09-Safety-and-tolerability" },
+		{ "id": 20, "key": "09-Dosing-and-administration" },
+		{ "id": 21, "key": "09-Dosing-and-administration" },
 		{ "id": 22, "key": "10-Summary" }
 	],
 	"references":[
@@ -33,7 +33,7 @@
 		}, {
 			"id":4, "title":"Lynparza (olaparib) Approved Product Information. 7 January 2016" 
 		}, {
-			"id":"5", "title":" Goff, B.A. et al. 2000. Ovarian carcinoma diagnosis. <em>Cancer</em>. 89(10), pp.2068-75." 
+			"id":5, "title":" Goff, B.A. et al. 2000. Ovarian carcinoma diagnosis. <em>Cancer</em>. 89(10), pp.2068-75." 
 		}, {
 			"id":6, "title":"Ledermann, J. and Raja, F.A. et al. 2013. Newly diagnosed and relapsed epithelial ovarian carcinoma: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up. <em>Ann Oncol</em>. 24(6), pp.24-32." 
 		}, {
