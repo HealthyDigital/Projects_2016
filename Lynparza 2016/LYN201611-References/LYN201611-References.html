@@ -13,11 +13,12 @@
 	.content > h2 { margin-bottom:70px; }
 	.swiper-container.swiper-scroll { width:944px; height:400px; }
 	ol > li { margin-bottom:10px; font-size:16px; line-height:22px; }
+	#container .biblio .hide { display:list-item; }
 	
 </style> 
 </head>
 <body>
-	<section id="container">
+	<section id="container" data-slide="references">
     	<nav class="nav-top icon">
             <ul>
                 <li data-href="home"></li>
@@ -45,58 +46,65 @@
         	<span class="logo lynp"></span>
         </article>
     
-    <!-- popup -->
-    <div class="overlay ">
-       <!-- navigation -->
-        <div class="item nav hide"><span class="close icon"></span>
-        	<ul class="section">
-        		<li data-href="1"><span>Unmet need</span></li>
-        		<li data-href="2"><span>Mechanism<br />of action</span>
+    	<!-- popup -->
+        <div class="overlay">
+            <!-- reference -->
+            <div class="ref hide">
+                <div class="item"> <span class="close icon"></span>
+                    <h1>References</h1>
+                    <ol></ol>
+                </div>
+            </div><!-- end ref -->
+           <!-- navigation -->
+            <div class="item nav hide"><span class="close icon"></span>
+                <ul class="section">
+                    <li data-href="1"><span>Unmet need</span></li>
+                    <li data-href="2"><span>Mechanism<br />of action</span>
+                        <ul>
+                            <li data-href="2"><span>PARPi</span></li>
+                            <li data-href="3"><span>DNA repair</span></li>
+                        </ul>
+                    </li>
+                    <li data-href="4"><span>Clinical Data</span>
+                        <ul>
+                            <li data-href="4"><span>Extended PFS</span></li>
+                            <li data-href="5"><span>Study overview</span></li>
+                            <li data-href="6"><span>BRCAm<br />sub-analysis</span></li>
+                            <li data-href="7"><span>TFST<br />Exploratory Analysis</span></li>
+                            <li data-href="8"><span>TSST<br />Exploratory Analysis</span></li>
+                            <li data-href="9"><span>Overall Survival</span></li>
+                            <li data-href="10"><span><em>Post-Hoc</em> interim exploratory analysis of os</span></li>
+                            <li data-href="11"><span>Patient Characteristics</span></li>
+                        </ul>
+                    </li>
+                    <li data-href="12"><span>BRCAm+</span>
+                        <ul>
+                            <li data-href="12"><span>BRCAm testing</span></li>
+                            <li data-href="13"><span>About BRCAm</span></li>
+                            <li data-href="14"><span>Testing<br />guidelines</span></li>
+                            <li data-href="15"><span>BRCAm status</span></li>
+                        </ul>
+                    </li>
+                    <li data-href="16"><span>Patient<br />Support</span>
                 	<ul>
-                		<li data-href="2"><span>PARPi</span></li>
-                		<li data-href="3"><span>DNA repair</span></li>
+                		<li data-href="17"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
+                		<li data-href="18"><span>Patient&nbsp;Support Programme</span></li>
+                		<li data-href="19"><span>Patient<br />Support Kit</span></li>
+                		<li data-href="20"><span>Capsule<br />companion</span></li>
                 	</ul>
                 </li>
-        		<li data-href="4"><span>Clinical Data</span>
+        		<li data-href="21"><span>Dosing &amp;<br />administration</span>
                 	<ul>
-                		<li data-href="4"><span>Extended PFS</span></li>
-                		<li data-href="5"><span>Study overview</span></li>
-                		<li data-href="6"><span>BRCAm<br />sub-analysis</span></li>
-                		<li data-href="7"><span>TFST<br />Exploratory Analysis</span></li>
-                		<li data-href="8"><span>TSST<br />Exploratory Analysis</span></li>
-                		<li data-href="9"><span>Overall Survival</span></li>
-                		<li data-href="10"><span><em>Post-Hoc</em> interim exploratory analysis of os</span></li>
-                		<li data-href="11"><span>Patient Characteristics</span></li>
+                		<li data-href="21"><span>Safety and<br />tolerability</span></li>
+                		<li data-href="22"><span>Dosing</span></li>
                 	</ul>
                 </li>
-        		<li data-href="12"><span>BRCAm+</span>
-                	<ul>
-                		<li data-href="12"><span>BRCAm testing</span></li>
-                		<li data-href="13"><span>About BRCAm</span></li>
-                		<li data-href="14"><span>Testing<br />guidelines</span></li>
-                		<li data-href="15"><span>BRCAm status</span></li>
-                	</ul>
-                </li>
-        		<li data-href="16"><span>Patient<br />Support</span>
-                	<ul>
-                		<li data-href="16"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
-                		<li data-href="17"><span>Patient&nbsp;Support Programme</span></li>
-                		<li data-href="18"><span>Patient<br />Support Kit</span></li>
-                		<li data-href="19"><span>Capsule<br />companion</span></li>
-                	</ul>
-                </li>
-        		<li data-href="20"><span>Dosing &amp;<br />administration</span>
-                	<ul>
-                		<li data-href="20"><span>Safety and<br />tolerability</span></li>
-                		<li data-href="21"><span>Dosing</span></li>
-                	</ul>
-                </li>
-        		<li data-href="22"><span>Summary</span></li>
-        	</ul>
-        </div><!-- end nav -->
+        		<li data-href="23"><span>Summary</span></li>
+                </ul>
+                
+            </div><!-- end nav -->
+        </div>
         
-    </div>
-
     </section>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/TweenMax.min.js"></script>

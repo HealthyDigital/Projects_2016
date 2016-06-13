@@ -1034,7 +1034,7 @@ degree of uncertainty due to the small sample size and the lack of data maturity
                 </li>
         		<li data-href="16"><span>Patient<br />Support</span>
                 	<ul>
-                		<li data-href="16"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
+                		<li data-href="16-b"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
                 		<li data-href="17"><span>Patient&nbsp;Support Programme</span></li>
                 		<li data-href="18"><span>Patient<br />Support Kit</span></li>
                 		<li data-href="19"><span>Capsule<br />companion</span></li>
@@ -1104,7 +1104,8 @@ degree of uncertainty due to the small sample size and the lack of data maturity
 			bar = $('.bar > li span'),
 			barLabel = $('.bar span > i'),
 			info = $(".btn-info"),
-			isplayed = false;
+			isplayed = false,
+			index = 0;
 			//
 		 var mySwiper = new Swiper('.swiper-container', {
 				paginationClickable: true,
@@ -1247,6 +1248,34 @@ degree of uncertainty due to the small sample size and the lack of data maturity
 		function hideButton(t){
 			t.addClass('hide');
 			setTimeout( function(){ t.removeClass('hide'); }, 1200);
+		}
+		//vertical navigation
+		if(!$.isEmptyObject(activeSlide)){
+			switch(activeSlide.split('_')[1]){
+				case '5':
+					index = 1;
+				break;
+				case '6':
+					index = 2;
+				break;
+				case '7':
+					index = 3;
+				break;
+				case '8':
+					index = 4;
+				break;
+				case '9':
+					index = 5;
+				break;
+				case '10':
+					index = 6;
+				break;
+				case '11':
+					index = 9;
+				break;
+			}
+			mySwiper.slideTo(index);
+			localStorage.setItem('activeSlide',	'');
 		}
 		
 	})

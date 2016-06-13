@@ -22,7 +22,7 @@
 	.tabular th:first-child { width:210px; }
 	.swiper-scroll .tabular th:last-child { border-right:none; }
 	.swiper-scroll .tabular td { padding: 6px 15px;}
-	[data-slide='20'] > h2, [data-slide='21'] > h2 { margin-bottom:35px; }
+	[data-slide='21'] > h2, [data-slide='22'] > h2 { margin-bottom:35px; }
 	.footnote.abs { left:338px; bottom:108px; } 
 	.btn-arrow i { font-family:interstateregular; color:#004d74; font-size:20px; line-height:20px; position:absolute; height:20px; left:55px; top:0; bottom:0; margin:auto 0; }
 	.btn-arrow:before { content:"\e603"; font-size: 38px; position:absolute; left:12%; top:0; height:inherit; -webkit-transform:rotate(-90deg); transform:rotate(-90deg); }
@@ -58,7 +58,7 @@
 	.btn.plus.active:before, .btn.plus.active:after { background-color:#4d829e; }
 	
 	/* 21b */
-	[data-slide='21b'] > h2 { margin-bottom:65px; letter-spacing:-0.015em; }
+	[data-slide='22b'] > h2 { margin-bottom:65px; letter-spacing:-0.015em; }
 	.capsule { width:624px; height:420px; margin: 0 0 80px 250px; background-image:url(img/capsule.svg); background-repeat:no-repeat; position:relative; }
 	.capsule li { position:absolute; left:0; top:155px; font-size:21px; line-height:24px; font-family:interstatebold-condensed; text-align:center; }
 	.capsule li:nth-child(2) { top:95px; left:240px; }
@@ -93,7 +93,7 @@
             <div class="swiper-container swiper-parent">
                 <ul class="swiper-wrapper">
                 	<!-- slide 16-->
-                    <li class="swiper-slide" data-slide="20">
+                    <li class="swiper-slide" data-slide="21">
                          <h2><span>SAFETY AND TOLERABILITY</span>
                          	THE SAFETY AND TOLERABILITY OF LYNPARZA ARE ACCEPTABLE<br />
 FOR ORAL MAINTENANCE TREATMENT ADMINISTRATION<sup data-ref="4">4</sup>
@@ -309,7 +309,7 @@ fatigue (7% vs 2%) and anaemia<br />
 Adapted with permission from Ledermann.<sup data-ref="3">3</sup></span>
             		</li>
                     <!-- slide 21 -->
-                    <li class="swiper-slide" data-slide="21">
+                    <li class="swiper-slide" data-slide="22">
                          <h2><span>DOSING</span>
                          	LYNPARZA IS THE ONLY ORAL TGA APPROVED MAINTENANCE<br />
 THERAPY FOR BRCAm PLATINUM-SENSITIVE RELAPSED HIGH<br />
@@ -369,7 +369,7 @@ taking Lynparza</i>
                         </div>
             		</li>
                     <!-- slide 21 -->
-                    <li class="swiper-slide" data-slide="21b">
+                    <li class="swiper-slide" data-slide="22b">
                          <h2><span>DOSING</span>
                          	DOSE ADJUSTMENTS MAY BE REQUIRED TO MANAGE ADVERSE EVENTS
 SUCH AS NAUSEA, VOMITING, DIARRHOEA, AND ANAEMIA<sup data-ref="4">4</sup>
@@ -393,12 +393,12 @@ SUCH AS NAUSEA, VOMITING, DIARRHOEA, AND ANAEMIA<sup data-ref="4">4</sup>
         		<span class="swiper-button icon arrow swiper-button-prev"></span>
         	</div>
         	<span class="logo lynp"></span>
-            <span class="btn icon btn-arrow brcam"><i>BRCAm</i></span>
+            <span class="btn icon btn-arrow brcam bypass"><i>BRCAm</i></span>
             <span class="btn btn-info hide">i</span>
         </article>
     
     <!-- popup -->
-    <div class="overlay shade ">
+    <div class="overlay">
     	<!-- reference -->
     	<div class="ref hide">
             <div class="item"> <span class="close icon"></span>
@@ -407,8 +407,8 @@ SUCH AS NAUSEA, VOMITING, DIARRHOEA, AND ANAEMIA<sup data-ref="4">4</sup>
             </div>
         </div><!-- end ref -->
          <!-- info -->
-        <div class="item info " data-info="18"><span class="arrow icon"></span>
-        <ul class="list">
+        <div class="item info hide"><span class="arrow icon"></span>
+        <ul class="list" data-info="21">
         	<li>The recommended dose of Lynparza is 400mg (eight 50mg capsules) taken twice daily, equivalent to a total<br />daily dose of 800 mg<sup data-ref="4">4</sup></li>
 <li>Patients should start treatment with Lynparza no later than 8 weeks after completion of their final dose<br />
 of the platinum-containing regimen<sup data-ref="4">4</sup></li>
@@ -453,19 +453,19 @@ parameter during treatment<sup data-ref="4">4</sup></li>
                 </li>
         		<li data-href="16"><span>Patient<br />Support</span>
                 	<ul>
-                		<li data-href="16"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
-                		<li data-href="17"><span>Patient&nbsp;Support Programme</span></li>
-                		<li data-href="18"><span>Patient<br />Support Kit</span></li>
-                		<li data-href="19"><span>Capsule<br />companion</span></li>
+                		<li data-href="17"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
+                		<li data-href="18"><span>Patient&nbsp;Support Programme</span></li>
+                		<li data-href="19"><span>Patient<br />Support Kit</span></li>
+                		<li data-href="20"><span>Capsule<br />companion</span></li>
                 	</ul>
                 </li>
-        		<li data-href="20"><span>Dosing &amp;<br />administration</span>
+        		<li data-href="21"><span>Dosing &amp;<br />administration</span>
                 	<ul>
-                		<li data-href="20"><span>Safety and<br />tolerability</span></li>
-                		<li data-href="21"><span>Dosing</span></li>
+                		<li data-href="21"><span>Safety and<br />tolerability</span></li>
+                		<li data-href="22"><span>Dosing</span></li>
                 	</ul>
                 </li>
-        		<li data-href="22"><span>Summary</span></li>
+        		<li data-href="23"><span>Summary</span></li>
         	</ul>
             
         </div><!-- end nav -->
@@ -489,7 +489,8 @@ parameter during treatment<sup data-ref="4">4</sup></li>
 			dosing = $('.dosing'),
 			plus = $('.btn.plus'),
 			popupInfo = $('.popup-info'),
-			txtArrow = $('.btn-arrow i');
+			txtArrow = $('.btn-arrow i'),
+			index = 0;
 		 var mySwiper = new Swiper('.swiper-parent', {
         	paginationClickable: true,
         	direction: 'vertical',
@@ -552,10 +553,18 @@ parameter during treatment<sup data-ref="4">4</sup></li>
 		popupInfo.on('tap', '.close', function(){
 			$(this).parent().fadeOut();
 		})
-		//mySwiper.slideTo(1);
-		/* $('.indicator .arrow').on('tap', function(){ 
-				$(this).toggleClass('less').prev('p').slideToggle();
-		 })*/
+		
+		//vertical navigation
+		if(!$.isEmptyObject(activeSlide)){
+			switch(activeSlide.split('_')[1]){
+				case '21':
+					index = 1;
+				break;
+			}
+			mySwiper.slideTo(index);
+			localStorage.setItem('activeSlide',	'');
+		}
+		console.log(activeSlide)
 		
 	})
 </script>

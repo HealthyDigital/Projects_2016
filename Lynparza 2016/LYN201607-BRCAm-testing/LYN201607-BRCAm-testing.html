@@ -176,7 +176,7 @@ chemotherapy</i></li>
                         		<li><i>Surveillance<br />
 (watch & wait)</i></li>
                         		<li><i>Platinum-sensitive<br />
-relapsed patients†:<br />
+relapsed patients<sup class="bypass">†</sup>:<br />
 platinum-based<br />
 chemotherapy</i></li>
                         		<li><i>BRCAm<br />
@@ -392,11 +392,11 @@ to possibly have BRCAm disease.<sup data-ref="3,13">3,13</sup></p>
             	<p>During the patient consultation:</p>
                 <ol>
                    
-                    <li>Contact the genetic counselling hotline on 1800 770 735 to arrange a pre-test, telephone based<br />
+                    <li><i>1.</i>Contact the genetic counselling hotline on <strong>1800 770 735</strong> to arrange a pre-test, telephone based<br />
         genetic counselling appointment.</li>
-                    <li>Genetic counselling service provides patient with a testing kit containing the required documentation<br />
+                    <li><i>2.</i>Genetic counselling service provides patient with a testing kit containing the required documentation<br />
         and collection materials.</li>
-                    <li>Patient attends local pathology service for blood collection and kit is sent to testing laboratory<br />
+                    <li><i>3.</i>Patient attends local pathology service for blood collection and kit is sent to testing laboratory<br />
         in supplied pre-paid self-addressed satchel.</li>
                 </ol>
            </div>
@@ -413,17 +413,23 @@ to PMCC genetic counselling service.</p>
 patients with a significant family history will be assisted in accessing face-to-face post-testing genetic
 counselling. Payment for post-test genetic counselling is not included in the program.
            </div>
-            <div class="" data-info="12e">
+            <div class="hide" data-info="12e">
            		Identification of a BRCA mutation may inform treatment options, including eligibility for a PARP inhibitor<br />
 access program supported by AstraZeneca.
            </div>
-            <div class="" data-info="14">
-            	Ovarian cancer guidelines still vary and usually stipulate only high risk patients (for example, family history, age, etc.) be identified and recommended for BRCA testing. However, this is changing and some guidelines, such as the NCCN Clinical Practice Guidelines In Oncology (NCCN Guidelines®) Genetic/Familial High-Risk Assessment: Breast and Ovarian, have been updated to recommend BRCA testing for all ovarian cancer patients.<sup data-ref="19">19</sup>
+           <div class="hide" data-info="14">
+            	Ovarian cancer guidelines still vary and usually stipulate only high risk patients (for example, family history, age, etc.) be identified and recommended for BRCA testing. However, this is changing and some guidelines, such as the NCCN Clinical Practice Guidelines In Oncology (NCCN Guidelines<sup class="bypass">®</sup>) Genetic/Familial High-Risk Assessment: Breast and Ovarian, have been updated to recommend BRCA testing for all ovarian cancer patients.<sup data-ref="19">19</sup>
             
             </div>
+            <ul class="list" data-info="15">
+                <li>Knowing every woman’s BRCAm status at diagnosis of ovarian cancer allows for timely personalised
+treatment decisions that can improve outcomes<sup data-ref="20,21">20,21</sup></li>
+<li>Patients with BRCAm ovarian cancer are likely to have increased sensitivity to platinum-based therapy
+compared to BRCA wild-type patients<sup data-ref="3">3</sup></li>
+            </ul>
             
         </div><!-- end info -->
-        <div class="capsule"><span class="close icon"></span>
+        <div class="capsule hide"><span class="close icon"></span>
         	<h2>LYNPARZA is the only oral TGA approved maintenance<br />
 therapy for BRCAm platinum-sensitive relapsed high-grade<br />
 serous ovarian cancer patients<sup data-ref="4">4</sup></h2>
@@ -489,19 +495,19 @@ OF AT HOME ADMINISTRATION.<sup data-ref="4">4</sup>
                 </li>
         		<li data-href="16"><span>Patient<br />Support</span>
                 	<ul>
-                		<li data-href="16"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
-                		<li data-href="17"><span>Patient&nbsp;Support Programme</span></li>
-                		<li data-href="18"><span>Patient<br />Support Kit</span></li>
-                		<li data-href="19"><span>Capsule<br />companion</span></li>
+                		<li data-href="17"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
+                		<li data-href="18"><span>Patient&nbsp;Support Programme</span></li>
+                		<li data-href="19"><span>Patient<br />Support Kit</span></li>
+                		<li data-href="20"><span>Capsule<br />companion</span></li>
                 	</ul>
                 </li>
-        		<li data-href="20"><span>Dosing &amp;<br />administration</span>
+        		<li data-href="21"><span>Dosing &amp;<br />administration</span>
                 	<ul>
-                		<li data-href="20"><span>Safety and<br />tolerability</span></li>
-                		<li data-href="21"><span>Dosing</span></li>
+                		<li data-href="21"><span>Safety and<br />tolerability</span></li>
+                		<li data-href="22"><span>Dosing</span></li>
                 	</ul>
                 </li>
-        		<li data-href="22"><span>Summary</span></li>
+        		<li data-href="23"><span>Summary</span></li>
         	</ul>
             
         </div><!-- end nav -->
@@ -527,6 +533,7 @@ OF AT HOME ADMINISTRATION.<sup data-ref="4">4</sup>
 			brcam = $('.brcam'),
 			li = $('.diagnosis > li'),
 			li2 = $('.brcam > li'),
+			btnInfo = brcam.find('.btn-info'),
 			footnote = $('.footnote'),
 			slide13 = $('[data-slide=13]'),
 			play = $('[data-slide=13] .btn-play'),
@@ -542,7 +549,9 @@ OF AT HOME ADMINISTRATION.<sup data-ref="4">4</sup>
 			col3 = $('.indicator > li:last-child'),
 			result = col3.find('.btn-result'),
 			txt = $('.mute'),
-			woman2 = $('[data-slide=15] .woman');
+			woman2 = $('[data-slide=15] .woman'),
+			percent2 =  $('[data-slide=15] .percent'),
+			index = 0; 
 			
 		var mySwiper = new Swiper('.swiper-container', {
         	paginationClickable: true,
@@ -624,8 +633,10 @@ OF AT HOME ADMINISTRATION.<sup data-ref="4">4</sup>
 			.to(col3.find('.a'), 0.5, { display: 'block', opacity:1 }, 'feat')
 			.staggerTo(woman.find('li:nth-child(5), li:nth-child(6), li:nth-child(7)'), 0.35, { className: '+=active' }, 0.15, '-=1')
 		tl6.pause(true)
-			.staggerTo(woman2.find('li:nth-last-child(n+14)'), 0.35, { className:'+=active', delay:0.5, ease: Power0.easeOut  }, 0.15)
-			.to(woman2.find('li:nth-child(7)'), 0.5, { className:'+=grad', ease: Power0.easeOut } );
+			.from(woman2, 0.35, { opacity:0, delay:0.25, ease: Power0.easeOut })
+			.from(percent2, 0.4, { x:-600, ease: Power0.easeOut },'show')
+			.staggerTo(woman2.find('li:nth-last-child(n+14)'), 0.3, { className:'+=active', ease: Power0.easeOut }, 0.1, 'show')
+			.to(woman2.find('li:nth-child(7)'), 0.45, { className:'+=grad', ease: Power0.easeOut } );
 		
 		
 		//slide 1
@@ -654,7 +665,6 @@ OF AT HOME ADMINISTRATION.<sup data-ref="4">4</sup>
 			}
 		});
 		//slide13
-		
 		col3.on('tap', '.btn-result', function(){
 			$(this).hide();
 			col2.find('.q').hide().parent().find('.a').show();
@@ -673,6 +683,33 @@ OF AT HOME ADMINISTRATION.<sup data-ref="4">4</sup>
 		 function hideButton(t){
 			t.addClass('hide');
 			setTimeout( function(){ t.removeClass('hide'); }, 1000);
+		}
+		btnInfo.on('tap', function(){
+			var $this = $(this),
+				overlay = $('.overlay');
+			applyShade(overlay);
+			overlay.addClass('show');
+			$('.overlay > div').hide();
+			overlay.find(".info > *:not('.arrow')").hide().parent().show();
+			overlay.find(".info [data-info="+$(this).parent().attr('data-info')+"]").show();
+			//console.log($this.parent().attr('data-info'))
+		});
+		
+		//vertical navigation
+		if(!$.isEmptyObject(activeSlide)){
+			switch(activeSlide.split('_')[1]){
+				case '13':
+					index = 1;
+				break;
+				case '14':
+					index = 2;
+				break;
+				case '15':
+					index = 3;
+				break;
+			}
+			mySwiper.slideTo(index);
+			localStorage.setItem('activeSlide',	'');
 		}
 		
 	})

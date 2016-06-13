@@ -19,9 +19,10 @@
 		{ "id": 17, "key": "08-Patient-support" },
 		{ "id": 18, "key": "08-Patient-support" },
 		{ "id": 19, "key": "08-Patient-support" },
-		{ "id": 20, "key": "09-Dosing-and-administration" },
+		{ "id": 20, "key": "08-Patient-support" },
 		{ "id": 21, "key": "09-Dosing-and-administration" },
-		{ "id": 22, "key": "10-Summary" }
+		{ "id": 22, "key": "09-Dosing-and-administration" },
+		{ "id": 23, "key": "10-Summary" }
 	],
 	"references":[
 		{ 
@@ -49,7 +50,7 @@
 		}, {
 			"id":12, "title":"Matulonis UA et al. Olaparib maintenance therapy in patients with platinum-sensitive, relapsed serous ovarian cancer and a BRCA mutation: Overall survival adjusted for postprogression poly(adenosine diphosphate ribose) polymerase inhibitor therapy. <em>Cancer</em>. 2016 Apr 8. doi: 10.1002/cncr.29995. [Epub ahead of print]" 
 		}, {
-			"id":13, "title":"Aslop, K. et al. 2012.BRCA mutation frequency and patterns of treatment response in BRCA mutation–positive women with ovarian cancer: A report from the Australian Ovarian Cancer Study Group. <em>J Clin Oncol</em>. (30)21, pp.2655-2663." 
+			"id":13, "title":"Aslop, K. et al. 2012.BRCA mutation frequency and patterns of treatment response in BRCA mutation–positive women with ovarian cancer: A report from the Australian Ovarian Cancer Study Group. <em>J&nbsp;Clin&nbsp;Oncol</em>. (30)21, pp.2655-2663." 
 		}, {
 			"id": 14, "title":"Stavropoulo, A.V. et al. 2013. Prevalence of BRCA1 mutations in familial and sporadic Greek ovarian cancer cases. <em>PLOS One</em>. 8(3), pp.1-10."
 		}, {
@@ -63,7 +64,7 @@
 		}, {
 			"id": 19, "title":"Referenced with permission from the NCCN Clinical Practice Guidelines in Oncology (NCCN Guidelines<sup>®</sup>) for Genetic/ Familial High-Risk Assessment: Breast and Ovarian V.2.2014. © National Comprehensive Cancer Network, Inc 2014. All rights reserved. [Accessed 12 March, 2015]. To view the most recent and complete version of the guideline, go online to NCCN.org. NATIONAL COMPREHENSIVE CANCER NETWORK<sup>®</sup>, NCCN<sup>®</sup>, NCCN GUIDELINES<sup>®</sup>, and all other NCCN Content are trademarks owned by the National Comprehensive Cancer Network, Inc."
 		}, {
-			"id": 20, "title":"Trainer, A.H. et al. 2010. Moving towards personalized medicine. <em>Int J Gynecol Cancer</em>. 20(5), pp.704-716."
+			"id": 20, "title":"Trainer, A.H. et al. 2010. Moving towards personalized medicine. <em>Int&nbsp;J&nbsp;Gynecol Cancer</em>. 20(5), pp.704-716."
 		}, {
 			"id": 21, "title":"Liu, G. et al. 2012. Differing clinical impact of BRCA1 and BRCA2 mutations in serous ovarian cancer. <em>Pharmacogenomics</em>. 13(13), pp.1523–1535."
 		}

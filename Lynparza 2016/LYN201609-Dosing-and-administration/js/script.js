@@ -9,12 +9,13 @@ $( function(){
 		overlay = $('.overlay'),
 		video =overlay.find('.video'),
 		items = $('.overlay > div'),
-		btn = $('.content > .btn, .nav-top [data-href=menu]'),
+		btn = $(".content > .btn:not('.bypass'), .nav-top [data-href=menu]"),
 		btnMenu = $('.nav-top [data-href=menu]'),
 		info = overlay.find('.info'),
 		btnClose = overlay.find('.arrow, .close'),
 		ref = overlay.find('.ref'),
-		btnNavRef = $('.nav li > span, .menu > li, sup');
+		btnNavRef = $('.nav li > span, .menu > li, sup'),
+		backToPrevious = localStorage.getItem('backToPrevious');
 		
 		btn.on('tap', function(){
 			var $this = $(this);
@@ -24,12 +25,13 @@ $( function(){
 				items.hide();
 			if($this.hasClass('btn-info')){
 				overlay.find(".info > *:not('.arrow')").hide();
-				info.show().find('[data-info='+$this.parent().find('.swiper-slide-active').attr('data-slide')+']').show();
+				info.show().find('[data-info='+$this.parent().find('.swiper-slide-active[data-slide]').attr('data-slide')+']').show();
 				//console.log($this.parent().find('.swiper-slide-active').attr('data-slide'));
 			}else if($this.hasClass('btn-play')){
 				video.show();
 				overlay.find('video').get(0).play();
 			}else {
+				selectMenu();
 				overlay.find('.nav').show();
 				btnMenu.css('opacity', 0);
 				
@@ -50,13 +52,13 @@ $( function(){
 			});
 			btnNavRef.on('tap', function(){
 				var $this = $(this),
-					id = parseInt($this.parent().attr('data-href'));
+					id = $this.parent().attr('data-href');
 				//items.hide();
 				//determine item & swap 
 				if($this.parents('.nav').length) {
 					isMenu = true;
 				}else if($this.parent('.menu').length){
-					id = parseInt($this.attr('data-href').split('-')[0]);
+					id = $this.attr('data-href');
 					isMenu = true;
 				}else{
 					isMenu = false;
@@ -64,13 +66,12 @@ $( function(){
 				//console.log(id)
 				if(isMenu){
 					$.each(data.slides, function(k, v){
-						if([v][0].id === id){
-							//console.log([v][0].key);
-							localStorage.setItem('activeSlide',	[v][0].key+'_'+$this.attr('data-href'));
+						if([v][0].id === parseInt(id.split('-')[0])){
+							localStorage.setItem('activeSlide',	[v][0].key+'_'+id);
 							goToSlide(key+[v][0].key);
 						}
 					});
-					localStorage.setItem('slideID',	$this.attr('data-href'));
+					localStorage.setItem('slideID',	id);
 					
 				}else{
 					//set ref id
@@ -115,10 +116,34 @@ $( function(){
 					ref.find('li:visible').length > 1 ? h1.text('References') : h1.text('Reference');
 			}
 		}
-	if(!$.isEmptyObject(activeSlide)){
+/*	if(!$.isEmptyObject(activeSlide)){
 		content.addClass(activeSlide);
+		//overlay.find(".nav li[data-href="+activeSlide.split('_')[1]+"]").last().addClass('active');
+	}*/
+	function selectMenu(){
+		var nav = overlay.find(".nav"),
+			i = content.find('.swiper-slide-active[data-slide]').attr("data-slide");
+		//console.log(i);
+		switch(i){
+			case '3b':
+				i = '3';
+			break;
+			case '10b':
+			case '10c':
+				i = '10';
+			break;
+			case '11b':
+				i = '11';
+			break;
+			case '22b':
+				i = '22';
+			break;
+		}
+		nav.find('li').removeClass('active');
+		overlay.find(".nav li[data-href="+i+"]").last().addClass('active');
+		
 	}
-	
+	selectMenu();	
 		
 	//close overlay
 	btnClose.on('tap', function(){
@@ -153,6 +178,39 @@ $( function(){
 				case "pi":
 					km = 'LYN2016-PI';
 					id = 'LYNREF_2016';
+					var sl = $('#container').attr('data-slide'),
+						km = '';
+					console.log(sl);
+					if(sl){
+						switch(sl){
+							case 'home':
+								km = '-Test-or-Treat-me';
+							break;
+							case 'intro':
+								km = '02-Introducing-Lynparza';
+							break;
+							case 'menu':
+								km = '03-Main-menu';
+							break; 
+							case 'references':
+								km = '11-References';
+							break;
+							case 'warning':
+								km = '12-Contraindications';
+							break;
+							case 'summary':
+								km = '10-Summary';
+							break;
+							case 'resources':
+								km = '13-Resources';
+							break;
+							
+						}
+						//console.log('In!!');
+					}else{
+						km = content.find('.swiper-slide-active[data-slide]').attr("data-slide")+'_'
+					}
+					localStorage.setItem('backToPrevious', km);
 				break;
 				case "bibliography":
 					km = 'LYN201611-References';
@@ -164,8 +222,19 @@ $( function(){
 					km = 'LYN2016-Test-or-Treat-me';
 				break;
 			}
-		goToSlide(km, id);
+		localStorage.setItem('activeSlide', '');
+		//goToSlide(km, id);
 	});
+	
+	if(!$.isEmptyObject(backToPrevious)){
+		if(backToPrevious.indexOf('_') === -1){
+			goToSlide('LYN2016'+backToPrevious);
+			localStorage.setItem('backToPrevious', '');
+		}else{
+			
+		}
+		
+	}
 		
 });
 
