@@ -39,14 +39,14 @@
             	<li data-href="3-b">
                 	<span>Mode of Action VIDEO</span>
                 </li>
-            	<li data-href="16-b">
+            	<li data-href="17">
                 	<span>LYNPARZA<br />
 Patient Access Programme</span>
                 </li>
-            	<li data-href="16-c">
+            	<li data-href="18">
                 	<span>Patient Support Programme</span>
                 </li>
-            	<li data-href="18">
+            	<li data-href="19">
                 	<span>Patient Support Kit</span>
                 </li>
             </ul>
@@ -124,7 +124,8 @@ Patient Access Programme</span>
 		$('.resources > li:first-child').on('tap', function(){
 			localStorage.setItem('backToResources', '1');
 		})
-		//console.log(backToResources);
+		//swipe navigation
+		goToNextOrPrevious(sections[11], '');
 	})
 </script>
 </body>

@@ -133,14 +133,16 @@
 <script type="text/javascript">
 	$( function(){
 		var h1 = $('h1 > i'),
-			asset = ""
+			k = ""
 		tl.staggerFrom(h1, 2.2, {autoAlpha:0.35, repeat:-1, yoyo:true }, 1)
 		$('aside > h1').on('tap', function(){
-			asset = $(this).index() === 0 ? "LYN201607-BRCAm-testing" : "LYN201609-Safety-and-tolerability";
-			//console.log($(this).index()+' :: '+asset);
-			//localStorage.setItem('currentSection', asset);
-			//document.location = 'veeva:gotoSlide('+asset+'.zip)';
+			//console.log($(this).index())
+			k = $(this).index() === 0 ? "07-BRCAm-testing" : "09-Dosing-and-administration";
+			goToSlide('LYN2016'+k)
 		})
+		
+		//swipe navigation
+		goToNextOrPrevious('', sections[1]);
 		
 	})
 

@@ -267,7 +267,7 @@ platinum-based chemotherapy treatment.</span>
                             	<i>APPROXIMATELY</i>
                                 <span class="percent">15%</span>
                                <p>of ovarian cancer patients have<br />
-a BRCA mutation.<sup>15</sup></p>
+a BRCA mutation.<sup data-ref="15">15</sup></p>
                             </li>
                             <li>
                             	<div class="progress"><span></span></div>
@@ -370,7 +370,7 @@ to possibly have BRCAm disease.<sup data-ref="3,13">3,13</sup></p>
         </article>
     
     <!-- popup -->
-    <div class="overlay shade">
+    <div class="overlay">
     	<!-- reference -->
     	<div class="ref hide">
             <div class="item"> <span class="close icon"></span>
@@ -711,6 +711,9 @@ OF AT HOME ADMINISTRATION.<sup data-ref="4">4</sup>
 			mySwiper.slideTo(index);
 			localStorage.setItem('activeSlide',	'');
 		}
+		
+		//swipe navigation
+		goToNextOrPrevious(sections[5], sections[7]);
 		
 	})
 

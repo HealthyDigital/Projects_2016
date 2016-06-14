@@ -228,7 +228,7 @@ polymerase (PARP) and BReast CAncer susceptibility protein (BRCA)1/2 proteins, r
 		  var video = $('.video')
 		  $("<video />", { controls:'controls', preload:true, width:942, height:530, html: "<source src='video/Lynparza_MOA_Video_AUS_Sound_240316.mp4' type='video/mp4' />" } ).appendTo(video);
 		  
-		//console.log(activeSlide);
+		
 		//slide to requested slide
 		if(!$.isEmptyObject(activeSlide)){
 			switch(activeSlide.split('_')[1]){
@@ -236,15 +236,21 @@ polymerase (PARP) and BReast CAncer susceptibility protein (BRCA)1/2 proteins, r
 					index = 1;
 				break;
 				case '3-b':
+				case '3b':
 					index = 2;
-					$('.btn-play').trigger('tap');
+					//auto play video when requested
+					if(backToResources === '1'){
+						$('.btn-play').trigger('tap');
+					}
 				break;
 			}
 			mySwiper.slideTo(index);
 			localStorage.setItem('activeSlide',	'');
+			
 		}
-		
-		
+		console.log(backToResources)
+		//swipe navigation
+		goToNextOrPrevious(sections[3], sections[5]);
 	})
 
 </script>

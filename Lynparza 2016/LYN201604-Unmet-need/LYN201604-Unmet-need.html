@@ -12,7 +12,7 @@
 <style type="text/css">
 	.women { width:87%; overflow:hidden; margin: 0 auto; padding:5.8em 0 1.2em; }
 	.women > li, .key > li { float:left; }
-	.women > li { width:130px; height:285px;margin-right:40px; position:relative; background:#004d74 url(img/woman.png) 0 0 no-repeat; opacity:0.15; }
+	.women > li { width:130px; height:284px;margin-right:40px; position:relative; background:#004d74 url(img/woman.png) 0 0 no-repeat; opacity:0.15; }
 	.women > li:last-child { margin-right:0; }
 	.women > li:before { content:""; position:absolute; width:120px; height:8px; left:0; right:0; margin:0 auto; bottom:-4px; border-radius: 60px / 4px; background:radial-gradient(ellipse at center, rgba(0, 77, 116,1) 5%,rgba(0, 77, 116,1) 16%, rgba(0, 77, 116, 0) 100%);  }
 	.key { padding-top:3em; margin-left:5px; background:url(img/line.png) 0 0 no-repeat; }
@@ -79,7 +79,7 @@
         </div><!-- end ref -->
          <!-- info -->
         <div class="item info hide"><span class="arrow icon"></span>
-       <div data-info="2"><p>The early symptoms of ovarian cancer are often missed and the disease is generally not detected until an&nbsp;advanced stage when chances for cure are poor.<sup data-ref="5,6">5</sup></p>
+       <div data-info="1"><p>The early symptoms of ovarian cancer are often missed and the disease is generally not detected until an&nbsp;advanced stage when chances for cure are poor.<sup data-ref="5,6">5</sup></p>
 <p>Until now, there have been limited maintenance therapies available to treat women with ovarian cancer and&nbsp;no treatment specifically for patients who have a BRCA mutation.<sup data-ref="5,6">6</sup></p></div>
            
         </div><!-- end info -->
@@ -150,7 +150,9 @@
 			.staggerTo(li2, 0.5, { css:{ className: '+=highlight', backgroundColor:'rgba(178, 210, 52, 1)'} }, 0.15, '-=0.8')
 			.to(key, 0.5, { opacity: 1 }, '-=0.3')
 			.to(label, 0.5, {css:{left:'580px'}}, '-=0.4');
-		//setTimeout( function(){ $('.content').addClass('highlight') }, 2000)
+		
+		//swipe navigation
+		goToNextOrPrevious(sections[2], sections[4]);
 		
 	})
 

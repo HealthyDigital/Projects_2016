@@ -13,11 +13,11 @@
 	#container { background-image:url(img/cover_pic.jpg); }
 	#container .nav-top li { color:#92b3c4; }
 	aside { float:right; width:50.5%; color:#ffffff; position:relative; top:28%; }
-	h1 { color:#b2d234; font-size:88px; line-height:85px; letter-spacing:-0.04em; margin-bottom:30px; }
-	h1 > span { font-family:MarydaleBold; font-size:25px; line-height:30px; display:block; margin-bottom:8px; letter-spacing:normal; color:#ffffff; }
+	.content h1 { color:#b2d234; font-size:88px; line-height:85px; letter-spacing:-0.04em; margin-bottom:30px; }
+	.content h1 > span { font-family:MarydaleBold; font-size:25px; line-height:30px; display:block; margin-bottom:8px; letter-spacing:normal; color:#ffffff; }
 	p { font-size:16px; line-height:20px; }
 	.intro { font-family:interstateregular; }
-	h1 sup { position:relative; font-size:0.35em; top:-0.35em; left:-0.3em; }
+	.content h1 sup { position:relative; font-size:0.35em; top:-0.35em; left:-0.3em; }
 	.content .intro { margin-bottom:85px; }
 	.logo.lynp { width:137px; height:57px; top: 7px; bottom:auto; background-position-y:-56px; }
 	
@@ -47,7 +47,7 @@
                 <p class="intro">A first-in-class PARP inhibitor (PARPi) that allows<br />
 women with BRCA mutated (BRCAm) platinum-sensitive<br />
 relapsed High grade serous ovarian cancer to extend<br />
-progression-free survival (PFS).*<sup>1-4</sup></p>
+progression-free survival (PFS).*<sup data-ref="1-4">1-4</sup></p>
                 
                 <p>*as maintenance therapy for PSR disease, in response after<br />
     &nbsp; platinum-based chemotherapy (must have <i class="sym">≥</i>2 courses)</p>
@@ -127,7 +127,8 @@ progression-free survival (PFS).*<sup>1-4</sup></p>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-		
+		//swipe navigation
+		goToNextOrPrevious(sections[0], sections[2]);
 		
 	})
 

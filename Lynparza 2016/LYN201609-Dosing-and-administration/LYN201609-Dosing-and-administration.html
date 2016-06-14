@@ -408,7 +408,7 @@ SUCH AS NAUSEA, VOMITING, DIARRHOEA, AND ANAEMIA<sup data-ref="4">4</sup>
         </div><!-- end ref -->
          <!-- info -->
         <div class="item info hide"><span class="arrow icon"></span>
-        <ul class="list" data-info="21">
+        <ul class="list" data-info="22">
         	<li>The recommended dose of Lynparza is 400mg (eight 50mg capsules) taken twice daily, equivalent to a total<br />daily dose of 800 mg<sup data-ref="4">4</sup></li>
 <li>Patients should start treatment with Lynparza no later than 8 weeks after completion of their final dose<br />
 of the platinum-containing regimen<sup data-ref="4">4</sup></li>
@@ -497,7 +497,7 @@ parameter during treatment<sup data-ref="4">4</sup></li>
 			nextButton: '.swiper-button-next',
         	prevButton: '.swiper-button-prev',
 			onSlideChangeStart: function(e){
-				console.log(e.activeIndex);
+				//console.log(e.activeIndex);
 				//e.slideTo(9); 
 				tl.pause(0);
 				tl2.pause(0);
@@ -557,15 +557,18 @@ parameter during treatment<sup data-ref="4">4</sup></li>
 		//vertical navigation
 		if(!$.isEmptyObject(activeSlide)){
 			switch(activeSlide.split('_')[1]){
-				case '21':
+				case '22':
 					index = 1;
+				break;
+				case '22b':
+					index = 2;
 				break;
 			}
 			mySwiper.slideTo(index);
 			localStorage.setItem('activeSlide',	'');
 		}
-		console.log(activeSlide)
-		
+		//swipe navigation
+		goToNextOrPrevious(sections[7], sections[9]);
 	})
 </script>
 </body>

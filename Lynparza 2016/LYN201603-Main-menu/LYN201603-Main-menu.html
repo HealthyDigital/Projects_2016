@@ -134,10 +134,9 @@
 	$( function(){
 		var li = $('.menu > li');
 			tl.staggerFrom(li, 0.35, { scale:0, opacity:0, rotation:-180, yoyo:true }, 0.1 );
-			
-		li.on('tap', function(){
-			
-		})
+	
+		//swipe navigation
+		goToNextOrPrevious(sections[1], sections[3]);
 		
 	});
 

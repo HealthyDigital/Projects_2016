@@ -14,8 +14,7 @@ $( function(){
 		info = overlay.find('.info'),
 		btnClose = overlay.find('.arrow, .close'),
 		ref = overlay.find('.ref'),
-		btnNavRef = $('.nav li > span, .menu > li, sup'),
-		backToPrevious = localStorage.getItem('backToPrevious');
+		btnNavRef = $('.nav li > span, .menu > li, sup[data-ref]');
 		
 		btn.on('tap', function(){
 			var $this = $(this);
@@ -26,11 +25,13 @@ $( function(){
 			if($this.hasClass('btn-info')){
 				overlay.find(".info > *:not('.arrow')").hide();
 				info.show().find('[data-info='+$this.parent().find('.swiper-slide-active[data-slide]').attr('data-slide')+']').show();
-				//console.log($this.parent().find('.swiper-slide-active').attr('data-slide'));
+				//console.log($this.parent().find('.swiper-slide-active').attr('data-slide')); 
 			}else if($this.hasClass('btn-play')){
 				video.show();
 				overlay.find('video').get(0).play();
-			}else {
+			}else if($this.hasClass('btn-capsule')){
+				overlay.find('.capsule').show();
+			}else{
 				selectMenu();
 				overlay.find('.nav').show();
 				btnMenu.css('opacity', 0);
@@ -66,7 +67,8 @@ $( function(){
 				//console.log(id)
 				if(isMenu){
 					$.each(data.slides, function(k, v){
-						if([v][0].id === parseInt(id.split('-')[0])){
+						
+						if([v][0].id === parseInt(id.split('-')[0]) && !$this.parent().hasClass('active')){
 							localStorage.setItem('activeSlide',	[v][0].key+'_'+id);
 							goToSlide(key+[v][0].key);
 						}
@@ -115,11 +117,18 @@ $( function(){
 				var h1 = ref.find('h1');
 					ref.find('li:visible').length > 1 ? h1.text('References') : h1.text('Reference');
 			}
+			//set role attribute 
+			$.each(data.slides, function(k, v){
+				$('.swiper-slide[data-slide]').each(function() {
+                    var $this = $(this),
+						sl = $this.attr('data-slide');
+						if(v.id === parseInt(sl)){
+							$this.attr('role', v.key);
+						}
+                });
+			});
 		}
-/*	if(!$.isEmptyObject(activeSlide)){
-		content.addClass(activeSlide);
-		//overlay.find(".nav li[data-href="+activeSlide.split('_')[1]+"]").last().addClass('active');
-	}*/
+
 	function selectMenu(){
 		var nav = overlay.find(".nav"),
 			i = content.find('.swiper-slide-active[data-slide]').attr("data-slide");
@@ -152,14 +161,12 @@ $( function(){
 		if(video.length){ overlay.find('video').get(0).pause(); }
 		btnMenu.css('opacity', 1);
 		
-		if(overlay.find('.info').is(':visible') && $this.parents('.ref').length){
+		if(overlay.find('.info, .capsule').is(':visible') && $this.parents('.ref').length){
 			$this.parents('.ref').hide();
 		}else{
-			items.hide();
 			overlay.removeClass('show down shade');
+			items.hide();
 		}
-		//
-		//
 		//applyShade(overlay);
 		if(!$.isEmptyObject(backToResources) && backToResources === '1'){
 			goToSlide('LYN201613-Resources');
@@ -170,6 +177,7 @@ $( function(){
 	$('.nav-top').on('tap', "li:not('[data-href=menu]')", function(){
 		var $this = $(this),
 			km = '', id = '';
+			//localStorage.setItem('activeSlide', '');
 			//console.log($this.attr('data-href'))
 			switch($this.attr('data-href')){
 				case "warning":
@@ -178,42 +186,12 @@ $( function(){
 				case "pi":
 					km = 'LYN2016-PI';
 					id = 'LYNREF_2016';
-					var sl = $('#container').attr('data-slide'),
-						m = '';
-					//console.log(sl);
-					if(sl){
-						switch(sl){
-							case 'home':
-								m = '-Test-or-Treat-me';
-							break;
-							case 'intro':
-								m = '02-Introducing-Lynparza';
-							break;
-							case 'menu':
-								m = '03-Main-menu';
-							break; 
-							case 'unmet':
-								m = '04-Unmet-need';
-							break;
-							case 'references':
-								m = '11-References';
-							break;
-							case 'warning':
-								m = '12-Contraindications';
-							break;
-							case 'summary':
-								m = '10-Summary';
-							break;
-							case 'resources':
-								m = '13-Resources';
-							break;
-							
-						}
-						//console.log('In!!');
-					}else{
-						m = content.find('.swiper-slide-active[data-slide]').attr("data-slide")+'_';
+					var  m = content.find('.swiper-slide-active[data-slide]');
+					if(m){
+						m = content.find('.swiper-slide-active[data-slide]');
+						m = m.attr("role")+'_'+m.attr("data-slide");
+						localStorage.setItem('activeSlide',	m);
 					}
-					localStorage.setItem('backToPrevious', m);
 				break;
 				case "bibliography":
 					km = 'LYN201611-References';
@@ -225,31 +203,44 @@ $( function(){
 					km = 'LYN2016-Test-or-Treat-me';
 				break;
 			}
-		localStorage.setItem('activeSlide', '');
 		goToSlide(km, id);
-	});
-	
-	if(!$.isEmptyObject(backToPrevious)){
-		if(backToPrevious.indexOf('_') === -1){
-			goToSlide('LYN2016'+backToPrevious);
-			localStorage.setItem('backToPrevious', '');
-		}else{
-			
-		}
-		
-	}
-		
+	});	
 });
 
 //go to slide
 function goToSlide(km, id){
 	"use strict";
-	//$('.'+btn).on('tap', function(){});
 	id = id ? ', '+id : '';
 	document.location = 'veeva:gotoSlide('+km+'.zip'+id+')';
-	
 }
-//global timeline
+//top level custom swipe
+var sections = [
+	"-Test-or-Treat-me",
+	"02-Introducing-Lynparza",
+	"03-Main-menu",
+	"04-Unmet-need",
+	"05-Mechanism-of-action",
+	"06-Clinical-data",
+	"07-BRCAm-testing",
+	"08-Patient-support",
+	"09-Dosing-and-administration",
+	"10-Summary",
+	"11-References",
+	"12-Contraindications",
+	"13-Resources"
+	]
+function goToNextOrPrevious(prev, next){
+	$('#container').on('swipeleft swiperight', function(e){
+		var km = e.type === 'swipeleft' ? next : prev;
+		if(!$.isEmptyObject(km)){
+			//console.log(km);
+			goToSlide('LYN2016'+km);
+		}
+		
+	})
+}
+
+//global timeline & storage
 var tl = new TimelineLite(),
 	slideID = localStorage.getItem('slideID'),
 	activeSlide = localStorage.getItem('activeSlide'),
@@ -259,5 +250,5 @@ var tl = new TimelineLite(),
 function applyShade(e){
 	setTimeout( function(){
 		e.addClass('shade');
-	}, 400);
+	}, 340);
 }
