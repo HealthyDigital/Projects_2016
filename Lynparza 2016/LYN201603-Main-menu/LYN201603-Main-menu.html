@@ -36,7 +36,7 @@
 </style> 
 </head>
 <body>
-	<section id="container">
+	<section id="container" data-slide="menu" >
     	<nav class="nav-top icon">
             <ul>
                 <li data-href="home"></li>
@@ -61,7 +61,7 @@
         </article>
     
     <!-- popup -->
-    <div class="overlay shade ">
+    <div class="overlay">
     	<!-- reference -->
     	<div class="ref hide">
             <div class="item"> <span class="close icon"></span>
@@ -132,21 +132,13 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-		$('.main-menu > span').on('tap', function(){
-			var asset, id;
-			if($(this).hasClass('adult')){ 
-				id = 'A_IBD2016'; 
-				asset = 'CDUC16-Adult-IBD'; 
-			}else{ 
-				id = 'P_IBD2016'; 
-				asset = 'Paediatric-IBD'; 
-				
-			}	
-			localStorage.setItem('currentSection', asset);
-			document.location = 'veeva:gotoSlide('+asset+'.zip, '+id+')';
-		})
+		var li = $('.menu > li');
+			tl.staggerFrom(li, 0.35, { scale:0, opacity:0, rotation:-180, yoyo:true }, 0.1 );
+	
+		//swipe navigation
+		goToNextOrPrevious(sections[1], sections[3]);
 		
-	})
+	});
 
 </script>
 </body>

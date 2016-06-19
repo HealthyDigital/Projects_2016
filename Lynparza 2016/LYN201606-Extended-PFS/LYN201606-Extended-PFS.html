@@ -15,7 +15,7 @@
 	.indicator { width:322px; position:relative; }
 	.indicator, .indicator i { float:left; }
 	.indicator > li, .indicator i em { font-family:interstateregular-condensed; }
-	.indicator > li { font-size:20px; line-height:23px; background:rgba(0, 77, 116, 0.15); padding:20px; margin-bottom:14px; margin-top:180px; }
+	.indicator > li { font-size:20px; line-height:23px; background:#d9e4ea; padding:20px; margin-bottom:14px; margin-top:180px; }
 	.indicator li:first-child { margin-top:0; width:282px; position:absolute; top:0; left:0; padding-bottom:32px; }
 	.indicator > li p { clear:left; font-size:16px; line-height:22px; font-family:interstatelight; margin-top:1.6em; display:none; }
 	.indicator i { width:145px; min-height:110px; font-family:interstatebold-condensed; font-size:83px; line-height:83px; letter-spacing:-0.02em; }
@@ -28,8 +28,10 @@
 	
 	.label, .state, .state:after, .key { position:absolute; }
 	.state { background-image:url(img/graph_state1.png); background-repeat:no-repeat; left:54px; opacity:0; }
-	.state:after { content:""; left:0; background:url(img/graph_state2.png) 0 0 no-repeat; opacity:0; }
-	.state3 .state { background:url(img/graph_state3.png) 0 0 no-repeat;  }
+	.state.two { background-image:url(img/graph_state2.png); }
+	.state.two.three { background-image:url(img/graph_state3.png); }
+	
+	/*.state3 .state { background:url(img/graph_state3.png) 0 0 no-repeat;  }*/
 	#container .state, #container .state:after { width:556px; height:inherit; background-size:100% auto; }
 	.key { width:595px; right:0; bottom:80px; } 
 	.key li { font-family:interstatelightCon; font-size:14px; line-height:16px; margin-bottom:3px; padding:4px 15px 0; overflow:hidden; }
@@ -49,8 +51,8 @@
 	.label li { font-family:interstateregular; font-size:20px; line-height:22px; }
 	.footnote.s10 { bottom:6px; width:709px; text-align:justify; font-size:10px; line-height:13px; }
 	.footnote.s12 { bottom:160px; }
-	/* states */
-	.state1 .state, .state2 .state, .state2 .state:after, .state3 .state { opacity:1; }
+	/* states 
+	.state1 .state, .state2 .state, .state2 .state:after, .state3 .state { opacity:1; }*/
 	
 	/* 5 */
 	[data-slide='5'] .feature { width:820px; height:405px; background-image:url(img/study_19.png); margin-top:20px; }
@@ -85,22 +87,24 @@
 	.data .key li > span:last-child { margin-right:0; }
 	.data .footnote.s12 { bottom: 115px; }
 	.data .footnote.s10 { bottom:12px; }
-	#container .data .state, #container .data .state:after { width:605px; }
-	.data .state { left:0; background-image:url(img/graph2_state1.png); opacity:1; }
-	.data .state:after { background-image:url(img/graph2_state2.png); }
-	.data .state, .data .state:after { background-position: 0 0; }
-	.feature > .reveal { position:absolute; left:0; top:0; width:0; height:100%; width:100%;   }
+	#container .data .state { width:605px; }
+	[data-slide='7'] .label { opacity:0; }
+	[data-slide='7'] .one { opacity:1; }
+	[data-slide='7'] .state { left:0; background-image:url(img/graph2_state1.png); background-position: 0 0; }
+	[data-slide='7'] .state.two { background-image:url(img/graph2_state2.png); }
+	/*.data .state, .data .state:after { background-position: 0 0; }*/
+	.feature > .reveal { position:absolute; left:0; top:0; width:0; height:100%; /*width:100%; */  }
 	/* 8 */
 	[data-slide='8'] .wrap { margin-top:-10px; }
 	.data[data-slide='8'] .indicator { margin-top:10px; }
 	[data-slide='8'] .feature { background-image:url(img/graph3_lines.png); }
-	[data-slide='8'] .feature .label { top: 10px; text-align:right; }
-	.data[data-slide='8'] .state { background-image:url(img/graph3_state1.png); }
-	.data[data-slide='8'] .state:after { background-image:url(img/graph3_state2.png); }
+	[data-slide='8'] .feature .label { top: 10px; text-align:right; opacity:0; }
+	.data[data-slide='8'] .state { left:0; background-image:url(img/graph3_state1.png); }
+	.data[data-slide='8'] .state.two { background-image:url(img/graph3_state2.png); }
 	[data-slide='8'] .feature, 
-	.data[data-slide='8'] .state, 
-	.data[data-slide='8'] .state:after { background-position-y:-5px;}
-	/* common 8 & 9*/
+	.data[data-slide='8'] .state { background-position-y:-5px;}
+	/* common*/
+	.data[data-slide='8'] .one, .data[data-slide='9'] .one, .data[data-slide='10b'] .one { opacity:1; }
 	.data[data-slide='8'] .indicator,
 		.data[data-slide='9'] .indicator { height:364px; }
 	.data[data-slide='8'] .key,
@@ -111,19 +115,20 @@
 		.data[data-slide='9'] .footnote.s10 { bottom:6px; }
 	/* 9 */
 	[data-slide='9'] .feature { background-image:url(img/graph4_lines.png); height:350px; }
-	.data[data-slide='9'] .state { background-image:url(img/graph4_state1.png); }
-	.data[data-slide='9'] .state:after { background-image:url(img/graph4_state2.png); }
+	[data-slide='9'] .label { opacity:0; }
+	.data[data-slide='9'] .state { left:0; background-image:url(img/graph4_state1.png); }
+	.data[data-slide='9'] .state.two { background-image:url(img/graph4_state2.png); }
 	[data-slide='9'] .feature, 
-	.data[data-slide='9'] .state, 
-	.data[data-slide='9'] .state:after { background-position-y:15px;}
+	.data[data-slide='9'] .state { background-position-y:15px;}
 	.data[data-slide='9'] .indicator li { position:relative; padding:0; width:auto; margin-bottom:5px; }
 	.data[data-slide='9'] .key li > span:nth-child(n+2) { margin-right:2.06%; }
 	.data[data-slide='9'] .key li > span:last-child { margin-right:0; }
 	/* 10 */
+	[data-slide='10'] .reveal { width:0; }
 	.content .slim { position:absolute; bottom:14px; left:0; margin-bottom:0; }
 	.content [data-slide='10'] .slim { left:55px; }
 	.blocks { overflow:hidden; width:944px; height:394px; margin-top:6px; background:url(img/blocks.svg) 0 26px no-repeat; background-size:100% auto; border-bottom:4px solid #004d74; position:relative; }
-	.blocks > li { font-family:interstateregular-condensed; float:left; width:138px; height:inherit; margin-right:33px; position:relative; }
+	.blocks > li { font-family:interstateregular-condensed; float:left; width:138px; height:inherit; margin-right:33px; position:relative; opacity:0; }
 	.blocks > li:first-child { margin-left:1px; }
 	.blocks > li:nth-child(2), .blocks > li:last-child { width:283px; }
 	.blocks > li:nth-child(3) { width:140px; margin-right:32px; }
@@ -153,11 +158,13 @@
 	.slim > span { display:block; margin-bottom:3px; }
 	[data-slide='10b'] .wrap { margin-top:-12px; }
 	[data-slide='10b'] .feature { background-image:url(img/graph5_lines.png); height:370px;  }
-	.data[data-slide='10b'] .state { background-image:url(img/graph5_state3.png); }
-	.data[data-slide='10b'] .state:after { background-image:url(img/graph5_state2.png); }
+	.data[data-slide='10b'] .state { left:0; background-image:url(img/graph5_state1.png); }
+	.data[data-slide='10b'] .state.go { left:0; background-image:url(img/graph5_state2b.png); }
+	.data[data-slide='10b'] .state.two { background-image:url(img/graph5_state3.png); }
 	.data[data-slide='10b'] .indicator { width:244px; height: 362px; margin-top:12px; }
 	.data[data-slide='10b'] .key { width:625px; bottom: 107px; }
 	[data-slide='10b'] .label { text-align:right; margin-top:8px; }
+	[data-slide='10b'] .label, [data-slide='10b'] .key li:nth-child(n+2) { opacity:0; }
 	.data[data-slide='10b'] .footnote.s12 { bottom: 123px; }
 	.data[data-slide='10b'] .key li:nth-child(4) { color:#f7931d; }
 	.data[data-slide='10b'] .key li:last-child { color:#666666; }
@@ -210,7 +217,7 @@
 	[data-slide='11b'] .list li { float:left; width:423px; font-size:15px; line-height:20px; }
 	[data-slide='11b'] .list li:last-child { float:right; }
 	
-	.indicator li, .key li, .state, .state:after, .bar > li span { -webkit-transition:all 0.5s ease-in-out; transition:all 0.5s ease-in-out; }
+	.indicator, .indicator li, .key li, .state, .state:after, .bar > li span { -webkit-transition:all 0.5s ease-in-out; transition:all 0.5s ease-in-out; }
 	
 	
 	
@@ -264,7 +271,8 @@
                             </ul>
                             
                             <div class="feature">
-                                <span class="state"></span>
+                                <span class="state one"></span>
+                                <span class="state two"></span>
                                 <span class="btn btn-play graph"></span>
                                 <p class="label">HR 0.18 (95% CI 0.10-0.31); p&lt;0.00001;<br />median PFS 11.2 vs 4.3 months.<sup>4</sup></p>
                             </div>
@@ -370,7 +378,10 @@ p&lt;0.0001; median 15.6 months<br />
 vs 6.2 months).<sup sup data-ref="3-4">3-4</sup>
                             </div>
                             <div class="feature">
-                                <div class="reveal"><span class="state"></span></div>
+                                <div class="reveal">
+                                	<span class="state one"></span>
+                                    <span class="state two"></span>
+                                </div>
                                 <span class="btn btn-play graph"></span>
                                 <p class="label">HR 0.33 (95% Cl 0.22-0.50); p&lt;0.0001</p>
                             </div>
@@ -436,7 +447,10 @@ vs placebo (HR 0.44; 95% CI<br />
 23.8 months vs 15.2 months).<sup sup data-ref="3-4">3-4</sup>
                             </div>
                             <div class="feature">
-                                <div class="reveal"><span class="state"></span></div>
+                                <div class="reveal">
+                                	<span class="state one"></span>
+                                    <span class="state two"></span>
+                                </div>
                                 <span class="btn btn-play graph"></span>
                                 <p class="label">HR 0.44 (95% Cl 0.29-0.67);<br />p=0.00013</p>
                             </div>
@@ -507,7 +521,10 @@ CI 0.45–1.17; p=0.19; median<br />
                             	</ul>
                             </div>
                             <div class="feature">
-                                <div class="reveal"><span class="state"></span></div>
+                                <div class="reveal">
+                                	<span class="state one"></span>
+                                    <span class="state two"></span>
+                                </div>
                                 <span class="btn btn-play graph"></span>
                                 <p class="label">HR 0.73 (95% Cl 0.45-1.17); p=0.19</p>
                             </div>
@@ -641,7 +658,10 @@ of which 97/136 (71%) were<br />
 BRCAm patients.<sup sup data-ref="12">12</sup>
                             </div>
                             <div class="feature">
-                                <div class="reveal"><span class="state"></span></div>
+                                <div class="reveal">
+                                	<span class="state one"></span>
+                                    <span class="state two"></span>
+                                </div>
                                 <span class="btn btn-play graph"></span>
                                 <p class="label">HR=0.73 (95% CI: 0.45 - 1.17);<br />p=0.192</p>
                             </div>
@@ -1041,20 +1061,166 @@ degree of uncertainty due to the small sample size and the lack of data maturity
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
+		 var tl2 = new TimelineLite(),
+			tl3 = new TimelineLite(), 
+			tl4 = new TimelineLite(),
+			tl5 = new TimelineLite(),
+			tl6 = new TimelineLite(),
+			tl7 = new TimelineLite(),
+		 	play1 = $("[data-slide=4] .btn-play" ),
+		 	state1 = play1.parent().find('.one'),
+			state2 = play1.parent().find('.two'),
+		 	ind1 = $('.indicator >li:first-child'),
+			ind2 = $('.indicator >li:last-child'),
+		 	arrow = $('.indicator .arrow'),
+			reveal = $('[data-slide=7] .reveal'),
+			play2 = $("[data-slide=7] .btn-play" ),
+		 	state3 = play2.parent().find('.one'),
+			state4 = play2.parent().find('.two'),
+			label = play2.parent().find('.label'),
+			reveal2 = $('[data-slide=8] .reveal'),
+			play3 = $("[data-slide=8] .btn-play" ),
+		 	state5 = play3.parent().find('.one'),
+			state6 = play3.parent().find('.two'),
+			label2 = play3.parent().find('.label'),
+			reveal3 = $('[data-slide=9] .reveal'),
+			play4 = $("[data-slide=9] .btn-play" ),
+		 	state7 = play4.parent().find('.one'),
+			state8 = play4.parent().find('.two'),
+			label3 = play4.parent().find('.label'),
+			reveal4 = $('[data-slide=10] .reveal'),
+			reveal5 = $('[data-slide=10b] .reveal'),
+			play5 = $("[data-slide=10b] .btn-play" ),
+		 	state9 = play5.parent().find('.one'),
+			state10 = play5.parent().find('.two'),
+			block = $('.blocks > li:first-child'),
+			block2 = $('.blocks > li:nth-child(2)'),
+			block3 = $('.blocks > li:nth-child(3)'),
+			block4 = $('.blocks > li:last-child'),
+			label4 = play5.parent().find('.label'),
+			key = $("[data-slide='10b'] .key li:nth-child(2), [data-slide='10b'] .key li:nth-child(3)"),
+			key2 = $("[data-slide='10b'] .key li:nth-child(4), [data-slide='10b'] .key li:last-child"),
+			bar = $('.bar > li span'),
+			barLabel = $('.bar span > i');
+			//
 		 var mySwiper = new Swiper('.swiper-container', {
-        	paginationClickable: true,
-        	direction: 'vertical',
-			nextButton: '.swiper-button-next',
-        	prevButton: '.swiper-button-prev',
-			onSlideChangeStart: function(e){
-				console.log(e.activeIndex);
-				//e.slideTo(9);
-			} 
+				paginationClickable: true,
+				direction: 'vertical',
+				nextButton: '.swiper-button-next',
+				prevButton: '.swiper-button-prev',
+				onSlideChangeStart: function(e){
+					tl.pause(0);
+					tl2.pause(0);
+					tl3.pause(0);
+					tl4.pause(0);
+					tl6.pause(0);
+					e.activeIndex === 6 ? tl5.play() : tl5.pause(0);
+					e.activeIndex === 8 ? tl7.play() : tl7.pause(0);
+					console.log(e.activeIndex);
+					//e.slideTo(9);
+				} 
 		  });
-		 mySwiper.slideTo(9);
-		 $('.indicator .arrow').on('tap', function(){ 
+
+		 //animation >> slide 0
+		 tl.paused(true)
+		 .to(state1, 0.5, {opacity: 1 }, 'cl')
+		 .to(ind2, 0.2, { className: '-=active'}, 'cl')
+		 .to(ind1, 0.3, { className: '+=active'}, 'cl')
+		 .addPause()
+		 .call(expand, 0)
+		 .to(state2, 0.5, { opacity: 1 } )	
+		 .addPause()
+		 .call(expand, 0)
+		 .to(state2, 0.3, { css:{className: '+=three'} }, 'lab')
+		 .to(ind2, 0.3, { className: '+=active'}, 'lab')
+		 .to(ind1, 0.2, { className: '-=active'}, 'lab')
+		 .to(state1, 0.3, {opacity: 0 }, 'lab')
+		 .to(play1, 0.3, { autoAlpha: 0 });
+		 //play gragh
+		  play1.on('tap', function(){
+			 var $this = $(this),
+			 	parent = $this.parents('.wrap');
+				//parent.addClass('hhh');
+				hideButton($this);
+				tl.resume();
+		 });
+		 //expand content
+		 function expand(){
+			 arrow.trigger('tap');
+		 }
+		 arrow.on('tap', function(){ 
 				$(this).toggleClass('less').prev('p').slideToggle();
-		 })
+		 });
+		 
+		//slide 
+		buildGraph(tl2, reveal, state4, label, play2);
+		buildGraph(tl3, reveal2, state6, label2, play3);
+		buildGraph(tl4, reveal3, state8, label3, play4);
+		//buildGraph(tl5, reveal4, state10, label4, play5);
+		mySwiper.slideTo(3);
+		//slide 3 >> play graph 2
+		/**/
+		//slide 4 >> play graph 3
+		/*play3.on('tap', function(){
+			hideButton($(this));
+			tl3.resume();
+		});
+		*/
+		//common timeline fn
+		function buildGraph(t, r, s, l, p){
+			t.paused(true)
+			 .to(r, 1, { width:'100%', ease:Power0.easeOut })
+			 .addPause()
+			 .to(s, 0.5, { opacity: 1 }, 'lab', '+=1')
+			 .to(l, 0.6, { opacity: 1 }, 'lab')
+			 .to(p, 0.1, { autoAlpha: 0 }, 'lab');
+			playGraph(t, p);
+			
+		}
+		//play button
+		function playGraph(t, p){
+			p.on('tap', function(){
+				hideButton($(this));
+				t.resume();
+			});
+		}
+		// slide 6 >>
+		tl5.to(reveal4, 0.2, { width:'18%', ease:Power0.easeOut }, '+=0.2')
+			.to(block, 0.35, { opacity: 1, ease:Power0.easeOut }, '-=0.3')
+			.to(reveal4, 0.2, { width:'51%', ease:Power0.easeOut}, '+=0.05', 'flag' )
+			.to(block2, 0.35, { opacity: 1, ease:Power0.easeOut }, 'flag' )
+			.to(reveal4, 0.25, { width:'69%', ease:Power0.easeOut }, '+=0.05', 'flag2' )
+			.to(block3, 0.35, { opacity: 1, ease:Power0.easeOut }, 'flag2')
+			.to(reveal4, 0.2, { width:'100%', ease:Power0.easeOut }, '+=0.05', 'flag3'  )
+			.to(block4, 0.35, { opacity: 1, ease:Power0.easeOut }, 'flag3' )
+		
+		//slide 7 >> 
+		tl6.paused(true)
+			.to(reveal5, 1, { width:'100%', ease:Power0.easeOut } )
+			.to(state9, 0.5, { className: '+=go' }, 'show' )
+			.to(label4, 0.5, { opacity: 1 }, 'show')
+			.to(key, 0.3, { opacity: 1 }, 0.8)
+			.addPause()
+			.to(state9, 0.5, { opacity: 0 }, 'lab')
+			.to(state10, 0.5, { opacity: 1 }, 'lab')
+			.to(key2, 0.3, { opacity: 1 }, 'lab')
+			.to(play5, 0.1, { autoAlpha: 0 }, 'lab');
+		
+		play5.on('tap', function(){
+			hideButton($(this));
+			tl6.resume();
+		});
+		
+		//slide 8 >>
+		tl7.staggerTo(bar, 0.35, { width: '100%', ease: Bounce.easeOut  }, 0.1, '+=0.15')
+		
+		mySwiper.slideTo(8);
+		
+		 //hide/show button
+		function hideButton(t){
+			t.addClass('hide');
+			setTimeout( function(){ t.removeClass('hide'); }, 1200);
+		}
 		
 	})
 

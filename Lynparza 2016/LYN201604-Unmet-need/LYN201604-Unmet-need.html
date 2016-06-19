@@ -10,9 +10,9 @@
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-	.women { width:87%; overflow:hidden; margin: 0 auto; padding:6.8em 0 1.5em; }
+	.women { width:87%; overflow:hidden; margin: 0 auto; padding:5.8em 0 1.2em; }
 	.women > li, .key > li { float:left; }
-	.women > li { width:130px; height:285px;margin-right:40px; position:relative; background:#004d74 url(img/woman.png) 0 0 no-repeat; }
+	.women > li { width:130px; height:284px;margin-right:40px; position:relative; background:#004d74 url(img/woman.png) 0 0 no-repeat; opacity:0.15; }
 	.women > li:last-child { margin-right:0; }
 	.women > li:before { content:""; position:absolute; width:120px; height:8px; left:0; right:0; margin:0 auto; bottom:-4px; border-radius: 60px / 4px; background:radial-gradient(ellipse at center, rgba(0, 77, 116,1) 5%,rgba(0, 77, 116,1) 16%, rgba(0, 77, 116, 0) 100%);  }
 	.key { padding-top:3em; margin-left:5px; background:url(img/line.png) 0 0 no-repeat; }
@@ -20,19 +20,17 @@
 	.key > li { text-align:center; width:20%; opacity:0.5; }
 	.women > li, .key { background-size:100% auto; }
 	.label, .label:before, .label:after { position:absolute; }
-	.label { right:0; top:5.2em; border-bottom:1px solid #004d74; padding:0 1.8em 3px 10px; -webkit-transform:translate3d(-1024px,0,0); transform:translate3d(-1024px,0,0) }
+	.label { left:-580px; top:5.9em; border-bottom:1px solid #004d74; padding:0 1.8em 3px 10px; /*-webkit-transform:translate3d(-1024px,0,0); transform:translate3d(-1024px,0,0)*/ }
 	.label:before, .label:after { content:""; background:#004d74; }
 	.label:before { left:-40px; bottom:-30px; height:10px; width:10px; border-radius:100px; }
 	.label:after { left:-40px; bottom:-1px; height:1px; width:40px; transform-origin:top right; transform:rotate(-35deg); }
-	.women > li, .women > li:before, .key > li, .label { -webkit-transition:all .8s ease-in-out; transition:all .8s ease-in-out; }
-	.highlight .key > li:last-child { opacity:1; }
-	.highlight .label { -webkit-transform:translate3d(0,0,0); transform:translate3d(0,0,0); }
-	.highlight .women > li:nth-child(n+4) { background-color: rgba(178, 210, 52, 1); }
-	.highlight .women > li:nth-child(n+4):before { background:radial-gradient(ellipse at center, rgba(178, 210, 52, 1) 5%,rgba(178, 210, 52, 1) 16%, rgba(178, 210, 52, 0) 100%); }
+	/*.women > li, .women > li:before, .key > li, .label { -webkit-transition:all .8s ease-in-out; transition:all .8s ease-in-out; }*/
+	
+	.women > .highlight:before { background:radial-gradient(ellipse at center, rgba(178, 210, 52, 1) 5%,rgba(178, 210, 52, 1) 16%, rgba(178, 210, 52, 0) 100%); }
 </style> 
 </head>
 <body>
-	<section id="container">
+	<section id="container" data-slide="unmet">
     	<nav class="nav-top icon">
             <ul>
                 <li data-href="home"></li>
@@ -44,7 +42,8 @@
             </ul>
         </nav>
     	<article class="content">
-        	<h2>
+        	<div class="swiper-slide-active" data-slide="1">
+            	<h2>
             	<span>UNMET NEED</span>
                 UNMET NEED IN OVARIAN CANCER
             </h2>
@@ -63,6 +62,7 @@
             	<li>YEAR 4</li>
             	<li>YEAR 5</li>
             </ul>
+            </div>
         
         	<span class="logo lynp"></span>
             <span class="btn btn-info">i</span>
@@ -79,8 +79,8 @@
         </div><!-- end ref -->
          <!-- info -->
         <div class="item info hide"><span class="arrow icon"></span>
-       <p>The early symptoms of ovarian cancer are often missed and the disease is generally not detected until an&nbsp;advanced stage when chances for cure are poor.<sup>5</sup></p>
-<p>Until now, there have been limited maintenance therapies available to treat women with ovarian cancer and&nbsp;no treatment specifically for patients who have a BRCA mutation.<sup>6</sup></p>
+       <div data-info="1"><p>The early symptoms of ovarian cancer are often missed and the disease is generally not detected until an&nbsp;advanced stage when chances for cure are poor.<sup data-ref="5,6">5</sup></p>
+<p>Until now, there have been limited maintenance therapies available to treat women with ovarian cancer and&nbsp;no treatment specifically for patients who have a BRCA mutation.<sup data-ref="5,6">6</sup></p></div>
            
         </div><!-- end info -->
        <!-- navigation -->
@@ -115,19 +115,19 @@
                 </li>
         		<li data-href="16"><span>Patient<br />Support</span>
                 	<ul>
-                		<li data-href="16"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
-                		<li data-href="17"><span>Patient&nbsp;Support Programme</span></li>
-                		<li data-href="18"><span>Patient<br />Support Kit</span></li>
-                		<li data-href="19"><span>Capsule<br />companion</span></li>
+                		<li data-href="17"><span>LYNPARZA Patient&nbsp;Access Programme</span></li>
+                		<li data-href="18"><span>Patient&nbsp;Support Programme</span></li>
+                		<li data-href="19"><span>Patient<br />Support Kit</span></li>
+                		<li data-href="20"><span>Capsule<br />companion</span></li>
                 	</ul>
                 </li>
-        		<li data-href="20"><span>Dosing &amp;<br />administration</span>
+        		<li data-href="21"><span>Dosing &amp;<br />administration</span>
                 	<ul>
-                		<li data-href="20"><span>Safety and<br />tolerability</span></li>
-                		<li data-href="21"><span>Dosing</span></li>
+                		<li data-href="21"><span>Safety and<br />tolerability</span></li>
+                		<li data-href="22"><span>Dosing</span></li>
                 	</ul>
                 </li>
-        		<li data-href="22"><span>Summary</span></li>
+        		<li data-href="23"><span>Summary</span></li>
         	</ul>
             
         </div><!-- end nav -->
@@ -142,7 +142,17 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript">
 	$( function(){
-		setTimeout( function(){ $('.content').addClass('highlight') }, 2000)
+		var label = $('.label'),
+			li = $('.women > li'),
+			li2 = $('.women > li:nth-child(n+4)'),
+			key = $('.key > li:last-child');
+			tl.staggerTo(li, 0.8, { opacity:1, delay: 0.5 }, 0.2)
+			.staggerTo(li2, 0.5, { css:{ className: '+=highlight', backgroundColor:'rgba(178, 210, 52, 1)'} }, 0.15, '-=0.8')
+			.to(key, 0.5, { opacity: 1 }, '-=0.3')
+			.to(label, 0.5, {css:{left:'580px'}}, '-=0.4');
+		
+		//swipe navigation
+		goToNextOrPrevious(sections[2], sections[4]);
 		
 	})
 

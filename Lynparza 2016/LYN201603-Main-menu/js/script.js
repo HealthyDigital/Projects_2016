@@ -4,46 +4,251 @@ $( function(){
 	$(document).on('touchmove',function(e){
  		e.preventDefault();
 	});
-	/*var container = $('#container'),
+	var content = $('.content'),
+		navTop = $('.nav-top'),
 		overlay = $('.overlay'),
-		ref = overlay.find('.ref'),
+		video =overlay.find('.video'),
+		items = $('.overlay > div'),
+		btn = $(".content > .btn:not('.bypass'), .nav-top [data-href=menu]"),
+		btnMenu = $('.nav-top [data-href=menu]'),
 		info = overlay.find('.info'),
-		nav = overlay.find('.nav'),
-		currentSection = localStorage.getItem('currentSection');*/
-	
-	//close menu
-/*	$('.close').on('tap', function(){
-		var t = $(this).parent();
-			t.addClass('bounceOutUp');
-		//removeAnimation(t, true);
-	});
-	*/
-	//go to slide 
-	//goToSlide('btn-mpi', 'AP-IBD1618-PI');
-	
-	
-	//remove animated
-	/*function removeAnimation(e, f){
-		//console.log(e);
-		setTimeout( function(){
-			wrapper.find('.animated').removeClass('bounceInDown bounceOutUp zoomInDown zoomIn');
-			if(!$.isEmptyObject(e) && f){ e.hide(); }
-		}, 800);
+		btnClose = overlay.find('.arrow, .close'),
+		ref = overlay.find('.ref'),
+		btnNavRef = $('.nav li > span, .menu > li, sup[data-ref]');
+		
+		btn.on('tap', function(){
+			var $this = $(this);
+				applyShade(overlay);
+				overlay.addClass('show');
+				
+				items.hide();
+			if($this.hasClass('btn-info')){
+				overlay.find(".info > *:not('.arrow')").hide();
+				info.show().find('[data-info='+$this.parent().find('.swiper-slide-active[data-slide]').attr('data-slide')+']').show();
+				//console.log($this.parent().find('.swiper-slide-active').attr('data-slide')); 
+			}else if($this.hasClass('btn-play')){
+				video.show();
+				overlay.find('video').get(0).play();
+			}else if($this.hasClass('btn-capsule')){
+				overlay.find('.capsule').show();
+			}else{
+				selectMenu();
+				overlay.find('.nav').show();
+				btnMenu.css('opacity', 0);
+				
+			}
+		});
+		//get config data
+		$.getJSON('js/config.json', getData);
+		
+		//navigation
+		function getData(data){
+			var isMenu = false, 
+				isRange = 0,
+				rMin = 0, rMax = 0,
+				key = 'LYN2016';
+			//set references
+			$.each(data.references, function(k, v){
+				$('<li />', { class:"hide", html: "<i>"+[v][0].id+".</i>"+[v][0].title }).appendTo($('.overlay .ref ol, .biblio > ol'));
+			});
+			btnNavRef.on('tap', function(){
+				var $this = $(this),
+					id = $this.parent().attr('data-href');
+				//items.hide();
+				//determine item & swap 
+				if($this.parents('.nav').length) {
+					isMenu = true;
+				}else if($this.parent('.menu').length){
+					id = $this.attr('data-href');
+					isMenu = true;
+				}else{
+					isMenu = false;
+				}
+				//console.log(id)
+				if(isMenu){
+					$.each(data.slides, function(k, v){
+						
+						if([v][0].id === parseInt(id.split('-')[0]) && !$this.parent().hasClass('active')){
+							localStorage.setItem('activeSlide',	[v][0].key+'_'+id);
+							goToSlide(key+[v][0].key);
+						}
+					});
+					localStorage.setItem('slideID',	id);
+					
+				}else{
+					//set ref id
+					id = $this.attr('data-ref');
+					//check if range & set min/max values
+					isRange = id.indexOf('-') !== -1 ? true : false;
+					id = id.split(new RegExp('[-|,]', 'g'));
+					var a = parseInt(id[0]),
+						b = $.isNumeric(id[1]) ? parseInt(id[1]) : 0;
+					//reorder reverse input
+					if(a > b){ rMin = b; rMax = a; }else{ rMin = a; rMax = b; }
+					//hide all refs
+					ref.find('ol > li').hide();
+					applyShade(overlay);
+					overlay.addClass('show').find('.ref').show();
+					//console.log(rMin +' : '+rMax )
+					if(isRange && rMax !== 0){
+						for(var i=rMin; i<=rMax; i++){
+							matchRefs(i);
+							//console.log(i);
+						}
+					}else if(!isRange && rMax !== 0){
+						for(var i=0; i < id.length; i++){
+							matchRefs(id[i]);
+							//console.log(id[i]);
+						}
+					}else{
+						matchRefs(rMin);
+					}
+				}
+				overlay.addClass('down');
+			});
+			//loop through ref list
+			function matchRefs(n){
+				ref.find('ol > li').each(function() {
+					var $this = $(this);
+						if(parseInt($this.find('i').text()) === parseInt(n)){
+							$this.show();
+						}
+				});
+				var h1 = ref.find('h1');
+					ref.find('li:visible').length > 1 ? h1.text('References') : h1.text('Reference');
+			}
+			//set role attribute 
+			$.each(data.slides, function(k, v){
+				$('.swiper-slide[data-slide]').each(function() {
+                    var $this = $(this),
+						sl = $this.attr('data-slide');
+						if(v.id === parseInt(sl)){
+							$this.attr('role', v.key);
+						}
+                });
+			});
+		}
+
+	function selectMenu(){
+		var nav = overlay.find(".nav"),
+			i = content.find('.swiper-slide-active[data-slide]').attr("data-slide");
+		//console.log(i);
+		switch(i){
+			case '3b':
+				i = '3';
+			break;
+			case '10b':
+			case '10c':
+				i = '10';
+			break;
+			case '11b':
+				i = '11';
+			break;
+			case '22b':
+				i = '22';
+			break;
+		}
+		nav.find('li').removeClass('active');
+		overlay.find(".nav li[data-href="+i+"]").last().addClass('active');
+		
 	}
-	removeAnimation();*/
-	
+	selectMenu();	
+		
+	//close overlay
+	btnClose.on('tap', function(){
+		var $this = $(this),
+			overlay = $this.parents('.overlay');
+		if(video.length){ overlay.find('video').get(0).pause(); }
+		btnMenu.css('opacity', 1);
+		
+		if(overlay.find('.info, .capsule').is(':visible') && $this.parents('.ref').length){
+			$this.parents('.ref').hide();
+		}else{
+			overlay.removeClass('show down shade');
+			items.hide();
+		}
+		//applyShade(overlay);
+		if(!$.isEmptyObject(backToResources) && backToResources === '1'){
+			goToSlide('LYN201613-Resources');
+			localStorage.setItem('backToResources', '');
+		}
+	});	
+	//top menu go to slide >>
+	$('.nav-top').on('tap', "li:not('[data-href=menu]')", function(){
+		var $this = $(this),
+			km = '', id = '';
+			//localStorage.setItem('activeSlide', '');
+			//console.log($this.attr('data-href'))
+			switch($this.attr('data-href')){
+				case "warning":
+					km = 'LYN201612-Contraindications';
+				break;
+				case "pi":
+					km = 'LYN2016-PI';
+					id = 'LYNREF_2016';
+					var  m = content.find('.swiper-slide-active[data-slide]');
+					if(m){
+						m = content.find('.swiper-slide-active[data-slide]');
+						m = m.attr("role")+'_'+m.attr("data-slide");
+						localStorage.setItem('activeSlide',	m);
+					}
+				break;
+				case "bibliography":
+					km = 'LYN201611-References';
+				break;
+				case "resource":
+					km = 'LYN201613-Resources';
+				break;
+				default:
+					km = 'LYN2016-Test-or-Treat-me';
+				break;
+			}
+		goToSlide(km, id);
+	});	
 });
 
 //go to slide
-function goToSlide(btn, asset){
+function goToSlide(km, id){
 	"use strict";
-	$('.'+btn).on('tap', function(){
-		var $this = $(this),
-			id = '',
-			data = $this.attr('data-slide'); 
-		
-		//document.location = 'veeva:gotoSlide('+asset+'.zip'+ id +')';
-	});
+	id = id ? ', '+id : '';
+	document.location = 'veeva:gotoSlide('+km+'.zip'+id+')';
 }
-//global timeline
-var tl = new TimelineLite();
+//top level custom swipe
+var sections = [
+	"-Test-or-Treat-me",
+	"02-Introducing-Lynparza",
+	"03-Main-menu",
+	"04-Unmet-need",
+	"05-Mechanism-of-action",
+	"06-Clinical-data",
+	"07-BRCAm-testing",
+	"08-Patient-support",
+	"09-Dosing-and-administration",
+	"10-Summary",
+	"11-References",
+	"12-Contraindications",
+	"13-Resources"
+	]
+function goToNextOrPrevious(prev, next){
+	$('#container').on('swipeleft swiperight', function(e){
+		var km = e.type === 'swipeleft' ? next : prev;
+		if(!$.isEmptyObject(km)){
+			//console.log(km);
+			goToSlide('LYN2016'+km);
+		}
+		
+	})
+}
+
+//global timeline & storage
+var tl = new TimelineLite(),
+	slideID = localStorage.getItem('slideID'),
+	activeSlide = localStorage.getItem('activeSlide'),
+	backToResources = localStorage.getItem('backToResources');
+
+///add shade class
+function applyShade(e){
+	setTimeout( function(){
+		e.addClass('shade');
+	}, 340);
+}
