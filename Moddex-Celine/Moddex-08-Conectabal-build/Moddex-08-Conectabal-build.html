@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MODDEX</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            article > h2{
+                padding-top:50px;
+                padding-bottom: 50px
+            } 
+
+            h4{
+                width:300px;
+            }
+
+            h5{
+                width:400px;
+            }
+
+            h5, h4{
+                display: inline-block;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .base-type, .rail-type, .add-on, .model{
+                float:left;
+                height:700px;
+                width:300px;
+                border:2px dashed rgba(255, 255, 255, 0.3);
+                border-right: none;
+
+                padding-top: 50px
+            }
+
+            .base-type > li, .rail-type > li, .add-on > li{
+                margin-left:50px;
+                margin-bottom:20px;
+                text-transform: uppercase;
+            }
+
+            .base-type > li.selected, .rail-type > li.selected, .add-on >li.selected{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .add-on > li, .model>li{
+                display: none;
+            }
+
+            .model{
+                width:400px;
+                position: relative;
+            }
+
+
+           .model > li{
+                position: absolute;
+            }
+
+            article li{
+                background:url('img/conectabal_build.png') no-repeat;
+                background-size:70px auto;
+                width:200px;
+                height:110px;
+            }
+
+            
+            #m-id, #m-des{
+                text-align: center;
+                width:inherit;
+                background: url('');
+                display: block;
+            }
+            
+            #m-id{font-size:30px;}
+            #m-id{top:20px;}
+            #m-des{top:70px;}
+
+            .model > #r{
+                height: 335px;
+                width: 100px;
+                left: 150px;
+                top: 205px;
+                background-position: 30px -20px;
+            }
+
+            .model > li:nth-child(n+3){
+                transform: scale(1.2, 1.2);
+                -webkit-transform: scale(1.2, 1.2);
+            }
+
+            .model li[value=offset-handrail]:before, .model li[value=double-offset]:before, .model li[value=double-offset]:after{
+                content:'';
+                display: block;
+                position: absolute;
+                background:url('img/conectabal_build.png') no-repeat;
+                background-size:70px auto;
+                width:200px;
+                height:110px;
+            }
+
+            li[value=no-handrail], .model li[value=offset-handrail]:before, .model li[value=double-offset]:before{background-position: 80px -485px;}
+            li[value=inline-handrail]{background-position: 80px -370px;}
+            li[value=offset-handrail], .model li[value=double-offset], .model li[value=double-offset]:after{background-position: 60px -600px}
+            li[value=double-offset]{background-position: 65px -790px;}
+            li[value=toeboard]{background-position: 80px -700px}
+
+            .model li[value=no-handrail]{top:100px; left:100px;}
+            .model li[value=inline-handrail]{top:100px; left:98px;}
+            .model li[value=offset-handrail], .model li[value=double-offset]{top: 150px; left: 115px;}
+            .model li[value=offset-handrail]:before, .model li[value=double-offset]:before{top: -43px; left: -13px;}
+            .model li[value=double-offset]:after{top: 70px;}
+
+            .model li[value=toeboard]{top:450px; left:123px;}
+
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <article class='slide greyBG'>
+                <h2>Conectabal Configurations</h2>
+
+                <h4>rail type (i)</h4>
+                <h4>rail type (ii)</h4>
+                <h5>model required</h5>
+
+                <ul class='rail-type'>
+                    <li value='no-handrail'>no handrail</li>
+                    <li value='inline-handrail'>inline handrail</li>
+                    <li value='offset-handrail'>offest handrail</li>
+                    <li value='double-offset'>double offset</li>
+                </ul>
+                <ul class='add-on'>
+                    <li value='toeboard'>toeboard/kerbrail</li>
+                </ul>
+                <ul class='model'>
+                    <li id='m-id'></li>
+                    <li id='m-des'>No model selected</li>
+                    <li id='r'></li>
+                    <li id='r0'></li>
+                    <li id='r1'></li>
+                </ul>
+            </article>
+        </div>
+
+        <script src = 'js/jquery-1.11.0.min.js'></script>
+        <script src = 'js/jquery-ui.js'></script>
+        <script src = 'js/touchy.js'></script>
+        <script src = 'js/script.js'></script>
+        <script>
+            var lookup = {
+                "no-handrail": "toeboard",
+                "inline-handrail": "toeboard",
+                "offset-handrail": "toeboard",
+                "double-offset": "toeboard",
+            }
+
+            var model = {
+                "no-handrail" : ["CB10", "Balustrade for level and rake"],
+                "no-handrail,toeboard" : ["CB20", "Balustrade with toeboard for level and rake"],
+                "inline-handrail" : ["CB30", "Balustrade with inline handrail for level and stair"],
+                "inline-handrail,toeboard" : ["CB35", "Balustrade with inline handrail and kerbrail for level and rake"],
+                "offset-handrail" : ["CB40", "Balustrade with offset handrail for level and stair"],
+                "offset-handrail,toeboard" : ["CB45", "Balustrade with offset handrail and kerbrail for level and rake"],
+                "double-offset" : ["CB50", "Balustrade with double offset handrails for level and rake"],
+                "double-offset,toeboard" : ["CB55", "Balustrade with double offset handrails and kerbrail for level and rake"]
+            }
+
+            selection('.rail-type > li', '.add-on > li');
+            selection('.add-on > li', null);
+
+        </script>
+    </body>
+</html>

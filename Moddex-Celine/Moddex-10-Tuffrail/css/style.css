@@ -1,0 +1,341 @@
+/* CSS Document reset */
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .60em}sub {vertical-align: sub}sup {vertical-align: super ; line-height:10px; }
+* {-webkit-text-size-adjust: none; -webkit-user-select: none; }* { -webkit-user-select: none; }
+
+body{font-family: gridnik; color: white}
+.container {position:relative; width: 1024px; height:768px; overflow: hidden;}
+.slide{width: inherit; height: inherit; position: relative;}
+li{list-style: none}
+em{font-style: italic;}
+
+@font-face {
+	font-family: gridnik;
+	src: url('Gridnik.woff') format('woff'),
+	url('Gridnik.eot') format('eot'),
+	url('Gridnik.ttf') format('ttf');
+}
+
+.logo{
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px black;
+    position:absolute;
+    padding:10px;
+    line-height:30px;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgba(255, 255, 255, 0.2);
+    top:auto;
+    left:auto;
+    bottom:100px;
+    right:100px;
+}
+
+.feature-img{
+    display: block;
+    height:210px;
+    width:800px;
+    margin: 0 auto;
+    background:url('../img/menu_sprite.png') no-repeat;
+    background-size:100% auto;
+    margin-top:80px;
+}
+
+
+/*-------------------------------------------
+THEME BACKGROUNDS
+-------------------------------------------*/
+
+.crossBG{
+	background:url('../img/cross_large.png') no-repeat;
+	background-size:auto 100%;
+	background-position: 390px;
+}
+
+.crossBGw{
+	background:url('../img/cross_large_white.png') no-repeat;
+	background-size:auto 100%;
+	background-position: 390px;
+}
+
+.orangeBG{
+	background-color: rgb(255,104,57);
+}
+
+.greyBG{
+	background-color: #7a7070;
+}
+
+
+/*-------------------------------------------
+HEADERS
+-------------------------------------------*/
+
+h1{
+	font-size: 100px;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+h2{
+	font-size: 50px;
+	padding-top: 50px;
+	text-align: center;
+	line-height: 50px;
+	letter-spacing: -0.5px;
+}
+
+h3{
+	text-align: center;
+	font-size:25px;
+}
+
+article > h2{
+    padding-top:150px;
+}
+
+h2 em{
+    font-style: normal;
+    text-decoration: underline;
+}
+
+/*-------------------------------------------
+SECTION NAVIGATION
+-------------------------------------------*/
+
+.navigation{
+    position: absolute;
+    top:0px;
+    left:70px;
+}
+
+.navigation > li{
+    float: left;
+    width: 100px;
+    margin-left:10px;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom: 10px;
+    background-color: rgba(0,0,0,0.1);
+}
+
+.navigation > li.current{
+    background-color: rgb(255,104,57);
+}
+
+.navigation > li:after{
+    content:'';
+    display: block;
+    position: absolute;
+    top:auto;
+    bottom:-15px;
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 15px solid rgba(0,0,0,0.1);
+}
+
+.navigation > li.current:after{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 15px solid rgb(255,104,57);
+}
+
+/*-------------------------------------------
+REFERENCES / EXTRACT
+-------------------------------------------*/
+
+div.references{
+	position: absolute;
+	width:800px;
+    background-color: rgb(255,104,57);
+	line-height: 20px;
+
+	margin-left:112px;
+	top:740px;
+	bottom:0px;
+
+	-webkit-transition: top 0.5s;
+	transition: top 0.5s;
+	box-shadow: 0px -5px 5px black;
+
+    color: black;
+}
+
+div.references:before{
+	content:'';
+    display: block;
+    position: absolute;
+    height: 36px;
+    width:400px;
+    background:url('../img/chrome_bar_horizontal.png') no-repeat;
+    background-size: 100% auto;
+    background-position-y: -57px;
+
+    top:-36px;
+    left:200px;
+}
+
+div.references li, div.references p{
+	max-width: 700px;
+	margin-bottom:5px;
+}
+
+div.references li{
+    padding-left:20px;
+    padding-right:20px;
+    font-size:12px;
+    color: black;
+}
+
+div.references p{
+    font-size:20px;
+    padding:20px;
+}
+
+div.references > div.wrap{
+    background-color: rgba(255, 255, 255, 0.4);
+    width:700px;
+    margin-left:50px;
+    margin-top:50px;
+    padding-bottom: 5px;
+}
+
+/*-------------------------------------------
+VIEW CATALOGUE / CONFIGURE BUTTONS
+-------------------------------------------*/
+
+.catalogue-buttons{
+    width:300px;
+    margin:0 auto;
+    margin-top:100px;
+}
+
+.catalogue-buttons > li{
+    width: inherit;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+
+    font-size:20px;
+    line-height: 90px;
+    margin-top:50px;
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.catalogue-buttons > li:active{
+	position: relative;
+	top:3px;
+}
+
+/*-------------------------------------------
+LEFT / RIGHT SLIDING INFO BARS
+-------------------------------------------*/
+
+.left-info, .right-info{
+    border:1px solid black;
+    background:inherit;
+    max-width:350px;
+    min-width: 350px;
+    position: absolute;
+    padding-top:100px;
+    line-height:20px;
+    height:1024px;
+    top:0px;
+}
+
+.left-info > p, .right-info > ul{
+    padding: 35px;
+    max-width:inherit;
+}
+
+.left-info{
+    left:-330px;
+    -webkit-transition: left 0.5s;
+    transition: left 0.5s;
+    box-shadow: 5px 5px 5px black;
+}
+
+.left-info.active{
+    left:0px;
+}
+
+.right-info{
+    left:auto;
+    right:-330px;
+     -webkit-transition: right 0.5s;
+    transition: right 0.5s;
+    box-shadow: -5px 5px 5px black;
+}
+
+.right-info li{
+	list-style: disc;
+	margin-left:10px;
+	margin-bottom:20px;
+}
+
+.right-info.active{
+    right:0px;
+}
+
+/* CHROME BARS */
+
+.left-info:after, .right-info:before{
+    content:'';
+    display: block;
+    position: absolute;
+    height: 400px;
+    width:36px;
+    top:10px;
+    background:url('../img/chrome_bar.png') no-repeat;
+    background-size: auto 100%;
+}
+
+.left-info:after{
+    left:auto;
+    right:-36px;
+}
+
+.right-info:before{
+    background-position-x:-58px;
+    left:-36px;
+}
+
+/*-------------------------------------------
+CATALOGUE PAGES
+-------------------------------------------*/
+
+.base-type, .rail-type, .add-on, .model{
+    float:left;
+    height:700px;
+    width:300px;
+    border:2px dashed rgba(255, 255, 255, 0.3);
+    border-right: none;
+
+    padding-top: 50px
+}
+
+.base-type > li, .rail-type > li, .add-on > li{
+    margin-left:50px;
+    margin-bottom:20px;
+    text-transform: uppercase;
+}
+
+.base-type > li.selected, .rail-type > li.selected, .add-on >li.selected{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.add-on > li, .model>li{
+    display: none;
+}
+
+.model{
+    width:400px;
+    position: relative;
+}
+
+
+.model > li{
+    position: absolute;
+}

@@ -1,0 +1,226 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MODDEX</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            article > h2{
+                padding-top:50px;
+                padding-bottom: 50px
+            } 
+
+            h4{
+                width:200px;
+            }
+
+            h5{
+                width:400px;
+            }
+
+            h5, h4{
+                display: inline-block;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+           .base-type, .rail-type, .add-on, .model{
+                float:left;
+                height:700px;
+                width:200px;
+                border:2px dashed rgba(255, 255, 255, 0.3);
+                border-right: none;
+
+                padding-top: 50px
+            }
+
+            .base-type > li, .rail-type > li, .add-on > li{
+                margin-left:50px;
+                margin-bottom:20px;
+                text-transform: uppercase;
+            }
+
+            .base-type > li.selected, .rail-type > li.selected, .add-on >li.selected{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .rail-type > li, .add-on > li, .model>li{
+                display: none;
+            }
+
+            .model{
+                width:400px;
+                position: relative;
+            }
+
+
+           .model > li{
+                position: absolute;
+            }
+
+             .model > li:nth-child(n+3){
+                transform: scale(1.3, 1.3);
+                margin-left: 0;
+            }
+
+            article li, .model li[value=double-offset]:after, .model li[value=twin-double-offset]:after, .model li[value=wm-double-offset]:after{
+                background:url('img/assistrail_build.png') no-repeat;
+                background-size: 110px auto;
+                width:100px;
+                height:70px;
+            }
+
+            li[value=nwm]{background-position: 28px 35px; height:250px;}
+            li[value=wm]{background-position: 13px -285px; height:250px;}
+
+            li[value=single-inline]{background-position:30px -532px;}
+            li[value=single-offset], .model li[value=double-offset]{background-position:15px -599px;}
+            li[value=double-offset]{background-position:25px -1014px;}
+            .model li[value=double-offset]:after{background-position:19px -670px;}
+
+            li[value=twin-offset], .model li[value=twin-double-offset], .model li[value=twin-double-offset]:after{background-position:4px -739px;}
+            li[value=twin-double-offset]{background-position:13px -1108px;}
+            li[value=krail]{background-position:37px -858px;}
+            li[value=mrail], li[value=brail]{background-position:34px -800px;}
+
+            li[value=wm-single-offset], .model li[value=wm-double-offset], .model li[value=wm-double-offset]:after{background-position:28px -931px;}
+            li[value=wm-double-offset]{background-position:30px -1194px;}
+
+            .model li[value=twin-double-offset]:after, .model li[value=double-offset]:after, .model li[value=wm-double-offset]:after{
+                content:'';
+                position: absolute;
+                width:100px;
+                top:70px;
+            }
+
+            .model li[value=nwm]{left:150px; top:220px; height:320px; width:70px;}
+            .model li[value=wm]{left:150px; top:220px;}
+            .model li[value=single-inline]{top:156px; left:155px;}
+            .model li[value=single-offset], .model li[value=double-offset]{top:152px; left:173px;}
+            .model li[value=twin-offset], .model li[value=twin-double-offset]{top:159px; left:153px;}
+            .model li[value=krail]{top:500px; left:176px;}
+            .model li[value=mrail]{top:330px; left:155px;}
+            .model li[value=brail]{top:500px; left:155px;}
+            .model li[value=wm-single-offset], .model li[value=wm-double-offset]{top:255px; left:204px;}
+            .model li[value=wm-double-offset]:after{top:80px; left:0px;}
+
+            #m-id, #m-des{
+                text-align: center;
+                width:inherit;
+                background: url('');
+                display: block;
+            }
+            
+            #m-id{font-size:30px;}
+            #m-des{top:100px;}
+
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <article class='slide greyBG'>
+                <h2>Assistrail</h2>
+
+                <h4>base type</h4>
+                <h4>rail type (i)</h4>
+                <h4>rail type (ii)</h4>
+                <h5>model required</h5>
+
+                <ul class='base-type'>
+                    <li value='nwm'>not wall mounted</li>
+                    <li value='wm'>wall mounted</li>
+                </ul>
+                <ul class='rail-type'>
+                    <li value="single-inline">single inline</li>
+                    <li value='single-offset'>single offset</li>
+                    <li value='double-offset'>double offset</li>
+                    <li value='twin-offset'>twin offset</li>
+                    <li value='twin-double-offset'>twin double offset</li>
+                    <li value='wm-single-offset'>single offset</li>
+                    <li value='wm-double-offset'>double offset</li>
+                </ul>
+                <ul class='add-on'>
+                    <li value='krail'>kerbrail</li>
+                    <li value='mrail'>midrail</li>
+                    <li value='brail'>bottom rail</li>
+                </ul>
+                <ul class='model'>
+                    <li id='m-id'></li>
+                    <li id='m-des'>No model selected</li>
+                    <li id='r0'></li>
+                    <li id='r1'></li>
+                    <li id='r2'></li>
+                    <li id='r3'></li>
+                </ul>
+            </article>
+        </div>
+
+        <script src = 'js/jquery-1.11.0.min.js'></script>
+        <script src = 'js/jquery-ui.js'></script>
+        <script src = 'js/touchy.js'></script>
+        <script src = 'js/script.js'></script>
+        <script>
+            var lookup = {
+                "nwm" : "single-inline, single-offset, double-offset, twin-offset, twin-double-offset",
+                "wm" : "wm-single-offset, wm-double-offset",
+                "single-inline": "krail, mrail, brail",
+                "single-offset": "krail, mrail",
+                "double-offset": "krail"}
+
+            var model = {
+                "nwm,single-inline" : ["AR10", "Single inline handrail for level and stairs"],
+                "krail,nwm,single-inline" : ["AR20", "Single inline handrail with kerbrail for level and rake"],
+                "mrail,nwm,single-inline" : ["AR30", "Single inline handrail with midrail for level and stair"],
+                "krail,mrail,nwm,single-inline" : ["AR40", "Single inline handrail with midrail and kerbrail for level and rake"],
+                "brail,mrail,nwm,single-inline" : ["AR45", "Single inline handrail with mid and bottom rail for level and stair"],
+                "nwm,single-offset" : ["AR50", "Single offset handrail for level and stair"],
+                "krail,nwm,single-offset" : ["AR60", "Single offset handrail with midrail for level and stair"],
+                "mrail,nwm,single-offset" : ["AR70", "Single offset handrail with midrail for level and stair"], 
+                "krail,mrail,nwm,single-offset" : ["AR80", "Single offset handrail with midrail and kerbrail for level and rake"],
+                "double-offset,nwm" : ["AR110", "Double offset handrails for level and stair"],
+                "double-offset,krail,nwm" : ["AR120", "Double offset handrails with kerbrail for level and rake"],
+                "nwm,twin-offset" : ["AR130", "Twin offset handrails for stair"],
+                "nwm,twin-double-offset" : ["AR140", "Twin double offset handrails for stair"],
+                "wm,wm-single-offset" : ["AR150", "Wall mount single offset handrail for level, rake and stair"],
+                "wm,wm-double-offset" : ["AR160", "Wall mount double offset handrails for level, rake and stair"]
+            }
+
+            selection('.base-type > li', '.rail-type > li, .add-on > li');
+            selection('.rail-type > li', '.add-on > li');
+            selection('.add-on > li', null);
+
+            function selection(item, children){
+                $(item).on('tap', function(){
+                    var sibling = $(this).siblings();
+
+                    // applicable for base + rail types
+                    // check if there are any selected siblings
+                    // remove their selected class and that of their children
+                    children == null ?
+                        null:
+                        (
+                            $(sibling).hasClass('selected') ?
+                            (
+                                $(sibling).removeClass('selected'),
+                                unselect_children(children)
+                            ): null
+                        )
+
+                    // unselect a selected item - remove their selected class and that of their children
+                    // select an unselected item and show their children
+                    $(this).hasClass('selected') ?
+                        (
+                            $(this).removeClass('selected'),
+                            unselect_children(children)
+                        ) :
+                        (
+                            $(this).addClass('selected'),
+                            show_children($(this).attr('value'))
+                        )
+
+                    get_model(item)
+
+                })
+            }
+        </script>
+    </body>
+</html>

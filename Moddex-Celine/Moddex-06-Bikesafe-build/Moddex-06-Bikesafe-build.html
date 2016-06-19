@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MODDEX</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            article > h2{
+                padding-top:50px;
+                padding-bottom: 50px
+            } 
+
+            h4{
+                width:300px;
+            }
+
+            h5{
+                width:400px;
+            }
+
+            h5, h4{
+                display: inline-block;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            article li{
+                background:url('img/bikesafe_build.png') no-repeat;
+                background-size:210px auto;
+                width:200px;
+                height:140px;
+            }
+
+            
+            #m-id, #m-des{
+                text-align: center;
+                width:inherit;
+                background: url('');
+                display: block;
+            }
+            
+            #m-id{font-size:30px;}
+            #m-id{top:20px;}
+            #m-des{top:70px;}
+
+            .model > #r{
+                height: 480px;
+                width: 100px;
+                left: 50px;
+                top: 110px;
+            }
+
+            li[value=double-offset], li[value=double-offset-2]{background-position: 65px -500px}
+            li[value=mrail], li[value=brail]{background-position: 80px -590px}
+            li[value=bt], li[value=bt-2]{background-position:-90px -120px; height:355px;}
+
+            .model li[value=double-offset], .model li[value=double-offset-2]{top:210px;}
+            .model li[value=bt], .model li[value=bt-2]{ top: 205px; left: -24px;}
+            .model li[value=brail]{ top: 370px; left: -21px;}
+            .model li[value=mrail]{ top: 220px; left: -21px;}
+
+            .rail-type li[value=bt], .add-on li[value=bt]{
+                background-size: 120px auto;
+                height:215px;
+                background-position: -32px -57px;
+            }
+
+            .model > li:nth-child(n+3){
+                margin-left:110px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <article class='slide greyBG'>
+                <h2>Bikesafe Configurations</h2>
+
+                <h4>rail type (i)</h4>
+                <h4>rail type (ii)</h4>
+                <h5>model required</h5>
+
+                <ul class='rail-type'>
+                    <li value='double-offset'>double offset</li>
+                    <li value='mrail'>midrail</li>
+                    <li value='bt'>balustrade</li>
+                </ul>
+                <ul class='add-on'>
+                    <li value='bt-2'>balustrade</li>
+                    <li value='brail'>bottom rail</li>
+                     <li value='double-offset-2'>double offset</li>
+                </ul>
+                <ul class='model'>
+                    <li id='m-id'></li>
+                    <li id='m-des'>No model selected</li>
+                    <li id='r'></li>
+                    <li id='r0'></li>
+                    <li id='r1'></li>
+                </ul>
+            </article>
+        </div>
+
+        <script src = 'js/jquery-1.11.0.min.js'></script>
+        <script src = 'js/jquery-ui.js'></script>
+        <script src = 'js/touchy.js'></script>
+        <script src = 'js/script.js'></script>
+        <script>
+            var lookup = {
+                "mrail": "brail",
+                "double-offset": "brail, bt-2",
+                "bt" : "double-offset-2"
+            }
+
+            var model = {
+                "mrail" : ["BS20", "Bikeway barrier with offset top rail and midrail for level and rake"],
+                "double-offset" : ["BS25", "Bikeway barrier with double offset rail for level and rake"],
+                "brail,mrail": ["BS30", "Bikeway barrier with offset top, mid and bottom rail for level and rake"],
+                "brail,double-offset" : ["BS35", "Bikeway barrier with double offset and bottom rail for level and rake"],
+                "bt" : ["BS40", "Bikeway barrier with offset top rail and balustrade infill for level and rake"],
+                "bt,double-offset-2" : ["BS45", "Bikeway barrier with double offset rail and balustrade infill for level and rake"],
+                "bt-2,double-offset" : ["BS45", "Bikeway barrier with double offset rail and balustrade infill for level and rake"],
+            }
+
+            selection('.rail-type > li', '.add-on > li');
+            selection('.add-on > li', null);
+            /*
+            $('.add-on > li[value=bt], .add-on > li[value=double-offset]').on('tap', function(){
+                $(this).hasClass('selected')? $(this).removeClass('selected') : $(this).addClass('selected');
+
+                get_model();
+            })*/
+
+        </script>
+    </body>
+</html>
