@@ -1,0 +1,108 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+
+		.bodyContent
+		{
+			width:800px;
+			height:450px;
+			position: absolute;
+			margin-left:80px;
+			background-color: #e8e7e6;
+		}
+		.bodyContent > li
+		{
+			display: inline-block;
+			width:120px;
+			height:240px;
+			background-size: 100% auto;
+			margin-left: 40px;
+			background-repeat: no-repeat;
+
+		}
+
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){				
+ 			$(".boxInfo").hide();
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});
+
+
+				$(".bodyContent > li").click(function()
+				{
+					
+
+					var x = $(this).data("id");
+					var imageVal = x + 4;
+
+
+					if(x > 4)
+					{
+						$(".bodyContent > li:nth-child("+x+")").css("background-image","none");
+					}
+					
+					$(".bodyContent > li:nth-child("+imageVal+")").css("background-image","url('./images/tt"+x+".png')");
+					
+				});
+
+
+
+ 		});
+
+	function produceImages()
+	{
+		for(var i=1; i<=4; i++)
+		{
+			$(".bodyContent > li:nth-child("+i+")").css("background-image","url('./images/t"+i+".png')");
+		}
+	}
+
+</script>
+
+<head>
+	<body onload="produceImages();">
+			<section id="containter">
+				<header>
+					<h1>Safety Bollards</h1>
+					<span></span>
+				</header>
+					<article class="content">
+						<ul class="bodyContent">
+							<li data-id="1"></li>
+							<li data-id="2"></li>
+							<li data-id="3"></li>
+							<li data-id="4"></li>
+							<li data-id="5"></li>
+							<li data-id="6"></li>
+							<li data-id="7"></li>
+							<li data-id="8"></li>
+						</ul>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+
+				</footer>
+			</section>
+		</div>
+	</body>
+</head>
+</html>

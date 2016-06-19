@@ -1,0 +1,206 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+		@font-face {font-family: "Akkurat-Light";
+		    src: url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.eot");
+		    src: url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.eot?#iefix") format("embedded-opentype"),
+		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.woff2") format("woff2"),
+		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.woff") format("woff"),
+		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.ttf") format("truetype"),
+		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.svg#Akkurat-Light") format("svg");
+		}
+		.overlayImage
+		{
+			width: 500px;
+			height: 400px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+
+		.feature
+		{
+			background-size: 100% auto;
+			width:800px;
+			height:420px;
+			background-image: url('./images/nonSlip.png');
+			margin-left: 100px;
+			position: absolute;
+			margin-top:20px;
+			background-repeat: no-repeat;
+
+		}
+		.controls {position: absolute; list-style: none;}
+		.controls { width: 6px;top: 205px; z-index: 21; margin-left:-10px;}
+    	.controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+    				border:1px solid #3F4344; -webkit-border-radius:500px; 
+    				color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;}
+
+	    .overlayBox{
+	    	width:900px;
+	    	height:600px;
+	    	margin-top: 60px;
+	    	margin-left:50px;
+	    }
+
+	    .overlayBox > ul{
+	    	display: inline-block;
+			font-size:14px;
+	    	margin-top:100px;
+	    }
+
+	    .overlayBox > ul > li{
+	    	margin-bottom: 10px;
+	    	color: white;
+	    	list-style: none;
+	    	font-family: "Akkurat-Light";
+	    }
+	    .bodyContent{
+	    	width:800px;
+	    	height:600px;
+	    }
+	    .bodyContent > ul{
+	    	display: inline-block;
+	    	width: 350px;
+	    	margin-bottom: 30px;
+	    	vertical-align: top;
+	    }
+
+	    .bodyContent > ul > li{
+	    	margin-bottom: 10px;
+	    	color:white;
+	    	font-family: "Akkurat-Light";
+	    	list-style: none;
+	    }
+	    .bodyContent > ul:first-child > li:nth-child(7), .bodyContent > ul:first-child > li:first-child,
+	    .bodyContent > ul:last-child > li:first-child
+	    {
+	    	font-weight: bold;
+	    	font-size:12px;
+	    }
+
+
+
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){				
+ 			$(".boxInfo").hide();
+
+
+ 			$(".r").click(function()
+ 			{
+				document.getElementById("myNav").style.width = "1024px";
+				document.getElementById("myNav").style.height = "768px";
+
+				$(".controls").css("display","none");
+ 			});
+
+			$("#myNav > span:first-child").click(function()
+ 			{
+ 				closeNav();
+ 				$(".controls").css("display","block");
+ 			});
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});
+
+ 		});
+ 		 		function closeNav() {
+		    document.getElementById("myNav").style.width = "0%";
+		}
+
+</script>
+
+<head>
+	<body>
+	<div id="myNav" class="overlay">
+			<span>X</span>	
+		<div class="overlayBox">
+		 <h1>non slip safety</h1>
+			<ul class="bodyContent">
+				<ul>
+					<li>Extract from National Construction Code (NCC ) 2014</li>
+					<li>D2.13 Goings and risers</li>
+					<li>a) A stairway must have—</li>
+					<li>(v) treads which have—</li>
+					<li>(A) a surface with a slip-resistance classification not less than that listed
+						in Table D2.14 when tested in accordance with AS 4586; or</li>
+					<li>(B) a nosing strip with a slip-resistance classification not less than that
+						listed in Table D2.14 when tested in accordance with AS 4586; and</li>
+					<li>Extract from Australian Standard AS 1428.1:2009</li>
+					<li>11.1 Stair construction</li>
+					<li>Where required, stairs shall be constructed as follows:</li>
+					<li>(f) At the nosing, each tread shall have a strip not less than 50 mm and
+						not more than 75 mm deep across the full width of the path of travel.
+						The strip may be set back a maximum of 15 mm from the front of the
+						nosing. The strip shall have a minimum luminance contrast of 30% to
+						the background. Where the luminous contrasting strip is affixed to the
+						surface of the tread, any change in level shall comply with Clause 7.2 and
+						Clause 7.3.
+					</li>
+					<li>(g) Where the luminance contrasting strip is not set back from the front of
+						the nosing then any area of luminance contrast shall not extend down the
+						riser more than 10 mm.
+					</li>
+				</ul>
+				<ul>
+					<li>Extract from Australian Standard AS/NZS 4586:2004</li>
+					<li>2 APPLICATION</li>
+					<li>The test methods in this Standard shall be used for the classification
+						of pedestrian surface materials for use in either the ‘wet’ or the ‘dry’
+						condition.
+					</li>
+					<li>This Standard may also be used for evaluating surface applications and
+						treatments including products such as sealers, polishes and etchants
+						which may modify the surface characteristics of pedestrian surfaces.
+					</li>
+					<li>As a minimum, one of the three methods specified for the measurement
+						of wet slip resistance (Appendix A, C or D) shall be used for all external
+						pedestrian surfaces and those internal pedestrian surfaces that have a
+						reasonably foreseeable risk of the presence of wet substances such as
+						water, grease and oil.
+					</li>
+				</ul>
+
+			</ul>
+
+		</div>
+	</div>
+			<section id="containter">
+				<header>
+					<h1>tredmaxx non slip safety</h1>
+					<span></span>
+				</header>
+				 <ul class="controls">
+	                <li class="r">R</li>
+	                <li class="s disb">S</li>
+	            </ul>
+					<article class="content">
+						<div class="feature"></div>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+
+				</footer>
+			</section>
+		</div>
+	</body>
+</head>
+</html>

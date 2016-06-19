@@ -1,0 +1,136 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+
+		.feature
+		{
+			background-size: 100% auto;
+			width:800px;
+			height:650px;
+			background-image: url('./images/graph.png');
+			margin-left: 100px;
+			position: absolute;
+			margin-top: -80px;
+			background-repeat: no-repeat;
+			transform: scale(0.7);
+
+		}
+		.graphData{
+			background-size: 100% auto;
+			width:640px;
+			height:480px;
+			background-image: url('./images/graphData.png');
+			position: absolute;
+			transform: scale(0.7);
+			background-repeat: no-repeat;
+			margin-left: 140px;
+			margin-top: 100px;
+		}
+		.overlayImage
+		{
+			width: 970px;
+			height: 800px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			transform: scale(0.7);
+			position: absolute;
+		}
+		.overlayGraphData{
+			width: 800px;
+			height: 400px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			transform: scale(0.7);
+			position: absolute;
+			margin-top: 160px;
+			margin-left:30px;
+
+		}
+		.box
+		{
+			width:200px;
+			height:200px;
+			position: absolute;
+			margin-top: 50px;
+			margin-left:100px;
+			position: absolute;
+
+		}
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){				
+ 			$(".boxInfo").hide();
+
+
+			$(".feature").click(function()
+ 			{
+				document.getElementById("myNav").style.width = "1024px";
+				document.getElementById("myNav").style.height = "768px";
+
+
+				$(".overlayImage").css("background-image","url('./images/graph.png')");
+				$(".overlayGraphData").css("background-image","url('./images/graphData.png')");
+ 			});
+
+ 			$("#myNav > span:first-child").click(function()
+ 			{
+ 				closeNav();
+ 			});
+
+
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});
+
+ 			$(".graphData").hide().fadeIn(9000).delay(11000);
+
+ 		});
+
+ 		 function closeNav() {
+		    document.getElementById("myNav").style.width = "0%";
+		}
+</script>
+
+<head>
+	<body>
+		<div id="myNav" class="overlay">
+			<span>X</span>	
+			<div class="box">
+				<div class="overlayImage"></div>
+				<div class="overlayGraphData"></div>
+			</div>
+		</div>
+		<section id="containter">
+			<header>
+				<h1>tuffstop</h1>
+				<span></span>
+			</header>
+				<article class="content">
+					<div class="feature"></div>
+					<div class="graphData"></div>
+				</article>
+			<footer>
+				<ul>
+					<li></li>
+				</ul>
+				<div class="boxInfo">
+					<p>This is a test information Button Tap To Close</p>
+				</div>
+
+			</footer>
+		</section>
+	</body>
+</head>
+</html>

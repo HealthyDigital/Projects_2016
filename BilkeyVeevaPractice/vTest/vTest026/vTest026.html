@@ -1,0 +1,142 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+		.mBox{
+			width:900px;
+			height:400px;
+			margin-top: 50px;
+			position: absolute;	
+		}
+		.mBox > ul > li:first-child
+		{
+			background-image: url('./images/mount1.png');
+			width: 130px;
+			height:130px;
+			background-repeat: no-repeat;
+			list-style: none;
+			margin-bottom: 15px;
+			
+		}
+		.mBox > ul:nth-child(2) > li:first-child
+		{
+			background-image: url('./images/mount2.png');
+		}
+		.mBox > ul:nth-child(3) > li:first-child
+		{
+			background-image: url('./images/mount3.png');
+		}
+		.mBox > ul:nth-child(4) > li:first-child
+		{
+			background-image: url('./images/mount4.png');
+		}
+		.mBox > ul {
+			display: inline-block;
+			background-color: #f7f6f6;
+			margin-left: 70px;
+		}
+		.mBox > ul{width: 130px; padding: 0px;}
+
+		.mBox > ul > div > li{ list-style: none; }
+
+		.mBox > ul > div > li:nth-child(n + 1){
+			margin-bottom: 10px;
+			margin-left: 5px;
+		}
+		.mBox > ul > div > li:nth-child(1)
+		{
+			font-weight: bold;
+			font-size:10px;
+			letter-spacing: -0.06em;
+		}
+
+
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){				
+ 			$(".boxInfo").hide();
+
+ 			$(".mBox > ul:first-child").hide().fadeIn(10000).delay(100);
+ 			$(".mBox > ul:nth-child(2)").hide().fadeIn(15000).delay(100);
+ 			$(".mBox > ul:nth-child(3)").hide().fadeIn(15000).delay(100);
+ 			$(".mBox > ul:nth-child(4)").hide().fadeIn(15000).delay(100);
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});	
+
+ 		});
+
+</script>
+
+<head>
+	<body>
+	
+			<section id="containter">
+				<header>
+					<h1>mounting options</h1>
+					<span></span>
+				</header>
+
+					<article class="content">
+						<ul class="mBox">
+							<ul>
+								<li></li>
+								<div>
+									<li>T2 - Top Mount (2 Fixings) </li>
+									<li>Concrete - using M12 x 100mm galvanized screwbolts Steel - using M16 hi-tensile galvanized bolts</li>
+								</div>
+							</ul>
+							<ul>
+								<li></li>
+								<div>
+									<li>F2 - Face Mount (2 Fixings) </li>
+									<li>Concrete - using M12 x 100mm galvanized screwbolts Steel - using M16 hi-tensile galvanized bolts </li>
+								</div>
+							</ul>
+							<ul>
+								<li></li>
+								<div>
+									<li>C11 - Channel Mount (2 Fixings)</li>
+									<li>110 mm Offset
+										Steel - using M16 hi-tensile galvanized bolts asdsadasdas vasdsadasdas
+										asdsadasdas
+										 </li>
+								</div>
+							</ul>
+							<ul>
+								<li></li>
+								<div>
+									<li>C13 - Channel Mount (2 Fixings)</li>
+									<li>130 mm Offset
+										Steel - using M16 hi-tensile galvanized bolts
+										asdsadasdas asdsadasdas asdsadasdas 
+										  </li>
+								</div>
+							</ul>
+						</ul>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+
+				</footer>
+			</section>
+		</div>
+	</body>
+</head>
+</html>

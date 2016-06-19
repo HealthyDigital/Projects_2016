@@ -1,0 +1,189 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+
+		.overlayImage
+		{
+			width: 500px;
+			height: 400px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+
+		.feature
+		{
+			background-size: 100% auto;
+			width:800px;
+			height:420px;
+			background-image: url('./images/guardRail.png');
+			margin-left: 100px;
+			position: absolute;
+			margin-top:20px;
+			background-repeat: no-repeat;
+
+		}
+			.controls {position: absolute; list-style: none;}
+			.controls { width: 6px;top: 205px; z-index: 21; margin-left:-10px;}
+	    	.controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+	    				border:1px solid #3F4344; -webkit-border-radius:500px; 
+	    				color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;}
+
+
+
+	    .overlayBox{
+	    	width:900px;
+	    	height:600px;
+	    	margin-top: 60px;
+	    	margin-left:100px;
+	    }
+
+	    .overlayBox > ul
+	    {
+	    	display: inline-block;
+	    	width:400px;
+	    	vertical-align:top;
+	    }
+	    .overlayBox > ul > li
+	    {
+	    	margin-bottom: 10px;
+	    	list-style: none;
+	    }
+	    .overlayBox > ul > li
+	    {
+	    	color:#7d716f;
+	    }
+	    .overlayBox > ul > li:first-child
+	    {
+	    	font-weight: bold;
+	    	font-size:17px;
+	    }
+
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){				
+ 			$(".boxInfo").hide();
+
+
+ 			$(".r").click(function()
+ 			{
+				document.getElementById("myNav").style.width = "1024px";
+				document.getElementById("myNav").style.height = "768px";
+
+				$(".controls").css("display","none");
+ 			});
+
+			$("#myNav > span:first-child").click(function()
+ 			{
+ 				closeNav();
+ 				$(".controls").css("display","block");
+ 			});
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});
+
+ 		});
+ 		 		function closeNav() {
+		    document.getElementById("myNav").style.width = "0%";
+		}
+
+</script>
+
+<head>
+	<body>
+	<div id="myNav" class="overlay">
+			<span>X</span>	
+		<div class="overlayBox">
+			<ul>
+				<li>Extract from Australian Standard AS 1657:2013</li>
+				<li>3.2.1.2 A toe-board complying with Clause 3.4.3 shall be provided at the
+					edge of a platform, walkway, or landing, which is greater than 10mm
+					distant from a permanent structure and where an object could fall more
+					than 2000mm.
+				</li>
+				<li>3.4.3 The toe-board shall be firmly attached to the floor or posts, and any
+					gap between the toe-board and the floor shall not exceed 10mm. The top
+					of the toe-board shall be not less than 100mm above the top of the floor.
+				</li>
+				<li>5.4 GUARDRAILING</li>
+				<li>5.4.1 Provision of guardrailing</li>
+				<li>Guardrailing complying with Clause 6.2.1 shall be installed on all sides
+					and ends of a walkway except in the following situations:
+				</li>
+				<li>a) At the points of access from a stairway or ladder.</li>
+				<li>(b) Where there is a permanent structure not more than 100 mm distant
+					from the edge of the walkway, capable of providing protection at least
+					equivalent to that of guardrailing.
+				</li>
+				<li>(c) On the sides and ends of a walking surface that is not more than 300
+					mm above an adjacent area upon which it is safe to step or stand without
+					risk of falling, and—
+				</li>
+				<li>(i) the slope of the walkway perpendicular to the direction of travel
+					(cross-slope) does not exceed 3°;
+				</li>
+				<li>(ii) the angle of slope of the adjacent area is less than 12°; and</li>
+				<li>(iii) the width of the area adjacent to the walkway is greater than 2000mm</li>
+			</ul>
+			<ul>
+				<li></li>
+				<li>5.4.2 Requirements for walkways with slopes within the range of 15° to</li>
+				<li>20°</li>
+				<li>On sloping walkways between 15° and 20°, a handrail complying with
+					Clause 5.6 shall be provided. Where there is a risk of a person sliding or
+					rolling along the sloping surface of the walkway, a means of limiting this
+					linear distance to 18 m shall be installed.
+				</li>
+				<li>NOTE: On walkway slopes of lesser angles where there is a risk of a
+					person sliding, a handrail should also be provided.
+				</li>
+				<li>5.5 TOEBOARD</li>
+				<li>A toeboard complying with Clause 6.1.2 shall be installed on the edge of
+					a walkway where there is no permanent structure within 10 mm of the
+					edge, and from which an object could fall to where persons have access
+					to the area below and to the side of the walkway. Any gap between the
+					underside of the toeboard and the walkway surface shall be not greater
+					than 10 mm. The top of the toeboard shall be not less than 100 mm above
+					the floor.
+				</li>
+			</ul>
+		</div>
+	</div>
+			<section id="containter">
+				<header>
+					<h1>Guard Rails</h1>
+					<span></span>
+				</header>
+				 <ul class="controls">
+	                <li class="r">R</li>
+	                <li class="s disb">S</li>
+	            </ul>
+					<article class="content">
+						<div class="feature"></div>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+
+				</footer>
+			</section>
+		</div>
+	</body>
+</head>
+</html>

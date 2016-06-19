@@ -1,0 +1,152 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+		@font-face {font-family: "Akkurat-Light";
+		    src: url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.eot");
+		    src: url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.eot?#iefix") format("embedded-opentype"),
+		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.woff2") format("woff2"),
+		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.woff") format("woff"),
+		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.ttf") format("truetype"),
+		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.svg#Akkurat-Light") format("svg");
+		}
+		.overlayImage
+		{
+			width: 500px;
+			height: 400px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+
+		.feature
+		{
+			background-size: 100% auto;
+			width:800px;
+			height:420px;
+			background-image: url('./images/intac.png');
+			margin-left: 100px;
+			position: absolute;
+			margin-top:20px;
+			background-repeat: no-repeat;
+
+		}
+		.controls {position: absolute; list-style: none;}
+		.controls { width: 6px;top: 205px; z-index: 21; margin-left:-10px;}
+    	.controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+    				border:1px solid #3F4344; -webkit-border-radius:500px; 
+    				color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;}
+
+	    .overlayBox{
+	    	width:850px;
+	    	height:600px;
+	    	margin-top: 60px;
+	    	margin-left:100px;
+	    }
+
+	    .overlayBox > ul{
+	    	display: inline-block;
+	
+	    	margin-top:100px;
+	    }
+
+	    .overlayBox > ul > li{
+	    	margin-bottom: 10px;
+	    	color: white;
+	    	list-style: none;
+	    	font-family: "Akkurat-Light";
+	    }
+
+
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){				
+ 			$(".boxInfo").hide();
+
+
+ 			$(".r").click(function()
+ 			{
+				document.getElementById("myNav").style.width = "1024px";
+				document.getElementById("myNav").style.height = "768px";
+
+				$(".controls").css("display","none");
+ 			});
+
+			$("#myNav > span:first-child").click(function()
+ 			{
+ 				closeNav();
+ 				$(".controls").css("display","block");
+ 			});
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});
+
+ 		});
+ 		 		function closeNav() {
+		    document.getElementById("myNav").style.width = "0%";
+		}
+
+</script>
+
+<head>
+	<body>
+	<div id="myNav" class="overlay">
+			<span>X</span>	
+		<div class="overlayBox">
+		 <h1>intac tail indicators</h1>
+			<ul>
+				<li>Extract from Australian Standard AS/NZS 1428.4:2009</li>
+				<li>2.4 STAIRWAYS, RAMPS, ESCALATORS AND MOVING WALKS</li>
+				<li>Where required on a path of travel, warning indicators shall be located at both the top and bottom of 		    stairways, ramps, escalators and moving walks, as shown
+					in Figures 2.2(A), 2.2(B), 2.3(A), 2.3(B) and 2.4.</li>
+				<li>2.5 PEDESTRIANS AND VEHICLES AT THE SAME GRADE</li>
+				<li>Where a pedestrian area joins a carriageway at grade (i.e. on the same level) or to delineate the 				pedestrian area from the carriageway, TGSIs shall be provided
+					in accordance with Figures 2.5(A) and 2.5(B).</li>
+				<li>2.6 WARNING OF HAZARDS WITHIN THE CIRCULATION SPACE, OR ADJACENT 
+					TO A CONTINUOUS ACCESSIBLE PATH OF TRAVEL</li>
+				<li>Where there are impediments or hazards with less than 2000 mm clearance in an accessible open public space 		with no clearly defined continuous accessible
+					path of travel (e.g., areas under a stairway, escalator or moving walkway), contact with overhead hazard shall be prevented by a suitable barrier such as—</li>
+				<li>a) enclosing the area; or</li>
+				<li>(b) providing handrails with kerbs or kerb rails in accordance with AS 1428.1,</li>
+				<li>In the absence of a suitable barrier, TGSIs shall be installed as shown in Figures 2.6(B).</li>
+			</ul>
+
+		</div>
+	</div>
+			<section id="containter">
+				<header>
+					<h1>intac tail indicators</h1>
+					<span></span>
+				</header>
+				 <ul class="controls">
+	                <li class="r">R</li>
+	                <li class="s disb">S</li>
+	            </ul>
+					<article class="content">
+						<div class="feature"></div>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+
+				</footer>
+			</section>
+		</div>
+	</body>
+</head>
+</html>

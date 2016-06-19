@@ -1,0 +1,209 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+		.overlayImage
+		{
+			width: 500px;
+			height: 400px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+		.box
+		{
+			width: 700px;
+			height: 500px;
+			position: absolute;
+			margin-top: 100px;
+			margin-left: 200px;
+			background-color: white;
+		}
+		.feature {
+			width: 500px;
+			height: 400px;
+			background-image: url('./images/rail.png');
+			background-repeat: no-repeat;
+			/* margin: 0 auto; */
+			position: absolute;
+			margin-left: 250px;
+			margin-top:30px;
+		}
+		.bodyContent
+		{
+			position: absolute;
+			width: 1024px;
+		}
+		.bodyContent > ul
+		{
+			display: inline-block;
+		}
+		.bodyContent > ul:first-child
+		{
+			width: 30%;
+			float:left;
+		}
+		.bodyContent > ul:first-child > li
+		{
+			margin-bottom: 40px;
+		}
+		.bodyContent > ul:first-child > li:hover
+		{
+			color:red;
+
+
+		}
+		.bodyContent > ul:last-child
+		{
+			list-style: none;
+		}
+		.infoBox
+		{
+			background-image: url('./images/infoBox.png');
+			background-repeat: no-repeat;
+			width: 300px;
+			height: 240px;
+			position: absolute;
+			margin-left: 300px;
+			margin-top: -190px;
+			display:none;
+
+		}
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){		
+
+    		
+    		$(".bodyContent > ul:first-child > li").hover(function()
+    		{
+    			var id = $(this).data("id");
+    			if($(".bodyContent > ul:first-child > li:nth-child("+id+")").css("color") == "rgb(255, 0, 0)")
+	    		{
+	    			$(".infoBox").css("display","block");
+
+	    			var firstPosition = $(".infoBox").css("margin-top");
+	    			var position = id * 60;
+	    			
+	    			if(id != 1)
+	    			{
+
+	    				var position = -190 + position;
+	    				$(".infoBox").css("margin-top",position);
+	    			}
+	    			else
+	    			{
+	    				$(".infoBox").css("margin-top","-190px");
+	    			}
+
+
+	    			
+	    		}
+
+    		});
+    		$(".bodyContent > ul:first-child > li").mouseleave(function()
+    		{
+	    		$(".infoBox").css("display","none");
+    		});
+
+
+    		$(".bodyContent > ul:first-child > li").click(function()
+    		{
+    			var id = $(this).data("id");
+    			if($(".bodyContent > ul:first-child > li:nth-child("+id+")").css("color") == "rgb(255, 0, 0)")
+	    		{
+	    			$(".infoBox").css("display","block");
+	    		}
+	    		if($(".infoBox").css("display") == "block")
+	    		{
+	    			$(".infoBox").css("display","none");
+	    		}
+
+    		});
+
+
+ 			$(".boxInfo").hide();
+
+ 			$(".feature").click(function()
+ 			{
+				document.getElementById("myNav").style.width = "1024px";
+				document.getElementById("myNav").style.height = "768px";
+
+
+				$(".overlayImage").css("background-image","url('./images/rail.png')");
+ 			});
+
+ 			$("#myNav > span:first-child").click(function()
+ 			{
+ 				closeNav();
+ 			});
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});
+
+ 		})
+ 		function closeNav() {
+		    document.getElementById("myNav").style.width = "0%";
+		}
+</script>
+
+<head>
+	<body>
+		<div id="myNav" class="overlay">
+			<span>X</span>	
+			<div class="box">
+				<div class="overlayImage"></div>
+			</div>
+		</div>
+			<section id="containter">
+				<header>
+					<h1>Rail Video</h1>
+					<span></span>
+				</header>
+					<article class="content">
+						<ul class="bodyContent">
+							<ul>
+								<li data-id="1">This video contains content regarding information about stuff</li>
+								<li data-id="2">This video contains content regarding information about stuff</li>
+								<li data-id="3">This video contains content regarding information about stuff</li>
+								<li data-id="4">This video contains content regarding information about stuff</li>
+								<li data-id="5">This video contains content regarding information about stuff</li>
+							</ul>
+							<ul>
+								<li>
+									<video controls width="500" height="375">
+			                       		<source src="Harvey2.mp4" type="video/mp4">
+									</video>
+								</li>
+							</ul>
+						</ul>
+						<div class="infoBox"></div>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+						<div class="footerInfo">
+							<p>This is a whole bunch of footer information for this veeva Detailer</p>
+							<p>This is a whole bunch of footer information for this veeva Detailer</p>
+							<p>This is a whole bunch of footer information for this veeva Detailer</p>
+						</div>
+				</footer>
+			</section>
+		</div>
+	</body>
+</head>
+</html>

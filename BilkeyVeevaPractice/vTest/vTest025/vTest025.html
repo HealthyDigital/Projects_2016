@@ -1,0 +1,111 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+		table{width:800px;height:400px; margin-left: 100px;
+			  margin-top: 20px; position: absolute;
+				background-color: #98BE4B;
+				-webkit-border-horizontal-spacing: 0px;
+                -webkit-border-vertical-spacing: 0px;
+		}
+		table > tbody > tr > td:nth-child(4){background-color: purple;}
+		table > tbody > tr:first-child, table > tbody > tr:first-child > td {background-color: #587D0F;}
+		table > tbody > tr > td{text-align: center; color:white; border:1px solid black;}
+		table > tbody > tr:nth-child(4n + 2) {background-color: grey;}
+
+		table > tbody > tr:nth-child(1n + 2) > td:first-child { text-align: left; padding-left: 10px; }
+
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){				
+ 			$(".boxInfo").hide();
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});	
+
+ 		});
+
+</script>
+
+<head>
+	<body>
+	
+			<section id="containter">
+				<header>
+					<h1>tredmaxx table</h1>
+					<span></span>
+				</header>
+
+					<article class="content">
+						<table>
+						 	<tbody>
+								<tr>
+									<td>Heading 1</td>
+									<td>Heading 2</td>
+									<td>Heading 3</td>
+									<td>Heading 4</td>
+									<td>Heading 5</td>
+								</tr>
+								<tr>
+									<td>C1</td>
+									<td>C2</td>
+									<td>C3</td>
+									<td>C4</td>
+									<td>C5</td>
+								</tr>
+								<tr>
+									<td>C1</td>
+									<td>C2</td>
+									<td>C3</td>
+									<td>C4</td>
+									<td>C5</td>
+								</tr>
+								<tr>
+									<td>C1</td>
+									<td>C2</td>
+									<td>C3</td>
+									<td>C4</td>
+									<td>C5</td>
+								</tr>
+								<tr>
+									<td>C1</td>
+									<td>C2</td>
+									<td>C3</td>
+									<td>C4</td>
+									<td>C5</td>
+								</tr>
+								<tr>
+									<td>C1</td>
+									<td>C2</td>
+									<td>C3</td>
+									<td>C4</td>
+									<td>C5</td>
+								</tr>
+							</tbody>
+						</table>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+
+				</footer>
+			</section>
+		</div>
+	</body>
+</head>
+</html>

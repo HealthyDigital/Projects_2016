@@ -1,0 +1,166 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+
+		.overlayImage
+		{
+			width: 500px;
+			height: 400px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+
+		.feature
+		{
+			background-size: 100% auto;
+			width:800px;
+			height:420px;
+			background-image: url('./images/handrail.png');
+			margin-left: 100px;
+			position: absolute;
+			margin-top:20px;
+
+		}
+			.controls {position: absolute; list-style: none;}
+			.controls { width: 6px;top: 205px; z-index: 21; margin-left:-10px;}
+	    	.controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+	    				border:1px solid #3F4344; -webkit-border-radius:500px; 
+	    				color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;}
+
+	    .overlayContent > ul{
+	    	display: inline-block;
+
+	    }
+	    .overlayContent > ul > li{
+	    	color:white;
+	    	margin-bottom: 15px;
+	    }
+	    .overlayContent > ul:first-child
+	    {
+	    	width:400px;
+	    }
+	    .overlayContent > ul:last-child
+	    {
+	    	vertical-align: top;
+	    }
+
+	    .overlayContent > ul:last-child > li
+	    {
+	    	margin-left: 30px;
+	    }
+	    .overlayContent > ul:last-child > li:first-child
+	    {
+	    	margin-left:0px;
+	    	list-style: none;
+	    	font-weight: bold;
+	    }
+	    .overlayBox{
+	    	width:800px;
+	    	height:400px;
+	    	margin-top: 100px;
+	    	margin-left:100px;
+	    }
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){				
+ 			$(".boxInfo").hide();
+
+
+ 			$(".r").click(function()
+ 			{
+				document.getElementById("myNav").style.width = "1024px";
+				document.getElementById("myNav").style.height = "768px";
+
+				$(".controls").css("display","none");
+ 			});
+
+			$("#myNav > span:first-child").click(function()
+ 			{
+ 				closeNav();
+ 				$(".controls").css("display","block");
+ 			});
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});
+
+ 		});
+ 		 		function closeNav() {
+		    document.getElementById("myNav").style.width = "0%";
+		}
+
+</script>
+
+<head>
+	<body>
+	<div id="myNav" class="overlay">
+			<span>X</span>	
+		<div class="overlayBox">
+			<h1>nexus</h1>
+			<h3>perimeter protection</h3>
+			<ul class="overlayContent">
+
+					<ul>
+						<li>Nexus Perimeter Barriers and Bollards create
+							boundaries across sports and recreation
+							fields, public parks and carparks. Preconfigured
+							to cater for 30 plus metre radiuses
+							or long straight distances,
+						</li>
+						<li>Nexus Perimeter Barriers and Bollards are
+							pre-engineered for rakes of up to four degrees
+							in either direction without custom rolling or
+							bending.
+						</li>
+						<li>Manufactured from galvanized, powdercoated
+							steel with custom colours and logo options for
+							architectural styling available on request.
+						</li>
+					</ul>
+					<ul>
+						<li>Applications</li>
+						<li>Sports and recreation fields</li>
+						<li>Public parks and ovals</li>
+						<li>Carparks and sightseeing</li>
+					</ul>
+				</ul>
+		</div>
+	</div>
+			<section id="containter">
+				<header>
+					<h1>Steel Railing</h1>
+					<span></span>
+				</header>
+				 <ul class="controls">
+	                <li class="r">R</li>
+	                <li class="s disb">S</li>
+	            </ul>
+					<article class="content">
+						<div class="feature"></div>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+
+				</footer>
+			</section>
+		</div>
+	</body>
+</head>
+</html>

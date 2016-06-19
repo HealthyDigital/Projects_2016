@@ -1,0 +1,104 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+	<style>
+		.overlayImage
+		{
+			width: 70px;
+			height: 200px;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+		}
+		.box
+		{
+			width:200px;
+			height:200px;
+			position: absolute;
+			margin-top: 250px;
+			margin-left:400px;
+			background-color: white;
+		}
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){				
+ 			$(".boxInfo").hide();
+
+ 			$(".tools > li").click(function()
+ 			{
+				document.getElementById("myNav").style.width = "1024px";
+				document.getElementById("myNav").style.height = "768px";
+
+				var toolSelect = $(this).data("id"); 
+
+				$(".overlayImage").css("background-image","url('./images/i"+toolSelect+".png')");
+ 			});
+
+ 			$("#myNav > span:first-child").click(function()
+ 			{
+ 				closeNav();
+ 			});
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});
+
+ 		})
+ 		function closeNav() {
+		    document.getElementById("myNav").style.width = "0%";
+		}
+</script>
+
+<head>
+	<body>
+		<div id="myNav" class="overlay">
+			<span>X</span>	
+			<div class="box">
+				<div class="overlayImage"></div>
+			</div>
+		</div>
+			<section id="containter">
+				<header>
+					<h1>Rail Selection</h1>
+					<span></span>
+				</header>
+
+
+
+					<article class="content">
+						<div class="feature"></div>
+						<ul class="tools">
+							<li data-id="1"></li>
+							<li data-id="2"></li>
+							<li data-id="3"></li>
+							<li data-id="4"></li>
+							<li data-id="5"></li>
+							<li data-id="6"></li>
+							<li data-id="7"></li>
+							<li data-id="8"></li>
+
+						</ul>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+
+				</footer>
+			</section>
+		</div>
+	</body>
+</head>
+</html>

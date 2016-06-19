@@ -1,0 +1,154 @@
+<htmL>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 
+    <script type="text/javascript" src="./js/variables.js"></script>
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/touchy.js"></script>
+	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
+    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="./js/api.js"></script> 
+
+<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400,700' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/utils/Draggable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/plugins/CSSPlugin.min.js"></script>
+	<style>
+
+body {
+  background-color:black;
+  font-family: Signika Negative, Asap, sans-serif;
+}
+
+#container2 {
+	width:1024px;
+	height:468px;
+  overflow:visible; 
+  padding:0; 
+  position:absolute;
+  margin-top:20px;
+  margin-left:20px;
+}
+
+.box {
+	background-color: #91e600;
+	text-align: center;
+	font-family: Asap, Avenir, Arial, sans-serif;
+	width: 196px;
+	height: 100px;
+	line-height: 100px;
+	color: black;
+	position: absolute;
+	top:0;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+
+	</style>
+  	 
+</head>
+<script>
+    	$(function(){	
+
+		var $snap = $("#snap"),
+		  $liveSnap = $("#liveSnap"),
+			$container = $("#container2"),
+			gridWidth = 196,
+			gridHeight = 100,
+			gridRows = 6,
+			gridColumns = 5,
+			i, x, y;
+
+		//loop through and create the grid (a div for each cell). Feel free to tweak the variables above
+		for (i = 0; i < 20; i++) {
+			y = Math.floor(i / gridColumns) * gridHeight;
+			x = (i * gridWidth) % (gridColumns * gridWidth);
+			$("<div/>").css({position:"absolute", border:"1px solid #454545", width:gridWidth-1, height:gridHeight-1, top:y, left:x, background:"white"}).prependTo($container);
+		}
+
+		//set the container's size to match the grid, and ensure that the box widths/heights reflect the variables above
+		TweenLite.set($container, {height: "400", width: gridColumns * gridWidth + 1});
+		TweenLite.set(".box", {width:gridWidth, height:gridHeight, lineHeight:gridHeight + "px"});
+
+		//the update() function is what creates the Draggable according to the options selected (snapping).
+		function update() {
+		  var snap = $snap.prop("checked"),
+		      liveSnap = $liveSnap.prop("checked");
+			Draggable.create(".box", {
+				bounds:$container,
+				edgeResistance:0.65,
+				type:"x,y",
+				throwProps:true,
+		    autoScroll:true,
+				liveSnap:liveSnap,
+				snap:{
+					x: function(endValue) {
+						return (snap || liveSnap) ? Math.round(endValue / gridWidth) * gridWidth : endValue;
+					},
+					y: function(endValue) {
+						return (snap || liveSnap) ? Math.round(endValue / gridHeight) * gridHeight : endValue;
+					}
+				}
+			});
+		}
+
+		//when the user toggles one of the "snap" modes, make the necessary updates...
+		$snap.on("change", applySnap);
+		$liveSnap.on("change", applySnap);
+
+		function applySnap() {
+			if ($snap.prop("checked") || $liveSnap.prop("checked")) {
+				$(".box").each(function(index, element) {
+					TweenLite.to(element, 0.5, {
+						x:Math.round(element._gsTransform.x / gridWidth) * gridWidth,
+						y:Math.round(element._gsTransform.y / gridHeight) * gridHeight,
+						delay:0.1,
+						ease:Power2.easeInOut
+					});
+				});
+			}
+			update();
+		}
+
+			update();
+
+ 			$(".boxInfo").hide();
+
+ 			$("footer > ul > li").click(function(){
+ 				$(".boxInfo").toggle(1300);
+ 			});
+
+ 		});
+</script>
+
+<head>
+	<body>
+
+			<section id="containter">
+				<header>
+					<h1>tactail indicators</h1>
+					<span></span>
+				</header>
+					<article class="content">
+					<div id="container2">
+							<div class="box" id="box1">Drag and throw me</div>
+							<div class="box" id="box2" style="left:392px; background-color:red;">Drag and throw me too</div>
+						</div>
+					</article>
+				<footer>
+					<ul>
+						<li></li>
+					</ul>
+					<div class="boxInfo">
+						<p>This is a test information Button Tap To Close</p>
+					</div>
+
+				</footer>
+			</section>
+	
+	</body>
+</head>
+</html>
