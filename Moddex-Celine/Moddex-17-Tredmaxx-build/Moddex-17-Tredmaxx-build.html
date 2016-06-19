@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MODDEX</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            article > h2{
+                padding-top:50px;
+                padding-bottom: 50px
+            } 
+
+            h4, .type, .model-id{
+                width:300px;
+            }
+
+            h5, .model-info{
+                width:400px;
+            }
+
+            h5, h4{
+                display: inline-block;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 30px
+            }
+
+            .type, .model-id, .model-info{
+                height:700px;
+                text-transform: uppercase;
+                float:left;
+
+            }
+
+            .type > li, .model-id > ul > li{
+                border-bottom: 1px solid white;
+                text-indent:30px;
+                font-size:25px;
+            }
+
+            .type > li{
+                line-height: 169px;
+            }
+
+            .model-id > ul{
+                position: absolute;
+                width: inherit;            }
+
+            .model-id > ul > li{
+                line-height:50px;
+            }
+
+            .model-id > ul[value=b] li{
+                font-size: 15px;
+                text-indent: 10px
+            }
+
+            .model-id, .model-id > ul{
+                display: none;
+            }
+
+            .selected{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .model-info > li{
+                text-align: center;
+                display: none;
+            }
+
+            #m-id{font-size:20px;}
+            #m-id{margin-top:50px;}
+            #m-des{margin-top:20px; text-transform: none; padding-left:10px; padding-right:10px}
+
+            #m-img{
+                width: inherit;
+                height:350px;
+                background:url('img/tredmaxx-items.png') no-repeat;
+                background-size: 300px auto;
+                margin-top:50px;
+            }
+
+            #m-img[value=GLA110]{background-position: 90px 0px}
+            #m-img[value=GLA111]{background-position: 90px -390px}
+            #m-img[value=GLA112]{background-position: 90px -780px}
+            #m-img[value=GLA113]{background-position: 90px -1160px}
+            #m-img[value=GLA210]{background-position: 90px -1545px}
+            #m-img[value=GLA211]{background-position: 90px -1940px}
+            #m-img[value=GLA212]{background-position: 90px -2340px}
+            #m-img[value=GLA213]{background-position: 90px -2720px}
+            #m-img[value=GLA310]{background-position: 90px -3090px}
+            #m-img[value=GLA311]{background-position: 90px -3480px}
+            #m-img[value=GLA312]{background-position: 90px -3870px}
+            #m-img[value=GLA313]{background-position: 90px -4240px}
+            #m-img[value=GLA510]{background-position: 90px -4690px}
+            #m-img[value=GLA511]{background-position: 90px -5050px}
+            #m-img[value=GLA512]{background-position: 120px -5380px}
+            #m-img[value=GLI070]{background-position: 140px -5700px; height:300px;}
+            #m-img[value=GLI150]{background-position: 140px -5980px; height:300px;}
+            #m-img[value=GLI230]{background-position: 140px -6280px; height:300px;}
+
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <article class='slide greyBG'>
+                <h2>Tredmaxx Configurations</h2>
+
+                <h4>type</h4>
+                <h4>model number</h4>
+                <h5>model information</h5>
+
+                <ul class='type'>
+                    <li value='h'>Heavy duty</li>
+                    <li value='f'>Heavy duty (FRP)</li>
+                    <li value='m'>Mutli-purpose</li>
+                </ul>
+                <div class='model-id'>
+                    <ul value='h'>
+                        <li>GLA110</li>
+                        <li>GLA111</li>
+                        <li>GLA112</li>
+                        <li>GLA113</li>
+                        <li>GLA210</li>
+                        <li>GLA211</li>
+                        <li>GLA212</li>
+                        <li>GLA213</li>
+                        <li>GLA510</li>
+                        <li>GLA511</li>
+                        <li>GLA512</li>
+                    </ul>
+                    <ul value='m'>
+                        <li>GLA310</li>
+                        <li>GLA311</li>
+                        <li>GLA312</li>
+                        <li>GLA313</li>
+                    </ul>
+                    <ul value='f'>
+                        <li>GLI070</li>
+                        <li>GLI150</li>
+                        <li>GLI230</li>
+                    </ul>
+                </div>
+                <ul class='model-info'>
+                    <li id='m-id'></li>
+                    <li id='m-des'></li>
+                    <li id='m-img'></li>
+                </ul>
+            </article>
+        </div>
+
+        <script src = 'js/jquery-1.11.0.min.js'></script>
+        <script src = 'js/jquery-ui.js'></script>
+        <script src = 'js/touchy.js'></script>
+        <script src = 'js/script.js'></script>
+        <script>
+            catalogue = {
+                "GLA110" : "Heavy duty marine grade aluminium (clear anodised) stair nosing with 4 bars of carborundum infill for hard substrate stairs.",
+                "GLA111" : "Heavy duty marine grade aluminium (clear anodised) stair nosing with 4 bars of carborundum infill for stairs with vinyl/rubber coverings.",
+                "GLA112" : "Heavy duty marine grade aluminium (clear anodised) stair nosing with 4 bars of carborundum infill for hard substrate stairs. AS 1428.1 compliant.",
+                "GLA113" : "Heavy duty marine grade aluminium (clear anodised) stair nosing with 4 bars of carborundum infill for stairs with tiles/rubber coverings. AS 1428.1 compliant. Carborundum infill colours available in black, grey, yellow, white and luminescent.",
+                "GLA210" : "Heavy duty marine grade aluminium (clear anodised) stair nosing with carborundum infill for hard substrate stairs.",
+                "GLA211" : "Heavy duty marine grade aluminium (clear anodised) stair nosing with carborundum infill for stairs with vinyl/rubber coverings.",
+                "GLA212" : "Heavy duty marine grade aluminium (clear anodised) stair nosing with carborundum infill for hard substrate stairs. AS 1428.1 compliant.",
+                "GLA213" : "Heavy duty marine grade aluminium (clear anodised) stair nosing with carborundum infill for stairs with tiles/rubber coverings. AS 1428.1 compliant. Santoprene infill colours available in black, grey, yellow and white.",
+                "GLA310" : "Multi-purpose marine grade aluminium (clear anodised) stair nosing with non-slip santoprene infill for hard substrate stairs.",
+                "GLA311" : "Multi-purpose marine grade aluminium (clear anodised) stair nosing with non-slip santoprene infill for stairs with vinyl/rubber coverings.",
+                "GLA312" : "Multi-purpose marine grade aluminium (clear anodised) stair nosing with non-slip santoprene infill for hard substrate stairs. AS 1428.1 compliant.",
+                "GLA313" : "Multi-purpose marine grade aluminium (clear anodised) stair nosing with non-slip santoprene infill for stairs with tiles/rubber coverings. AS 1428.1 compliant. Carborundum infill colours available in black, grey, yellow, white and luminescent.",
+                "GLA510" : "Heavy duty marine grade aluminium (clear anodised) tread insert with 4 bars of carborundum infill for rebated applications. Carborundum infill colours available in black, grey, yellow, white and luminescent",
+                " GLA511" : "Heavy duty marine grade aluminium (clear anodised) tread insert with carborundum infill for rebated applications.",
+                "GLA512" : "Heavy duty marine grade aluminium (clear anodised) tread insert with carborundum infill for rebated applications. Carborundum infill colours available in black, grey, yellow, white and luminescent",
+                " GLI070" : "Heavy duty reinforced fiberglass (FRP) stair nosing with carborundum coating for hard substrate stairs",
+                "GLI150" : "Heavy duty reinforced fiberglass (FRP) stair nosing with carborundum coating for hard substrate stairs",
+                "GLI230" : "Heavy duty reinforced fiberglass (FRP) stair nosing with carborundum coating for hard substrate stairs."
+            }
+
+            $('.type > li').on('tap', function(){
+                var c = $(this).attr('value');
+                var n = $(this).siblings();
+                $('.model-id li').removeClass('selected');
+
+                $(n).hasClass('selected')?
+                    (
+                        $(n).removeClass('selected'),
+                        $(this).addClass('selected'),
+                        $('.model-id > ul').hide(),
+                        $('.model-id > ul[value=' + c + ']').fadeIn()
+                    ) :
+                    (
+                         $(this).hasClass('selected') ?
+                        (
+                            $(this).removeClass('selected'),
+                            $('.model-id').hide('slide', {direction: 'left'}, 500)
+                        ) :
+                        (
+                            $(this).addClass('selected'),
+                            $('.model-id > ul').hide(),
+                            $('.model-id > ul[value=' + c + ']').show(),
+                            $('.model-id').show('slide', {direction: 'left'}, 500)
+                            
+                        )
+                    )
+
+                lookup_model(null);
+            })
+
+            $('.model-id li').on('tap', function(){
+                var id = $(this).html();
+                var n = $(this).siblings()
+
+                $(n).hasClass('selected')?
+                (
+                    $(n).removeClass('selected'),
+                    $(this).addClass('selected'),
+                    lookup_model(id)
+                ) :
+                (
+                    $(this).hasClass('selected') ?
+                    (
+                        $(this).removeClass('selected'),
+                        lookup_model(null)
+                    ):
+                    (
+                        $(this).addClass('selected'),
+                        lookup_model(id)
+                    )
+                )
+            })
+
+            function lookup_model(id){
+                var value = id;
+                id == null?
+                    (
+                        $('.model-info > li').is(':visible') ?  $('.model-info > li').fadeOut() : null
+                    ):
+                    (
+                        value = value.replace(/\./g, '').replace('/', ''),
+                        $('#m-img').attr('value', value),
+                        $('#m-id').html(id),
+                        $('#m-des').html(catalogue[value]),
+                        $('.model-info > li').is(':visible') ? null : $('.model-info > li').fadeIn()
+                    )
+            }
+
+        </script>
+    </body>
+</html>

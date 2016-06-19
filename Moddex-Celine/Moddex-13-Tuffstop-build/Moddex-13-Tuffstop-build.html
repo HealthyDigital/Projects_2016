@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MODDEX</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            article > h2{
+                padding-top:50px;
+                padding-bottom: 50px
+            } 
+
+            h4, .type, .model-id{
+                width:300px;
+            }
+
+            h5, .model-info{
+                width:400px;
+            }
+
+            h5, h4{
+                display: inline-block;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 30px
+            }
+
+            .type, .model-id, .model-info{
+                height:700px;
+                text-transform: uppercase;
+                float:left;
+
+            }
+
+            .type > li, .model-id > ul > li{
+                border-bottom: 1px solid white;
+                text-indent:30px;
+                font-size:25px;
+            }
+
+            .type > li{
+                line-height: 169px;
+            }
+
+            .model-id > ul{
+                position: absolute;
+                width: inherit;            }
+
+            .model-id > ul > li{
+                line-height:50px;
+            }
+
+            .model-id > ul[value=b] li{
+                font-size: 15px;
+                text-indent: 10px
+            }
+
+            .model-id, .model-id > ul{
+                display: none;
+            }
+
+            .selected{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .model-info > li{
+                text-align: center;
+                display: none;
+            }
+
+            #m-id{font-size:20px;}
+            #m-id{margin-top:50px;}
+            #m-des{margin-top:20px; text-transform: none;}
+
+            #m-img{
+                width: inherit;
+                height:200px;
+                background:url('img/tuffstop-items.png') no-repeat;
+                background-size: 100% auto;
+                margin-top:50px;
+            }
+
+            #m-img[value=TS10]{background-position: 60px -36px}
+            #m-img[value=TS15]{background-position: 30px -240px}
+            #m-img[value=TS20]{background-position: 55px -450px}
+            #m-img[value=TS25]{background-position: 5px -670px}
+            #m-img[value=TS30]{background-position: 30px -890px}
+            #m-img[value=TS35]{background-position: 15px -1110px}
+            #m-img[value=TS40]{background-position: 15px -1310px}
+            #m-img[value=TS60]{background-position: 15px -1555px}
+            #m-img[value=TS80]{background-position: 16px -1735px}
+            #m-img[value=TS01]{background-position: 145px -1935px; height:290px;}
+            #m-img[value=TS02]{background-position: 145px -2255px; height:290px;}
+            #m-img[value=TS5300900T4TS530Y0900T4]{background-position: 120px -2580px}
+            #m-img[value=TS5501050T4TS550Y1050T4]{background-position: 120px -2790px}
+            #m-img[value=TS550Y1300T4]{background-position: 120px -3015px}
+            #m-img[value=TS5601050T4TS560Y1050T4]{background-position: 120px -3230px}
+            #m-img[value=TS5300900GDTS530Y0900GD]{background-position: 120px -3470px}
+            #m-img[value=TS5501050GDTS550Y1050GD]{background-position: 120px -3680px}
+            #m-img[value=TS550Y1300GD]{background-position:120px -3915px}
+            #m-img[value=TS5601050GDTS560Y1050GD]{background-position:120px -4135px}
+
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <article class='slide greyBG'>
+                <h2>Tuffstop Configurations</h2>
+
+                <h4>type</h4>
+                <h4>model number</h4>
+                <h5>model information</h5>
+
+                <ul class='type'>
+                    <li value='t'>Trolley bays</li>
+                    <li value='s'>Signboards</li>
+                    <li value='b'>Safety Bollards</li>
+                </ul>
+                <div class='model-id'>
+                    <ul value='t'>
+                        <li>TS10</li>
+                        <li>TS15</li>
+                        <li>TS20</li>
+                        <li>TS25</li>
+                        <li>TS30</li>
+                        <li>TS35</li>
+                        <li>TS40</li>
+                        <li>TS60</li>
+                        <li>TS80</li>
+                    </ul>
+                    <ul value='s'>
+                        <li>TS01</li>
+                        <li>TS02</li>
+                    </ul>
+                    <ul value='b'>
+                        <li>TS530.0900.T4/TS530Y.0900.T4</li>
+                        <li>TS550.1050.T4/TS550Y.1050.T4</li>
+                        <li>TS550Y.1300.T4</li>
+                        <li>TS560.1050.T4/TS560Y.1050.T4</li>
+                        <li>TS530.0900.GD/TS530Y.0900.GD</li>
+                        <li>TS550.1050.GD/TS550Y.1050.GD</li>
+                        <li>TS550Y.1300.GD</li>
+                        <li>TS560.1050.GD/TS560Y.1050.GD</li>
+                    </ul>
+                </div>
+                <ul class='model-info'>
+                    <li id='m-id'></li>
+                    <li id='m-des'></li>
+                    <li id='m-img'></li>
+                </ul>
+            </article>
+        </div>
+
+        <script src = 'js/jquery-1.11.0.min.js'></script>
+        <script src = 'js/jquery-ui.js'></script>
+        <script src = 'js/touchy.js'></script>
+        <script src = 'js/script.js'></script>
+        <script>
+            catalogue = {
+                "TS10" : "Single trolley bay",
+                "TS15" : "Single back to back trolley bay",
+                "TS20" : "Double trolley bay",
+                "TS25" : "Double back to back trolley bay",
+                "TS30" : "Triple trolley bay",
+                "TS35" : "Triple back to back trolley bay",
+                "TS40" : "Four bay trolley corral",
+                "TS60" : "Six bay trolley corral",
+                "TS80" : "Eight trolley bay corral",
+                "TS01" : "Signboard Kit - Single Sided",
+                "TS02" : "Signboard Kit - Double Sided",
+                "TS5300900T4TS530Y0900T4" : "No description available",
+                "TS5501050T4TS550Y1050T4" : "125NB top mount bollard, HDG",
+                "TS550Y1300T4" : "No description available",
+                "TS5601050T4TS560Y1050T4" : "150NB top mount bollard, HDG",
+                "TS5300900GDTS530Y0900GD" : "No description available",
+                "TS5501050GDTS550Y1050.GD" : "125NB inground mount bollard, yellow",
+                "TS550Y1300GD" : "125NB inground mount bollard, yellow",
+                "TS5601050GDTS560Y1050GD" : "150NB inground mount bollard, HDG"
+            }
+
+            $('.type > li').on('tap', function(){
+                var c = $(this).attr('value');
+                var n = $(this).siblings();
+                $('.model-id li').removeClass('selected');
+
+                $(n).hasClass('selected')?
+                    (
+                        $(n).removeClass('selected'),
+                        $(this).addClass('selected'),
+                        $('.model-id > ul').hide(),
+                        $('.model-id > ul[value=' + c + ']').fadeIn()
+                    ) :
+                    (
+                         $(this).hasClass('selected') ?
+                        (
+                            $(this).removeClass('selected'),
+                            $('.model-id').hide('slide', {direction: 'left'}, 500)
+                        ) :
+                        (
+                            $(this).addClass('selected'),
+                            $('.model-id > ul').hide(),
+                            $('.model-id > ul[value=' + c + ']').show(),
+                            $('.model-id').show('slide', {direction: 'left'}, 500)
+                            
+                        )
+                    )
+
+                lookup_model(null);
+            })
+
+            $('.model-id li').on('tap', function(){
+                var id = $(this).html();
+                var n = $(this).siblings()
+
+                $(n).hasClass('selected')?
+                (
+                    $(n).removeClass('selected'),
+                    $(this).addClass('selected'),
+                    lookup_model(id)
+                ) :
+                (
+                    $(this).hasClass('selected') ?
+                    (
+                        $(this).removeClass('selected'),
+                        lookup_model(null)
+                    ):
+                    (
+                        $(this).addClass('selected'),
+                        lookup_model(id)
+                    )
+                )
+            })
+
+            function lookup_model(id){
+                var value = id;
+                id == null?
+                    (
+                        $('.model-info > li').is(':visible') ?  $('.model-info > li').fadeOut() : null
+                    ):
+                    (
+                        value = value.replace(/\./g, '').replace('/', ''),
+                        $('#m-img').attr('value', value),
+                        $('#m-id').html(id),
+                        $('#m-des').html(catalogue[value]),
+                        $('.model-info > li').is(':visible') ? null : $('.model-info > li').fadeIn()
+                    )
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MODDEX</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            .menu{
+                position: relative;
+                top:100px;
+                left:50px;
+            }
+            .menu > li > span{
+                padding-top:20px;
+                display: block;
+                font-size:35px;
+                line-height:100px;
+                border-top:1px solid white;
+                border-bottom: 1px solid white;
+                text-indent: 20px;
+                width:500px;
+
+                background:transparent;
+                webkit-transition: background 0.5s;
+                transition: background 0.5s;
+
+            }
+
+            .menu > li.active > span{
+                background:rgba(255, 255, 255, 0.4);
+                color: black;
+            }
+
+            .menu li ul{
+                position: absolute;
+                left:540px;
+                top:0px;
+                display: none;
+            }
+
+            .menu li ul > li{
+                font-size: 30px;
+                padding-top: 20px;
+                line-height:70px;
+                width:350px;
+                text-align: center;
+            }
+
+            .menu li ul li:active{
+                text-decoration: underline;
+            }
+
+            .menu li ul li > span{
+                display: block;
+                font-size: 15px;
+                line-height:20px;
+                margin-top:-20px;
+                display: none;
+            }
+
+            .menu > li:first-child ul li:nth-child(2){
+                background-position:-10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <article class='slide crossBGw greyBG'>
+                <span class='logo'>MODDEX PDF</span>
+                <ul class='menu'>
+                    <li>
+                        <span>Barrier Systems</span>
+                        <ul id='pages'>
+                            <li id='a'>assistrail</li>
+                            <li id='b'>bikesafe</li>
+                            <li id='c'>conectabal</li>
+                            <li id='n'>nexus</li>
+                            <li id='t1'>tuffrail</li>
+                            <li id='t2'>tuffstop</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Safety Accessories</span>
+                        <ul>
+                            <li id='i'>intac</li>
+                            <li id='t3'>tredmaxx</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+        </div>
+
+        <script src = 'js/jquery-1.11.0.min.js'></script>
+        <script src = 'js/jquery-ui.js'></script>
+        <script src = 'js/touchy.js'></script>
+        <script src = 'js/script.js'></script>
+        <script>
+            $( function(){
+            //prevent iPad rubber band effect
+                navToSlide('#a', 'Moddex-03-Assistrail');
+                navToSlide('#b', 'Moddex-05-Bikesafe');
+                navToSlide('#c', 'Moddex-07-Conectabal');
+                navToSlide('#n', 'Moddex-09-Nexus');
+                navToSlide('#t1', 'Moddex-10-Tuffrail');
+                navToSlide('#t2', 'Moddex-12-Tuffstop');
+                navToSlide('#i', 'Moddex-14-Intac');
+                navToSlide('#t3', 'Moddex-16-Tredmaxx');
+            });
+
+            $('.menu > li > span').on('tap', function(){
+                    var current;
+                    var parent = $(this).parent()
+
+                    $(parent).hasClass('active')?
+                    (
+                        $(parent).removeClass('active'),
+                        $(parent).find('ul').hide('slide', {direction:'down'}, 500)
+                    ):
+
+                    (
+                        current = $('.menu > li.active'),
+                        $(current).removeClass('active'),
+                        $(current).find('ul').hide('slide', {direction:'down'}, 500),
+
+                        $(parent).addClass('active'),
+                        $(parent).find('ul').show('slide', {direction:'up'}, 500)
+                    );
+            })
+        </script>
+    </body>
+</html>

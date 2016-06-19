@@ -1,0 +1,203 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MODDEX</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <style>
+            article > h2{
+                padding-top:50px;
+                padding-bottom: 50px
+            } 
+
+            h4, .type, .model-id{
+                width:300px;
+            }
+
+            h5, .model-info{
+                width:400px;
+            }
+
+            h5, h4{
+                display: inline-block;
+                text-align: center;
+                text-transform: uppercase;
+                line-height: 30px
+            }
+
+            .type, .model-id, .model-info{
+                height:700px;
+                text-transform: uppercase;
+                float:left;
+
+            }
+
+            .type > li, .model-id > ul > li{
+                border-bottom: 1px solid white;
+                text-indent:30px;
+                font-size:25px;
+            }
+
+            .type > li{
+                line-height: 169px;
+            }
+
+            .model-id > ul{
+                position: absolute;
+                width: inherit;            }
+
+            .model-id > ul > li{
+                line-height:50px;
+            }
+
+            .model-id > ul[value=b] li{
+                font-size: 15px;
+                text-indent: 10px
+            }
+
+            .model-id, .model-id > ul{
+                display: none;
+            }
+
+            .selected{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .model-info > li{
+                text-align: center;
+                display: none;
+            }
+
+            #m-id{font-size:20px;}
+            #m-id{margin-top:50px;}
+            #m-des{margin-top:20px; text-transform: none; padding-left:10px; padding-right:10px;}
+
+            #m-img{
+                width: 350px;
+                height:400px;
+                margin-left:25px;
+                background:url('img/intac-items.png') no-repeat;
+                background-size: auto 600px;
+                margin-top:50px;
+            }
+
+            #m-img[value=IN101]{background-position: -10px -140px}
+            #m-img[value=IN151]{background-position: -370px -140px}
+            #m-img[value=IN201]{background-position: -700px -140px}
+            #m-img[value=IN251]{background-position: -1045px -140px}
+
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <article class='slide greyBG'>
+                <h2>Intac Configurations</h2>
+
+                <h4>type</h4>
+                <h4>model number</h4>
+                <h5>model information</h5>
+
+                <ul class='type'>
+                    <li value='p'>PVC Tactile</li>
+                    <li value='c'>PVC Tactile</li>
+                </ul>
+                <div class='model-id'>
+                    <ul value='p'>
+                        <li>IN101</li>
+                        <li>IN151</li>
+                    </ul>
+                    <ul value='c'>
+                        <li>IN201</li>
+                        <li>IN251</li>
+                    </ul>
+                </div>
+                <ul class='model-info'>
+                    <li id='m-id'></li>
+                    <li id='m-des'></li>
+                    <li id='m-img'></li>
+                </ul>
+            </article>
+        </div>
+
+        <script src = 'js/jquery-1.11.0.min.js'></script>
+        <script src = 'js/jquery-ui.js'></script>
+        <script src = 'js/touchy.js'></script>
+        <script src = 'js/script.js'></script>
+        <script>
+            catalogue = {
+                "IN101" : "PVC Hazard Type - 300 x 300mm (Silver, Yellow, Black, White, Blue, Beige, Grey, Red, Green)",
+                "IN151" : "PVC Directional Type - 300 x 150mm (Silver, Yellow, Black, White, Blue, Beige, Grey, Red, Green)",
+                "IN201" : "Ceramic Hazard Type - 300 x 300mm (Yellow, Ivory, Charcoal",
+                "IN251" : "Ceramic Directional Type - 300 x 300mm (Yellow, Ivory, Charcoal",
+            }
+
+            $('.type > li').on('tap', function(){
+                var c = $(this).attr('value');
+                var n = $(this).siblings();
+                $('.model-id li').removeClass('selected');
+
+                $(n).hasClass('selected')?
+                    (
+                        $(n).removeClass('selected'),
+                        $(this).addClass('selected'),
+                        $('.model-id > ul').hide(),
+                        $('.model-id > ul[value=' + c + ']').fadeIn()
+                    ) :
+                    (
+                         $(this).hasClass('selected') ?
+                        (
+                            $(this).removeClass('selected'),
+                            $('.model-id').hide('slide', {direction: 'left'}, 500)
+                        ) :
+                        (
+                            $(this).addClass('selected'),
+                            $('.model-id > ul').hide(),
+                            $('.model-id > ul[value=' + c + ']').show(),
+                            $('.model-id').show('slide', {direction: 'left'}, 500)
+                            
+                        )
+                    )
+
+                lookup_model(null);
+            })
+
+            $('.model-id li').on('tap', function(){
+                var id = $(this).html();
+                var n = $(this).siblings()
+
+                $(n).hasClass('selected')?
+                (
+                    $(n).removeClass('selected'),
+                    $(this).addClass('selected'),
+                    lookup_model(id)
+                ) :
+                (
+                    $(this).hasClass('selected') ?
+                    (
+                        $(this).removeClass('selected'),
+                        lookup_model(null)
+                    ):
+                    (
+                        $(this).addClass('selected'),
+                        lookup_model(id)
+                    )
+                )
+            })
+
+            function lookup_model(id){
+                var value = id;
+                id == null?
+                    (
+                        $('.model-info > li').is(':visible') ?  $('.model-info > li').fadeOut() : null
+                    ):
+                    (
+                        value = value.replace(/\./g, '').replace('/', ''),
+                        $('#m-img').attr('value', value),
+                        $('#m-id').html(id),
+                        $('#m-des').html(catalogue[value]),
+                        $('.model-info > li').is(':visible') ? null : $('.model-info > li').fadeIn()
+                    )
+            }
+
+        </script>
+    </body>
+</html>
