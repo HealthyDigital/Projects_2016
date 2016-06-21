@@ -1,15 +1,12 @@
-<htmL>
+<!DOCTYPE html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Page 17</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	 
-    <script type="text/javascript" src="./js/variables.js"></script>
 	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
+    <script type="text/javascript" src="./js/common.js"></script> 
 
-	<style>
+	<style type="text/css">
 		.bodyContent
 		{
 			height:400px;
@@ -64,49 +61,6 @@
 	</style>
   	 
 </head>
-<script>
-    	$(function(){			
-    		var imagePlaced = 0;
-
- 			$(".boxInfo").hide();
-
- 			$(".bodyContent > li:last-child").click(function(){
-
- 				if(imagePlaced == 1)
- 				{
- 					$(".bodyContent > li:last-child").css("background-image","url('./images/side1.png')");
- 					$(".bubbleBox").css("background-image","url('./images/side1Bubble.png')")
- 					
- 				}
- 				if(imagePlaced == 0)
- 				{
- 					$(".bodyContent > li:last-child").css("background-image","url('./images/side2.png')");
- 					$(".bubbleBox").css("background-image","url('./images/side2Bubble.png')")
- 					
- 				}
- 				if(imagePlaced == 0)
- 				{
- 					imagePlaced = 1;
- 				}
- 				else
- 				{
- 					imagePlaced = 0;
- 				}
-
- 			});
-
- 			$("footer > ul > li").click(function(){
- 				$(".boxInfo").toggle(1300);
- 			});
-
- 		});
- 		 		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-
-</script>
-
-<head>
 	<body>
 		<section id="containter">
 			<header>
@@ -130,6 +84,32 @@
 
 			</footer>
 		</section>
+			<script type="text/javascript">
+		    	$(function(){			
+		    		var imagePlaced = 0;
+
+		 			$(".boxInfo").hide();
+
+		 			$(".bodyContent > li:last-child").click(function(){
+
+		 				if(imagePlaced == 1){
+		 					$(".bodyContent > li:last-child").css("background-image","url('./images/side1.png')");
+		 					$(".bubbleBox").css("background-image","url('./images/side1Bubble.png')")		
+		 				}
+		 				if(imagePlaced == 0){
+		 					$(".bodyContent > li:last-child").css("background-image","url('./images/side2.png')");
+		 					$(".bubbleBox").css("background-image","url('./images/side2Bubble.png')")	
+		 				}
+		 				if(imagePlaced == 0){
+		 					imagePlaced = 1;
+		 				}
+		 				else{
+		 					imagePlaced = 0;
+		 				}
+
+		 			});
+
+				});
+			</script>
 	</body>
-</head>
 </html>

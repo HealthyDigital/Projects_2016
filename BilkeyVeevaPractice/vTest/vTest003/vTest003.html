@@ -1,15 +1,10 @@
-<htmL>
+<!DOCTYPE html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	 
-    <script type="text/javascript" src="./js/variables.js"></script>
+	<title>Page 3</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
-
-	<style>
+    <script type="text/javascript" src="./js/common.js"></script>
+	<style type="text/css">
 		.overlayImage
 		{
 			width: 500px;
@@ -40,35 +35,6 @@
 	</style>
   	 
 </head>
-<script>
-    	$(function(){				
- 			$(".boxInfo").hide();
-
- 			$(".feature").click(function()
- 			{
-				document.getElementById("myNav").style.width = "1024px";
-				document.getElementById("myNav").style.height = "768px";
-
-
-				$(".overlayImage").css("background-image","url('./images/rail.png')");
- 			});
-
- 			$("#myNav > span:first-child").click(function()
- 			{
- 				closeNav();
- 			});
-
- 			$("footer > ul > li").click(function(){
- 				$(".boxInfo").toggle(1300);
- 			});
-
- 		})
- 		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-</script>
-
-<head>
 	<body>
 		<div id="myNav" class="overlay">
 			<span>X</span>	
@@ -94,7 +60,17 @@
 
 				</footer>
 			</section>
-		</div>
+		<script type="text/javascript">
+	    	$(function(){				
+
+	 			$(".feature").click(function()
+	 			{
+					document.getElementById("myNav").style.width = "1024px";
+					document.getElementById("myNav").style.height = "768px";
+					$(".overlayImage").css("background-image","url('./images/rail.png')");
+				});
+	 	});
+	</script>
+
 	</body>
-</head>
 </html>

@@ -1,15 +1,11 @@
-<htmL>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	 
-    <script type="text/javascript" src="./js/variables.js"></script>
-	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
-
-	<style>
+	<title>Second Page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="./js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script> 
+	<style type="text/css">
 		.overlayImage
 		{
 			width: 70px;
@@ -29,36 +25,7 @@
 	</style>
   	 
 </head>
-<script>
-    	$(function(){				
- 			$(".boxInfo").hide();
 
- 			$(".tools > li").click(function()
- 			{
-				document.getElementById("myNav").style.width = "1024px";
-				document.getElementById("myNav").style.height = "768px";
-
-				var toolSelect = $(this).data("id"); 
-
-				$(".overlayImage").css("background-image","url('./images/i"+toolSelect+".png')");
- 			});
-
- 			$("#myNav > span:first-child").click(function()
- 			{
- 				closeNav();
- 			});
-
- 			$("footer > ul > li").click(function(){
- 				$(".boxInfo").toggle(1300);
- 			});
-
- 		})
- 		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-</script>
-
-<head>
 	<body>
 		<div id="myNav" class="overlay">
 			<span>X</span>	
@@ -71,9 +38,6 @@
 					<h1>Rail Selection</h1>
 					<span></span>
 				</header>
-
-
-
 					<article class="content">
 						<div class="feature"></div>
 						<ul class="tools">
@@ -98,7 +62,5 @@
 
 				</footer>
 			</section>
-		</div>
 	</body>
-</head>
 </html>

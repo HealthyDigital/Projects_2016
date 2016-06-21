@@ -1,15 +1,12 @@
-<htmL>
+<!DOCTYPE html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Page 14</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	 
-    <script type="text/javascript" src="./js/variables.js"></script>
 	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
+    <script type="text/javascript" src="./js/common.js"></script> 
 
-	<style>
+	<style type="text/css">
 
 		.feature
 		{
@@ -68,42 +65,7 @@
 	</style>
   	 
 </head>
-<script>
-    	$(function(){				
- 			$(".boxInfo").hide();
 
-
-			$(".feature").click(function()
- 			{
-				document.getElementById("myNav").style.width = "1024px";
-				document.getElementById("myNav").style.height = "768px";
-
-
-				$(".overlayImage").css("background-image","url('./images/graph.png')");
-				$(".overlayGraphData").css("background-image","url('./images/graphData.png')");
- 			});
-
- 			$("#myNav > span:first-child").click(function()
- 			{
- 				closeNav();
- 			});
-
-
-
- 			$("footer > ul > li").click(function(){
- 				$(".boxInfo").toggle(1300);
- 			});
-
- 			$(".graphData").hide().fadeIn(9000).delay(11000);
-
- 		});
-
- 		 function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-</script>
-
-<head>
 	<body>
 		<div id="myNav" class="overlay">
 			<span>X</span>	
@@ -131,6 +93,30 @@
 
 			</footer>
 		</section>
+		<script type="text/javascript">
+	    	$(function(){				
+	 			$(".boxInfo").hide();
+
+
+				$(".feature").click(function()
+	 			{
+					document.getElementById("myNav").style.width = "1024px";
+					document.getElementById("myNav").style.height = "768px";
+
+
+					$(".overlayImage").css("background-image","url('./images/graph.png')");
+					$(".overlayGraphData").css("background-image","url('./images/graphData.png')");
+	 			});
+
+	 			$("#myNav > span:first-child").click(function()
+	 			{
+	 				closeNav();
+	 			});
+
+
+	 			$(".graphData").hide().fadeIn(9000).delay(11000);
+
+	 		});
+		</script>
 	</body>
-</head>
 </html>

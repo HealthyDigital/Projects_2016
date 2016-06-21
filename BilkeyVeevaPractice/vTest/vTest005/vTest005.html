@@ -1,15 +1,11 @@
-<htmL>
+<!DOCTYPE html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	 
-    <script type="text/javascript" src="./js/variables.js"></script>
+	<title>Page 5</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
+    <script type="text/javascript" src="./js/common.js"></script> 
 
-	<style>
+	<style type="text/css">
 		.overlayImage
 		{
 			width: 500px;
@@ -27,18 +23,18 @@
 			margin-left: 200px;
 			background-color: white;
 		}
-
 		.bodyContent
 		{
 			position: absolute;
 			width:800px;
 			height:400px;
 		}
-		.bodyContent > ul
+		.bodyContent > li 
 		{
 			display: inline-block;
+			float: left;
 		}
-		.bodyContent > ul:last-child
+		.bodyContent > li:last-child > ul
 		{
 			width: 400px;
 			height: 400px;
@@ -49,13 +45,13 @@
 			margin-left: 150px;
 
 		}
-		.bodyContent > ul:first-child > li, .bodyContent > ul:first-child > h3{
+		.bodyContent > li:first-child > ul > li, .bodyContent > li:first-child > ul > li > h3{
 			color:grey;
 		}
-		.bodyContent > ul:first-child > li{
+		.bodyContent > li:first-child > ul > li{
 			margin-left: 20px;
 		}
-		.bodyContent > ul:first-child > p{
+		.bodyContent > li:first-child > ul > li > p{
 			color:grey;
 			width:300px;
 		}
@@ -111,30 +107,8 @@
 	</style>
   	 
 </head>
-<script>
-    	$(function(){		
-
- 			$(".feature").click(function()
- 			{
-				document.getElementById("myNav").style.width = "1024px";
-				document.getElementById("myNav").style.height = "768px";
 
 
-				$(".overlayImage").css("background-image","url('./images/rail.png')");
- 			});
-
- 			$("#myNav > span:first-child").click(function()
- 			{
- 				closeNav();
- 			});
-
- 		})
- 		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-</script>
-
-<head>
 	<body>
 		<div id="myNav" class="overlay">
 			<span>X</span>	
@@ -149,26 +123,30 @@
 				</header>
 					<article class="content">
 						<ul class="bodyContent">
-							<ul>
-								<p>Bikesafe Bikeway Barriers are designed to
-									provide the ultimate protection for pedestrians
-									and cyclists travelling at speed.</p>
+							<li>
+								<ul>
+									<li><p>Bikesafe Bikeway Barriers are designed to
+										provide the ultimate protection for pedestrians
+										and cyclists travelling at speed.</p></li>
 
-								<p>Pre-engineered, preconfigured and
-									independently load tested for compliance with
-									Austroad’s safety requirements for bikeways
-									and paths,</p>
+									<li><p>Pre-engineered, preconfigured and
+										independently load tested for compliance with
+										Austroad’s safety requirements for bikeways
+										and paths,</p></li>
 
-								<p>Bikesafe Bikeway Barriers are manufactured
-									from hot dip galvanized steel with flush
-									connection points for a smoother, safer finish.</p>
-								<h3>Applications</h3>
-								<li>Cycle paths and bikeways</li>
-								<li>Shared pedestrian paths</li>
-								<li>Protection over culverts</li>
-								<li>Footbridges</li>
-							</ul>
-							<ul></ul>
+									<li><p>Bikesafe Bikeway Barriers are manufactured
+										from hot dip galvanized steel with flush
+										connection points for a smoother, safer finish.</p></li>
+									<li><h3>Applications</h3></li>
+									<li>Cycle paths and bikeways</li>
+									<li>Shared pedestrian paths</li>
+									<li>Protection over culverts</li>
+									<li>Footbridges</li>
+								</ul>
+							</li>
+							<li>
+								<ul></ul>
+							</li>
 						</ul>
 					</article>
 				<footer>
@@ -187,7 +165,5 @@
 					</div>
 				</footer>
 			</section>
-		</div>
 	</body>
-</head>
 </html>

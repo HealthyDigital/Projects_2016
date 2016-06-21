@@ -1,71 +1,12 @@
-<htmL>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	 
-    <script type="text/javascript" src="./js/variables.js"></script>
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
-    <script type="text/javascript" src="./js/veeva-library-4.1.js"></script>
-
-	
-  	 
+	<script type="text/javascript" src="./js/common.js"></script> 	 
 </head>
-<script>
-    	$(function(){				
- 			$(".boxInfo").hide();
 
- 			$("nav > ul >li:first-child").hide().fadeIn(3200).delay(2000);
- 			$("nav > ul >li:nth-child(2)").hide().fadeIn(6200).delay(4000);
- 			$("nav > ul >li:nth-child(3)").hide().fadeIn(9200).delay(6000);
- 			$("nav > ul >li:last-child").hide().fadeIn(11200).delay(8000);
- 			$(".feature").hide().fadeIn(11200).delay(8000);
-
- 			$(".bubbles > li:first-child").animate({
- 				top: "200px",
- 				opacity: "1"
- 			},6500);
-
- 			$(".bubbles > li:last-child").animate({
- 				left:"700px",
- 				top: "200px",
- 				opacity: "1"
- 			},7500);
-
-
- 			$(".bubbles > li").click(function()
- 			{
-				document.getElementById("myNav").style.width = "1024px";
-				document.getElementById("myNav").style.height = "768px";
- 			});
-
- 			$("#myNav > span:first-child").click(function()
- 			{
- 				closeNav();
- 			});
-
- 			$("footer > ul > li").click(function(){
- 				$(".boxInfo").toggle(1300);
- 			});
-
-		$("header > nav > ul > li:nth-child(2)").click(function(){
-			com.veeva.clm.gotoSlide('vTest004.zip');
-		})
-		$("header > nav > ul > li:nth-child(3)").click(function(){
-			com.veeva.clm.gotoSlide('vTest005.zip');
-		})
-
- 		})
- 		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-</script>
-<style>
-
-</style>
-<head>
 	<body>
 		<div id="myNav" class="overlay">
 			<span>X</span>	
@@ -105,7 +46,40 @@
 
 				</footer>
 			</section>
-		</div>
-	</body>
-</head>
+					<script type="text/javascript">
+	    	$(function(){				
+	 			$("nav > ul >li:first-child").hide().fadeIn(3200).delay(2000);
+	 			$("nav > ul >li:nth-child(2)").hide().fadeIn(6200).delay(4000);
+	 			$("nav > ul >li:nth-child(3)").hide().fadeIn(9200).delay(6000);
+	 			$("nav > ul >li:last-child").hide().fadeIn(11200).delay(8000);
+	 			$(".feature").hide().fadeIn(11200).delay(8000);
+
+	 			$(".bubbles > li:first-child").animate({
+	 				top: "200px",
+	 				opacity: "1"
+	 			},6500);
+
+	 			$(".bubbles > li:last-child").animate({
+	 				left:"700px",
+	 				top: "200px",
+	 				opacity: "1"
+	 			},7500);
+
+
+	 			$(".bubbles > li").click(function()
+	 			{
+					document.getElementById("myNav").style.width = "1024px";
+					document.getElementById("myNav").style.height = "768px";
+	 			});
+
+
+			$("header > nav > ul > li:nth-child(2)").click(function(){
+				document.location = 'veeva:gotoSlide(vTest004.zip)';
+			});
+			$("header > nav > ul > li:nth-child(3)").click(function(){
+				document.location = 'veeva:gotoSlide(vTest005.zip)';
+			});
+ 		});
+	</script>
+  </body>
 </html>

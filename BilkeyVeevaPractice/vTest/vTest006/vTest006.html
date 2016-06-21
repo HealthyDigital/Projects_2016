@@ -1,15 +1,11 @@
-<htmL>
+<!DOCTYPE html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	 
-    <script type="text/javascript" src="./js/variables.js"></script>
+	<title>Page 6</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />	 
 	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
+    <script type="text/javascript" src="./js/common.js"></script> 
 
-	<style>
+	<style type="text/css">
 		.overlayImage
 		{
 			width: 500px;
@@ -35,14 +31,23 @@
 			height:430px;
 			margin-left: 35px;
 		}
-		.bodyContent > ul
+		.bodyContent > li{
+			list-style: none;
+		}
+		.bodyContent > li > ul
 		{
 			display: inline-block;
 			width: 400px;
 			height: 440px;
 			vertical-align: top;
+			float:left;
+			margin-left: 10px;
+
 		}
-		.bodyContent > ul:first-child
+		.bodyContent > li > ul {
+			list-style: none;
+		}
+		.bodyContent > li:first-child > ul
 		{
 
 			background-image: url('./images/stairsRails.png');
@@ -50,18 +55,18 @@
 
 
 		}
-		.bodyContent > ul:last-child{
+		.bodyContent > li:last-child > ul{
 			background-color: grey;
 			font-size:14px;
 
 		}
-		.bodyContent > ul:last-child > li, .bodyContent > ul:last-child > h3{
+		.bodyContent > li:last-child > ul > li, .bodyContent > li:last-child > ul > li > h3{
 			color:white;
 		}
-		.bodyContent > ul:last-child > li{
+		.bodyContent > li:last-child > ul > li{
 			margin-left: 20px;
 		}
-		.bodyContent > ul:last-child > p{
+		.bodyContent > li:last-child > ul > li > p{
 			color:white;
 			width:300px;
 		}
@@ -81,121 +86,92 @@
 			padding:10px;
 		}
 
+		@-webkit-keyframes glowing {
+		  0% { background-color: #983F00; -webkit-box-shadow: 0 0 3px #983F00; }
+		  50% { background-color: #983F00; -webkit-box-shadow: 0 0 40px #983F00; }
+		  100% { background-color: #983F00; -webkit-box-shadow: 0 0 3px #983F00; }
+		}
 
+		@-moz-keyframes glowing {
+		  0% { background-color: #983F00; -moz-box-shadow: 0 0 3px #983F00; }
+		  50% { background-color: #983F00; -moz-box-shadow: 0 0 40px #983F00; }
+		  100% { background-color: #983F00; -moz-box-shadow: 0 0 3px #983F00; }
+		}
 
-@-webkit-keyframes glowing {
-  0% { background-color: #983F00; -webkit-box-shadow: 0 0 3px #983F00; }
-  50% { background-color: #983F00; -webkit-box-shadow: 0 0 40px #983F00; }
-  100% { background-color: #983F00; -webkit-box-shadow: 0 0 3px #983F00; }
-}
+		@-o-keyframes glowing {
+		  0% { background-color: #983F00; box-shadow: 0 0 3px #B20000; }
+		  50% { background-color: #983F00; box-shadow: 0 0 40px #983F00; }
+		  100% { background-color: #983F00; box-shadow: 0 0 3px #983F00; }
+		}
 
-@-moz-keyframes glowing {
-  0% { background-color: #983F00; -moz-box-shadow: 0 0 3px #983F00; }
-  50% { background-color: #983F00; -moz-box-shadow: 0 0 40px #983F00; }
-  100% { background-color: #983F00; -moz-box-shadow: 0 0 3px #983F00; }
-}
+		@keyframes glowing {
+		  0% { background-color: #983F00; box-shadow: 0 0 3px #983F00; }
+		  50% { background-color: #983F00; box-shadow: 0 0 40px #983F00; }
+		  100% { background-color: #983F00; box-shadow: 0 0 3px #983F00; }
+		}
 
-@-o-keyframes glowing {
-  0% { background-color: #983F00; box-shadow: 0 0 3px #B20000; }
-  50% { background-color: #983F00; box-shadow: 0 0 40px #983F00; }
-  100% { background-color: #983F00; box-shadow: 0 0 3px #983F00; }
-}
-
-@keyframes glowing {
-  0% { background-color: #983F00; box-shadow: 0 0 3px #983F00; }
-  50% { background-color: #983F00; box-shadow: 0 0 40px #983F00; }
-  100% { background-color: #983F00; box-shadow: 0 0 3px #983F00; }
-}
-
-.box {
-  -webkit-animation: glowing 1500ms infinite;
-  -moz-animation: glowing 1500ms infinite;
-  -o-animation: glowing 1500ms infinite;
-  animation: glowing 1500ms infinite;
-}
+		.box {
+		  -webkit-animation: glowing 1500ms infinite;
+		  -moz-animation: glowing 1500ms infinite;
+		  -o-animation: glowing 1500ms infinite;
+		  animation: glowing 1500ms infinite;
+		}
 
 	</style>
   	 
 </head>
-<script>
-    	$(function(){		
 
- 			$(".feature").click(function()
- 			{
-				document.getElementById("myNav").style.width = "1024px";
-				document.getElementById("myNav").style.height = "768px";
-
-
-				$(".overlayImage").css("background-image","url('./images/stairsRails.png')");
- 			});
-
- 			$("#myNav > span:first-child").click(function()
- 			{
- 				closeNav();
- 			});
-
- 		})
- 		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-</script>
-
-<head>
 	<body>
-		<div id="myNav" class="overlay">
-			<span>X</span>	
-			<div class="box">
-				<div class="overlayImage"></div>
-			</div>
-		</div>
-			<section id="containter">
-				<header>
-					<h1>Stairs and Rails</h1>
-					<span></span>
-				</header>
-					<article class="content">
-						<ul class="bodyContent">
+		<section id="containter">
+			<header>
+				<h1>Stairs and Rails</h1>
+				<span></span>
+			</header>
+				<article class="content">
+					<ul class="bodyContent">
+						<li>
 							<ul></ul>
+						</li>
+						<li>
 							<ul>
-								<p>Bikesafe Bikeway Barriers are designed to</p>
-								<p>Bikesafe Bikeway Barriers are designed to</p>
-								<p>Bikesafe Bikeway Barriers are designed to
+								<li><p>Bikesafe Bikeway Barriers are designed to</p></li>
+								<li><p>Bikesafe Bikeway Barriers are designed to</p></li>
+								<li><p>Bikesafe Bikeway Barriers are designed to
 									provide the ultimate protection for pedestrians
-									and cyclists travelling at speed.</p>
+									and cyclists travelling at speed.</p></li>
 
-								<p>Pre-engineered, preconfigured and
+								<li><p>Pre-engineered, preconfigured and
 									independently load tested for compliance with
 									Austroad’s safety requirements for bikeways
-									and paths,</p>
+									and paths,</p></li>
 
-								<p>Bikesafe Bikeway Barriers are manufactured
+								<li><p>Bikesafe Bikeway Barriers are manufactured
 									from hot dip galvanized steel with flush
-									connection points for a smoother, safer finish.</p>
-								<h3>Applications</h3>
+									connection points for a smoother, safer finish.</p></li>
+								<li><h3>Applications</h3></li>
 								<li>Cycle paths and bikeways</li>
 								<li>Shared pedestrian paths</li>
 								<li>Protection over culverts</li>
 								<li>Footbridges</li>
 							</ul>
-						</ul>
-					</article>
-				<footer>
-					<div class="box">
-						<p>Extract from Austroads Guide To Road Design; Part 6A 7.2.2
-							The installation of a fence at the side of a path used by cyclists is
-							desirable where:
-							there is a steep batter or large vertical drop located in close proximity
-							to the path
-							•the path is adjacent to an arterial road and it is necessary to restrict
-							cyclist access to the road
-							•a bridge or culvert exists on a path
-							•a hazard exists adjacent to a particular bicycle facility
-							•cyclists are likely to be ‘blazing a separate trail’ at an intersection
-							between paths or around a path terminal.</p>
-					</div>
-				</footer>
-			</section>
-		</div>
+						</li>
+					</ul>
+				</article>
+			<footer>
+				<div class="box">
+					<p>Extract from Austroads Guide To Road Design; Part 6A 7.2.2
+						The installation of a fence at the side of a path used by cyclists is
+						desirable where:
+						there is a steep batter or large vertical drop located in close proximity
+						to the path
+						•the path is adjacent to an arterial road and it is necessary to restrict
+						cyclist access to the road
+						•a bridge or culvert exists on a path
+						•a hazard exists adjacent to a particular bicycle facility
+						•cyclists are likely to be ‘blazing a separate trail’ at an intersection
+						between paths or around a path terminal.</p>
+				</div>
+			</footer>
+		</section>
 	</body>
-</head>
 </html>

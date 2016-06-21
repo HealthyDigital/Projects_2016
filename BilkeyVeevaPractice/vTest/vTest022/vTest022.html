@@ -1,23 +1,20 @@
-<htmL>
+<!DOCTYPE html>
 <head>
+	<title>Page 22</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	 
-    <script type="text/javascript" src="./js/variables.js"></script>
 	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
+    <script type="text/javascript" src="./js/common.js"></script> 
 
-	<style>
-		@font-face {font-family: "Akkurat-Light";
+	<style type="text/css">
+		/*@font-face {font-family: "Akkurat-Light";
 		    src: url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.eot");
 		    src: url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.eot?#iefix") format("embedded-opentype"),
 		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.woff2") format("woff2"),
 		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.woff") format("woff"),
 		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.ttf") format("truetype"),
 		    url("http://db.onlinewebfonts.com/t/bc9fa02b4227255be2387a7e19a3e09b.svg#Akkurat-Light") format("svg");
-		}
+		}*/
 		.overlayImage
 		{
 			width: 500px;
@@ -52,13 +49,13 @@
 	    	margin-left:100px;
 	    }
 
-	    .overlayBox > ul{
+	    .overlayBox > li{
 	    	display: inline-block;
 	
 	    	margin-top:100px;
 	    }
 
-	    .overlayBox > ul > li{
+	    .overlayBox > li > ul > li{
 	    	margin-bottom: 10px;
 	    	color: white;
 	    	list-style: none;
@@ -68,37 +65,38 @@
 	    	width:800px;
 	    	height:600px;
 	    }
-	    .bodyContent > ul{
+	    .bodyContent > li{
 	    	display: inline-block;
 	    	width: 350px;
 	    	margin-bottom: 30px;
 	    }
-	    .bodyContent > ul:nth-child(2){
+	    .bodyContent > li:nth-child(2){
 	    	vertical-align: top;
 	    }
-	    .bodyContent > ul > li{
-	    	margin-bottom: 10px;
+	    .bodyContent > li > ul{
+	    	margin-bottom: -50px;
 	    	color:white;
 	    	font-family: "Akkurat-Light";
 	    	list-style: none;
+	    	margin-top: 100px;
 	    }
 
-	    .bodyContent > ul:nth-child(2) > li{
+	    .bodyContent > li:nth-child(2) > ul > li{
 	    	list-style: disc;
 	    	margin-left: 20px;
 	    }
-	    .bodyContent > ul:nth-child(2) > li:first-child{
+	    .bodyContent > li:nth-child(2) > ul > li:first-child{
 	    	list-style: none;
 	    	margin-left: 0px;
 	    	font-size:15px;
 	    	font-weight: bold;
 
 	    }
-	    .bodyContent > ul:nth-child(3) > li{
+	    .bodyContent > li:nth-child(3) > ul > li{
 	    	list-style: disc;
 	    	margin-left: 20px;
 	    }
-	    .bodyContent > ul:nth-child(3) > li:first-child{
+	    .bodyContent > li:nth-child(3) > ul > li:first-child{
 	    	list-style: none;
 	    	margin-left: 0px;
 	    	font-size:15px;
@@ -109,86 +107,61 @@
 	</style>
   	 
 </head>
-<script>
-    	$(function(){				
- 			$(".boxInfo").hide();
-
-
- 			$(".r").click(function()
- 			{
-				document.getElementById("myNav").style.width = "1024px";
-				document.getElementById("myNav").style.height = "768px";
-
-				$(".controls").css("display","none");
- 			});
-
-			$("#myNav > span:first-child").click(function()
- 			{
- 				closeNav();
- 				$(".controls").css("display","block");
- 			});
-
- 			$("footer > ul > li").click(function(){
- 				$(".boxInfo").toggle(1300);
- 			});
-
- 		});
- 		 		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-
-</script>
-
-<head>
 	<body>
 	<div id="myNav" class="overlay">
 			<span>X</span>	
 		<div class="overlayBox">
 		 <h1>non slip safety</h1>
 			<ul class="bodyContent">
-				<ul>
-					<li>Tredmaxx Non-Slip Safety delivers non-slip
-						surfacing and stair nosing for internal or
-						external stairs, walkways and platforms.
-					</li>
-					<li>
-						Used as a heavy duty safety measure to secure
-						firm footing while highlighting the edge of the
-						step, Tredmaxx products are manufactured
-						from industrial grade fibre-reinforced plastic
-						(FRP) or marine grade aluminium with a silicon
-						oxide gritted wear and corrosion resistant
-						surface.
-					</li>
-					<li>
-						Supplied cut to length for installation on any
-						substrate, Tredmaxx products can be easily
-						installed with adhesives and / or mechanical
-						fixings.
-					</li>
-				</ul>
-				<ul>
-					<li>Compliance</li>
-					<li>Tredmaxx products have achieved the highest
-						slip resistance classification V - "very low risk" of
-						slipping when wet.
-					</li>
-					<li>Tredmaxx products have been wet pendulum
-						and dry floor friction tested in accordance with
-						Australian Standard AS/NZS 4586:2004 – Slip
-						Resistance Classification of New Pedestrian
-						Surface Materials.
-					</li>
-				</ul>
-				<ul>
-					<li>APPLICATIONS</li>
-					<li>Service platforms and mezzanines</li>
-					<li>Warehouses and loading bays</li>
-					<li>Airports and shopping centres</li>
-					<li>Pedestrian pathways and footbridges</li>
-					<li>Community centres and carparks</li>
-					<li>Firestairs</li>
-				</ul>
+				<li>
+					<ul>
+						<li>Tredmaxx Non-Slip Safety delivers non-slip
+							surfacing and stair nosing for internal or
+							external stairs, walkways and platforms.
+						</li>
+						<li>
+							Used as a heavy duty safety measure to secure
+							firm footing while highlighting the edge of the
+							step, Tredmaxx products are manufactured
+							from industrial grade fibre-reinforced plastic
+							(FRP) or marine grade aluminium with a silicon
+							oxide gritted wear and corrosion resistant
+							surface.
+						</li>
+						<li>
+							Supplied cut to length for installation on any
+							substrate, Tredmaxx products can be easily
+							installed with adhesives and / or mechanical
+							fixings.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li>Compliance</li>
+						<li>Tredmaxx products have achieved the highest
+							slip resistance classification V - "very low risk" of
+							slipping when wet.
+						</li>
+						<li>Tredmaxx products have been wet pendulum
+							and dry floor friction tested in accordance with
+							Australian Standard AS/NZS 4586:2004 – Slip
+							Resistance Classification of New Pedestrian
+							Surface Materials.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li>APPLICATIONS</li>
+						<li>Service platforms and mezzanines</li>
+						<li>Warehouses and loading bays</li>
+						<li>Airports and shopping centres</li>
+						<li>Pedestrian pathways and footbridges</li>
+						<li>Community centres and carparks</li>
+						<li>Firestairs</li>
+					</ul>
+				</li>
 			</ul>
 
 		</div>
@@ -215,7 +188,33 @@
 
 				</footer>
 			</section>
-		</div>
+			<script type="text/javascript">
+			    	$(function(){				
+			 			$(".boxInfo").hide();
+
+
+			 			$(".r").click(function()
+			 			{
+							document.getElementById("myNav").style.width = "1024px";
+							document.getElementById("myNav").style.height = "768px";
+
+							$(".controls").css("display","none");
+			 			});
+
+						$("#myNav > span:first-child").click(function()
+			 			{
+			 				closeNav();
+			 				$(".controls").css("display","block");
+			 			});
+
+			 			$("footer > ul > li").click(function(){
+			 				$(".boxInfo").toggle(1300);
+			 			});
+
+			 		});
+			 		 		function closeNav() {
+					    document.getElementById("myNav").style.width = "0%";
+					}
+			</script>
 	</body>
-</head>
 </html>

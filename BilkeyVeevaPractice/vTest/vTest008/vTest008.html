@@ -1,150 +1,124 @@
-<htmL>
+<!DOCTYPE html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	 
-    <script type="text/javascript" src="./js/variables.js"></script>
+	<title>Page 8</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
+    <script type="text/javascript" src="./js/common.js"></script>
 
-	<style>
-	.controls {position: absolute; list-style: none;}
-	.controls { width: 6px;top: 205px; z-index: 21; margin-left:-10px;}
-	    .controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
-	    				border:1px solid #3F4344; -webkit-border-radius:500px; 
-	    				color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;}
-		.overlayImage
-		{
-			width: 500px;
-			height: 400px;
-			background-repeat: no-repeat;
-			margin: 0 auto;
-			margin-top: 50px;
-		}
+    
+	<style type="text/css">
+		.controls {position: absolute; list-style: none;}
+		.controls { width: 6px;top: 205px; z-index: 21; margin-left:-10px;}
+		    .controls > li {font-family: "lexiRegular"; width:30px; height:30px; 
+		    				border:1px solid #3F4344; -webkit-border-radius:500px; 
+		    				color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;}
+			.overlayImage
+			{
+				width: 500px;
+				height: 400px;
+				background-repeat: no-repeat;
+				margin: 0 auto;
+				margin-top: 50px;
+			}
 
-		.mainImages
-		{
-			position: absolute;
-			width: 600px;
-			margin-left: 200px;
-			margin-top:70px;
-		}
-		.mainImages > li
-		{
-			display: inline-block;
-			background-repeat: no-repeat;
-			width:210px;
-			height:280px;
-			margin-left: 50px;
-		}
-		.mainImages > li:first-child{
-			background-image: url('./images/i1.png');
+			.mainImages
+			{
+				position: absolute;
+				width: 600px;
+				margin-left: 200px;
+				margin-top:70px;
+			}
+			.mainImages > li
+			{
+				display: inline-block;
+				background-repeat: no-repeat;
+				width:210px;
+				height:280px;
+				margin-left: 50px;
+			}
+			.mainImages > li:first-child{
+				background-image: url('./images/i1.png');
 
-		}
-		.mainImages > li:last-child{
-			background-image: url('./images/i2.png');
+			}
+			.mainImages > li:last-child{
+				background-image: url('./images/i2.png');
 
-		}
+			}
 
-		.refContent{
-			width:900px;
-			height:600px;
-			padding-top: 50px;
-			padding-left: 50px;
-			padding-right: 20px;
+			.refContent{
+				width:900px;
+				height:600px;
+				padding-top: 50px;
+				padding-left: 50px;
+				padding-right: 20px;
 
-		}
-		.refContent > ul{
-			display: inline-block;
-			list-style: none;
-		}
-		.refContent > ul > li
-		{
-			width:400px;
-			margin-bottom: 20px;
-			color:#7c8587;
-		}
-		.refContent > ul > li:first-child
-		{
-			color:black;
-		}
-		.refContent > ul:last-child{
-			float:right;
-		}
+			}
+			.refContent > li{
+				display: inline-block;
+				list-style: none;
+				vertical-align: top;
+			}
+			.refContent > li > ul > li
+			{
+				width:400px;
+				margin-bottom: 20px;
+				color:#7c8587;
+				list-style: none;
+			}
+			.refContent > li > ul > li:first-child
+			{
+				color:black;
+			}
+			.refContent > li:last-child > ul{
+			
+			}
 	</style>
   	 
 </head>
-<script>
-    	$(function(){				
- 			$(".boxInfo").hide();
-
- 			$(".r").click(function()
- 			{
-				document.getElementById("myNav").style.width = "1024px";
-				document.getElementById("myNav").style.height = "768px";
-
-				$(".controls").css("display","none");
- 			});
-
- 			$("#myNav > span:first-child").click(function()
- 			{
- 				closeNav();
- 				$(".controls").css("display","block");
- 			});
-
- 			$("footer > ul > li").click(function(){
- 				$(".boxInfo").toggle(1300);
- 			});
-
- 		})
- 		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-</script>
-
-<head>
 	<body>
 		<div id="myNav" class="overlay">
 			<span>X</span>	
 			<ul class="refContent">
-				<ul>
-					<li>Extract from National Construction Code (Ncc) 2014</li>
-					<li>D2.16 Balustrades or other barriers</li>
-					<li>(a) A continuous balustrade or other barrier, except for a barrier provided
-						to an openable window covered by D2.24, must be provided along the
-						side of any roof to which public access is provided, any stairway or ramp,
-						any floor, corridor, hallway, balcony, deck, veranda, mezzanine, access
-						bridge or the like and along the side of any delineated path of access to a
-						building, if—
-					</li>
-					<li>(ii) it is not bounded by a wall; and</li>
-					<li>(iii) its level above the surface beneath, is more than 1 m.</li>
-					<li>(h) Openings in a balustrade or other barrier must be constructed in
-						accordance with the following:</li>
-					<li>(ii) For a balustrade or other barrier other than those provided under(c)—</li>
-					<li>(A) any opening does not permit a 125 mm sphere to pass through it and
-						for stairs, the opening is measured above the nosing line of the stair
-						treads; and</li>
-					<li>(B) for floors more than 4 m above the surface beneath, any horizontal or
-						near horizontal elements between 150 mm and 760 mm above the floor
-						must not facilitate climbing.</li>
-				</ul>
-				<ul>
-					<li>Extract from Australian Standard AS/NZS 1170:2002</li>
-					<li>3.6 BARRIERS</li>
-					<li>Barriers, including parapets, balustrades and railings, together with
-						members and connections that provide structural support, shall be
-						designed to sustain the imposed actions given in Table 3.3. The top edge
-						or handrail shall also be designed for the case where a concentrated
-						load of 0.6 kN, positioned for the worst effect, acts inward, outward or
-						downward.
-					</li>
-					<li>The uniformly distributed line load and the uniformly distributed and
-						concentrated loads applicable to the infill are not additive. They shall be
-						considered as three separate load cases.</li>
-				</ul>
+				<li>
+					<ul>
+						<li>Extract from National Construction Code (Ncc) 2014</li>
+						<li>D2.16 Balustrades or other barriers</li>
+						<li>(a) A continuous balustrade or other barrier, except for a barrier provided
+							to an openable window covered by D2.24, must be provided along the
+							side of any roof to which public access is provided, any stairway or ramp,
+							any floor, corridor, hallway, balcony, deck, veranda, mezzanine, access
+							bridge or the like and along the side of any delineated path of access to a
+							building, if—
+						</li>
+						<li>(ii) it is not bounded by a wall; and</li>
+						<li>(iii) its level above the surface beneath, is more than 1 m.</li>
+						<li>(h) Openings in a balustrade or other barrier must be constructed in
+							accordance with the following:</li>
+						<li>(ii) For a balustrade or other barrier other than those provided under(c)—</li>
+						<li>(A) any opening does not permit a 125 mm sphere to pass through it and
+							for stairs, the opening is measured above the nosing line of the stair
+							treads; and</li>
+						<li>(B) for floors more than 4 m above the surface beneath, any horizontal or
+							near horizontal elements between 150 mm and 760 mm above the floor
+							must not facilitate climbing.</li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li>Extract from Australian Standard AS/NZS 1170:2002</li>
+						<li>3.6 BARRIERS</li>
+						<li>Barriers, including parapets, balustrades and railings, together with
+							members and connections that provide structural support, shall be
+							designed to sustain the imposed actions given in Table 3.3. The top edge
+							or handrail shall also be designed for the case where a concentrated
+							load of 0.6 kN, positioned for the worst effect, acts inward, outward or
+							downward.
+						</li>
+						<li>The uniformly distributed line load and the uniformly distributed and
+							concentrated loads applicable to the infill are not additive. They shall be
+							considered as three separate load cases.</li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 			<section id="containter">
@@ -172,7 +146,26 @@
 
 				</footer>
 			</section>
-		</div>
+			<script type="text/javascript">
+		    	$(function(){				
+		 			$(".boxInfo").hide();
+
+		 			$(".r").click(function()
+		 			{
+						document.getElementById("myNav").style.width = "1024px";
+						document.getElementById("myNav").style.height = "768px";
+
+						$(".controls").css("display","none");
+		 			});
+
+		 			$("#myNav > span:first-child").click(function()
+		 			{
+		 				closeNav();
+		 				$(".controls").css("display","block");
+		 			});
+		 		})
+
+			</script>
+
 	</body>
-</head>
 </html>

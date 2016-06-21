@@ -1,5 +1,6 @@
-<htmL>
+<!DOCTYPE html>
 <head>
+	<title>Page 19</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	 
     <script type="text/javascript" src="./js/variables.js"></script>
@@ -9,7 +10,7 @@
     <script type="text/javascript" src="./js/TweenMax.min.js"></script>
     <script type="text/javascript" src="./js/api.js"></script> 
 
-	<style>
+	<style type="text/css">
 
 		.bodyContent
 		{
@@ -33,47 +34,6 @@
 	</style>
   	 
 </head>
-<script>
-    	$(function(){				
- 			$(".boxInfo").hide();
-
- 			$("footer > ul > li").click(function(){
- 				$(".boxInfo").toggle(1300);
- 			});
-
-
-				$(".bodyContent > li").click(function()
-				{
-					
-
-					var x = $(this).data("id");
-					var imageVal = x + 4;
-
-
-					if(x > 4)
-					{
-						$(".bodyContent > li:nth-child("+x+")").css("background-image","none");
-					}
-					
-					$(".bodyContent > li:nth-child("+imageVal+")").css("background-image","url('./images/tt"+x+".png')");
-					
-				});
-
-
-
- 		});
-
-	function produceImages()
-	{
-		for(var i=1; i<=4; i++)
-		{
-			$(".bodyContent > li:nth-child("+i+")").css("background-image","url('./images/t"+i+".png')");
-		}
-	}
-
-</script>
-
-<head>
 	<body onload="produceImages();">
 			<section id="containter">
 				<header>
@@ -102,7 +62,34 @@
 
 				</footer>
 			</section>
-		</div>
+			<script type="text/javascript">
+			    	$(function(){				
+			 			$(".boxInfo").hide();
+
+			 			$("footer > ul > li").click(function(){
+			 				$(".boxInfo").toggle(1300);
+			 			});
+							$(".bodyContent > li").click(function()
+							{
+								var x = $(this).data("id");
+								var imageVal = x + 4;
+
+								if(x > 4)
+								{
+									$(".bodyContent > li:nth-child("+x+")").css("background-image","none");
+								}
+								$(".bodyContent > li:nth-child("+imageVal+")").css("background-image","url('./images/tt"+x+".png')");
+							});
+			 		});
+
+				function produceImages()
+				{
+					for(var i=1; i<=4; i++)
+					{
+						$(".bodyContent > li:nth-child("+i+")").css("background-image","url('./images/t"+i+".png')");
+					}
+				}
+
+			</script>
 	</body>
-</head>
 </html>

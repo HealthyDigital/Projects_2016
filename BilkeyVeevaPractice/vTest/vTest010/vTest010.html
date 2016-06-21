@@ -1,15 +1,11 @@
-<htmL>
+<!DOCTYPE html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	 
-    <script type="text/javascript" src="./js/variables.js"></script>
+	<title>Page 10</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="./js/touchy.js"></script>
-	<script type="text/javascript" src="./js/TimelineMax.min.js"></script>
-    <script type="text/javascript" src="./js/TweenMax.min.js"></script>
-    <script type="text/javascript" src="./js/api.js"></script> 
+    <script type="text/javascript" src="./js/common.js"></script> 
 
-	<style>
+	<style type="text/css">
 
 		.overlayImage
 		{
@@ -37,28 +33,28 @@
 	    				border:1px solid #3F4344; -webkit-border-radius:500px; 
 	    				color:#3F4344; text-align:center; font-size:18px; line-height:32px; margin-bottom:40px;}
 
-	    .overlayContent > ul{
+	    .overlayContent > li{
 	    	display: inline-block;
 
 	    }
-	    .overlayContent > ul > li{
+	    .overlayContent > li > ul > li{
 	    	color:white;
 	    	margin-bottom: 15px;
 	    }
-	    .overlayContent > ul:first-child
+	    .overlayContent > li:first-child > ul
 	    {
 	    	width:400px;
 	    }
-	    .overlayContent > ul:last-child
+	    .overlayContent > li:last-child > ul
 	    {
 	    	vertical-align: top;
 	    }
 
-	    .overlayContent > ul:last-child > li
+	    .overlayContent > li:last-child > ul
 	    {
 	    	margin-left: 30px;
 	    }
-	    .overlayContent > ul:last-child > li:first-child
+	    .overlayContent > li:last-child > ul:first-child > li:first-child
 	    {
 	    	margin-left:0px;
 	    	list-style: none;
@@ -73,37 +69,6 @@
 	</style>
   	 
 </head>
-<script>
-    	$(function(){				
- 			$(".boxInfo").hide();
-
-
- 			$(".r").click(function()
- 			{
-				document.getElementById("myNav").style.width = "1024px";
-				document.getElementById("myNav").style.height = "768px";
-
-				$(".controls").css("display","none");
- 			});
-
-			$("#myNav > span:first-child").click(function()
- 			{
- 				closeNav();
- 				$(".controls").css("display","block");
- 			});
-
- 			$("footer > ul > li").click(function(){
- 				$(".boxInfo").toggle(1300);
- 			});
-
- 		});
- 		 		function closeNav() {
-		    document.getElementById("myNav").style.width = "0%";
-		}
-
-</script>
-
-<head>
 	<body>
 	<div id="myNav" class="overlay">
 			<span>X</span>	
@@ -111,7 +76,7 @@
 			<h1>nexus</h1>
 			<h3>perimeter protection</h3>
 			<ul class="overlayContent">
-
+				<li>
 					<ul>
 						<li>Nexus Perimeter Barriers and Bollards create
 							boundaries across sports and recreation
@@ -129,13 +94,16 @@
 							architectural styling available on request.
 						</li>
 					</ul>
+				</li>
+				<li>
 					<ul>
 						<li>Applications</li>
 						<li>Sports and recreation fields</li>
 						<li>Public parks and ovals</li>
 						<li>Carparks and sightseeing</li>
 					</ul>
-				</ul>
+				</li>
+			</ul>
 		</div>
 	</div>
 			<section id="containter">
@@ -160,7 +128,27 @@
 
 				</footer>
 			</section>
-		</div>
+			<script type="text/javascript">
+			    	$(function(){				
+			 			$(".boxInfo").hide();
+
+
+			 			$(".r").click(function()
+			 			{
+							document.getElementById("myNav").style.width = "1024px";
+							document.getElementById("myNav").style.height = "768px";
+
+							$(".controls").css("display","none");
+			 			});
+
+						$("#myNav > span:first-child").click(function()
+			 			{
+			 				closeNav();
+			 				$(".controls").css("display","block");
+			 			});
+
+				});
+			</script>
+
 	</body>
-</head>
 </html>
