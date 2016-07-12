@@ -35,8 +35,8 @@ $( function(){
 				selectMenu();
 				overlay.find('.nav').show();
 				btnMenu.css('opacity', 0);
-				
 			}
+			
 		});
 		//get config data
 		$.getJSON('js/config.json', getData);

@@ -1,0 +1,77 @@
+/* CSS Document reset */
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .55em;line-height:10px; position:relative; }sub {vertical-align: text-bottom}sup {vertical-align:super;  }
+/* ============= custom fonts   ============= */
+@font-face {
+	font-family: 'GothamLightCond';
+	src: url('../fonts/GothamHTF-LightCondensed.woff') format('woff'),
+	url('../fonts/GothamHTF-LightCondensed.svg#GothamHTFLightCond') format('svg'); }
+@font-face {
+	font-family: 'GothamNarrowMedium';
+	src: url('../fonts/GothamNarrowMedium.woff') format('woff'),
+	url('../fonts/GothamNarrowMedium.svg#GothamNarrowMedium') format('svg'); }
+@font-face {
+	font-family: 'GothamBookCond';
+	src: url('../fonts/GothamHTF-BookCondensed.woff') format('woff'),
+	url('../fonts/GothamHTF-BookCondensed.svg#GothamHTFBookCond') format('svg'); }
+@font-face {
+	font-family: 'GothamBoldCond';
+	src: url('../fonts/GothamHTF-BoldCondensed.woff') format('woff'),
+	url('../fonts/GothamHTF-BoldCondensed.svg#GothamHTFBoldCond') format('svg'); }
+@font-face {
+	font-family: 'GothamMediumCond';
+	src: url('../fonts/GothamHTF-MediumCondensed.woff') format('woff'),
+	url('../fonts/GothamHTF-MediumCondensed.svg#GothamHTFMediumCond') format('svg'); }
+	
+@font-face {
+	font-family: 'HomesteadInline';
+	src: url('../fonts/Homestead-Inline.woff') format('woff'),
+	url('../fonts/Homestead-Inline.svg#HomesteadInline') format('svg'); }
+@font-face {
+	font-family: 'Lobster13';
+	src: url('../fonts/Lobster13.woff') format('woff'),
+	url('../fonts/Lobster13.svg#Lobster13') format('svg'); }
+
+/*  =============  */
+
+body { font-family:"GothamLightCond", Helvetica, Arial, sans-serif; font-size: 18px; line-height: 22px;color:#646464; }
+.slide {
+	font-family:inherit;
+	width: 1024px;
+	height:768px;
+	position:relative;
+	overflow:hidden;
+	background-color:#e8e8e8; }
+
+.content { padding:25px; position:relative; background-color:#eee; }
+
+h1, h2, h3 { font-weight: normal;  }
+ul { list-style:none;}
+	.list { list-style:disc; margin-left:22px; }
+ol { margin-left: 20px }
+em { font-style:italic;}
+strong { font-weight:normal; }
+.slide .hide { display:none; }
+th, td { vertical-align:middle; }
+a { text-decoration:none; color:inherit; font-family:inherit; font-size:inherit; line-height:inherit; display:block; }
+
+footer { position:absolute; }
+
+footer { 
+	font-size:15px; 
+	line-height:17px; 
+	left:0; bottom:0; 
+	width:100%; 
+	height: 200px;
+	background: linear-gradient(bottom, rgba(170, 170, 170, 1) 40%, rgba(255, 255, 255, 0.2) 60% );
+	background: -webkit-linear-gradient(bottom, rgba(170, 170, 170, 1) 40%, rgba(255, 255, 255, 0.2) 60% );
+	z-index:2; }
+footer .nav li { float:left; padding:5px 10px; border-right:1px solid rgba(0, 0, 0, 0.5); }
+
+.slide.bg, .nav li:after { background-repeat:no-repeat; background-size:100% auto; }
+	
+	
+	
+
+
+
+
