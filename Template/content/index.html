@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title">
+
+<!-- Insert Title -->
+<title>Template 1</title> 
+
+<!-- Common Stylesheets -->
+<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<style type="text/css">
+	.container .slide { padding:0; height:768px; }
+	.intro { position:absolute; bottom:180px; left:40px; font-size:34px; line-height:40px; font-family: 'HelveticaNeueLight'; z-index:99; text-shadow:0 0 5px rgba(0, 0, 0, 0.85); color:#fff; }
+	.intro > span { font-family: 'HelveticaBold'; font-size:60px; float:right; margin:45px 0 0 -175px; }
+</style>
+
+</head>
+<body>
+    <section class="container">
+    
+        <div class="slide">
+            <!-- slideshow images -->
+            <h2 class="intro">The best way to predict the future is to <span>create it</span></h2>
+            <ul id="slideshow-img">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <!-- slideshow list -->
+            <ul id="slideshow">
+           	 	<li>Sections</li>
+                <li>Graphs</li>
+                <li>Animation</li>
+                <li>Resources</li>
+                
+            </ul>
+        </div>
+        <!-- navigation toolbar
+        <ul id="navigation">
+            <li data-ref="nav-block">presentation name</li>
+            <li data-ref="home"></li>
+        </ul> -->
+        
+    </section>
+
+<!-- Common Scripts-->
+<script type="text/javascript" src="common/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="common/js/touchy.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+<!-- Page Speciic Script -->
+<!--<script type="text/javascript" src="js/index.js"></script>-->
+<script type="text/javascript">
+    var page = 0
+
+    $( function(){
+        var slideshow_li = $("#slideshow li"),
+        slideshow_img_li = $("#slideshow-img li"), 
+        slideshow = $("#slideshow")[0],
+        len = $("#slideshow-img li").length,
+        idx, nxt = -1, crt = -2;
+
+        $(slideshow_li).on("tap", function(){
+        	idx = $(this).index() + 1;
+        	window.location = "pages/p"+idx+".html";
+        });
+
+        function test(){
+            crt++;
+            nxt++;
+
+            if(nxt == len){
+                crt = -1;
+                nxt = 0;
+            }
+
+            $($(slideshow_img_li).get(crt)).css("opacity", "0"),
+            $($(slideshow_img_li).get(nxt)).css("opacity", "1")
+        }
+
+        test();
+
+        setInterval(function(){
+            test();
+        }, 4000);
+
+        
+    });
+
+</script>
+</body>
+</html>

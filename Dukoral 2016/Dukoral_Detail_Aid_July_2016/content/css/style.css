@@ -1,5 +1,5 @@
 /* CSS Document reset */
-* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .55em;line-height:10px; position:relative; }sub {vertical-align: text-bottom}sup {vertical-align:super;  }
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .60em;line-height:10px; position:relative; }sub {vertical-align: text-bottom}sup {vertical-align:super;  }
 /* ============= custom fonts   ============= */
 @font-face {
 	font-family: 'GothamLightCond';
@@ -21,7 +21,22 @@
 	font-family: 'GothamMediumCond';
 	src: url('../fonts/GothamHTF-MediumCondensed.woff') format('woff'),
 	url('../fonts/GothamHTF-MediumCondensed.svg#GothamHTFMediumCond') format('svg'); }
-	
+@font-face {
+	font-family: 'HelveticaNeueLight';
+	src: url('../fonts/HelveticaNeue-Light.woff') format('woff'),
+	url('../fonts/HelveticaNeue-Light.svg#HelveticaNeueLight') format('svg'); }
+@font-face {
+	font-family: 'HelveticaNeueThinCond';
+	src: url('../fonts/HelveticaNeue-ThinCond.woff') format('woff'),
+	url('../fonts/HelveticaNeue-ThinCond.svg#HelveticaNeueThinCond') format('svg'); }
+@font-face {
+	font-family: 'HelveticaNeueThinCond';
+	src: url('../fonts/HelveticaNeue-ThinCond.woff') format('woff'),
+	url('../fonts/HelveticaNeue-ThinCond.svg#HelveticaNeueThinCond') format('svg'); }
+@font-face {
+	font-family: 'HelveticaNeueMediumCond';
+	src: url('../fonts/HelveticaNeue-MediumCond.woff') format('woff'),
+	url('../fonts/HelveticaNeue-MediumCond.svg#HelveticaNeueMediumCond') format('svg'); }
 @font-face {
 	font-family: 'HomesteadInline';
 	src: url('../fonts/Homestead-Inline.woff') format('woff'),
@@ -33,41 +48,138 @@
 
 /*  =============  */
 
-body { font-family:"GothamLightCond", Helvetica, Arial, sans-serif; font-size: 18px; line-height: 22px;color:#646464; }
+body { font-family:"GothamLightCond", Helvetica, Arial, sans-serif; font-size: 18px; line-height: 22px;color:#646464; letter-spacing:0.005em; /*-webkit-font-smoothing: antialiased;*/ }
 .slide {
 	font-family:inherit;
 	width: 1024px;
 	height:768px;
 	position:relative;
-	overflow:hidden;
-	background-color:#e8e8e8; }
+	overflow:hidden; }
 
-.content { padding:25px; position:relative; background-color:#eee; }
+.content { padding:25px; position:relative; }
 
 h1, h2, h3 { font-weight: normal;  }
+h3 { font-family:inherit; color:inherit; }
 ul { list-style:none;}
 	.list { list-style:disc; margin-left:22px; }
 ol { margin-left: 20px }
 em { font-style:italic;}
-strong { font-weight:normal; }
+sup { font-family: 'GothamLightCond'; }
+strong { font-weight:normal; font-family: 'GothamMediumCond'; }
 .slide .hide { display:none; }
 th, td { vertical-align:middle; }
 a { text-decoration:none; color:inherit; font-family:inherit; font-size:inherit; line-height:inherit; display:block; }
 
-footer { position:absolute; }
+.arrow:before, nav li, nav :after, .nav li > span, footer { -webkit-transition:all 0.35s ease-in-out; transition:all 0.35s ease-in-out; }
+
+.logo, footer, 
+	.btn, .banner:after,
+	.btn.arrow:after, 
+	.nav li:before,
+	.nav li:after,
+	.nav li span,
+	.bullet li:before { position:absolute; }
+	
+.logo { width:128px; height:45px; right:20px; bottom:25px; background-image:url('../img/dukoral_logo.png'); z-index:4;  }
+	
+.btn.arrow { 
+	width:50px; 
+	height:38px; 
+	background-image:url('../img/arrow.png'); 
+	left:10px; 
+	top:-30px; }
+	.btn.arrow.prev { width:34px; height:28px; left:25px; top:62px;  z-index:5; -webkit-transform:rotate(-90deg); transform:rotate(-90deg);}
+	.btn.arrow.prev:after { width:100%; height:50%; bottom:0; box-shadow:inset 0 -3px 4px rgba(170,170,170, .7); }
+	.btn.arrow.prev:before { width:28px; margin-top:6px; background-position-y:-140px; z-index:10;  }
+.banner:after,
+	.arrow:after, 
+	.arrow:before,
+	.nav li:after,
+	.bullet li:before { content:""; }
+footer .arrow:after { 
+	bottom:-5px; 
+	left:0; 
+	height:10px; 
+	width:100%; 
+	background:linear-gradient(top, rgba(255,255,255, 0), rgba(255,255,255, 1), rgba(255,255,255, 0));
+	background:-webkit-linear-gradient(top, rgba(255,255,255, 0), rgba(255,255,255, 1), rgba(255,255,255, 0)); }
+	.arrow:before, .nav li:first-child:before, .nav li:last-child i { background-image:url('../img/icons.svg'); }
+	.arrow:before { display:block; width:32px; height:20px; margin: 12px auto 0;  background-position-y: -161px; -webkit-transform:rotate(-180deg); transform:rotate(-180deg); }
+	.up .arrow:before { -webkit-transform:rotate(0deg); transform:rotate(0deg); }
+.bullet li { padding-left:26px; position:relative; margin-bottom:3px; }
+	.bullet li:before { left:0; top:0.25em; width:14px; height:14px; background-image:url('../img/bullet.png') }
+.banner:after { left:0; right:0; top:17px; width:765px; height:100px; margin:0 auto; color:#adb7b1; font-size:42px; font-family: 'HomesteadInline'; font-style:italic; }
+.cols > li { float:left; width:50%; height:inherit; position:relative; } 
+	.cols > li > div { padding: 25px; }
 
 footer { 
 	font-size:15px; 
-	line-height:17px; 
-	left:0; bottom:0; 
+	line-height:18px;
+	left:0; 
+	bottom:0; 
 	width:100%; 
-	height: 200px;
-	background: linear-gradient(bottom, rgba(170, 170, 170, 1) 40%, rgba(255, 255, 255, 0.2) 60% );
-	background: -webkit-linear-gradient(bottom, rgba(170, 170, 170, 1) 40%, rgba(255, 255, 255, 0.2) 60% );
-	z-index:2; }
-footer .nav li { float:left; padding:5px 10px; border-right:1px solid rgba(0, 0, 0, 0.5); }
+	min-height: 150px;
+	box-shadow:inset 0px 0px 6px 2px rgba(160, 160, 160, 0.8);
+	background: linear-gradient(top, rgba(255, 255, 255, 1) 12%, rgba(200, 200, 200, 1) );
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 12%, rgba(200, 200, 200, 1) );
+	-webkit-transform:translate3d(0, 98%, 0);
+	transform:translate3d(0, 98%, 0);
+	z-index:5; }
+	footer.up {-webkit-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); }
+footer .nav { margin:6px 0 0 60px; width:89%; }
+footer .nav li { text-align:center; letter-spacing:0.01em; height:18px; width:45px; float:right; padding:4px 0; border-right:1px solid rgba(0, 0, 0, 0.45); position:relative;  }
+	footer .nav li:nth-last-child(n+3) { width:125px; float:left; }
+	footer .nav li:first-child { text-align:left; width:70px; padding-left:5px; }
+	footer .nav li i { display:inline-block; padding: 1px 5px; }
+	footer .item { width:696px; margin:100px auto 0; padding-bottom:7em; font-size:16px; line-height:18px; color:#787878; }
+	footer .refs { font-family: 'HelveticaNeueLight'; }
+	footer sup { font-family:inherit; }
+	footer .item h3 { color:inherit; padding-bottom:8px; margin-bottom:10px; border-bottom:1px solid rgba(120,120,120, 0.4); }
+	footer .item li { margin-bottom:10px; letter-spacing:-0.008em; }
+.item .product { width:350px; height:210px; background-image:url('../img/product_shot.png'); margin:-20px auto 70px; position:relative; }
+	.item .product:after, .box:after { content:""; position:absolute; }
+	.item .product:after { right:0; left:0; bottom:-60px; width:210px; height:70px; margin: 0 auto; background-image:url('../img/dukoral_logo.png'); }
+	.pi p { text-align:center; } 
+	.pi .review { font-size:22px; line-height:24px; margin-bottom:10px; }
+	.pi .small { font-size:14px; line-height:16px; margin-bottom:5px; }
+	.pi .review, .pi .small { font-family: 'HelveticaNeueThinCond'; }
+	.pi .box { font-family: 'HelveticaNeueThinCond'; font-size:17px; line-height:20px; padding:15px; background:#fff; border:1px solid #000; color:#000; position:relative; }
+	.box strong { font-family: 'HelveticaNeueMediumCond'; }
+	.box:after { right:0; left:0; bottom:-100px; width:145px; height:80px; background-image:url('../img/seqirus_logo.png'); margin:0 auto; }
+	
+.nav li:last-child i { width:18px; height:20px; background-position-y:-178px; margin-top:10px; }
+.nav li:nth-last-child(2) i { border:1px solid rgba(100, 100, 100, 0.6); margin-top:10px; }
+	.nav li:after {  width:100px; height:75px; background:url('../img/thumbs.png'); bottom:-90px; left:0; right:0; margin:0 auto; z-index:5; }
+	.nav li:first-child:after { left:-52px; }
+	.nav li:nth-child(2):after { background-position-y:-75px; }
+	.nav li:nth-child(3):after { background-position-y:-152px; }
+	.nav li:nth-child(4):after { background-position-y:-229px; }
+	.nav li:nth-child(5):after { background-position-y:-307px; }
+	.nav li:nth-child(6):after { background-position-y:-383px; }
+	.info li:after { display:none; }
+	/*.slide footer.info-pi .pi, .slide footer.info-ref .refs { display:block; }*/
+	/* breadcrumb */
+	.nav li:before { width:100%; left: 0; right:0; top: -30px; margin:0 auto; opacity:1 }
+	.up .nav .active:before { opacity:0; }
+	.nav .active:first-child:before { content:""; width:45%; top:-38px; height:28px; background-position-y:-69px; }
+	.nav .active:nth-child(2):before { content:"Cholera"; }
+	.nav .active:nth-child(3):before { content:"At-risk travellers"; }
+	.nav .active:nth-child(4):before { content:"DUKORAL"; color:#fff; }
+	.nav .active:nth-child(5):before { content:"Vaccination schedule"; }
+	.nav .active:nth-child(6):before { content:"Resources"; }
+	.nav .active:after { box-shadow: 0 0 8px rgba(100, 100, 100, 0.8); }
+	
+	.nav li[data-href='ref'] span, 
+	.nav li[data-href='pi'] span { left:0; top:0; width:100%; height:44px; top:-6px; bottom:auto; z-index:-1; background:none;  }
+	.nav li:nth-child(n+7):before,
+	.nav li:nth-child(n+7):after { display:none; }
+	.nav li.active:last-child, 
+	.nav li.active:nth-last-child(2) { color:inherit; }
+	.nav li[data-href='ref'].active span, 
+	.nav li[data-href='pi'].active span { background:rgba(255, 168, 47, 1); box-shadow:inset 0 2px 3px rgba(0, 0, 0, 0.2); }
+	
 
-.slide.bg, .nav li:after { background-repeat:no-repeat; background-size:100% auto; }
+.slide, .logo, .banner, .banner:after, .arrow:before, .btn, .nav li:before, .nav li:after, .nav li i, .bullet li:before, .cols h3, .product, .product:after, .box:after, .planes li i { background-repeat:no-repeat; background-size:100% auto; }
 	
 	
 	

@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title">
+
+<!-- Insert Title -->
+<title>Page 2</title> 
+
+<!-- Common Stylesheets -->
+<link rel="stylesheet" type="text/css" href="../common/css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/index.css" />
+
+<!-- Page Specific Stylesheets -->
+<style type="text/css" >
+    .container{
+        background:url('../img/p2.jpg') no-repeat;
+    }
+
+    h1, h2{
+       /* color: rgba(255, 255, 255, 0.6);*/
+    }
+
+    #email-form{
+        width: 280px;
+        margin-left: 10px;
+        float: left;   
+    }
+
+    #email-form > input, #send{
+        margin-top:30px;
+        text-align: center;
+        line-height: 40px;
+        display: block;
+    }
+    
+    #attachments{
+        overflow-y: auto;
+        width: 600px;
+        height: 500px;
+        float: left;
+        margin-left: 100px;
+    }
+
+    #attachments li{
+        float: left;
+        height: 227px;
+        width: 160.5px;
+        background:rgba(255, 255, 255, 0.2);
+        background-color: white;
+        margin-left:25px;
+        margin-bottom: 100px;
+        margin-top: 20px;
+
+        background:url("../img/resources.png") no-repeat;
+        background-size:160.5px auto;
+        color: white;
+    }
+
+    #attachments li:active, #attachments li.selected{
+        box-shadow: 0px 0px 10px 4px white;
+    }
+
+    #attachments span{
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        width: 140.5px;
+        margin-top: 235px;
+        font-size: 12px;
+        line-height: 17px;
+        text-transform: uppercase;
+    }
+
+    #attachments li:first-child{background-position: 0px 0px}
+    #attachments li:nth-child(2){background-position: 0px -232px}
+    #attachments li:nth-child(3){background-position: 0px -464px}
+    #attachments li:nth-child(4){background-position: 0px -698px}
+    #attachments li:nth-child(5){background-position: 0px -931px}
+    #attachments li:nth-child(6){background-position: 0px -1163px}
+    #attachments li:nth-child(7){background-position: 0px -1397px}
+    #attachments li:nth-child(8){background-position: 0px -1629px}
+    #attachments li:nth-child(9){background-position: 0px -1862px}
+    #attachments li:nth-child(10){background-position: 0px -2095px}
+    #attachments li:nth-child(11){background-position: 0px -2327px}
+    #attachments li:nth-child(12){background-position: 0px -2560px}
+    #attachments li:nth-child(13){background-position: 0px -2792px}
+    #attachments li:last-child{background-position: 0px -3025px}
+
+    #files{
+        height: 100px;
+        overflow: auto;
+        margin-top:30px;
+    }
+
+    #files li{
+        list-style-type: disc;
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+
+    #email-form > textarea{
+        padding: 0;
+        margin: 0;
+        margin-top:30px;
+        resize: none;
+        height: 200px;
+
+    }
+
+    #files, #email-form > input, #email-form > textarea, #send{
+        font-size: 15px;
+        width: 280px;
+        background: rgba(255, 255, 255, 0.7);
+        border:none;
+    }
+
+    #email-form > textarea{
+        text-indent: 0px;
+    }
+
+</style>
+
+</head>
+<body>
+    <section class="container">
+        <div class="slide">
+            <h1>RESOURCES</h1>
+           <ul id="options">
+                <li class="selected">Email</li>
+                <li>Pop-up</li>
+                <li>Video</li>
+            </ul>
+
+            <form id="email-form">
+                <!--<input type="text" placeholder="NAME" name="name"/>-->
+                <input type="text" placeholder="EMAIL" name="email" />
+                <textarea name="message">
+                
+        Dear {NAME},
+
+        Further to our discussion,
+        I thought you would find
+        the following papers
+        interesting.
+            
+        Kind Regards,
+        {REPRESENTATIVE NAME}
+                </textarea>
+
+                <!--<ul id="files">
+                </ul>-->
+
+                <span id="send">SEND</span>
+            </form>
+
+            <ul id="attachments">
+                <li><span>Karicare NZ Stage 1 Infant Formula <br />0-6 months</span></li>
+                <li><span>Karicare NZ Stage 2 Infant Formula <br />from 6 months</span></li>
+                <li><span>Karicare+ AU Stage 1 Infant Formula <br />0-6 months</span></li>
+                <li><span>Karicare+ AU Stage 2 Follow On <br />from 6 months</span></li>
+
+                <li><span>Karicare Gold+ Stage 1</span></li>
+                <li><span>Karicare Gold+ Stage 2</span></li>
+                <li><span>Karicare Gold+ Stage 3</span></li>
+                <li><span>Karicare Gold+ Stage 4</span></li>
+
+                <li><span>Karicare+ Goat Stage 1</span></li>
+                <li><span>Karicare+ Goat Stage 2</span></li>
+
+                <li><span>Karicare+ Soy LR</span></li>
+
+                <li><span>Aptamil Gold+ <br />Stage 3</span></li>
+                <li><span>Aptamil Gold+ <br />Aller Pro 2</span></li>
+                <li><span>Aptamil Gold+ <br />De-Lact</span></li>
+            </ul>
+        </div>
+
+        <!-- navigation toolbar
+        <ul id="navigation">
+            <li data-ref="nav-block">presentation name - section 1</li>
+            <!--<li data-ref="pi"></li>
+            <li data-ref="ref"></li>
+            <li data-ref="home"></li>
+        </ul> -->
+        <span data-ref="home" class="home"></span>
+    </section>
+
+<!-- Common Scripts-->
+<script type="text/javascript" src="../common/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../common/js/touchy.js"></script>
+<script type="text/javascript" src="../common/js/TweenMax.min.js"></script>
+<script type="text/javascript" src="../common/js/TimelineMax.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+<!-- Page Speciic Script -->
+<!--<script type="text/javascript" src="js/p1.js"></script>-->
+<script type="text/javascript">
+    var page = 2;
+
+        var selected, fname, files = $("#files")[0];
+
+    $( function(){
+        $("#attachments li").on('tap', function(){
+            selected = $(this);
+            fname = $(selected).find('span').html();
+            $(selected).hasClass("selected") ?
+                ($(selected).removeClass("selected")) :
+                ($(selected).addClass("selected"))
+
+        })
+
+        $("#send").on('tap', function(){
+            alert("Test Email Function - Sent Button Pressed")
+        })
+
+    
+    });
+
+</script>
+</body>
+</html>

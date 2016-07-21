@@ -1,26 +1,52 @@
 // JavaScript Document
 $( function(){
 	//global variables 
-	var slide = $('.slide');
+	var slide = $('.slide'),
+		footer = $('footer'),
+		info = $('.nav [data-href=pi], .nav [data-href=ref]');
 	
+	$('.arrow').on('tap', function(){
+		var t = $(this);
+		info.removeClass('active');
+		footer.removeClass('info').find('.item').hide();
+		if(!t.hasClass('prev')){
+			t.parent().toggleClass('up');
+		}
+	})
 	
-	
+	$('.nav li').on('tap', function(){
+		var $this = $(this), 
+			file = $this.attr('data-href');
+			
+			if(file === 'pi' || file === 'ref'){
+				info.removeClass('active');
+				$this.addClass('active');
+				footer.addClass('info').find('.item').hide();
+				
+				if(file === 'pi'){
+					footer.find('.item.pi').slideDown();
+					
+				}else{
+					footer.find('.item.refs').slideDown();
+				}
+			}else{
+				file = !slide.hasClass('home') ? '../'+$this.attr('data-href') : $this.attr('data-href');
+				goToSlide(file);
+			}
+		})
+	$('.review > span').on('tap', function(){
+		//console.log(slide.hasClass('home'))
+		if(slide.hasClass('home')){
+			openPDF('pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
+		}else{
+			openPDF('../pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
+		}
+	})
 });
 
-//Global navigation
-function jumpToSlide(btn, s){
-	"use strict";
-	$('.'+btn).on('tap', function(){
-		window.location = s+'.html';
-	});
+function goToSlide(url){
+	window.location= url+'.html';
 }
-function goToNextOrPrev(p, n){
-	"use strict";
-	var file = n;
-	$('.slide').on('swipeleft swiperight', function(e){
-		//console.log(e.type);
-		e.type === "swipeleft" ? file = n : file = p;
-		window.location = file;
-	});
-	
+function openPDF(url){
+	window.location= url+'.pdf';
 }
