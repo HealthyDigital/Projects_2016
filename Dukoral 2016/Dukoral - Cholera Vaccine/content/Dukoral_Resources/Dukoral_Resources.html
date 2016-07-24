@@ -18,7 +18,8 @@
 	.bullet > li:before { top:0.5em; left:-24px;  } 
 	.bullet span { position:absolute; left:-5px; width:410px; height:290px; top:-305px; }
 	.bullet, .bullet > li { background-size:100% auto; }
-	
+	.bullet span.cover_fa { position:absolute; left:-35px; width:210px; height:290px; top:-305px; }
+	.bullet span.flyer_fa { position:absolute; left:185px; width:210px; height:290px; top:-305px; }
 	
 </style> 
 </head>
@@ -27,7 +28,7 @@
       	<div class="banner"></div>
       	<ul class="bullet">
       		<li><span></span></li>
-      		<li><span></span></li>
+      		<li><span class="cover_fa"></span><span class="flyer_fa"></span></li>
       	</ul>
        
         <!-- footer menu -->
@@ -62,7 +63,7 @@ Ch.3 Infectious Diseases Related to Travel.</li>
             </div>
             <div class="item pi hide">
             <p class="product"></p>
-            	<p class="review">Before prescribing, please review Product Information available at <span>www.seqirus.com.au/PI</span>
+            	<p class="review">Before prescribing, please review Product Information available at <span class="pi_link">www.seqirus.com.au/PI</span>
 </p>
 				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au.<br /> 
 Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br />  
@@ -88,11 +89,16 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
 		$('.bullet > li').on('tap', function(){
 			if($(this).index() === 0){
 				openPDF('../pdf/Travel Vaccines Dukoral A3 2015 Clinic Poster_FA-PRIME');
-			}else{
-				openPDF('../pdf/Travel Vaccines Cholera Information Pads-COVER_FA');
 			}
-			
 		})
+		
+		$('.cover_fa').on('tap', function(){
+			openPDF('../pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
+		    //openPDF('../pdf/Travel Vaccines Cholera Information Pads-COVER_FA');
+        })
+        $('.flyer_fa').on('tap', function(){
+            openPDF('../pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
+        })
 	///navigate
 	navigate('../Dukoral_Vaccination/Dukoral_vaccination', '');
 	

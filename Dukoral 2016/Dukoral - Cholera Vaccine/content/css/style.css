@@ -69,6 +69,7 @@ strong { font-weight:normal; font-family: 'GothamMediumCond'; }
 .slide .hide { display:none; }
 th, td { vertical-align:middle; }
 a { text-decoration:none; color:inherit; font-family:inherit; font-size:inherit; line-height:inherit; display:block; }
+a.pi {display:inline;}
 
 .arrow:before, nav li, nav :after, .nav li > span, footer { -webkit-transition:all 0.35s ease-in-out; transition:all 0.35s ease-in-out; }
 
