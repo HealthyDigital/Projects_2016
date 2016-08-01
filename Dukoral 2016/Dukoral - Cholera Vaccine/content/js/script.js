@@ -52,6 +52,14 @@ $( function(){
 		}
 	})
 	
+	$('.handbook').on('tap', function() {
+		if(slide.hasClass('home')) {
+			//console.log(slide.hasClass('home'))
+			openPDF('pdf/2.CholeraImmunisation Handbook10thEdition');
+		} else {
+			openPDF('../pdf/2.CholeraImmunisation Handbook10thEdition');
+		}
+	})
 	//navigate();
 });
 
