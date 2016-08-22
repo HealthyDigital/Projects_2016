@@ -69,6 +69,7 @@ strong { font-weight:normal; font-family: 'GothamMediumCond'; }
 .slide .hide { display:none; }
 th, td { vertical-align:middle; }
 a { text-decoration:none; color:inherit; font-family:inherit; font-size:inherit; line-height:inherit; display:block; }
+a.pi {display:inline;}
 
 .arrow:before, nav li, nav :after, .nav li > span, footer { -webkit-transition:all 0.35s ease-in-out; transition:all 0.35s ease-in-out; }
 
@@ -107,7 +108,7 @@ footer .arrow:after {
 	.arrow:before { display:block; width:32px; height:20px; margin: 12px auto 0;  background-position-y: -161px; -webkit-transform:rotate(-180deg); transform:rotate(-180deg); }
 	.up .arrow:before { -webkit-transform:rotate(0deg); transform:rotate(0deg); }
 .bullet li { padding-left:26px; position:relative; margin-bottom:3px; }
-	.bullet li:before { left:0; top:0.25em; width:14px; height:14px; background-image:url('../img/bullet.png') }
+	.bullet li:before { left:0; top:0.10em; width:14px; height:18px; background-image: url('../img/bullet.png'); }
 .banner:after { left:0; right:0; top:17px; width:765px; height:100px; margin:0 auto; color:#adb7b1; font-size:42px; font-family: 'HomesteadInline'; font-style:italic; }
 .cols > li { float:left; width:50%; height:inherit; position:relative; } 
 	.cols > li > div { padding: 25px; }
@@ -128,7 +129,7 @@ footer {
 	footer.up {-webkit-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); }
 footer .nav { margin:6px 0 0 60px; width:89%; }
 footer .nav li { text-align:center; letter-spacing:0.01em; height:18px; width:45px; float:right; padding:4px 0; border-right:1px solid rgba(0, 0, 0, 0.45); position:relative;  }
-	footer .nav li:nth-last-child(n+3) { width:125px; float:left; }
+	footer .nav li:nth-last-child(n+3) { width:120px; float:left; }
 	footer .nav li:first-child { text-align:left; width:70px; padding-left:5px; }
 	footer .nav li i { display:inline-block; padding: 1px 5px; }
 	footer .item { width:696px; margin:100px auto 0; padding-bottom:7em; font-size:16px; line-height:18px; color:#787878; }
@@ -156,6 +157,7 @@ footer .nav li { text-align:center; letter-spacing:0.01em; height:18px; width:45
 	.nav li:nth-child(4):after { background-position-y:-229px; }
 	.nav li:nth-child(5):after { background-position-y:-307px; }
 	.nav li:nth-child(6):after { background-position-y:-383px; }
+	.nav li:nth-child(7):after { background-position-y:-459px; }
 	.info li:after { display:none; }
 	/*.slide footer.info-pi .pi, .slide footer.info-ref .refs { display:block; }*/
 	/* breadcrumb */
@@ -165,14 +167,15 @@ footer .nav li { text-align:center; letter-spacing:0.01em; height:18px; width:45
 	.nav .active:nth-child(2):before { content:"Cholera"; }
 	.nav .active:nth-child(3):before { content:"At-risk travellers"; }
 	.nav .active:nth-child(4):before { content:"DUKORAL"; color:#fff; }
-	.nav .active:nth-child(5):before { content:"Vaccination schedule"; }
-	.nav .active:nth-child(6):before { content:"Resources"; }
+	.nav .active:nth-child(5):before { content:"Summary";  }
+	.nav .active:nth-child(6):before { content:"Vaccination schedule"; }
+	.nav .active:nth-child(7):before { content:"Resources"; }
 	.nav .active:after { box-shadow: 0 0 8px rgba(100, 100, 100, 0.8); }
 	
 	.nav li[data-href='ref'] span, 
 	.nav li[data-href='pi'] span { left:0; top:0; width:100%; height:44px; top:-6px; bottom:auto; z-index:-1; background:none;  }
-	.nav li:nth-child(n+7):before,
-	.nav li:nth-child(n+7):after { display:none; }
+	.nav li:nth-child(n+8):before,
+	.nav li:nth-child(n+8):after { display:none; }
 	.nav li.active:last-child, 
 	.nav li.active:nth-last-child(2) { color:inherit; }
 	.nav li[data-href='ref'].active span, 
@@ -181,7 +184,7 @@ footer .nav li { text-align:center; letter-spacing:0.01em; height:18px; width:45
 
 .slide, .logo, .banner, .banner:after, .arrow:before, .btn, .nav li:before, .nav li:after, .nav li i, .bullet li:before, .cols h3, .product, .product:after, .box:after, .planes li i { background-repeat:no-repeat; background-size:100% auto; }
 	
-	
+	/*.handbook{text-decoration: underline;}*/
 	
 
 

@@ -38,8 +38,26 @@ $( function(){
 		//console.log(slide.hasClass('home'))
 		if(slide.hasClass('home')){
 			openPDF('pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
-		}else{
+		} else{
 			openPDF('../pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
+		}
+	})
+	
+	$('span.pi_link').on('tap', function(){
+		if(slide.hasClass('home')){
+		//console.log(slide.hasClass('home'))
+			openPDF('pdf/Dukoral_PI_AU2');
+		} else {
+			openPDF('../pdf/Dukoral_PI_AU2');
+		}
+	})
+	
+	$('.handbook').on('tap', function() {
+		if(slide.hasClass('home')) {
+			//console.log(slide.hasClass('home'))
+			openPDF('pdf/2.CholeraImmunisation Handbook10thEdition');
+		} else {
+			openPDF('../pdf/2.CholeraImmunisation Handbook10thEdition');
 		}
 	})
 	//navigate();

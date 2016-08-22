@@ -8,151 +8,67 @@
 <title>CSL Vaccines - Dukoral</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <style type="text/css">
-.slide { background-image:url('img/map.jpg'); }
-
-.planes, 
-	.planes > li, 
-	.planes > li div, 
-	h1, .paths,
-	 .planes li span,
-	 .planes li p,
-	 .planes li i,
-	 .planes li span:before { position:absolute; }
-.paths { width:448px; bottom:275px; }
-	.paths svg { width:100%; height:auto; }
-.planes, .paths { right:68px; }
-.planes {
-	bottom:282px;
-	/*background:url('img/lines.svg') 0 bottom no-repeat; 
-	background-size:448px auto;*/ }
-	.planes, .planes > li div { width:448px; height:240px; }
-	
-	/*.planes,*/ .planes > li div { 
-		background:url('img/lines.svg') right bottom no-repeat; 
-		background-size:442px auto; }
-	.planes > li, .planes > li div { right:0; bottom:0;  }
-	.planes > li { overflow:hidden; height:0; }
-	.planes > li:first-child { right:40px; height:100%; width:0; /*background-color:rgba(0,0,0, .2); */}
-	.planes > li:first-child div { right:-40px; }
-	.planes > li:nth-child(2) { width:40px; /*background-color:rgba(0,0,0, .35); */}
-	
-	.planes > li:last-child { overflow:inherit; width:inherit; height:inherit; }
-	
-	.planes li span, .planes li span:after { background:url('img/icons.svg') 0 -230px no-repeat; background-size:100% auto; }
-	.planes li span { left:-38px; top:8px; width:85px; height:80px; -webkit-transform: scale(0); transform: scale(0); opacity:0; }
-	.planes li .pin2 { left:162px; top:-46px; }
-	.planes li .pin2:after { background-position-y:-570px; margin-top:4px; }
-	.planes li .pin3 { left:300px; top:28px; }
-	.planes li .pin3:after { background-position-y:-635px; margin-top:4px; }
-	.planes li span:before, .planes li span:after { content:""; }
-	.planes li span:after { display:block; width:inherit; height:96%; background-position-y:-505px; }
-	.planes li span:before { 
-		width: 14px;
-		height: 4px;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		bottom: 0.15em;
-		border-radius: 50%;
-		background: radial-gradient(ellipse at center, rgba(3, 30, 33, 1) 2%, rgba(3, 30, 33, .8) 2%, rgba(3, 30, 33, 0) 100%); }
-	.planes li p { 
-		width:48px; 
-		height:62px; 
-		right:-6px; 
-		bottom:-20px; 
-		-webkit-transform: scale(0.5);
-		transform: scale(0.5); 
-		opacity: 0;
-		z-index:5; }
-	.planes li i { 
-		width:inherit;
-		height:inherit;
-		background-image:url('img/plane.svg'); }
-		.planes i:last-child { bottom:-20px; background-position-y:-72px; z-index:-1; }
-		.planes .plane1.s1 i:last-child { bottom:-25px; left:-10px; }
-		.planes li .plane2 {
-			right:-8px;
-			-webkit-transform: rotate(20deg) scale(0.4);
-			transform: rotate(20deg) scale(0.4);  }
-		.planes li .plane3 {
-			right:-14px;
-			-webkit-transform: rotate(45deg) scale(0.35);
-			transform: rotate(45deg) scale(0.35); }	
+.slide { background-image:url('img/cover_background.jpg'); }
+h1, .bullet { position:absolute; }
 h1 { 
-	left:0; 
-	right:0; 
-	bottom:88px; 
-	width:640px; 
-	height: 260px;
-	margin:0 0 0 226px; }
-	h1 > span { 
-		display: block; 
-		height: 52px; 
-		background:url('img/text.svg') 0 0 no-repeat;
-		background-size:640px auto; 
-		opacity: 0;
-		-webkit-transform:scale(0);
-		transform:scale(0); }
-	h1 > span:first-child { width:400px; }
-	h1 > span:nth-child(2) { background-position-y:-53px; height:100px; margin-top:-27px; }
-	h1 > span:last-child { background-position-y:-154px; height:112px; margin-top:-12px; }
+    right: 75px; 
+	top: 455px; 
+	width: 450px; 
+	height: 350px;
+	background: url('img/covertext.png') 0 0 no-repeat; 
+    background-size: 100% auto;}
+.bullet { font-size:22px; line-height:26px; left:160px; bottom:72px; }
+	.bullet span { font-family: 'HomesteadInline'; letter-spacing:-0.02em; -webkit-font-smoothing: antialiased; }
+	.bullet li:before { top:0.35em; }
+.slide .bullet li { margin-bottom:10px; }
+
 </style> 
 </head>
 <body>
 	<section class="slide home">
-        <ul class="planes">
-        	<li><div></div></li>
-        	<li><div></div></li>
-            <li>
-            	<p class="plane1"><i></i><i></i></p>
-             	<p class="plane2"><i></i><i></i></p>
-                <p class="plane3"><i></i><i></i></p>
-            	
-            	
-            	<span class="pin1"></span>
-                <span class="pin2"></span>
-                <span class="pin3"></span>
-            </li>
-        </ul>
+       <!-- <article class="content">
+            contents!!!
+        </article>
+      	<ul class="bullet">
+      		<li>Cholera is likely to be <span>under-reported</span> in travellers<sup>3</sup></li>
+      		<li>Mild cholera is often <span>clinically indistinguishable</span> from other causes of acute diarrhoea<sup>4,5</sup></li>
+      		<li>The <span>short incubation period</span> (2 hours to 5 days) means illness can occur whilst abroad<sup>3,4</sup></li>
+      		<li>Up to <span>98% of travellers</span> fail to adhere to safe eating and drinking advice whilst abroad<sup>6,7</sup></li>
+      	</ul> 
+        <h1></h1> -->
        
-        <h1>
-        	<span></span>
-            <span></span>
-            <span></span>
-            
-        </h1> 
         <!-- footer menu -->
         <footer>
         	<span class="btn arrow"></span>
             <ul class="nav">
-                <li data-href="index" class="active">Map</li>
+                <li data-href="Dukoral_Map/DukoralMap">Map</li>
                 <li data-href="Dukoral_Cholera/Dukoral_cholera">Cholera</li>
                 <li data-href="Dukoral_at_Risk_Travellers/Dukoral_at_risk_travellers">At-risk travellers</li>
+                <li data-href="Dukoral_Offer_Before_They_Go/Dukoral_offer_before_they_go">DUKORAL</li>
+                <li data-href="Dukoral_Summary/DukoralSummary">Summary</li>
                 <li data-href="Dukoral_Vaccination/Dukoral_vaccination">Vaccination schedule</li>
                 <li data-href="Dukoral_Resources/Dukoral_Resources">Resources</li>
-                <li data-href="Dukoral_Offer_Before_They_Go/Dukoral_offer_before_they_go">DUKORAL</li>
-                
-                 <li data-href="pi" ><span><i>PI</i></span></li>
+                <li data-href="pi" ><span><i>PI</i></span></li>
                 <li data-href="ref"><span><i></i></span></li>
             </ul>
             <div class="item refs hide">
             	<h3>REFERENCES</h3>
             	<ol>
-            		<li>Australian Bureau of Statistics, ABS Data, Short-Term Travellers. Last accessed June 2016.</li>
-            		<li>Centres for Disease Control and Prevention. 2016 Yellow Book.<br />
+                    <li>Jelinek T <em>et al. Expert Rev. Vaccines</em> 2008; (7)5:561–567</li>
+                    <li class="handbook">NHMRC, The Australian Immunisation Handbook, 10th Edition, 2013.</li>
+                    <li>DUKORAL<sup>®</sup> Approved Product Information, August 2015.</li>
+                    <li>Australian Bureau of Statistics, ABS Data, Short-Term Travellers. Last accessed June 2016.</li>
+                    <li>Centres for Disease Control and Prevention. 2016 Yellow Book.<br />
 Ch.3 Infectious Diseases Related to Travel.</li>
-            		<li>Jelinek T <em>et al. Expert Rev. Vaccines</em> 2008; (7)5:561–567</li>
-            		<li>Steffan R <em>et al. Trav Med Infect Dis</em> 2003; 1:80–88.</li>
-            		<li>Zuckerman <em>et al. Lancet Infect Dis</em> 2007; 7:521–530.</li>
-            		<li>Kozicki M <em>et al. Int J Epidemiol</em> 1985; 14(1):169–172.</li>
-            		<li>Mattila L <em>et al. J Travel Med</em> 1995: 1;2(2):77–84.</li>
-            		<li>NHMRC, The Australian Immunisation Handbook, 10th Edition, 2013.</li>
-            		<li>DUKORAL<sup>®</sup> Approved Product Information, August 2015.</li>
-            	</ol>
+                    <li>Steffan R <em>et al. Trav Med Infect Dis</em> 2003; 1:80–88.</li>
+                    <li>Zuckerman <em>et al. Lancet Infect Dis</em> 2007; 7:521–530.</li>
+                    <li>Kozicki M <em>et al. Int J Epidemiol</em> 1985; 14(1):169–172.</li>
+                    <li>Mattila L <em>et al. J Travel Med</em> 1995: 1;2(2):77–84.</li>
+                </ol>
             </div>
             <div class="item pi hide">
             <p class="product"></p>
-            	<p class="review">Before prescribing, please review Product Information available at <span>www.seqirus.com.au/PI</span>
+            	<p class="review">Before prescribing, please review Product Information available at <span class="pi_link">www.seqirus.com.au/PI</span>
 </p>
 				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au.<br /> 
 Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br />  
@@ -160,112 +76,20 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
 <p class="box"><strong>PBS Information:</strong> This product is not listed on the National Immunisation Program (NIP) Schedule or the PBS.</p>
             </div>
         </footer><!-- end footer -->
-       
         <span class="logo"></span>
 	</section>
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="js/TweenMax.min.js"></script>
-<script type="text/javascript" src="js/TimelineLite.min.js"></script> 
 <script type="text/javascript" src="js/touchy.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
 <script type="text/javascript">
 	$( function(){
-		var tl = new TimelineLite(),
-			tl2 = new TimelineLite(),
-			tl3 = new TimelineLite(),
-			tl4 = new TimelineLite(),
-			tl5 = new TimelineLite(),
-			li = $('.planes > li:first-child'),
-			li2 = $('.planes > li:nth-child(2)'),
-			plane1 = $('.plane1'),
-			plane1b = plane1.find(':last-child'),
-			plane2 = $('.plane2'),
-			plane2b = plane2.find(':last-child'),
-			plane3 = $('.plane3'),
-			plane3b = plane3.find(':last-child'),
-			pin1 = $('.pin1'),
-			pin2 = $('.pin2'),
-			pin3 = $('.pin3'),
-			txt1 = $('h1 > span:first-child'),
-			txt2 = $('h1 > span:nth-child(2)'),
-			txt3 = $('h1 > span:last-child');
-			
+		$('.prev').on('tap', function(){
+			goToSlide('../index');
+		})
 		
-		
-		tl.to(plane1, 1, { delay:0.25, opacity:1,  bottom:'20px', right:'22px', rotation:-15, scale:0.55, ease:Linear.easeNone }, 's1')
-			.to(plane1b, 0.3, { left:'-15px', ease:Linear.easeNone } , 's1')
-			.to(plane1, 0.45, { bottom:'55px', right:'52px', rotation:-20, scale:0.58, ease:Linear.easeNone }, 's2')
-			.to(plane1b, 0.3, { left:'-25px', ease:Linear.easeNone } , 's2')
-			.to(plane1, 0.35, { bottom:'88px', right:'92px', rotation:-28, scale:0.6, ease:Linear.easeNone }, 's3')
-			.to(plane1b, 0.15, { left:'-28px', ease:Linear.easeNone } , 's3')
-			.to(plane1, 0.25, { bottom:'111px', right:'130px', rotation:-38, scale:0.65, ease:Linear.easeNone }, 's4')
-			.to(plane1b, 0.15, { bottom:'-10px', left:'-35px', rotation:5,  ease:Linear.easeNone } , 's4')
-			.to(plane1, 0.25, { bottom:'130px', right:'175px', rotation:-48, scale:0.7, ease:Linear.easeNone }, 's5')
-			.to(plane1b, 0.3, { bottom:'-5px', left:'-30px', rotation:5,  ease:Linear.easeNone } , 's5')
-			.to(plane1, 0.35, { bottom:'140px', right:'210px', rotation:-55, scale:0.75, ease:Linear.easeNone }, 's6')
-			.to(plane1b, 0.3, { bottom:'0px', left:'-30px', rotation:8,  ease:Linear.easeNone } , 's6')
-			.to(plane1, 0.5, { bottom:'146px', right:'260px', scale:0.8, rotation:-64, ease:Linear.easeNone }, 's7')
-			.to(plane1b, 0.25, { bottom:'5px', left:'-25px',  ease:Linear.easeNone } , 's7')
-			.to(plane1, 0.7, { bottom:'144px', right:'330px', rotation:-75, ease:Linear.easeNone }, 's8')
-			.to(plane1b, 0.7, { bottom:'8px', left:'-24px', ease:Linear.easeNone } , 's8')
-			.to(plane1, 0.7, { bottom:'131px', right:'390px', rotation:-82, ease:Linear.easeNone }, 's9')
-			.to(plane1b, 0.7, { bottom:'5px', left:'-15px', ease:Linear.easeNone } , 's9')
-			
-		
-		tl.add(tl2, 0.25);
-		tl.add(tl3, 0.3);
-		tl.add(tl4, 0.5);
-		tl.add(tl5, 0.3);
-		
-		tl2.to(plane2, 0.5, { opacity: 1, bottom:'0px', scale:0.45, ease:Linear.easeNone }, 's1')	
-			.to(plane2b, 0.2, { left:'-10px', ease:Linear.easeNone } , 's1')
-			.to(plane2, 0.5, { bottom:'30px', right:'-4px', scale:0.5, rotation:14, ease:Linear.easeNone }, 's2')
-			.to(plane2b, 0.2, { left:'-15px', ease:Linear.easeNone } , 's2')	
-			.to(plane2, 0.5, { bottom:'70px', right:'4px', scale:0.53, rotation:10, ease:Linear.easeNone }, 's2')
-			.to(plane2b, 0.1, { bottom:'-25px', left:'-25px', ease:Linear.easeNone } , 's2')	
-			.to(plane2, 0.35, { bottom:'110px', right:'20px', scale:0.55, rotation:-2, ease:Linear.easeNone }, 's3')
-			.to(plane2b, 0.1, { bottom:'-20px', left:'-35px', ease:Linear.easeNone } , 's3')	
-			.to(plane2, 0.25, { bottom:'150px', right:'51px', scale:0.6,  rotation:-20, ease:Linear.easeNone }, 's4')
-			.to(plane2b, 0.1, { bottom:'-10px', left:'-52px', ease:Linear.easeNone } , 's4')	
-			.to(plane2, 0.25, { bottom:'178px', right:'98px', rotation:-45, ease:Linear.easeNone }, 's5')
-			.to(plane2b, 0.1, {bottom:'0px', left:'-50px', rotation:5, ease:Linear.easeNone } , 's5')	
-			.to(plane2, 0.25, { bottom:'186px', right:'135px', rotation:-60, ease:Linear.easeNone }, 's6')
-			.to(plane2b, 0.1, {  left:'-42px', rotation:10, ease:Linear.easeNone } , 's6')	
-			.to(plane2, 0.25, { right:'170px', rotation:-68, scale:0.65, ease:Linear.easeNone }, 's7')
-			.to(plane2b, 0.1, { left:'-32px', rotation:20, ease:Linear.easeNone } , 's7')	
-			.to(plane2, 0.25, { bottom:'184px', right:'204px', rotation:-75, ease:Linear.easeNone }, 's8')
-			.to(plane2b, 0.1, { bottom:'-5px', left:'-20px', rotation:10, ease:Linear.easeNone } , 's8')
-			
-		
-		tl3.to(plane3, 0.25, { opacity: 1, bottom:'0px', right:'-22px', scale:0.4, ease:Linear.easeNone })
-		
-			.to(plane3, 0.2, { bottom:'20px', right:'-25px', scale:0.45, rotation:22, ease:Linear.easeNone }, 's1' )
-			.to(plane3b, 0.1, { bottom:'-22px', left:'-22px', ease:Linear.easeNone } , 's1')
-			.to(plane3, 0.2, { bottom:'45px', right:'-20px', scale:0.5, rotation:5, ease:Linear.easeNone }, 's2' )
-			.to(plane3b, 0.1, { bottom:'-20px', left:'-28px', ease:Linear.easeNone } , 's2')
-			.to(plane3, 0.25, { bottom:'70px', right:'-4px', rotation:-20, ease:Linear.easeNone }, 's3' )
-			.to(plane3b, 0.1, { bottom:'-10px', left:'-25px', rotation:15, ease:Linear.easeNone }, 's3')
-			.to(plane3, 0.25, { bottom:'86px', right:'15px', scale:0.5, rotation:-36, ease:Linear.easeNone }, 's4' )
-			.to(plane3b, 0.1, { bottom:'-5px', left:'-20px', ease:Linear.easeNone }, 's4')
-			.to(plane3, 0.25, { bottom:'95px', right:'35px', rotation:-50, ease:Linear.easeNone }, 's5' )
-			.to(plane3b, 0.1, { bottom:'-15px', left:'-10px', ease:Linear.easeNone }, 's5')
-			.to(plane3, 0.25, { bottom:'104px', right:'70px', ease:Linear.easeNone }, 's6' )
-			.to(plane3b, 0.1, { bottom:'-18px', left:'-5px', ease:Linear.easeNone }, 's6')
-		
-		tl4.to(li2, 1.5, { height:'60%', ease:Linear.ease })
-			.to(li, 4, { width:'360px', ease:Linear.ease }, '-=.5')
-			
-		
-		tl5.to(txt1, 0.8, { opacity: 1, scale:1, ease:Power1.easeInOut } )
-			.to(txt2, 0.8, { opacity: 1, scale:1, ease:Power1.easeInOut } )
-			.to(txt3, 0.8, { opacity: 1, scale:1, ease:Power1.easeInOut }, '+=2' )
-			.to([plane1, plane2, plane3], 0.8, { opacity: 0, ease:Power1.easeInOut }, '+=.5')
-			.to(li, 0.5, { width:'402px', ease:Linear.ease }, 'pin', '-=0.1')
-			.to([pin1, pin2, pin3], 0.7, { scale: 1, opacity:1, ease:Bounce.easeOut }, 'pin' )
-		
-	///navigate
-	navigate('', 'Dukoral_Cholera/Dukoral_cholera');
+		///navigate
+		navigate('', 'Dukoral_Map/DukoralMap');
 	})
 </script>
 </body>
