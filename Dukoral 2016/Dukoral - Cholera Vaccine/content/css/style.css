@@ -82,7 +82,7 @@ a.pi {display:inline;}
 	.bullet li:before { position:absolute; }
 	
 .logo { width:128px; height:45px; right:20px; bottom:25px; background-image:url('../img/dukoral_logo.png'); z-index:4;  }
-	
+.arrow:before, .btn.arrow.prev:before { background-image:url('../img/arrow.svg'); }
 .btn.arrow { 
 	width:50px; 
 	height:38px; 
@@ -91,7 +91,7 @@ a.pi {display:inline;}
 	top:-30px; }
 	.btn.arrow.prev { width:34px; height:28px; left:25px; top:62px;  z-index:5; -webkit-transform:rotate(-90deg); transform:rotate(-90deg);}
 	.btn.arrow.prev:after { width:100%; height:50%; bottom:0; box-shadow:inset 0 -3px 4px rgba(170,170,170, .7); }
-	.btn.arrow.prev:before { width:28px; margin-top:6px; background-position-y:-140px; z-index:10;  }
+	.btn.arrow.prev:before { width:24px; height:17px; margin-top:6px; z-index:10;  }
 .banner:after,
 	.arrow:after, 
 	.arrow:before,
@@ -104,9 +104,8 @@ footer .arrow:after {
 	width:100%; 
 	background:linear-gradient(top, rgba(255,255,255, 0), rgba(255,255,255, 1), rgba(255,255,255, 0));
 	background:-webkit-linear-gradient(top, rgba(255,255,255, 0), rgba(255,255,255, 1), rgba(255,255,255, 0)); }
-	.arrow:before, .nav li:first-child:before, .nav li:last-child i { background-image:url('../img/icons.svg'); }
-	.arrow:before { display:block; width:32px; height:20px; margin: 12px auto 0;  background-position-y: -161px; -webkit-transform:rotate(-180deg); transform:rotate(-180deg); }
-	.up .arrow:before { -webkit-transform:rotate(0deg); transform:rotate(0deg); }
+	.arrow:before { display:block; width:30px; height:20px; margin: 9px auto 0;  background-image:url('../img/arrow.svg'); -webkit-transform:rotate(-180deg); transform:rotate(-180deg); }
+	.up .arrow:before { -webkit-transform:rotate(0deg); transform:rotate(0deg); margin-top:12px; }
 .bullet li { padding-left:26px; position:relative; margin-bottom:3px; }
 	.bullet li:before { left:0; top:0.10em; width:14px; height:18px; background-image: url('../img/bullet.png'); }
 .banner:after { left:0; right:0; top:17px; width:765px; height:100px; margin:0 auto; color:#adb7b1; font-size:42px; font-family: 'HomesteadInline'; font-style:italic; }
@@ -148,7 +147,7 @@ footer .nav li { text-align:center; letter-spacing:0.01em; height:18px; width:45
 	.box strong { font-family: 'HelveticaNeueMediumCond'; }
 	.box:after { right:0; left:0; bottom:-100px; width:145px; height:80px; background-image:url('../img/seqirus_logo.png'); margin:0 auto; }
 	
-.nav li:last-child i { width:18px; height:20px; background-position-y:-178px; margin-top:10px; }
+.nav li:last-child i { width:16px; height:20px; background-image:url('../img/book.svg'); margin-top:10px; }
 .nav li:nth-last-child(2) i { border:1px solid rgba(100, 100, 100, 0.6); margin-top:10px; }
 	.nav li:after {  width:100px; height:75px; background:url('../img/thumbs.png'); bottom:-90px; left:0; right:0; margin:0 auto; z-index:5; }
 	.nav li:first-child:after { left:-52px; }
@@ -163,7 +162,7 @@ footer .nav li { text-align:center; letter-spacing:0.01em; height:18px; width:45
 	/* breadcrumb */
 	.nav li:before { width:100%; left: 0; right:0; top: -30px; margin:0 auto; opacity:1 }
 	.up .nav .active:before { opacity:0; }
-	.nav .active:first-child:before { content:""; width:45%; top:-38px; height:28px; background-position-y:-69px; }
+	.nav .active:first-child:before { content:""; width:33%; top:-38px; height:28px; background-image:url('../img/map.svg'); }
 	.nav .active:nth-child(2):before { content:"Cholera"; }
 	.nav .active:nth-child(3):before { content:"At-risk travellers"; }
 	.nav .active:nth-child(4):before { content:"DUKORAL"; color:#fff; }
