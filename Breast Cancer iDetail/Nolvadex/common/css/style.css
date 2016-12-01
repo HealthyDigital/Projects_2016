@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Bd';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Bd.eot') format('eot'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Bd.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Bd.woff') format('woff')
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-BdCn';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-BdCn.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-BdCn.woff') format('woff')
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Cn';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Cn.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Cn.woff') format('woff')
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Hv';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Hv.eot') format('eot'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Hv.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Hv.woff') format('woff') 
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-It';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-It.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-It.woff') format('woff')
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Lt';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.eot') format('eot'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.woff') format('woff')
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-LtCn';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-LtCn.eot') format('eot'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-LtCn.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-LtCn.woff') format('woff')
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Md';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Md.eot') format('eot'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Md.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Md.woff') format('woff')
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Roman';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Roman.eot') format('eot'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Roman.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Roman.woff') format('woff')
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-Th';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Th.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Th.woff') format('woff')
+     }
+@font-face {
+    font-family: 'HelveticaNeueLTStd-ThCn';
+    src: url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-ThCn.svg') format('svg'), 
+         url('../fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-ThCn.woff') format('woff')
+     }
+     
+
+/* CSS Document reset */
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .60em}sub {vertical-align: sub}sup {vertical-align: super ; line-height:10px; }
+* {-webkit-text-size-adjust: none; -webkit-user-select: none; }* { -webkit-user-select: none; }
+
+.container, .glasspane {position:absolute; top:0px; left:0px; width: 1024px; height:768px; overflow: hidden;font-size: 16px; font-family:'HelveticaNeueLTStd-Lt'; color: #213A74;}
+.footer {background:#0cc6dd; position:absolute; left:0; width:inherit; height:30px; bottom:0px; border-top:2px solid #fff;}
+.footer:before {background: #01337c; position: relative; left: 0px; width: 1024px; height: 2px;content: '';display: block; bottom: 4px;}
+
+b {font-family:'HelveticaNeueLTStd-Bd';}
+i {font-family:'HelveticaNeueLTStd-It';}
+h1 {font-size: 23px; border-bottom: 1px solid; width: 100%; top:117px; position: relative; letter-spacing: 0.1px; padding-bottom:8px; }
+.content {margin:0px 121px 0px 121px; height:100%;}
+
+.logo {position: absolute; left: 823px; top: 40px; height: 46px;
+width: 164px;
+background: url('../img/nolvadex.png') 0 0 no-repeat;
+background-size: auto 99%;}
+.r, .i, .p {position: absolute; display:block;}
+.r {left: 62px; width: 38px; height: 28px; bottom: 19px;}
+.i {left: 120px; width:27px; height:27px; bottom: 20px; border-radius:4px; background-color: #fff;}
+.p {left: auto;right: 16px;width: 45px; height: 33px; bottom: 11px;}
+.glasspane{background:rgba(255,255,255,0.8); display:none;} 
+.popup {position: absolute; bottom: 34px; background: #0cc6dd;  color: #fff; font-size: 20px; line-height: 26px; left: 62px; min-height: 330px; display:none;}
+.popup div {position:relative; margin:auto; padding: 61px 60px 60px 60px; display:none;}
+.popup:before { background:#213A74; position: relative; left: 0px; width: inherit; height: 3px; content: ''; display: block; top: -6px;}
+.popup p {text-transform: uppercase; letter-spacing: 0.9px;}
+.popup ol{margin-left: 25px; margin-top: 5px; letter-spacing: 0.3px;}
+.popup ul{list-style:none;}
+.popup.slideInUp {
+   -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-duration: 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+   -moz-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+     -o-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+        transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+}
+.popup.slideOutDown {
+   -webkit-animation-duration: 0.2s; /* Safari 4.0 - 8.0 */
+    animation-duration: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+   -moz-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+     -o-transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); 
+        transition-timing-function: cubic-bezier(0.445, 0.050, 0.550, 0.950); /* easeInOutSine */
+}
+
+
+.r {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2021.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2038%2028%22%20style%3D%22enable-background%3Anew%200%200%2038%2028%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bclip-path%3Aurl%28%23SVGID_2_%29%3Bfill%3A%23FFFFFF%3B%7D%0A%09.st1%7Bclip-path%3Aurl%28%23SVGID_2_%29%3Bfill%3Anone%3Bstroke%3A%23003478%3Bstroke-width%3A1.0357%3Bstroke-linecap%3Around%3Bstroke-linejoin%3Around%3B%7D%0A%09.st2%7Bclip-path%3Aurl%28%23SVGID_2_%29%3Bfill%3A%23003478%3B%7D%0A%3C/style%3E%0A%3Cg%3E%0A%09%3Cdefs%3E%0A%09%09%3Crect%20id%3D%22SVGID_1_%22%20width%3D%2238%22%20height%3D%2228%22/%3E%0A%09%3C/defs%3E%0A%09%3CclipPath%20id%3D%22SVGID_2_%22%3E%0A%09%09%3Cuse%20xlink%3Ahref%3D%22%23SVGID_1_%22%20%20style%3D%22overflow%3Avisible%3B%22/%3E%0A%09%3C/clipPath%3E%0A%09%3Cpath%20class%3D%22st0%22%20d%3D%22M20.1%2C5.3c2.1-1.4%2C7.4-3.7%2C17.4-1.9v21.5C24%2C22.3%2C19%2C27.5%2C19%2C27.5s-5-5.2-18.5-2.6V3.4%0A%09%09c9.5-1.7%2C14.8%2C0.4%2C17.1%2C1.7%22/%3E%0A%09%3Cpath%20class%3D%22st1%22%20d%3D%22M20.1%2C5.3c2.1-1.4%2C7.4-3.7%2C17.4-1.9v21.5C24%2C22.3%2C19%2C27.5%2C19%2C27.5s-5-5.2-18.5-2.6V3.4%0A%09%09c9.5-1.7%2C14.8%2C0.4%2C17.1%2C1.7%22/%3E%0A%09%3Cpath%20class%3D%22st2%22%20d%3D%22M18.5%2C2.9C17%2C1.7%2C12.3-1.3%2C2.7%2C0.7v21.5c9.6-2.1%2C14.3%2C0.9%2C15.7%2C2.1V2.9z%20M35.3%2C22.2V0.7%0A%09%09c-9.6-2-14.3%2C1-15.7%2C2.3v21.4C21%2C23.1%2C25.7%2C20.1%2C35.3%2C22.2%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+    background-repeat: no-repeat;
+}
+
+.i {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2021.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2028%2028%22%20style%3D%22enable-background%3Anew%200%200%2028%2028%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text/css%22%3E%0A%09.st0%7Bfill%3A%23003478%3B%7D%0A%3C/style%3E%0A%3Cg%3E%0A%09%3Cpath%20class%3D%22st0%22%20d%3D%22M23.3%2C28H4.7C1%2C28%2C0%2C24.9%2C0%2C23.3V4.7C0%2C1%2C3.1%2C0%2C4.7%2C0h18.7C27%2C0%2C28%2C3%2C28%2C4.7v18.7C28%2C27%2C24.9%2C28%2C23.3%2C28z%0A%09%09%20M4.7%2C1C4.5%2C1%2C1%2C1.1%2C1%2C4.7v18.7C1%2C23.5%2C1.1%2C27%2C4.7%2C27h18.7c0.1%2C0%2C3.6-0.1%2C3.6-3.6V4.7C27%2C4.5%2C26.9%2C1%2C23.3%2C1H4.7z%22/%3E%0A%09%3Cpath%20class%3D%22st0%22%20d%3D%22M16.3%2C18.4c-0.4%2C0.2-0.8%2C0.4-1%2C0.4c-0.2%2C0-0.3-0.1-0.3-0.7c0-0.9%2C0.6-5.7%2C0.6-6.2c0-0.2%2C0-0.5-0.5-0.5%0A%09%09c-0.8%2C0-2.5%2C0.5-3.4%2C1l-0.1%2C1.2c0.4-0.1%2C0.8-0.3%2C1.1-0.3c0.3%2C0%2C0.4%2C0.2%2C0.4%2C0.6c0%2C0.5-0.6%2C5.4-0.6%2C5.7c0%2C0.6%2C0.2%2C0.9%2C0.8%2C0.9%0A%09%09c1%2C0%2C2.1-0.3%2C3-0.8L16.3%2C18.4z%20M14.8%2C8c-1.1%2C0-1.6%2C0.5-1.6%2C1.3c0%2C0.7%2C0.5%2C1%2C1.3%2C1c0.9%2C0%2C1.5-0.5%2C1.5-1.2C16%2C8.4%2C15.6%2C8%2C14.8%2C8%0A%09%09L14.8%2C8z%22/%3E%0A%3C/g%3E%0A%3C/svg%3E%0A');
+    background-repeat: no-repeat;
+}
+
+.p {
+    background-image: url('../img/pi.png');
+    background-size:100% auto;
+    background-repeat: no-repeat;
+}
+
+.r.disabled, .i.disabled, .p.disabled, .hide {display:none;}
+.show {display:block;}

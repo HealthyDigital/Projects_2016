@@ -21,7 +21,7 @@ $( function(){
 			else if(c=='arimidex'){href="Arimidex-00-Timeline"}
 			else if(c=='faslodex'){href = "Faslodex-00-Home"}
 			else if(c=='zoladex'){href= "Zoladex-00-Home"}
-
+			else if(c=='nolvadex'){href= "Nolvadex-00-Home"}
 			document.location= "veeva:gotoSlide("+href+".zip)";
 		})
 

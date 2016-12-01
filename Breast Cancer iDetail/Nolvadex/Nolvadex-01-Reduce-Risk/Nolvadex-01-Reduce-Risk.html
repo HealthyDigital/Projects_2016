@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport"
+	content="width=device-width initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/animate.min.css" />
+<style type="text/css">
+    /*.container {background:url('./img/bg4.jpg') 0 0 no-repeat; background-size:100% auto;}*/
+    .explanation {top: 133px; position: relative; line-height:20px; width:100%;}
+    .footnote {top: 570px; color: #666767; position: relative; line-height: 14px; width: 100%; font-size: 11px;}
+    .graph_area {position: absolute;
+left: 0px;
+top: 258px;
+border-top: 2px solid #fff;
+border-bottom: 2px solid  #fff;
+/*background: #f9f9f9;*/
+width: 100%;
+height: 381px;}
+.graph_area:before, .graph_area:after{ content:''; display:block; width:inherit; height:1px; background:#213A74;position: relative; top: -3px;}
+.graph_area:after{ top:382px;}
+.feature{position: absolute; top: 0px; left: 120px; } 
+.feature h2 {position: absolute; top: 13px; left: 294px; font-size: 12px;font-family:'HelveticaNeueLTStd-Md'; width: 350px;}
+
+        .graph, .axis{ display: block; width: 845px; height: 402px; margin-top: 2px; margin-left: 6px; background: url('img/graphs.png') no-repeat; background-size: 769px auto; image-rendering: -webkit-optimize-contrast; position:absolute; }
+        .axis{height: 257px; background-position-y: -370px; width: 0px; display:block; -webkit-transition: width 0.5s; transition: width 0.5s;}
+        .feature.f1 .axis {height: 207px; background-position-y: -420px; top: 50px;}
+        .feature.f2 .graph{ background-position-y: -636px; background-position-x: 48px; height:360px; top:20px; }
+        .feature.f2 .axis{ background-position-y: -1035px;
+background-position-x: -60px;
+height: 307px;
+top: 50px;
+left: 120px;}
+        .axis.active {width: 845px; }
+        .button{
+            position:absolute;
+            top: 98px;
+            left: 120px;
+            width:50px;
+            height:115px;
+            -webkit-transition: background-color 0.5s;
+            transition: background-color 0.5s;
+            border-radius:30px;
+        }
+        
+        .button .circle{
+            left:0px;
+            height:45px;
+            width:50px;
+            position:relative;
+            display:inline-block;
+            background:url('img/slider.png');
+            background-size: 100% auto;
+            background-position-y:-283px;
+            background-color: transparent;
+            -webkit-transition: top 0.5s;
+            transition: top 0.5s;
+        }
+        
+        .button .innerbg {
+           position:absolute;
+            top:0px;
+            left:0px;
+            width:50px;
+            height:117px;
+            background:url('img/slider.png');
+            background-size: 100% auto;
+        }
+
+        .button .text{
+            font-family: 'SerifaStd-Bold';
+            font-size:15px;
+            color: white;
+            position:absolute;
+            left:10px;
+            -webkit-transition: top 0.5s;
+            transition: top 0.5s
+        }
+        
+        .graph_area.f1 .button{background-color: #74d2de}
+        .graph_area.f1 .circle{top:2px;}
+        .graph_area.f2 .button{background-color: #213A74}
+        .graph_area.f2 .circle{top:68px;}
+        .graph_area.f2 .text{ top:35px; left:15px;}
+            
+         .y-axis, .x-axis, .legend, .risk, .values,.cuzick {font-size:12px; color:#666767; list-style:none; position:absolute; font-family:'HelveticaNeueLTStd-LtCn'}
+         .x-axis {width: 700px;}
+         .x-axis li {float:left;}
+
+         .feature.f1 .y-axis {top: 31px; left: 94px; text-align: right;}
+         .feature.f1 .y-axis li {margin-bottom: 15.5px;line-height: 16.5px;}
+         .feature.f1 .y-axis li:last-of-type, .cuzick {position: absolute; width: 220px; top: 146px; transform: rotate(-90deg);left: -126px;}
+         .feature.f1 .x-axis {top: 268px;left: 114px;}
+         .feature.f1 .x-axis li{margin-right: 57px;}
+         .feature.f1 .x-axis li:nth-of-type(5){margin-right: 54px;}
+         .feature.f1 .x-axis li:nth-of-type(6), .feature.f1 .x-axis li:nth-of-type(7), .feature.f1 .x-axis li:nth-of-type(8), .feature.f1 .x-axis li:nth-of-type(9), .feature.f1 .x-axis li:nth-of-type(10){margin-right: 51px;}
+         .feature.f1 .x-axis li:last-of-type {position: absolute;top: 22px;font-size: 13px;left: 278px;width: 120px;}
+         .feature.f1 .legend {top: 55px;width: 200px;left: 171px; display:none;}
+         .feature.f1 .legend li {line-height:15px;}
+         .legend:before {content: ''; display: block; background: url('img/legend.png') no-repeat; background-size: 100% auto; width: 37px;height: 100px;position: absolute;left: -37px; top: -1px;}         
+         .cuzick {top: 242px; left: 750px; font-size: 10px;}
+         .values {top: 60px;left: 754px; font-size: 11px; display:none;}
+         .values li {position: absolute;}
+         .values li:nth-of-type(2) {top:61px;}
+         .values li:nth-of-type(3) {top:72px;}
+         .values li:nth-of-type(4) {top:117px;}
+         
+         .risk {top: 298px;left: 13px; width:800px;}
+         .risk li {margin-bottom: 12px; }
+         .risk span {display: inline-block; width: 47px; text-align: right;margin-right:15px; }
+         .risk li span:first-of-type {width: 68px; margin-right:0px;}
+         .risk li span:nth-of-type(4), .risk li span:nth-of-type(7) {margin-right:17px;}
+         
+         .feature.f2 .y-axis {top: 33.5px; left: 94px; text-align: right;}
+         .feature.f2 .y-axis li {margin-bottom: 61px;}
+         .feature.f2 .y-axis li:last-of-type {position: absolute; width: 120px; top: 148px; transform: rotate(-90deg); left: -75px;}
+         .feature.f2 .x-axis {top: 338px; left: 115px;}
+         .feature.f2 .x-axis li:nth-of-type(1) {margin-right: 200px;}
+         .feature.f2 .x-axis li:nth-of-type(2), .feature.f2 .x-axis li:nth-of-type(3)  {margin-right: 195px;}
+         .feature.f2 .x-axis li:last-of-type {position: absolute; top: 18px; font-size: 13px; left: 296px; width:120px;}
+         .feature.f2 .legend {top: 260px; width: 200px; left: 580px;}
+         .feature.f2 .legend li {line-height:15px;}
+                  
+         .btn-play { width: 55px;height: 55px; background: #d8e4ea; -webkit-border-radius: 500px; border-radius: 500px; display:block; position:absolute; }
+         .btn-play { -webkit-animation: ready 1.1s infinite;  animation: ready 1.1s infinite;}
+         .btn-play:after { content: ""; left: 20px; top: 17px; right: auto; width: 0;height: 0;border-style: solid; border-width: 11px 0 11px 20px;border-color: transparent transparent transparent #fff;overflow: visible;display: block;position: absolute;}
+         .feature.f1 .btn-play {left: 405px;top: 125px;}
+         .feature.f2 .btn-play {left: 420px;top: 155px;}
+         
+         /* animation */
+@keyframes ready { 0% { opacity: 0.3; } 70% { opacity: 0.8; } 100% { opacity: 0.4; } }
+@-webkit-keyframes ready { 0% { opacity: 0.3; } 70% { opacity: .8; } 100% { opacity: 0.4; } }
+</style>
+</head>
+<body class='nolvadex'>
+	<div class='container'>
+        <div class="content">
+	        <h1>Nolvadex for 5 years, reduces the risk of breast cancer for up to 16 years.<sup>1,2*</sup></h1>
+	        <div class="explanation">*For women with a lifetime breast cancer risk of 1.5 to 3 times the population average compared to placebo.<sup>1</sup> Reductions in risk were recorded for invasive ER positive cancers and ductal carcinoma in situ, but not for invasive ER negative cancers.  Median follow up 16 years.<sup>1,2</sup></div>
+			<div class="footnote"><b>IBIS-1 STUDY DESIGN<sup>1,2</sup></b><br/>
+			Randomised controlled trial, 7,154 women at increased risk of developing breast cancer received 5 years of tamoxifen 20 mg or placebo daily. Median follow-up 16<br/>
+			years. <b>Primary endpoint:</b> occurrence of any type of breast cancer. 601 breast cancers reported (251 [7·0%] in 3579 patients in the tamoxifen group vs 350 [9·8%]<br/>
+			in 3575 women in the placebo group; hazard ratio [HR] 0·71 [95% CI 0·60–0·83], p&lt;0·0001).</div> 
+		</div>
+	    <div class="graph_area f1">
+	       <div class='feature f1'>
+                <h2>Cumulative incidence of breast cancers over time<sup>1</sup></h2>
+                <span class='graph'></span>
+                <span class='axis'></span>
+                
+                <ul class="y-axis"><li>14</li><li>12</li><li>10</li><li>8</li><li>6</li><li>4</li><li>2</li><li>0</li><li>Cumulative incidence of breast cancer (%)</li></ul>
+                <ul class="x-axis"><li>0</li><li>2</li><li>4</li><li>6</li><li>8</li><li>10</li><li>12</li><li>14</li><li>16</li><li>18</li><li>20</li><li>Follow-up (years)</li></ul>
+                <ul class="legend"><li>Placebo (all breast cancers)</li><li>Tamoxifen (all breast cancers)</li><li>Placebo (invasive ER positive breast cancers)</li><li>Tamoxifen (invasive ER positive breast cancers)</li></ul>
+                <ul class="values"><li>12.3%</li><li>8.3%</li><li>7.8%</li><li>4.9%</li></ul>
+                <ul class="risk">
+                    <li><span>Number at Risk</span></li>
+                    <li><span>Placebo</span><span>3575</span><span>3527</span><span>3474</span><span>3410</span><span>3358</span><span>3296</span><span>3239</span><span>2850</span><span>1901</span><span>725</span><span>165</span></li>
+                    <li><span>Tamoxifen</span><span>3579</span><span>3542</span><span>3495</span><span>3446</span><span>3385</span><span>3344</span><span>3293</span><span>2890</span><span>1918</span><span>748</span><span>168</span></li>
+                </ul>
+                <span class="cuzick">Adapted from Cuzick J et al, 2015<sup>1</sup></span>
+                <span class="btn btn-play"></span>
+            </div>
+
+            <div class='feature f2 hide'>
+                <h2>Smoothed annual hazard rate curves for breast cancer<sup>1</sup></h2>
+                <span class='graph'></span>
+                <span class='axis'></span>
+                <ul class="y-axis"><li>8.0</li><li>6.0</li><li>4.0</li><li>2.0</li><li>0</li><li>Annual hazard rates (%)</li></ul>
+                <ul class="x-axis"><li>0</li><li>5</li><li>10</li><li>15</li><li>Follow-up (years)</li></ul>
+                <ul class="legend"><li>Placebo (all breast cancers)</li><li>Tamoxifen (all breast cancers)</li><li>Placebo (invasive ER positive breast cancers)</li><li>Tamoxifen (invasive ER positive breast cancers)</li></ul>
+                <span class="btn btn-play"></span>
+            </div>
+
+            <div class='button'>
+               <span class="innerbg"></span>
+               <span class='circle'></span>
+            </div>
+	    </div>
+		<span class='logo'></span>
+		<div class="glasspane"></div>
+		<div class="popup">
+			<div class='ref'>
+				<p>Reference:</p>
+				<ol>
+					<li>Nolvadex Approved Product<br />Information. April 2016.</li>
+					<li>Cuzick J et al. <i>Lancet Oncol</i><br />
+2015; 16: 67–75.</li>
+				</ol>
+			</div>
+			<div class='info'>
+                <p>IBIS-1 STUDY DESIGN<sup>1,2</sup></p>
+                <ul>
+                    <li>Randomised controlled trial, 7,154<br />
+pre and post menopausal women<br />
+35–70 years of age from 37 centres<br />
+in eight countries at increased<br />
+risk of developing breast cancer<br />
+received oral tamoxifen 20 mg daily<br />
+or matching placebo for 5 years.<br />
+Patients were deemed to be at an<br />
+increased risk of developing breast<br />
+cancer based on a family history of<br />
+breast cancer or abnormal benign<br />
+breast disease.
+                    </li>
+                    <li>
+                    The primary endpoint was the<br />
+occurrence of any type of breast<br />
+cancer (including ductal carcinoma<br />
+in situ). Secondary endpoints<br />
+included the occurrence of invasive<br />
+oestrogen receptor-positive breast<br />
+cancer, all-cause mortality, and<br />
+adverse events.</li>
+                </ul>
+            </div>
+		</div>
+		<div class='footer'></div> 
+		<div class="controls">
+            <span class="r"></span>
+            <span class="i"></span>
+            <span class="p"></span>
+        </div>
+	</div>
+	<script type="text/javascript">
+       var idx = 'N01';
+    </script>
+    <script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/variables.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" >
+
+        $('.button').on('tap', function(){
+            if($('.graph_area').hasClass('f1')){
+                $('.graph_area').removeClass('f1').addClass('f2');
+                $('.feature.f2 .graph').width(845);
+                $('.feature.f2').find('.btn-play').show();
+                $('.feature.f2').find('.legend').hide();
+                $('.feature.f2').find('.axis').removeClass('active');
+                $('.f1').fadeOut();
+                $('.f2').fadeIn();
+            }
+            else{
+                $('.graph_area').removeClass('f2').addClass('f1');
+                $('.feature.f2 .graph').width(844);
+                $('.feature.f1').find('.btn-play').show();
+                $('.feature.f1').find('.legend').hide();
+                $('.feature.f1').find('.axis').removeClass('active');
+                $('.feature.f1').find('.values').hide();
+                $('.f2').fadeOut();
+                $('.f1').fadeIn();
+            }
+        });
+
+        $('.btn-play').on('tap', function(){
+        	if($('.graph_area').hasClass('f1')){
+        		$('.feature.f1').find('.btn-play').hide();
+                $('.feature.f1').find('.legend').fadeIn();
+                $('.feature.f1 .graph').width(844);
+                $('.feature.f1').find('.axis').addClass('active');
+                $('.feature.f1').find('.values').fadeIn();
+                $('.feature.f1').find('.graph').offsetHeight;
+            } else{
+            	$('.feature.f2').find('.btn-play').hide();
+            	$('.feature.f2').find('.legend').fadeIn();
+                $('.feature.f2 .graph').width(844);
+                $('.feature.f2').find('.axis').addClass('active');
+                $('.feature.f2').find('.graph').offsetHeight;
+            }
+        });
+        
+        $('.axis').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+        	   if($('.graph_area').hasClass('f1')){
+        		   $('.feature.f1 .graph').width(845);
+               } else {
+            	   $('.feature.f2 .graph').width(845);
+               }
+        });
+
+
+	</script>
+</body>
+</html>
