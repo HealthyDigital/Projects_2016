@@ -15,7 +15,7 @@ $( function(){
 	navToSlide('.zoladex .pi', 'Zoladex15PI', 'AZAUBREF');
 	navToSlide('.faslodex .pi', 'Faslodex2016PI', 'AZAUBREF');
 	navToSlide('.arimidex .pi', 'Arimidex13PI', 'AZAUBREF');
-	navToSlide('.nolvadex .pi', 'Nolvadex16PI', 'AZAUBREF');
+	navToSlide('.controls .p', 'Nolvadex16PI', 'AZAUBREF');
 
 	//show/hide
 	showHide('ref');
