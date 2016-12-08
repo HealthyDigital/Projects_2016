@@ -73,7 +73,7 @@ $( function(){
 	});
 	
 		
-	controls.on('tap', function(){
+	controls.not('.p').on('tap', function(){
 		var $this = $(this),
 		content = $this.attr('class');
 		activeContent = $('.active');
