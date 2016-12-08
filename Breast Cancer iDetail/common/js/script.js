@@ -49,4 +49,76 @@ $( function(){
 			var disp = $('div.'+btn);
 			$(disp).is(':visible') ? $(disp).fadeOut() : $(disp).fadeIn();
 		})
-}
+	}
+	
+	//global variables 
+	var popup = $('.popup'),
+		r = popup.find('.ref'),  
+		s = popup.find('.info'),
+		controls = $(".controls > span"),
+		glasspane = $(".glasspane");
+        
+	
+	//close popup
+	glasspane.on('tap', function(){
+		popup.animateOutCss('slideOutDown');
+		$('.active').removeClass('active');
+		glasspane.removeClass('show');
+	});
+		
+	popup.on('tap', function(){
+		popup.animateOutCss('slideOutDown');
+		$('.active').removeClass('active');
+		glasspane.removeClass('show');
+	});
+	
+		
+	controls.on('tap', function(){
+		var $this = $(this),
+		content = $this.attr('class');
+		activeContent = $('.active');
+			if(!popup.hasClass("show") && !$this.hasClass("disabled")){
+				r.hide();
+				s.hide();
+				if(content === 'r'){
+					r.show();
+					r.addClass('active')
+				} else if(content === 'i'){
+					s.show();
+					s.addClass('active')
+				} 
+				//show popup
+				glasspane.addClass('show');
+				//popup.addClass('show');
+				popup.animateInCss('slideInUp');
+			} else if (popup.hasClass("show") && !activeContent.hasClass(content)) {
+				activeContent.hide();
+				activeContent.removeClass('active');
+				if($this.attr('class') === 'r'){
+					r.show();
+					r.addClass('active')
+				} else if($this.attr('class') === 'i'){
+					s.show();
+					s.addClass('active')
+				} 
+			}
+	 
+	});
+
+	$.fn.extend({
+		animateInCss: function (animationName) {
+			$(this).addClass('show');
+			var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+			this.addClass('animated ' + animationName).one(animationEnd, function() {
+				
+				$(this).removeClass('animated ' + animationName);
+			});
+		},
+		animateOutCss: function (animationName) {
+			var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+			this.addClass('animated ' + animationName).one(animationEnd, function() {
+				$(this).removeClass('animated ' + animationName);
+				$(this).removeClass('show');
+			});
+		}
+	});
