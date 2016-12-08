@@ -1,7 +1,15 @@
 // JavaScript Document
 $( function(){
-	//prevent iPad rubber band effect
-	$(document).on('touchmove', function(e){ e.preventDefault(); });
+	//prevent iPad rubber band effect and stop all elements from being scrollable
+	$(document).on('touchmove', function(e){ 
+		e.preventDefault(); 
+	});
+	
+	//add class scrollable to the element to make it scrollable again
+	$('.scrollable').on('touchmove', function (e) {
+	     e.stopPropagation();
+	});
+	
 	
 	//navigation
 	navToSlide('.zoladex .pi', 'Zoladex15PI', 'AZAUBREF');
