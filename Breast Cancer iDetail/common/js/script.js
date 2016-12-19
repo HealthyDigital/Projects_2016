@@ -12,10 +12,10 @@ $( function(){
 	
 	
 	//navigation
-	navToSlide('.zoladex .pi', 'Zoladex15PI', 'AZAUBREF');
-	navToSlide('.faslodex .pi', 'Faslodex2016PI', 'AZAUBREF');
-	navToSlide('.arimidex .pi', 'Arimidex13PI', 'AZAUBREF');
-	navToSlide('.nolvadex .pi', 'Nolvadex16PI', 'AZAUBREF');
+	navToSlide('.zoladex .pi', 'Zoladex2015PI', 'AZANZBREF');
+	navToSlide('.faslodex .pi', 'Faslodex2016PI', 'AZANZBREF');
+	navToSlide('.arimidex .pi', 'Arimidex2013PI', 'AZANZBREF');
+	navToSlide('.nolvadex .pi', 'Nolvadex2016PI', 'AZANZBREF');
 
 	//show/hide
 	showHide('ref');
@@ -61,47 +61,53 @@ $( function(){
 	
 	//close popup
 	glasspane.on('tap', function(){
-		popup.animateOutCss('slideOutDown');
-		$('.active').removeClass('active');
-		glasspane.removeClass('show');
+		closepopup();
 	});
 		
 	popup.on('tap', function(){
+		closepopup();
+	});
+	
+
+	function closepopup() {
 		popup.animateOutCss('slideOutDown');
 		$('.active').removeClass('active');
 		glasspane.removeClass('show');
-	});
+		$('.open').removeClass('open');
+	}
 	
-		
-	controls.not('.p').on('tap', function(){
+	
+	controls.not('.p, .open').on('tap', function(){
 		var $this = $(this),
-		content = $this.attr('class');
+		content = $this.attr('class'),
 		activeContent = $('.active');
-			if(!popup.hasClass("show") && !$this.hasClass("disabled")){
-				r.hide();
-				s.hide();
-				if(content === 'r'){
-					r.show();
-					r.addClass('active')
-				} else if(content === 'i'){
-					s.show();
-					s.addClass('active')
-				} 
-				//show popup
-				glasspane.addClass('show');
-				//popup.addClass('show');
-				popup.animateInCss('slideInUp');
-			} else if (popup.hasClass("show") && !activeContent.hasClass(content)) {
-				activeContent.hide();
-				activeContent.removeClass('active');
-				if($this.attr('class') === 'r'){
-					r.show();
-					r.addClass('active')
-				} else if($this.attr('class') === 'i'){
-					s.show();
-					s.addClass('active')
-				} 
-			}
+		
+		if($this.hasClass('open')) {
+			closepopup();
+			return;
+		} else {
+			$('.open').removeClass('open');
+			$this.addClass('open')
+		}
+		
+		if(!popup.hasClass("show") && !$this.hasClass("disabled")){
+			r.hide();
+			s.hide();
+			//show popup
+			glasspane.addClass('show');
+			popup.animateInCss('slideInUp');
+		} else if (popup.hasClass("show")) { 
+			activeContent.hide();
+			activeContent.removeClass('active');
+		}
+		//choose content
+		if($this.hasClass('r')){
+			r.show();
+			r.addClass('active')
+		} else if($this.hasClass('i')){
+			s.show();
+			s.addClass('active')
+		} 
 	 
 	});
 

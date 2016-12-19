@@ -132,7 +132,7 @@
                 $('.scrollable li').on('tap', function(){
                 var name = $(this).attr('class');
                 //console.log('veeva:gotoSlide('+name+'.zip, AZAUBREF1)');
-                document.location = 'veeva:gotoSlide('+name+'.zip, AZAUBREF1)';
+                document.location = 'veeva:gotoSlide(BREF_'+name+'.zip, AZANZBREF)';
                 });
             }
         })

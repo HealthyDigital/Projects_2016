@@ -82,6 +82,10 @@ background-size: auto 99%;}
 .r {left: 62px; width: 38px; height: 28px; bottom: 19px;}
 .i {left: 120px; width:27px; height:27px; bottom: 20px; border-radius:4px; background-color: #fff;}
 .p {left: auto;right: 16px;width: 45px; height: 33px; bottom: 11px;}
+.nolvadex .p:active {
+    bottom: 7px;
+}
+
 .glasspane{background:rgba(255,255,255,0.8); display:none;} 
 .popup {position: absolute; bottom: 34px; background: #0cc6dd;  color: #fff; font-size: 20px; line-height: 26px; left: 62px; min-height: 330px; display:none;}
 .popup div {position:relative; margin:auto; padding: 61px 60px 60px 60px; display:none;}
@@ -122,6 +126,8 @@ background-size: auto 99%;}
     background-size:100% auto;
     background-repeat: no-repeat;
 }
+
+
 
 .r.disabled, .i.disabled, .p.disabled, .hide {display:none;}
 .show {display:block;}
