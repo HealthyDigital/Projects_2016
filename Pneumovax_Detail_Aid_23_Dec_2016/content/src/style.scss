@@ -1,5 +1,5 @@
 /* CSS Document reset */
-* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .45em;line-height:10px; position:relative; }sub {vertical-align: text-bottom}sup {vertical-align:super;  }
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,capxion,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcapxion,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}body {line-height: 1;}blockquote,q {quotes: none;}blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}table {border-collapse: collapse;border-spacing: 0;}small,sub,sup {font-size: .45em;line-height:10px; position:relative; }sub {vertical-align: text-bottom}sup {vertical-align:super;  }i { font-style: normal; }
 /* ============= custom fonts   ============= */
 
 @mixin fontface($f){
@@ -11,21 +11,25 @@
 }
 @include fontface('HelveticaNeueLight');
 @include fontface('HelveticaNeueLightCond');
-@include fontface('HelveticaNeueMediumCond');
 @include fontface('HelveticaNeueThinCond');
+@include fontface('HelveticaNeueMediumCond');
+@include fontface('HelveticaNeueLTStdBdCn');
 @include fontface('HelveticaNeueLTStdBlkCn');
 @include fontface('HelveticaNeueCon');
 
 //shared classes
 .fontLight { font-family: 'HelveticaNeueLight'; }
 .fontLightCon { font-family: 'HelveticaNeueLightCond', Helvetica, Arial, sans-serif; }
+.fontThinCon { font-family: 'HelveticaNeueThinCond'; }
 .fontRegularCon { font-family: 'HelveticaNeueCon'; }
 .fontMedCon { font-family: 'HelveticaNeueMediumCond'; }
-.fontBoldCon { font-family: 'HelveticaNeueLTStdBlkCn'; }
+.fontBoldCon { font-family: 'HelveticaNeueLTStdBdCn'; }
+.fontBlkCon { font-family: 'HelveticaNeueLTStdBlkCn'; }
 
 //vars
 $white: #ffffff;
 $orange: #e04d0d;
+$blue: #008ca8;
 $black: #000000;
 $black32: #323232;
 /*  =============  */
@@ -76,7 +80,7 @@ body {
 }
 
 h1, h2 {
-  @extend .fontBoldCon;
+  @extend .fontBlkCon;
   font-weight: normal;
   line-height: .85em;
   color: $white;
@@ -131,7 +135,6 @@ strong {
 }
 
 
-
 th, td {
   vertical-align: middle;
 }
@@ -161,10 +164,6 @@ a {
   @extend .abs;
 }
 
-.bullet li:before {
-  @extend .abs;
-}
-
 .logo {
   width: 170px;
   height: 45px;
@@ -175,9 +174,6 @@ a {
   z-index: 4;
 }
 
-.bullet li:before {
-  content: "";
-}
 .arrow:before {
   background-image: url('../img/arrow.svg');
 }
@@ -255,17 +251,21 @@ footer .arrow:after {
   margin-top: 12px;
 }
 
-.bullet li {
-  padding-left: 26px;
-  position: relative;
-  margin-bottom: 3px;
+.bullet {
+  li {
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 15px;
 
-  &:before {
-    left: 0;
-    top: 0.10em;
-    width: 14px;
-    height: 18px;
-    background-image: url('../img/bullet.png');
+    &:before {
+      content: "";
+      @extend .abs;
+      left: 0;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+    }
   }
 }
 
@@ -371,7 +371,8 @@ footer {
 
           i {
             display: inline-block;
-            padding: 1px 5px;
+            padding: 3px 5px;
+            height: 12px
           }
 
           &:last-child i {
@@ -408,8 +409,8 @@ footer {
           }
 
           &[data-href='ref'].active span, &[data-href='pi'].active span {
-              background: rgba(255, 168, 47, 1);
-              box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
+              background: $orange;
+              //box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2);
           }
 
           &:first-child:after {
@@ -479,24 +480,18 @@ footer {
         }
     }
 
+
+  .refs {
+    @extend .fontLight;
+  }
+
   .item {
     width: 696px;
     margin: 100px auto 0;
     padding-bottom: 7em;
-    font-size: 16px;
-    line-height: 18px;
-    color: #787878;
-  }
-
-  .refs {
-    font-family: 'HelveticaNeueLight';
-  }
-
-  sup {
-    font-family: inherit;
-  }
-
-  .item {
+    font-size: 17px;
+    line-height: 20px;
+    color: $black32;
     h3 {
       color: inherit;
       padding-bottom: 8px;
@@ -508,14 +503,83 @@ footer {
       margin-bottom: 10px;
       letter-spacing: -0.008em;
     }
+    .product {
+      width: 250px;
+      height: 155px;
+      background-image: url('../img/product.png');
+      margin: -20px auto 0;
+      position: relative;
+
+      &:after {
+        content: "";
+        @extend .abs;
+        right: 0;
+        left: 0;
+        bottom: -124px;
+        width: 200px;
+        height: 70px;
+        margin: 0 auto;
+        background-image: url('../img/pneumo_logo.svg');
+         @extend .bg
+      }
+    }
+    &.pi {
+      p {
+        text-align: center;
+      }
+      .review {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+      .tolerance {
+        margin-bottom: 88px;
+      }
+      .small {
+        margin-bottom: 5px;
+      }
+      .small, .tolerance {
+        font-size: 14px;
+        line-height: 16px;
+        > sup { font-size: 0.5em; }
+      }
+
+      .review, .small {
+        @extend .fontThinCon;
+      }
+
+      .box {
+        @extend .fontLightCon;
+        font-size: 17px;
+        line-height: 20px;
+        padding: 6px 15px;
+        background: #fff;
+        border: 1px solid #000000;
+        color: #000000;
+        position: relative;
+        strong {
+          @extend .fontMedCon;
+        }
+
+        &:after {
+          right: 0;
+          left: 0;
+          bottom: -100px;
+          width: 145px;
+          height: 80px;
+          background-image: url('../img/seqirus_logo.png');
+          margin: 0 auto;
+        }
+      }
+    }
   }
     
 }
 
-.item .product {
+/*.item .product {
   width: 350px;
   height: 210px;
-  background-image: url('../img/product_shot.png');
+  background-image: url('../img/product.png');
   margin: -20px auto 70px;
   position: relative;
 
@@ -523,71 +587,22 @@ footer {
     content: "";
     position: absolute;
   }
-}
+}*/
 
 .box:after {
   content: "";
   position: absolute;
 }
 
-.item .product:after {
+/*.item .product:after {
   right: 0;
   left: 0;
   bottom: -60px;
   width: 210px;
   height: 70px;
   margin: 0 auto;
-  background-image: url('../img/dukoral_logo.png');
-}
-
-.pi {
-  p {
-    text-align: center;
-  }
-
-  .review {
-    font-size: 22px;
-    line-height: 24px;
-    margin-bottom: 10px;
-  }
-
-  .small {
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 5px;
-  }
-
-  .review, .small {
-    font-family: 'HelveticaNeueThinCond';
-  }
-
-  .box {
-    font-family: 'HelveticaNeueThinCond';
-    font-size: 17px;
-    line-height: 20px;
-    padding: 15px;
-    background: #fff;
-    border: 1px solid #000;
-    color: #000;
-    position: relative;
-  }
-}
-
-.box {
-  strong {
-    font-family: 'HelveticaNeueMediumCond';
-  }
-
-  &:after {
-    right: 0;
-    left: 0;
-    bottom: -100px;
-    width: 145px;
-    height: 80px;
-    background-image: url('../img/seqirus_logo.png');
-    margin: 0 auto;
-  }
-}
+  background-image: url('../img/pneumo_logo.svg');
+}*/
 
 
 
@@ -701,18 +716,6 @@ footer {
   background-size: 100% auto;
 }
 
-/*.nav li {
-  &:before, &:after, i {
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-  }
-}*/
-
-.bullet li:before, .cols h3 {
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
-
 .product {
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -727,13 +730,22 @@ footer {
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
-
+.btn-chart {
+  @extend .abs;
+  left: 40px;
+  bottom: 80px;
+  width: 80px;
+  height: 60px;
+  background-image: url(../img/icon-4.svg);
+  @extend .bg;
+}
 .overlay {
   @extend .abs;
-  top: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   z-index: 99;
+  display: none;
   > div {
     padding: 55px 25px 0;
   }
@@ -742,12 +754,13 @@ footer {
     height: auto;
   }
   .chart {
-    padding: 25px;
+    height: 603px;
+    padding: 25px 25px 10px;
     background-color: $white;
     position: relative;
     h4 {
       font-size: 28px;
-      @extend .fontBoldCon
+      @extend .fontBlkCon
     }
     p {
       font-size: 23px;
@@ -759,8 +772,33 @@ footer {
     h4, p {
       padding: 0 33px;
     }
+    .key {
+      font-size: 21px;
+      line-height: 1.1em;
+      color: $orange;
+      @extend .fontMedCon;
+      text-align: right;
+      @extend .abs;
+      right: 38px;
+      bottom: 20px;
+      > i {
+        display: block;
+        color: $blue;
+      }
+      
+    }
+  }
+  .close {
+    @extend .abs;
+    width: 24px;
+    height: 24px;
+    right: 20px;
+    top: 20px;
+    background-image: url(../img/close.png);
+    @extend .bg;
   }
   
 }
+
 
 /*.handbook{text-decoration: underline;}*/

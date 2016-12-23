@@ -30,36 +30,39 @@ $( function(){
 					footer.find('.item.refs').slideDown();
 				}
 			}else{
-				file = !slide.hasClass('home') ? '../'+$this.attr('data-href') : $this.attr('data-href');
+              
+				file = !slide.hasClass('home') && file === 'index' ? '../'+file : 
+                  !slide.hasClass('home') && file !== 'index' ? '../'+file+'/'+file : 
+                   slide.hasClass('home') && file === 'index' ? file : file+'/'+file;
 				goToSlide(file);
 			}
 		})
 	$('.review > span').on('tap', function(){
 		//console.log(slide.hasClass('home'))
 		if(slide.hasClass('home')){
-			openPDF('pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
+			openPDF('pdf/pi');
 		} else{
-			openPDF('../pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
+			openPDF('../pdf/pi');
 		}
 	})
 	
-	$('span.pi_link').on('tap', function(){
+/*	$('span.pi_link').on('tap', function(){
 		if(slide.hasClass('home')){
 		//console.log(slide.hasClass('home'))
 			openPDF('pdf/Dukoral_PI_AU2');
 		} else {
 			openPDF('../pdf/Dukoral_PI_AU2');
 		}
-	})
+	})*/
 	
-	$('.handbook').on('tap', function() {
+	/*$('.handbook').on('tap', function() {
 		if(slide.hasClass('home')) {
 			//console.log(slide.hasClass('home'))
 			openPDF('pdf/2.CholeraImmunisation Handbook10thEdition');
 		} else {
 			openPDF('../pdf/2.CholeraImmunisation Handbook10thEdition');
 		}
-	})
+	})*/
 	//navigate();
 });
 
