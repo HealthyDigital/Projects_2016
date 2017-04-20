@@ -4,10 +4,10 @@ $( function(){
 	$(document).on('touchmove', function(e){ e.preventDefault(); });
 	
 	//navigation
-	navToSlide('.zoladex .pi', 'Zoladex15PI', 'AZAUBREF');
-	navToSlide('.faslodex .pi', 'Faslodex2016PI', 'AZAUBREF');
-	navToSlide('.arimidex .pi', 'Arimidex13PI', 'AZAUBREF');
-	navToSlide('.nolvadex .pi', 'Nolvadex16PI', 'AZAUBREF');
+	navToSlide('.zoladex .pi', 'Zoladex2015PI', 'AZANZBREF');
+	navToSlide('.faslodex .pi', 'Faslodex2016PI', 'AZANZBREF');
+	navToSlide('.arimidex .pi', 'Arimidex2013PI', 'AZANZBREF');
+	navToSlide('.nolvadex .pi', 'Nolvadex2016PI', 'AZANZBREF');
 
 	//show/hide
 	showHide('ref');

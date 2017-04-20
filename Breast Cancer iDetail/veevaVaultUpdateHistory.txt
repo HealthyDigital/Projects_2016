@@ -1,0 +1,14 @@
+Nolvadex Update History
+
+5/12/20116 neue presentationen über Vault hochgeladen
+AZ AU Oncology Breast References (AZAUBREF)
+AZ Breast Cancer (AZAUBC)
+
+Presentation and slides have the Group AU_ON_BP and ZOLADEX as linked product.
+The slides also have the Group detail ONC_AU - I haven’t seen where I can set the Group detail for the presentations (binder). 
+
+6/12/2016 Group detail was missing for some slides, added that and Sharon tried to sync again
+
+6/12/2016 I tried to migrate using your original presentations and got the error of duplicating Presentation ID.  So I have then updated the external ID for both presentations and re-migrate again which I then got the attached 16 records of error.
+
+6/12/2016
