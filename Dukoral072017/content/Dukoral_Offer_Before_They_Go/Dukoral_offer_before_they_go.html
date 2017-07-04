@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-height">
+<meta name="apple-mobile-web-app-title" content="CSL Vaccines - Dukoral">
+<title>CSL Vaccines - Dukoral</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<style type="text/css">
+	.slide { background-image:url('../img/orange_bg.jpg'); }
+	.slide .logo { background-image:url('../img/dukoral_white.png'); }
+	.feature { width:925px; height:700px; background:url('../img/offer.png') 0 60px no-repeat; background-size:100% auto; margin:0 auto; position:relative; }
+	.feature > ul { position:absolute; width:712px; bottom: 68px; left: 102px; }
+	.feature > ul li { float:left; width:200px; height:110px; text-align:center; line-height:21px; position:relative; }
+	.feature > ul li span { position:absolute; width:100%; bottom:0; left:0; }
+	.feature > ul li:nth-child(2){ margin:0 57px 0 55px; }
+	.feature > ul li:nth-child(1) span{ bottom:30px; }
+	.feature > ul li:nth-child(2) span{ bottom:15px; }
+	.refSpan {position: absolute;color: white; font-size: 20px;left: 444px;top: 158px;}
+</style> 
+</head>
+<body>
+	<section class="slide">
+      	<div class="feature">
+      	      <span class="refSpan">3</span>
+        	  <ul>
+        	  	<li><span>For the immunisation of adults<br />
+and children from 2 years of age<sup>3</sup></span></li>
+        	  	<li><span>DUKORAL demonstrated 85%<br />
+protective efficacy against cholera<br />at 6 months after primary course<sup>3</sup></span></li>
+        	  	<li><span>In clinical trials, DUKORAL<br />
+was well tolerated, with<br />
+gastrointestinal symptoms<br />
+reported at similar frequencies<br />
+in vaccine and placebo groups<sup>3</sup></span></li>
+        	  </ul>    
+        </div>
+        <!-- footer menu -->
+        <footer>
+        	<span class="btn arrow"></span>
+            <ul class="nav">
+                <li data-href="Dukoral_Map/DukoralMap" >Map</li>
+                <li data-href="Dukoral_Cholera/Dukoral_cholera">Cholera</li>
+                <li data-href="Dukoral_at_Risk_Travellers/Dukoral_at_risk_travellers" >At-risk travellers</li>
+                <li data-href="Dukoral_Offer_Before_They_Go/Dukoral_offer_before_they_go" class="active">DUKORAL</li>
+                <li data-href="Dukoral_Summary/DukoralSummary">Summary</li>
+                <li data-href="Dukoral_Vaccination/Dukoral_vaccination">Vaccination schedule</li>
+                <li data-href="Dukoral_Resources/Dukoral_Resources">Resources</li>
+                
+                 <li data-href="pi" ><span><i>PI</i></span></li>
+                <li data-href="ref"><span><i></i></span></li>
+            </ul>
+            <div class="item refs hide">
+            	<h3>REFERENCES</h3>
+            	<ol>
+            		<li>Jelinek T <em>et al. Expert Rev. Vaccines</em> 2008; (7)5:561–567</li>
+                    <li class="handbook">NHMRC, The Australian Immunisation Handbook, 10th Edition, 2013.</li>
+                    <li>DUKORAL<sup>®</sup> Approved Product Information, August 2015.</li>
+                    <li>Australian Bureau of Statistics, ABS Data, Short-Term Travellers. Last accessed June 2016.</li>
+                    <li>Centres for Disease Control and Prevention. 2016 Yellow Book.<br />
+Ch.3 Infectious Diseases Related to Travel.</li>
+                    <li>Steffan R <em>et al. Trav Med Infect Dis</em> 2003; 1:80–88.</li>
+                    <li>Zuckerman <em>et al. Lancet Infect Dis</em> 2007; 7:521–530.</li>
+                    <li>Kozicki M <em>et al. Int J Epidemiol</em> 1985; 14(1):169–172.</li>
+                    <li>Mattila L <em>et al. J Travel Med</em> 1995: 1;2(2):77–84.</li>
+            	</ol>
+            </div>
+            <div class="item pi hide">
+            <p class="product"></p>
+            	<p class="review">Before prescribing, please review Product Information available at <span class="pi_link">www.seqirus.com.au/PI</span>
+</p>
+				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au.<br /> 
+Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br />  
+Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2016. DUKO/0716/0038. 13574. </p>
+<p class="box"><strong>PBS Information:</strong> This product is not listed on the National Immunisation Program (NIP) Schedule or the PBS.</p>
+            </div>
+        </footer><!-- end footer -->
+       
+        <span class="btn arrow prev"></span>
+        <span class="logo"></span>
+	</section>
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/touchy.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+<script type="text/javascript">
+	$( function(){
+		
+		$('.prev').on('tap', function(){
+			goToSlide('../Dukoral_at_Risk_Travellers/Dukoral_at_risk_travellers');
+		})
+		
+		///navigate
+		navigate('../Dukoral_at_Risk_Travellers/Dukoral_at_risk_travellers', '../Dukoral_Summary/DukoralSummary');
+	
+	})
+</script>
+</body>
+</html>
