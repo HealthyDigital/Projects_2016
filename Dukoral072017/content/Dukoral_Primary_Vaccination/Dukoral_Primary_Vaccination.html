@@ -10,59 +10,76 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <style type="text/css">
 	.slide { background-image:url('../img/cover-bg.jpg'); }
-	.slide .blk { right: auto; left: 50px; }
-	.protection { overflow: hidden; }
-	.protection li { float: left; width: 288px; font-size: 24px; line-height: 1em; text-align: center;}
-	.protection li:nth-child(2) { margin: 0 28px; }
-	.protection li > span { display: block; border-radius: 10px; padding: 22px; }
-	.protection li > span:first-child { height: 120px; margin-bottom: 5px; background: #4c4c4c url('../img/sub-headers.svg') center 32px no-repeat; background-size: 215px auto; }
-	.protection li:nth-child(2) > span:first-child { background-position: center -150px; }
-	.protection li:last-child > span:first-child { background-position: center -331px; }
-	.protection li > span:last-child { background-color: rgba(255,255,255, 0.7); min-height: 192px; }
-
+	.btns { height: 64px; margin-bottom: 30px; }
+	.btns > span {
+		float: left;
+		width: 420px;
+		padding: 15px 15px 8px;
+		color:  #fff;
+		border: 1px solid #fff;
+		border-radius: 10px;
+		font-size: 36px;
+		line-height: 1em;
+		text-align: center;
+		font-family: "NoyhSlim-SemiLight";
+		letter-spacing: -0.03em;
+		position: relative;
+	}
+	.btns > .active {
+		text-align: left;
+		font-family: "NoyhSlim-Bold";
+		background-color: #4c4c4c;
+		border-color: #4c4c4c;
+	}
+	.btns > .active:after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		border-top: 20px solid #4c4c4c;
+		left: 30px;
+		bottom: -18px;
+	}
+	.btns > .active i { color: #e28c05; }
+	.btns > span:first-child { margin-right: 16px; }
+	.dose {
+		/*width: 912px;*/
+		height: 252px;
+		background: url('../img/vaccination.svg') 0 0 no-repeat;
+		background-size: 100% auto;
+		margin-bottom: 35px;
+	}
+	.dose.child {
+		background-position: 0 -316px;
+	}
+	.bullet li {
+		font-size: 22px;
+		line-height: 1em;
+		color: #fff;
+		font-family: "Noyh-Medium";
+	}
+	
 </style>
 </head>
 <body>
 	<section class="slide">
-        <article class="content">
-           <h1 class="title">
-          		<span>HELP PROTECT AT-RISK TRAVELLERS WITH <br />CHOLERA VACCINATION: DUKORAL<sup>3</sup></span>
-           </h1>
-            <ul class="protection">
-            	<li>
-            		<span></span>
-            		<span>
-            			*Satisfactory<br />
-						protection 2 weeks<br />
-						after last dose<sup>3</sup>
-           			</span>
-            	</li>
-            	<li>
-            		<span></span>
-            		<span>
-            			85% protective<br />
-						efficacy against<br />
-						cholera demonstrated<br />
-						at 6 months after<br />
-						primary course<sup>3</sup>
-           			</span>
-            	</li>
-            	<li>
-            		<span></span>
-            		<span>
-            			In clinical trials,<br />
-						DUKORAL was<br />
-						well tolerated, with<br />
-						gastrointestinal<br />
-						symptoms reported<br />
-						at similar frequencies<br />
-						in vaccine and<br />
-						placebo groups<sup>3</sup>
-					</span>
-            	</li>
-            </ul>
+      	<article class="content">
+      	<h1 class="title">
+      		<span>PRIMARY VACCINATION SCHEDULE<sup>3</sup></span>
+      	</h1>
+      	<p class="btns">
+      		<span class="active"><i>ADULTS</i> and children over 6 years</span>
+      		<span><i>CHILDREN</i> under 6 years</span>
+      	</p>
+      	<div class="dose child"></div>
+        <ul class="bullet">
+        	<li>If more than 6 weeks elapse between doses, primary vaccination should be re-started<sup>3</sup></li>
+        	<li>Avoid food and drink 1 hour before and 1 hour after vaccination<sup>3</sup></li>
+        	<li>Refer to Product Information for booster information<sup>3</sup></li>
+        </ul>
         </article>
-        
         <!-- footer menu -->
         <footer>
         	<span class="btn arrow"><i></i></span>
@@ -189,10 +206,7 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
 				</div>
             </div>
         </footer><!-- end footer -->
-       
-        <span class="btn border blk">
-        	PRIMARY VACCINATION<br />SCHEDULE
-        </span>
+        
         <span class="logo"><i></i></span>
 	</section>
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
@@ -202,8 +216,9 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
 
 <script type="text/javascript">
 	$( function(){
+		
 		///navigate
-		navigate('../Dukoral_Protect_Travellers/Dukoral_Protect_Travellers', '../Dukoral_Summary/Dukoral_Summary');
+		navigate('../Dukoral_Summary/DukoralSummary', '../Dukoral_Resources/Dukoral_Resources');
 	
 	})
 </script>

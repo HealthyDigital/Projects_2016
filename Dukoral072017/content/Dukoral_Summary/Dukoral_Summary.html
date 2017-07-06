@@ -10,59 +10,90 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <style type="text/css">
 	.slide { background-image:url('../img/cover-bg.jpg'); }
-	.slide .blk { right: auto; left: 50px; }
-	.protection { overflow: hidden; }
-	.protection li { float: left; width: 288px; font-size: 24px; line-height: 1em; text-align: center;}
-	.protection li:nth-child(2) { margin: 0 28px; }
-	.protection li > span { display: block; border-radius: 10px; padding: 22px; }
-	.protection li > span:first-child { height: 120px; margin-bottom: 5px; background: #4c4c4c url('../img/sub-headers.svg') center 32px no-repeat; background-size: 215px auto; }
-	.protection li:nth-child(2) > span:first-child { background-position: center -150px; }
-	.protection li:last-child > span:first-child { background-position: center -331px; }
-	.protection li > span:last-child { background-color: rgba(255,255,255, 0.7); min-height: 192px; }
-
-</style>
+	.title, .advice {
+		position: absolute;
+	}
+	.slide .title {
+		font-size: 55px;
+		line-height: 0.75em;
+		left: 50px;
+		top: 28.5%;
+		margin: 0;
+		border: none;
+	}
+	.slide .title sup {
+		font-size: 0.22em;
+	}
+	.bg { background-image:url('../img/loo2.jpg'); background-color: rgba(80,80,80, 0.5);  }
+	.bg.top {
+		height: 219px;
+		margin-bottom: 359px;
+		background-position: 0 top;
+		/*transform: translateY(-100px);*/
+	}
+	.bg.bottom {
+		height: 191px;
+		background-position: 0 bottom;
+	}
+	.advice {
+		left: 0;
+		bottom: 189px;
+		text-align: center;
+		width: 100%;
+		padding: 18px 0 30px;
+		background-color: rgba(187, 84, 9, 0.7);
+		
+	}
+	.advice li { display: inline-block; font-size: 18px; line-height: 1em; width: 183px; background-color: rgba(255, 255,255, 0.7); padding: 15px; margin-right: 20px;  -webkit-border-radius: 10px; border-radius: 10px; min-height: 110px; vertical-align: top; position: relative; }
+	.advice li:last-child { margin-right: 0; }
+	.advice .bypass { display: block; width: 100%; margin: 0 50px; padding: 0; float: none; clear: both; font-family: 'NoyhSlim-SemiLight'; background: none; color: #fff; min-height:inherit; font-size: 28px; line-height: 1em;   }
+	.advice .bypass span { display: inline-block; text-align: left; }
+	.advice .bypass .upto { font-size: 80px; font-family: "Noyh-Light"; line-height: 0.8em; }
+	.advice .bypass span > i { font-family: 'NoyhSlim-SemiLight'; display: inline-block; font-size: 28px;position: relative; top: -25px; padding-right: 5px; }
+	.advice .bypass span > i:last-child { padding: 0; font-family: "Noyh-Light";  font-size: 45px; top: -18px; }
+	.advice .bypass sup { font-size: 0.4em; }
+</style> 
 </head>
 <body>
 	<section class="slide">
-        <article class="content">
-           <h1 class="title">
-          		<span>HELP PROTECT AT-RISK TRAVELLERS WITH <br />CHOLERA VACCINATION: DUKORAL<sup>3</sup></span>
-           </h1>
-            <ul class="protection">
-            	<li>
-            		<span></span>
-            		<span>
-            			*Satisfactory<br />
-						protection 2 weeks<br />
-						after last dose<sup>3</sup>
-           			</span>
-            	</li>
-            	<li>
-            		<span></span>
-            		<span>
-            			85% protective<br />
-						efficacy against<br />
-						cholera demonstrated<br />
-						at 6 months after<br />
-						primary course<sup>3</sup>
-           			</span>
-            	</li>
-            	<li>
-            		<span></span>
-            		<span>
-            			In clinical trials,<br />
-						DUKORAL was<br />
-						well tolerated, with<br />
-						gastrointestinal<br />
-						symptoms reported<br />
-						at similar frequencies<br />
-						in vaccine and<br />
-						placebo groups<sup>3</sup>
-					</span>
-            	</li>
-            </ul>
-        </article>
-        
+     	 <h1 class="title"><span>YOUR TRAVEL ADVICE<br />
+IS THE LAST THING ON HIS MIND<sup>4,5,14</sup></span></h1>
+      	 <ul class="advice">
+      	 	<li class="bypass">
+      	 	<span class="upto"><i>UP TO</i>98<i>%</i></span>
+      	 	<span>of travellers failed to adhere to safe eating<br />
+and drinking advice whilst abroad<sup>5</sup>
+     	 		</span>
+      	 		
+      	 	</li>
+       		<li>
+       			Cholera is likely to be<br />
+under-reported<br />
+and under-detected<br />
+in travellers<sup>1,2</sup>
+			</li>
+       		<li>
+       			DUKORAL provides<br />
+85% efficacy<br />
+against cholera<br />
+at 6 months<br />
+and is generally<br />
+well tolerated<sup>3</sup>
+			</li>
+      		<li>
+      			Help protect at-risk<br />
+travellers against<br />
+diarrhoea<br />
+caused by cholera<sup>1,3</sup>
+			</li>
+       		<li>
+       			Vaccinate with<br />
+DUKORAL<br />
+before they go<sup>3</sup>
+			</li>
+       </ul>
+       <div class="bg top"></div>
+       <div class="bg bottom"></div>
         <!-- footer menu -->
         <footer>
         	<span class="btn arrow"><i></i></span>
@@ -190,9 +221,7 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
             </div>
         </footer><!-- end footer -->
        
-        <span class="btn border blk">
-        	PRIMARY VACCINATION<br />SCHEDULE
-        </span>
+        <span class="btn anti"></span>
         <span class="logo"><i></i></span>
 	</section>
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
@@ -202,8 +231,9 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
 
 <script type="text/javascript">
 	$( function(){
+		
 		///navigate
-		navigate('../Dukoral_Protect_Travellers/Dukoral_Protect_Travellers', '../Dukoral_Summary/Dukoral_Summary');
+		navigate('../Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers', '');
 	
 	})
 </script>

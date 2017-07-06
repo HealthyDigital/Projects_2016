@@ -6,12 +6,23 @@
 <meta name="viewport" content="width=device-height">
 <meta name="apple-mobile-web-app-title" content="CSL Vaccines - Dukoral">
 <title>CSL Vaccines - Dukoral</title>
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <style type="text/css">
-	.slide {  background-image:url('../img/cover-bg.jpg'); }
+	.slide { background-image:url('../img/cover-bg.jpg'); }
 	.slide strong { font-family: "Noyh-Black"; }
-	.advice {overflow: hidden; }
-	.advice li { float: left; width: 334px; height: 186px; font-size: 24px; line-height: 1em; letter-spacing:- 0.02em; position: relative; margin-bottom: 20px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+	.advice { overflow: hidden; }
+	.advice li { 
+		float: left;
+		width: 334px;
+		height: 186px;
+		font-size: 24px;
+		line-height: 1em;
+		letter-spacing:-0.02em;
+		position: relative;
+		margin-bottom: 20px;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box; }
 	.advice li:first-child, .advice li:last-child { width: 568px; border-radius: 10px; background-color: rgba(255,255,255, 0.4); }
 	.advice li:first-child, .advice li:nth-child(3) { margin-right: 20px; }
 	.advice li:first-child:after, .advice li:last-child:after {
@@ -45,7 +56,7 @@
 <body>
 	<section class="slide">
       <article class="content">
-		<h1 class="title up">
+		<h1 class="title">
 		<span>IS YOUR TRAVEL ADVICE ALONE<br />
 		ENOUGH PROTECTION?</span>
 		</h1>
@@ -84,31 +95,55 @@ diarrhoea caused by cholera<sup>3</sup></li>
         <footer>
         	<span class="btn arrow"><i></i></span>
             <ul class="nav">
-                <li data-href="Dukoral_Map/DukoralMap" >Map</li>
-                <li data-href="Dukoral_Cholera/Dukoral_cholera">Cholera</li>
-                <li data-href="Dukoral_at_Risk_Travellers/Dukoral_at_risk_travellers" >At-risk travellers</li>
-                <li data-href="Dukoral_Offer_Before_They_Go/Dukoral_offer_before_they_go">DUKORAL</li>
-                <li data-href="Dukoral_Summary/DukoralSummary">Summary</li>
-                <li data-href="Dukoral_Vaccination/Dukoral_vaccination">Vaccination schedule</li>
-                <li data-href="Dukoral_Resources/Dukoral_Resources">Resources</li>
-                
-                 <li data-href="pi" ><span><i>PI</i></span></li>
-                <li data-href="ref"><span><i></i></span></li>
+                <li data-href="index">Cholera?</li>
+                <li data-href="Dukoral_Travel_Advice/Dukoral_Travel_Advice">Advice enough?</li>
+                <li data-href="Dukoral_Protect_Travellers/Dukoral_Protect_Travellers">Prevalence</li>
+                <li data-href="Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers">DUKORAL</li>
+                <li data-href="Dukoral_Summary/Dukoral_Summary">Summary</li>
             </ul>
+            <div class="nav-right">
+            	<span data-href="faq">FAQ</span>
+            	<span data-href="resources">RESOURCES</span>
+            	<span data-href="refs"><i></i></span>
+            	<span data-href="pi"><i>PI</i></span>
+            </div>
             <div class="item refs hide">
-            	<h3>REFERENCES</h3>
-            	<ol>
-                    <li>Jelinek T <em>et al. Expert Rev. Vaccines</em> 2008; (7)5:561–567</li>
-                    <li class="handbook">NHMRC, The Australian Immunisation Handbook, 10th Edition, 2013.</li>
-                    <li>DUKORAL<sup>®</sup> Approved Product Information, August 2015.</li>
-                    <li>Australian Bureau of Statistics, ABS Data, Short-Term Travellers. Last accessed June 2016.</li>
-                    <li>Centres for Disease Control and Prevention. 2016 Yellow Book.<br />
-Ch.3 Infectious Diseases Related to Travel.</li>
-                    <li>Steffan R <em>et al. Trav Med Infect Dis</em> 2003; 1:80–88.</li>
-                    <li>Zuckerman <em>et al. Lancet Infect Dis</em> 2007; 7:521–530.</li>
-                    <li>Kozicki M <em>et al. Int J Epidemiol</em> 1985; 14(1):169–172.</li>
-                    <li>Mattila L <em>et al. J Travel Med</em> 1995: 1;2(2):77–84.</li>
-                </ol>
+           		<div class="col left">
+           			<h3>INTERACTIVE MAPS DISCLAIMER:</h3>
+           			<p>Every effort has been made to ensure that the information on these
+interactive maps was correct and accurate at the time of their creation
+(last update in June 2017). The publisher shall not be responsible for
+the continued currency of the information or for any errors, omissions
+or inaccuracies in this publication. These maps have been developed
+to highlight potential At Risk Areas for particular diseases for travellers.
+Nothing on these maps should be construed as the giving of advice or the
+making of a recommendation and it should not be relied on as the sole
+basis for any decision or action.</p>
+           		</div>
+           		<div class="col right">
+					<h3>REFERENCES</h3>
+					<ol>
+						<li>NHMRC. The Australian Immunisation Handbook <br />10th Edition. 2013.</li>
+						<li>Jelinek T <em>et al. Expert Rev Vaccines</em>. 2008; (7)5:561–567.</li>
+						<li>DUKORAL Approved Product Information, August 2015.</li>
+						<li>Mattila L <em>et al. J Travel Med</em>. 1995:1; 2(2):77–84.</li>
+						<li>Kozicki M <em>et al. Int J Epidemiol</em>. 1985; 14(1):169–172.</li>
+						<li>Angelin M <em>et al. Scand J Infect Dis.</em> 2014; 46(6):447–453.</li>
+						<li>Centres for Disease Control and Prevention. 2018 Yellow Book. Ch.3
+Infectious Diseases Related to Travel.</li>
+						<li>WHO WER No. 40, 2015; 90:517–544.</li>
+						<li>World Health Organization. Countries reporting cholera, 2010–2015.
+[updated 2016 Sep 26; cited 2017 May 03]. Available from:
+http://gamapserver.who.int/mapLibrary/Files/Maps/Global_
+Cholera_2010_2015.png</li>
+						<li>WHO. International Travel and Health Interactive Map [updated 2016
+Sep 26; cited 2017 May 03]. Available from: http://apps.who.int/ithmap</li>
+						<li>Crump JA <em>et al. Bulletin of the World Health Organization</em>. 2004; 82:346–353.</li>
+						<li>Mogasale V <em>et al. Lancet Global Health</em>. 2014; 2:e570–580.</li>
+						<li>Jertborn M <em>et al. Vaccine</em>. 1993; 11:1007–1012.</li>
+						<li>Steffan R <em>et al. Trav Med Infect Dis</em>. 2003; 1:80–88.</li>
+					</ol>
+                </div>
             </div>
             <div class="item pi hide">
             <p class="product"></p>
@@ -119,23 +154,83 @@ Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valne
 Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2016. DUKO/0716/0038. 13574. </p>
 <p class="box"><strong>PBS Information:</strong> This product is not listed on the National Immunisation Program (NIP) Schedule or the PBS.</p>
             </div>
+            <div class="item resources hide">
+            	<ul>
+            		<li><span>PRIMARY VACCINATION SCHEDULE</span></li>
+            		<li><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
+            		<li><span>RECOMMENDATIONS: <br />CDC</span></li>
+            		<li><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
+            	</ul>
+            </div>
+            <div class="item faq hide">
+            	<!-- Swiper -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="col left">
+								<p class="question swiper-no-swiping">
+									<span>Can I use DUKORAL for travellers diarrhoea?</span>
+								</p>
+								<p class="answer swiper-no-swiping">
+									<span>http://www.immunise.health.gov.au/internet/immunise/publishing.
+									nsf/Content/Handbook10-home~handbook10part4~handbo<br />
+									ok10-4-1#4.1.1</span>
+								</p>
+							</div>
+							<div class="col right">
+								<p class="img"></p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="col left">
+								<p class="question swiper-no-swiping">
+									<span>Which travellers are deemed “at-risk?”</span>
+								</p>
+								<p class="answer swiper-no-swiping">
+									<span>http://www.immunise.health.gov.au/internet/immunise/publishing.
+									nsf/Content/Handbook10-home~handbook10part4~handbo<br />
+									ok10-4-1#4.1.1</span>
+								</p>
+							</div>
+							<div class="col right">
+								<p class="img two"></p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="col left">
+								<p class="question swiper-no-swiping">
+									<span>Can DUKORAL be given with other vaccines?</span>
+								</p>
+								<p class="answer swiper-no-swiping">
+									<span>http://www.immunise.health.gov.au/internet/immunise/publishing.
+									nsf/Content/Handbook10-home~handbook10part4~handbo<br />
+									ok10-4-1#4.1.1</span>
+								</p>
+							</div>
+							<div class="col right">
+								<p class="img two"></p>
+							</div>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+            </div>
         </footer><!-- end footer -->
        
         <span class="btn anti"></span>
         <span class="logo"><i></i></span>
 	</section>
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
 <script type="text/javascript" src="../js/touchy.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 
 <script type="text/javascript">
 	$( function(){
-		$('.prev').on('tap', function(){
-			goToSlide('../Dukoral_Cholera/Dukoral_cholera');
-		})
 		
 		///navigate
-		navigate('../Dukoral_Cholera/Dukoral_cholera', '../Dukoral_Offer_Before_They_Go/Dukoral_offer_before_they_go');
+		navigate('../index', '../Dukoral_Protect_Travellers/Dukoral_Protect_Travellers');
 	
 	})
 </script>
