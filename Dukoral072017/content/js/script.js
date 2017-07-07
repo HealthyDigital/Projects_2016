@@ -34,18 +34,19 @@ $( function(){
 				}
 			}else{
 				file = !slide.hasClass('home') ? '../'+file : file;
+				window.location= file+'.html';
 				//console.log(file);
-				goToSlide(file);
+				//goToSlide(file);
 			}
 	})
-	$('.review > span').on('tap', function(){
+	/*$('.review > span').on('tap', function(){
 		//console.log(slide.hasClass('home'))
 		if(slide.hasClass('home')){
 			openPDF('pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
 		} else{
 			openPDF('../pdf/Travel Vaccines Cholera Information Pads-FLYER_FA');
 		}
-	})
+	})*/
 	
 	$('span.pi_link').on('tap', function(){
 		if(slide.hasClass('home')){
@@ -56,13 +57,21 @@ $( function(){
 		}
 	})
 	
-	$('.handbook').on('tap', function() {
-		if(slide.hasClass('home')) {
-			//console.log(slide.hasClass('home'))
-			openPDF('pdf/2.CholeraImmunisation Handbook10thEdition');
-		} else {
-			openPDF('../pdf/2.CholeraImmunisation Handbook10thEdition');
+	$('.resources li').on('tap', function() {
+		var $this = $(this),
+			href = $this.attr('data-href'),
+			link = '';
+		
+		if($this.attr('data-href').indexOf('http') === -1){
+			link = slide.hasClass('home') ? href : '../'+href;
+			
+			link.indexOf('pdf') !== -1 ? openPDF(link) : window.location= link+'.html';
+			//console.log(link)
+		}else{
+			window.open(href, '_blank');
+			//console.log(href)
 		}
+		
 	})
 	//navigate();
 	$('.faq .answer').on('tap', function(e){
@@ -76,7 +85,7 @@ $( function(){
 });
 
 function goToSlide(url){
-	//console.log($('.up'))
+	///console.log($(this))
 	if(!$('footer.info').length ){
 		window.location= url+'.html';
 	}

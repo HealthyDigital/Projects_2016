@@ -67,54 +67,6 @@
 	font-family: "HelveticaNeue-MediumCond";
 }
 
-/*@font-face {
-	font-family: 'GothamLightCond';
-	src: url('../fonts/GothamHTF-LightCondensed.woff') format('woff'), url('../fonts/GothamHTF-LightCondensed.svg#GothamHTFLightCond') format('svg');
-}
-@font-face {
-	font-family: 'GothamNarrowMedium';
-	src: url('../fonts/GothamNarrowMedium.woff') format('woff'), url('../fonts/GothamNarrowMedium.svg#GothamNarrowMedium') format('svg');
-}
-@font-face {
-	font-family: 'GothamBookCond';
-	src: url('../fonts/GothamHTF-BookCondensed.woff') format('woff'), url('../fonts/GothamHTF-BookCondensed.svg#GothamHTFBookCond') format('svg');
-}
-@font-face {
-	font-family: 'GothamBoldCond';
-	src: url('../fonts/GothamHTF-BoldCondensed.woff') format('woff'), url('../fonts/GothamHTF-BoldCondensed.svg#GothamHTFBoldCond') format('svg');
-}
-@font-face {
-	font-family: 'GothamMediumCond';
-	src: url('../fonts/GothamHTF-MediumCondensed.woff') format('woff'), url('../fonts/GothamHTF-MediumCondensed.svg#GothamHTFMediumCond') format('svg');
-}
-@font-face {
-	font-family: 'HelveticaNeueLight';
-	src: url('../fonts/HelveticaNeue-Light.woff') format('woff'), url('../fonts/HelveticaNeue-Light.svg#HelveticaNeueLight') format('svg');
-}
-@font-face {
-	font-family: 'HelveticaNeueThinCond';
-	src: url('../fonts/HelveticaNeue-ThinCond.woff') format('woff'), url('../fonts/HelveticaNeue-ThinCond.svg#HelveticaNeueThinCond') format('svg');
-}
-@font-face {
-	font-family: 'HelveticaNeueThinCond';
-	src: url('../fonts/HelveticaNeue-ThinCond.woff') format('woff'), url('../fonts/HelveticaNeue-ThinCond.svg#HelveticaNeueThinCond') format('svg');
-}
-@font-face {
-	font-family: 'HelveticaNeueMediumCond';
-	src: url('../fonts/HelveticaNeue-MediumCond.woff') format('woff'), url('../fonts/HelveticaNeue-MediumCond.svg#HelveticaNeueMediumCond') format('svg');
-}
-@font-face {
-	font-family: 'HomesteadInline';
-	src: url('../fonts/Homestead-Inline.woff') format('woff'), url('../fonts/Homestead-Inline.svg#HomesteadInline') format('svg');
-}
-@font-face {
-	font-family: 'Lobster13';
-	src: url('../fonts/Lobster13.woff') format('woff'), url('../fonts/Lobster13.svg#Lobster13') format('svg');
-}*/
-/*  =============  */
-/*.slide footer.info-pi .pi, .slide footer.info-ref .refs { display:block; }*/
-/* breadcrumb */
-/*.handbook{text-decoration: underline;}*/
 %bg {
  	background-repeat: no-repeat;
 	background-size: 100% auto;
@@ -167,14 +119,17 @@ h1 {
 		border: 2px solid #ffffff;
 		@extend %radius;
 		> span {
-			display: table-cell;
-			vertical-align: middle;
-			width: inherit;
-			height: inherit;
+			display:block;
+			padding-top: 41px;
 		}
 		sup {
 			font-size: 0.35em;
 			top: -3px;
+		}
+		&.two {
+			> span {
+				padding-top: 25px;
+			}
 		}
 	}
 }
@@ -430,7 +385,7 @@ a.pi {
 			position: absolute;
 			content: "";
 			width: 94px;
-			height: 72px;
+			height: 70px;
 			bottom: -84px;
 			left: 0;
 			right: 0;
@@ -643,22 +598,22 @@ footer {
 			position: relative;
 			&:nth-child(2) {
 				&:after {
-					background-position-y: -75px;
+					background-position-y: -72px;
 				}
 			}
 			&:nth-child(3) {
 				&:after {
-					background-position-y: -152px;
+					background-position-y: -145px;
 				}
 			}
 			&:nth-child(4) {
 				&:after {
-					background-position-y: -229px;
+					background-position-y: -217px;
 				}
 			}
 			&:nth-child(5) {
 				&:after {
-					background-position-y: -307px;
+					background-position-y: -289px;
 				}
 			}
 			&.active {
@@ -814,6 +769,8 @@ footer {
 				background: #fff;
 				border: 1px solid #000;
 				color: $grey-dark;
+				width: 72%;
+				margin: 0 auto;
 				position: relative;
 				&:after {
 					content: "";
@@ -843,14 +800,18 @@ footer {
 					letter-spacing: -0.01em;
 					float: left;
 					width: 215px;
-					height: 162px;
+					height: 161px;
 					margin-right: 19px;
 					background-image: url('../img/thumbs.png');
+					background-position: 0 -822px;
 					@extend %bg;
 					position: relative;
 					@include box-shadow(3px 3px 3px rgba($grey-dark, 0.45));
+					&:nth-child(2){ background-position: 0 -987px; }
+					&:nth-child(3){ background-position: 0 -1153px; }
 					&:last-child {
 						margin-right: 0;
+						background-position: 0 -1318px;
 					}
 					span {
 						position: absolute;

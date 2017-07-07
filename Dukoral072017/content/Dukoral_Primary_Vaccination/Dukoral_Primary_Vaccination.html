@@ -73,7 +73,7 @@
       		<span class="active"><i>ADULTS</i> and children over 6 years</span>
       		<span><i>CHILDREN</i> under 6 years</span>
       	</p>
-      	<div class="dose child"></div>
+      	<div class="dose"></div>
         <ul class="bullet">
         	<li>If more than 6 weeks elapse between doses, primary vaccination should be re-started<sup>3</sup></li>
         	<li>Avoid food and drink 1 hour before and 1 hour after vaccination<sup>3</sup></li>
@@ -138,17 +138,17 @@ Sep 26; cited 2017 May 03]. Available from: http://apps.who.int/ithmap</li>
             <p class="product"></p>
             	<p class="review">Before prescribing, please review Product Information available at <span class="pi_link">www.seqirus.com.au/PI</span>
 </p>
-				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au.<br /> 
-Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br />  
-Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2016. DUKO/0716/0038. 13574. </p>
+				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au<br /> 
+Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br /> 
+Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2017. DUKO/0517/0049a. 14246.</p>
 <p class="box"><strong>PBS Information:</strong> This product is not listed on the National Immunisation Program (NIP) Schedule or the PBS.</p>
             </div>
             <div class="item resources hide">
             	<ul>
-            		<li><span>PRIMARY VACCINATION SCHEDULE</span></li>
-            		<li><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
-            		<li><span>RECOMMENDATIONS: <br />CDC</span></li>
-            		<li><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
+            		<li data-href="Dukoral_Primary_Vaccination/Dukoral_Primary_Vaccination"><span>PRIMARY VACCINATION SCHEDULE</span></li>
+            		<li data-href="pdf/cholera"><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
+            		<li data-href="https://wwwnc.cdc.gov/travel/yellowbook/2018/table-of-contents?nibrowser=no"><span>RECOMMENDATIONS: <br />CDC</span></li>
+            		<li data-href="pdf/travel Vaccines Dukoral Advertorial"><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
             	</ul>
             </div>
             <div class="item faq hide">
@@ -216,9 +216,17 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
 
 <script type="text/javascript">
 	$( function(){
+		var dose = $('.dose'),
+			btn = $('.btns > span');
+		btn.on('tap', function(){
+			var $this = $(this);
+			btn.removeClass('active');
+			$this.addClass('active');
+			$this.index() === 1 ? dose.addClass('child') : dose.removeClass('child');
+		})
 		
 		///navigate
-		navigate('../Dukoral_Summary/DukoralSummary', '../Dukoral_Resources/Dukoral_Resources');
+		navigate('../Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers', '');
 	
 	})
 </script>

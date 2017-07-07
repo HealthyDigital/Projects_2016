@@ -17,7 +17,7 @@
 		font-size: 55px;
 		line-height: 0.75em;
 		left: 50px;
-		top: 28.5%;
+		top: 27.3%;
 		margin: 0;
 		border: none;
 	}
@@ -56,7 +56,7 @@
 </head>
 <body>
 	<section class="slide">
-     	 <h1 class="title"><span>YOUR TRAVEL ADVICE<br />
+     	 <h1 class="title two"><span>YOUR TRAVEL ADVICE<br />
 IS THE LAST THING ON HIS MIND<sup>4,5,14</sup></span></h1>
       	 <ul class="advice">
       	 	<li class="bypass">
@@ -68,8 +68,8 @@ and drinking advice whilst abroad<sup>5</sup>
       	 	</li>
        		<li>
        			Cholera is likely to be<br />
-under-reported<br />
-and under-detected<br />
+under-detected<br />
+and under-reported<br />
 in travellers<sup>1,2</sup>
 			</li>
        		<li>
@@ -102,7 +102,7 @@ before they go<sup>3</sup>
                 <li data-href="Dukoral_Travel_Advice/Dukoral_Travel_Advice">Advice enough?</li>
                 <li data-href="Dukoral_Protect_Travellers/Dukoral_Protect_Travellers">Prevalence</li>
                 <li data-href="Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers">DUKORAL</li>
-                <li data-href="Dukoral_Summary/Dukoral_Summary">Summary</li>
+                <li data-href="Dukoral_Summary/Dukoral_Summary" class="active">Summary</li>
             </ul>
             <div class="nav-right">
             	<span data-href="faq">FAQ</span>
@@ -152,17 +152,17 @@ Sep 26; cited 2017 May 03]. Available from: http://apps.who.int/ithmap</li>
             <p class="product"></p>
             	<p class="review">Before prescribing, please review Product Information available at <span class="pi_link">www.seqirus.com.au/PI</span>
 </p>
-				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au.<br /> 
-Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br />  
-Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2016. DUKO/0716/0038. 13574. </p>
+				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au<br /> 
+Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br /> 
+Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2017. DUKO/0517/0049a. 14246.</p>
 <p class="box"><strong>PBS Information:</strong> This product is not listed on the National Immunisation Program (NIP) Schedule or the PBS.</p>
             </div>
             <div class="item resources hide">
             	<ul>
-            		<li><span>PRIMARY VACCINATION SCHEDULE</span></li>
-            		<li><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
-            		<li><span>RECOMMENDATIONS: <br />CDC</span></li>
-            		<li><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
+            		<li data-href="Dukoral_Primary_Vaccination/Dukoral_Primary_Vaccination"><span>PRIMARY VACCINATION SCHEDULE</span></li>
+            		<li data-href="pdf/cholera"><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
+            		<li data-href="https://wwwnc.cdc.gov/travel/yellowbook/2018/table-of-contents?nibrowser=no"><span>RECOMMENDATIONS: <br />CDC</span></li>
+            		<li data-href="pdf/travel Vaccines Dukoral Advertorial"><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
             	</ul>
             </div>
             <div class="item faq hide">
@@ -225,12 +225,15 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
         <span class="logo"><i></i></span>
 	</section>
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/TweenMax.min.js"></script>
 <script type="text/javascript" src="../js/swiper.min.js"></script>
 <script type="text/javascript" src="../js/touchy.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 
 <script type="text/javascript">
 	$( function(){
+		TweenMax.from($('.title'), 0.35, { opacity: 0, y: 120, ease:Power1.easeOut } )
+		TweenMax.staggerFrom($('.advice > li'), 0.5, { opacity: 0, rotationY: -180, ease:Power1.ease}, 0.05);
 		
 		///navigate
 		navigate('../Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers', '');

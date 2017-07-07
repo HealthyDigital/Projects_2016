@@ -10,9 +10,10 @@
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <style type="text/css">
 	.slide { background-color: #4c4c4c; }
-	.slide .title { margin-bottom: 10px; }
+	.slide .title { margin-bottom: 10px; font-family: "Noyh-Medium"; }
 	.content { color: #fff; font-family: 'NoyhSlim-SemiLight'; }
 	.intro { font-size: 17px; line-height: 1em; text-align: center; min-height: 35px; }
+	.intro > span:last-child { display: none; }
 	.map { position: relative; width: 800px; height: 450px; margin: 0 auto; }
 	.zoom { height: inherit; overflow: hidden; }
 	.zoom img { width: 100%; height: auto; }
@@ -26,6 +27,8 @@
 		border-radius: 10px;
 		background-color: rgba(255,255,255, 0.85);
 		z-index: 99;
+		display: none;
+		opacity: 0;
 	}
 	.location > li li { float: left; }
 	li strong { display: block; font-family: 'NoyhSlim-Bold';  }
@@ -162,22 +165,26 @@
 		border: 1px solid #fff;
 		border-left: none; 
 	}
-	.prev .key li > span:first-child { display: none; }
-	.prev .key li > span:last-child { display: block; }
+	.prev .intro > span:first-child,
+		.prev .location,
+		.prev .map .btn,
+		.prev .key li > span:first-child { display: none; }
+	.prev .intro > span:last-child,
+		.prev .key li > span:last-child { display: block; }
 	.prev .note > span { display: inline; }
 
 </style>
 </head>
 <body>
-	<section class="slide prev">
+	<section class="slide">
         <article class="content">
-        	<h1 class="title">
+        	<h1 class="title two">
         		<span>PROTECT TRAVELLERS AGAINST FOOD<br />
 AND WATER-BORNE DISEASES<sup>8–12</sup></span>
         	</h1>
         	<p class="intro">
-        		<span>Countries reporting cholera, 2010-2015<sup>9</sup><br />Areas with cholera change rapidly</span>
-        		<span class="hide">Countries or areas with moderate to high risk of cholera, typhoid fever and hepatitis A<sup>9–11</sup></span>
+        		<span>Countries reporting cholera, 2010-2015<sup>9</sup></span>
+        		<span>Countries or areas reporting cholera, hepatitis A and moderate to high risk of typhoid fever<sup>9–11</sup></span>
        		</p>
         	<div class="map">
         		<ul class="location">
@@ -267,13 +274,13 @@ AND WATER-BORNE DISEASES<sup>8–12</sup></span>
 						- Thailand
         			</li>
         		</ul>
-        		<span class="btn btn-zoom"></span>
-        		<span class="btn btn-zoom2"></span>
-        		<span class="btn btn-zoom3"></span>
-        		<span class="btn btn-zoom4"></span>
+        		<span class="btn btn-zoom" data-id='0'></span>
+        		<span class="btn btn-zoom2" data-id='1'></span>
+        		<span class="btn btn-zoom3" data-id='2'></span>
+        		<span class="btn btn-zoom4" data-id='3'></span>
 				<div class="zoom">
-					<div class="pinchzoom one"><img src="../img/map_1a.png" /></div>
-					<div class="pinchzoom two"><img src="../img/map_2.png" /></div>
+					<div class="pinchzoom"><img src="../img/map_1.png" /></div>
+					<!--<div class="pinchzoom two"><img src="../img/map_2.png" /></div>-->
 				</div>
         	</div>
         	<div class="key">
@@ -310,7 +317,7 @@ such as Africa, South and South East Asia are endemic for cholera<sup>7</sup></l
             <ul class="nav">
                 <li data-href="index">Cholera?</li>
                 <li data-href="Dukoral_Travel_Advice/Dukoral_Travel_Advice">Advice enough?</li>
-                <li data-href="Dukoral_Protect_Travellers/Dukoral_Protect_Travellers">Prevalence</li>
+                <li data-href="Dukoral_Protect_Travellers/Dukoral_Protect_Travellers" class="active">Prevalence</li>
                 <li data-href="Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers">DUKORAL</li>
                 <li data-href="Dukoral_Summary/Dukoral_Summary">Summary</li>
             </ul>
@@ -362,17 +369,18 @@ Sep 26; cited 2017 May 03]. Available from: http://apps.who.int/ithmap</li>
             <p class="product"></p>
             	<p class="review">Before prescribing, please review Product Information available at <span class="pi_link">www.seqirus.com.au/PI</span>
 </p>
-				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au.<br /> 
-Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br />  
-Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2016. DUKO/0716/0038. 13574. </p>
+
+				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au<br /> 
+Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br /> 
+Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2017. DUKO/0517/0049a. 14246.</p>
 <p class="box"><strong>PBS Information:</strong> This product is not listed on the National Immunisation Program (NIP) Schedule or the PBS.</p>
             </div>
             <div class="item resources hide">
             	<ul>
-            		<li><span>PRIMARY VACCINATION SCHEDULE</span></li>
-            		<li><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
-            		<li><span>RECOMMENDATIONS: <br />CDC</span></li>
-            		<li><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
+            		<li data-href="Dukoral_Primary_Vaccination/Dukoral_Primary_Vaccination"><span>PRIMARY VACCINATION SCHEDULE</span></li>
+            		<li data-href="pdf/cholera"><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
+            		<li data-href="https://wwwnc.cdc.gov/travel/yellowbook/2018/table-of-contents?nibrowser=no"><span>RECOMMENDATIONS: <br />CDC</span></li>
+            		<li data-href="pdf/travel Vaccines Dukoral Advertorial"><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
             	</ul>
             </div>
             <div class="item faq hide">
@@ -441,38 +449,79 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/swiper.min.js"></script>
 <script type="text/javascript" src="../js/pinchzoom.min.js"></script>
-<script type="text/javascript" src="../js/TweenMax.min.js"></script>
-<script type="text/javascript" src="../js/TimelineLite.min.js"></script>
+<script type="text/javascript" src="../js/TweenMax.min.js"></script><!--
+<script type="text/javascript" src="../js/TimelineLite.min.js"></script>-->
 <script type="text/javascript" src="../js/touchy.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 
 <script type="text/javascript">
 	$( function(){
-		var tl0 = new TimelineLite(), 
-            tl1 = new TimelineLite(),
-			tl2 = new TimelineLite(),
-			tl3 = new TimelineLite(),
-			tl4 = new TimelineLite(),
-			tl5 = new TimelineLite(),
-			li = $('.planes > li:first-child'),
-			li2 = $('.planes > li:nth-child(2)'),
-			plane1 = $('.plane1'),
-			plane1b = plane1.find(':last-child'),
-			plane2 = $('.plane2'),
-			plane2b = plane2.find(':last-child'),
-			plane3 = $('.plane3'),
-			plane3b = plane3.find(':last-child'),
-			pin1 = $('.pin1'),
-			pin2 = $('.pin2'),
-			pin3 = $('.pin3'),
-			txt0 = $('.text1'),
-			txt1 = $('h1 > span:first-child'),
+		var slide = $('.slide'),
+			map = $('.map'),
+			btns = map.find('.btn'),
+			location = map.find('.location > li'),
+			image = map.find('.pinchzoom > img'),
 			txt2 = $('h1 > span:nth-child(2)'),
 			txt3 = $('h1 > span:last-child');
+		
+		TweenMax.staggerFrom(btns, 0.6, { delay: 0.2, scale: 0, ease:Power1.easeOut}, 0.1);
+		
+		map.find('.btn').on('tap', function(){
+			var $this = $(this),
+				li  = location.eq(parseInt($this.attr('data-id')));
+				showLocation(li);
+			
+		})
+		function showLocation(e){
+			if(!e.is(':visible')){
+				TweenMax.to(e, 0.5, { display: 'block', opacity: 1, ease:Power1.easeOut});
+			}else{
+				TweenMax.to(e, 0.5, { opacity: 0, display: 'none', ease:Power1.easeOut});
+			}
+		}
+		
+		$('.btn.border').on('tap', function(){
+			var src = image.attr('src'),
+				link = '';
+			slide.toggleClass('prev');
+			
+			slide.hasClass('prev') ? (
+				link = src.replace(/_1/g, '_2'),
+				location.hide(),
+				btns.hide()
+			) : (
+				link = src.replace(/_2/g, '_1'),
+				location.fadeIn(),
+				btns.fadeIn()
+			)
+			
+			//swap image
+			image.attr('src', slide.hasClass('prev') ? src.replace(/_1/g, '_2') : src.replace(/_2/g, '_1') );
+			
+		})
+		
+		map.on('doubleTap twoFingerTap', function(){
+			setTimeout(function(){
+				var scale = parseFloat($('.pinchzoom').attr('style').split(';')[2].split(' ')[2].replace(/scale\(|\,/g, ''));
+				//console.log(scale);
+				if(!slide.hasClass('prev')){
+					if(scale < 1 || scale === 1){
+						location.fadeIn();
+						btns.fadeIn();
+					}else{
+						location.hide();
+						btns.hide();
+					}
+				}
+			//console.log($('#pinchzoom').attr('style'));
+			}, 500)
+		})
+		
 	
 		$('div.pinchzoom').each(function () {
 			new RTP.PinchZoom($(this), {});
 		});
+		
 	///navigate
 	navigate('../Dukoral_Travel_Advice/Dukoral_Travel_Advice', '../Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers');
 	})

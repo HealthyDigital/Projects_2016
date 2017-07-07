@@ -25,7 +25,7 @@
 <body>
 	<section class="slide">
         <article class="content">
-           <h1 class="title">
+           <h1 class="title two">
           		<span>HELP PROTECT AT-RISK TRAVELLERS WITH <br />CHOLERA VACCINATION: DUKORAL<sup>3</sup></span>
            </h1>
             <ul class="protection">
@@ -70,7 +70,7 @@
                 <li data-href="index">Cholera?</li>
                 <li data-href="Dukoral_Travel_Advice/Dukoral_Travel_Advice">Advice enough?</li>
                 <li data-href="Dukoral_Protect_Travellers/Dukoral_Protect_Travellers">Prevalence</li>
-                <li data-href="Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers">DUKORAL</li>
+                <li data-href="Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers" class="active">DUKORAL</li>
                 <li data-href="Dukoral_Summary/Dukoral_Summary">Summary</li>
             </ul>
             <div class="nav-right">
@@ -121,17 +121,17 @@ Sep 26; cited 2017 May 03]. Available from: http://apps.who.int/ithmap</li>
             <p class="product"></p>
             	<p class="review">Before prescribing, please review Product Information available at <span class="pi_link">www.seqirus.com.au/PI</span>
 </p>
-				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au.<br /> 
-Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br />  
-Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2016. DUKO/0716/0038. 13574. </p>
+				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au<br /> 
+Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br /> 
+Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2017. DUKO/0517/0049a. 14246.</p>
 <p class="box"><strong>PBS Information:</strong> This product is not listed on the National Immunisation Program (NIP) Schedule or the PBS.</p>
             </div>
             <div class="item resources hide">
             	<ul>
-            		<li><span>PRIMARY VACCINATION SCHEDULE</span></li>
-            		<li><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
-            		<li><span>RECOMMENDATIONS: <br />CDC</span></li>
-            		<li><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
+            		<li data-href="Dukoral_Primary_Vaccination/Dukoral_Primary_Vaccination"><span>PRIMARY VACCINATION SCHEDULE</span></li>
+            		<li data-href="pdf/cholera"><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
+            		<li data-href="https://wwwnc.cdc.gov/travel/yellowbook/2018/table-of-contents?nibrowser=no"><span>RECOMMENDATIONS: <br />CDC</span></li>
+            		<li data-href="pdf/travel Vaccines Dukoral Advertorial"><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
             	</ul>
             </div>
             <div class="item faq hide">
@@ -196,12 +196,20 @@ Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of prepa
         <span class="logo"><i></i></span>
 	</section>
 <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/TweenMax.min.js"></script>
 <script type="text/javascript" src="../js/swiper.min.js"></script>
 <script type="text/javascript" src="../js/touchy.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 
 <script type="text/javascript">
 	$( function(){
+		
+		TweenMax.staggerFrom($('.protection > li'), 0.5, { opacity: 0, rotationY: -180, ease:Power1.easeOut}, 0.1);
+		
+		$('.btn.blk').on('tap', function(){
+			goToSlide('../Dukoral_Primary_Vaccination/Dukoral_Primary_Vaccination');
+		})
+		
 		///navigate
 		navigate('../Dukoral_Protect_Travellers/Dukoral_Protect_Travellers', '../Dukoral_Summary/Dukoral_Summary');
 	
