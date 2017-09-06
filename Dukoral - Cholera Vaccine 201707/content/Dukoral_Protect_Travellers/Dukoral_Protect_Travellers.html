@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-height">
+<meta name="apple-mobile-web-app-title" content="CSL Vaccines - Dukoral">
+<title>CSL Vaccines - Dukoral</title>
+<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<style type="text/css">
+	.slide { background-color: #4c4c4c; }
+	.slide .title { margin-bottom: 10px; font-family: "Noyh-Medium"; }
+	.content { color: #fff; font-family: 'NoyhSlim-SemiLight'; }
+	.intro { font-size: 17px; line-height: 1em; text-align: center; min-height: 35px; }
+	.intro > span:last-child { display: none; }
+	.map { position: relative; width: 800px; height: 450px; margin: 0 auto; }
+	.zoom { height: inherit; overflow: hidden; }
+	.zoom img { width: 100%; height: auto; }
+	.break { margin-top: 10px; }
+	.location > li {
+		position: absolute;
+		padding: 12px;
+		color: #4c4c4c;
+		font-size: 14px;
+		line-height: 1em;
+		border-radius: 10px;
+		background-color: rgba(255,255,255, 0.85);
+		z-index: 99;
+		display: none;
+		opacity: 0;
+	}
+	.location > li li { float: left; }
+	li strong { display: block; font-family: 'NoyhSlim-Bold';  }
+	.location > li:after {
+		content: '';
+		position: absolute;
+	}
+	.location > li:first-child {
+		left: -20px;
+		top: 110px;
+	}
+	.location > li:first-child:after {
+		right: -40px;
+		bottom: 0;
+		width: 50px;
+		height: 2px;
+		border-bottom: 2px dotted #fff;
+	}
+	.location > li:nth-child(2) {
+		width: 232px;
+		left: 178px;
+		top: 20px;
+	}
+	.location > li:nth-child(2):after {
+		width: 2px;
+		height: 60px;
+		right: 0px;
+		bottom: -50px;
+		border-right: 2px dotted #fff;
+	}
+	.location > li:nth-child(2) li { width: 33.33%; }
+	.location > li:nth-child(3) {
+		width: 162px;
+		right: 48px;
+		top: -20px;
+	}
+	.location > li:nth-child(3) li { width: 50%; }
+	.location > li:nth-child(3):after {
+		width: 2px;
+		height: 60px;
+		left: 0px;
+		bottom: -50px;
+		border-left: 2px dotted #fff;
+	}
+	.location > li:last-child {
+		width: 110px;
+		right: -40px;
+		top: 132px;
+	}
+	.location > li:last-child:after {
+		width: 55px;
+		height: 2px;
+		left: -48px;
+		bottom: 0;
+		border-bottom: 2px dotted #fff;
+	}
+	.map .btn {
+		width: 30px;
+		height: 32px;
+		background: /*rgba(20,20,20, 0.5)*/ url('../img/icons.svg') 0 -94px no-repeat;
+		background-size: 100% auto;
+		z-index: 100;
+	}
+	.btn-zoom {
+		left:142px;
+		top: 199px;
+	}
+	.btn-zoom2 {
+		left:420px;
+		top: 276px;
+	}
+	.btn-zoom3 {
+		right:205px;
+		top: 158px;
+	}
+	.btn-zoom4{
+		right:137px;
+		top: 240px;
+	}
+	.bullet {
+		width: 70%;
+		font-family: "Noyh-Medium";
+		font-size: 22px;
+		line-height: 0.9em;
+	}
+	.key {
+		position: absolute;
+		/*width: 240px;*/
+		height: auto;
+		left: 0;
+		bottom: 95px;
+		font-size: 14px;
+		line-height: 0.9em;
+	}
+	.key ul {
+		color: #4c4c4c;
+		border-radius: 0 10px 10px 0;
+		background-color: rgba(255,255,255, 0.8);
+		margin-bottom: 5px;
+		transition: all 0.35s ease-out;
+	}
+	.key li {
+		padding: 5px 15px 5px 28px;
+		position: relative;
+	}
+	.key li span { display: block; }
+	.key li:first-child > span { padding-top: 3px; }
+	.key li:last-child > span { padding-bottom: 3px; }
+	.key li > span:last-child { display: none; }
+	.key li:before {
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background-color: #e28c05;
+	}
+	.key li:nth-child(2):before {
+		height: 104%;
+		top: -2%;
+		background-color: #ffc800;
+	}
+	.key li:last-child:before {
+		background-color: #bb5409;
+	}
+	.key sup { font-size: 0.5em; }
+	.note span {
+		display: none;
+	}
+	.prev .key ul {
+		background-color: rgba(77,77,77, 0.8);
+		color: #ffffff;
+		border: 1px solid #fff;
+		border-left: none; 
+	}
+	.prev .key li:nth-child(2):before { background-color: #bb5409; }
+	.prev .key li:last-child:before { background-color: #ffc800; }
+	.prev .intro > span:first-child,
+		.prev .location,
+		.prev .map .btn,
+		.prev .key li > span:first-child { display: none; }
+	.prev .intro > span:last-child,
+		.prev .key li > span:last-child { display: block; }
+	.prev .note > span { display: inline; }
+
+</style>
+</head>
+<body>
+	<section class="slide">
+        <article class="content">
+        	<h1 class="title two">
+        		<span>PROTECT TRAVELLERS AGAINST FOOD<br />
+AND WATER-BORNE DISEASES<sup>8–12</sup></span>
+        	</h1>
+        	<p class="intro">
+        		<span>Countries reporting cholera, 2010-2015<sup>9</sup></span>
+        		<span>Countries or areas reporting cholera, hepatitis A and moderate to high risk of typhoid fever<sup>9–11</sup></span>
+       		</p>
+        	<div class="map">
+        		<ul class="location">
+        			<li>
+        				<strong>2010-2015</strong>
+						- Haiti
+						<strong class="break">2010-2014</strong>
+						- Cuba<br />
+						- Dominican&nbsp;Republic<br />
+						- Mexico
+        			</li>
+        			<li>
+        				<ul>
+        					<li>
+        					<strong>2010-2015</strong>
+							- Benin<br />
+							- Cameroon<br />
+							- Côte d’Ivoire<br />
+							- Democratic<br />
+							&nbsp;&nbsp; Republic<br />
+							&nbsp;&nbsp; of Congo<br />
+							- Ethiopia<br />
+							- Ghana<br />
+							- Kenya<br />
+							- Malawi<br />
+							- Mozambique<br />
+							- Niger
+       						</li>
+        					<li>
+        						- Nigeria<br />
+								- Somalia<br />
+								- South Sudan<br />
+								- Tanzania<br />
+								- Togo<br />
+								- Uganda
+								<strong class="break">2010-2014</strong>
+								- Angola<br />
+								- Burkina Faso<br />
+								- Central<br />
+								&nbsp;&nbsp; African<br />
+								&nbsp;&nbsp; Republic
+        					</li>
+        					<li>
+        						- Chad<br />
+								- Guinea<br />
+								- Liberia<br />
+								- Mali<br />
+								- Namibia<br />
+								- Republic of<br />
+								&nbsp;&nbsp; the Congo<br />
+								- Sierra Leone<br />
+								- South Africa<br />
+								- Zambia<br />
+								- Zimbabwe
+        					</li>
+        				</ul>
+        			</li>
+        			<li>
+        				<ul>
+        					<li>
+        					<strong>2015</strong>
+							- Iraq<br />
+							- Myanmar
+							<strong class="break">2010–2015</strong>
+							- India
+       						</li>
+        					<li>
+        					<strong>2010-2014</strong>
+							- Afghanistan<br />
+							- China<br />
+							- Iran<br />
+							- Nepal<br />
+							- Pakistan<br />
+							- Taiwan<br />
+							- Yemen
+       						</li>
+        				</ul>
+        			</li>
+        			<li>
+        				<strong>2010-2014</strong>
+						- Cambodia<br />
+						- Laos<br />
+						- Malaysia<br />
+						- Papua New Guinea<br />
+						- Philippines<br />
+						- Soloman Islands<br />
+						- Thailand
+        			</li>
+        		</ul>
+        		<span class="btn btn-zoom" data-id='0'></span>
+        		<span class="btn btn-zoom2" data-id='1'></span>
+        		<span class="btn btn-zoom3" data-id='2'></span>
+        		<span class="btn btn-zoom4" data-id='3'></span>
+				<div class="zoom">
+					<div class="pinchzoom"><img src="../img/map_1.png" /></div>
+					<!--<div class="pinchzoom two"><img src="../img/map_2.png" /></div>-->
+				</div>
+        	</div>
+        	<div class="key">
+				<ul>
+					<li>
+						<span>Countries reporting cholera, 2010–2015<sup>9</sup></span>
+						<span>Countries reporting CHOLERA (2010–2015), hepatitis A<br />
+and moderate to high risk of typhoid fever<sup>9–11</sup></span>
+					</li>
+					<li>
+						<span> Countries reporting cholera, 2015<sup>9</sup></span>
+						<span>Countries reporting hepatitis A and<br />
+moderate to high risk of typhoid fever<sup>10,11</sup></span>
+					</li>
+					<li>
+						<span>Countries reporting cholera, 2010–2014<sup>9</sup></span>
+						<span>Countries reporting moderate to high risk<br />of typhoid fever<sup>11</sup></span>
+					</li>
+				</ul>
+				<p class="note">Areas with cholera change rapidly</p>
+			</div>
+        	<ul class="bullet">
+        		<li>Cholera, like hepatitis A and typhoid, is a food and water-borne disease<sup>1</sup></li>
+        		<li>Many parts of countries which are popular tourist destinations,<br />
+such as Africa, South and South East Asia are endemic for cholera<sup>7</sup></li>
+        	</ul>
+        	<p class="note">Map adapted from World Health Organization<span> and Crump JA <em>et al</em></span>.</p>
+        	
+        </article>
+         
+        <!-- footer menu -->
+        <footer>
+        	<span class="btn arrow"><i></i></span>
+            <ul class="nav">
+                <li data-href="index">Cholera?</li>
+                <li data-href="Dukoral_Travel_Advice/Dukoral_Travel_Advice">Advice enough?</li>
+                <li data-href="Dukoral_Protect_Travellers/Dukoral_Protect_Travellers" class="active">Prevalence</li>
+                <li data-href="Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers">DUKORAL</li>
+                <li data-href="Dukoral_Summary/Dukoral_Summary">Summary</li>
+            </ul>
+            <div class="nav-right">
+            	<span data-href="faq">FAQ</span>
+            	<span data-href="resources">RESOURCES</span>
+            	<span data-href="refs"><i></i></span>
+            	<span data-href="pi"><i>PI</i></span>
+            </div>
+            <div class="item refs hide">
+           		<div class="col left">
+           			<h3>INTERACTIVE MAPS DISCLAIMER:</h3>
+           			<p>Every effort has been made to ensure that the information on these
+interactive maps was correct and accurate at the time of their creation
+(last update in June 2017). The publisher shall not be responsible for
+the continued currency of the information or for any errors, omissions
+or inaccuracies in this publication. These maps have been developed
+to highlight potential At Risk Areas for particular diseases for travellers.
+Nothing on these maps should be construed as the giving of advice or the
+making of a recommendation and it should not be relied on as the sole
+basis for any decision or action.</p>
+           		</div>
+           		<div class="col right">
+					<h3>REFERENCES</h3>
+					<ol>
+						<li>NHMRC. The Australian Immunisation Handbook <br />10th Edition. 2013.</li>
+						<li>Jelinek T <em>et al. Expert Rev Vaccines</em>. 2008; (7)5:561–567.</li>
+						<li>DUKORAL Approved Product Information, August 2015.</li>
+						<li>Mattila L <em>et al. J Travel Med</em>. 1995:1; 2(2):77–84.</li>
+						<li>Kozicki M <em>et al. Int J Epidemiol</em>. 1985; 14(1):169–172.</li>
+						<li>Angelin M <em>et al. Scand J Infect Dis.</em> 2014; 46(6):447–453.</li>
+						<li>Centres for Disease Control and Prevention. 2018 Yellow Book. Ch.3
+Infectious Diseases Related to Travel.</li>
+						<li>WHO WER No. 40, 2015; 90:517–544.</li>
+						<li>World Health Organization. Countries reporting cholera, 2010–2015.
+[updated 2016 Sep 26; cited 2017 May 03]. Available from:
+http://gamapserver.who.int/mapLibrary/Files/Maps/Global_
+Cholera_2010_2015.png</li>
+						<li>WHO. International Travel and Health Interactive Map [updated 2016
+Sep 26; cited 2017 May 03]. Available from: http://apps.who.int/ithmap</li>
+						<li>Crump JA <em>et al. Bulletin of the World Health Organization</em>. 2004; 82:346–353.</li>
+						<li>Mogasale V <em>et al. Lancet Global Health</em>. 2014; 2:e570–580.</li>
+						<li>Jertborn M <em>et al. Vaccine</em>. 1993; 11:1007–1012.</li>
+						<li>Steffan R <em>et al. Trav Med Infect Dis</em>. 2003; 1:80–88.</li>
+					</ol>
+                </div>
+            </div>
+            <div class="item pi hide">
+            <p class="product"></p>
+            	<p class="review">Before prescribing, please review Product Information available at <span class="pi_link">www.seqirus.com.au/PI</span>
+</p>
+
+				<p class="small">Seqirus (Australia) Pty Ltd. ABN 66 120 398 067, 63 Poplar Road Parkville, Victoria 3052. www.seqirus.com.au<br /> 
+Medical Information: 1800 642 865. ® DUKORAL is a registered trademark of Valneva Sweden AB.<br /> 
+Seqirus™ is a trademark of Seqirus UK Limited or its affiliates. Date of preparation: July 2017. DUKO/0517/0049a. 14246.</p>
+<p class="box"><strong>PBS Information:</strong> This product is not listed on the National Immunisation Program (NIP) Schedule or the PBS.</p>
+            </div>
+            <div class="item resources hide">
+            	<ul>
+            		<li data-href="Dukoral_Primary_Vaccination/Dukoral_Primary_Vaccination"><span>PRIMARY VACCINATION SCHEDULE</span></li>
+            		<li data-href="pdf/cholera"><span>RECOMMENDATIONS: Immunisation Handbook</span></li>
+            		<li data-href="https://wwwnc.cdc.gov/travel/yellowbook/2018/table-of-contents?nibrowser=no"><span>RECOMMENDATIONS: <br />CDC</span></li>
+            		<li data-href="pdf/travel Vaccines Dukoral Advertorial"><span>EXPERTS TALK TRAVEL & <br />CHOLERA: Bernard Hudson</span></li>
+            	</ul>
+            </div>
+            <div class="item faq hide">
+            	<!-- Swiper -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="col left">
+								<p class="question swiper-no-swiping">
+									<span>Can I use DUKORAL for travellers diarrhoea?</span>
+								</p>
+								<p class="answer swiper-no-swiping">
+									<span>http://www.immunise.health.gov.au/internet/immunise/publishing.
+									nsf/Content/Handbook10-home~handbook10part4~handbo<br />
+									ok10-4-1#4.1.1</span>
+								</p>
+							</div>
+							<div class="col right">
+								<p class="img"></p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="col left">
+								<p class="question swiper-no-swiping">
+									<span>Which travellers are deemed “at-risk?”</span>
+								</p>
+								<p class="answer swiper-no-swiping">
+									<span>http://www.immunise.health.gov.au/internet/immunise/publishing.
+									nsf/Content/Handbook10-home~handbook10part4~handbo<br />
+									ok10-4-1#4.1.1</span>
+								</p>
+							</div>
+							<div class="col right">
+								<p class="img two"></p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="col left">
+								<p class="question swiper-no-swiping">
+									<span>Can DUKORAL be given with other vaccines?</span>
+								</p>
+								<p class="answer swiper-no-swiping">
+									<span>http://www.immunise.health.gov.au/internet/immunise/publishing.
+									nsf/Content/Handbook10-home~handbook10part4~handbo<br />
+									ok10-4-1#4.1.1</span>
+								</p>
+							</div>
+							<div class="col right">
+								<p class="img two"></p>
+							</div>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+            </div>
+        </footer><!-- end footer -->
+       
+        <span class="btn border">
+        	<i>PREVALENCE OF FOOD AND<br />WATER-BORNE DISEASES</i>
+        	<i>PREVALENCE<br />OF CHOLERA</i>
+        </span>
+        <!--<span class="logo"><i></i></span>-->
+	</section>
+
+<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/pinchzoom.min.js"></script>
+<script type="text/javascript" src="../js/TweenMax.min.js"></script><!--
+<script type="text/javascript" src="../js/TimelineLite.min.js"></script>-->
+<script type="text/javascript" src="../js/touchy.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+<script type="text/javascript">
+	$( function(){
+		var slide = $('.slide'),
+			map = $('.map'),
+			btns = map.find('.btn'),
+			location = map.find('.location > li'),
+			image = map.find('.pinchzoom > img'),
+			txt2 = $('h1 > span:nth-child(2)'),
+			txt3 = $('h1 > span:last-child');
+		
+		TweenMax.staggerFrom(btns, 0.6, { delay: 0.2, scale: 0, ease:Power1.easeOut}, 0.1);
+		
+		map.find('.btn').on('tap', function(){
+			var $this = $(this),
+				li  = location.eq(parseInt($this.attr('data-id')));
+				showLocation(li);
+			
+		})
+		function showLocation(e){
+			if(!e.is(':visible')){
+				TweenMax.to(e, 0.5, { display: 'block', opacity: 1, ease:Power1.easeOut});
+			}else{
+				TweenMax.to(e, 0.5, { opacity: 0, display: 'none', ease:Power1.easeOut});
+			}
+		}
+		
+		$('.btn.border').on('tap', function(){
+			var src = image.attr('src'),
+				link = '';
+			slide.toggleClass('prev');
+			
+			slide.hasClass('prev') ? (
+				link = src.replace(/_1/g, '_2'),
+				location.hide(),
+				btns.hide()
+			) : (
+				link = src.replace(/_2/g, '_1'),
+				location.fadeIn(),
+				btns.fadeIn()
+			)
+			
+			//swap image
+			image.attr('src', slide.hasClass('prev') ? src.replace(/_1/g, '_2') : src.replace(/_2/g, '_1') );
+			
+		})
+		
+		map.on('doubleTap twoFingerTap', function(){
+			setTimeout(function(){
+				var scale = parseFloat($('.pinchzoom').attr('style').split(';')[2].split(' ')[2].replace(/scale\(|\,/g, ''));
+				//console.log(scale);
+				if(!slide.hasClass('prev')){
+					if(scale < 1 || scale === 1){
+						location.fadeIn();
+						btns.fadeIn();
+					}else{
+						location.hide();
+						btns.hide();
+					}
+				}
+			//console.log($('#pinchzoom').attr('style'));
+			}, 500)
+		})
+		
+	
+		$('div.pinchzoom').each(function () {
+			new RTP.PinchZoom($(this), {});
+		});
+		
+	///navigate
+	navigate('../Dukoral_Travel_Advice/Dukoral_Travel_Advice', '../Dukoral_At_Risk_Travellers/Dukoral_At_Risk_Travellers');
+	})
+</script>
+</body>
+</html>
