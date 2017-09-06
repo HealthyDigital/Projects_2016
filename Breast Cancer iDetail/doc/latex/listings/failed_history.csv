@@ -1,0 +1,3 @@
+id,refreshId,sfStatus,dataExtId,dataType,message,integrationType
+4567,5735,Failed,"50fd68b9-106b-4550-b5d0-12b045f8b184::7627::Staged_vod",Clm_Presentation_vod__c,"Error while upserting record 50fd68b9-106b-4550-b5d0-12b045f8b184::7627::Staged_vod, Cause: Foreign key external ID: 172_002000014823b::au not found for field VExternal_Id_vod__c in entity Product_vod__c",CLM
+4568,5735,Failed,"50fd68b9-106b-4550-b5d0-12b045f8b184::9407::Staged_vod",Clm_Presentation_vod__c,"Error while upserting record 50fd68b9-106b-4550-b5d0-12b045f8b184::9407::Staged_vod, Cause: Foreign key external ID: 172_002000014823::au not found for field VExternal_Id_vod__c in entity Product_vod__c",CLM
