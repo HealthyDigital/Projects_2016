@@ -5,34 +5,36 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="./shared/OncologyBreastCommon/css/style.css" />
+        <link rel="stylesheet" href="./shared/OncologyBreastCommon/css/fonts.css" />
 
-        <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
-        <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./shared/OncologyBreastCommon/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./shared/OncologyBreastCommon/js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+        <script src="./shared/OncologyBreastCommon/js/script.js" type="text/javascript" charset="utf-8"></script>
         <style type="text/css">
-        .feature{margin-left:70px; margin-top:180px;}
-
-        p{margin-top:15px;}
-        .options{margin-top:25px; margin-left:35px;}
+            .feature{margin-left:70px; margin-top:195px;}
+            .intro p{margin-bottom:13px; line-height:24px;}
+            .intro p.footnote{font-size:16px;margin-bottom: 5px;}
+            .options{margin: auto; width: 940px; position: relative; height: 10px; display: block;}
             .options span{position:absolute;}
             span.img{width:inherit; height: inherit; border-radius: inherit;}
 
-            .options li{float:left; position:relative; width:228px; height:169px; border-radius: 20px; list-style: none; margin-left:10px; }
-            .options li:first-child .img{background:url('img/arimidex_logo.png') no-repeat;background-size:100% auto; background-position: center; background-color:white; }
-            .options li:nth-child(2) .img{background:url('img/zoladex_logo.png') no-repeat;background-size:100% auto; background-position: center; background-color:white; }
-            .options li:nth-child(3) .img{background:url('img/faslodex_logo.png') no-repeat;background-size:100% auto; background-position: center; background-color:white; }
-            .options li:last-child .img{background:url('img/nolvadex.png') no-repeat;background-size:80% auto; background-position: center; background-color:white; }
+            .options li{float: left; position: relative; width: 465px; height: 169px; border-radius: 20px; list-style: none; margin-left: 0px;
+margin-right: 5px; }
+            .options li:first-child .img{background:url('./shared/OncologyBreastCommon/img/zoladex_logo.png') no-repeat;background-size:100% auto; background-position: center; background-color:white; }
+            .options li:last-child .img{background:url('./shared/OncologyBreastCommon/img/nolvadex.png') no-repeat;background-size:80% auto; background-position: center; background-color:white; margin-left: 5px;margin-right: 0px;}
 
             
             span.left, span.right{height:129px; width:5px;}
-            span.top, span.bottom{width:188px; height:5px; }
+            span.top, span.bottom{width: 416px; height:5px; }
             span.left{box-shadow: 0px 0px 10px #888888; left:0px; top:20px;}
             span.top{box-shadow: 0px 0px 10px #888888; top:0px; left:20px;}
             span.bottom{box-shadow: 0px 0px 10px #888888; top:auto; bottom:0px; left:20px;}
             span.right{box-shadow: 0px 0px 10px #888888; left:auto; right:0px; top:20px;}
 
+            #nolvadex span.left{box-shadow: 0px 0px 10px #888888; left:5px; top:20px;}
+            #nolvadex span.right{box-shadow: 0px 0px 10px #888888; left:auto; right:-5px; top:20px;}
+            
             .options li:active{top:2px;}
             .options li:active span:not(.img){display: none;}
         
@@ -49,29 +51,22 @@
             <div class='feature'>    
                 <h1>AstraZeneca</h1>
 
-                <p>Has been at the forefront of breast cancer treatment development for the past 50 years<sup>1</sup>, starting with<br /> the discovery of NOLVADEX (tamoxifen).</p> 
+                <p>Has been at the forefront of breast cancer treatment development for more than 40 years<sup>1</sup>, starting<br/>
+with the discovery of NOLVADEX (tamoxifen).</p> 
 
-                <p>NOLVADEX has been providing effective endocrine therapy to treat ER+ breast cancer for<br /> over 25 years.<sup>2</sup> The arrival of NOLVADEX was an important step towards the development of<br /> third-generation aromatase inhibitors such as ARIMIDEX (anastrozole) and the pure anti-oestrogen<br /> FASLODEX (fulvestrant).<sup>2</sup> </p>
+                <p>NOLVADEX has been providing effective endocrine therapy to treat ER+* breast cancer for<br/>
+close to 40 years.<sup>2</sup> The arrival of NOLVADEX was an important step towards the development of<br/>
+third-generation aromatase inhibitors such as ARIMIDEX (anastrozole) and the SERM FASLODEX<br/>
+(fulvestrant).<sup>2</sup> </p>
 
-                <p>To this day we continue our dedication to active research programs in breast cancer<sup>3</sup> and maintain<br /> our ongoing commitment to patient support.</p>
+            <p>To this day we continue our dedication to active research programs in breast cancer<sup>3</sup> and maintain<br/>
+our ongoing commitment to patient support.</p>
+                
+            <p class="footnote">*Oestrogen receptor positive</p>    
             </div>
 
             <ul class='options'>
-                <li id='armidex'>
-                    <span class='left'></span>
-                    <span class='top'></span>
-                    <span class='bottom'></span>
-                    <span class='right'></span>
-                    <span class='img'></span>
-                </li>
                 <li id='zoladex'>
-                    <span class='left'></span>
-                    <span class='top'></span>
-                    <span class='bottom'></span>
-                    <span class='right'></span>
-                    <span class='img'></span>
-                </li>
-                <li id='faslodex'>
                     <span class='left'></span>
                     <span class='top'></span>
                     <span class='bottom'></span>
@@ -86,22 +81,21 @@
                     <span class='img'></span>
                 </li>
             </ul>
+            <div class='ref'>
+                <ul>
+                    <li>Ward HWC. Anti-oestrogen therapy for breast cancer: A trial of tamoxifen<br /> at two dose levels. <em>BMJ</em> 1973;1:13-14
+                    <li>Jordan VC. Tamoxifen: a most unlikely pioneering medicine. <em>Nat Rev Drug<br /> Discov.</em> 2003 Mar;2(3):205-13.</li>
+                    <li>www.astrazenecaclinicaltrials.com. Assessed August 2017</li>
+                </ul>
+            </div>
         </div>
 
-        <div class='ref'>
-            <ul>
-                <li>Ward HWC. Anti-oestrogen therapy for breast cancer: A trial of tamoxifen<br /> at two dose levels. <em>BMJ</em> 1973;1:13-14
-                <li>Jordan VC. Tamoxifen: a most unlikely pioneering medicine. <em>Nat Rev Drug<br /> Discov.</em> 2003 Mar;2(3):205-13.</li>
-                <li>www.astrazenecaclinicaltrials.com. Assessed 15 March 2016</li>
-            </ul>
-        </div>
+        
     
     </body>
     <script>
         $(document).ready(function(){
-            navToSlide('#armidex', 'Arimidex-00-Timeline')
             navToSlide('#zoladex', 'Zoladex-00-Home')
-            navToSlide('#faslodex', 'Faslodex-00-Home')
             navToSlide('#nolvadex', 'Nolvadex-00-Home')
         }); 
     </script>

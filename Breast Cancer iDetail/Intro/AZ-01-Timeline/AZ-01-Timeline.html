@@ -5,30 +5,26 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="viewport" content="width=device-width initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-title" content="AstraZeneca Oncology">
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="./shared/OncologyBreastCommon/css/style.css" />
+        <link rel="stylesheet" href="./shared/OncologyBreastCommon/css/fonts.css" />
 
-        <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="js/touchy.js" type="text/javascript" charset="utf-8"></script> 
-        <script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./shared/OncologyBreastCommon/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./shared/OncologyBreastCommon/js/touchy.js" type="text/javascript" charset="utf-8"></script> 
+        <script src="./shared/OncologyBreastCommon/js/script.js" type="text/javascript" charset="utf-8"></script>
         <style type="text/css">
+          
+            .feature{margin-top: 115px; margin-left:40px;}
+            .intro .feature h1 {font-size: 54px; margin-bottom: 0px;}
+            .intro .logo {width: 195px; left: 785px;}
+            .bubbles{width:100%; height:439px; background:url('img/timeline.png') no-repeat; background-size:auto 100%; image-rendering: -webkit-optimize-contrast; margin:0 auto; background-position:0px; font-family: 'HelveticaNeueLTStd-Lt'; font-size:13px; line-height:17px; color: #666767; margin-top:25px;}
+            .bubbles > li:first-child{height:238px;}
+            .bubbles > li > ul{margin-left:18px; display: block}
+            .bubbles > li > ul > li{float:left; text-align: center; width:100px; width:137.5px; margin-top:15px;}
+            .date{font-family: 'Lexia-Bold'; font-size:30px;}
 
-            .feature{margin-top:100px; margin-left:40px;}
-            .bubbles{width:100%; height:439px; background:url('img/bubbles_full.png') no-repeat; background-size:auto 100%; image-rendering: -webkit-optimize-contrast; margin:0 auto; background-position:-80px; font-family: 'HelveticaNeueLTStd-Lt'; font-size:13px; line-height:17px; color: #666767; margin-top:20px;}
-                .bubbles > li:first-child{height:238px;}
-                .bubbles > li > ul{margin-left:18px; display: block}
-                .bubbles > li > ul > li{float:left; text-align: center; width:100px; width:137.5px; margin-top:15px;}
-                .date{font-family: 'Lexia-Bold'; font-size:30px;}
-
-                .bubbles li.date{margin-top:64px; font-family: 'Lexia-Regular'; font-size:27px; }
-                .date, .pink{color:#EC0089;}
-                .pink{font-family: 'HelveticaNeueLTStd-Hv'; display: block;}
-
-                span.date{font-size:38px;}
-                .pink.foot{margin-left:290px; display:inline-block;}
-                .date.foot{display: inline-block; position:relative; margin-left:10px; top:10px;}
-                .arrows{display:inline-block; background:url('img/arrows.png') no-repeat; width:33px; height:21px; background-size:100% auto; margin-left:10px;}
-
+            .bubbles li.date{margin-top:64px; font-family: 'Lexia-Regular'; font-size:27px; }
+            .date, .pink{color:#EC0089;}
+            .pink{font-family: 'HelveticaNeueLTStd-Hv'; display: block;}
 
             .date sup{
                 font-size:0.3em;
@@ -44,27 +40,30 @@
 
             .date > span{
                 margin-left:3px;
-            }
-
-
+            }    
+            .footer{font-family: 'HelveticaNeueLTStd-Hv';color: #EC0089;right:0px; text-align:right; height:40px;line-height:40px;background: url('img/arrows.png') no-repeat; background-size: 33px auto; background-position: right center; padding-right: 40px;
+margin-right:15px; }
+            .footer .txt { position: relative; width: 350px; display: inline-block; height: 40px; top: -7px; font-size: 14.5px; left:5px;}
+            .footer .date{font-size:38px; margin-left:10px;}    
+            
+            .approval {font-family: 'HelveticaNeueLTStd-Hv';color: #EC0089; position: absolute; top: 390px; left: 10px; font-size: 10px;}
+            
         </style>
     </head>
     <body class='intro'>
         <div class="container">
             <span class='logo'></span>
-            <span class='ref'></span>
-            <span class='pi'></span>
+            
 
             <div class='feature'> 
                 <h1>AstraZeneca</h1>  
-                <h2>has supported breast cancer research and facilitated<br />
-                advances in medical research since the 1970s.<sup>1</sup></h2> 
+                <h2>has supported breast cancer research since the 1970s.<sup>1-9</sup></h2> 
             </div>
 
             <ul class='bubbles'>
                 <li>
                     <ul class='top'>
-                        <li class='date'><span>1991<sup>2&nbsp;&nbsp;</sup></span></li>
+                        <li class='date'><span>1991<sup>2,3&nbsp;</sup></span></li>
 
                         <li><span class='pink'>GOSERELIN</span> Approved for<br/>
                         the treatment<br/>
@@ -82,7 +81,7 @@
                         postmenopausal<br/>
                         women.<sup>6,7</sup></li>
 
-                        <li class='date'><span>2001<sup>4,5</sup></span></li>
+                        <li class='date'><span>2001<sup>4</sup></span></li>
 
                         <li><span class='pink'>ANASTROZOLE</span> Adjuvant treatment<br/>
                         of HR+ early<br/>
@@ -99,7 +98,7 @@
                         treatment of<br />
                          breast cancer<sup>3</sup></li>
 
-                         <li class='date'><span>1993<sup>4,5</sup></span></li>
+                         <li class='date'><span>1993<sup>4</sup></span></li>
 
                          <li><span class='pink'>ANASTROZOLE</span>
                             Approved for<br />
@@ -111,7 +110,7 @@
                             progression following<br />
                             tamoxifen therapy.<sup>6,7</sup></li>
 
-                        <li class='date'><span>2000<sup>6,7</sup></span></li>
+                        <li class='date'><span>2000<sup>6</sup></span></li>
 
                          <li><span class='pink'>GOSERELIN</span>
                             Adjuvant therapy<br />
@@ -135,20 +134,25 @@
                     </ul>
                 </li>
             </ul>
-            <span class='pink foot'>FURTHER RESEARCH & DEVELOPMENT</span>
-            <span class='date foot'>2016<span class='arrows'></span></span>
-
+            
+            <span class="approval">AUSTRALIAN<br />APPROVAL<br />TIMELINE</span>
+            
+            <div class='footer'><div class="txt">ONGOING RESEARCH & DEVELOPMENT</div><span class='date'>2016</span></div>
+            <span class='ref'></span>
+            <span class='pi'></span>
             <div class='ref'>
                 <ul>
                     <li>Cole MP et al. <em>Br J Cancer</em> 1971;25(2):270-75.</li>
-                    <li>Nolvadex-D TGA Public Summary Document. https://www.ebs.tga.gov.au/servlet/xmlmillr6?dbid=ebs%2FPublicHTML%2FpdfStore.<br />nsf&docid=D31D691AEA079D6FCA257E2700423125&agid=(PrintDetailsPublic)&actionid=1 (Accessed 20 January 2016)</li>
-                    <li>Nolvadex Approved Product Information. Date of TGA Approval 4 April 2016. </li>
+                    <li>Nolvadex-D TGA Public Summary Document. https://www.ebs.tga.gov.au/servlet/xmlmillr6?dbid=ebs/PublicHTML/pdfStore.<br/>
+nsf&docid=3523DC0CD9796D7CCA25812F00422AA4&agid=(PrintDetailsPublic)&actionid=1 (Accessed 20 July 2017)</li>
+                    <li>Nolvadex-D Approved Product Information. Date of most recent amendment 22 May 2017</li>
                     <li>AstraZeneca Data on file (Zoladex 3.6mg)</li>
-                    <li>Zoladex 3.6mg Approved Product Information. Date of TGA approval: 11 November 2010. Date of most recent amendment: 25 June 2015</li>
+                    <li>Zoladex 3.6mg Approved Product Information. Date of most recent amendment: 16 May 2017</li>
                     <li>AstraZeneca Data on file (Arimidex)</li>
-                    <li>Arimidex Approved Product Information. Date of TGA approval: 15 June 2009. Date of most recent amendment 27 September 2013</li>
-                    <li>Faslodex TGA Public Summary Document. https://www.ebs.tga.gov.au/servlet/xmlmillr6?dbid=ebs%2FPublicHTML%2FpdfStore.<br />nsf&docid=BDCDD52E4E65B407CA257D81003CA1FD&agid=(PrintDetailsPublic)&actionid=1 Assessed 4 May 2016</li>
-                    <li>Faslodex Approved Product Information. Date of first inclusion in the ARTG: 6 March 2006. Date of most recent amendment: 29 March 2016</li>
+                    <li>Arimidex Approved Product Information. Date of TGA approval: 15 June 2009. Date of most recent amendment 16 May 2017</li>
+                    <li>Faslodex TGA Public Summary Document. https://www.ebs.tga.gov.au/servlet/xmlmillr6?dbid=ebs/PublicHTML/pdfStore.<br/>
+nsf&docid=B5FBE9375CF3D98FCA25812F00422AFE&agid=(PrintDetailsPublic)&actionid=1</li>
+                    <li>Faslodex Approved Product Information. Date of first inclusion in the ARTG: 6 March 2006. Date of most recent amendment: 22 May 2017</li>
                 </ul>
             </div>
 
