@@ -1,0 +1,185 @@
+{
+    "act" : [
+        {
+            "name": "Australia Day",
+            "date": "26-01-2018"
+        },
+        {
+            "name": "Canberra Day",
+            "date": "12-03-2018"
+        },
+        {
+            "name": "Good Friday",
+            "date": "30-03-2018"
+        },
+        {
+            "name": "Easter Saturday",
+            "date": "31-03-2018"
+        },
+        {
+            "name": "Easter Sunday",
+            "date": "01-04-2018"
+        },
+        {
+            "name": "Easter Monday",
+            "date": "02-04-2018"
+        },
+        {
+            "name": "Anzac Day",
+            "date": "25-04-2018"
+        },
+		{
+            "name": "Reconciliation Day",
+            "date": "28-05-2018"
+        },
+        {
+            "name": "Queen's Birthday",
+            "date": "11-06-2018"
+        },
+        {
+            "name": "Labour Day",
+            "date": "01-10-2018"
+        },
+        {
+            "name": "Family and Community Day",
+            "date": "08-10-2018"
+        }
+    ],
+    "nsw": [
+        {
+            "name": "Australia Day",
+            "date": "26-01-2018"
+        },
+        {
+            "name": "Good Friday",
+            "date": "30-03-2018"
+        },
+        {
+            "name": "Easter Saturday",
+            "date": "31-03-2018"
+        },
+        {
+            "name": "Easter Sunday",
+            "date": "01-04-2018"
+        },
+        {
+            "name": "Easter Monday",
+            "date": "02-04-2018"
+        },
+        {
+            "name": "Anzac Day",
+            "date": "25-04-2018"
+        },
+        {
+            "name": "Queen's Birthday",
+            "date": "11-06-2018"
+        },
+        {
+            "name": "Labour Day",
+            "date": "01-10-2018"
+        }
+    ],
+    "nt": [
+        {
+            "name": "Australia Day",
+            "date": "26-01-2018"
+        },
+        {
+            "name": "Good Friday",
+            "date": "30-03-2018"
+        },
+        {
+            "name": "Easter Saturday",
+            "date": "31-03-2018"
+        },
+        {
+            "name": "Easter Monday",
+            "date": "02-04-2018"
+        },
+        {
+            "name": "Anzac Day",
+            "date": "25-04-2018"
+        },
+        {
+            "name": "May Day",
+            "date": "07-05-2018"
+        },
+        {
+            "name": "Queen's Birthday",
+            "date": "11-06-2018"
+        },
+        {
+            "name": "Picnic Day",
+            "date": "06-08-2018"
+        }
+    ],
+    "qld": [
+        {
+            "name": "Australia Day",
+            "date": "26-01-2018"
+        },
+        {
+            "name": "Good Friday",
+            "date": "30-03-2018"
+        },
+        {
+            "name": "Easter Saturday",
+            "date": "31-03-2018"
+        },
+        {
+            "name": "Easter Sunday",
+            "date": "01-04-2018"
+        },
+        {
+            "name": "Easter Monday",
+            "date": "02-04-2018"
+        },
+        {
+            "name": "Anzac Day",
+            "date": "25-04-2018"
+        },
+        {
+            "name": "Labour Day",
+            "date": "07-05-2018"
+        },
+        {
+            "name": "Queen's Birthday",
+            "date": "01-10-2018"
+        }
+    ],
+    "sa": [
+        {
+            "name": "Australia Day",
+            "date": "26-01-2018"
+        },
+        {
+            "name": "March public holiday",
+            "date": "12-03-2018"
+        },
+        {
+            "name": "Good Friday",
+            "date": "30-03-2018"
+        },
+        {
+            "name": "Easter Saturday",
+            "date": "31-03-2018"
+        },
+        {
+            "name": "Easter Monday",
+            "date": "02-04-2018"
+        },
+        {
+            "name": "Anzac Day",
+            "date": "25-04-2018"
+        },
+        {
+            "name": "Queen's Birthday",
+            "date": "11-06-2018"
+        },
+        {
+            "name": "Labour Day",
+            "date": "01-10-2018"
+        }
+    ]
+    
+}

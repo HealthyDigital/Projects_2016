@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,600,700|Oswald:500');
+
+$site_width: 980px;
+
+//colors
+$color_grey: #58595B;
+$color_lemon: #CDDC29;
+$color_darkgreen: #00685E;
+$black: #000;
+$color_mountain_mist_approx: #999;
+$color_log_cabin_approx: #222;
+$color_sail_approx: #b3d4fc;
+$color_celeste_approx: #ccc;
+
+%dn { display: none; }
+%font_body { font-family: 'Hind', sans-serif; }
+%font_bold { font-weight: 600; }

@@ -1,0 +1,16 @@
+{
+  "name": "delivery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "connect-history-api-fallback": "^1.5.0",
+    "gulp-compass": "^2.1.0"
+  }
+}

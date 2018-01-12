@@ -1,0 +1,173 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "_vars";
+
+//@extend-elements
+//original selectors
+//.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus
+%extend_1 {
+	clip: auto;
+	clip-path: none;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+	white-space: inherit;
+}
+
+html {
+	color: $color_log_cabin_approx;
+	font-size: 1em;
+	line-height: 1.4;
+}
+
+body {
+	@extend %font_body;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+}
+/* helpers */
+::-moz-selection {
+	background: $color_sail_approx;
+	text-shadow: none;
+}
+::selection {
+	background: $color_sail_approx;
+	text-shadow: none;
+}
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid $color_celeste_approx;
+	margin: 1em 0;
+	padding: 0;
+}
+audio {
+	vertical-align: middle;
+}
+canvas {
+	vertical-align: middle;
+}
+iframe {
+	vertical-align: middle;
+}
+img {
+	vertical-align: middle;
+}
+svg {
+	vertical-align: middle;
+}
+video {
+	vertical-align: middle;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+textarea {
+	resize: vertical;
+}
+.browserupgrade {
+	margin: 0.2em 0;
+	background: $color_celeste_approx;
+	color: $black;
+	padding: 0.2em 0;
+}
+.hidden {
+	display: none !important;
+}
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+	&.focusable {
+		&:active {
+			@extend %extend_1;
+		}
+		&:focus {
+			@extend %extend_1;
+		}
+	}
+}
+.invisible {
+	visibility: hidden;
+}
+.clearfix {
+	&:before {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+/* **** */
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+strong { @extend %font_bold; }
+.page {
+	.section {
+		width: $site_width;
+		margin: 0 auto 25px;
+	}
+	.section-header {
+		padding: 20px;
+		background-color: rgba($color_grey, 0.1);
+	}
+	h1 {
+		font-size: 30px;
+		line-height: 40px;
+		color: $color_darkgreen;
+		@extend %font_bold;
+	}
+	.ui.form .field > label {
+		@extend %font_bold;
+	}
+	.ui.form input:not([type]), .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=email], .ui.form input[type=file], .ui.form input[type=number], .ui.form input[type=password], .ui.form input[type=search], .ui.form input[type=tel], .ui.form input[type=text], .ui.form input[type=time], .ui.form input[type=url] {
+		@extend %font_body;
+		font-weight: inherit;
+		padding: .67857143em 1em .57857143em;
+		line-height: 1.68428571em;
+	}
+	.chosen-container {
+		font-size: inherit;
+		&.chosen-container-single {
+			.chosen-single {
+				height: 40px;
+				line-height: 40px;
+			}
+		}
+		.chosen-results {
+			li {
+				line-height: 24px;
+			}
+		}
+		.chosen-single div b { background-position: 0 9px; }
+		&.chosen-container-active.chosen-with-drop .chosen-single div b { 
+			background-position: -16px 9px; 
+		}
+	}
+}
+
+/* media */
+@import "_media_query";
